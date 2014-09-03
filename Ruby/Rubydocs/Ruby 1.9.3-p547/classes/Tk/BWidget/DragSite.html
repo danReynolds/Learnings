@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>Tk::BWidget::DragSite</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="../../../css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../../../css/main.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../../../css/github.css" type="text/css" media="screen" />
+<script src="../../../js/jquery-1.3.2.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../../js/jquery-effect.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../../js/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+
+<body>     
+    <div class="banner">
+        
+        <h1>
+            <span class="type">Module</span> 
+            Tk::BWidget::DragSite 
+            
+        </h1>
+        <ul class="files">
+            
+            <li><a href="../../../files/ext/tk/lib/tkextlib/bwidget/dragsite_rb.html">ext/tk/lib/tkextlib/bwidget/dragsite.rb</a></li>
+            
+        </ul>
+    </div>
+    <div id="bodyContent">
+        <div id="content">
+  
+
+
+  
+
+
+  
+  
+
+
+  
+
+
+  
+    <!-- Method ref -->
+    <div class="sectiontitle">Methods</div>
+    <dl class="methods">
+      
+        <dt>I</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-include">include</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>R</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-register">register</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>S</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-set_drag">set_drag</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+    </dl>
+  
+
+  
+    <!-- Includes -->
+    <div class="sectiontitle">Included Modules</div>
+    <ul>
+      
+        <li>
+          
+            <a href="../../Tk.html">
+              Tk
+            </a>
+          
+        </li>
+      
+    </ul>
+  
+
+
+
+  
+
+    
+
+    
+
+    
+
+
+    
+
+
+    <!-- Methods -->
+    
+      <div class="sectiontitle">Class Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-c-include">
+            
+              <b>include</b>(klass, type, event)
+            
+            <a href="../../../classes/Tk/BWidget/DragSite.html#method-c-include" name="method-c-include" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-include_source')" id="l_method-c-include_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/d8465ff9abf63545262b7d8f88b069522ae82823/ext/tk/lib/tkextlib/bwidget/dragsite.rb#L20" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-include_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/bwidget/dragsite.rb, line 20</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">include</span>(<span class="ruby-identifier">klass</span>, <span class="ruby-identifier">type</span>, <span class="ruby-identifier">event</span>)
+  <span class="ruby-identifier">tk_call</span>(<span class="ruby-string">&#39;DragSite::include&#39;</span>, <span class="ruby-identifier">klass</span>, <span class="ruby-identifier">type</span>, <span class="ruby-identifier">event</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-register">
+            
+              <b>register</b>(path, keys={})
+            
+            <a href="../../../classes/Tk/BWidget/DragSite.html#method-c-register" name="method-c-register" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-register_source')" id="l_method-c-register_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/d8465ff9abf63545262b7d8f88b069522ae82823/ext/tk/lib/tkextlib/bwidget/dragsite.rb#L24" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-register_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/bwidget/dragsite.rb, line 24</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">register</span>(<span class="ruby-identifier">path</span>, <span class="ruby-identifier">keys</span>={})
+  <span class="ruby-identifier">tk_call</span>(<span class="ruby-string">&#39;DragSite::register&#39;</span>, <span class="ruby-identifier">path</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">hash_kv</span>(<span class="ruby-identifier">keys</span>))
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-set_drag">
+            
+              <b>set_drag</b>(path, subpath, initcmd, endcmd, force=None)
+            
+            <a href="../../../classes/Tk/BWidget/DragSite.html#method-c-set_drag" name="method-c-set_drag" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-set_drag_source')" id="l_method-c-set_drag_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/d8465ff9abf63545262b7d8f88b069522ae82823/ext/tk/lib/tkextlib/bwidget/dragsite.rb#L28" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-set_drag_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/bwidget/dragsite.rb, line 28</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">set_drag</span>(<span class="ruby-identifier">path</span>, <span class="ruby-identifier">subpath</span>, <span class="ruby-identifier">initcmd</span>, <span class="ruby-identifier">endcmd</span>, <span class="ruby-identifier">force</span>=<span class="ruby-constant">None</span>)
+  <span class="ruby-identifier">tk_call</span>(<span class="ruby-string">&#39;DragSite::setdrag&#39;</span>, <span class="ruby-identifier">path</span>, <span class="ruby-identifier">subpath</span>, <span class="ruby-identifier">initcmd</span>, <span class="ruby-identifier">endcmd</span>, <span class="ruby-identifier">force</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                        </div>
+
+    </div>
+  </body>
+</html>    

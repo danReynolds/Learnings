@@ -1,0 +1,1254 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>Tk::BWidget::ListBox::Item</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="../../../../css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../../../../css/main.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../../../../css/github.css" type="text/css" media="screen" />
+<script src="../../../../js/jquery-1.3.2.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../../../js/jquery-effect.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../../../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../../../js/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+
+<body>     
+    <div class="banner">
+        
+        <h1>
+            <span class="type">Class</span> 
+            Tk::BWidget::ListBox::Item 
+            
+                <span class="parent">&lt; 
+                    
+                    <a href="../../../TkObject.html">TkObject</a>
+                    
+                </span>
+            
+        </h1>
+        <ul class="files">
+            
+            <li><a href="../../../../files/ext/tk/lib/tkextlib/bwidget/listbox_rb.html">ext/tk/lib/tkextlib/bwidget/listbox.rb</a></li>
+            
+        </ul>
+    </div>
+    <div id="bodyContent">
+        <div id="content">
+  
+
+
+  
+
+
+  
+  
+
+
+  
+
+
+  
+    <!-- Method ref -->
+    <div class="sectiontitle">Methods</div>
+    <dl class="methods">
+      
+        <dt>#</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-5B-5D">[]</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-5B-5D-3D">[]=</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>C</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-cget">cget</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-cget_strict">cget_strict</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-cget_tkstring">cget_tkstring</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-configinfo">configinfo</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-configure">configure</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-current_configinfo">current_configinfo</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>D</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-delete">delete</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>E</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-edit">edit</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-exist-3F">exist?</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>I</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-id">id</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-c-id2obj">id2obj</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-index">index</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>L</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-listbox">listbox</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>M</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-move">move</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-mutex">mutex</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>N</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-new">new</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>S</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-see">see</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-selection_add">selection_add</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-selection_remove">selection_remove</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-selection_set">selection_set</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-selection_toggle">selection_toggle</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+    </dl>
+  
+
+  
+    <!-- Includes -->
+    <div class="sectiontitle">Included Modules</div>
+    <ul>
+      
+        <li>
+          
+            <a href="../../../TkTreatTagFont.html">
+              TkTreatTagFont
+            </a>
+          
+        </li>
+      
+    </ul>
+  
+
+
+
+  
+
+    
+
+    
+
+    
+      <!-- Section constants -->
+      <div class="sectiontitle">Constants</div>
+      <table border='0' cellpadding='5'>
+        
+          <tr valign='top'>
+            <td class="attr-name">ListItem_TBL</td>
+            <td>=</td>
+            <td class="attr-value">TkCore::INTERP.create_table</td>
+          </tr>
+          
+            <tr valign='top'>
+              <td>&nbsp;</td>
+              <td colspan="2" class="attr-desc"></td>
+            </tr>
+          
+        
+          <tr valign='top'>
+            <td class="attr-name">ListItem_ID</td>
+            <td>=</td>
+            <td class="attr-value">[&#39;bw:item&#39;.freeze, TkUtil.untrust(&#39;00000&#39;)]).instance_eval{
+@mutex = Mutex.new</td>
+          </tr>
+          
+            <tr valign='top'>
+              <td>&nbsp;</td>
+              <td colspan="2" class="attr-desc"></td>
+            </tr>
+          
+        
+      </table>
+    
+
+
+    
+
+
+    <!-- Methods -->
+    
+      <div class="sectiontitle">Class Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-c-id2obj">
+            
+              <b>id2obj</b>(lbox, id)
+            
+            <a href="../../../../classes/Tk/BWidget/ListBox/Item.html#method-c-id2obj" name="method-c-id2obj" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-id2obj_source')" id="l_method-c-id2obj_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/bwidget/listbox.rb#L225" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-id2obj_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/bwidget/listbox.rb, line 225</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">id2obj</span>(<span class="ruby-identifier">lbox</span>, <span class="ruby-identifier">id</span>)
+  <span class="ruby-identifier">lpath</span> = <span class="ruby-identifier">lbox</span>.<span class="ruby-identifier">path</span>
+  <span class="ruby-constant">ListItem_TBL</span>.<span class="ruby-identifier">mutex</span>.<span class="ruby-identifier">synchronize</span>{
+    <span class="ruby-keyword">if</span> <span class="ruby-constant">ListItem_TBL</span>[<span class="ruby-identifier">lpath</span>]
+      <span class="ruby-constant">ListItem_TBL</span>[<span class="ruby-identifier">lpath</span>][<span class="ruby-identifier">id</span>]<span class="ruby-operator">?</span> <span class="ruby-constant">ListItem_TBL</span>[<span class="ruby-identifier">lpath</span>][<span class="ruby-identifier">id</span>]<span class="ruby-operator">:</span> <span class="ruby-identifier">id</span>
+    <span class="ruby-keyword">else</span>
+      <span class="ruby-identifier">id</span>
+    <span class="ruby-keyword">end</span>
+  }
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-new">
+            
+              <b>new</b>(lbox, *args)
+            
+            <a href="../../../../classes/Tk/BWidget/ListBox/Item.html#method-c-new" name="method-c-new" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-new_source')" id="l_method-c-new_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/bwidget/listbox.rb#L236" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-new_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/bwidget/listbox.rb, line 236</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">initialize</span>(<span class="ruby-identifier">lbox</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">args</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">lbox</span>.<span class="ruby-identifier">kind_of?</span>(<span class="ruby-constant">Tk</span><span class="ruby-operator">::</span><span class="ruby-constant">BWidget</span><span class="ruby-operator">::</span><span class="ruby-constant">ListBox</span>)
+    <span class="ruby-ivar">@listbox</span> = <span class="ruby-identifier">lbox</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">fail</span> <span class="ruby-constant">RuntimeError</span>,
+      <span class="ruby-string">&quot;expect Tk::BWidget::ListBox or Tk::BWidget::ListBox::Item for 1st argument&quot;</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">args</span>[<span class="ruby-number">-1</span>].<span class="ruby-identifier">kind_of?</span>(<span class="ruby-constant">Hash</span>)
+    <span class="ruby-identifier">keys</span> = <span class="ruby-identifier">_symbolkey2str</span>(<span class="ruby-identifier">args</span>.<span class="ruby-identifier">pop</span>)
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">keys</span> = {}
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-identifier">index</span> = <span class="ruby-identifier">keys</span>.<span class="ruby-identifier">delete</span>(<span class="ruby-string">&#39;index&#39;</span>)
+  <span class="ruby-keyword">unless</span> <span class="ruby-identifier">args</span>.<span class="ruby-identifier">empty?</span>
+    <span class="ruby-identifier">index</span> = <span class="ruby-identifier">args</span>.<span class="ruby-identifier">shift</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">index</span> = <span class="ruby-string">&#39;end&#39;</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">index</span>
+
+  <span class="ruby-keyword">unless</span> <span class="ruby-identifier">args</span>.<span class="ruby-identifier">empty?</span>
+    <span class="ruby-identifier">fail</span> <span class="ruby-constant">RuntimeError</span>, <span class="ruby-string">&#39;too much arguments&#39;</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-ivar">@lpath</span> = <span class="ruby-ivar">@listbox</span>.<span class="ruby-identifier">path</span>
+
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">keys</span>.<span class="ruby-identifier">key?</span>(<span class="ruby-string">&#39;itemname&#39;</span>)
+    <span class="ruby-ivar">@path</span> = <span class="ruby-ivar">@id</span> = <span class="ruby-identifier">keys</span>.<span class="ruby-identifier">delete</span>(<span class="ruby-string">&#39;itemname&#39;</span>)
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-constant">ListItem_ID</span>.<span class="ruby-identifier">mutex</span>.<span class="ruby-identifier">synchronize</span>{
+      <span class="ruby-ivar">@path</span> = <span class="ruby-ivar">@id</span> = <span class="ruby-constant">ListItem_ID</span>.<span class="ruby-identifier">join</span>(<span class="ruby-constant">TkCore</span><span class="ruby-operator">::</span><span class="ruby-constant">INTERP</span>.<span class="ruby-identifier">_ip_id_</span>)
+      <span class="ruby-constant">ListItem_ID</span>[<span class="ruby-number">1</span>].<span class="ruby-identifier">succ!</span>
+    }
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-constant">ListItem_TBL</span>.<span class="ruby-identifier">mutex</span>.<span class="ruby-identifier">synchronize</span>{
+    <span class="ruby-constant">ListItem_TBL</span>[<span class="ruby-ivar">@id</span>] = <span class="ruby-keyword">self</span>
+    <span class="ruby-constant">ListItem_TBL</span>[<span class="ruby-ivar">@lpath</span>] = {} <span class="ruby-keyword">unless</span> <span class="ruby-constant">ListItem_TBL</span>[<span class="ruby-ivar">@lpath</span>]
+    <span class="ruby-constant">ListItem_TBL</span>[<span class="ruby-ivar">@lpath</span>][<span class="ruby-ivar">@id</span>] = <span class="ruby-keyword">self</span>
+  }
+
+  <span class="ruby-ivar">@listbox</span>.<span class="ruby-identifier">insert</span>(<span class="ruby-identifier">index</span>, <span class="ruby-ivar">@id</span>, <span class="ruby-identifier">keys</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                  
+      <div class="sectiontitle">Instance Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-i-5B-5D">
+            
+              <b>[]</b>(key)
+            
+            <a href="../../../../classes/Tk/BWidget/ListBox/Item.html#method-i-5B-5D" name="method-i-5B-5D" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-5B-5D_source')" id="l_method-i-5B-5D_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/bwidget/listbox.rb#L288" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-5B-5D_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/bwidget/listbox.rb, line 288</span>
+<span class="ruby-keyword">def</span> <span class="ruby-operator">[]</span>(<span class="ruby-keyword ruby-title">key</span>)
+  <span class="ruby-identifier">cget</span>(<span class="ruby-identifier">key</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-5B-5D-3D">
+            
+              <b>[]=</b>(key, val)
+            
+            <a href="../../../../classes/Tk/BWidget/ListBox/Item.html#method-i-5B-5D-3D" name="method-i-5B-5D-3D" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-5B-5D-3D_source')" id="l_method-i-5B-5D-3D_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/bwidget/listbox.rb#L292" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-5B-5D-3D_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/bwidget/listbox.rb, line 292</span>
+<span class="ruby-keyword">def</span> <span class="ruby-operator">[]=</span>(<span class="ruby-keyword ruby-title">key</span>, <span class="ruby-identifier">val</span>)
+  <span class="ruby-identifier">configure</span>(<span class="ruby-identifier">key</span>, <span class="ruby-identifier">val</span>)
+  <span class="ruby-identifier">val</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-cget">
+            
+              <b>cget</b>(key)
+            
+            <a href="../../../../classes/Tk/BWidget/ListBox/Item.html#method-i-cget" name="method-i-cget" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-cget_source')" id="l_method-i-cget_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/bwidget/listbox.rb#L300" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-cget_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/bwidget/listbox.rb, line 300</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">cget</span>(<span class="ruby-identifier">key</span>)
+  <span class="ruby-ivar">@listbox</span>.<span class="ruby-identifier">itemcget</span>(<span class="ruby-ivar">@id</span>, <span class="ruby-identifier">key</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-cget_strict">
+            
+              <b>cget_strict</b>(key)
+            
+            <a href="../../../../classes/Tk/BWidget/ListBox/Item.html#method-i-cget_strict" name="method-i-cget_strict" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-cget_strict_source')" id="l_method-i-cget_strict_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/bwidget/listbox.rb#L303" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-cget_strict_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/bwidget/listbox.rb, line 303</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">cget_strict</span>(<span class="ruby-identifier">key</span>)
+  <span class="ruby-ivar">@listbox</span>.<span class="ruby-identifier">itemcget_strict</span>(<span class="ruby-ivar">@id</span>, <span class="ruby-identifier">key</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-cget_tkstring">
+            
+              <b>cget_tkstring</b>(key)
+            
+            <a href="../../../../classes/Tk/BWidget/ListBox/Item.html#method-i-cget_tkstring" name="method-i-cget_tkstring" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-cget_tkstring_source')" id="l_method-i-cget_tkstring_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/bwidget/listbox.rb#L297" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-cget_tkstring_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/bwidget/listbox.rb, line 297</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">cget_tkstring</span>(<span class="ruby-identifier">key</span>)
+  <span class="ruby-ivar">@listbox</span>.<span class="ruby-identifier">itemcget_tkstring</span>(<span class="ruby-ivar">@id</span>, <span class="ruby-identifier">key</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-configinfo">
+            
+              <b>configinfo</b>(key=nil)
+            
+            <a href="../../../../classes/Tk/BWidget/ListBox/Item.html#method-i-configinfo" name="method-i-configinfo" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-configinfo_source')" id="l_method-i-configinfo_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/bwidget/listbox.rb#L311" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-configinfo_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/bwidget/listbox.rb, line 311</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">configinfo</span>(<span class="ruby-identifier">key</span>=<span class="ruby-keyword">nil</span>)
+  <span class="ruby-ivar">@listbox</span>.<span class="ruby-identifier">itemconfiginfo</span>(<span class="ruby-ivar">@id</span>, <span class="ruby-identifier">key</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-configure">
+            
+              <b>configure</b>(key, val=None)
+            
+            <a href="../../../../classes/Tk/BWidget/ListBox/Item.html#method-i-configure" name="method-i-configure" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-configure_source')" id="l_method-i-configure_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/bwidget/listbox.rb#L307" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-configure_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/bwidget/listbox.rb, line 307</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">configure</span>(<span class="ruby-identifier">key</span>, <span class="ruby-identifier">val</span>=<span class="ruby-constant">None</span>)
+  <span class="ruby-ivar">@listbox</span>.<span class="ruby-identifier">itemconfigure</span>(<span class="ruby-ivar">@id</span>, <span class="ruby-identifier">key</span>, <span class="ruby-identifier">val</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-current_configinfo">
+            
+              <b>current_configinfo</b>(key=nil)
+            
+            <a href="../../../../classes/Tk/BWidget/ListBox/Item.html#method-i-current_configinfo" name="method-i-current_configinfo" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-current_configinfo_source')" id="l_method-i-current_configinfo_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/bwidget/listbox.rb#L315" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-current_configinfo_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/bwidget/listbox.rb, line 315</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">current_configinfo</span>(<span class="ruby-identifier">key</span>=<span class="ruby-keyword">nil</span>)
+  <span class="ruby-ivar">@listbox</span>.<span class="ruby-identifier">current_itemconfiginfo</span>(<span class="ruby-ivar">@id</span>, <span class="ruby-identifier">key</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-delete">
+            
+              <b>delete</b>()
+            
+            <a href="../../../../classes/Tk/BWidget/ListBox/Item.html#method-i-delete" name="method-i-delete" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-delete_source')" id="l_method-i-delete_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/bwidget/listbox.rb#L319" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-delete_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/bwidget/listbox.rb, line 319</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">delete</span>
+  <span class="ruby-ivar">@listbox</span>.<span class="ruby-identifier">delete</span>(<span class="ruby-ivar">@id</span>)
+  <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-edit">
+            
+              <b>edit</b>(*args)
+            
+            <a href="../../../../classes/Tk/BWidget/ListBox/Item.html#method-i-edit" name="method-i-edit" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-edit_source')" id="l_method-i-edit_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/bwidget/listbox.rb#L324" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-edit_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/bwidget/listbox.rb, line 324</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">edit</span>(<span class="ruby-operator">*</span><span class="ruby-identifier">args</span>)
+  <span class="ruby-ivar">@listbox</span>.<span class="ruby-identifier">edit</span>(<span class="ruby-ivar">@id</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">args</span>)
+  <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-exist-3F">
+            
+              <b>exist?</b>()
+            
+            <a href="../../../../classes/Tk/BWidget/ListBox/Item.html#method-i-exist-3F" name="method-i-exist-3F" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-exist-3F_source')" id="l_method-i-exist-3F_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/bwidget/listbox.rb#L329" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-exist-3F_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/bwidget/listbox.rb, line 329</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">exist?</span>
+  <span class="ruby-ivar">@listbox</span>.<span class="ruby-identifier">exist?</span>(<span class="ruby-ivar">@id</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-id">
+            
+              <b>id</b>()
+            
+            <a href="../../../../classes/Tk/BWidget/ListBox/Item.html#method-i-id" name="method-i-id" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-id_source')" id="l_method-i-id_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/bwidget/listbox.rb#L284" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-id_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/bwidget/listbox.rb, line 284</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">id</span>
+  <span class="ruby-ivar">@id</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-index">
+            
+              <b>index</b>()
+            
+            <a href="../../../../classes/Tk/BWidget/ListBox/Item.html#method-i-index" name="method-i-index" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-index_source')" id="l_method-i-index_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/bwidget/listbox.rb#L333" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-index_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/bwidget/listbox.rb, line 333</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">index</span>
+  <span class="ruby-ivar">@listbox</span>.<span class="ruby-identifier">index</span>(<span class="ruby-ivar">@id</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-listbox">
+            
+              <b>listbox</b>()
+            
+            <a href="../../../../classes/Tk/BWidget/ListBox/Item.html#method-i-listbox" name="method-i-listbox" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-listbox_source')" id="l_method-i-listbox_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/bwidget/listbox.rb#L280" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-listbox_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/bwidget/listbox.rb, line 280</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">listbox</span>
+  <span class="ruby-ivar">@listbox</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-move">
+            
+              <b>move</b>(index)
+            
+            <a href="../../../../classes/Tk/BWidget/ListBox/Item.html#method-i-move" name="method-i-move" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-move_source')" id="l_method-i-move_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/bwidget/listbox.rb#L337" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-move_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/bwidget/listbox.rb, line 337</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">move</span>(<span class="ruby-identifier">index</span>)
+  <span class="ruby-ivar">@listbox</span>.<span class="ruby-identifier">move</span>(<span class="ruby-ivar">@id</span>, <span class="ruby-identifier">index</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-mutex">
+            
+              <b>mutex</b>()
+            
+            <a href="../../../../classes/Tk/BWidget/ListBox/Item.html#method-i-mutex" name="method-i-mutex" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-mutex_source')" id="l_method-i-mutex_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/bwidget/listbox.rb#L217" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-mutex_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/bwidget/listbox.rb, line 217</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">mutex</span>; <span class="ruby-ivar">@mutex</span>; <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-see">
+            
+              <b>see</b>()
+            
+            <a href="../../../../classes/Tk/BWidget/ListBox/Item.html#method-i-see" name="method-i-see" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-see_source')" id="l_method-i-see_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/bwidget/listbox.rb#L341" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-see_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/bwidget/listbox.rb, line 341</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">see</span>
+  <span class="ruby-ivar">@listbox</span>.<span class="ruby-identifier">see</span>(<span class="ruby-ivar">@id</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-selection_add">
+            
+              <b>selection_add</b>()
+            
+            <a href="../../../../classes/Tk/BWidget/ListBox/Item.html#method-i-selection_add" name="method-i-selection_add" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-selection_add_source')" id="l_method-i-selection_add_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/bwidget/listbox.rb#L345" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-selection_add_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/bwidget/listbox.rb, line 345</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">selection_add</span>
+  <span class="ruby-ivar">@listbox</span>.<span class="ruby-identifier">selection_add</span>(<span class="ruby-ivar">@id</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-selection_remove">
+            
+              <b>selection_remove</b>()
+            
+            <a href="../../../../classes/Tk/BWidget/ListBox/Item.html#method-i-selection_remove" name="method-i-selection_remove" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-selection_remove_source')" id="l_method-i-selection_remove_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/bwidget/listbox.rb#L349" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-selection_remove_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/bwidget/listbox.rb, line 349</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">selection_remove</span>
+  <span class="ruby-ivar">@listbox</span>.<span class="ruby-identifier">selection_remove</span>(<span class="ruby-ivar">@id</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-selection_set">
+            
+              <b>selection_set</b>()
+            
+            <a href="../../../../classes/Tk/BWidget/ListBox/Item.html#method-i-selection_set" name="method-i-selection_set" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-selection_set_source')" id="l_method-i-selection_set_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/bwidget/listbox.rb#L353" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-selection_set_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/bwidget/listbox.rb, line 353</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">selection_set</span>
+  <span class="ruby-ivar">@listbox</span>.<span class="ruby-identifier">selection_set</span>(<span class="ruby-ivar">@id</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-selection_toggle">
+            
+              <b>selection_toggle</b>()
+            
+            <a href="../../../../classes/Tk/BWidget/ListBox/Item.html#method-i-selection_toggle" name="method-i-selection_toggle" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-selection_toggle_source')" id="l_method-i-selection_toggle_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/bwidget/listbox.rb#L357" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-selection_toggle_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/bwidget/listbox.rb, line 357</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">selection_toggle</span>
+  <span class="ruby-ivar">@listbox</span>.<span class="ruby-identifier">selection_toggle</span>(<span class="ruby-ivar">@id</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                    </div>
+
+    </div>
+  </body>
+</html>    

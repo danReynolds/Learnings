@@ -1,0 +1,481 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>Object::Syck::Parser</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="../../../css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../../../css/main.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../../../css/github.css" type="text/css" media="screen" />
+<script src="../../../js/jquery-1.3.2.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../../js/jquery-effect.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../../js/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+
+<body>     
+    <div class="banner">
+        
+        <h1>
+            <span class="type">Class</span> 
+            Object::Syck::Parser 
+            
+                <span class="parent">&lt; 
+                    
+                    rb_cObject 
+                    
+                </span>
+            
+        </h1>
+        <ul class="files">
+            
+            <li><a href="../../../files/ext/syck/lib/syck/rubytypes_rb.html">ext/syck/lib/syck/rubytypes.rb</a></li>
+            
+        </ul>
+    </div>
+    <div id="bodyContent">
+        <div id="content">
+  
+    <div class="description">
+      
+<p>Define YAML::Syck::Parser class</p>
+
+    </div>
+  
+
+
+  
+
+
+  
+  
+
+
+  
+
+
+  
+    <!-- Method ref -->
+    <div class="sectiontitle">Methods</div>
+    <dl class="methods">
+      
+        <dt>B</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-bufsize">bufsize</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-bufsize-3D">bufsize=</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>L</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-load">load</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-load_documents">load_documents</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>N</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-new">new</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>S</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-set_resolver">set_resolver</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+    </dl>
+  
+
+  
+
+
+
+  
+
+    
+
+    
+
+    
+
+
+    
+      <!-- Section attributes -->
+      <div class="sectiontitle">Attributes</div>
+      <table border='0' cellpadding='5'>
+        
+          <tr valign='top'>
+            <td class='attr-rw'>
+              [RW]
+            </td>
+            <td class='attr-name'>input</td>
+            <td class='attr-desc'></td>
+          </tr>
+        
+          <tr valign='top'>
+            <td class='attr-rw'>
+              [RW]
+            </td>
+            <td class='attr-name'>options</td>
+            <td class='attr-desc'></td>
+          </tr>
+        
+          <tr valign='top'>
+            <td class='attr-rw'>
+              [RW]
+            </td>
+            <td class='attr-name'>resolver</td>
+            <td class='attr-desc'></td>
+          </tr>
+        
+      </table>
+    
+
+
+    <!-- Methods -->
+    
+      <div class="sectiontitle">Class Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-c-new">
+            
+              <b>new</b>(p1 = v1)
+            
+            <a href="../../../classes/Object/Syck/Parser.html#method-c-new" name="method-c-new" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>YAML::Syck::Parser.initialize( resolver, options )</p>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-new_source')" id="l_method-c-new_source">show</a>
+                
+              </p>
+              <div id="method-c-new_source" class="dyn-source">
+                <pre>static VALUE
+syck_parser_initialize(int argc, VALUE *argv, VALUE self)
+{
+    VALUE options;
+    if (rb_scan_args(argc, argv, &quot;01&quot;, &amp;options) == 0)
+    {
+        options = rb_hash_new();
+    }
+    else
+    {
+        Check_Type(options, T_HASH);
+    }
+    rb_ivar_set(self, s_options, options);
+    rb_ivar_set(self, s_input, Qnil);
+    return self;
+}</pre>
+              </div>
+            </div>
+            
+          </div>
+                  
+      <div class="sectiontitle">Instance Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-i-bufsize">
+            
+              <b>bufsize</b>()
+            
+            <a href="../../../classes/Object/Syck/Parser.html#method-i-bufsize" name="method-i-bufsize" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>YAML::Syck::Parser.bufsize =&gt; <a href="../../Integer.html">Integer</a></p>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-bufsize_source')" id="l_method-i-bufsize_source">show</a>
+                
+              </p>
+              <div id="method-i-bufsize_source" class="dyn-source">
+                <pre>static VALUE
+syck_parser_bufsize_get(VALUE self)
+{
+    SyckParser *parser;
+
+    Data_Get_Struct(self, SyckParser, parser);
+    return INT2FIX( parser-&gt;bufsize );
+}</pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-bufsize-3D">
+            
+              <b>bufsize=</b>(p1)
+            
+            <a href="../../../classes/Object/Syck/Parser.html#method-i-bufsize-3D" name="method-i-bufsize-3D" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>YAML::Syck::Parser.bufsize = <a href="../../Integer.html">Integer</a></p>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-bufsize-3D_source')" id="l_method-i-bufsize-3D_source">show</a>
+                
+              </p>
+              <div id="method-i-bufsize-3D_source" class="dyn-source">
+                <pre>static VALUE
+syck_parser_bufsize_set(VALUE self, VALUE size)
+{
+    SyckParser *parser;
+
+    if ( rb_respond_to( size, s_to_i ) ) {
+        int n = NUM2INT(rb_funcall(size, s_to_i, 0));
+        Data_Get_Struct(self, SyckParser, parser);
+        parser-&gt;bufsize = n;
+    }
+    return self;
+}</pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-load">
+            
+              <b>load</b>(p1, p2 = v2)
+            
+            <a href="../../../classes/Object/Syck/Parser.html#method-i-load" name="method-i-load" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>YAML::Syck::Parser.load( <a href="../../IO.html">IO</a> or String )</p>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-load_source')" id="l_method-i-load_source">show</a>
+                
+              </p>
+              <div id="method-i-load_source" class="dyn-source">
+                <pre>VALUE
+syck_parser_load(int argc, VALUE *argv, VALUE self)
+{
+    VALUE port, proc, model, input;
+    SyckParser *parser;
+    struct parser_xtra *bonus;
+
+    rb_scan_args(argc, argv, &quot;11&quot;, &amp;port, &amp;proc);
+
+    input = rb_hash_aref( rb_attr_get( self, s_options ), sym_input );
+    model = rb_hash_aref( rb_attr_get( self, s_options ), sym_model );
+    Data_Get_Struct(self, SyckParser, parser);
+    syck_set_model( self, input, model );
+
+    bonus = (struct parser_xtra *)parser-&gt;bonus;
+    bonus-&gt;taint = syck_parser_assign_io(parser, &amp;port);
+    bonus-&gt;data = rb_hash_new();
+    bonus-&gt;resolver = rb_attr_get( self, s_resolver );
+    if ( NIL_P( proc ) ) bonus-&gt;proc = 0;
+    else                 bonus-&gt;proc = proc;
+
+    return syck_parse( parser );
+}</pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-load_documents">
+            
+              <b>load_documents</b>(p1, &amp;block)
+            
+            <a href="../../../classes/Object/Syck/Parser.html#method-i-load_documents" name="method-i-load_documents" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>YAML::Syck::Parser.load_documents( <a href="../../IO.html">IO</a> or String
+) { |doc| }</p>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-load_documents_source')" id="l_method-i-load_documents_source">show</a>
+                
+              </p>
+              <div id="method-i-load_documents_source" class="dyn-source">
+                <pre>VALUE
+syck_parser_load_documents(int argc, VALUE *argv, VALUE self)
+{
+    VALUE port, proc, v, input, model;
+    SyckParser *parser;
+    struct parser_xtra *bonus;
+
+    rb_scan_args(argc, argv, &quot;1&amp;&quot;, &amp;port, &amp;proc);
+
+    input = rb_hash_aref( rb_attr_get( self, s_options ), sym_input );
+    model = rb_hash_aref( rb_attr_get( self, s_options ), sym_model );
+    Data_Get_Struct(self, SyckParser, parser);
+    syck_set_model( self, input, model );
+
+    bonus = (struct parser_xtra *)parser-&gt;bonus;
+    bonus-&gt;taint = syck_parser_assign_io(parser, &amp;port);
+    bonus-&gt;resolver = rb_attr_get( self, s_resolver );
+    bonus-&gt;proc = 0;
+
+    while ( 1 )
+    {
+        /* Reset hash for tracking nodes */
+        bonus-&gt;data = rb_hash_new();
+
+        /* Parse a document */
+        v = syck_parse( parser );
+        if ( parser-&gt;eof == 1 )
+        {
+            break;
+        }
+
+        /* Pass document to block */
+        rb_funcall( proc, s_call, 1, v );
+    }
+
+    return Qnil;
+}</pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-set_resolver">
+            
+              <b>set_resolver</b>(p1)
+            
+            <a href="../../../classes/Object/Syck/Parser.html#method-i-set_resolver" name="method-i-set_resolver" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>YAML::Syck::Parser#set_resolver</p>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-set_resolver_source')" id="l_method-i-set_resolver_source">show</a>
+                
+              </p>
+              <div id="method-i-set_resolver_source" class="dyn-source">
+                <pre>VALUE
+syck_parser_set_resolver(VALUE self, VALUE resolver)
+{
+    rb_ivar_set( self, s_resolver, resolver );
+    return self;
+}</pre>
+              </div>
+            </div>
+            
+          </div>
+                    </div>
+
+    </div>
+  </body>
+</html>    

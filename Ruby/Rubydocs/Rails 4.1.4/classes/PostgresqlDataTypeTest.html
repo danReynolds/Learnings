@@ -1,0 +1,1792 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>PostgresqlDataTypeTest</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="../css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/main.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/github.css" type="text/css" media="screen" />
+<script src="../js/jquery-1.3.2.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/jquery-effect.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+
+<body>     
+    <div class="banner">
+        
+        <h1>
+            <span class="type">Class</span> 
+            PostgresqlDataTypeTest 
+            
+                <span class="parent">&lt; 
+                    
+                    ActiveRecord::TestCase
+                    
+                </span>
+            
+        </h1>
+        <ul class="files">
+            
+            <li><a href="../files/activerecord/test/cases/adapters/postgresql/datatype_test_rb.html">activerecord/test/cases/adapters/postgresql/datatype_test.rb</a></li>
+            
+        </ul>
+    </div>
+    <div id="bodyContent">
+        <div id="content">
+  
+
+
+  
+
+
+  
+  
+
+
+  
+
+
+  
+    <!-- Method ref -->
+    <div class="sectiontitle">Methods</div>
+    <dl class="methods">
+      
+        <dt>S</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-setup">setup</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>T</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-teardown">teardown</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-test_array_escaping">test_array_escaping</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-test_array_values">test_array_values</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-test_bit_string_values">test_bit_string_values</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-test_data_type_of_array_types">test_data_type_of_array_types</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-test_data_type_of_bit_string_types">test_data_type_of_bit_string_types</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-test_data_type_of_money_types">test_data_type_of_money_types</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-test_data_type_of_network_address_types">test_data_type_of_network_address_types</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-test_data_type_of_number_types">test_data_type_of_number_types</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-test_data_type_of_oid_types">test_data_type_of_oid_types</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-test_data_type_of_time_types">test_data_type_of_time_types</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-test_data_type_of_tsvector_types">test_data_type_of_tsvector_types</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-test_data_type_of_uuid_types">test_data_type_of_uuid_types</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-test_invalid_hex_string">test_invalid_hex_string</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-test_invalid_network_address">test_invalid_network_address</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-test_money_type_cast">test_money_type_cast</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-test_money_values">test_money_values</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-test_network_address_values_ipaddr">test_network_address_values_ipaddr</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-test_number_values">test_number_values</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-test_oid_values">test_oid_values</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-test_time_values">test_time_values</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-test_timestamp_with_zone_values_with_rails_time_zone_support">test_timestamp_with_zone_values_with_rails_time_zone_support</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-test_timestamp_with_zone_values_without_rails_time_zone_support">test_timestamp_with_zone_values_without_rails_time_zone_support</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-test_tsvector_values">test_tsvector_values</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-test_update_bit_string">test_update_bit_string</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-test_update_integer_array">test_update_integer_array</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-test_update_money">test_update_money</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-test_update_network_address">test_update_network_address</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-test_update_number">test_update_number</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-test_update_oid">test_update_oid</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-test_update_text_array">test_update_text_array</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-test_update_time">test_update_time</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-test_update_tsvector">test_update_tsvector</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-test_uuid_values">test_uuid_values</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+    </dl>
+  
+
+  
+
+
+
+  
+
+    
+
+    
+
+    
+
+
+    
+
+
+    <!-- Methods -->
+        
+      <div class="sectiontitle">Instance Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-i-setup">
+            
+              <b>setup</b>()
+            
+            <a href="../classes/PostgresqlDataTypeTest.html#method-i-setup" name="method-i-setup" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-setup_source')" id="l_method-i-setup_source">show</a>
+                
+                  | <a href="https://github.com/rails/rails/blob/23fb5306eeee621424040a8334211ef90ad4242a/activerecord/test/cases/adapters/postgresql/datatype_test.rb#L39" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-setup_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File activerecord/test/cases/adapters/postgresql/datatype_test.rb, line 39</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">setup</span>
+  <span class="ruby-ivar">@connection</span> = <span class="ruby-constant">ActiveRecord</span><span class="ruby-operator">::</span><span class="ruby-constant">Base</span>.<span class="ruby-identifier">connection</span>
+  <span class="ruby-ivar">@connection</span>.<span class="ruby-identifier">execute</span>(<span class="ruby-string">&quot;set lc_monetary = &#39;C&#39;&quot;</span>)
+
+  <span class="ruby-ivar">@connection</span>.<span class="ruby-identifier">execute</span>(<span class="ruby-string">&quot;INSERT INTO postgresql_arrays (id, commission_by_quarter, nicknames) VALUES (1, &#39;{35000,21000,18000,17000}&#39;, &#39;{foo,bar,baz}&#39;)&quot;</span>)
+  <span class="ruby-ivar">@first_array</span> = <span class="ruby-constant">PostgresqlArray</span>.<span class="ruby-identifier">find</span>(<span class="ruby-number">1</span>)
+
+  <span class="ruby-ivar">@connection</span>.<span class="ruby-identifier">execute</span>(<span class="ruby-string">&quot;INSERT INTO postgresql_tsvectors (id, text_vector) VALUES (1, &#39; &#39;&#39;text&#39;&#39; &#39;&#39;vector&#39;&#39; &#39;)&quot;</span>)
+
+  <span class="ruby-ivar">@first_tsvector</span> = <span class="ruby-constant">PostgresqlTsvector</span>.<span class="ruby-identifier">find</span>(<span class="ruby-number">1</span>)
+
+  <span class="ruby-ivar">@connection</span>.<span class="ruby-identifier">execute</span>(<span class="ruby-string">&quot;INSERT INTO postgresql_moneys (id, wealth) VALUES (1, &#39;567.89&#39;::money)&quot;</span>)
+  <span class="ruby-ivar">@connection</span>.<span class="ruby-identifier">execute</span>(<span class="ruby-string">&quot;INSERT INTO postgresql_moneys (id, wealth) VALUES (2, &#39;-567.89&#39;::money)&quot;</span>)
+  <span class="ruby-ivar">@first_money</span> = <span class="ruby-constant">PostgresqlMoney</span>.<span class="ruby-identifier">find</span>(<span class="ruby-number">1</span>)
+  <span class="ruby-ivar">@second_money</span> = <span class="ruby-constant">PostgresqlMoney</span>.<span class="ruby-identifier">find</span>(<span class="ruby-number">2</span>)
+
+  <span class="ruby-ivar">@connection</span>.<span class="ruby-identifier">execute</span>(<span class="ruby-string">&quot;INSERT INTO postgresql_numbers (id, single, double) VALUES (1, 123.456, 123456.789)&quot;</span>)
+  <span class="ruby-ivar">@connection</span>.<span class="ruby-identifier">execute</span>(<span class="ruby-string">&quot;INSERT INTO postgresql_numbers (id, single, double) VALUES (2, &#39;-Infinity&#39;, &#39;Infinity&#39;)&quot;</span>)
+  <span class="ruby-ivar">@connection</span>.<span class="ruby-identifier">execute</span>(<span class="ruby-string">&quot;INSERT INTO postgresql_numbers (id, single, double) VALUES (3, 123.456, &#39;NaN&#39;)&quot;</span>)
+  <span class="ruby-ivar">@first_number</span> = <span class="ruby-constant">PostgresqlNumber</span>.<span class="ruby-identifier">find</span>(<span class="ruby-number">1</span>)
+  <span class="ruby-ivar">@second_number</span> = <span class="ruby-constant">PostgresqlNumber</span>.<span class="ruby-identifier">find</span>(<span class="ruby-number">2</span>)
+  <span class="ruby-ivar">@third_number</span> = <span class="ruby-constant">PostgresqlNumber</span>.<span class="ruby-identifier">find</span>(<span class="ruby-number">3</span>)
+
+  <span class="ruby-ivar">@connection</span>.<span class="ruby-identifier">execute</span>(<span class="ruby-string">&quot;INSERT INTO postgresql_times (id, time_interval, scaled_time_interval) VALUES (1, &#39;1 year 2 days ago&#39;, &#39;3 weeks ago&#39;)&quot;</span>)
+  <span class="ruby-ivar">@first_time</span> = <span class="ruby-constant">PostgresqlTime</span>.<span class="ruby-identifier">find</span>(<span class="ruby-number">1</span>)
+
+  <span class="ruby-ivar">@connection</span>.<span class="ruby-identifier">execute</span>(<span class="ruby-string">&quot;INSERT INTO postgresql_network_addresses (id, cidr_address, inet_address, mac_address) VALUES(1, &#39;192.168.0/24&#39;, &#39;172.16.1.254/32&#39;, &#39;01:23:45:67:89:0a&#39;)&quot;</span>)
+  <span class="ruby-ivar">@first_network_address</span> = <span class="ruby-constant">PostgresqlNetworkAddress</span>.<span class="ruby-identifier">find</span>(<span class="ruby-number">1</span>)
+
+  <span class="ruby-ivar">@connection</span>.<span class="ruby-identifier">execute</span>(<span class="ruby-string">&quot;INSERT INTO postgresql_bit_strings (id, bit_string, bit_string_varying) VALUES (1, B&#39;00010101&#39;, X&#39;15&#39;)&quot;</span>)
+  <span class="ruby-ivar">@first_bit_string</span> = <span class="ruby-constant">PostgresqlBitString</span>.<span class="ruby-identifier">find</span>(<span class="ruby-number">1</span>)
+
+  <span class="ruby-ivar">@connection</span>.<span class="ruby-identifier">execute</span>(<span class="ruby-string">&quot;INSERT INTO postgresql_oids (id, obj_id) VALUES (1, 1234)&quot;</span>)
+  <span class="ruby-ivar">@first_oid</span> = <span class="ruby-constant">PostgresqlOid</span>.<span class="ruby-identifier">find</span>(<span class="ruby-number">1</span>)
+
+  <span class="ruby-ivar">@connection</span>.<span class="ruby-identifier">execute</span>(<span class="ruby-string">&quot;INSERT INTO postgresql_timestamp_with_zones (id, time) VALUES (1, &#39;2010-01-01 10:00:00-1&#39;)&quot;</span>)
+
+  <span class="ruby-ivar">@connection</span>.<span class="ruby-identifier">execute</span>(<span class="ruby-string">&quot;INSERT INTO postgresql_uuids (id, guid, compact_guid) VALUES(1, &#39;d96c3da0-96c1-012f-1316-64ce8f32c6d8&#39;, &#39;f06c715096c1012f131764ce8f32c6d8&#39;)&quot;</span>)
+  <span class="ruby-ivar">@first_uuid</span> = <span class="ruby-constant">PostgresqlUUID</span>.<span class="ruby-identifier">find</span>(<span class="ruby-number">1</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-teardown">
+            
+              <b>teardown</b>()
+            
+            <a href="../classes/PostgresqlDataTypeTest.html#method-i-teardown" name="method-i-teardown" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-teardown_source')" id="l_method-i-teardown_source">show</a>
+                
+                  | <a href="https://github.com/rails/rails/blob/23fb5306eeee621424040a8334211ef90ad4242a/activerecord/test/cases/adapters/postgresql/datatype_test.rb#L80" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-teardown_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File activerecord/test/cases/adapters/postgresql/datatype_test.rb, line 80</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">teardown</span>
+  [<span class="ruby-constant">PostgresqlArray</span>, <span class="ruby-constant">PostgresqlTsvector</span>, <span class="ruby-constant">PostgresqlMoney</span>, <span class="ruby-constant">PostgresqlNumber</span>, <span class="ruby-constant">PostgresqlTime</span>, <span class="ruby-constant">PostgresqlNetworkAddress</span>,
+   <span class="ruby-constant">PostgresqlBitString</span>, <span class="ruby-constant">PostgresqlOid</span>, <span class="ruby-constant">PostgresqlTimestampWithZone</span>, <span class="ruby-constant">PostgresqlUUID</span>].<span class="ruby-identifier">each</span>(<span class="ruby-operator">&amp;</span><span class="ruby-value">:delete_all</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-test_array_escaping">
+            
+              <b>test_array_escaping</b>()
+            
+            <a href="../classes/PostgresqlDataTypeTest.html#method-i-test_array_escaping" name="method-i-test_array_escaping" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-test_array_escaping_source')" id="l_method-i-test_array_escaping_source">show</a>
+                
+                  | <a href="https://github.com/rails/rails/blob/23fb5306eeee621424040a8334211ef90ad4242a/activerecord/test/cases/adapters/postgresql/datatype_test.rb#L85" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-test_array_escaping_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File activerecord/test/cases/adapters/postgresql/datatype_test.rb, line 85</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">test_array_escaping</span>
+  <span class="ruby-identifier">unknown</span> = <span class="ruby-string">%Q(foo\\&quot;,bar,baz,\\)</span>
+  <span class="ruby-identifier">nicknames</span> = [<span class="ruby-node">&quot;hello_#{unknown}&quot;</span>]
+  <span class="ruby-identifier">ar</span> = <span class="ruby-constant">PostgresqlArray</span>.<span class="ruby-identifier">create!</span>(<span class="ruby-identifier">nicknames</span><span class="ruby-operator">:</span> <span class="ruby-identifier">nicknames</span>, <span class="ruby-identifier">id</span><span class="ruby-operator">:</span> <span class="ruby-number">100</span>)
+  <span class="ruby-identifier">ar</span>.<span class="ruby-identifier">reload</span>
+  <span class="ruby-identifier">assert_equal</span> <span class="ruby-identifier">nicknames</span>, <span class="ruby-identifier">ar</span>.<span class="ruby-identifier">nicknames</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-test_array_values">
+            
+              <b>test_array_values</b>()
+            
+            <a href="../classes/PostgresqlDataTypeTest.html#method-i-test_array_values" name="method-i-test_array_values" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-test_array_values_source')" id="l_method-i-test_array_values_source">show</a>
+                
+                  | <a href="https://github.com/rails/rails/blob/23fb5306eeee621424040a8334211ef90ad4242a/activerecord/test/cases/adapters/postgresql/datatype_test.rb#L135" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-test_array_values_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File activerecord/test/cases/adapters/postgresql/datatype_test.rb, line 135</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">test_array_values</span>
+ <span class="ruby-identifier">assert_equal</span> [<span class="ruby-number">35000</span>,<span class="ruby-number">21000</span>,<span class="ruby-number">18000</span>,<span class="ruby-number">17000</span>], <span class="ruby-ivar">@first_array</span>.<span class="ruby-identifier">commission_by_quarter</span>
+ <span class="ruby-identifier">assert_equal</span> [<span class="ruby-string">&#39;foo&#39;</span>,<span class="ruby-string">&#39;bar&#39;</span>,<span class="ruby-string">&#39;baz&#39;</span>], <span class="ruby-ivar">@first_array</span>.<span class="ruby-identifier">nicknames</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-test_bit_string_values">
+            
+              <b>test_bit_string_values</b>()
+            
+            <a href="../classes/PostgresqlDataTypeTest.html#method-i-test_bit_string_values" name="method-i-test_bit_string_values" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-test_bit_string_values_source')" id="l_method-i-test_bit_string_values_source">show</a>
+                
+                  | <a href="https://github.com/rails/rails/blob/23fb5306eeee621424040a8334211ef90ad4242a/activerecord/test/cases/adapters/postgresql/datatype_test.rb#L195" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-test_bit_string_values_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File activerecord/test/cases/adapters/postgresql/datatype_test.rb, line 195</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">test_bit_string_values</span>
+  <span class="ruby-identifier">assert_equal</span> <span class="ruby-string">&#39;00010101&#39;</span>, <span class="ruby-ivar">@first_bit_string</span>.<span class="ruby-identifier">bit_string</span>
+  <span class="ruby-identifier">assert_equal</span> <span class="ruby-string">&#39;00010101&#39;</span>, <span class="ruby-ivar">@first_bit_string</span>.<span class="ruby-identifier">bit_string_varying</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-test_data_type_of_array_types">
+            
+              <b>test_data_type_of_array_types</b>()
+            
+            <a href="../classes/PostgresqlDataTypeTest.html#method-i-test_data_type_of_array_types" name="method-i-test_data_type_of_array_types" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-test_data_type_of_array_types_source')" id="l_method-i-test_data_type_of_array_types_source">show</a>
+                
+                  | <a href="https://github.com/rails/rails/blob/23fb5306eeee621424040a8334211ef90ad4242a/activerecord/test/cases/adapters/postgresql/datatype_test.rb#L93" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-test_data_type_of_array_types_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File activerecord/test/cases/adapters/postgresql/datatype_test.rb, line 93</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">test_data_type_of_array_types</span>
+  <span class="ruby-identifier">assert_equal</span> <span class="ruby-value">:integer</span>, <span class="ruby-ivar">@first_array</span>.<span class="ruby-identifier">column_for_attribute</span>(<span class="ruby-value">:commission_by_quarter</span>).<span class="ruby-identifier">type</span>
+  <span class="ruby-identifier">assert_equal</span> <span class="ruby-value">:text</span>, <span class="ruby-ivar">@first_array</span>.<span class="ruby-identifier">column_for_attribute</span>(<span class="ruby-value">:nicknames</span>).<span class="ruby-identifier">type</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-test_data_type_of_bit_string_types">
+            
+              <b>test_data_type_of_bit_string_types</b>()
+            
+            <a href="../classes/PostgresqlDataTypeTest.html#method-i-test_data_type_of_bit_string_types" name="method-i-test_data_type_of_bit_string_types" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-test_data_type_of_bit_string_types_source')" id="l_method-i-test_data_type_of_bit_string_types_source">show</a>
+                
+                  | <a href="https://github.com/rails/rails/blob/23fb5306eeee621424040a8334211ef90ad4242a/activerecord/test/cases/adapters/postgresql/datatype_test.rb#L122" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-test_data_type_of_bit_string_types_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File activerecord/test/cases/adapters/postgresql/datatype_test.rb, line 122</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">test_data_type_of_bit_string_types</span>
+  <span class="ruby-identifier">assert_equal</span> <span class="ruby-value">:string</span>, <span class="ruby-ivar">@first_bit_string</span>.<span class="ruby-identifier">column_for_attribute</span>(<span class="ruby-value">:bit_string</span>).<span class="ruby-identifier">type</span>
+  <span class="ruby-identifier">assert_equal</span> <span class="ruby-value">:string</span>, <span class="ruby-ivar">@first_bit_string</span>.<span class="ruby-identifier">column_for_attribute</span>(<span class="ruby-value">:bit_string_varying</span>).<span class="ruby-identifier">type</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-test_data_type_of_money_types">
+            
+              <b>test_data_type_of_money_types</b>()
+            
+            <a href="../classes/PostgresqlDataTypeTest.html#method-i-test_data_type_of_money_types" name="method-i-test_data_type_of_money_types" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-test_data_type_of_money_types_source')" id="l_method-i-test_data_type_of_money_types_source">show</a>
+                
+                  | <a href="https://github.com/rails/rails/blob/23fb5306eeee621424040a8334211ef90ad4242a/activerecord/test/cases/adapters/postgresql/datatype_test.rb#L102" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-test_data_type_of_money_types_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File activerecord/test/cases/adapters/postgresql/datatype_test.rb, line 102</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">test_data_type_of_money_types</span>
+  <span class="ruby-identifier">assert_equal</span> <span class="ruby-value">:decimal</span>, <span class="ruby-ivar">@first_money</span>.<span class="ruby-identifier">column_for_attribute</span>(<span class="ruby-value">:wealth</span>).<span class="ruby-identifier">type</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-test_data_type_of_network_address_types">
+            
+              <b>test_data_type_of_network_address_types</b>()
+            
+            <a href="../classes/PostgresqlDataTypeTest.html#method-i-test_data_type_of_network_address_types" name="method-i-test_data_type_of_network_address_types" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-test_data_type_of_network_address_types_source')" id="l_method-i-test_data_type_of_network_address_types_source">show</a>
+                
+                  | <a href="https://github.com/rails/rails/blob/23fb5306eeee621424040a8334211ef90ad4242a/activerecord/test/cases/adapters/postgresql/datatype_test.rb#L116" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-test_data_type_of_network_address_types_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File activerecord/test/cases/adapters/postgresql/datatype_test.rb, line 116</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">test_data_type_of_network_address_types</span>
+  <span class="ruby-identifier">assert_equal</span> <span class="ruby-value">:cidr</span>, <span class="ruby-ivar">@first_network_address</span>.<span class="ruby-identifier">column_for_attribute</span>(<span class="ruby-value">:cidr_address</span>).<span class="ruby-identifier">type</span>
+  <span class="ruby-identifier">assert_equal</span> <span class="ruby-value">:inet</span>, <span class="ruby-ivar">@first_network_address</span>.<span class="ruby-identifier">column_for_attribute</span>(<span class="ruby-value">:inet_address</span>).<span class="ruby-identifier">type</span>
+  <span class="ruby-identifier">assert_equal</span> <span class="ruby-value">:macaddr</span>, <span class="ruby-ivar">@first_network_address</span>.<span class="ruby-identifier">column_for_attribute</span>(<span class="ruby-value">:mac_address</span>).<span class="ruby-identifier">type</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-test_data_type_of_number_types">
+            
+              <b>test_data_type_of_number_types</b>()
+            
+            <a href="../classes/PostgresqlDataTypeTest.html#method-i-test_data_type_of_number_types" name="method-i-test_data_type_of_number_types" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-test_data_type_of_number_types_source')" id="l_method-i-test_data_type_of_number_types_source">show</a>
+                
+                  | <a href="https://github.com/rails/rails/blob/23fb5306eeee621424040a8334211ef90ad4242a/activerecord/test/cases/adapters/postgresql/datatype_test.rb#L106" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-test_data_type_of_number_types_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File activerecord/test/cases/adapters/postgresql/datatype_test.rb, line 106</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">test_data_type_of_number_types</span>
+  <span class="ruby-identifier">assert_equal</span> <span class="ruby-value">:float</span>, <span class="ruby-ivar">@first_number</span>.<span class="ruby-identifier">column_for_attribute</span>(<span class="ruby-value">:single</span>).<span class="ruby-identifier">type</span>
+  <span class="ruby-identifier">assert_equal</span> <span class="ruby-value">:float</span>, <span class="ruby-ivar">@first_number</span>.<span class="ruby-identifier">column_for_attribute</span>(<span class="ruby-value">:double</span>).<span class="ruby-identifier">type</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-test_data_type_of_oid_types">
+            
+              <b>test_data_type_of_oid_types</b>()
+            
+            <a href="../classes/PostgresqlDataTypeTest.html#method-i-test_data_type_of_oid_types" name="method-i-test_data_type_of_oid_types" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-test_data_type_of_oid_types_source')" id="l_method-i-test_data_type_of_oid_types_source">show</a>
+                
+                  | <a href="https://github.com/rails/rails/blob/23fb5306eeee621424040a8334211ef90ad4242a/activerecord/test/cases/adapters/postgresql/datatype_test.rb#L127" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-test_data_type_of_oid_types_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File activerecord/test/cases/adapters/postgresql/datatype_test.rb, line 127</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">test_data_type_of_oid_types</span>
+  <span class="ruby-identifier">assert_equal</span> <span class="ruby-value">:integer</span>, <span class="ruby-ivar">@first_oid</span>.<span class="ruby-identifier">column_for_attribute</span>(<span class="ruby-value">:obj_id</span>).<span class="ruby-identifier">type</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-test_data_type_of_time_types">
+            
+              <b>test_data_type_of_time_types</b>()
+            
+            <a href="../classes/PostgresqlDataTypeTest.html#method-i-test_data_type_of_time_types" name="method-i-test_data_type_of_time_types" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-test_data_type_of_time_types_source')" id="l_method-i-test_data_type_of_time_types_source">show</a>
+                
+                  | <a href="https://github.com/rails/rails/blob/23fb5306eeee621424040a8334211ef90ad4242a/activerecord/test/cases/adapters/postgresql/datatype_test.rb#L111" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-test_data_type_of_time_types_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File activerecord/test/cases/adapters/postgresql/datatype_test.rb, line 111</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">test_data_type_of_time_types</span>
+  <span class="ruby-identifier">assert_equal</span> <span class="ruby-value">:string</span>, <span class="ruby-ivar">@first_time</span>.<span class="ruby-identifier">column_for_attribute</span>(<span class="ruby-value">:time_interval</span>).<span class="ruby-identifier">type</span>
+  <span class="ruby-identifier">assert_equal</span> <span class="ruby-value">:string</span>, <span class="ruby-ivar">@first_time</span>.<span class="ruby-identifier">column_for_attribute</span>(<span class="ruby-value">:scaled_time_interval</span>).<span class="ruby-identifier">type</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-test_data_type_of_tsvector_types">
+            
+              <b>test_data_type_of_tsvector_types</b>()
+            
+            <a href="../classes/PostgresqlDataTypeTest.html#method-i-test_data_type_of_tsvector_types" name="method-i-test_data_type_of_tsvector_types" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-test_data_type_of_tsvector_types_source')" id="l_method-i-test_data_type_of_tsvector_types_source">show</a>
+                
+                  | <a href="https://github.com/rails/rails/blob/23fb5306eeee621424040a8334211ef90ad4242a/activerecord/test/cases/adapters/postgresql/datatype_test.rb#L98" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-test_data_type_of_tsvector_types_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File activerecord/test/cases/adapters/postgresql/datatype_test.rb, line 98</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">test_data_type_of_tsvector_types</span>
+  <span class="ruby-identifier">assert_equal</span> <span class="ruby-value">:tsvector</span>, <span class="ruby-ivar">@first_tsvector</span>.<span class="ruby-identifier">column_for_attribute</span>(<span class="ruby-value">:text_vector</span>).<span class="ruby-identifier">type</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-test_data_type_of_uuid_types">
+            
+              <b>test_data_type_of_uuid_types</b>()
+            
+            <a href="../classes/PostgresqlDataTypeTest.html#method-i-test_data_type_of_uuid_types" name="method-i-test_data_type_of_uuid_types" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-test_data_type_of_uuid_types_source')" id="l_method-i-test_data_type_of_uuid_types_source">show</a>
+                
+                  | <a href="https://github.com/rails/rails/blob/23fb5306eeee621424040a8334211ef90ad4242a/activerecord/test/cases/adapters/postgresql/datatype_test.rb#L131" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-test_data_type_of_uuid_types_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File activerecord/test/cases/adapters/postgresql/datatype_test.rb, line 131</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">test_data_type_of_uuid_types</span>
+  <span class="ruby-identifier">assert_equal</span> <span class="ruby-value">:uuid</span>, <span class="ruby-ivar">@first_uuid</span>.<span class="ruby-identifier">column_for_attribute</span>(<span class="ruby-value">:guid</span>).<span class="ruby-identifier">type</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-test_invalid_hex_string">
+            
+              <b>test_invalid_hex_string</b>()
+            
+            <a href="../classes/PostgresqlDataTypeTest.html#method-i-test_invalid_hex_string" name="method-i-test_invalid_hex_string" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-test_invalid_hex_string_source')" id="l_method-i-test_invalid_hex_string_source">show</a>
+                
+                  | <a href="https://github.com/rails/rails/blob/23fb5306eeee621424040a8334211ef90ad4242a/activerecord/test/cases/adapters/postgresql/datatype_test.rb#L279" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-test_invalid_hex_string_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File activerecord/test/cases/adapters/postgresql/datatype_test.rb, line 279</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">test_invalid_hex_string</span>
+  <span class="ruby-identifier">new_bit_string</span> = <span class="ruby-string">&#39;FF&#39;</span>
+  <span class="ruby-ivar">@first_bit_string</span>.<span class="ruby-identifier">bit_string</span> = <span class="ruby-identifier">new_bit_string</span>
+  <span class="ruby-identifier">assert_raise</span>(<span class="ruby-constant">ActiveRecord</span><span class="ruby-operator">::</span><span class="ruby-constant">StatementInvalid</span>) { <span class="ruby-identifier">assert</span> <span class="ruby-ivar">@first_bit_string</span>.<span class="ruby-identifier">save</span> }
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-test_invalid_network_address">
+            
+              <b>test_invalid_network_address</b>()
+            
+            <a href="../classes/PostgresqlDataTypeTest.html#method-i-test_invalid_network_address" name="method-i-test_invalid_network_address" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-test_invalid_network_address_source')" id="l_method-i-test_invalid_network_address_source">show</a>
+                
+                  | <a href="https://github.com/rails/rails/blob/23fb5306eeee621424040a8334211ef90ad4242a/activerecord/test/cases/adapters/postgresql/datatype_test.rb#L285" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-test_invalid_network_address_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File activerecord/test/cases/adapters/postgresql/datatype_test.rb, line 285</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">test_invalid_network_address</span>
+  <span class="ruby-ivar">@first_network_address</span>.<span class="ruby-identifier">cidr_address</span> = <span class="ruby-string">&#39;invalid addr&#39;</span>
+  <span class="ruby-identifier">assert_nil</span> <span class="ruby-ivar">@first_network_address</span>.<span class="ruby-identifier">cidr_address</span>
+  <span class="ruby-identifier">assert_equal</span> <span class="ruby-string">&#39;invalid addr&#39;</span>, <span class="ruby-ivar">@first_network_address</span>.<span class="ruby-identifier">cidr_address_before_type_cast</span>
+  <span class="ruby-identifier">assert</span> <span class="ruby-ivar">@first_network_address</span>.<span class="ruby-identifier">save</span>
+
+  <span class="ruby-ivar">@first_network_address</span>.<span class="ruby-identifier">reload</span>
+
+  <span class="ruby-ivar">@first_network_address</span>.<span class="ruby-identifier">inet_address</span> = <span class="ruby-string">&#39;invalid addr&#39;</span>
+  <span class="ruby-identifier">assert_nil</span> <span class="ruby-ivar">@first_network_address</span>.<span class="ruby-identifier">inet_address</span>
+  <span class="ruby-identifier">assert_equal</span> <span class="ruby-string">&#39;invalid addr&#39;</span>, <span class="ruby-ivar">@first_network_address</span>.<span class="ruby-identifier">inet_address_before_type_cast</span>
+  <span class="ruby-identifier">assert</span> <span class="ruby-ivar">@first_network_address</span>.<span class="ruby-identifier">save</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-test_money_type_cast">
+            
+              <b>test_money_type_cast</b>()
+            
+            <a href="../classes/PostgresqlDataTypeTest.html#method-i-test_money_type_cast" name="method-i-test_money_type_cast" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-test_money_type_cast_source')" id="l_method-i-test_money_type_cast_source">show</a>
+                
+                  | <a href="https://github.com/rails/rails/blob/23fb5306eeee621424040a8334211ef90ad4242a/activerecord/test/cases/adapters/postgresql/datatype_test.rb#L149" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-test_money_type_cast_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File activerecord/test/cases/adapters/postgresql/datatype_test.rb, line 149</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">test_money_type_cast</span>
+  <span class="ruby-identifier">column</span> = <span class="ruby-constant">PostgresqlMoney</span>.<span class="ruby-identifier">columns</span>.<span class="ruby-identifier">find</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">c</span><span class="ruby-operator">|</span> <span class="ruby-identifier">c</span>.<span class="ruby-identifier">name</span> <span class="ruby-operator">==</span> <span class="ruby-string">&#39;wealth&#39;</span> }
+  <span class="ruby-identifier">assert_equal</span>(<span class="ruby-number">12345678.12</span>, <span class="ruby-identifier">column</span>.<span class="ruby-identifier">type_cast</span>(<span class="ruby-string">&quot;$12,345,678.12&quot;</span>))
+  <span class="ruby-identifier">assert_equal</span>(<span class="ruby-number">12345678.12</span>, <span class="ruby-identifier">column</span>.<span class="ruby-identifier">type_cast</span>(<span class="ruby-string">&quot;$12.345.678,12&quot;</span>))
+  <span class="ruby-identifier">assert_equal</span>(<span class="ruby-number">-1.15</span>, <span class="ruby-identifier">column</span>.<span class="ruby-identifier">type_cast</span>(<span class="ruby-string">&quot;-$1.15&quot;</span>))
+  <span class="ruby-identifier">assert_equal</span>(<span class="ruby-number">-2.25</span>, <span class="ruby-identifier">column</span>.<span class="ruby-identifier">type_cast</span>(<span class="ruby-string">&quot;($2.25)&quot;</span>))
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-test_money_values">
+            
+              <b>test_money_values</b>()
+            
+            <a href="../classes/PostgresqlDataTypeTest.html#method-i-test_money_values" name="method-i-test_money_values" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-test_money_values_source')" id="l_method-i-test_money_values_source">show</a>
+                
+                  | <a href="https://github.com/rails/rails/blob/23fb5306eeee621424040a8334211ef90ad4242a/activerecord/test/cases/adapters/postgresql/datatype_test.rb#L144" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-test_money_values_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File activerecord/test/cases/adapters/postgresql/datatype_test.rb, line 144</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">test_money_values</span>
+  <span class="ruby-identifier">assert_equal</span> <span class="ruby-number">567.89</span>, <span class="ruby-ivar">@first_money</span>.<span class="ruby-identifier">wealth</span>
+  <span class="ruby-identifier">assert_equal</span>(<span class="ruby-number">-567.89</span>, <span class="ruby-ivar">@second_money</span>.<span class="ruby-identifier">wealth</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-test_network_address_values_ipaddr">
+            
+              <b>test_network_address_values_ipaddr</b>()
+            
+            <a href="../classes/PostgresqlDataTypeTest.html#method-i-test_network_address_values_ipaddr" name="method-i-test_network_address_values_ipaddr" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-test_network_address_values_ipaddr_source')" id="l_method-i-test_network_address_values_ipaddr_source">show</a>
+                
+                  | <a href="https://github.com/rails/rails/blob/23fb5306eeee621424040a8334211ef90ad4242a/activerecord/test/cases/adapters/postgresql/datatype_test.rb#L181" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-test_network_address_values_ipaddr_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File activerecord/test/cases/adapters/postgresql/datatype_test.rb, line 181</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">test_network_address_values_ipaddr</span>
+  <span class="ruby-identifier">cidr_address</span> = <span class="ruby-constant">IPAddr</span>.<span class="ruby-identifier">new</span> <span class="ruby-string">&#39;192.168.0.0/24&#39;</span>
+  <span class="ruby-identifier">inet_address</span> = <span class="ruby-constant">IPAddr</span>.<span class="ruby-identifier">new</span> <span class="ruby-string">&#39;172.16.1.254&#39;</span>
+
+  <span class="ruby-identifier">assert_equal</span> <span class="ruby-identifier">cidr_address</span>, <span class="ruby-ivar">@first_network_address</span>.<span class="ruby-identifier">cidr_address</span>
+  <span class="ruby-identifier">assert_equal</span> <span class="ruby-identifier">inet_address</span>, <span class="ruby-ivar">@first_network_address</span>.<span class="ruby-identifier">inet_address</span>
+  <span class="ruby-identifier">assert_equal</span> <span class="ruby-string">&#39;01:23:45:67:89:0a&#39;</span>, <span class="ruby-ivar">@first_network_address</span>.<span class="ruby-identifier">mac_address</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-test_number_values">
+            
+              <b>test_number_values</b>()
+            
+            <a href="../classes/PostgresqlDataTypeTest.html#method-i-test_number_values" name="method-i-test_number_values" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-test_number_values_source')" id="l_method-i-test_number_values_source">show</a>
+                
+                  | <a href="https://github.com/rails/rails/blob/23fb5306eeee621424040a8334211ef90ad4242a/activerecord/test/cases/adapters/postgresql/datatype_test.rb#L168" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-test_number_values_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File activerecord/test/cases/adapters/postgresql/datatype_test.rb, line 168</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">test_number_values</span>
+  <span class="ruby-identifier">assert_equal</span> <span class="ruby-number">123.456</span>, <span class="ruby-ivar">@first_number</span>.<span class="ruby-identifier">single</span>
+  <span class="ruby-identifier">assert_equal</span> <span class="ruby-number">123456.789</span>, <span class="ruby-ivar">@first_number</span>.<span class="ruby-identifier">double</span>
+  <span class="ruby-identifier">assert_equal</span> <span class="ruby-operator">-</span><span class="ruby-operator">::</span><span class="ruby-constant">Float</span><span class="ruby-operator">::</span><span class="ruby-constant">INFINITY</span>, <span class="ruby-ivar">@second_number</span>.<span class="ruby-identifier">single</span>
+  <span class="ruby-identifier">assert_equal</span> <span class="ruby-operator">::</span><span class="ruby-constant">Float</span><span class="ruby-operator">::</span><span class="ruby-constant">INFINITY</span>, <span class="ruby-ivar">@second_number</span>.<span class="ruby-identifier">double</span>
+  <span class="ruby-identifier">assert_same</span> <span class="ruby-operator">::</span><span class="ruby-constant">Float</span><span class="ruby-operator">::</span><span class="ruby-constant">NAN</span>, <span class="ruby-ivar">@third_number</span>.<span class="ruby-identifier">double</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-test_oid_values">
+            
+              <b>test_oid_values</b>()
+            
+            <a href="../classes/PostgresqlDataTypeTest.html#method-i-test_oid_values" name="method-i-test_oid_values" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-test_oid_values_source')" id="l_method-i-test_oid_values_source">show</a>
+                
+                  | <a href="https://github.com/rails/rails/blob/23fb5306eeee621424040a8334211ef90ad4242a/activerecord/test/cases/adapters/postgresql/datatype_test.rb#L200" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-test_oid_values_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File activerecord/test/cases/adapters/postgresql/datatype_test.rb, line 200</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">test_oid_values</span>
+  <span class="ruby-identifier">assert_equal</span> <span class="ruby-number">1234</span>, <span class="ruby-ivar">@first_oid</span>.<span class="ruby-identifier">obj_id</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-test_time_values">
+            
+              <b>test_time_values</b>()
+            
+            <a href="../classes/PostgresqlDataTypeTest.html#method-i-test_time_values" name="method-i-test_time_values" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-test_time_values_source')" id="l_method-i-test_time_values_source">show</a>
+                
+                  | <a href="https://github.com/rails/rails/blob/23fb5306eeee621424040a8334211ef90ad4242a/activerecord/test/cases/adapters/postgresql/datatype_test.rb#L176" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-test_time_values_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File activerecord/test/cases/adapters/postgresql/datatype_test.rb, line 176</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">test_time_values</span>
+  <span class="ruby-identifier">assert_equal</span> <span class="ruby-string">&#39;-1 years -2 days&#39;</span>, <span class="ruby-ivar">@first_time</span>.<span class="ruby-identifier">time_interval</span>
+  <span class="ruby-identifier">assert_equal</span> <span class="ruby-string">&#39;-21 days&#39;</span>, <span class="ruby-ivar">@first_time</span>.<span class="ruby-identifier">scaled_time_interval</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-test_timestamp_with_zone_values_with_rails_time_zone_support">
+            
+              <b>test_timestamp_with_zone_values_with_rails_time_zone_support</b>()
+            
+            <a href="../classes/PostgresqlDataTypeTest.html#method-i-test_timestamp_with_zone_values_with_rails_time_zone_support" name="method-i-test_timestamp_with_zone_values_with_rails_time_zone_support" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-test_timestamp_with_zone_values_with_rails_time_zone_support_source')" id="l_method-i-test_timestamp_with_zone_values_with_rails_time_zone_support_source">show</a>
+                
+                  | <a href="https://github.com/rails/rails/blob/23fb5306eeee621424040a8334211ef90ad4242a/activerecord/test/cases/adapters/postgresql/datatype_test.rb#L307" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-test_timestamp_with_zone_values_with_rails_time_zone_support_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File activerecord/test/cases/adapters/postgresql/datatype_test.rb, line 307</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">test_timestamp_with_zone_values_with_rails_time_zone_support</span>
+  <span class="ruby-identifier">with_timezone_config</span> <span class="ruby-identifier">default</span><span class="ruby-operator">:</span> <span class="ruby-value">:utc</span>, <span class="ruby-identifier">aware_attributes</span><span class="ruby-operator">:</span> <span class="ruby-keyword">true</span> <span class="ruby-keyword">do</span>
+    <span class="ruby-ivar">@connection</span>.<span class="ruby-identifier">reconnect!</span>
+
+    <span class="ruby-ivar">@first_timestamp_with_zone</span> = <span class="ruby-constant">PostgresqlTimestampWithZone</span>.<span class="ruby-identifier">find</span>(<span class="ruby-number">1</span>)
+    <span class="ruby-identifier">assert_equal</span> <span class="ruby-constant">Time</span>.<span class="ruby-identifier">utc</span>(<span class="ruby-number">2010</span>,<span class="ruby-number">1</span>,<span class="ruby-number">1</span>, <span class="ruby-number">11</span>,<span class="ruby-number">0</span>,<span class="ruby-number">0</span>), <span class="ruby-ivar">@first_timestamp_with_zone</span>.<span class="ruby-identifier">time</span>
+    <span class="ruby-identifier">assert_instance_of</span> <span class="ruby-constant">Time</span>, <span class="ruby-ivar">@first_timestamp_with_zone</span>.<span class="ruby-identifier">time</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">ensure</span>
+  <span class="ruby-ivar">@connection</span>.<span class="ruby-identifier">reconnect!</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-test_timestamp_with_zone_values_without_rails_time_zone_support">
+            
+              <b>test_timestamp_with_zone_values_without_rails_time_zone_support</b>()
+            
+            <a href="../classes/PostgresqlDataTypeTest.html#method-i-test_timestamp_with_zone_values_without_rails_time_zone_support" name="method-i-test_timestamp_with_zone_values_without_rails_time_zone_support" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-test_timestamp_with_zone_values_without_rails_time_zone_support_source')" id="l_method-i-test_timestamp_with_zone_values_without_rails_time_zone_support_source">show</a>
+                
+                  | <a href="https://github.com/rails/rails/blob/23fb5306eeee621424040a8334211ef90ad4242a/activerecord/test/cases/adapters/postgresql/datatype_test.rb#L319" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-test_timestamp_with_zone_values_without_rails_time_zone_support_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File activerecord/test/cases/adapters/postgresql/datatype_test.rb, line 319</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">test_timestamp_with_zone_values_without_rails_time_zone_support</span>
+  <span class="ruby-identifier">with_timezone_config</span> <span class="ruby-identifier">default</span><span class="ruby-operator">:</span> <span class="ruby-value">:local</span>, <span class="ruby-identifier">aware_attributes</span><span class="ruby-operator">:</span> <span class="ruby-keyword">false</span> <span class="ruby-keyword">do</span>
+    <span class="ruby-ivar">@connection</span>.<span class="ruby-identifier">reconnect!</span>
+    <span class="ruby-comment"># make sure to use a non-UTC time zone</span>
+    <span class="ruby-ivar">@connection</span>.<span class="ruby-identifier">execute</span>(<span class="ruby-string">&quot;SET time zone &#39;America/Jamaica&#39;&quot;</span>, <span class="ruby-string">&#39;SCHEMA&#39;</span>)
+
+    <span class="ruby-ivar">@first_timestamp_with_zone</span> = <span class="ruby-constant">PostgresqlTimestampWithZone</span>.<span class="ruby-identifier">find</span>(<span class="ruby-number">1</span>)
+    <span class="ruby-identifier">assert_equal</span> <span class="ruby-constant">Time</span>.<span class="ruby-identifier">utc</span>(<span class="ruby-number">2010</span>,<span class="ruby-number">1</span>,<span class="ruby-number">1</span>, <span class="ruby-number">11</span>,<span class="ruby-number">0</span>,<span class="ruby-number">0</span>), <span class="ruby-ivar">@first_timestamp_with_zone</span>.<span class="ruby-identifier">time</span>
+    <span class="ruby-identifier">assert_instance_of</span> <span class="ruby-constant">Time</span>, <span class="ruby-ivar">@first_timestamp_with_zone</span>.<span class="ruby-identifier">time</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">ensure</span>
+  <span class="ruby-ivar">@connection</span>.<span class="ruby-identifier">reconnect!</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-test_tsvector_values">
+            
+              <b>test_tsvector_values</b>()
+            
+            <a href="../classes/PostgresqlDataTypeTest.html#method-i-test_tsvector_values" name="method-i-test_tsvector_values" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-test_tsvector_values_source')" id="l_method-i-test_tsvector_values_source">show</a>
+                
+                  | <a href="https://github.com/rails/rails/blob/23fb5306eeee621424040a8334211ef90ad4242a/activerecord/test/cases/adapters/postgresql/datatype_test.rb#L140" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-test_tsvector_values_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File activerecord/test/cases/adapters/postgresql/datatype_test.rb, line 140</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">test_tsvector_values</span>
+  <span class="ruby-identifier">assert_equal</span> <span class="ruby-string">&quot;&#39;text&#39; &#39;vector&#39;&quot;</span>, <span class="ruby-ivar">@first_tsvector</span>.<span class="ruby-identifier">text_vector</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-test_update_bit_string">
+            
+              <b>test_update_bit_string</b>()
+            
+            <a href="../classes/PostgresqlDataTypeTest.html#method-i-test_update_bit_string" name="method-i-test_update_bit_string" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-test_update_bit_string_source')" id="l_method-i-test_update_bit_string_source">show</a>
+                
+                  | <a href="https://github.com/rails/rails/blob/23fb5306eeee621424040a8334211ef90ad4242a/activerecord/test/cases/adapters/postgresql/datatype_test.rb#L268" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-test_update_bit_string_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File activerecord/test/cases/adapters/postgresql/datatype_test.rb, line 268</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">test_update_bit_string</span>
+  <span class="ruby-identifier">new_bit_string</span> = <span class="ruby-string">&#39;11111111&#39;</span>
+  <span class="ruby-identifier">new_bit_string_varying</span> = <span class="ruby-string">&#39;0xFF&#39;</span>
+  <span class="ruby-ivar">@first_bit_string</span>.<span class="ruby-identifier">bit_string</span> = <span class="ruby-identifier">new_bit_string</span>
+  <span class="ruby-ivar">@first_bit_string</span>.<span class="ruby-identifier">bit_string_varying</span> = <span class="ruby-identifier">new_bit_string_varying</span>
+  <span class="ruby-identifier">assert</span> <span class="ruby-ivar">@first_bit_string</span>.<span class="ruby-identifier">save</span>
+  <span class="ruby-identifier">assert</span> <span class="ruby-ivar">@first_bit_string</span>.<span class="ruby-identifier">reload</span>
+  <span class="ruby-identifier">assert_equal</span> <span class="ruby-identifier">new_bit_string</span>, <span class="ruby-ivar">@first_bit_string</span>.<span class="ruby-identifier">bit_string</span>
+  <span class="ruby-identifier">assert_equal</span> <span class="ruby-ivar">@first_bit_string</span>.<span class="ruby-identifier">bit_string</span>, <span class="ruby-ivar">@first_bit_string</span>.<span class="ruby-identifier">bit_string_varying</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-test_update_integer_array">
+            
+              <b>test_update_integer_array</b>()
+            
+            <a href="../classes/PostgresqlDataTypeTest.html#method-i-test_update_integer_array" name="method-i-test_update_integer_array" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-test_update_integer_array_source')" id="l_method-i-test_update_integer_array_source">show</a>
+                
+                  | <a href="https://github.com/rails/rails/blob/23fb5306eeee621424040a8334211ef90ad4242a/activerecord/test/cases/adapters/postgresql/datatype_test.rb#L204" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-test_update_integer_array_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File activerecord/test/cases/adapters/postgresql/datatype_test.rb, line 204</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">test_update_integer_array</span>
+  <span class="ruby-identifier">new_value</span> = [<span class="ruby-number">32800</span>,<span class="ruby-number">95000</span>,<span class="ruby-number">29350</span>,<span class="ruby-number">17000</span>]
+  <span class="ruby-ivar">@first_array</span>.<span class="ruby-identifier">commission_by_quarter</span> = <span class="ruby-identifier">new_value</span>
+  <span class="ruby-identifier">assert</span> <span class="ruby-ivar">@first_array</span>.<span class="ruby-identifier">save</span>
+  <span class="ruby-identifier">assert</span> <span class="ruby-ivar">@first_array</span>.<span class="ruby-identifier">reload</span>
+  <span class="ruby-identifier">assert_equal</span> <span class="ruby-identifier">new_value</span>, <span class="ruby-ivar">@first_array</span>.<span class="ruby-identifier">commission_by_quarter</span>
+  <span class="ruby-ivar">@first_array</span>.<span class="ruby-identifier">commission_by_quarter</span> = <span class="ruby-identifier">new_value</span>
+  <span class="ruby-identifier">assert</span> <span class="ruby-ivar">@first_array</span>.<span class="ruby-identifier">save</span>
+  <span class="ruby-identifier">assert</span> <span class="ruby-ivar">@first_array</span>.<span class="ruby-identifier">reload</span>
+  <span class="ruby-identifier">assert_equal</span> <span class="ruby-identifier">new_value</span>, <span class="ruby-ivar">@first_array</span>.<span class="ruby-identifier">commission_by_quarter</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-test_update_money">
+            
+              <b>test_update_money</b>()
+            
+            <a href="../classes/PostgresqlDataTypeTest.html#method-i-test_update_money" name="method-i-test_update_money" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-test_update_money_source')" id="l_method-i-test_update_money_source">show</a>
+                
+                  | <a href="https://github.com/rails/rails/blob/23fb5306eeee621424040a8334211ef90ad4242a/activerecord/test/cases/adapters/postgresql/datatype_test.rb#L228" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-test_update_money_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File activerecord/test/cases/adapters/postgresql/datatype_test.rb, line 228</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">test_update_money</span>
+  <span class="ruby-identifier">new_value</span> = <span class="ruby-constant">BigDecimal</span>.<span class="ruby-identifier">new</span>(<span class="ruby-string">&#39;123.45&#39;</span>)
+  <span class="ruby-ivar">@first_money</span>.<span class="ruby-identifier">wealth</span> = <span class="ruby-identifier">new_value</span>
+  <span class="ruby-identifier">assert</span> <span class="ruby-ivar">@first_money</span>.<span class="ruby-identifier">save</span>
+  <span class="ruby-identifier">assert</span> <span class="ruby-ivar">@first_money</span>.<span class="ruby-identifier">reload</span>
+  <span class="ruby-identifier">assert_equal</span> <span class="ruby-identifier">new_value</span>, <span class="ruby-ivar">@first_money</span>.<span class="ruby-identifier">wealth</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-test_update_network_address">
+            
+              <b>test_update_network_address</b>()
+            
+            <a href="../classes/PostgresqlDataTypeTest.html#method-i-test_update_network_address" name="method-i-test_update_network_address" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-test_update_network_address_source')" id="l_method-i-test_update_network_address_source">show</a>
+                
+                  | <a href="https://github.com/rails/rails/blob/23fb5306eeee621424040a8334211ef90ad4242a/activerecord/test/cases/adapters/postgresql/datatype_test.rb#L254" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-test_update_network_address_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File activerecord/test/cases/adapters/postgresql/datatype_test.rb, line 254</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">test_update_network_address</span>
+  <span class="ruby-identifier">new_inet_address</span> = <span class="ruby-string">&#39;10.1.2.3/32&#39;</span>
+  <span class="ruby-identifier">new_cidr_address</span> = <span class="ruby-string">&#39;10.0.0.0/8&#39;</span>
+  <span class="ruby-identifier">new_mac_address</span> = <span class="ruby-string">&#39;bc:de:f0:12:34:56&#39;</span>
+  <span class="ruby-ivar">@first_network_address</span>.<span class="ruby-identifier">cidr_address</span> = <span class="ruby-identifier">new_cidr_address</span>
+  <span class="ruby-ivar">@first_network_address</span>.<span class="ruby-identifier">inet_address</span> = <span class="ruby-identifier">new_inet_address</span>
+  <span class="ruby-ivar">@first_network_address</span>.<span class="ruby-identifier">mac_address</span> = <span class="ruby-identifier">new_mac_address</span>
+  <span class="ruby-identifier">assert</span> <span class="ruby-ivar">@first_network_address</span>.<span class="ruby-identifier">save</span>
+  <span class="ruby-identifier">assert</span> <span class="ruby-ivar">@first_network_address</span>.<span class="ruby-identifier">reload</span>
+  <span class="ruby-identifier">assert_equal</span> <span class="ruby-ivar">@first_network_address</span>.<span class="ruby-identifier">cidr_address</span>, <span class="ruby-identifier">new_cidr_address</span>
+  <span class="ruby-identifier">assert_equal</span> <span class="ruby-ivar">@first_network_address</span>.<span class="ruby-identifier">inet_address</span>, <span class="ruby-identifier">new_inet_address</span>
+  <span class="ruby-identifier">assert_equal</span> <span class="ruby-ivar">@first_network_address</span>.<span class="ruby-identifier">mac_address</span>, <span class="ruby-identifier">new_mac_address</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-test_update_number">
+            
+              <b>test_update_number</b>()
+            
+            <a href="../classes/PostgresqlDataTypeTest.html#method-i-test_update_number" name="method-i-test_update_number" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-test_update_number_source')" id="l_method-i-test_update_number_source">show</a>
+                
+                  | <a href="https://github.com/rails/rails/blob/23fb5306eeee621424040a8334211ef90ad4242a/activerecord/test/cases/adapters/postgresql/datatype_test.rb#L236" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-test_update_number_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File activerecord/test/cases/adapters/postgresql/datatype_test.rb, line 236</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">test_update_number</span>
+  <span class="ruby-identifier">new_single</span> = <span class="ruby-number">789.012</span>
+  <span class="ruby-identifier">new_double</span> = <span class="ruby-number">789012.345</span>
+  <span class="ruby-ivar">@first_number</span>.<span class="ruby-identifier">single</span> = <span class="ruby-identifier">new_single</span>
+  <span class="ruby-ivar">@first_number</span>.<span class="ruby-identifier">double</span> = <span class="ruby-identifier">new_double</span>
+  <span class="ruby-identifier">assert</span> <span class="ruby-ivar">@first_number</span>.<span class="ruby-identifier">save</span>
+  <span class="ruby-identifier">assert</span> <span class="ruby-ivar">@first_number</span>.<span class="ruby-identifier">reload</span>
+  <span class="ruby-identifier">assert_equal</span> <span class="ruby-identifier">new_single</span>, <span class="ruby-ivar">@first_number</span>.<span class="ruby-identifier">single</span>
+  <span class="ruby-identifier">assert_equal</span> <span class="ruby-identifier">new_double</span>, <span class="ruby-ivar">@first_number</span>.<span class="ruby-identifier">double</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-test_update_oid">
+            
+              <b>test_update_oid</b>()
+            
+            <a href="../classes/PostgresqlDataTypeTest.html#method-i-test_update_oid" name="method-i-test_update_oid" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-test_update_oid_source')" id="l_method-i-test_update_oid_source">show</a>
+                
+                  | <a href="https://github.com/rails/rails/blob/23fb5306eeee621424040a8334211ef90ad4242a/activerecord/test/cases/adapters/postgresql/datatype_test.rb#L299" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-test_update_oid_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File activerecord/test/cases/adapters/postgresql/datatype_test.rb, line 299</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">test_update_oid</span>
+  <span class="ruby-identifier">new_value</span> = <span class="ruby-number">567890</span>
+  <span class="ruby-ivar">@first_oid</span>.<span class="ruby-identifier">obj_id</span> = <span class="ruby-identifier">new_value</span>
+  <span class="ruby-identifier">assert</span> <span class="ruby-ivar">@first_oid</span>.<span class="ruby-identifier">save</span>
+  <span class="ruby-identifier">assert</span> <span class="ruby-ivar">@first_oid</span>.<span class="ruby-identifier">reload</span>
+  <span class="ruby-identifier">assert_equal</span> <span class="ruby-identifier">new_value</span>, <span class="ruby-ivar">@first_oid</span>.<span class="ruby-identifier">obj_id</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-test_update_text_array">
+            
+              <b>test_update_text_array</b>()
+            
+            <a href="../classes/PostgresqlDataTypeTest.html#method-i-test_update_text_array" name="method-i-test_update_text_array" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-test_update_text_array_source')" id="l_method-i-test_update_text_array_source">show</a>
+                
+                  | <a href="https://github.com/rails/rails/blob/23fb5306eeee621424040a8334211ef90ad4242a/activerecord/test/cases/adapters/postgresql/datatype_test.rb#L216" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-test_update_text_array_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File activerecord/test/cases/adapters/postgresql/datatype_test.rb, line 216</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">test_update_text_array</span>
+  <span class="ruby-identifier">new_value</span> = [<span class="ruby-string">&#39;robby&#39;</span>,<span class="ruby-string">&#39;robert&#39;</span>,<span class="ruby-string">&#39;rob&#39;</span>,<span class="ruby-string">&#39;robbie&#39;</span>]
+  <span class="ruby-ivar">@first_array</span>.<span class="ruby-identifier">nicknames</span> = <span class="ruby-identifier">new_value</span>
+  <span class="ruby-identifier">assert</span> <span class="ruby-ivar">@first_array</span>.<span class="ruby-identifier">save</span>
+  <span class="ruby-identifier">assert</span> <span class="ruby-ivar">@first_array</span>.<span class="ruby-identifier">reload</span>
+  <span class="ruby-identifier">assert_equal</span> <span class="ruby-identifier">new_value</span>, <span class="ruby-ivar">@first_array</span>.<span class="ruby-identifier">nicknames</span>
+  <span class="ruby-ivar">@first_array</span>.<span class="ruby-identifier">nicknames</span> = <span class="ruby-identifier">new_value</span>
+  <span class="ruby-identifier">assert</span> <span class="ruby-ivar">@first_array</span>.<span class="ruby-identifier">save</span>
+  <span class="ruby-identifier">assert</span> <span class="ruby-ivar">@first_array</span>.<span class="ruby-identifier">reload</span>
+  <span class="ruby-identifier">assert_equal</span> <span class="ruby-identifier">new_value</span>, <span class="ruby-ivar">@first_array</span>.<span class="ruby-identifier">nicknames</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-test_update_time">
+            
+              <b>test_update_time</b>()
+            
+            <a href="../classes/PostgresqlDataTypeTest.html#method-i-test_update_time" name="method-i-test_update_time" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-test_update_time_source')" id="l_method-i-test_update_time_source">show</a>
+                
+                  | <a href="https://github.com/rails/rails/blob/23fb5306eeee621424040a8334211ef90ad4242a/activerecord/test/cases/adapters/postgresql/datatype_test.rb#L247" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-test_update_time_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File activerecord/test/cases/adapters/postgresql/datatype_test.rb, line 247</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">test_update_time</span>
+  <span class="ruby-ivar">@first_time</span>.<span class="ruby-identifier">time_interval</span> = <span class="ruby-string">&#39;2 years 3 minutes&#39;</span>
+  <span class="ruby-identifier">assert</span> <span class="ruby-ivar">@first_time</span>.<span class="ruby-identifier">save</span>
+  <span class="ruby-identifier">assert</span> <span class="ruby-ivar">@first_time</span>.<span class="ruby-identifier">reload</span>
+  <span class="ruby-identifier">assert_equal</span> <span class="ruby-string">&#39;2 years 00:03:00&#39;</span>, <span class="ruby-ivar">@first_time</span>.<span class="ruby-identifier">time_interval</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-test_update_tsvector">
+            
+              <b>test_update_tsvector</b>()
+            
+            <a href="../classes/PostgresqlDataTypeTest.html#method-i-test_update_tsvector" name="method-i-test_update_tsvector" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-test_update_tsvector_source')" id="l_method-i-test_update_tsvector_source">show</a>
+                
+                  | <a href="https://github.com/rails/rails/blob/23fb5306eeee621424040a8334211ef90ad4242a/activerecord/test/cases/adapters/postgresql/datatype_test.rb#L157" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-test_update_tsvector_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File activerecord/test/cases/adapters/postgresql/datatype_test.rb, line 157</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">test_update_tsvector</span>
+  <span class="ruby-identifier">new_text_vector</span> = <span class="ruby-string">&quot;&#39;new&#39; &#39;text&#39; &#39;vector&#39;&quot;</span>
+  <span class="ruby-ivar">@first_tsvector</span>.<span class="ruby-identifier">text_vector</span> = <span class="ruby-identifier">new_text_vector</span>
+  <span class="ruby-identifier">assert</span> <span class="ruby-ivar">@first_tsvector</span>.<span class="ruby-identifier">save</span>
+  <span class="ruby-identifier">assert</span> <span class="ruby-ivar">@first_tsvector</span>.<span class="ruby-identifier">reload</span>
+  <span class="ruby-ivar">@first_tsvector</span>.<span class="ruby-identifier">text_vector</span> = <span class="ruby-identifier">new_text_vector</span>
+  <span class="ruby-identifier">assert</span> <span class="ruby-ivar">@first_tsvector</span>.<span class="ruby-identifier">save</span>
+  <span class="ruby-identifier">assert</span> <span class="ruby-ivar">@first_tsvector</span>.<span class="ruby-identifier">reload</span>
+  <span class="ruby-identifier">assert_equal</span> <span class="ruby-identifier">new_text_vector</span>, <span class="ruby-ivar">@first_tsvector</span>.<span class="ruby-identifier">text_vector</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-test_uuid_values">
+            
+              <b>test_uuid_values</b>()
+            
+            <a href="../classes/PostgresqlDataTypeTest.html#method-i-test_uuid_values" name="method-i-test_uuid_values" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-test_uuid_values_source')" id="l_method-i-test_uuid_values_source">show</a>
+                
+                  | <a href="https://github.com/rails/rails/blob/23fb5306eeee621424040a8334211ef90ad4242a/activerecord/test/cases/adapters/postgresql/datatype_test.rb#L190" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-test_uuid_values_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File activerecord/test/cases/adapters/postgresql/datatype_test.rb, line 190</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">test_uuid_values</span>
+  <span class="ruby-identifier">assert_equal</span> <span class="ruby-string">&#39;d96c3da0-96c1-012f-1316-64ce8f32c6d8&#39;</span>, <span class="ruby-ivar">@first_uuid</span>.<span class="ruby-identifier">guid</span>
+  <span class="ruby-identifier">assert_equal</span> <span class="ruby-string">&#39;f06c7150-96c1-012f-1317-64ce8f32c6d8&#39;</span>, <span class="ruby-ivar">@first_uuid</span>.<span class="ruby-identifier">compact_guid</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                    </div>
+
+    </div>
+  </body>
+</html>    

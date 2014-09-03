@@ -1,0 +1,573 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>Clock</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="../css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/main.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/github.css" type="text/css" media="screen" />
+<script src="../js/jquery-1.3.2.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/jquery-effect.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+
+<body>     
+    <div class="banner">
+        
+        <h1>
+            <span class="type">Class</span> 
+            Clock 
+            
+                <span class="parent">&lt; 
+                    
+                    <a href="Object.html">Object</a>
+                    
+                </span>
+            
+        </h1>
+        <ul class="files">
+            
+            <li><a href="../files/ext/tk/sample/24hr_clock_rb.html">ext/tk/sample/24hr_clock.rb</a></li>
+            
+            <li><a href="../files/sample/observ_rb.html">sample/observ.rb</a></li>
+            
+        </ul>
+    </div>
+    <div id="bodyContent">
+        <div id="content">
+  
+
+
+  
+
+
+  
+  
+
+
+  
+
+
+  
+    <!-- Method ref -->
+    <div class="sectiontitle">Methods</div>
+    <dl class="methods">
+      
+        <dt>#</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-_create_marks">_create_marks</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>C</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-coords_to_time">coords_to_time</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-create_pie">create_pie</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>N</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-new">new</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>S</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-set_hands">set_hands</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>U</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-update">update</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+    </dl>
+  
+
+  
+
+
+
+  
+
+    
+
+    
+
+    
+
+
+    
+
+
+    <!-- Methods -->
+    
+      <div class="sectiontitle">Class Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-c-new">
+            
+              <b>new</b>(clock24 = true)
+            
+            <a href="../classes/Clock.html#method-c-new" name="method-c-new" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-new_source')" id="l_method-c-new_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/287a34ae0dfc23e4158f67cb7783d239f202c368/ext/tk/sample/24hr_clock.rb#L6" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-new_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/sample/24hr_clock.rb, line 6</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">initialize</span>(<span class="ruby-identifier">clock24</span> = <span class="ruby-keyword">true</span>)
+  <span class="ruby-ivar">@clock</span> = (<span class="ruby-identifier">clock24</span>)<span class="ruby-operator">?</span> <span class="ruby-number">24</span><span class="ruby-operator">:</span> <span class="ruby-number">12</span>
+
+  <span class="ruby-ivar">@size</span> = <span class="ruby-number">200</span>
+  <span class="ruby-ivar">@cdot_size</span> = <span class="ruby-number">5</span>
+
+  <span class="ruby-ivar">@cdot_color</span>        = <span class="ruby-string">&#39;black&#39;</span>
+  <span class="ruby-ivar">@hour_hand_color</span>   = <span class="ruby-string">&#39;black&#39;</span>
+  <span class="ruby-ivar">@minute_hand_color</span> = <span class="ruby-string">&#39;gray25&#39;</span>
+  <span class="ruby-ivar">@second_hand_color</span> = <span class="ruby-string">&#39;gray50&#39;</span>
+
+  <span class="ruby-ivar">@mark_font</span>     = <span class="ruby-string">&#39;Helvetica -14&#39;</span>
+  <span class="ruby-ivar">@mark_width</span>    = <span class="ruby-number">3</span>
+  <span class="ruby-ivar">@mark_color</span>    = <span class="ruby-string">&#39;black&#39;</span>
+  <span class="ruby-ivar">@submark_color</span> = <span class="ruby-string">&#39;gray50&#39;</span>
+
+  <span class="ruby-ivar">@c</span> = <span class="ruby-constant">TkCanvas</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value">:width=</span><span class="ruby-operator">&gt;</span><span class="ruby-number">2</span><span class="ruby-operator">*</span><span class="ruby-ivar">@size</span>, <span class="ruby-value">:height=</span><span class="ruby-operator">&gt;</span><span class="ruby-number">2</span><span class="ruby-operator">*</span><span class="ruby-ivar">@size</span>,
+                   <span class="ruby-value">:scrollregion=</span><span class="ruby-operator">&gt;</span>[<span class="ruby-operator">-</span><span class="ruby-ivar">@size</span>, <span class="ruby-operator">-</span><span class="ruby-ivar">@size</span>, <span class="ruby-ivar">@size</span>, <span class="ruby-ivar">@size</span>]
+                   ).<span class="ruby-identifier">pack</span>(<span class="ruby-value">:fill=</span><span class="ruby-operator">&gt;</span><span class="ruby-value">:both</span>, <span class="ruby-value">:expand=</span><span class="ruby-operator">&gt;</span><span class="ruby-keyword">true</span>)
+
+  <span class="ruby-ivar">@tag</span> = <span class="ruby-constant">TkcTag</span>.<span class="ruby-identifier">new</span>(<span class="ruby-ivar">@c</span>)
+  <span class="ruby-ivar">@hand_tag</span> = <span class="ruby-constant">TkcTag</span>.<span class="ruby-identifier">new</span>(<span class="ruby-ivar">@c</span>)
+
+  <span class="ruby-ivar">@circle_coords</span> = [[<span class="ruby-number">-0.9</span><span class="ruby-operator">*</span><span class="ruby-ivar">@size</span>, <span class="ruby-number">-0.9</span><span class="ruby-operator">*</span><span class="ruby-ivar">@size</span>], [<span class="ruby-number">0.9</span><span class="ruby-operator">*</span><span class="ruby-ivar">@size</span>, <span class="ruby-number">0.9</span><span class="ruby-operator">*</span><span class="ruby-ivar">@size</span>]]
+  <span class="ruby-ivar">@oval</span> = <span class="ruby-constant">TkcOval</span>.<span class="ruby-identifier">new</span>(<span class="ruby-ivar">@c</span>, <span class="ruby-ivar">@circle_coords</span>, <span class="ruby-value">:fill=</span><span class="ruby-operator">&gt;</span><span class="ruby-string">&#39;white&#39;</span>, <span class="ruby-value">:tags=</span><span class="ruby-operator">&gt;</span>[<span class="ruby-ivar">@tag</span>])
+
+  <span class="ruby-identifier">f</span> = <span class="ruby-constant">TkFrame</span>.<span class="ruby-identifier">new</span>.<span class="ruby-identifier">pack</span>
+  <span class="ruby-constant">TkLabel</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">f</span>, <span class="ruby-value">:text=</span><span class="ruby-operator">&gt;</span><span class="ruby-string">&#39;CURRENT:&#39;</span>).<span class="ruby-identifier">pack</span>(<span class="ruby-value">:side=</span><span class="ruby-operator">&gt;</span><span class="ruby-value">:left</span>)
+  <span class="ruby-ivar">@now</span> = <span class="ruby-constant">TkLabel</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">f</span>, <span class="ruby-value">:text=</span><span class="ruby-operator">&gt;</span><span class="ruby-string">&#39;00:00:00&#39;</span>).<span class="ruby-identifier">pack</span>(<span class="ruby-value">:side=</span><span class="ruby-operator">&gt;</span><span class="ruby-value">:left</span>, <span class="ruby-value">:padx=</span><span class="ruby-operator">&gt;</span><span class="ruby-number">2</span>)
+  <span class="ruby-constant">TkLabel</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">f</span>, <span class="ruby-value">:text=</span><span class="ruby-operator">&gt;</span><span class="ruby-string">&#39;  &#39;</span>).<span class="ruby-identifier">pack</span>(<span class="ruby-value">:side=</span><span class="ruby-operator">&gt;</span><span class="ruby-value">:left</span>)
+  <span class="ruby-constant">TkLabel</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">f</span>, <span class="ruby-value">:text=</span><span class="ruby-operator">&gt;</span><span class="ruby-string">&#39;  &#39;</span>).<span class="ruby-identifier">pack</span>(<span class="ruby-value">:side=</span><span class="ruby-operator">&gt;</span><span class="ruby-value">:right</span>)
+  <span class="ruby-ivar">@l</span> = <span class="ruby-constant">TkLabel</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">f</span>, <span class="ruby-value">:text=</span><span class="ruby-operator">&gt;</span><span class="ruby-string">&#39;00:00&#39;</span>).<span class="ruby-identifier">pack</span>(<span class="ruby-value">:side=</span><span class="ruby-operator">&gt;</span><span class="ruby-value">:right</span>, <span class="ruby-value">:padx=</span><span class="ruby-operator">&gt;</span><span class="ruby-number">2</span>)
+  <span class="ruby-constant">TkLabel</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">f</span>, <span class="ruby-value">:text=</span><span class="ruby-operator">&gt;</span><span class="ruby-string">&#39;MOUSE-POINTER:&#39;</span>).<span class="ruby-identifier">pack</span>(<span class="ruby-value">:side=</span><span class="ruby-operator">&gt;</span><span class="ruby-value">:right</span>)
+
+  <span class="ruby-identifier">cmd</span> = <span class="ruby-identifier">proc</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">x</span>, <span class="ruby-identifier">y</span><span class="ruby-operator">|</span>
+    <span class="ruby-ivar">@l</span>.<span class="ruby-identifier">text</span> = <span class="ruby-string">&#39;%02d:%02d&#39;</span> <span class="ruby-operator">%</span> <span class="ruby-identifier">coords_to_time</span>(<span class="ruby-ivar">@c</span>.<span class="ruby-identifier">canvasx</span>(<span class="ruby-identifier">x</span>), <span class="ruby-ivar">@c</span>.<span class="ruby-identifier">canvasy</span>(<span class="ruby-identifier">y</span>))
+  }
+  <span class="ruby-ivar">@c</span>.<span class="ruby-identifier">bind</span>(<span class="ruby-string">&#39;Motion&#39;</span>, <span class="ruby-identifier">cmd</span>, <span class="ruby-string">&#39;%x %y&#39;</span>)
+  <span class="ruby-ivar">@tag</span>.<span class="ruby-identifier">bind</span>(<span class="ruby-string">&#39;Motion&#39;</span>, <span class="ruby-identifier">cmd</span>, <span class="ruby-string">&#39;%x %y&#39;</span>)
+
+  <span class="ruby-identifier">_create_hands</span>
+  <span class="ruby-identifier">_create_marks</span>
+
+  <span class="ruby-identifier">timer_proc</span> = <span class="ruby-identifier">proc</span>{
+    <span class="ruby-identifier">t</span> = <span class="ruby-constant">Time</span>.<span class="ruby-identifier">now</span>
+    <span class="ruby-ivar">@now</span>.<span class="ruby-identifier">text</span> = <span class="ruby-string">&#39;%02d:%02d:%02d&#39;</span> <span class="ruby-operator">%</span> [<span class="ruby-identifier">t</span>.<span class="ruby-identifier">hour</span>, <span class="ruby-identifier">t</span>.<span class="ruby-identifier">min</span>, <span class="ruby-identifier">t</span>.<span class="ruby-identifier">sec</span>]
+    <span class="ruby-identifier">set_hands</span>(<span class="ruby-identifier">t</span>.<span class="ruby-identifier">hour</span>, <span class="ruby-identifier">t</span>.<span class="ruby-identifier">min</span>, <span class="ruby-identifier">t</span>.<span class="ruby-identifier">sec</span>)
+  }
+
+  <span class="ruby-identifier">timer_proc</span>.<span class="ruby-identifier">call</span>
+  <span class="ruby-ivar">@timer</span> = <span class="ruby-constant">TkRTTimer</span>.<span class="ruby-identifier">start</span>(<span class="ruby-number">100</span>, <span class="ruby-number">-1</span>, <span class="ruby-identifier">timer_proc</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                  
+      <div class="sectiontitle">Instance Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-i-_create_marks">
+            
+              <b>_create_marks</b>()
+            
+            <a href="../classes/Clock.html#method-i-_create_marks" name="method-i-_create_marks" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-_create_marks_source')" id="l_method-i-_create_marks_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/287a34ae0dfc23e4158f67cb7783d239f202c368/ext/tk/sample/24hr_clock.rb#L59" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-_create_marks_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/sample/24hr_clock.rb, line 59</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">_create_marks</span>
+  <span class="ruby-ivar">@mark_tag</span> = <span class="ruby-constant">TkcTag</span>.<span class="ruby-identifier">new</span>(<span class="ruby-ivar">@c</span>)
+
+  <span class="ruby-constant">TkcLine</span>.<span class="ruby-identifier">new</span>(<span class="ruby-ivar">@c</span>, <span class="ruby-number">0</span>, <span class="ruby-number">-0.90</span><span class="ruby-operator">*</span><span class="ruby-ivar">@size</span>, <span class="ruby-number">0</span>, <span class="ruby-number">-0.85</span><span class="ruby-operator">*</span><span class="ruby-ivar">@size</span>,
+              <span class="ruby-value">:tags=</span><span class="ruby-operator">&gt;</span>[<span class="ruby-ivar">@tag</span>, <span class="ruby-ivar">@mark_tag</span>],
+              <span class="ruby-value">:width=</span><span class="ruby-operator">&gt;</span><span class="ruby-ivar">@mark_width</span>, <span class="ruby-value">:fill=</span><span class="ruby-operator">&gt;</span><span class="ruby-ivar">@mark_color</span>)
+  <span class="ruby-constant">TkcLine</span>.<span class="ruby-identifier">new</span>(<span class="ruby-ivar">@c</span>, <span class="ruby-number">0.90</span><span class="ruby-operator">*</span><span class="ruby-ivar">@size</span>, <span class="ruby-number">0</span>, <span class="ruby-number">0.85</span><span class="ruby-operator">*</span><span class="ruby-ivar">@size</span>, <span class="ruby-number">0</span>,
+              <span class="ruby-value">:tags=</span><span class="ruby-operator">&gt;</span>[<span class="ruby-ivar">@tag</span>, <span class="ruby-ivar">@mark_tag</span>],
+              <span class="ruby-value">:width=</span><span class="ruby-operator">&gt;</span><span class="ruby-ivar">@mark_width</span>, <span class="ruby-value">:fill=</span><span class="ruby-operator">&gt;</span><span class="ruby-ivar">@mark_color</span>)
+  <span class="ruby-constant">TkcLine</span>.<span class="ruby-identifier">new</span>(<span class="ruby-ivar">@c</span>, <span class="ruby-number">0</span>, <span class="ruby-number">0.90</span><span class="ruby-operator">*</span><span class="ruby-ivar">@size</span>, <span class="ruby-number">0</span>, <span class="ruby-number">0.85</span><span class="ruby-operator">*</span><span class="ruby-ivar">@size</span>,
+              <span class="ruby-value">:tags=</span><span class="ruby-operator">&gt;</span>[<span class="ruby-ivar">@tag</span>, <span class="ruby-ivar">@mark_tag</span>],
+              <span class="ruby-value">:width=</span><span class="ruby-operator">&gt;</span><span class="ruby-ivar">@mark_width</span>, <span class="ruby-value">:fill=</span><span class="ruby-operator">&gt;</span><span class="ruby-ivar">@mark_color</span>)
+  <span class="ruby-constant">TkcLine</span>.<span class="ruby-identifier">new</span>(<span class="ruby-ivar">@c</span>, <span class="ruby-number">-0.90</span><span class="ruby-operator">*</span><span class="ruby-ivar">@size</span>, <span class="ruby-number">0</span>, <span class="ruby-number">-0.85</span><span class="ruby-operator">*</span><span class="ruby-ivar">@size</span>, <span class="ruby-number">0</span>,
+              <span class="ruby-value">:tags=</span><span class="ruby-operator">&gt;</span>[<span class="ruby-ivar">@tag</span>, <span class="ruby-ivar">@mark_tag</span>],
+              <span class="ruby-value">:width=</span><span class="ruby-operator">&gt;</span><span class="ruby-ivar">@mark_width</span>, <span class="ruby-value">:fill=</span><span class="ruby-operator">&gt;</span><span class="ruby-ivar">@mark_color</span>)
+
+  <span class="ruby-constant">TkcText</span>.<span class="ruby-identifier">new</span>(<span class="ruby-ivar">@c</span>, [<span class="ruby-number">0</span>, <span class="ruby-number">-0.92</span><span class="ruby-operator">*</span><span class="ruby-ivar">@size</span>], <span class="ruby-value">:text=</span><span class="ruby-operator">&gt;</span><span class="ruby-number">0</span>,
+              <span class="ruby-value">:anchor=</span><span class="ruby-operator">&gt;</span><span class="ruby-string">&#39;s&#39;</span>, <span class="ruby-value">:fill=</span><span class="ruby-operator">&gt;</span><span class="ruby-ivar">@mark_color</span>)
+  <span class="ruby-constant">TkcText</span>.<span class="ruby-identifier">new</span>(<span class="ruby-ivar">@c</span>, [<span class="ruby-number">0.92</span><span class="ruby-operator">*</span><span class="ruby-ivar">@size</span>, <span class="ruby-number">0</span>], <span class="ruby-value">:text=</span><span class="ruby-operator">&gt;</span><span class="ruby-ivar">@clock</span>.<span class="ruby-identifier">div</span>(<span class="ruby-number">4</span>),
+              <span class="ruby-value">:anchor=</span><span class="ruby-operator">&gt;</span><span class="ruby-string">&#39;w&#39;</span>, <span class="ruby-value">:fill=</span><span class="ruby-operator">&gt;</span><span class="ruby-ivar">@mark_color</span>)
+  <span class="ruby-constant">TkcText</span>.<span class="ruby-identifier">new</span>(<span class="ruby-ivar">@c</span>, [<span class="ruby-number">0</span>, <span class="ruby-number">0.92</span><span class="ruby-operator">*</span><span class="ruby-ivar">@size</span>], <span class="ruby-value">:text=</span><span class="ruby-operator">&gt;</span><span class="ruby-ivar">@clock</span>.<span class="ruby-identifier">div</span>(<span class="ruby-number">2</span>),
+              <span class="ruby-value">:anchor=</span><span class="ruby-operator">&gt;</span><span class="ruby-string">&#39;n&#39;</span>, <span class="ruby-value">:fill=</span><span class="ruby-operator">&gt;</span><span class="ruby-ivar">@mark_color</span>)
+  <span class="ruby-constant">TkcText</span>.<span class="ruby-identifier">new</span>(<span class="ruby-ivar">@c</span>, [<span class="ruby-number">-0.92</span><span class="ruby-operator">*</span><span class="ruby-ivar">@size</span>, <span class="ruby-number">0</span>], <span class="ruby-value">:text=</span><span class="ruby-operator">&gt;</span><span class="ruby-ivar">@clock</span>.<span class="ruby-identifier">div</span>(<span class="ruby-number">4</span>)<span class="ruby-operator">*</span><span class="ruby-number">3</span>,
+              <span class="ruby-value">:anchor=</span><span class="ruby-operator">&gt;</span><span class="ruby-string">&#39;e&#39;</span>, <span class="ruby-value">:fill=</span><span class="ruby-operator">&gt;</span><span class="ruby-ivar">@mark_color</span>)
+
+  [<span class="ruby-number">30.0</span>, <span class="ruby-number">60.0</span>].<span class="ruby-identifier">each</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">angle</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">rad</span> = <span class="ruby-constant">Math</span><span class="ruby-operator">::</span><span class="ruby-constant">PI</span> <span class="ruby-operator">*</span> <span class="ruby-identifier">angle</span> <span class="ruby-operator">/</span> <span class="ruby-number">180.0</span>
+    <span class="ruby-identifier">x_base</span> = <span class="ruby-ivar">@size</span><span class="ruby-operator">*</span><span class="ruby-constant">Math</span><span class="ruby-operator">::</span><span class="ruby-identifier">sin</span>(<span class="ruby-identifier">rad</span>)
+    <span class="ruby-identifier">y_base</span> = <span class="ruby-ivar">@size</span><span class="ruby-operator">*</span><span class="ruby-constant">Math</span><span class="ruby-operator">::</span><span class="ruby-identifier">cos</span>(<span class="ruby-identifier">rad</span>)
+
+    <span class="ruby-identifier">x1</span> = <span class="ruby-number">0.90</span><span class="ruby-operator">*</span><span class="ruby-identifier">x_base</span>
+    <span class="ruby-identifier">y1</span> = <span class="ruby-number">0.90</span><span class="ruby-operator">*</span><span class="ruby-identifier">y_base</span>
+
+    <span class="ruby-identifier">x2</span> = <span class="ruby-number">0.85</span><span class="ruby-operator">*</span><span class="ruby-identifier">x_base</span>
+    <span class="ruby-identifier">y2</span> = <span class="ruby-number">0.85</span><span class="ruby-operator">*</span><span class="ruby-identifier">y_base</span>
+
+    <span class="ruby-constant">TkcLine</span>.<span class="ruby-identifier">new</span>(<span class="ruby-ivar">@c</span>, <span class="ruby-identifier">x1</span>, <span class="ruby-identifier">y1</span>, <span class="ruby-identifier">x2</span>, <span class="ruby-identifier">y2</span>,
+                <span class="ruby-value">:tags=</span><span class="ruby-operator">&gt;</span>[<span class="ruby-ivar">@tag</span>, <span class="ruby-ivar">@mark_tag</span>],
+                <span class="ruby-value">:width=</span><span class="ruby-operator">&gt;</span><span class="ruby-ivar">@mark_width</span>, <span class="ruby-value">:fill=</span><span class="ruby-operator">&gt;</span><span class="ruby-ivar">@mark_color</span>)
+    <span class="ruby-constant">TkcLine</span>.<span class="ruby-identifier">new</span>(<span class="ruby-ivar">@c</span>, <span class="ruby-identifier">x1</span>, <span class="ruby-operator">-</span><span class="ruby-identifier">y1</span>, <span class="ruby-identifier">x2</span>, <span class="ruby-operator">-</span><span class="ruby-identifier">y2</span>,
+                <span class="ruby-value">:tags=</span><span class="ruby-operator">&gt;</span>[<span class="ruby-ivar">@tag</span>, <span class="ruby-ivar">@mark_tag</span>],
+                <span class="ruby-value">:width=</span><span class="ruby-operator">&gt;</span><span class="ruby-ivar">@mark_width</span>, <span class="ruby-value">:fill=</span><span class="ruby-operator">&gt;</span><span class="ruby-ivar">@mark_color</span>)
+    <span class="ruby-constant">TkcLine</span>.<span class="ruby-identifier">new</span>(<span class="ruby-ivar">@c</span>, <span class="ruby-operator">-</span><span class="ruby-identifier">x1</span>, <span class="ruby-identifier">y1</span>, <span class="ruby-operator">-</span><span class="ruby-identifier">x2</span>, <span class="ruby-identifier">y2</span>,
+                <span class="ruby-value">:tags=</span><span class="ruby-operator">&gt;</span>[<span class="ruby-ivar">@tag</span>, <span class="ruby-ivar">@mark_tag</span>],
+                <span class="ruby-value">:width=</span><span class="ruby-operator">&gt;</span><span class="ruby-ivar">@mark_width</span>, <span class="ruby-value">:fill=</span><span class="ruby-operator">&gt;</span><span class="ruby-ivar">@mark_color</span>)
+    <span class="ruby-constant">TkcLine</span>.<span class="ruby-identifier">new</span>(<span class="ruby-ivar">@c</span>, <span class="ruby-operator">-</span><span class="ruby-identifier">x1</span>, <span class="ruby-operator">-</span><span class="ruby-identifier">y1</span>, <span class="ruby-operator">-</span><span class="ruby-identifier">x2</span>, <span class="ruby-operator">-</span><span class="ruby-identifier">y2</span>,
+                <span class="ruby-value">:tags=</span><span class="ruby-operator">&gt;</span>[<span class="ruby-ivar">@tag</span>, <span class="ruby-ivar">@mark_tag</span>],
+                <span class="ruby-value">:width=</span><span class="ruby-operator">&gt;</span><span class="ruby-ivar">@mark_width</span>, <span class="ruby-value">:fill=</span><span class="ruby-operator">&gt;</span><span class="ruby-ivar">@mark_color</span>)
+
+    <span class="ruby-identifier">x3</span> = <span class="ruby-number">0.92</span><span class="ruby-operator">*</span><span class="ruby-identifier">x_base</span>
+    <span class="ruby-identifier">y3</span> = <span class="ruby-number">0.92</span><span class="ruby-operator">*</span><span class="ruby-identifier">y_base</span>
+
+    <span class="ruby-keyword">if</span> <span class="ruby-ivar">@clock</span> <span class="ruby-operator">==</span> <span class="ruby-number">24</span>
+      <span class="ruby-identifier">dh</span> = <span class="ruby-identifier">angle</span>.<span class="ruby-identifier">to_i</span><span class="ruby-operator">/</span><span class="ruby-number">15</span>
+    <span class="ruby-keyword">else</span> <span class="ruby-comment"># @clock == 12</span>
+      <span class="ruby-identifier">dh</span> = <span class="ruby-identifier">angle</span>.<span class="ruby-identifier">to_i</span><span class="ruby-operator">/</span><span class="ruby-number">30</span>
+    <span class="ruby-keyword">end</span>
+
+    <span class="ruby-constant">TkcText</span>.<span class="ruby-identifier">new</span>(<span class="ruby-ivar">@c</span>, <span class="ruby-identifier">x3</span>, <span class="ruby-operator">-</span><span class="ruby-identifier">y3</span>, <span class="ruby-value">:text=</span><span class="ruby-operator">&gt;</span><span class="ruby-identifier">dh</span>,
+                <span class="ruby-value">:anchor=</span><span class="ruby-operator">&gt;</span><span class="ruby-string">&#39;sw&#39;</span>, <span class="ruby-value">:fill=</span><span class="ruby-operator">&gt;</span><span class="ruby-ivar">@mark_color</span>)
+    <span class="ruby-constant">TkcText</span>.<span class="ruby-identifier">new</span>(<span class="ruby-ivar">@c</span>, <span class="ruby-identifier">x3</span>, <span class="ruby-identifier">y3</span>, <span class="ruby-value">:text=</span><span class="ruby-operator">&gt;</span><span class="ruby-ivar">@clock</span>.<span class="ruby-identifier">div</span>(<span class="ruby-number">2</span>)<span class="ruby-operator">-</span><span class="ruby-identifier">dh</span>,
+                <span class="ruby-value">:anchor=</span><span class="ruby-operator">&gt;</span><span class="ruby-string">&#39;nw&#39;</span>, <span class="ruby-value">:fill=</span><span class="ruby-operator">&gt;</span><span class="ruby-ivar">@mark_color</span>)
+    <span class="ruby-constant">TkcText</span>.<span class="ruby-identifier">new</span>(<span class="ruby-ivar">@c</span>, <span class="ruby-operator">-</span><span class="ruby-identifier">x3</span>, <span class="ruby-identifier">y3</span>, <span class="ruby-value">:text=</span><span class="ruby-operator">&gt;</span><span class="ruby-ivar">@clock</span>.<span class="ruby-identifier">div</span>(<span class="ruby-number">2</span>)<span class="ruby-operator">+</span><span class="ruby-identifier">dh</span>,
+                <span class="ruby-value">:anchor=</span><span class="ruby-operator">&gt;</span><span class="ruby-string">&#39;ne&#39;</span>, <span class="ruby-value">:fill=</span><span class="ruby-operator">&gt;</span><span class="ruby-ivar">@mark_color</span>)
+    <span class="ruby-constant">TkcText</span>.<span class="ruby-identifier">new</span>(<span class="ruby-ivar">@c</span>, <span class="ruby-operator">-</span><span class="ruby-identifier">x3</span>, <span class="ruby-operator">-</span><span class="ruby-identifier">y3</span>, <span class="ruby-value">:text=</span><span class="ruby-operator">&gt;</span><span class="ruby-ivar">@clock</span><span class="ruby-operator">-</span><span class="ruby-identifier">dh</span>,
+                <span class="ruby-value">:anchor=</span><span class="ruby-operator">&gt;</span><span class="ruby-string">&#39;se&#39;</span>, <span class="ruby-value">:fill=</span><span class="ruby-operator">&gt;</span><span class="ruby-ivar">@mark_color</span>)
+  }
+
+  <span class="ruby-keyword">if</span> <span class="ruby-ivar">@clock</span> <span class="ruby-operator">==</span> <span class="ruby-number">24</span>
+    [<span class="ruby-number">15.0</span>, <span class="ruby-number">45.0</span>, <span class="ruby-number">75.0</span>].<span class="ruby-identifier">each</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">angle</span><span class="ruby-operator">|</span>
+      <span class="ruby-identifier">rad</span> = <span class="ruby-constant">Math</span><span class="ruby-operator">::</span><span class="ruby-constant">PI</span> <span class="ruby-operator">*</span> <span class="ruby-identifier">angle</span> <span class="ruby-operator">/</span> <span class="ruby-number">180.0</span>
+      <span class="ruby-identifier">x_base</span> = <span class="ruby-ivar">@size</span><span class="ruby-operator">*</span><span class="ruby-constant">Math</span><span class="ruby-operator">::</span><span class="ruby-identifier">sin</span>(<span class="ruby-identifier">rad</span>)
+      <span class="ruby-identifier">y_base</span> = <span class="ruby-ivar">@size</span><span class="ruby-operator">*</span><span class="ruby-constant">Math</span><span class="ruby-operator">::</span><span class="ruby-identifier">cos</span>(<span class="ruby-identifier">rad</span>)
+
+      <span class="ruby-identifier">x1</span> = <span class="ruby-number">0.90</span><span class="ruby-operator">*</span><span class="ruby-identifier">x_base</span>
+      <span class="ruby-identifier">y1</span> = <span class="ruby-number">0.90</span><span class="ruby-operator">*</span><span class="ruby-identifier">y_base</span>
+
+      <span class="ruby-identifier">x2</span> = <span class="ruby-number">0.875</span><span class="ruby-operator">*</span><span class="ruby-identifier">x_base</span>
+      <span class="ruby-identifier">y2</span> = <span class="ruby-number">0.875</span><span class="ruby-operator">*</span><span class="ruby-identifier">y_base</span>
+
+      <span class="ruby-constant">TkcLine</span>.<span class="ruby-identifier">new</span>(<span class="ruby-ivar">@c</span>, <span class="ruby-identifier">x1</span>, <span class="ruby-identifier">y1</span>, <span class="ruby-identifier">x2</span>, <span class="ruby-identifier">y2</span>,
+                  <span class="ruby-value">:tags=</span><span class="ruby-operator">&gt;</span>[<span class="ruby-ivar">@tag</span>, <span class="ruby-ivar">@mark_tag</span>],
+                  <span class="ruby-value">:width=</span><span class="ruby-operator">&gt;</span><span class="ruby-ivar">@mark_width</span>, <span class="ruby-value">:fill=</span><span class="ruby-operator">&gt;</span><span class="ruby-ivar">@submark_color</span>)
+      <span class="ruby-constant">TkcLine</span>.<span class="ruby-identifier">new</span>(<span class="ruby-ivar">@c</span>, <span class="ruby-identifier">x1</span>, <span class="ruby-operator">-</span><span class="ruby-identifier">y1</span>, <span class="ruby-identifier">x2</span>, <span class="ruby-operator">-</span><span class="ruby-identifier">y2</span>,
+                  <span class="ruby-value">:tags=</span><span class="ruby-operator">&gt;</span>[<span class="ruby-ivar">@tag</span>, <span class="ruby-ivar">@mark_tag</span>],
+                  <span class="ruby-value">:width=</span><span class="ruby-operator">&gt;</span><span class="ruby-ivar">@mark_width</span>, <span class="ruby-value">:fill=</span><span class="ruby-operator">&gt;</span><span class="ruby-ivar">@submark_color</span>)
+      <span class="ruby-constant">TkcLine</span>.<span class="ruby-identifier">new</span>(<span class="ruby-ivar">@c</span>, <span class="ruby-operator">-</span><span class="ruby-identifier">x1</span>, <span class="ruby-identifier">y1</span>, <span class="ruby-operator">-</span><span class="ruby-identifier">x2</span>, <span class="ruby-identifier">y2</span>,
+                  <span class="ruby-value">:tags=</span><span class="ruby-operator">&gt;</span>[<span class="ruby-ivar">@tag</span>, <span class="ruby-ivar">@mark_tag</span>],
+                  <span class="ruby-value">:width=</span><span class="ruby-operator">&gt;</span><span class="ruby-ivar">@mark_width</span>, <span class="ruby-value">:fill=</span><span class="ruby-operator">&gt;</span><span class="ruby-ivar">@submark_color</span>)
+      <span class="ruby-constant">TkcLine</span>.<span class="ruby-identifier">new</span>(<span class="ruby-ivar">@c</span>, <span class="ruby-operator">-</span><span class="ruby-identifier">x1</span>, <span class="ruby-operator">-</span><span class="ruby-identifier">y1</span>, <span class="ruby-operator">-</span><span class="ruby-identifier">x2</span>, <span class="ruby-operator">-</span><span class="ruby-identifier">y2</span>,
+                  <span class="ruby-value">:tags=</span><span class="ruby-operator">&gt;</span>[<span class="ruby-ivar">@tag</span>, <span class="ruby-ivar">@mark_tag</span>],
+                  <span class="ruby-value">:width=</span><span class="ruby-operator">&gt;</span><span class="ruby-ivar">@mark_width</span>, <span class="ruby-value">:fill=</span><span class="ruby-operator">&gt;</span><span class="ruby-ivar">@submark_color</span>)
+    }
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-coords_to_time">
+            
+              <b>coords_to_time</b>(x, y)
+            
+            <a href="../classes/Clock.html#method-i-coords_to_time" name="method-i-coords_to_time" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-coords_to_time_source')" id="l_method-i-coords_to_time_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/287a34ae0dfc23e4158f67cb7783d239f202c368/ext/tk/sample/24hr_clock.rb#L251" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-coords_to_time_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/sample/24hr_clock.rb, line 251</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">coords_to_time</span>(<span class="ruby-identifier">x</span>, <span class="ruby-identifier">y</span>)
+  <span class="ruby-keyword">return</span> ((<span class="ruby-identifier">y</span> <span class="ruby-operator">&lt;</span> <span class="ruby-number">0</span>)<span class="ruby-operator">?</span> [<span class="ruby-number">0</span>, <span class="ruby-number">0</span>]<span class="ruby-operator">:</span> [<span class="ruby-ivar">@clock</span>.<span class="ruby-identifier">div</span>(<span class="ruby-number">2</span>), <span class="ruby-number">0</span>])  <span class="ruby-keyword">if</span> <span class="ruby-identifier">x</span> <span class="ruby-operator">==</span> <span class="ruby-number">0</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-ivar">@clock</span> <span class="ruby-operator">==</span> <span class="ruby-number">24</span>
+    <span class="ruby-identifier">offset</span> = (<span class="ruby-identifier">x</span><span class="ruby-operator">&lt;</span><span class="ruby-number">0</span><span class="ruby-operator">&amp;&amp;</span><span class="ruby-identifier">y</span><span class="ruby-operator">&lt;</span><span class="ruby-number">0</span>)<span class="ruby-operator">?</span> <span class="ruby-number">1800.0</span><span class="ruby-operator">:</span> <span class="ruby-number">360.0</span>
+    <span class="ruby-identifier">m_half</span> = <span class="ruby-number">720.0</span>
+  <span class="ruby-keyword">else</span> <span class="ruby-comment"># @clock == 12</span>
+    <span class="ruby-identifier">offset</span> = (<span class="ruby-identifier">x</span><span class="ruby-operator">&lt;</span><span class="ruby-number">0</span><span class="ruby-operator">&amp;&amp;</span><span class="ruby-identifier">y</span><span class="ruby-operator">&lt;</span><span class="ruby-number">0</span>)<span class="ruby-operator">?</span> <span class="ruby-number">900.0</span><span class="ruby-operator">:</span> <span class="ruby-number">180.0</span>
+    <span class="ruby-identifier">m_half</span> = <span class="ruby-number">360.0</span>
+  <span class="ruby-keyword">end</span>
+  (<span class="ruby-identifier">offset</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">m_half</span><span class="ruby-operator">*</span><span class="ruby-constant">Math</span>.<span class="ruby-identifier">atan2</span>(<span class="ruby-identifier">y</span>,<span class="ruby-identifier">x</span>)<span class="ruby-operator">/</span><span class="ruby-constant">Math</span><span class="ruby-operator">::</span><span class="ruby-constant">PI</span>).<span class="ruby-identifier">round</span>.<span class="ruby-identifier">divmod</span>(<span class="ruby-number">60</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-create_pie">
+            
+              <b>create_pie</b>(hh, mm, span, color=&#39;red&#39;)
+            
+            <a href="../classes/Clock.html#method-i-create_pie" name="method-i-create_pie" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-create_pie_source')" id="l_method-i-create_pie_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/287a34ae0dfc23e4158f67cb7783d239f202c368/ext/tk/sample/24hr_clock.rb#L263" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-create_pie_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/sample/24hr_clock.rb, line 263</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">create_pie</span>(<span class="ruby-identifier">hh</span>, <span class="ruby-identifier">mm</span>, <span class="ruby-identifier">span</span>, <span class="ruby-identifier">color</span>=<span class="ruby-string">&#39;red&#39;</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-ivar">@clock</span> <span class="ruby-operator">==</span> <span class="ruby-number">24</span>
+    <span class="ruby-identifier">start</span>  = <span class="ruby-number">90.0</span> <span class="ruby-operator">-</span> (<span class="ruby-identifier">hh</span><span class="ruby-operator">*</span><span class="ruby-number">60</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">mm</span>)<span class="ruby-operator">/</span><span class="ruby-number">4.0</span>  <span class="ruby-comment"># 360.0*(hh*60+mm)/(24*60)</span>
+    <span class="ruby-identifier">extent</span> = <span class="ruby-operator">-</span><span class="ruby-identifier">span</span><span class="ruby-operator">/</span><span class="ruby-number">4.0</span>
+  <span class="ruby-keyword">else</span> <span class="ruby-comment"># @clock == 12</span>
+    <span class="ruby-identifier">start</span>  = <span class="ruby-number">90.0</span> <span class="ruby-operator">-</span> (<span class="ruby-identifier">hh</span><span class="ruby-operator">*</span><span class="ruby-number">60</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">mm</span>)<span class="ruby-operator">/</span><span class="ruby-number">2.0</span>  <span class="ruby-comment"># 360.0*(hh*60+mm)/(12*60)</span>
+    <span class="ruby-identifier">extent</span> = <span class="ruby-operator">-</span><span class="ruby-identifier">span</span><span class="ruby-operator">/</span><span class="ruby-number">2.0</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-identifier">pie</span> = <span class="ruby-constant">TkcArc</span>.<span class="ruby-identifier">new</span>(<span class="ruby-ivar">@c</span>, <span class="ruby-ivar">@circle_coords</span>, <span class="ruby-value">:tags=</span><span class="ruby-operator">&gt;</span>[<span class="ruby-ivar">@tag</span>],
+                   <span class="ruby-value">:outline=</span><span class="ruby-operator">&gt;</span><span class="ruby-string">&#39;black&#39;</span>, <span class="ruby-string">&#39;fill&#39;</span>=<span class="ruby-operator">&gt;</span><span class="ruby-identifier">color</span>,
+                   <span class="ruby-value">:start=</span><span class="ruby-operator">&gt;</span><span class="ruby-identifier">start</span>, <span class="ruby-value">:extent=</span><span class="ruby-operator">&gt;</span><span class="ruby-identifier">extent</span>)
+  <span class="ruby-identifier">_raise_hands</span>
+  <span class="ruby-identifier">_raise_marks</span>
+  <span class="ruby-identifier">pie</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-set_hands">
+            
+              <b>set_hands</b>(hh, mm, ss)
+            
+            <a href="../classes/Clock.html#method-i-set_hands" name="method-i-set_hands" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-set_hands_source')" id="l_method-i-set_hands_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/287a34ae0dfc23e4158f67cb7783d239f202c368/ext/tk/sample/24hr_clock.rb#L224" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-set_hands_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/sample/24hr_clock.rb, line 224</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">set_hands</span>(<span class="ruby-identifier">hh</span>, <span class="ruby-identifier">mm</span>, <span class="ruby-identifier">ss</span>)
+  <span class="ruby-identifier">ss_angle</span> = <span class="ruby-constant">Math</span><span class="ruby-operator">::</span><span class="ruby-constant">PI</span> <span class="ruby-operator">*</span> <span class="ruby-identifier">ss</span> <span class="ruby-operator">/</span> <span class="ruby-number">30.0</span>
+  <span class="ruby-identifier">mm_angle</span> = <span class="ruby-constant">Math</span><span class="ruby-operator">::</span><span class="ruby-constant">PI</span> <span class="ruby-operator">*</span> (<span class="ruby-identifier">mm</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">ss</span><span class="ruby-operator">/</span><span class="ruby-number">60.0</span>) <span class="ruby-operator">/</span> <span class="ruby-number">30.0</span>
+  <span class="ruby-identifier">hh_angle</span> = <span class="ruby-constant">Math</span><span class="ruby-operator">::</span><span class="ruby-constant">PI</span> <span class="ruby-operator">*</span> (<span class="ruby-identifier">hh</span> <span class="ruby-operator">+</span> (<span class="ruby-identifier">mm</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">ss</span><span class="ruby-operator">/</span><span class="ruby-number">60.0</span>)<span class="ruby-operator">/</span><span class="ruby-number">60.0</span>) <span class="ruby-operator">/</span> (<span class="ruby-ivar">@clock</span>.<span class="ruby-identifier">div</span>(<span class="ruby-number">2</span>))
+
+  <span class="ruby-ivar">@second_hand</span>.<span class="ruby-identifier">coords</span> = <span class="ruby-ivar">@second_hand_coords</span>.<span class="ruby-identifier">collect</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">x</span>, <span class="ruby-identifier">y</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">r</span> = <span class="ruby-constant">Math</span><span class="ruby-operator">::</span><span class="ruby-identifier">hypot</span>(<span class="ruby-identifier">y</span>, <span class="ruby-identifier">x</span>)
+    <span class="ruby-identifier">a</span> = <span class="ruby-constant">Math</span><span class="ruby-operator">::</span><span class="ruby-identifier">atan2</span>(<span class="ruby-identifier">y</span>, <span class="ruby-identifier">x</span>) <span class="ruby-operator">+</span> <span class="ruby-identifier">ss_angle</span>
+    [<span class="ruby-constant">Math</span><span class="ruby-operator">::</span><span class="ruby-identifier">cos</span>(<span class="ruby-identifier">a</span>) <span class="ruby-operator">*</span> <span class="ruby-identifier">r</span>, <span class="ruby-constant">Math</span><span class="ruby-operator">::</span><span class="ruby-identifier">sin</span>(<span class="ruby-identifier">a</span>) <span class="ruby-operator">*</span> <span class="ruby-identifier">r</span>]
+  }
+
+  <span class="ruby-ivar">@minute_hand</span>.<span class="ruby-identifier">coords</span> = <span class="ruby-ivar">@minute_hand_coords</span>.<span class="ruby-identifier">collect</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">x</span>, <span class="ruby-identifier">y</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">r</span> = <span class="ruby-constant">Math</span><span class="ruby-operator">::</span><span class="ruby-identifier">hypot</span>(<span class="ruby-identifier">y</span>, <span class="ruby-identifier">x</span>)
+    <span class="ruby-identifier">a</span> = <span class="ruby-constant">Math</span><span class="ruby-operator">::</span><span class="ruby-identifier">atan2</span>(<span class="ruby-identifier">y</span>, <span class="ruby-identifier">x</span>) <span class="ruby-operator">+</span> <span class="ruby-identifier">mm_angle</span>
+    [<span class="ruby-constant">Math</span><span class="ruby-operator">::</span><span class="ruby-identifier">cos</span>(<span class="ruby-identifier">a</span>) <span class="ruby-operator">*</span> <span class="ruby-identifier">r</span>, <span class="ruby-constant">Math</span><span class="ruby-operator">::</span><span class="ruby-identifier">sin</span>(<span class="ruby-identifier">a</span>) <span class="ruby-operator">*</span> <span class="ruby-identifier">r</span>]
+  }
+
+  <span class="ruby-ivar">@hour_hand</span>.<span class="ruby-identifier">coords</span> = <span class="ruby-ivar">@hour_hand_coords</span>.<span class="ruby-identifier">collect</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">x</span>, <span class="ruby-identifier">y</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">r</span> = <span class="ruby-constant">Math</span><span class="ruby-operator">::</span><span class="ruby-identifier">hypot</span>(<span class="ruby-identifier">y</span>, <span class="ruby-identifier">x</span>)
+    <span class="ruby-identifier">a</span> = <span class="ruby-constant">Math</span><span class="ruby-operator">::</span><span class="ruby-identifier">atan2</span>(<span class="ruby-identifier">y</span>, <span class="ruby-identifier">x</span>) <span class="ruby-operator">+</span> <span class="ruby-identifier">hh_angle</span>
+    [<span class="ruby-constant">Math</span><span class="ruby-operator">::</span><span class="ruby-identifier">cos</span>(<span class="ruby-identifier">a</span>) <span class="ruby-operator">*</span> <span class="ruby-identifier">r</span>, <span class="ruby-constant">Math</span><span class="ruby-operator">::</span><span class="ruby-identifier">sin</span>(<span class="ruby-identifier">a</span>) <span class="ruby-operator">*</span> <span class="ruby-identifier">r</span>]
+  }
+
+  <span class="ruby-identifier">_raise_hands</span>
+  <span class="ruby-identifier">_raise_marks</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-update">
+            
+              <b>update</b>(h, m, s)
+            
+            <a href="../classes/Clock.html#method-i-update" name="method-i-update" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-update_source')" id="l_method-i-update_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/210367ec889f5910e270d6ea2c7ddb8a8d939e61/sample/observ.rb#L25" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-update_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File sample/observ.rb, line 25</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">update</span>(<span class="ruby-identifier">h</span>, <span class="ruby-identifier">m</span>, <span class="ruby-identifier">s</span>)
+  <span class="ruby-identifier">printf</span> <span class="ruby-string">&quot;\e[8D%02d:%02d:%02d&quot;</span>, <span class="ruby-identifier">h</span>, <span class="ruby-identifier">m</span>, <span class="ruby-identifier">s</span>
+  <span class="ruby-constant">STDOUT</span>.<span class="ruby-identifier">flush</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                    </div>
+
+    </div>
+  </body>
+</html>    

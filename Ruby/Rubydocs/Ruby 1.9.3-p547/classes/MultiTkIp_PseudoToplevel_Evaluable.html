@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>MultiTkIp_PseudoToplevel_Evaluable</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="../css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/main.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/github.css" type="text/css" media="screen" />
+<script src="../js/jquery-1.3.2.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/jquery-effect.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+
+<body>     
+    <div class="banner">
+        
+        <h1>
+            <span class="type">Module</span> 
+            MultiTkIp_PseudoToplevel_Evaluable 
+            
+        </h1>
+        <ul class="files">
+            
+            <li><a href="../files/ext/tk/lib/multi-tk_rb.html">ext/tk/lib/multi-tk.rb</a></li>
+            
+        </ul>
+    </div>
+    <div id="bodyContent">
+        <div id="content">
+  
+    <div class="description">
+      
+<p>dummy</p>
+
+    </div>
+  
+
+
+  
+
+
+  
+  
+
+
+  
+
+
+  
+    <!-- Method ref -->
+    <div class="sectiontitle">Methods</div>
+    <dl class="methods">
+      
+        <dt>E</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-extended">extended</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>P</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-pseudo_toplevel_evaluable-3D">pseudo_toplevel_evaluable=</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-pseudo_toplevel_evaluable-3F">pseudo_toplevel_evaluable?</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+    </dl>
+  
+
+  
+
+
+
+  
+
+    
+
+    
+
+    
+
+
+    
+
+
+    <!-- Methods -->
+    
+      <div class="sectiontitle">Class Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-c-extended">
+            
+              <b>extended</b>(mod)
+            
+            <a href="../classes/MultiTkIp_PseudoToplevel_Evaluable.html#method-c-extended" name="method-c-extended" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-extended_source')" id="l_method-c-extended_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/3a47cf3395dd4c4fe8bdd5df13aab698f2ca314b/ext/tk/lib/multi-tk.rb#L2065" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-extended_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/multi-tk.rb, line 2065</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">extended</span>(<span class="ruby-identifier">mod</span>)
+  <span class="ruby-identifier">mod</span>.<span class="ruby-identifier">__send__</span>(<span class="ruby-value">:extend_object</span>, <span class="ruby-identifier">mod</span>)
+  <span class="ruby-identifier">mod</span>.<span class="ruby-identifier">instance_variable_set</span>(<span class="ruby-string">&#39;@pseudo_toplevel_evaluable&#39;</span>, <span class="ruby-keyword">true</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                  
+      <div class="sectiontitle">Instance Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-i-pseudo_toplevel_evaluable-3D">
+            
+              <b>pseudo_toplevel_evaluable=</b>(mode)
+            
+            <a href="../classes/MultiTkIp_PseudoToplevel_Evaluable.html#method-i-pseudo_toplevel_evaluable-3D" name="method-i-pseudo_toplevel_evaluable-3D" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-pseudo_toplevel_evaluable-3D_source')" id="l_method-i-pseudo_toplevel_evaluable-3D_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/3a47cf3395dd4c4fe8bdd5df13aab698f2ca314b/ext/tk/lib/multi-tk.rb#L2061" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-pseudo_toplevel_evaluable-3D_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/multi-tk.rb, line 2061</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">pseudo_toplevel_evaluable=</span>(<span class="ruby-identifier">mode</span>)
+  <span class="ruby-ivar">@pseudo_toplevel_evaluable</span> = (<span class="ruby-identifier">mode</span>)<span class="ruby-operator">?</span> <span class="ruby-keyword">true</span><span class="ruby-operator">:</span> <span class="ruby-keyword">false</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-pseudo_toplevel_evaluable-3F">
+            
+              <b>pseudo_toplevel_evaluable?</b>()
+            
+            <a href="../classes/MultiTkIp_PseudoToplevel_Evaluable.html#method-i-pseudo_toplevel_evaluable-3F" name="method-i-pseudo_toplevel_evaluable-3F" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>def pseudo_toplevel_eval(body = <a
+href="Proc.html#method-c-new">Proc.new</a>)</p>
+
+<pre><code>Thread.current[:TOPLEVEL] = self
+begin
+  body.call
+ensure
+  Thread.current[:TOPLEVEL] = nil
+end</code></pre>
+
+<p>end</p>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-pseudo_toplevel_evaluable-3F_source')" id="l_method-i-pseudo_toplevel_evaluable-3F_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/3a47cf3395dd4c4fe8bdd5df13aab698f2ca314b/ext/tk/lib/multi-tk.rb#L2057" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-pseudo_toplevel_evaluable-3F_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/multi-tk.rb, line 2057</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">pseudo_toplevel_evaluable?</span>
+  <span class="ruby-ivar">@pseudo_toplevel_evaluable</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                    </div>
+
+    </div>
+  </body>
+</html>    

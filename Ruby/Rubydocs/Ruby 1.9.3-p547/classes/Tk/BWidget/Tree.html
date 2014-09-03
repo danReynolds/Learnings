@@ -1,0 +1,2167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>Tk::BWidget::Tree</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="../../../css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../../../css/main.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../../../css/github.css" type="text/css" media="screen" />
+<script src="../../../js/jquery-1.3.2.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../../js/jquery-effect.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../../js/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+
+<body>     
+    <div class="banner">
+        
+        <h1>
+            <span class="type">Class</span> 
+            Tk::BWidget::Tree 
+            
+                <span class="parent">&lt; 
+                    
+                    <a href="../../TkWindow.html">TkWindow</a>
+                    
+                </span>
+            
+        </h1>
+        <ul class="files">
+            
+            <li><a href="../../../files/ext/tk/lib/tkextlib/bwidget/tree_rb.html">ext/tk/lib/tkextlib/bwidget/tree.rb</a></li>
+            
+            <li><a href="../../../files/ext/tk/sample/tkextlib/bwidget/tree_rb.html">ext/tk/sample/tkextlib/bwidget/tree.rb</a></li>
+            
+        </ul>
+    </div>
+    <div id="bodyContent">
+        <div id="content">
+  
+
+
+  
+
+
+  
+  
+
+
+  
+    <!-- Namespace -->
+    <div class="sectiontitle">Namespace</div>
+    <ul>
+      
+        <li>
+          <span class="type">CLASS</span>
+          <a href="Tree/Event_for_Items.html">Tk::BWidget::Tree::Event_for_Items</a>
+        </li>
+      
+        <li>
+          <span class="type">CLASS</span>
+          <a href="Tree/Node.html">Tk::BWidget::Tree::Node</a>
+        </li>
+      
+    </ul>
+  
+
+
+  
+    <!-- Method ref -->
+    <div class="sectiontitle">Methods</div>
+    <dl class="methods">
+      
+        <dt>A</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-areabind">areabind</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-areabind_append">areabind_append</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-areabind_remove">areabind_remove</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-areabindinfo">areabindinfo</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>C</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-close_tree">close_tree</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>D</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-delete">delete</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>E</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-edit">edit</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-exist-3F">exist?</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>F</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-find">find</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-find_line">find_line</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-find_position">find_position</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>G</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-get_node">get_node</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>I</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-imagebind">imagebind</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-imagebind_append">imagebind_append</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-imagebind_remove">imagebind_remove</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-imagebindinfo">imagebindinfo</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-index">index</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-insert">insert</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>L</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-line">line</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>M</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-move">move</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>N</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-nodes">nodes</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>O</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-open-3F">open?</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-open_tree">open_tree</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>P</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-parent">parent</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>R</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-reorder">reorder</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>S</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-see">see</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-selection_add">selection_add</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-selection_clear">selection_clear</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-selection_get">selection_get</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-selection_include-3F">selection_include?</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-selection_range">selection_range</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-selection_remove">selection_remove</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-selection_set">selection_set</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-selection_toggle">selection_toggle</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>T</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-tagid">tagid</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-textbind">textbind</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-textbind_append">textbind_append</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-textbind_remove">textbind_remove</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-textbindinfo">textbindinfo</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-toggle">toggle</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>V</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-visible">visible</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+    </dl>
+  
+
+  
+    <!-- Includes -->
+    <div class="sectiontitle">Included Modules</div>
+    <ul>
+      
+        <li>
+          
+            <a href="../../TkItemConfigMethod.html">
+              TkItemConfigMethod
+            </a>
+          
+        </li>
+      
+        <li>
+          
+            Scrollable
+          
+        </li>
+      
+    </ul>
+  
+
+
+
+  
+
+    
+
+    
+
+    
+      <!-- Section constants -->
+      <div class="sectiontitle">Constants</div>
+      <table border='0' cellpadding='5'>
+        
+          <tr valign='top'>
+            <td class="attr-name">TkCommandNames</td>
+            <td>=</td>
+            <td class="attr-value">[&#39;Tree&#39;.freeze].freeze</td>
+          </tr>
+          
+            <tr valign='top'>
+              <td>&nbsp;</td>
+              <td colspan="2" class="attr-desc"></td>
+            </tr>
+          
+        
+          <tr valign='top'>
+            <td class="attr-name">WidgetClassName</td>
+            <td>=</td>
+            <td class="attr-value">&#39;Tree&#39;.freeze</td>
+          </tr>
+          
+            <tr valign='top'>
+              <td>&nbsp;</td>
+              <td colspan="2" class="attr-desc"></td>
+            </tr>
+          
+        
+      </table>
+    
+
+
+    
+
+
+    <!-- Methods -->
+        
+      <div class="sectiontitle">Instance Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-i-areabind">
+            
+              <b>areabind</b>(context, *args)
+            
+            <a href="../../../classes/Tk/BWidget/Tree.html#method-i-areabind" name="method-i-areabind" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-areabind_source')" id="l_method-i-areabind_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/bwidget/tree.rb#L60" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-areabind_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/bwidget/tree.rb, line 60</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">areabind</span>(<span class="ruby-identifier">context</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">args</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-constant">TkComm</span>.<span class="ruby-identifier">_callback_entry?</span>(<span class="ruby-identifier">args</span>[<span class="ruby-number">0</span>]) <span class="ruby-operator">||</span> <span class="ruby-operator">!</span><span class="ruby-identifier">block_given?</span>
+    <span class="ruby-identifier">cmd</span> = <span class="ruby-identifier">args</span>.<span class="ruby-identifier">shift</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">cmd</span> = <span class="ruby-constant">Proc</span>.<span class="ruby-identifier">new</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">_bind_for_event_class</span>(<span class="ruby-constant">Event_for_Items</span>, [<span class="ruby-identifier">path</span>, <span class="ruby-string">&#39;bindArea&#39;</span>],
+                        <span class="ruby-identifier">context</span>, <span class="ruby-identifier">cmd</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">args</span>)
+  <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-areabind_append">
+            
+              <b>areabind_append</b>(context, *args)
+            
+            <a href="../../../classes/Tk/BWidget/Tree.html#method-i-areabind_append" name="method-i-areabind_append" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-areabind_append_source')" id="l_method-i-areabind_append_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/bwidget/tree.rb#L71" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-areabind_append_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/bwidget/tree.rb, line 71</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">areabind_append</span>(<span class="ruby-identifier">context</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">args</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-constant">TkComm</span>.<span class="ruby-identifier">_callback_entry?</span>(<span class="ruby-identifier">args</span>[<span class="ruby-number">0</span>]) <span class="ruby-operator">||</span> <span class="ruby-operator">!</span><span class="ruby-identifier">block_given?</span>
+    <span class="ruby-identifier">cmd</span> = <span class="ruby-identifier">args</span>.<span class="ruby-identifier">shift</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">cmd</span> = <span class="ruby-constant">Proc</span>.<span class="ruby-identifier">new</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">_bind_append_for_event_class</span>(<span class="ruby-constant">Event_for_Items</span>, [<span class="ruby-identifier">path</span>, <span class="ruby-string">&#39;bindArea&#39;</span>],
+                               <span class="ruby-identifier">context</span>, <span class="ruby-identifier">cmd</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">args</span>)
+  <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-areabind_remove">
+            
+              <b>areabind_remove</b>(*args)
+            
+            <a href="../../../classes/Tk/BWidget/Tree.html#method-i-areabind_remove" name="method-i-areabind_remove" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-areabind_remove_source')" id="l_method-i-areabind_remove_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/bwidget/tree.rb#L82" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-areabind_remove_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/bwidget/tree.rb, line 82</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">areabind_remove</span>(<span class="ruby-operator">*</span><span class="ruby-identifier">args</span>)
+  <span class="ruby-identifier">_bind_remove_for_event_class</span>(<span class="ruby-constant">Event_for_Items</span>, [<span class="ruby-identifier">path</span>, <span class="ruby-string">&#39;bindArea&#39;</span>], <span class="ruby-operator">*</span><span class="ruby-identifier">args</span>)
+  <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-areabindinfo">
+            
+              <b>areabindinfo</b>(*args)
+            
+            <a href="../../../classes/Tk/BWidget/Tree.html#method-i-areabindinfo" name="method-i-areabindinfo" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-areabindinfo_source')" id="l_method-i-areabindinfo_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/bwidget/tree.rb#L87" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-areabindinfo_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/bwidget/tree.rb, line 87</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">areabindinfo</span>(<span class="ruby-operator">*</span><span class="ruby-identifier">args</span>)
+  <span class="ruby-identifier">_bindinfo_for_event_class</span>(<span class="ruby-constant">Event_for_Items</span>, [<span class="ruby-identifier">path</span>, <span class="ruby-string">&#39;bindArea&#39;</span>], <span class="ruby-operator">*</span><span class="ruby-identifier">args</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-close_tree">
+            
+              <b>close_tree</b>(node, recurse=None)
+            
+            <a href="../../../classes/Tk/BWidget/Tree.html#method-i-close_tree" name="method-i-close_tree" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-close_tree_source')" id="l_method-i-close_tree_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/bwidget/tree.rb#L173" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-close_tree_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/bwidget/tree.rb, line 173</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">close_tree</span>(<span class="ruby-identifier">node</span>, <span class="ruby-identifier">recurse</span>=<span class="ruby-constant">None</span>)
+  <span class="ruby-identifier">tk_send</span>(<span class="ruby-string">&#39;closetree&#39;</span>, <span class="ruby-identifier">tagid</span>(<span class="ruby-identifier">node</span>), <span class="ruby-identifier">recurse</span>)
+  <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-delete">
+            
+              <b>delete</b>(*args)
+            
+            <a href="../../../classes/Tk/BWidget/Tree.html#method-i-delete" name="method-i-delete" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-delete_source')" id="l_method-i-delete_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/bwidget/tree.rb#L178" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-delete_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/bwidget/tree.rb, line 178</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">delete</span>(<span class="ruby-operator">*</span><span class="ruby-identifier">args</span>)
+  <span class="ruby-identifier">tk_send</span>(<span class="ruby-string">&#39;delete&#39;</span>, <span class="ruby-operator">*</span>(<span class="ruby-identifier">args</span>.<span class="ruby-identifier">collect</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">node</span><span class="ruby-operator">|</span> <span class="ruby-identifier">tagid</span>(<span class="ruby-identifier">node</span>)}))
+  <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-edit">
+            
+              <b>edit</b>(node, text, *args)
+            
+            <a href="../../../classes/Tk/BWidget/Tree.html#method-i-edit" name="method-i-edit" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-edit_source')" id="l_method-i-edit_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/bwidget/tree.rb#L183" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-edit_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/bwidget/tree.rb, line 183</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">edit</span>(<span class="ruby-identifier">node</span>, <span class="ruby-identifier">text</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">args</span>)
+  <span class="ruby-identifier">tk_send</span>(<span class="ruby-string">&#39;edit&#39;</span>, <span class="ruby-identifier">tagid</span>(<span class="ruby-identifier">node</span>), <span class="ruby-identifier">text</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">args</span>)
+  <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-exist-3F">
+            
+              <b>exist?</b>(node)
+            
+            <a href="../../../classes/Tk/BWidget/Tree.html#method-i-exist-3F" name="method-i-exist-3F" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-exist-3F_source')" id="l_method-i-exist-3F_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/bwidget/tree.rb#L188" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-exist-3F_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/bwidget/tree.rb, line 188</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">exist?</span>(<span class="ruby-identifier">node</span>)
+  <span class="ruby-identifier">bool</span>(<span class="ruby-identifier">tk_send</span>(<span class="ruby-string">&#39;exists&#39;</span>, <span class="ruby-identifier">tagid</span>(<span class="ruby-identifier">node</span>)))
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-find">
+            
+              <b>find</b>(findinfo, confine=None)
+            
+            <a href="../../../classes/Tk/BWidget/Tree.html#method-i-find" name="method-i-find" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-find_source')" id="l_method-i-find_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/bwidget/tree.rb#L192" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-find_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/bwidget/tree.rb, line 192</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">find</span>(<span class="ruby-identifier">findinfo</span>, <span class="ruby-identifier">confine</span>=<span class="ruby-constant">None</span>)
+  <span class="ruby-constant">Tk</span><span class="ruby-operator">::</span><span class="ruby-constant">BWidget</span><span class="ruby-operator">::</span><span class="ruby-constant">Tree</span><span class="ruby-operator">::</span><span class="ruby-constant">Node</span>.<span class="ruby-identifier">id2obj</span>(<span class="ruby-keyword">self</span>, <span class="ruby-identifier">tk_send</span>(<span class="ruby-identifier">findinfo</span>, <span class="ruby-identifier">confine</span>))
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-find_line">
+            
+              <b>find_line</b>(linenum)
+            
+            <a href="../../../classes/Tk/BWidget/Tree.html#method-i-find_line" name="method-i-find_line" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-find_line_source')" id="l_method-i-find_line_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/bwidget/tree.rb#L198" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-find_line_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/bwidget/tree.rb, line 198</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">find_line</span>(<span class="ruby-identifier">linenum</span>)
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">find</span>(<span class="ruby-identifier">linenum</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-find_position">
+            
+              <b>find_position</b>(x, y, confine=None)
+            
+            <a href="../../../classes/Tk/BWidget/Tree.html#method-i-find_position" name="method-i-find_position" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-find_position_source')" id="l_method-i-find_position_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/bwidget/tree.rb#L195" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-find_position_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/bwidget/tree.rb, line 195</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">find_position</span>(<span class="ruby-identifier">x</span>, <span class="ruby-identifier">y</span>, <span class="ruby-identifier">confine</span>=<span class="ruby-constant">None</span>)
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">find</span>(<span class="ruby-identifier">_at</span>(<span class="ruby-identifier">x</span>,<span class="ruby-identifier">y</span>), <span class="ruby-identifier">confine</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-get_node">
+            
+              <b>get_node</b>(node, idx)
+            
+            <a href="../../../classes/Tk/BWidget/Tree.html#method-i-get_node" name="method-i-get_node" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-get_node_source')" id="l_method-i-get_node_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/bwidget/tree.rb#L220" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-get_node_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/bwidget/tree.rb, line 220</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">get_node</span>(<span class="ruby-identifier">node</span>, <span class="ruby-identifier">idx</span>)
+  <span class="ruby-constant">Tk</span><span class="ruby-operator">::</span><span class="ruby-constant">BWidget</span><span class="ruby-operator">::</span><span class="ruby-constant">Tree</span><span class="ruby-operator">::</span><span class="ruby-constant">Node</span>.<span class="ruby-identifier">id2obj</span>(<span class="ruby-keyword">self</span>, <span class="ruby-identifier">tk_send</span>(<span class="ruby-string">&#39;nodes&#39;</span>, <span class="ruby-identifier">tagid</span>(<span class="ruby-identifier">node</span>), <span class="ruby-identifier">idx</span>))
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-imagebind">
+            
+              <b>imagebind</b>(context, *args)
+            
+            <a href="../../../classes/Tk/BWidget/Tree.html#method-i-imagebind" name="method-i-imagebind" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>def imagebind(*args)</p>
+
+<pre><code>_bind_for_event_class(Event_for_Items, [path, &#39;bindImage&#39;], *args)
+self</code></pre>
+
+<p>end</p>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-imagebind_source')" id="l_method-i-imagebind_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/bwidget/tree.rb#L95" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-imagebind_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/bwidget/tree.rb, line 95</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">imagebind</span>(<span class="ruby-identifier">context</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">args</span>)
+  <span class="ruby-comment">#if args[0].kind_of?(Proc) || args[0].kind_of?(Method)</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-constant">TkComm</span>.<span class="ruby-identifier">_callback_entry?</span>(<span class="ruby-identifier">args</span>[<span class="ruby-number">0</span>]) <span class="ruby-operator">||</span> <span class="ruby-operator">!</span><span class="ruby-identifier">block_given?</span>
+    <span class="ruby-identifier">cmd</span> = <span class="ruby-identifier">args</span>.<span class="ruby-identifier">shift</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">cmd</span> = <span class="ruby-constant">Proc</span>.<span class="ruby-identifier">new</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">_bind_for_event_class</span>(<span class="ruby-constant">Event_for_Items</span>, [<span class="ruby-identifier">path</span>, <span class="ruby-string">&#39;bindImage&#39;</span>],
+                        <span class="ruby-identifier">context</span>, <span class="ruby-identifier">cmd</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">args</span>)
+  <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-imagebind_append">
+            
+              <b>imagebind_append</b>(context, *args)
+            
+            <a href="../../../classes/Tk/BWidget/Tree.html#method-i-imagebind_append" name="method-i-imagebind_append" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>def <a
+href="Tree.html#method-i-imagebind_append">#imagebind_append</a>(*args)</p>
+
+<pre><code>_bind_append_for_event_class(Event_for_Items, [path, &#39;bindImage&#39;], *args)
+self</code></pre>
+
+<p>end</p>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-imagebind_append_source')" id="l_method-i-imagebind_append_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/bwidget/tree.rb#L111" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-imagebind_append_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/bwidget/tree.rb, line 111</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">imagebind_append</span>(<span class="ruby-identifier">context</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">args</span>)
+  <span class="ruby-comment">#if args[0].kind_of?(Proc) || args[0].kind_of?(Method)</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-constant">TkComm</span>.<span class="ruby-identifier">_callback_entry?</span>(<span class="ruby-identifier">args</span>[<span class="ruby-number">0</span>]) <span class="ruby-operator">||</span> <span class="ruby-operator">!</span><span class="ruby-identifier">block_given?</span>
+    <span class="ruby-identifier">cmd</span> = <span class="ruby-identifier">args</span>.<span class="ruby-identifier">shift</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">cmd</span> = <span class="ruby-constant">Proc</span>.<span class="ruby-identifier">new</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">_bind_append_for_event_class</span>(<span class="ruby-constant">Event_for_Items</span>, [<span class="ruby-identifier">path</span>, <span class="ruby-string">&#39;bindImage&#39;</span>],
+                               <span class="ruby-identifier">context</span>, <span class="ruby-identifier">cmd</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">args</span>)
+  <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-imagebind_remove">
+            
+              <b>imagebind_remove</b>(*args)
+            
+            <a href="../../../classes/Tk/BWidget/Tree.html#method-i-imagebind_remove" name="method-i-imagebind_remove" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-imagebind_remove_source')" id="l_method-i-imagebind_remove_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/bwidget/tree.rb#L123" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-imagebind_remove_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/bwidget/tree.rb, line 123</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">imagebind_remove</span>(<span class="ruby-operator">*</span><span class="ruby-identifier">args</span>)
+  <span class="ruby-identifier">_bind_remove_for_event_class</span>(<span class="ruby-constant">Event_for_Items</span>, [<span class="ruby-identifier">path</span>, <span class="ruby-string">&#39;bindImage&#39;</span>], <span class="ruby-operator">*</span><span class="ruby-identifier">args</span>)
+  <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-imagebindinfo">
+            
+              <b>imagebindinfo</b>(*args)
+            
+            <a href="../../../classes/Tk/BWidget/Tree.html#method-i-imagebindinfo" name="method-i-imagebindinfo" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-imagebindinfo_source')" id="l_method-i-imagebindinfo_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/bwidget/tree.rb#L128" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-imagebindinfo_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/bwidget/tree.rb, line 128</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">imagebindinfo</span>(<span class="ruby-operator">*</span><span class="ruby-identifier">args</span>)
+  <span class="ruby-identifier">_bindinfo_for_event_class</span>(<span class="ruby-constant">Event_for_Items</span>, [<span class="ruby-identifier">path</span>, <span class="ruby-string">&#39;bindImage&#39;</span>], <span class="ruby-operator">*</span><span class="ruby-identifier">args</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-index">
+            
+              <b>index</b>(node)
+            
+            <a href="../../../classes/Tk/BWidget/Tree.html#method-i-index" name="method-i-index" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-index_source')" id="l_method-i-index_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/bwidget/tree.rb#L202" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-index_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/bwidget/tree.rb, line 202</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">index</span>(<span class="ruby-identifier">node</span>)
+  <span class="ruby-identifier">num_or_str</span>(<span class="ruby-identifier">tk_send</span>(<span class="ruby-string">&#39;index&#39;</span>, <span class="ruby-identifier">tagid</span>(<span class="ruby-identifier">node</span>)))
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-insert">
+            
+              <b>insert</b>(idx, parent, node, keys={})
+            
+            <a href="../../../classes/Tk/BWidget/Tree.html#method-i-insert" name="method-i-insert" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-insert_source')" id="l_method-i-insert_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/bwidget/tree.rb#L206" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-insert_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/bwidget/tree.rb, line 206</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">insert</span>(<span class="ruby-identifier">idx</span>, <span class="ruby-identifier">parent</span>, <span class="ruby-identifier">node</span>, <span class="ruby-identifier">keys</span>={})
+  <span class="ruby-identifier">tk_send</span>(<span class="ruby-string">&#39;insert&#39;</span>, <span class="ruby-identifier">idx</span>, <span class="ruby-identifier">tagid</span>(<span class="ruby-identifier">parent</span>), <span class="ruby-identifier">tagid</span>(<span class="ruby-identifier">node</span>), <span class="ruby-operator">*</span><span class="ruby-identifier">hash_kv</span>(<span class="ruby-identifier">keys</span>))
+  <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-line">
+            
+              <b>line</b>(node)
+            
+            <a href="../../../classes/Tk/BWidget/Tree.html#method-i-line" name="method-i-line" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-line_source')" id="l_method-i-line_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/bwidget/tree.rb#L211" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-line_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/bwidget/tree.rb, line 211</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">line</span>(<span class="ruby-identifier">node</span>)
+  <span class="ruby-identifier">number</span>(<span class="ruby-identifier">tk_send</span>(<span class="ruby-string">&#39;line&#39;</span>, <span class="ruby-identifier">tagid</span>(<span class="ruby-identifier">node</span>)))
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-move">
+            
+              <b>move</b>(parent, node, idx)
+            
+            <a href="../../../classes/Tk/BWidget/Tree.html#method-i-move" name="method-i-move" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-move_source')" id="l_method-i-move_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/bwidget/tree.rb#L215" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-move_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/bwidget/tree.rb, line 215</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">move</span>(<span class="ruby-identifier">parent</span>, <span class="ruby-identifier">node</span>, <span class="ruby-identifier">idx</span>)
+  <span class="ruby-identifier">tk_send</span>(<span class="ruby-string">&#39;move&#39;</span>, <span class="ruby-identifier">tagid</span>(<span class="ruby-identifier">parent</span>), <span class="ruby-identifier">tagid</span>(<span class="ruby-identifier">node</span>), <span class="ruby-identifier">idx</span>)
+  <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-nodes">
+            
+              <b>nodes</b>(node, first=None, last=None)
+            
+            <a href="../../../classes/Tk/BWidget/Tree.html#method-i-nodes" name="method-i-nodes" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-nodes_source')" id="l_method-i-nodes_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/bwidget/tree.rb#L224" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-nodes_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/bwidget/tree.rb, line 224</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">nodes</span>(<span class="ruby-identifier">node</span>, <span class="ruby-identifier">first</span>=<span class="ruby-constant">None</span>, <span class="ruby-identifier">last</span>=<span class="ruby-constant">None</span>)
+  <span class="ruby-identifier">simplelist</span>(<span class="ruby-identifier">tk_send</span>(<span class="ruby-string">&#39;nodes&#39;</span>, <span class="ruby-identifier">tagid</span>(<span class="ruby-identifier">node</span>), <span class="ruby-identifier">first</span>, <span class="ruby-identifier">last</span>)).<span class="ruby-identifier">collect</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">node</span><span class="ruby-operator">|</span>
+    <span class="ruby-constant">Tk</span><span class="ruby-operator">::</span><span class="ruby-constant">BWidget</span><span class="ruby-operator">::</span><span class="ruby-constant">Tree</span><span class="ruby-operator">::</span><span class="ruby-constant">Node</span>.<span class="ruby-identifier">id2obj</span>(<span class="ruby-keyword">self</span>, <span class="ruby-identifier">node</span>)
+  }
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-open-3F">
+            
+              <b>open?</b>(node)
+            
+            <a href="../../../classes/Tk/BWidget/Tree.html#method-i-open-3F" name="method-i-open-3F" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-open-3F_source')" id="l_method-i-open-3F_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/bwidget/tree.rb#L230" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-open-3F_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/bwidget/tree.rb, line 230</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">open?</span>(<span class="ruby-identifier">node</span>)
+  <span class="ruby-identifier">bool</span>(<span class="ruby-keyword">self</span>.<span class="ruby-identifier">itemcget</span>(<span class="ruby-identifier">tagid</span>(<span class="ruby-identifier">node</span>), <span class="ruby-string">&#39;open&#39;</span>))
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-open_tree">
+            
+              <b>open_tree</b>(node, recurse=None)
+            
+            <a href="../../../classes/Tk/BWidget/Tree.html#method-i-open_tree" name="method-i-open_tree" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-open_tree_source')" id="l_method-i-open_tree_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/bwidget/tree.rb#L234" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-open_tree_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/bwidget/tree.rb, line 234</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">open_tree</span>(<span class="ruby-identifier">node</span>, <span class="ruby-identifier">recurse</span>=<span class="ruby-constant">None</span>)
+  <span class="ruby-identifier">tk_send</span>(<span class="ruby-string">&#39;opentree&#39;</span>, <span class="ruby-identifier">tagid</span>(<span class="ruby-identifier">node</span>), <span class="ruby-identifier">recurse</span>)
+  <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-parent">
+            
+              <b>parent</b>(node)
+            
+            <a href="../../../classes/Tk/BWidget/Tree.html#method-i-parent" name="method-i-parent" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-parent_source')" id="l_method-i-parent_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/bwidget/tree.rb#L239" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-parent_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/bwidget/tree.rb, line 239</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">parent</span>(<span class="ruby-identifier">node</span>)
+  <span class="ruby-constant">Tk</span><span class="ruby-operator">::</span><span class="ruby-constant">BWidget</span><span class="ruby-operator">::</span><span class="ruby-constant">Tree</span><span class="ruby-operator">::</span><span class="ruby-constant">Node</span>.<span class="ruby-identifier">id2obj</span>(<span class="ruby-keyword">self</span>, <span class="ruby-identifier">tk_send</span>(<span class="ruby-string">&#39;parent&#39;</span>, <span class="ruby-identifier">tagid</span>(<span class="ruby-identifier">node</span>)))
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-reorder">
+            
+              <b>reorder</b>(node, neworder)
+            
+            <a href="../../../classes/Tk/BWidget/Tree.html#method-i-reorder" name="method-i-reorder" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-reorder_source')" id="l_method-i-reorder_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/bwidget/tree.rb#L243" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-reorder_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/bwidget/tree.rb, line 243</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">reorder</span>(<span class="ruby-identifier">node</span>, <span class="ruby-identifier">neworder</span>)
+  <span class="ruby-identifier">tk_send</span>(<span class="ruby-string">&#39;reorder&#39;</span>, <span class="ruby-identifier">tagid</span>(<span class="ruby-identifier">node</span>), <span class="ruby-identifier">neworder</span>)
+  <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-see">
+            
+              <b>see</b>(node)
+            
+            <a href="../../../classes/Tk/BWidget/Tree.html#method-i-see" name="method-i-see" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-see_source')" id="l_method-i-see_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/bwidget/tree.rb#L248" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-see_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/bwidget/tree.rb, line 248</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">see</span>(<span class="ruby-identifier">node</span>)
+  <span class="ruby-identifier">tk_send</span>(<span class="ruby-string">&#39;see&#39;</span>, <span class="ruby-identifier">tagid</span>(<span class="ruby-identifier">node</span>))
+  <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-selection_add">
+            
+              <b>selection_add</b>(*args)
+            
+            <a href="../../../classes/Tk/BWidget/Tree.html#method-i-selection_add" name="method-i-selection_add" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-selection_add_source')" id="l_method-i-selection_add_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/bwidget/tree.rb#L253" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-selection_add_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/bwidget/tree.rb, line 253</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">selection_add</span>(<span class="ruby-operator">*</span><span class="ruby-identifier">args</span>)
+  <span class="ruby-identifier">tk_send_without_enc</span>(<span class="ruby-string">&#39;selection&#39;</span>, <span class="ruby-string">&#39;add&#39;</span>,
+                      <span class="ruby-operator">*</span>(<span class="ruby-identifier">args</span>.<span class="ruby-identifier">collect</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">node</span><span class="ruby-operator">|</span> <span class="ruby-identifier">tagid</span>(<span class="ruby-identifier">node</span>)}))
+  <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-selection_clear">
+            
+              <b>selection_clear</b>()
+            
+            <a href="../../../classes/Tk/BWidget/Tree.html#method-i-selection_clear" name="method-i-selection_clear" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-selection_clear_source')" id="l_method-i-selection_clear_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/bwidget/tree.rb#L259" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-selection_clear_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/bwidget/tree.rb, line 259</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">selection_clear</span>
+  <span class="ruby-identifier">tk_send_without_enc</span>(<span class="ruby-string">&#39;selection&#39;</span>, <span class="ruby-string">&#39;clear&#39;</span>)
+  <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-selection_get">
+            
+              <b>selection_get</b>()
+            
+            <a href="../../../classes/Tk/BWidget/Tree.html#method-i-selection_get" name="method-i-selection_get" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-selection_get_source')" id="l_method-i-selection_get_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/bwidget/tree.rb#L264" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-selection_get_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/bwidget/tree.rb, line 264</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">selection_get</span>
+  <span class="ruby-identifier">list</span>(<span class="ruby-identifier">tk_send_without_enc</span>(<span class="ruby-string">&#39;selection&#39;</span>, <span class="ruby-string">&#39;get&#39;</span>))
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-selection_include-3F">
+            
+              <b>selection_include?</b>(*args)
+            
+            <a href="../../../classes/Tk/BWidget/Tree.html#method-i-selection_include-3F" name="method-i-selection_include-3F" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-selection_include-3F_source')" id="l_method-i-selection_include-3F_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/bwidget/tree.rb#L268" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-selection_include-3F_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/bwidget/tree.rb, line 268</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">selection_include?</span>(<span class="ruby-operator">*</span><span class="ruby-identifier">args</span>)
+  <span class="ruby-identifier">bool</span>(<span class="ruby-identifier">tk_send_without_enc</span>(<span class="ruby-string">&#39;selection&#39;</span>, <span class="ruby-string">&#39;get&#39;</span>,
+                           <span class="ruby-operator">*</span>(<span class="ruby-identifier">args</span>.<span class="ruby-identifier">collect</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">node</span><span class="ruby-operator">|</span> <span class="ruby-identifier">tagid</span>(<span class="ruby-identifier">node</span>)})))
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-selection_range">
+            
+              <b>selection_range</b>(*args)
+            
+            <a href="../../../classes/Tk/BWidget/Tree.html#method-i-selection_range" name="method-i-selection_range" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-selection_range_source')" id="l_method-i-selection_range_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/bwidget/tree.rb#L273" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-selection_range_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/bwidget/tree.rb, line 273</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">selection_range</span>(<span class="ruby-operator">*</span><span class="ruby-identifier">args</span>)
+  <span class="ruby-identifier">tk_send_without_enc</span>(<span class="ruby-string">&#39;selection&#39;</span>, <span class="ruby-string">&#39;range&#39;</span>,
+                      <span class="ruby-operator">*</span>(<span class="ruby-identifier">args</span>.<span class="ruby-identifier">collect</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">node</span><span class="ruby-operator">|</span> <span class="ruby-identifier">tagid</span>(<span class="ruby-identifier">node</span>)}))
+  <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-selection_remove">
+            
+              <b>selection_remove</b>(*args)
+            
+            <a href="../../../classes/Tk/BWidget/Tree.html#method-i-selection_remove" name="method-i-selection_remove" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-selection_remove_source')" id="l_method-i-selection_remove_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/bwidget/tree.rb#L279" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-selection_remove_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/bwidget/tree.rb, line 279</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">selection_remove</span>(<span class="ruby-operator">*</span><span class="ruby-identifier">args</span>)
+  <span class="ruby-identifier">tk_send_without_enc</span>(<span class="ruby-string">&#39;selection&#39;</span>, <span class="ruby-string">&#39;remove&#39;</span>,
+                      <span class="ruby-operator">*</span>(<span class="ruby-identifier">args</span>.<span class="ruby-identifier">collect</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">node</span><span class="ruby-operator">|</span> <span class="ruby-identifier">tagid</span>(<span class="ruby-identifier">node</span>)}))
+  <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-selection_set">
+            
+              <b>selection_set</b>(*args)
+            
+            <a href="../../../classes/Tk/BWidget/Tree.html#method-i-selection_set" name="method-i-selection_set" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-selection_set_source')" id="l_method-i-selection_set_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/bwidget/tree.rb#L285" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-selection_set_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/bwidget/tree.rb, line 285</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">selection_set</span>(<span class="ruby-operator">*</span><span class="ruby-identifier">args</span>)
+  <span class="ruby-identifier">tk_send_without_enc</span>(<span class="ruby-string">&#39;selection&#39;</span>, <span class="ruby-string">&#39;set&#39;</span>,
+                      <span class="ruby-operator">*</span>(<span class="ruby-identifier">args</span>.<span class="ruby-identifier">collect</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">node</span><span class="ruby-operator">|</span> <span class="ruby-identifier">tagid</span>(<span class="ruby-identifier">node</span>)}))
+  <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-selection_toggle">
+            
+              <b>selection_toggle</b>(*args)
+            
+            <a href="../../../classes/Tk/BWidget/Tree.html#method-i-selection_toggle" name="method-i-selection_toggle" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-selection_toggle_source')" id="l_method-i-selection_toggle_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/bwidget/tree.rb#L291" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-selection_toggle_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/bwidget/tree.rb, line 291</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">selection_toggle</span>(<span class="ruby-operator">*</span><span class="ruby-identifier">args</span>)
+  <span class="ruby-identifier">tk_send_without_enc</span>(<span class="ruby-string">&#39;selection&#39;</span>, <span class="ruby-string">&#39;toggle&#39;</span>,
+                      <span class="ruby-operator">*</span>(<span class="ruby-identifier">args</span>.<span class="ruby-identifier">collect</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">node</span><span class="ruby-operator">|</span> <span class="ruby-identifier">tagid</span>(<span class="ruby-identifier">node</span>)}))
+  <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-tagid">
+            
+              <b>tagid</b>(tag)
+            
+            <a href="../../../classes/Tk/BWidget/Tree.html#method-i-tagid" name="method-i-tagid" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-tagid_source')" id="l_method-i-tagid_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/bwidget/tree.rb#L51" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-tagid_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/bwidget/tree.rb, line 51</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">tagid</span>(<span class="ruby-identifier">tag</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">tag</span>.<span class="ruby-identifier">kind_of?</span>(<span class="ruby-constant">Tk</span><span class="ruby-operator">::</span><span class="ruby-constant">BWidget</span><span class="ruby-operator">::</span><span class="ruby-constant">Tree</span><span class="ruby-operator">::</span><span class="ruby-constant">Node</span>)
+    <span class="ruby-identifier">tag</span>.<span class="ruby-identifier">id</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-comment"># tag</span>
+    <span class="ruby-identifier">_get_eval_string</span>(<span class="ruby-identifier">tag</span>)
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-textbind">
+            
+              <b>textbind</b>(context, *args)
+            
+            <a href="../../../classes/Tk/BWidget/Tree.html#method-i-textbind" name="method-i-textbind" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>def textbind(*args)</p>
+
+<pre><code>_bind_for_event_class(Event_for_Items, [path, &#39;bindText&#39;], *args)
+self</code></pre>
+
+<p>end</p>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-textbind_source')" id="l_method-i-textbind_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/bwidget/tree.rb#L136" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-textbind_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/bwidget/tree.rb, line 136</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">textbind</span>(<span class="ruby-identifier">context</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">args</span>)
+  <span class="ruby-comment">#if args[0].kind_of?(Proc) || args[0].kind_of?(Method)</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-constant">TkComm</span>.<span class="ruby-identifier">_callback_entry?</span>(<span class="ruby-identifier">args</span>[<span class="ruby-number">0</span>]) <span class="ruby-operator">||</span> <span class="ruby-operator">!</span><span class="ruby-identifier">block_given?</span>
+    <span class="ruby-identifier">cmd</span> = <span class="ruby-identifier">args</span>.<span class="ruby-identifier">shift</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">cmd</span> = <span class="ruby-constant">Proc</span>.<span class="ruby-identifier">new</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">_bind_for_event_class</span>(<span class="ruby-constant">Event_for_Items</span>, [<span class="ruby-identifier">path</span>, <span class="ruby-string">&#39;bindText&#39;</span>],
+                        <span class="ruby-identifier">context</span>, <span class="ruby-identifier">cmd</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">args</span>)
+  <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-textbind_append">
+            
+              <b>textbind_append</b>(context, *args)
+            
+            <a href="../../../classes/Tk/BWidget/Tree.html#method-i-textbind_append" name="method-i-textbind_append" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>def <a
+href="Tree.html#method-i-textbind_append">#textbind_append</a>(*args)</p>
+
+<pre><code>_bind_append_for_event_class(Event_for_Items, [path, &#39;bindText&#39;], *args)
+self</code></pre>
+
+<p>end</p>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-textbind_append_source')" id="l_method-i-textbind_append_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/bwidget/tree.rb#L152" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-textbind_append_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/bwidget/tree.rb, line 152</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">textbind_append</span>(<span class="ruby-identifier">context</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">args</span>)
+  <span class="ruby-comment">#if args[0].kind_of?(Proc) || args[0].kind_of?(Method)</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-constant">TkComm</span>.<span class="ruby-identifier">_callback_entry?</span>(<span class="ruby-identifier">args</span>[<span class="ruby-number">0</span>]) <span class="ruby-operator">||</span> <span class="ruby-operator">!</span><span class="ruby-identifier">block_given?</span>
+    <span class="ruby-identifier">cmd</span> = <span class="ruby-identifier">args</span>.<span class="ruby-identifier">shift</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">cmd</span> = <span class="ruby-constant">Proc</span>.<span class="ruby-identifier">new</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">_bind_append_for_event_class</span>(<span class="ruby-constant">Event_for_Items</span>, [<span class="ruby-identifier">path</span>, <span class="ruby-string">&#39;bindText&#39;</span>],
+                               <span class="ruby-identifier">context</span>, <span class="ruby-identifier">cmd</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">args</span>)
+  <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-textbind_remove">
+            
+              <b>textbind_remove</b>(*args)
+            
+            <a href="../../../classes/Tk/BWidget/Tree.html#method-i-textbind_remove" name="method-i-textbind_remove" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-textbind_remove_source')" id="l_method-i-textbind_remove_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/bwidget/tree.rb#L164" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-textbind_remove_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/bwidget/tree.rb, line 164</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">textbind_remove</span>(<span class="ruby-operator">*</span><span class="ruby-identifier">args</span>)
+  <span class="ruby-identifier">_bind_remove_for_event_class</span>(<span class="ruby-constant">Event_for_Items</span>, [<span class="ruby-identifier">path</span>, <span class="ruby-string">&#39;bindText&#39;</span>], <span class="ruby-operator">*</span><span class="ruby-identifier">args</span>)
+  <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-textbindinfo">
+            
+              <b>textbindinfo</b>(*args)
+            
+            <a href="../../../classes/Tk/BWidget/Tree.html#method-i-textbindinfo" name="method-i-textbindinfo" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-textbindinfo_source')" id="l_method-i-textbindinfo_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/bwidget/tree.rb#L169" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-textbindinfo_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/bwidget/tree.rb, line 169</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">textbindinfo</span>(<span class="ruby-operator">*</span><span class="ruby-identifier">args</span>)
+  <span class="ruby-identifier">_bindinfo_for_event_class</span>(<span class="ruby-constant">Event_for_Items</span>, [<span class="ruby-identifier">path</span>, <span class="ruby-string">&#39;bindText&#39;</span>], <span class="ruby-operator">*</span><span class="ruby-identifier">args</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-toggle">
+            
+              <b>toggle</b>(node)
+            
+            <a href="../../../classes/Tk/BWidget/Tree.html#method-i-toggle" name="method-i-toggle" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-toggle_source')" id="l_method-i-toggle_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/bwidget/tree.rb#L297" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-toggle_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/bwidget/tree.rb, line 297</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">toggle</span>(<span class="ruby-identifier">node</span>)
+  <span class="ruby-identifier">tk_send_without_enc</span>(<span class="ruby-string">&#39;toggle&#39;</span>, <span class="ruby-identifier">tagid</span>(<span class="ruby-identifier">node</span>))
+  <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-visible">
+            
+              <b>visible</b>(node)
+            
+            <a href="../../../classes/Tk/BWidget/Tree.html#method-i-visible" name="method-i-visible" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-visible_source')" id="l_method-i-visible_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/bwidget/tree.rb#L302" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-visible_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/bwidget/tree.rb, line 302</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">visible</span>(<span class="ruby-identifier">node</span>)
+  <span class="ruby-identifier">bool</span>(<span class="ruby-identifier">tk_send_without_enc</span>(<span class="ruby-string">&#39;visible&#39;</span>, <span class="ruby-identifier">tagid</span>(<span class="ruby-identifier">node</span>)))
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                    </div>
+
+    </div>
+  </body>
+</html>    

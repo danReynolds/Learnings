@@ -1,0 +1,776 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>Mdoc2Man</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="../css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/main.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/github.css" type="text/css" media="screen" />
+<script src="../js/jquery-1.3.2.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/jquery-effect.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+
+<body>     
+    <div class="banner">
+        
+        <h1>
+            <span class="type">Class</span> 
+            Mdoc2Man 
+            
+                <span class="parent">&lt; 
+                    
+                    <a href="Object.html">Object</a>
+                    
+                </span>
+            
+        </h1>
+        <ul class="files">
+            
+            <li><a href="../files/tool/mdoc2man_rb.html">tool/mdoc2man.rb</a></li>
+            
+        </ul>
+    </div>
+    <div id="bodyContent">
+        <div id="content">
+  
+    <div class="description">
+      
+<p>mdoc2man - mdoc to man converter</p>
+
+<p>Quick usage:  mdoc2man.rb &lt; mdoc_manpage.8 &gt; man_manpage.8</p>
+
+<p>Ported from Perl by Akinori MUSHA.</p>
+
+<pre><code>Copyright (c) 2001 University of Illinois Board of Trustees
+Copyright (c) 2001 Mark D. Roth
+Copyright (c) 2002, 2003 Akinori MUSHA
+All rights reserved.
+
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions
+are met:
+1. Redistributions of source code must retain the above copyright
+   notice, this list of conditions and the following disclaimer.
+2. Redistributions in binary form must reproduce the above copyright
+   notice, this list of conditions and the following disclaimer in the
+   documentation and/or other materials provided with the distribution.
+3. All advertising materials mentioning features or use of this software
+   must display the following acknowledgement:
+   This product includes software developed by the University of
+   Illinois at Urbana, and their contributors.
+4. The University nor the names of their
+   contributors may be used to endorse or promote products derived from
+   this software without specific prior written permission.
+
+THIS SOFTWARE IS PROVIDED BY THE TRUSTEES AND CONTRIBUTORS ``AS IS&#39;&#39; AND
+ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+ARE DISCLAIMED.  IN NO EVENT SHALL THE TRUSTEES OR CONTRIBUTORS BE LIABLE
+FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS
+OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION)
+HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
+LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY
+OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
+SUCH DAMAGE.</code></pre>
+
+<p>$Id$</p>
+
+    </div>
+  
+
+
+  
+
+
+  
+  
+
+
+  
+
+
+  
+    <!-- Method ref -->
+    <div class="sectiontitle">Methods</div>
+    <dl class="methods">
+      
+        <dt>M</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-mdoc2man">mdoc2man</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-mdoc2man">mdoc2man</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>N</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-new">new</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>P</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-parse_macro">parse_macro</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+    </dl>
+  
+
+  
+
+
+
+  
+
+    
+
+    
+
+    
+      <!-- Section constants -->
+      <div class="sectiontitle">Constants</div>
+      <table border='0' cellpadding='5'>
+        
+          <tr valign='top'>
+            <td class="attr-name">ANGLE</td>
+            <td>=</td>
+            <td class="attr-value">1</td>
+          </tr>
+          
+            <tr valign='top'>
+              <td>&nbsp;</td>
+              <td colspan="2" class="attr-desc"></td>
+            </tr>
+          
+        
+          <tr valign='top'>
+            <td class="attr-name">OPTION</td>
+            <td>=</td>
+            <td class="attr-value">2</td>
+          </tr>
+          
+            <tr valign='top'>
+              <td>&nbsp;</td>
+              <td colspan="2" class="attr-desc"></td>
+            </tr>
+          
+        
+          <tr valign='top'>
+            <td class="attr-name">PAREN</td>
+            <td>=</td>
+            <td class="attr-value">3</td>
+          </tr>
+          
+            <tr valign='top'>
+              <td>&nbsp;</td>
+              <td colspan="2" class="attr-desc"></td>
+            </tr>
+          
+        
+          <tr valign='top'>
+            <td class="attr-name">RE_PUNCT</td>
+            <td>=</td>
+            <td class="attr-value">/^[!&quot;&#39;),\.\/:;&gt;\?\]`]$/</td>
+          </tr>
+          
+            <tr valign='top'>
+              <td>&nbsp;</td>
+              <td colspan="2" class="attr-desc"></td>
+            </tr>
+          
+        
+      </table>
+    
+
+
+    
+
+
+    <!-- Methods -->
+    
+      <div class="sectiontitle">Class Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-c-mdoc2man">
+            
+              <b>mdoc2man</b>(i, o)
+            
+            <a href="../classes/Mdoc2Man.html#method-c-mdoc2man" name="method-c-mdoc2man" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-mdoc2man_source')" id="l_method-c-mdoc2man_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/3a47cf3395dd4c4fe8bdd5df13aab698f2ca314b/tool/mdoc2man.rb#L458" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-mdoc2man_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File tool/mdoc2man.rb, line 458</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">mdoc2man</span>(<span class="ruby-identifier">i</span>, <span class="ruby-identifier">o</span>)
+  <span class="ruby-identifier">new</span>.<span class="ruby-identifier">mdoc2man</span>(<span class="ruby-identifier">i</span>, <span class="ruby-identifier">o</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-new">
+            
+              <b>new</b>()
+            
+            <a href="../classes/Mdoc2Man.html#method-c-new" name="method-c-new" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-new_source')" id="l_method-c-new_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/3a47cf3395dd4c4fe8bdd5df13aab698f2ca314b/tool/mdoc2man.rb#L52" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-new_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File tool/mdoc2man.rb, line 52</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">initialize</span>
+  <span class="ruby-ivar">@name</span> = <span class="ruby-ivar">@date</span> = <span class="ruby-ivar">@id</span> = <span class="ruby-keyword">nil</span>
+  <span class="ruby-ivar">@refauthors</span> = <span class="ruby-ivar">@reftitle</span> = <span class="ruby-ivar">@refissue</span> = <span class="ruby-ivar">@refdate</span> = <span class="ruby-ivar">@refopt</span> = <span class="ruby-keyword">nil</span>
+
+  <span class="ruby-ivar">@optlist</span> = <span class="ruby-number">0</span>                <span class="ruby-comment">### 1 = bullet, 2 = enum, 3 = tag, 4 = item</span>
+  <span class="ruby-ivar">@oldoptlist</span> = <span class="ruby-number">0</span>
+  <span class="ruby-ivar">@nospace</span> = <span class="ruby-number">0</span>                <span class="ruby-comment">### 0, 1, 2</span>
+  <span class="ruby-ivar">@enum</span> = <span class="ruby-number">0</span>
+  <span class="ruby-ivar">@synopsis</span> = <span class="ruby-keyword">true</span>
+  <span class="ruby-ivar">@reference</span> = <span class="ruby-keyword">false</span>
+  <span class="ruby-ivar">@ext</span> = <span class="ruby-keyword">false</span>
+  <span class="ruby-ivar">@extopt</span> = <span class="ruby-keyword">false</span>
+  <span class="ruby-ivar">@literal</span> = <span class="ruby-keyword">false</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                  
+      <div class="sectiontitle">Instance Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-i-mdoc2man">
+            
+              <b>mdoc2man</b>(i, o)
+            
+            <a href="../classes/Mdoc2Man.html#method-i-mdoc2man" name="method-i-mdoc2man" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-mdoc2man_source')" id="l_method-i-mdoc2man_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/3a47cf3395dd4c4fe8bdd5df13aab698f2ca314b/tool/mdoc2man.rb#L67" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-mdoc2man_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File tool/mdoc2man.rb, line 67</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">mdoc2man</span>(<span class="ruby-identifier">i</span>, <span class="ruby-identifier">o</span>)
+  <span class="ruby-identifier">i</span>.<span class="ruby-identifier">each</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">line</span><span class="ruby-operator">|</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-regexp">/^\./</span> <span class="ruby-operator">!~</span> <span class="ruby-identifier">line</span>
+      <span class="ruby-identifier">o</span>.<span class="ruby-identifier">print</span> <span class="ruby-identifier">line</span>
+      <span class="ruby-identifier">o</span>.<span class="ruby-identifier">print</span> <span class="ruby-string">&quot;.br\n&quot;</span> <span class="ruby-keyword">if</span> <span class="ruby-ivar">@literal</span>
+      <span class="ruby-keyword">next</span>
+    <span class="ruby-keyword">end</span>
+
+    <span class="ruby-identifier">line</span>.<span class="ruby-identifier">slice!</span>(<span class="ruby-number">0</span>, <span class="ruby-number">1</span>)
+
+    <span class="ruby-keyword">next</span> <span class="ruby-keyword">if</span> <span class="ruby-regexp">/\&quot;/</span> <span class="ruby-operator">=~</span> <span class="ruby-identifier">line</span>
+
+    <span class="ruby-identifier">line</span> = <span class="ruby-identifier">parse_macro</span>(<span class="ruby-identifier">line</span>) <span class="ruby-keyword">and</span> <span class="ruby-identifier">o</span>.<span class="ruby-identifier">print</span> <span class="ruby-identifier">line</span>
+  }
+
+  <span class="ruby-identifier">initialize</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-parse_macro">
+            
+              <b>parse_macro</b>(line)
+            
+            <a href="../classes/Mdoc2Man.html#method-i-parse_macro" name="method-i-parse_macro" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-parse_macro_source')" id="l_method-i-parse_macro_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/3a47cf3395dd4c4fe8bdd5df13aab698f2ca314b/tool/mdoc2man.rb#L85" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-parse_macro_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File tool/mdoc2man.rb, line 85</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">parse_macro</span>(<span class="ruby-identifier">line</span>)
+  <span class="ruby-identifier">words</span> = <span class="ruby-identifier">line</span>.<span class="ruby-identifier">split</span>
+  <span class="ruby-identifier">retval</span> = <span class="ruby-string">&#39;&#39;</span>
+
+  <span class="ruby-identifier">quote</span> = []
+  <span class="ruby-identifier">dl</span> = <span class="ruby-keyword">false</span>
+
+  <span class="ruby-keyword">while</span> <span class="ruby-identifier">word</span> = <span class="ruby-identifier">words</span>.<span class="ruby-identifier">shift</span>
+    <span class="ruby-keyword">case</span> <span class="ruby-identifier">word</span>
+    <span class="ruby-keyword">when</span> <span class="ruby-constant">RE_PUNCT</span>
+      <span class="ruby-keyword">while</span> <span class="ruby-identifier">q</span> = <span class="ruby-identifier">quote</span>.<span class="ruby-identifier">pop</span>
+        <span class="ruby-keyword">case</span> <span class="ruby-identifier">q</span>
+        <span class="ruby-keyword">when</span> <span class="ruby-constant">OPTION</span>
+          <span class="ruby-identifier">retval</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-string">&#39;]&#39;</span>
+        <span class="ruby-keyword">when</span> <span class="ruby-constant">PAREN</span>
+          <span class="ruby-identifier">retval</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-string">&#39;)&#39;</span>
+        <span class="ruby-keyword">when</span> <span class="ruby-constant">ANGLE</span>
+          <span class="ruby-identifier">retval</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-string">&#39;&gt;&#39;</span>
+        <span class="ruby-keyword">end</span>
+      <span class="ruby-keyword">end</span>
+      <span class="ruby-identifier">retval</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">word</span>
+      <span class="ruby-keyword">next</span>
+    <span class="ruby-keyword">when</span> <span class="ruby-string">&#39;Li&#39;</span>, <span class="ruby-string">&#39;Pf&#39;</span>
+      <span class="ruby-ivar">@nospace</span> = <span class="ruby-number">1</span>
+      <span class="ruby-keyword">next</span>
+    <span class="ruby-keyword">when</span> <span class="ruby-string">&#39;Xo&#39;</span>
+      <span class="ruby-ivar">@ext</span> = <span class="ruby-keyword">true</span>
+      <span class="ruby-identifier">retval</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-string">&#39; &#39;</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">retval</span>.<span class="ruby-identifier">empty?</span> <span class="ruby-operator">||</span> <span class="ruby-regexp">/[\n ]\z/</span> <span class="ruby-operator">=~</span> <span class="ruby-identifier">retval</span>
+      <span class="ruby-keyword">next</span>
+    <span class="ruby-keyword">when</span> <span class="ruby-string">&#39;Xc&#39;</span>
+      <span class="ruby-ivar">@ext</span> = <span class="ruby-keyword">false</span>
+      <span class="ruby-identifier">retval</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-string">&quot;\n&quot;</span> <span class="ruby-keyword">unless</span> <span class="ruby-ivar">@extopt</span>
+      <span class="ruby-keyword">break</span>
+    <span class="ruby-keyword">when</span> <span class="ruby-string">&#39;Bd&#39;</span>
+      <span class="ruby-ivar">@literal</span> = <span class="ruby-keyword">true</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">words</span>[<span class="ruby-number">0</span>] <span class="ruby-operator">==</span> <span class="ruby-string">&#39;-literal&#39;</span>
+      <span class="ruby-identifier">retval</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-string">&quot;\n&quot;</span>
+      <span class="ruby-keyword">break</span>
+    <span class="ruby-keyword">when</span> <span class="ruby-string">&#39;Ed&#39;</span>
+      <span class="ruby-ivar">@literal</span> = <span class="ruby-keyword">false</span>
+      <span class="ruby-keyword">break</span>
+    <span class="ruby-keyword">when</span> <span class="ruby-string">&#39;Ns&#39;</span>
+      <span class="ruby-ivar">@nospace</span> = <span class="ruby-number">1</span> <span class="ruby-keyword">if</span> <span class="ruby-ivar">@nospace</span> <span class="ruby-operator">==</span> <span class="ruby-number">0</span>
+      <span class="ruby-identifier">retval</span>.<span class="ruby-identifier">chomp!</span>(<span class="ruby-string">&#39; &#39;</span>)
+      <span class="ruby-keyword">next</span>
+    <span class="ruby-keyword">when</span> <span class="ruby-string">&#39;No&#39;</span>
+      <span class="ruby-identifier">retval</span>.<span class="ruby-identifier">chomp!</span>(<span class="ruby-string">&#39; &#39;</span>)
+      <span class="ruby-identifier">retval</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">words</span>.<span class="ruby-identifier">shift</span>
+      <span class="ruby-keyword">next</span>
+    <span class="ruby-keyword">when</span> <span class="ruby-string">&#39;Dq&#39;</span>
+      <span class="ruby-identifier">retval</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-string">&#39;``&#39;</span>
+      <span class="ruby-keyword">begin</span>
+        <span class="ruby-identifier">retval</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">words</span>.<span class="ruby-identifier">shift</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-string">&#39; &#39;</span>
+      <span class="ruby-keyword">end</span> <span class="ruby-keyword">until</span> <span class="ruby-identifier">words</span>.<span class="ruby-identifier">empty?</span> <span class="ruby-operator">||</span> <span class="ruby-constant">RE_PUNCT</span> <span class="ruby-operator">=~</span> <span class="ruby-identifier">words</span>[<span class="ruby-number">0</span>]
+      <span class="ruby-identifier">retval</span>.<span class="ruby-identifier">chomp!</span>(<span class="ruby-string">&#39; &#39;</span>)
+      <span class="ruby-identifier">retval</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-string">&#39;\\&#39;</span>
+      <span class="ruby-ivar">@nospace</span> = <span class="ruby-number">1</span> <span class="ruby-keyword">if</span> <span class="ruby-ivar">@nospace</span> <span class="ruby-operator">==</span> <span class="ruby-number">0</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-constant">RE_PUNCT</span> <span class="ruby-operator">=~</span> <span class="ruby-identifier">words</span>[<span class="ruby-number">0</span>]
+      <span class="ruby-keyword">next</span>
+    <span class="ruby-keyword">when</span> <span class="ruby-string">&#39;Sq&#39;</span>, <span class="ruby-string">&#39;Ql&#39;</span>
+      <span class="ruby-identifier">retval</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-string">&#39;`&#39;</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">words</span>.<span class="ruby-identifier">shift</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-string">&#39;\&#39;</span>
+      <span class="ruby-ivar">@nospace</span> = <span class="ruby-number">1</span> <span class="ruby-keyword">if</span> <span class="ruby-ivar">@nospace</span> <span class="ruby-operator">==</span> <span class="ruby-number">0</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-constant">RE_PUNCT</span> <span class="ruby-operator">=~</span> <span class="ruby-identifier">words</span>[<span class="ruby-number">0</span>]
+      <span class="ruby-keyword">next</span>
+      <span class="ruby-comment"># when  &#39;Ic&#39;</span>
+      <span class="ruby-comment">#   retval &lt;&lt; &#39;\\fB&#39; &lt;&lt; words.shift &lt;&lt; &#39;\\fP&#39;</span>
+      <span class="ruby-comment">#   next</span>
+    <span class="ruby-keyword">when</span> <span class="ruby-string">&#39;Oo&#39;</span>
+      <span class="ruby-comment">#retval &lt;&lt; &quot;[\\c\n&quot;</span>
+      <span class="ruby-ivar">@extopt</span> = <span class="ruby-keyword">true</span>
+      <span class="ruby-ivar">@nospace</span> = <span class="ruby-number">1</span> <span class="ruby-keyword">if</span> <span class="ruby-ivar">@nospace</span> <span class="ruby-operator">==</span> <span class="ruby-number">0</span>
+      <span class="ruby-identifier">retval</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-string">&#39;[&#39;</span>
+      <span class="ruby-keyword">next</span>
+    <span class="ruby-keyword">when</span> <span class="ruby-string">&#39;Oc&#39;</span>
+      <span class="ruby-ivar">@extopt</span> = <span class="ruby-keyword">false</span>
+      <span class="ruby-identifier">retval</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-string">&#39;]&#39;</span>
+      <span class="ruby-keyword">next</span>
+    <span class="ruby-keyword">when</span> <span class="ruby-string">&#39;Ao&#39;</span>
+      <span class="ruby-ivar">@nospace</span> = <span class="ruby-number">1</span> <span class="ruby-keyword">if</span> <span class="ruby-ivar">@nospace</span> <span class="ruby-operator">==</span> <span class="ruby-number">0</span>
+      <span class="ruby-identifier">retval</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-string">&#39;&lt;&#39;</span>
+      <span class="ruby-keyword">next</span>
+    <span class="ruby-keyword">when</span> <span class="ruby-string">&#39;Ac&#39;</span>
+      <span class="ruby-identifier">retval</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-string">&#39;&gt;&#39;</span>
+      <span class="ruby-keyword">next</span>
+    <span class="ruby-keyword">end</span>
+
+    <span class="ruby-identifier">retval</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-string">&#39; &#39;</span> <span class="ruby-keyword">if</span> <span class="ruby-ivar">@nospace</span> <span class="ruby-operator">==</span> <span class="ruby-number">0</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-operator">!</span>(<span class="ruby-identifier">retval</span>.<span class="ruby-identifier">empty?</span> <span class="ruby-operator">||</span> <span class="ruby-regexp">/[\n ]\z/</span> <span class="ruby-operator">=~</span> <span class="ruby-identifier">retval</span>)
+    <span class="ruby-ivar">@nospace</span> = <span class="ruby-number">0</span> <span class="ruby-keyword">if</span> <span class="ruby-ivar">@nospace</span> <span class="ruby-operator">==</span> <span class="ruby-number">1</span>
+
+    <span class="ruby-keyword">case</span> <span class="ruby-identifier">word</span>
+    <span class="ruby-keyword">when</span> <span class="ruby-string">&#39;Dd&#39;</span>
+      <span class="ruby-ivar">@date</span> = <span class="ruby-identifier">words</span>.<span class="ruby-identifier">join</span>(<span class="ruby-string">&#39; &#39;</span>)
+      <span class="ruby-keyword">return</span> <span class="ruby-keyword">nil</span>
+    <span class="ruby-keyword">when</span> <span class="ruby-string">&#39;Dt&#39;</span>
+      <span class="ruby-keyword">if</span> <span class="ruby-identifier">words</span>.<span class="ruby-identifier">size</span> <span class="ruby-operator">&gt;=</span> <span class="ruby-number">2</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">words</span>[<span class="ruby-number">1</span>] <span class="ruby-operator">==</span> <span class="ruby-string">&#39;&quot;&quot;&#39;</span> <span class="ruby-operator">&amp;&amp;</span>
+          <span class="ruby-regexp">/^(.*)\(([0-9])\)$/</span> <span class="ruby-operator">=~</span> <span class="ruby-identifier">words</span>[<span class="ruby-number">0</span>]
+        <span class="ruby-identifier">words</span>[<span class="ruby-number">0</span>] = <span class="ruby-node">$1</span>
+        <span class="ruby-identifier">words</span>[<span class="ruby-number">1</span>] = <span class="ruby-node">$2</span>
+      <span class="ruby-keyword">end</span>
+      <span class="ruby-ivar">@id</span> = <span class="ruby-identifier">words</span>.<span class="ruby-identifier">join</span>(<span class="ruby-string">&#39; &#39;</span>)
+      <span class="ruby-keyword">return</span> <span class="ruby-keyword">nil</span>
+    <span class="ruby-keyword">when</span> <span class="ruby-string">&#39;Os&#39;</span>
+      <span class="ruby-identifier">retval</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-string">&#39;.TH &#39;</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-ivar">@id</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-string">&#39; &quot;&#39;</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-ivar">@date</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-string">&#39;&quot; &quot;&#39;</span> <span class="ruby-operator">&lt;&lt;</span>
+        <span class="ruby-identifier">words</span>.<span class="ruby-identifier">join</span>(<span class="ruby-string">&#39; &#39;</span>) <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-string">&#39;&quot;&#39;</span>
+      <span class="ruby-keyword">break</span>
+    <span class="ruby-keyword">when</span> <span class="ruby-string">&#39;Sh&#39;</span>
+      <span class="ruby-identifier">retval</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-string">&#39;.SH&#39;</span>
+      <span class="ruby-ivar">@synopsis</span> = (<span class="ruby-identifier">words</span>[<span class="ruby-number">0</span>] <span class="ruby-operator">==</span> <span class="ruby-string">&#39;SYNOPSIS&#39;</span>)
+      <span class="ruby-keyword">next</span>
+    <span class="ruby-keyword">when</span> <span class="ruby-string">&#39;Xr&#39;</span>
+      <span class="ruby-identifier">retval</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-string">&#39;\fB&#39;</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">words</span>.<span class="ruby-identifier">shift</span> <span class="ruby-operator">&lt;&lt;</span>
+        <span class="ruby-string">&#39;\fP(&#39;</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">words</span>.<span class="ruby-identifier">shift</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-string">&#39;)&#39;</span> <span class="ruby-operator">&lt;&lt;</span> (<span class="ruby-identifier">words</span>.<span class="ruby-identifier">shift</span><span class="ruby-operator">||</span><span class="ruby-string">&#39;&#39;</span>)
+      <span class="ruby-keyword">break</span>
+    <span class="ruby-keyword">when</span> <span class="ruby-string">&#39;Rs&#39;</span>
+      <span class="ruby-ivar">@refauthors</span> = []
+      <span class="ruby-ivar">@reftitle</span> = <span class="ruby-string">&#39;&#39;</span>
+      <span class="ruby-ivar">@refissue</span> = <span class="ruby-string">&#39;&#39;</span>
+      <span class="ruby-ivar">@refdate</span> = <span class="ruby-string">&#39;&#39;</span>
+      <span class="ruby-ivar">@refopt</span> = <span class="ruby-string">&#39;&#39;</span>
+      <span class="ruby-ivar">@reference</span> = <span class="ruby-keyword">true</span>
+      <span class="ruby-keyword">break</span>
+    <span class="ruby-keyword">when</span> <span class="ruby-string">&#39;Re&#39;</span>
+      <span class="ruby-identifier">retval</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-string">&quot;\n&quot;</span>
+
+      <span class="ruby-comment"># authors</span>
+      <span class="ruby-keyword">while</span> <span class="ruby-ivar">@refauthors</span>.<span class="ruby-identifier">size</span> <span class="ruby-operator">&gt;</span> <span class="ruby-number">1</span>
+        <span class="ruby-identifier">retval</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-ivar">@refauthors</span>.<span class="ruby-identifier">shift</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-string">&#39;, &#39;</span>
+      <span class="ruby-keyword">end</span>
+      <span class="ruby-identifier">retval</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-string">&#39;and &#39;</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">retval</span>.<span class="ruby-identifier">empty?</span>
+      <span class="ruby-identifier">retval</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-ivar">@refauthors</span>.<span class="ruby-identifier">shift</span>
+
+      <span class="ruby-comment"># title</span>
+      <span class="ruby-identifier">retval</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-string">&#39;, \fI&#39;</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-ivar">@reftitle</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-string">&#39;\fP&#39;</span>
+
+      <span class="ruby-comment"># issue</span>
+      <span class="ruby-identifier">retval</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-string">&#39;, &#39;</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-ivar">@refissue</span> <span class="ruby-keyword">unless</span> <span class="ruby-ivar">@refissue</span>.<span class="ruby-identifier">empty?</span>
+
+      <span class="ruby-comment"># date</span>
+      <span class="ruby-identifier">retval</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-string">&#39;, &#39;</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-ivar">@refdate</span> <span class="ruby-keyword">unless</span> <span class="ruby-ivar">@refdate</span>.<span class="ruby-identifier">empty?</span>
+
+      <span class="ruby-comment"># optional info</span>
+      <span class="ruby-identifier">retval</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-string">&#39;, &#39;</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-ivar">@refopt</span> <span class="ruby-keyword">unless</span> <span class="ruby-ivar">@refopt</span>.<span class="ruby-identifier">empty?</span>
+
+      <span class="ruby-identifier">retval</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-string">&quot;.\n&quot;</span>
+
+      <span class="ruby-ivar">@reference</span> = <span class="ruby-keyword">false</span>
+      <span class="ruby-keyword">break</span>
+    <span class="ruby-keyword">when</span> <span class="ruby-string">&#39;An&#39;</span>
+      <span class="ruby-keyword">next</span>
+    <span class="ruby-keyword">when</span> <span class="ruby-string">&#39;Dl&#39;</span>
+      <span class="ruby-identifier">retval</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-string">&quot;.nf\n&quot;</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-string">&#39;\&amp;  &#39;</span>
+      <span class="ruby-identifier">dl</span> = <span class="ruby-keyword">true</span>
+      <span class="ruby-keyword">next</span>
+    <span class="ruby-keyword">when</span> <span class="ruby-string">&#39;Ux&#39;</span>
+      <span class="ruby-identifier">retval</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-string">&quot;UNIX&quot;</span>
+      <span class="ruby-keyword">next</span>
+    <span class="ruby-keyword">end</span>
+
+    <span class="ruby-keyword">if</span> <span class="ruby-ivar">@reference</span>
+      <span class="ruby-keyword">case</span> <span class="ruby-identifier">word</span>
+      <span class="ruby-keyword">when</span> <span class="ruby-string">&#39;%A&#39;</span>
+        <span class="ruby-ivar">@refauthors</span>.<span class="ruby-identifier">unshift</span>(<span class="ruby-identifier">words</span>.<span class="ruby-identifier">join</span>(<span class="ruby-string">&#39; &#39;</span>))
+        <span class="ruby-keyword">break</span>
+      <span class="ruby-keyword">when</span> <span class="ruby-string">&#39;%T&#39;</span>
+        <span class="ruby-ivar">@reftitle</span> = <span class="ruby-identifier">words</span>.<span class="ruby-identifier">join</span>(<span class="ruby-string">&#39; &#39;</span>)
+        <span class="ruby-ivar">@reftitle</span>.<span class="ruby-identifier">sub!</span>(<span class="ruby-regexp">/^&quot;/</span>, <span class="ruby-string">&#39;&#39;</span>)
+        <span class="ruby-ivar">@reftitle</span>.<span class="ruby-identifier">sub!</span>(<span class="ruby-regexp">/&quot;$/</span>, <span class="ruby-string">&#39;&#39;</span>)
+        <span class="ruby-keyword">break</span>
+      <span class="ruby-keyword">when</span> <span class="ruby-string">&#39;%N&#39;</span>
+        <span class="ruby-ivar">@refissue</span> = <span class="ruby-identifier">words</span>.<span class="ruby-identifier">join</span>(<span class="ruby-string">&#39; &#39;</span>)
+        <span class="ruby-keyword">break</span>
+      <span class="ruby-keyword">when</span> <span class="ruby-string">&#39;%D&#39;</span>
+        <span class="ruby-ivar">@refdate</span> = <span class="ruby-identifier">words</span>.<span class="ruby-identifier">join</span>(<span class="ruby-string">&#39; &#39;</span>)
+        <span class="ruby-keyword">break</span>
+      <span class="ruby-keyword">when</span> <span class="ruby-string">&#39;%O&#39;</span>
+        <span class="ruby-ivar">@refopt</span> = <span class="ruby-identifier">words</span>.<span class="ruby-identifier">join</span>(<span class="ruby-string">&#39; &#39;</span>)
+        <span class="ruby-keyword">break</span>
+      <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">end</span>
+
+    <span class="ruby-keyword">case</span> <span class="ruby-identifier">word</span>
+    <span class="ruby-keyword">when</span> <span class="ruby-string">&#39;Nm&#39;</span>
+      <span class="ruby-identifier">name</span> = <span class="ruby-identifier">words</span>.<span class="ruby-identifier">empty?</span> <span class="ruby-operator">?</span> <span class="ruby-ivar">@name</span> <span class="ruby-operator">:</span> <span class="ruby-identifier">words</span>.<span class="ruby-identifier">shift</span>
+      <span class="ruby-ivar">@name</span> <span class="ruby-operator">||=</span> <span class="ruby-identifier">name</span>
+      <span class="ruby-identifier">retval</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-string">&quot;.br\n&quot;</span> <span class="ruby-keyword">if</span> <span class="ruby-ivar">@synopsis</span>
+      <span class="ruby-identifier">retval</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-string">&quot;\\fB&quot;</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">name</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-string">&quot;\\fP&quot;</span>
+      <span class="ruby-ivar">@nospace</span> = <span class="ruby-number">1</span> <span class="ruby-keyword">if</span> <span class="ruby-ivar">@nospace</span> <span class="ruby-operator">==</span> <span class="ruby-number">0</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-constant">RE_PUNCT</span> <span class="ruby-operator">=~</span> <span class="ruby-identifier">words</span>[<span class="ruby-number">0</span>]
+      <span class="ruby-keyword">next</span>
+    <span class="ruby-keyword">when</span> <span class="ruby-string">&#39;Nd&#39;</span>
+      <span class="ruby-identifier">retval</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-string">&#39;\-&#39;</span>
+      <span class="ruby-keyword">next</span>
+    <span class="ruby-keyword">when</span> <span class="ruby-string">&#39;Fl&#39;</span>
+      <span class="ruby-identifier">retval</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-string">&#39;\fB\-&#39;</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">words</span>.<span class="ruby-identifier">shift</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-string">&#39;\fP&#39;</span>
+      <span class="ruby-ivar">@nospace</span> = <span class="ruby-number">1</span> <span class="ruby-keyword">if</span> <span class="ruby-ivar">@nospace</span> <span class="ruby-operator">==</span> <span class="ruby-number">0</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-constant">RE_PUNCT</span> <span class="ruby-operator">=~</span> <span class="ruby-identifier">words</span>[<span class="ruby-number">0</span>]
+      <span class="ruby-keyword">next</span>
+    <span class="ruby-keyword">when</span> <span class="ruby-string">&#39;Ar&#39;</span>
+      <span class="ruby-identifier">retval</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-string">&#39;\fI&#39;</span>
+      <span class="ruby-keyword">if</span> <span class="ruby-identifier">words</span>.<span class="ruby-identifier">empty?</span>
+        <span class="ruby-identifier">retval</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-string">&#39;file ...\fP&#39;</span>
+      <span class="ruby-keyword">else</span>
+        <span class="ruby-identifier">retval</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">words</span>.<span class="ruby-identifier">shift</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-string">&#39;\fP&#39;</span>
+        <span class="ruby-keyword">while</span> <span class="ruby-identifier">words</span>[<span class="ruby-number">0</span>] <span class="ruby-operator">==</span> <span class="ruby-string">&#39;|&#39;</span>
+          <span class="ruby-identifier">retval</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-string">&#39; &#39;</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">words</span>.<span class="ruby-identifier">shift</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-string">&#39; \fI&#39;</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">words</span>.<span class="ruby-identifier">shift</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-string">&#39;\fP&#39;</span>
+        <span class="ruby-keyword">end</span>
+        <span class="ruby-ivar">@nospace</span> = <span class="ruby-number">1</span> <span class="ruby-keyword">if</span> <span class="ruby-ivar">@nospace</span> <span class="ruby-operator">==</span> <span class="ruby-number">0</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-constant">RE_PUNCT</span> <span class="ruby-operator">=~</span> <span class="ruby-identifier">words</span>[<span class="ruby-number">0</span>]
+        <span class="ruby-keyword">next</span>
+      <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">when</span> <span class="ruby-string">&#39;Cm&#39;</span>
+      <span class="ruby-identifier">retval</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-string">&#39;\fB&#39;</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">words</span>.<span class="ruby-identifier">shift</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-string">&#39;\fP&#39;</span>
+      <span class="ruby-keyword">while</span> <span class="ruby-constant">RE_PUNCT</span> <span class="ruby-operator">=~</span> <span class="ruby-identifier">words</span>[<span class="ruby-number">0</span>]
+        <span class="ruby-identifier">retval</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">words</span>.<span class="ruby-identifier">shift</span>
+      <span class="ruby-keyword">end</span>
+      <span class="ruby-keyword">next</span>
+    <span class="ruby-keyword">when</span> <span class="ruby-string">&#39;Op&#39;</span>
+      <span class="ruby-identifier">quote</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-constant">OPTION</span>
+      <span class="ruby-ivar">@nospace</span> = <span class="ruby-number">1</span> <span class="ruby-keyword">if</span> <span class="ruby-ivar">@nospace</span> <span class="ruby-operator">==</span> <span class="ruby-number">0</span>
+      <span class="ruby-identifier">retval</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-string">&#39;[&#39;</span>
+      <span class="ruby-comment"># words.push(words.pop + &#39;]&#39;)</span>
+      <span class="ruby-keyword">next</span>
+    <span class="ruby-keyword">when</span> <span class="ruby-string">&#39;Aq&#39;</span>
+      <span class="ruby-identifier">quote</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-constant">ANGLE</span>
+      <span class="ruby-ivar">@nospace</span> = <span class="ruby-number">1</span> <span class="ruby-keyword">if</span> <span class="ruby-ivar">@nospace</span> <span class="ruby-operator">==</span> <span class="ruby-number">0</span>
+      <span class="ruby-identifier">retval</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-string">&#39;&lt;&#39;</span>
+      <span class="ruby-comment"># words.push(words.pop + &#39;&gt;&#39;)</span>
+      <span class="ruby-keyword">next</span>
+    <span class="ruby-keyword">when</span> <span class="ruby-string">&#39;Pp&#39;</span>
+      <span class="ruby-identifier">retval</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-string">&quot;\n&quot;</span>
+      <span class="ruby-keyword">next</span>
+    <span class="ruby-keyword">when</span> <span class="ruby-string">&#39;Ss&#39;</span>
+      <span class="ruby-identifier">retval</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-string">&#39;.SS&#39;</span>
+      <span class="ruby-keyword">next</span>
+    <span class="ruby-keyword">end</span>
+
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">word</span> <span class="ruby-operator">==</span> <span class="ruby-string">&#39;Pa&#39;</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-operator">!</span><span class="ruby-identifier">quote</span>.<span class="ruby-identifier">include?</span>(<span class="ruby-constant">OPTION</span>)
+      <span class="ruby-identifier">retval</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-string">&#39;\fI&#39;</span>
+      <span class="ruby-identifier">retval</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-string">&#39;\&amp;&#39;</span> <span class="ruby-keyword">if</span> <span class="ruby-regexp">/^\./</span> <span class="ruby-operator">=~</span> <span class="ruby-identifier">words</span>[<span class="ruby-number">0</span>]
+      <span class="ruby-identifier">retval</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">words</span>.<span class="ruby-identifier">shift</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-string">&#39;\fP&#39;</span>
+      <span class="ruby-keyword">while</span> <span class="ruby-constant">RE_PUNCT</span> <span class="ruby-operator">=~</span> <span class="ruby-identifier">words</span>[<span class="ruby-number">0</span>]
+        <span class="ruby-identifier">retval</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">words</span>.<span class="ruby-identifier">shift</span>
+      <span class="ruby-keyword">end</span>
+      <span class="ruby-comment"># @nospace = 1 if @nospace == 0 &amp;&amp; RE_PUNCT =~ words[0]</span>
+      <span class="ruby-keyword">next</span>
+    <span class="ruby-keyword">end</span>
+
+    <span class="ruby-keyword">case</span> <span class="ruby-identifier">word</span>
+    <span class="ruby-keyword">when</span> <span class="ruby-string">&#39;Dv&#39;</span>
+      <span class="ruby-identifier">retval</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-string">&#39;.BR&#39;</span>
+      <span class="ruby-keyword">next</span>
+    <span class="ruby-keyword">when</span> <span class="ruby-string">&#39;Em&#39;</span>, <span class="ruby-string">&#39;Ev&#39;</span>
+      <span class="ruby-identifier">retval</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-string">&#39;.IR&#39;</span>
+      <span class="ruby-keyword">next</span>
+    <span class="ruby-keyword">when</span> <span class="ruby-string">&#39;Pq&#39;</span>
+      <span class="ruby-identifier">retval</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-string">&#39;(&#39;</span>
+      <span class="ruby-ivar">@nospace</span> = <span class="ruby-number">1</span>
+      <span class="ruby-identifier">quote</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-constant">PAREN</span>
+      <span class="ruby-keyword">next</span>
+    <span class="ruby-keyword">when</span> <span class="ruby-string">&#39;Sx&#39;</span>, <span class="ruby-string">&#39;Sy&#39;</span>
+      <span class="ruby-identifier">retval</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-string">&#39;.B &#39;</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">words</span>.<span class="ruby-identifier">join</span>(<span class="ruby-string">&#39; &#39;</span>)
+      <span class="ruby-keyword">break</span>
+    <span class="ruby-keyword">when</span> <span class="ruby-string">&#39;Ic&#39;</span>
+      <span class="ruby-identifier">retval</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-string">&#39;\fB&#39;</span>
+      <span class="ruby-keyword">until</span> <span class="ruby-identifier">words</span>.<span class="ruby-identifier">empty?</span> <span class="ruby-operator">||</span> <span class="ruby-constant">RE_PUNCT</span> <span class="ruby-operator">=~</span> <span class="ruby-identifier">words</span>[<span class="ruby-number">0</span>]
+        <span class="ruby-keyword">case</span> <span class="ruby-identifier">words</span>[<span class="ruby-number">0</span>]
+        <span class="ruby-keyword">when</span> <span class="ruby-string">&#39;Op&#39;</span>
+          <span class="ruby-identifier">words</span>.<span class="ruby-identifier">shift</span>
+          <span class="ruby-identifier">retval</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-string">&#39;[&#39;</span>
+          <span class="ruby-identifier">words</span>.<span class="ruby-identifier">push</span>(<span class="ruby-identifier">words</span>.<span class="ruby-identifier">pop</span> <span class="ruby-operator">+</span> <span class="ruby-string">&#39;]&#39;</span>)
+          <span class="ruby-keyword">next</span>
+        <span class="ruby-keyword">when</span> <span class="ruby-string">&#39;Aq&#39;</span>
+          <span class="ruby-identifier">words</span>.<span class="ruby-identifier">shift</span>
+          <span class="ruby-identifier">retval</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-string">&#39;&lt;&#39;</span>
+          <span class="ruby-identifier">words</span>.<span class="ruby-identifier">push</span>(<span class="ruby-identifier">words</span>.<span class="ruby-identifier">pop</span> <span class="ruby-operator">+</span> <span class="ruby-string">&#39;&gt;&#39;</span>)
+          <span class="ruby-keyword">next</span>
+        <span class="ruby-keyword">when</span> <span class="ruby-string">&#39;Ar&#39;</span>
+          <span class="ruby-identifier">words</span>.<span class="ruby-identifier">shift</span>
+          <span class="ruby-identifier">retval</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-string">&#39;\fI&#39;</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">words</span>.<span class="ruby-identifier">shift</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-string">&#39;\fP&#39;</span>
+        <span class="ruby-keyword">else</span>
+          <span class="ruby-identifier">retval</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">words</span>.<span class="ruby-identifier">shift</span>
+        <span class="ruby-keyword">end</span>
+
+        <span class="ruby-identifier">retval</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-string">&#39; &#39;</span> <span class="ruby-keyword">if</span> <span class="ruby-ivar">@nospace</span> <span class="ruby-operator">==</span> <span class="ruby-number">0</span>
+      <span class="ruby-keyword">end</span>
+
+      <span class="ruby-identifier">retval</span>.<span class="ruby-identifier">chomp!</span>(<span class="ruby-string">&#39; &#39;</span>)
+      <span class="ruby-identifier">retval</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-string">&#39;\fP&#39;</span>
+      <span class="ruby-identifier">retval</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">words</span>.<span class="ruby-identifier">shift</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">words</span>.<span class="ruby-identifier">empty?</span>
+      <span class="ruby-keyword">break</span>
+    <span class="ruby-keyword">when</span> <span class="ruby-string">&#39;Bl&#39;</span>
+      <span class="ruby-ivar">@oldoptlist</span> = <span class="ruby-ivar">@optlist</span>
+
+      <span class="ruby-keyword">case</span> <span class="ruby-identifier">words</span>[<span class="ruby-number">0</span>]
+      <span class="ruby-keyword">when</span> <span class="ruby-string">&#39;-bullet&#39;</span>
+        <span class="ruby-ivar">@optlist</span> = <span class="ruby-number">1</span>
+      <span class="ruby-keyword">when</span> <span class="ruby-string">&#39;-enum&#39;</span>
+        <span class="ruby-ivar">@optlist</span> = <span class="ruby-number">2</span>
+        <span class="ruby-ivar">@enum</span> = <span class="ruby-number">0</span>
+      <span class="ruby-keyword">when</span> <span class="ruby-string">&#39;-tag&#39;</span>
+        <span class="ruby-ivar">@optlist</span> = <span class="ruby-number">3</span>
+      <span class="ruby-keyword">when</span> <span class="ruby-string">&#39;-item&#39;</span>
+        <span class="ruby-ivar">@optlist</span> = <span class="ruby-number">4</span>
+      <span class="ruby-keyword">end</span>
+
+      <span class="ruby-keyword">break</span>
+    <span class="ruby-keyword">when</span> <span class="ruby-string">&#39;El&#39;</span>
+      <span class="ruby-ivar">@optlist</span> = <span class="ruby-ivar">@oldoptlist</span>
+      <span class="ruby-keyword">next</span>
+    <span class="ruby-keyword">end</span>
+
+    <span class="ruby-keyword">if</span> <span class="ruby-ivar">@optlist</span> <span class="ruby-operator">!=</span> <span class="ruby-number">0</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">word</span> <span class="ruby-operator">==</span> <span class="ruby-string">&#39;It&#39;</span>
+      <span class="ruby-keyword">case</span> <span class="ruby-ivar">@optlist</span>
+      <span class="ruby-keyword">when</span> <span class="ruby-number">1</span>
+        <span class="ruby-comment"># bullets</span>
+        <span class="ruby-identifier">retval</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-string">&#39;.IP \(bu&#39;</span>
+      <span class="ruby-keyword">when</span> <span class="ruby-number">2</span>
+        <span class="ruby-comment"># enum</span>
+        <span class="ruby-ivar">@enum</span> <span class="ruby-operator">+=</span> <span class="ruby-number">1</span>
+        <span class="ruby-identifier">retval</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-string">&#39;.IP &#39;</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-ivar">@enum</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-string">&#39;.&#39;</span>
+      <span class="ruby-keyword">when</span> <span class="ruby-number">3</span>
+        <span class="ruby-comment"># tags</span>
+        <span class="ruby-identifier">retval</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-string">&quot;.TP\n&quot;</span>
+        <span class="ruby-keyword">case</span> <span class="ruby-identifier">words</span>[<span class="ruby-number">0</span>]
+        <span class="ruby-keyword">when</span> <span class="ruby-string">&#39;Pa&#39;</span>, <span class="ruby-string">&#39;Ev&#39;</span>
+          <span class="ruby-identifier">words</span>.<span class="ruby-identifier">shift</span>
+          <span class="ruby-identifier">retval</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-string">&#39;.B&#39;</span>
+        <span class="ruby-keyword">end</span>
+      <span class="ruby-keyword">when</span> <span class="ruby-number">4</span>
+        <span class="ruby-comment"># item</span>
+        <span class="ruby-identifier">retval</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-string">&quot;.IP\n&quot;</span>
+      <span class="ruby-keyword">end</span>
+
+      <span class="ruby-keyword">next</span>
+    <span class="ruby-keyword">end</span>
+
+    <span class="ruby-keyword">case</span> <span class="ruby-identifier">word</span>
+    <span class="ruby-keyword">when</span> <span class="ruby-string">&#39;Sm&#39;</span>
+      <span class="ruby-keyword">case</span> <span class="ruby-identifier">words</span>[<span class="ruby-number">0</span>]
+      <span class="ruby-keyword">when</span> <span class="ruby-string">&#39;off&#39;</span>
+        <span class="ruby-ivar">@nospace</span> = <span class="ruby-number">2</span>
+      <span class="ruby-keyword">when</span> <span class="ruby-string">&#39;on&#39;</span>
+        <span class="ruby-comment"># retval &lt;&lt; &quot;\n&quot;</span>
+        <span class="ruby-ivar">@nospace</span> = <span class="ruby-number">0</span>
+      <span class="ruby-keyword">end</span>
+      <span class="ruby-identifier">words</span>.<span class="ruby-identifier">shift</span>
+      <span class="ruby-keyword">next</span>
+    <span class="ruby-keyword">end</span>
+
+    <span class="ruby-identifier">retval</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">word</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">nil</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">retval</span> <span class="ruby-operator">==</span> <span class="ruby-string">&#39;.&#39;</span>
+
+  <span class="ruby-identifier">retval</span>.<span class="ruby-identifier">sub!</span>(<span class="ruby-regexp">/\A\.([^a-zA-Z])/</span>, <span class="ruby-string">&quot;\\1&quot;</span>)
+  <span class="ruby-comment"># retval.chomp!(&#39; &#39;)</span>
+
+  <span class="ruby-keyword">while</span> <span class="ruby-identifier">q</span> = <span class="ruby-identifier">quote</span>.<span class="ruby-identifier">pop</span>
+    <span class="ruby-keyword">case</span> <span class="ruby-identifier">q</span>
+    <span class="ruby-keyword">when</span> <span class="ruby-constant">OPTION</span>
+      <span class="ruby-identifier">retval</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-string">&#39;]&#39;</span>
+    <span class="ruby-keyword">when</span> <span class="ruby-constant">PAREN</span>
+      <span class="ruby-identifier">retval</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-string">&#39;)&#39;</span>
+    <span class="ruby-keyword">when</span> <span class="ruby-constant">ANGLE</span>
+      <span class="ruby-identifier">retval</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-string">&#39;&gt;&#39;</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-comment"># retval &lt;&lt; &#39; &#39; unless @nospace == 0 || retval.empty? || /\n\z/ =~ retval</span>
+
+  <span class="ruby-identifier">retval</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-string">&#39; &#39;</span> <span class="ruby-keyword">unless</span> <span class="ruby-operator">!</span><span class="ruby-ivar">@ext</span> <span class="ruby-operator">||</span> <span class="ruby-ivar">@extopt</span> <span class="ruby-operator">||</span> <span class="ruby-regexp">/ $/</span> <span class="ruby-operator">=~</span> <span class="ruby-identifier">retval</span>
+
+  <span class="ruby-identifier">retval</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-string">&quot;\n&quot;</span> <span class="ruby-keyword">unless</span> <span class="ruby-ivar">@ext</span> <span class="ruby-operator">||</span> <span class="ruby-ivar">@extopt</span> <span class="ruby-operator">||</span> <span class="ruby-identifier">retval</span>.<span class="ruby-identifier">empty?</span> <span class="ruby-operator">||</span> <span class="ruby-regexp">/\n\z/</span> <span class="ruby-operator">=~</span> <span class="ruby-identifier">retval</span>
+
+  <span class="ruby-identifier">retval</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-string">&quot;.fi\n&quot;</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">dl</span>
+
+  <span class="ruby-keyword">return</span> <span class="ruby-identifier">retval</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                    </div>
+
+    </div>
+  </body>
+</html>    

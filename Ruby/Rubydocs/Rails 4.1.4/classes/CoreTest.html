@@ -1,0 +1,315 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>CoreTest</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="../css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/main.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/github.css" type="text/css" media="screen" />
+<script src="../js/jquery-1.3.2.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/jquery-effect.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+
+<body>     
+    <div class="banner">
+        
+        <h1>
+            <span class="type">Class</span> 
+            CoreTest 
+            
+                <span class="parent">&lt; 
+                    
+                    ActiveRecord::TestCase
+                    
+                </span>
+            
+        </h1>
+        <ul class="files">
+            
+            <li><a href="../files/activerecord/test/cases/core_test_rb.html">activerecord/test/cases/core_test.rb</a></li>
+            
+        </ul>
+    </div>
+    <div id="bodyContent">
+        <div id="content">
+  
+
+
+  
+
+
+  
+  
+
+
+  
+
+
+  
+    <!-- Method ref -->
+    <div class="sectiontitle">Methods</div>
+    <dl class="methods">
+      
+        <dt>T</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-test_inspect_class">test_inspect_class</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-test_inspect_class_without_table">test_inspect_class_without_table</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-test_inspect_instance">test_inspect_instance</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-test_inspect_limited_select_instance">test_inspect_limited_select_instance</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-test_inspect_new_instance">test_inspect_new_instance</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+    </dl>
+  
+
+  
+
+
+
+  
+
+    
+
+    
+
+    
+
+
+    
+
+
+    <!-- Methods -->
+        
+      <div class="sectiontitle">Instance Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-i-test_inspect_class">
+            
+              <b>test_inspect_class</b>()
+            
+            <a href="../classes/CoreTest.html#method-i-test_inspect_class" name="method-i-test_inspect_class" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-test_inspect_class_source')" id="l_method-i-test_inspect_class_source">show</a>
+                
+                  | <a href="https://github.com/rails/rails/blob/24f0099ec3360972ed74c55ec3703c87d2a31d17/activerecord/test/cases/core_test.rb#L10" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-test_inspect_class_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File activerecord/test/cases/core_test.rb, line 10</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">test_inspect_class</span>
+  <span class="ruby-identifier">assert_equal</span> <span class="ruby-string">&#39;ActiveRecord::Base&#39;</span>, <span class="ruby-constant">ActiveRecord</span><span class="ruby-operator">::</span><span class="ruby-constant">Base</span>.<span class="ruby-identifier">inspect</span>
+  <span class="ruby-identifier">assert_equal</span> <span class="ruby-string">&#39;LoosePerson(abstract)&#39;</span>, <span class="ruby-constant">LoosePerson</span>.<span class="ruby-identifier">inspect</span>
+  <span class="ruby-identifier">assert_match</span>(<span class="ruby-regexp">/^Topic\(id: integer, title: string/</span>, <span class="ruby-constant">Topic</span>.<span class="ruby-identifier">inspect</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-test_inspect_class_without_table">
+            
+              <b>test_inspect_class_without_table</b>()
+            
+            <a href="../classes/CoreTest.html#method-i-test_inspect_class_without_table" name="method-i-test_inspect_class_without_table" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-test_inspect_class_without_table_source')" id="l_method-i-test_inspect_class_without_table_source">show</a>
+                
+                  | <a href="https://github.com/rails/rails/blob/24f0099ec3360972ed74c55ec3703c87d2a31d17/activerecord/test/cases/core_test.rb#L30" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-test_inspect_class_without_table_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File activerecord/test/cases/core_test.rb, line 30</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">test_inspect_class_without_table</span>
+  <span class="ruby-identifier">assert_equal</span> <span class="ruby-string">&quot;NonExistentTable(Table doesn&#39;t exist)&quot;</span>, <span class="ruby-constant">NonExistentTable</span>.<span class="ruby-identifier">inspect</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-test_inspect_instance">
+            
+              <b>test_inspect_instance</b>()
+            
+            <a href="../classes/CoreTest.html#method-i-test_inspect_instance" name="method-i-test_inspect_instance" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-test_inspect_instance_source')" id="l_method-i-test_inspect_instance_source">show</a>
+                
+                  | <a href="https://github.com/rails/rails/blob/24f0099ec3360972ed74c55ec3703c87d2a31d17/activerecord/test/cases/core_test.rb#L16" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-test_inspect_instance_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File activerecord/test/cases/core_test.rb, line 16</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">test_inspect_instance</span>
+  <span class="ruby-identifier">topic</span> = <span class="ruby-identifier">topics</span>(<span class="ruby-value">:first</span>)
+  <span class="ruby-identifier">assert_equal</span> <span class="ruby-node">%Q(#&lt;Topic id: 1, title: &quot;The First Topic&quot;, author_name: &quot;David&quot;, author_email_address: &quot;david@loudthinking.com&quot;, written_on: &quot;#{topic.written_on.to_s(:db)}&quot;, bonus_time: &quot;#{topic.bonus_time.to_s(:db)}&quot;, last_read: &quot;#{topic.last_read.to_s(:db)}&quot;, content: &quot;Have a nice day&quot;, important: nil, approved: false, replies_count: 1, unique_replies_count: 0, parent_id: nil, parent_title: nil, type: nil, group: nil, created_at: &quot;#{topic.created_at.to_s(:db)}&quot;, updated_at: &quot;#{topic.updated_at.to_s(:db)}&quot;&gt;)</span>, <span class="ruby-identifier">topic</span>.<span class="ruby-identifier">inspect</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-test_inspect_limited_select_instance">
+            
+              <b>test_inspect_limited_select_instance</b>()
+            
+            <a href="../classes/CoreTest.html#method-i-test_inspect_limited_select_instance" name="method-i-test_inspect_limited_select_instance" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-test_inspect_limited_select_instance_source')" id="l_method-i-test_inspect_limited_select_instance_source">show</a>
+                
+                  | <a href="https://github.com/rails/rails/blob/24f0099ec3360972ed74c55ec3703c87d2a31d17/activerecord/test/cases/core_test.rb#L25" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-test_inspect_limited_select_instance_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File activerecord/test/cases/core_test.rb, line 25</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">test_inspect_limited_select_instance</span>
+  <span class="ruby-identifier">assert_equal</span> <span class="ruby-node">%Q(#&lt;Topic id: 1&gt;)</span>, <span class="ruby-constant">Topic</span>.<span class="ruby-identifier">all</span>.<span class="ruby-identifier">merge!</span>(<span class="ruby-value">:select</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&#39;id&#39;</span>, <span class="ruby-value">:where</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&#39;id = 1&#39;</span>).<span class="ruby-identifier">first</span>.<span class="ruby-identifier">inspect</span>
+  <span class="ruby-identifier">assert_equal</span> <span class="ruby-node">%Q(#&lt;Topic id: 1, title: &quot;The First Topic&quot;&gt;)</span>, <span class="ruby-constant">Topic</span>.<span class="ruby-identifier">all</span>.<span class="ruby-identifier">merge!</span>(<span class="ruby-value">:select</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&#39;id, title&#39;</span>, <span class="ruby-value">:where</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&#39;id = 1&#39;</span>).<span class="ruby-identifier">first</span>.<span class="ruby-identifier">inspect</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-test_inspect_new_instance">
+            
+              <b>test_inspect_new_instance</b>()
+            
+            <a href="../classes/CoreTest.html#method-i-test_inspect_new_instance" name="method-i-test_inspect_new_instance" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-test_inspect_new_instance_source')" id="l_method-i-test_inspect_new_instance_source">show</a>
+                
+                  | <a href="https://github.com/rails/rails/blob/24f0099ec3360972ed74c55ec3703c87d2a31d17/activerecord/test/cases/core_test.rb#L21" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-test_inspect_new_instance_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File activerecord/test/cases/core_test.rb, line 21</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">test_inspect_new_instance</span>
+  <span class="ruby-identifier">assert_match</span>(<span class="ruby-regexp">/Topic id: nil/</span>, <span class="ruby-constant">Topic</span>.<span class="ruby-identifier">new</span>.<span class="ruby-identifier">inspect</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                    </div>
+
+    </div>
+  </body>
+</html>    

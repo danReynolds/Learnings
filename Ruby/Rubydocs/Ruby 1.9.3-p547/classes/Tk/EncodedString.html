@@ -1,0 +1,1042 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>Tk::EncodedString</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="../../css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../../css/main.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../../css/github.css" type="text/css" media="screen" />
+<script src="../../js/jquery-1.3.2.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../js/jquery-effect.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../js/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+
+<body>     
+    <div class="banner">
+        
+        <h1>
+            <span class="type">Class</span> 
+            Tk::EncodedString 
+            
+                <span class="parent">&lt; 
+                    
+                    <a href="../String.html">String</a>
+                    
+                </span>
+            
+        </h1>
+        <ul class="files">
+            
+            <li><a href="../../files/ext/tk/lib/tk/encodedstr_rb.html">ext/tk/lib/tk/encodedstr.rb</a></li>
+            
+        </ul>
+    </div>
+    <div id="bodyContent">
+        <div id="content">
+  
+
+
+  
+
+
+  
+  
+
+
+  
+
+
+  
+    <!-- Method ref -->
+    <div class="sectiontitle">Methods</div>
+    <dl class="methods">
+      
+        <dt>#</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-__encoding">__encoding</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-__instance_eval">__instance_eval</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-__instance_variable_get">__instance_variable_get</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-__instance_variable_set">__instance_variable_set</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-__instance_variables">__instance_variables</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>E</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-encoding">encoding</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-encoding_obj">encoding_obj</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>I</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-instance_eval">instance_eval</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-instance_variable_get">instance_variable_get</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-instance_variable_set">instance_variable_set</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-instance_variables">instance_variables</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>N</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-new">new</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-c-new_with_utf_backslash">new_with_utf_backslash</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-c-new_without_utf_backslash">new_without_utf_backslash</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>S</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-subst_tk_backslash">subst_tk_backslash</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-c-subst_utf_backslash">subst_utf_backslash</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>T</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-to_backslash_sequence">to_backslash_sequence</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>U</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-utf_backslash">utf_backslash</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-c-utf_to_backslash">utf_to_backslash</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-c-utf_to_backslash_sequence">utf_to_backslash_sequence</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+    </dl>
+  
+
+  
+
+
+
+  
+
+    
+
+    
+
+    
+      <!-- Section constants -->
+      <div class="sectiontitle">Constants</div>
+      <table border='0' cellpadding='5'>
+        
+          <tr valign='top'>
+            <td class="attr-name">Encoding</td>
+            <td>=</td>
+            <td class="attr-value">nil</td>
+          </tr>
+          
+            <tr valign='top'>
+              <td>&nbsp;</td>
+              <td colspan="2" class="attr-desc"></td>
+            </tr>
+          
+        
+      </table>
+    
+
+
+    
+
+
+    <!-- Methods -->
+    
+      <div class="sectiontitle">Class Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-c-new">
+            
+              <b>new</b>(str, enc = nil)
+            
+            <a href="../../classes/Tk/EncodedString.html#method-c-new" name="method-c-new" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-new_source')" id="l_method-c-new_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/287a34ae0dfc23e4158f67cb7783d239f202c368/ext/tk/lib/tk/encodedstr.rb#L68" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-new_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tk/encodedstr.rb, line 68</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">initialize</span>(<span class="ruby-identifier">str</span>, <span class="ruby-identifier">enc</span> = <span class="ruby-keyword">nil</span>)
+  <span class="ruby-keyword">super</span>(<span class="ruby-identifier">str</span>)
+  <span class="ruby-comment"># @encoding = ( enc ||</span>
+  <span class="ruby-comment">#              ((self.class::Encoding)?</span>
+  <span class="ruby-comment">#                  self.class::Encoding : Tk.encoding_system) )</span>
+  <span class="ruby-identifier">enc</span> <span class="ruby-operator">||=</span> (<span class="ruby-keyword">self</span>.<span class="ruby-identifier">class</span><span class="ruby-operator">::</span><span class="ruby-constant">Encoding</span>)<span class="ruby-operator">?</span>
+                     <span class="ruby-keyword">self</span>.<span class="ruby-identifier">class</span><span class="ruby-operator">::</span><span class="ruby-constant">Encoding</span> <span class="ruby-operator">:</span>
+                     ((<span class="ruby-constant">Tk</span>.<span class="ruby-identifier">encoding</span>)<span class="ruby-operator">?</span> <span class="ruby-constant">Tk</span>.<span class="ruby-identifier">encoding</span> <span class="ruby-operator">:</span> <span class="ruby-constant">Tk</span>.<span class="ruby-identifier">encoding_system</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-constant">TkCore</span><span class="ruby-operator">::</span><span class="ruby-constant">WITH_ENCODING</span>
+    <span class="ruby-keyword">unless</span> <span class="ruby-identifier">encobj</span> = <span class="ruby-constant">Tk</span><span class="ruby-operator">::</span><span class="ruby-constant">Encoding</span><span class="ruby-operator">::</span><span class="ruby-constant">ENCODING_TABLE</span>.<span class="ruby-identifier">get_obj</span>(<span class="ruby-identifier">enc</span>)
+      <span class="ruby-identifier">fail</span> <span class="ruby-constant">ArgumentError</span>, <span class="ruby-node">&quot;unsupported Tk encoding &#39;#{enc}&#39;&quot;</span>
+    <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">self</span>.<span class="ruby-identifier">force_encoding</span>(<span class="ruby-identifier">encobj</span>)
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-ivar">@encoding</span> = <span class="ruby-identifier">enc</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-new_with_utf_backslash">
+            
+              <b>new_with_utf_backslash</b>(str, enc = nil)
+            
+            <a href="../../classes/Tk/EncodedString.html#method-c-new_with_utf_backslash" name="method-c-new_with_utf_backslash" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-new_with_utf_backslash_source')" id="l_method-c-new_with_utf_backslash_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/287a34ae0dfc23e4158f67cb7783d239f202c368/ext/tk/lib/tk/encodedstr.rb#L60" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-new_with_utf_backslash_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tk/encodedstr.rb, line 60</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">new_with_utf_backslash</span>(<span class="ruby-identifier">str</span>, <span class="ruby-identifier">enc</span> = <span class="ruby-keyword">nil</span>)
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">new</span>(<span class="ruby-string">&#39;&#39;</span>, <span class="ruby-identifier">enc</span>).<span class="ruby-identifier">replace</span>(<span class="ruby-keyword">self</span>.<span class="ruby-identifier">subst_utf_backslash</span>(<span class="ruby-identifier">str</span>))
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-new_without_utf_backslash">
+            
+              <b>new_without_utf_backslash</b>(str, enc = nil)
+            
+            <a href="../../classes/Tk/EncodedString.html#method-c-new_without_utf_backslash" name="method-c-new_without_utf_backslash" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-new_without_utf_backslash_source')" id="l_method-c-new_without_utf_backslash_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/287a34ae0dfc23e4158f67cb7783d239f202c368/ext/tk/lib/tk/encodedstr.rb#L64" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-new_without_utf_backslash_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tk/encodedstr.rb, line 64</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">new_without_utf_backslash</span>(<span class="ruby-identifier">str</span>, <span class="ruby-identifier">enc</span> = <span class="ruby-keyword">nil</span>)
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">new</span>(<span class="ruby-string">&#39;&#39;</span>, <span class="ruby-identifier">enc</span>).<span class="ruby-identifier">replace</span>(<span class="ruby-identifier">str</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-subst_tk_backslash">
+            
+              <b>subst_tk_backslash</b>(str)
+            
+            <a href="../../classes/Tk/EncodedString.html#method-c-subst_tk_backslash" name="method-c-subst_tk_backslash" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-subst_tk_backslash_source')" id="l_method-c-subst_tk_backslash_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/287a34ae0dfc23e4158f67cb7783d239f202c368/ext/tk/lib/tk/encodedstr.rb#L21" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-subst_tk_backslash_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tk/encodedstr.rb, line 21</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">subst_tk_backslash</span>(<span class="ruby-identifier">str</span>)
+  <span class="ruby-constant">TclTkLib</span>.<span class="ruby-identifier">_subst_Tcl_backslash</span>(<span class="ruby-identifier">str</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-subst_utf_backslash">
+            
+              <b>subst_utf_backslash</b>(str)
+            
+            <a href="../../classes/Tk/EncodedString.html#method-c-subst_utf_backslash" name="method-c-subst_utf_backslash" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-subst_utf_backslash_source')" id="l_method-c-subst_utf_backslash_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/287a34ae0dfc23e4158f67cb7783d239f202c368/ext/tk/lib/tk/encodedstr.rb#L13" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-subst_utf_backslash_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tk/encodedstr.rb, line 13</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">subst_utf_backslash</span>(<span class="ruby-identifier">str</span>)
+  <span class="ruby-comment"># str.gsub(/\\u([0-9A-Fa-f]{1,4})/){[$1.hex].pack(&#39;U&#39;)}</span>
+  <span class="ruby-constant">TclTkLib</span>.<span class="ruby-identifier">_subst_UTF_backslash</span>(<span class="ruby-identifier">str</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-to_backslash_sequence">
+            
+              <b>to_backslash_sequence</b>(str)
+            
+            <a href="../../classes/Tk/EncodedString.html#method-c-to_backslash_sequence" name="method-c-to_backslash_sequence" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-to_backslash_sequence_source')" id="l_method-c-to_backslash_sequence_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/287a34ae0dfc23e4158f67cb7783d239f202c368/ext/tk/lib/tk/encodedstr.rb#L38" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-to_backslash_sequence_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tk/encodedstr.rb, line 38</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">to_backslash_sequence</span>(<span class="ruby-identifier">str</span>)
+  <span class="ruby-identifier">str</span>.<span class="ruby-identifier">unpack</span>(<span class="ruby-string">&#39;U*&#39;</span>).<span class="ruby-identifier">collect</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">c</span><span class="ruby-operator">|</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">c</span> <span class="ruby-operator">&lt;=</span> <span class="ruby-number">0x1F</span>  <span class="ruby-comment"># control character</span>
+      <span class="ruby-keyword">case</span> <span class="ruby-identifier">c</span>
+      <span class="ruby-keyword">when</span> <span class="ruby-number">0x07</span>; <span class="ruby-string">&#39;\a&#39;</span>
+      <span class="ruby-keyword">when</span> <span class="ruby-number">0x08</span>; <span class="ruby-string">&#39;\b&#39;</span>
+      <span class="ruby-keyword">when</span> <span class="ruby-number">0x09</span>; <span class="ruby-string">&#39;\t&#39;</span>
+      <span class="ruby-keyword">when</span> <span class="ruby-number">0x0a</span>; <span class="ruby-string">&#39;\n&#39;</span>
+      <span class="ruby-keyword">when</span> <span class="ruby-number">0x0b</span>; <span class="ruby-string">&#39;\v&#39;</span>
+      <span class="ruby-keyword">when</span> <span class="ruby-number">0x0c</span>; <span class="ruby-string">&#39;\f&#39;</span>
+      <span class="ruby-keyword">when</span> <span class="ruby-number">0x0d</span>; <span class="ruby-string">&#39;\r&#39;</span>
+      <span class="ruby-keyword">else</span>
+        <span class="ruby-identifier">format</span>(<span class="ruby-string">&#39;\x%02X&#39;</span>, <span class="ruby-identifier">c</span>)
+      <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">c</span> <span class="ruby-operator">&lt;=</span> <span class="ruby-number">0xFF</span>  <span class="ruby-comment"># ascii character</span>
+      <span class="ruby-identifier">c</span>.<span class="ruby-identifier">chr</span>
+    <span class="ruby-keyword">else</span>
+      <span class="ruby-identifier">format</span>(<span class="ruby-string">&#39;\u%X&#39;</span>, <span class="ruby-identifier">c</span>)
+    <span class="ruby-keyword">end</span>
+  }.<span class="ruby-identifier">join</span>(<span class="ruby-string">&#39;&#39;</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-utf_backslash">
+            
+              <b>utf_backslash</b>(str)
+            
+            <a href="../../classes/Tk/EncodedString.html#method-c-utf_backslash" name="method-c-utf_backslash" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-utf_backslash_source')" id="l_method-c-utf_backslash_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/287a34ae0dfc23e4158f67cb7783d239f202c368/ext/tk/lib/tk/encodedstr.rb#L17" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-utf_backslash_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tk/encodedstr.rb, line 17</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">utf_backslash</span>(<span class="ruby-identifier">str</span>)
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">subst_utf_backslash</span>(<span class="ruby-identifier">str</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-utf_to_backslash">
+            
+              <b>utf_to_backslash</b>(str)
+            
+            <a href="../../classes/Tk/EncodedString.html#method-c-utf_to_backslash" name="method-c-utf_to_backslash" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-utf_to_backslash_source')" id="l_method-c-utf_to_backslash_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/287a34ae0dfc23e4158f67cb7783d239f202c368/ext/tk/lib/tk/encodedstr.rb#L34" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-utf_to_backslash_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tk/encodedstr.rb, line 34</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">utf_to_backslash</span>(<span class="ruby-identifier">str</span>)
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">utf_to_backslash_sequence</span>(<span class="ruby-identifier">str</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-utf_to_backslash_sequence">
+            
+              <b>utf_to_backslash_sequence</b>(str)
+            
+            <a href="../../classes/Tk/EncodedString.html#method-c-utf_to_backslash_sequence" name="method-c-utf_to_backslash_sequence" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-utf_to_backslash_sequence_source')" id="l_method-c-utf_to_backslash_sequence_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/287a34ae0dfc23e4158f67cb7783d239f202c368/ext/tk/lib/tk/encodedstr.rb#L25" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-utf_to_backslash_sequence_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tk/encodedstr.rb, line 25</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">utf_to_backslash_sequence</span>(<span class="ruby-identifier">str</span>)
+  <span class="ruby-identifier">str</span>.<span class="ruby-identifier">unpack</span>(<span class="ruby-string">&#39;U*&#39;</span>).<span class="ruby-identifier">collect</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">c</span><span class="ruby-operator">|</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">c</span> <span class="ruby-operator">&lt;=</span> <span class="ruby-number">0xFF</span>  <span class="ruby-comment"># ascii character</span>
+      <span class="ruby-identifier">c</span>.<span class="ruby-identifier">chr</span>
+    <span class="ruby-keyword">else</span>
+      <span class="ruby-identifier">format</span>(<span class="ruby-string">&#39;\u%X&#39;</span>, <span class="ruby-identifier">c</span>)
+    <span class="ruby-keyword">end</span>
+  }.<span class="ruby-identifier">join</span>(<span class="ruby-string">&#39;&#39;</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                  
+      <div class="sectiontitle">Instance Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-i-__encoding">
+            
+              <b>__encoding</b>()
+            
+            <a href="../../classes/Tk/EncodedString.html#method-i-__encoding" name="method-i-__encoding" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+            <div class="aka">
+              Alias for: <a href="EncodedString.html#method-i-encoding">encoding</a>
+            </div>
+          
+          
+          
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-__instance_eval">
+            
+              <b>__instance_eval</b>(*args, &amp;b)
+            
+            <a href="../../classes/Tk/EncodedString.html#method-i-__instance_eval" name="method-i-__instance_eval" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+            <div class="aka">
+              Alias for: <a href="EncodedString.html#method-i-instance_eval">instance_eval</a>
+            </div>
+          
+          
+          
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-__instance_variable_get">
+            
+              <b>__instance_variable_get</b>(key)
+            
+            <a href="../../classes/Tk/EncodedString.html#method-i-__instance_variable_get" name="method-i-__instance_variable_get" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>wrapper methods for compatibility</p>
+            </div>
+          
+          
+          
+
+          
+            <div class="aka">
+              Alias for: <a href="EncodedString.html#method-i-instance_variable_get">instance_variable_get</a>
+            </div>
+          
+          
+          
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-__instance_variable_set">
+            
+              <b>__instance_variable_set</b>(key, value)
+            
+            <a href="../../classes/Tk/EncodedString.html#method-i-__instance_variable_set" name="method-i-__instance_variable_set" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+            <div class="aka">
+              Alias for: <a href="EncodedString.html#method-i-instance_variable_set">instance_variable_set</a>
+            </div>
+          
+          
+          
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-__instance_variables">
+            
+              <b>__instance_variables</b>()
+            
+            <a href="../../classes/Tk/EncodedString.html#method-i-__instance_variables" name="method-i-__instance_variables" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+            <div class="aka">
+              Alias for: <a href="EncodedString.html#method-i-instance_variables">instance_variables</a>
+            </div>
+          
+          
+          
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-encoding">
+            
+              <b>encoding</b>()
+            
+            <a href="../../classes/Tk/EncodedString.html#method-i-encoding" name="method-i-encoding" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+            <div class="aka">
+              Also aliased as: <a href="EncodedString.html#method-i-encoding_obj">encoding_obj</a>, <a href="EncodedString.html#method-i-__encoding">__encoding</a>, encoding_obj
+            </div>
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-encoding_source')" id="l_method-i-encoding_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/287a34ae0dfc23e4158f67cb7783d239f202c368/ext/tk/lib/tk/encodedstr.rb#L89" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-encoding_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tk/encodedstr.rb, line 89</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">encoding</span>
+  <span class="ruby-constant">Tk</span><span class="ruby-operator">::</span><span class="ruby-constant">Encoding</span><span class="ruby-operator">::</span><span class="ruby-constant">ENCODING_TABLE</span>.<span class="ruby-identifier">get_name</span>(<span class="ruby-keyword">super</span>())
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-encoding_obj">
+            
+              <b>encoding_obj</b>()
+            
+            <a href="../../classes/Tk/EncodedString.html#method-i-encoding_obj" name="method-i-encoding_obj" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+            <div class="aka">
+              Alias for: <a href="EncodedString.html#method-i-encoding">encoding</a>
+            </div>
+          
+          
+          
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-instance_eval">
+            
+              <b>instance_eval</b>(*args, &amp;b)
+            
+            <a href="../../classes/Tk/EncodedString.html#method-i-instance_eval" name="method-i-instance_eval" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+            <div class="aka">
+              Also aliased as: <a href="EncodedString.html#method-i-__instance_eval">__instance_eval</a>
+            </div>
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-instance_eval_source')" id="l_method-i-instance_eval_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/287a34ae0dfc23e4158f67cb7783d239f202c368/ext/tk/lib/tk/encodedstr.rb#L127" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-instance_eval_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tk/encodedstr.rb, line 127</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">instance_eval</span>(<span class="ruby-operator">*</span><span class="ruby-identifier">args</span>, <span class="ruby-operator">&amp;</span><span class="ruby-identifier">b</span>)
+  <span class="ruby-identifier">old_enc</span> = <span class="ruby-ivar">@encoding</span> = <span class="ruby-keyword">self</span>.<span class="ruby-identifier">encoding</span>
+
+  <span class="ruby-identifier">ret</span> = <span class="ruby-keyword">super</span>(<span class="ruby-operator">*</span><span class="ruby-identifier">args</span>, <span class="ruby-operator">&amp;</span><span class="ruby-identifier">b</span>)
+
+  <span class="ruby-keyword">if</span> <span class="ruby-ivar">@encoding</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-ivar">@encoding</span> <span class="ruby-operator">!=</span> <span class="ruby-identifier">old_enc</span>
+      <span class="ruby-comment"># modified by user</span>
+      <span class="ruby-keyword">self</span>.<span class="ruby-identifier">force_encoding</span>(<span class="ruby-ivar">@encoding</span>)
+    <span class="ruby-keyword">end</span>
+    <span class="ruby-identifier">remove_instance_variable</span>(<span class="ruby-value">:@encoding</span>)
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-keyword">begin</span>
+      <span class="ruby-identifier">remove_instance_variable</span>(<span class="ruby-value">:@encoding</span>)
+      <span class="ruby-comment"># user sets to nil -&gt; use current default</span>
+      <span class="ruby-keyword">self</span>.<span class="ruby-identifier">force_encoding</span>(<span class="ruby-constant">Tk</span>.<span class="ruby-identifier">encoding</span>)
+    <span class="ruby-keyword">rescue</span> <span class="ruby-constant">NameError</span>
+      <span class="ruby-comment"># removed by user -&gt; ignore, because user don&#39;t use @encoding</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">ret</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-instance_variable_get">
+            
+              <b>instance_variable_get</b>(key)
+            
+            <a href="../../classes/Tk/EncodedString.html#method-i-instance_variable_get" name="method-i-instance_variable_get" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+            <div class="aka">
+              Also aliased as: <a href="EncodedString.html#method-i-__instance_variable_get">__instance_variable_get</a>
+            </div>
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-instance_variable_get_source')" id="l_method-i-instance_variable_get_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/287a34ae0dfc23e4158f67cb7783d239f202c368/ext/tk/lib/tk/encodedstr.rb#L106" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-instance_variable_get_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tk/encodedstr.rb, line 106</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">instance_variable_get</span>(<span class="ruby-identifier">key</span>)
+  <span class="ruby-keyword">if</span> (<span class="ruby-identifier">key</span>.<span class="ruby-identifier">to_s</span> <span class="ruby-operator">==</span> <span class="ruby-string">&#39;@encoding&#39;</span>)
+    <span class="ruby-keyword">self</span>.<span class="ruby-identifier">encoding</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-keyword">super</span>(<span class="ruby-identifier">key</span>)
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-instance_variable_set">
+            
+              <b>instance_variable_set</b>(key, value)
+            
+            <a href="../../classes/Tk/EncodedString.html#method-i-instance_variable_set" name="method-i-instance_variable_set" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+            <div class="aka">
+              Also aliased as: <a href="EncodedString.html#method-i-__instance_variable_set">__instance_variable_set</a>
+            </div>
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-instance_variable_set_source')" id="l_method-i-instance_variable_set_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/287a34ae0dfc23e4158f67cb7783d239f202c368/ext/tk/lib/tk/encodedstr.rb#L114" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-instance_variable_set_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tk/encodedstr.rb, line 114</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">instance_variable_set</span>(<span class="ruby-identifier">key</span>, <span class="ruby-identifier">value</span>)
+  <span class="ruby-keyword">if</span> (<span class="ruby-identifier">key</span>.<span class="ruby-identifier">to_s</span> <span class="ruby-operator">==</span> <span class="ruby-string">&#39;@encoding&#39;</span>)
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">value</span>
+      <span class="ruby-keyword">self</span>.<span class="ruby-identifier">force_encoding</span>(<span class="ruby-identifier">value</span>)
+    <span class="ruby-keyword">else</span>
+      <span class="ruby-keyword">self</span>.<span class="ruby-identifier">force_encoding</span>(<span class="ruby-constant">Tk</span><span class="ruby-operator">::</span><span class="ruby-constant">Encoding</span><span class="ruby-operator">::</span><span class="ruby-constant">UNKNOWN</span>)
+    <span class="ruby-keyword">end</span>
+    <span class="ruby-identifier">value</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-keyword">super</span>(<span class="ruby-identifier">key</span>, <span class="ruby-identifier">value</span>)
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-instance_variables">
+            
+              <b>instance_variables</b>()
+            
+            <a href="../../classes/Tk/EncodedString.html#method-i-instance_variables" name="method-i-instance_variables" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+            <div class="aka">
+              Also aliased as: <a href="EncodedString.html#method-i-__instance_variables">__instance_variables</a>
+            </div>
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-instance_variables_source')" id="l_method-i-instance_variables_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/287a34ae0dfc23e4158f67cb7783d239f202c368/ext/tk/lib/tk/encodedstr.rb#L151" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-instance_variables_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tk/encodedstr.rb, line 151</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">instance_variables</span>
+  <span class="ruby-identifier">ret</span> = <span class="ruby-keyword">super</span>()
+  <span class="ruby-identifier">ret</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-value">:@encoding</span>  <span class="ruby-comment"># fake !!</span>
+  <span class="ruby-identifier">ret</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                    </div>
+
+    </div>
+  </body>
+</html>    

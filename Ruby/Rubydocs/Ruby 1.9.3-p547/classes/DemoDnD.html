@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>DemoDnD</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="../css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/main.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/github.css" type="text/css" media="screen" />
+<script src="../js/jquery-1.3.2.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/jquery-effect.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+
+<body>     
+    <div class="banner">
+        
+        <h1>
+            <span class="type">Module</span> 
+            DemoDnD 
+            
+        </h1>
+        <ul class="files">
+            
+            <li><a href="../files/ext/tk/sample/tkextlib/bwidget/dnd_rb.html">ext/tk/sample/tkextlib/bwidget/dnd.rb</a></li>
+            
+        </ul>
+    </div>
+    <div id="bodyContent">
+        <div id="content">
+  
+
+
+  
+
+
+  
+  
+
+
+  
+
+
+  
+    <!-- Method ref -->
+    <div class="sectiontitle">Methods</div>
+    <dl class="methods">
+      
+        <dt>C</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-create">create</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+    </dl>
+  
+
+  
+
+
+
+  
+
+    
+
+    
+
+    
+
+
+    
+
+
+    <!-- Methods -->
+    
+      <div class="sectiontitle">Class Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-c-create">
+            
+              <b>create</b>(nb)
+            
+            <a href="../classes/DemoDnD.html#method-c-create" name="method-c-create" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-create_source')" id="l_method-c-create_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/287a34ae0dfc23e4158f67cb7783d239f202c368/ext/tk/sample/tkextlib/bwidget/dnd.rb#L9" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-create_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/sample/tkextlib/bwidget/dnd.rb, line 9</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">create</span>(<span class="ruby-identifier">nb</span>)
+  <span class="ruby-identifier">frame</span> = <span class="ruby-identifier">nb</span>.<span class="ruby-identifier">insert</span>(<span class="ruby-string">&#39;end&#39;</span>, <span class="ruby-string">&#39;demoDnD&#39;</span>, <span class="ruby-value">:text=</span><span class="ruby-operator">&gt;</span><span class="ruby-string">&#39;Drag and Drop&#39;</span>)
+
+  <span class="ruby-identifier">titf1</span> = <span class="ruby-constant">Tk</span><span class="ruby-operator">::</span><span class="ruby-constant">BWidget</span><span class="ruby-operator">::</span><span class="ruby-constant">TitleFrame</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">frame</span>, <span class="ruby-value">:text=</span><span class="ruby-operator">&gt;</span><span class="ruby-string">&#39;Drag source&#39;</span>)
+  <span class="ruby-identifier">subf</span> = <span class="ruby-identifier">titf1</span>.<span class="ruby-identifier">get_frame</span>
+
+  <span class="ruby-identifier">ent1</span> = <span class="ruby-constant">Tk</span><span class="ruby-operator">::</span><span class="ruby-constant">BWidget</span><span class="ruby-operator">::</span><span class="ruby-constant">LabelEntry</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">subf</span>, <span class="ruby-value">:label=</span><span class="ruby-operator">&gt;</span><span class="ruby-string">&#39;Entry&#39;</span>,
+                                     <span class="ruby-value">:labelwidth=</span><span class="ruby-operator">&gt;</span><span class="ruby-number">14</span>, <span class="ruby-value">:dragenabled=</span><span class="ruby-operator">&gt;</span><span class="ruby-keyword">true</span>,
+                                     <span class="ruby-value">:dragevent=</span><span class="ruby-operator">&gt;</span><span class="ruby-number">3</span>)
+  <span class="ruby-identifier">labf1</span> = <span class="ruby-constant">Tk</span><span class="ruby-operator">::</span><span class="ruby-constant">BWidget</span><span class="ruby-operator">::</span><span class="ruby-constant">LabelFrame</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">subf</span>, <span class="ruby-value">:text=</span><span class="ruby-operator">&gt;</span><span class="ruby-string">&#39;Label (text)&#39;</span>,
+                                      <span class="ruby-value">:width=</span><span class="ruby-operator">&gt;</span><span class="ruby-number">14</span>)
+  <span class="ruby-identifier">f</span> = <span class="ruby-identifier">labf1</span>.<span class="ruby-identifier">get_frame</span>
+  <span class="ruby-identifier">lab</span> = <span class="ruby-constant">Tk</span><span class="ruby-operator">::</span><span class="ruby-constant">BWidget</span><span class="ruby-operator">::</span><span class="ruby-constant">Label</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">f</span>, <span class="ruby-value">:text=</span><span class="ruby-operator">&gt;</span><span class="ruby-string">&#39;Drag this text&#39;</span>,
+                               <span class="ruby-value">:dragenabled=</span><span class="ruby-operator">&gt;</span><span class="ruby-keyword">true</span>, <span class="ruby-value">:dragevent=</span><span class="ruby-operator">&gt;</span><span class="ruby-number">3</span>).<span class="ruby-identifier">pack</span>
+
+  <span class="ruby-identifier">labf2</span> = <span class="ruby-constant">Tk</span><span class="ruby-operator">::</span><span class="ruby-constant">BWidget</span><span class="ruby-operator">::</span><span class="ruby-constant">LabelFrame</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">subf</span>, <span class="ruby-value">:text=</span><span class="ruby-operator">&gt;</span><span class="ruby-string">&#39;Label (bitmap)&#39;</span>,
+                                      <span class="ruby-value">:width=</span><span class="ruby-operator">&gt;</span><span class="ruby-number">14</span>)
+  <span class="ruby-identifier">f</span> = <span class="ruby-identifier">labf2</span>.<span class="ruby-identifier">get_frame</span>
+  <span class="ruby-identifier">lab</span> = <span class="ruby-constant">Tk</span><span class="ruby-operator">::</span><span class="ruby-constant">BWidget</span><span class="ruby-operator">::</span><span class="ruby-constant">Label</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">f</span>, <span class="ruby-value">:bitmap=</span><span class="ruby-operator">&gt;</span><span class="ruby-string">&#39;info&#39;</span>,
+                               <span class="ruby-value">:dragenabled=</span><span class="ruby-operator">&gt;</span><span class="ruby-keyword">true</span>, <span class="ruby-value">:dragevent=</span><span class="ruby-operator">&gt;</span><span class="ruby-number">3</span>).<span class="ruby-identifier">pack</span>
+
+  <span class="ruby-constant">Tk</span>.<span class="ruby-identifier">pack</span>(<span class="ruby-identifier">ent1</span>, <span class="ruby-identifier">labf1</span>, <span class="ruby-identifier">labf2</span>, <span class="ruby-value">:side=</span><span class="ruby-operator">&gt;</span><span class="ruby-value">:top</span>, <span class="ruby-value">:fill=</span><span class="ruby-operator">&gt;</span><span class="ruby-value">:x</span>, <span class="ruby-value">:pady=</span><span class="ruby-operator">&gt;</span><span class="ruby-number">4</span>)
+
+  <span class="ruby-identifier">titf2</span> = <span class="ruby-constant">Tk</span><span class="ruby-operator">::</span><span class="ruby-constant">BWidget</span><span class="ruby-operator">::</span><span class="ruby-constant">TitleFrame</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">frame</span>, <span class="ruby-value">:text=</span><span class="ruby-operator">&gt;</span><span class="ruby-string">&#39;Drop targets&#39;</span>)
+  <span class="ruby-identifier">subf</span> = <span class="ruby-identifier">titf2</span>.<span class="ruby-identifier">get_frame</span>
+
+  <span class="ruby-identifier">ent1</span> = <span class="ruby-constant">Tk</span><span class="ruby-operator">::</span><span class="ruby-constant">BWidget</span><span class="ruby-operator">::</span><span class="ruby-constant">LabelEntry</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">subf</span>, <span class="ruby-value">:label=</span><span class="ruby-operator">&gt;</span><span class="ruby-string">&#39;Entry&#39;</span>,
+                                     <span class="ruby-value">:labelwidth=</span><span class="ruby-operator">&gt;</span><span class="ruby-number">14</span>, <span class="ruby-value">:dropenabled=</span><span class="ruby-operator">&gt;</span><span class="ruby-keyword">true</span>)
+  <span class="ruby-identifier">labf1</span> = <span class="ruby-constant">Tk</span><span class="ruby-operator">::</span><span class="ruby-constant">BWidget</span><span class="ruby-operator">::</span><span class="ruby-constant">LabelFrame</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">subf</span>, <span class="ruby-value">:text=</span><span class="ruby-operator">&gt;</span><span class="ruby-string">&#39;Label&#39;</span>, <span class="ruby-value">:width=</span><span class="ruby-operator">&gt;</span><span class="ruby-number">14</span>)
+  <span class="ruby-identifier">f</span> = <span class="ruby-identifier">labf1</span>.<span class="ruby-identifier">get_frame</span>
+  <span class="ruby-identifier">lab</span> = <span class="ruby-constant">Tk</span><span class="ruby-operator">::</span><span class="ruby-constant">BWidget</span><span class="ruby-operator">::</span><span class="ruby-constant">Label</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">f</span>, <span class="ruby-value">:dropenabled=</span><span class="ruby-operator">&gt;</span><span class="ruby-keyword">true</span>,
+                               <span class="ruby-value">:highlightthickness=</span><span class="ruby-operator">&gt;</span><span class="ruby-number">1</span>).<span class="ruby-identifier">pack</span>(<span class="ruby-value">:fill=</span><span class="ruby-operator">&gt;</span><span class="ruby-value">:x</span>)
+  <span class="ruby-constant">Tk</span>.<span class="ruby-identifier">pack</span>(<span class="ruby-identifier">ent1</span>, <span class="ruby-identifier">labf1</span>, <span class="ruby-value">:side=</span><span class="ruby-operator">&gt;</span><span class="ruby-value">:top</span>, <span class="ruby-value">:fill=</span><span class="ruby-operator">&gt;</span><span class="ruby-value">:x</span>, <span class="ruby-value">:pady=</span><span class="ruby-operator">&gt;</span><span class="ruby-number">4</span>)
+  <span class="ruby-constant">Tk</span>.<span class="ruby-identifier">pack</span>(<span class="ruby-identifier">titf1</span>, <span class="ruby-identifier">titf2</span>, <span class="ruby-value">:pady=</span><span class="ruby-operator">&gt;</span><span class="ruby-number">4</span>)
+
+  <span class="ruby-identifier">frame</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                        </div>
+
+    </div>
+  </body>
+</html>    

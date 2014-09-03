@@ -1,0 +1,1461 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>WIN32COMGen</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="../css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/main.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/github.css" type="text/css" media="screen" />
+<script src="../js/jquery-1.3.2.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/jquery-effect.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+
+<body>     
+    <div class="banner">
+        
+        <h1>
+            <span class="type">Class</span> 
+            WIN32COMGen 
+            
+                <span class="parent">&lt; 
+                    
+                    <a href="Object.html">Object</a>
+                    
+                </span>
+            
+        </h1>
+        <ul class="files">
+            
+            <li><a href="../files/ext/win32ole/sample/olegen_rb.html">ext/win32ole/sample/olegen.rb</a></li>
+            
+        </ul>
+    </div>
+    <div id="bodyContent">
+        <div id="content">
+  
+
+
+  
+
+
+  
+  
+
+
+  
+
+
+  
+    <!-- Method ref -->
+    <div class="sectiontitle">Methods</div>
+    <dl class="methods">
+      
+        <dt>C</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-class_name">class_name</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>D</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-define_class">define_class</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-define_include">define_include</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-define_initialize">define_initialize</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-define_instance_variables">define_instance_variables</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-define_method_missing">define_method_missing</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-define_module">define_module</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>G</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-generate">generate</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-generate_args">generate_args</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-generate_argtype">generate_argtype</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-generate_argtypes">generate_argtypes</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-generate_class">generate_class</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-generate_constants">generate_constants</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-generate_func_methods">generate_func_methods</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-generate_method">generate_method</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-generate_method_args_help">generate_method_args_help</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-generate_method_body">generate_method_body</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-generate_method_help">generate_method_help</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-generate_methods">generate_methods</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-generate_properties_with_args">generate_properties_with_args</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-generate_propget_methods">generate_propget_methods</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-generate_propput_methods">generate_propput_methods</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-generate_propputref_methods">generate_propputref_methods</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>N</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-new">new</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>O</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-ole_classes">ole_classes</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+    </dl>
+  
+
+  
+
+
+
+  
+
+    
+
+    
+
+    
+
+
+    
+      <!-- Section attributes -->
+      <div class="sectiontitle">Attributes</div>
+      <table border='0' cellpadding='5'>
+        
+          <tr valign='top'>
+            <td class='attr-rw'>
+              [R]
+            </td>
+            <td class='attr-name'>typelib</td>
+            <td class='attr-desc'></td>
+          </tr>
+        
+      </table>
+    
+
+
+    <!-- Methods -->
+    
+      <div class="sectiontitle">Class Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-c-new">
+            
+              <b>new</b>(typelib)
+            
+            <a href="../classes/WIN32COMGen.html#method-c-new" name="method-c-new" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-new_source')" id="l_method-c-new_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/287a34ae0dfc23e4158f67cb7783d239f202c368/ext/win32ole/sample/olegen.rb#L9" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-new_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/win32ole/sample/olegen.rb, line 9</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">initialize</span>(<span class="ruby-identifier">typelib</span>)
+  <span class="ruby-ivar">@typelib</span> = <span class="ruby-identifier">typelib</span>
+  <span class="ruby-ivar">@reciever</span> = <span class="ruby-string">&quot;&quot;</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                  
+      <div class="sectiontitle">Instance Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-i-class_name">
+            
+              <b>class_name</b>(klass)
+            
+            <a href="../classes/WIN32COMGen.html#method-i-class_name" name="method-i-class_name" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-class_name_source')" id="l_method-i-class_name_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/287a34ae0dfc23e4158f67cb7783d239f202c368/ext/win32ole/sample/olegen.rb#L239" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-class_name_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/win32ole/sample/olegen.rb, line 239</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">class_name</span>(<span class="ruby-identifier">klass</span>)
+  <span class="ruby-identifier">klass_name</span> = <span class="ruby-identifier">klass</span>.<span class="ruby-identifier">name</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">klass</span>.<span class="ruby-identifier">ole_type</span> <span class="ruby-operator">==</span> <span class="ruby-string">&quot;Class&quot;</span> <span class="ruby-operator">&amp;&amp;</span>
+     <span class="ruby-identifier">klass</span>.<span class="ruby-identifier">guid</span> <span class="ruby-operator">&amp;&amp;</span>
+     <span class="ruby-identifier">klass</span>.<span class="ruby-identifier">progid</span>
+     <span class="ruby-identifier">klass_name</span> = <span class="ruby-identifier">klass</span>.<span class="ruby-identifier">progid</span>.<span class="ruby-identifier">gsub</span>(<span class="ruby-regexp">/\./</span>, <span class="ruby-string">&#39;_&#39;</span>)
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-regexp">/^[A-Z]/</span> <span class="ruby-operator">!~</span> <span class="ruby-identifier">klass_name</span> <span class="ruby-operator">||</span> <span class="ruby-constant">Module</span>.<span class="ruby-identifier">constants</span>.<span class="ruby-identifier">include?</span>(<span class="ruby-identifier">klass_name</span>)
+    <span class="ruby-identifier">klass_name</span> = <span class="ruby-string">&#39;OLE&#39;</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">klass_name</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">klass_name</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-define_class">
+            
+              <b>define_class</b>(klass, io = STDOUT)
+            
+            <a href="../classes/WIN32COMGen.html#method-i-define_class" name="method-i-define_class" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-define_class_source')" id="l_method-i-define_class_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/287a34ae0dfc23e4158f67cb7783d239f202c368/ext/win32ole/sample/olegen.rb#L284" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-define_class_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/win32ole/sample/olegen.rb, line 284</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">define_class</span>(<span class="ruby-identifier">klass</span>, <span class="ruby-identifier">io</span> = <span class="ruby-constant">STDOUT</span>)
+  <span class="ruby-identifier">io</span>.<span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;class #{class_name(klass)} # #{klass.name}&quot;</span>
+  <span class="ruby-identifier">io</span>.<span class="ruby-identifier">puts</span> <span class="ruby-identifier">define_include</span>
+  <span class="ruby-identifier">io</span>.<span class="ruby-identifier">puts</span> <span class="ruby-identifier">define_instance_variables</span>
+  <span class="ruby-identifier">io</span>.<span class="ruby-identifier">puts</span> <span class="ruby-string">&quot;  attr_reader :dispatch&quot;</span>
+  <span class="ruby-identifier">io</span>.<span class="ruby-identifier">puts</span> <span class="ruby-string">&quot;  attr_reader :clsid&quot;</span>
+  <span class="ruby-identifier">io</span>.<span class="ruby-identifier">puts</span> <span class="ruby-string">&quot;  attr_reader :progid&quot;</span>
+  <span class="ruby-identifier">io</span>.<span class="ruby-identifier">puts</span> <span class="ruby-identifier">define_initialize</span>(<span class="ruby-identifier">klass</span>)
+  <span class="ruby-identifier">io</span>.<span class="ruby-identifier">puts</span> <span class="ruby-identifier">define_method_missing</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-define_include">
+            
+              <b>define_include</b>()
+            
+            <a href="../classes/WIN32COMGen.html#method-i-define_include" name="method-i-define_include" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-define_include_source')" id="l_method-i-define_include_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/287a34ae0dfc23e4158f67cb7783d239f202c368/ext/win32ole/sample/olegen.rb#L267" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-define_include_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/win32ole/sample/olegen.rb, line 267</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">define_include</span>
+  <span class="ruby-string">&quot;  include WIN32OLE::VARIANT&quot;</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-define_initialize">
+            
+              <b>define_initialize</b>(klass)
+            
+            <a href="../classes/WIN32COMGen.html#method-i-define_initialize" name="method-i-define_initialize" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-define_initialize_source')" id="l_method-i-define_initialize_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/287a34ae0dfc23e4158f67cb7783d239f202c368/ext/win32ole/sample/olegen.rb#L252" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-define_initialize_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/win32ole/sample/olegen.rb, line 252</span>
+  <span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">define_initialize</span>(<span class="ruby-identifier">klass</span>)
+    <span class="ruby-value">&lt;&lt;STR
+
+  def initialize(obj = nil)
+    @clsid = &quot;#{klass.guid}&quot;
+    @progid = &quot;#{klass.progid}&quot;
+    if obj.nil?
+      @dispatch = WIN32OLE.new @progid
+    else
+      @dispatch = obj
+    end
+  end
+STR</span>
+  <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-define_instance_variables">
+            
+              <b>define_instance_variables</b>()
+            
+            <a href="../classes/WIN32COMGen.html#method-i-define_instance_variables" name="method-i-define_instance_variables" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-define_instance_variables_source')" id="l_method-i-define_instance_variables_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/287a34ae0dfc23e4158f67cb7783d239f202c368/ext/win32ole/sample/olegen.rb#L271" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-define_instance_variables_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/win32ole/sample/olegen.rb, line 271</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">define_instance_variables</span>
+  <span class="ruby-string">&quot;  attr_reader :lastargs&quot;</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-define_method_missing">
+            
+              <b>define_method_missing</b>()
+            
+            <a href="../classes/WIN32COMGen.html#method-i-define_method_missing" name="method-i-define_method_missing" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-define_method_missing_source')" id="l_method-i-define_method_missing_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/287a34ae0dfc23e4158f67cb7783d239f202c368/ext/win32ole/sample/olegen.rb#L275" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-define_method_missing_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/win32ole/sample/olegen.rb, line 275</span>
+  <span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">define_method_missing</span>
+    <span class="ruby-value">&lt;&lt;STR
+
+  def method_missing(cmd, *arg)
+    @dispatch.method_missing(cmd, *arg)
+  end
+STR</span>
+  <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-define_module">
+            
+              <b>define_module</b>(klass, io = STDOUT)
+            
+            <a href="../classes/WIN32COMGen.html#method-i-define_module" name="method-i-define_module" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-define_module_source')" id="l_method-i-define_module_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/287a34ae0dfc23e4158f67cb7783d239f202c368/ext/win32ole/sample/olegen.rb#L295" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-define_module_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/win32ole/sample/olegen.rb, line 295</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">define_module</span>(<span class="ruby-identifier">klass</span>, <span class="ruby-identifier">io</span> = <span class="ruby-constant">STDOUT</span>)
+  <span class="ruby-identifier">io</span>.<span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;module #{class_name(klass)}&quot;</span>
+  <span class="ruby-identifier">io</span>.<span class="ruby-identifier">puts</span> <span class="ruby-identifier">define_include</span>
+  <span class="ruby-identifier">io</span>.<span class="ruby-identifier">puts</span> <span class="ruby-identifier">define_instance_variables</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-generate">
+            
+              <b>generate</b>(io = STDOUT)
+            
+            <a href="../classes/WIN32COMGen.html#method-i-generate" name="method-i-generate" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-generate_source')" id="l_method-i-generate_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/287a34ae0dfc23e4158f67cb7783d239f202c368/ext/win32ole/sample/olegen.rb#L317" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-generate_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/win32ole/sample/olegen.rb, line 317</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">generate</span>(<span class="ruby-identifier">io</span> = <span class="ruby-constant">STDOUT</span>)
+  <span class="ruby-identifier">io</span>.<span class="ruby-identifier">puts</span> <span class="ruby-string">&quot;require &#39;win32ole&#39;&quot;</span>
+  <span class="ruby-identifier">io</span>.<span class="ruby-identifier">puts</span> <span class="ruby-string">&quot;require &#39;win32ole/property&#39;&quot;</span>
+
+  <span class="ruby-identifier">ole_classes</span>(<span class="ruby-identifier">typelib</span>).<span class="ruby-identifier">select</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">klass</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">klass</span>.<span class="ruby-identifier">visible?</span> <span class="ruby-operator">&amp;&amp;</span>
+    (<span class="ruby-identifier">klass</span>.<span class="ruby-identifier">ole_type</span> <span class="ruby-operator">==</span> <span class="ruby-string">&quot;Class&quot;</span> <span class="ruby-operator">||</span>
+     <span class="ruby-identifier">klass</span>.<span class="ruby-identifier">ole_type</span> <span class="ruby-operator">==</span> <span class="ruby-string">&quot;Interface&quot;</span> <span class="ruby-operator">||</span>
+     <span class="ruby-identifier">klass</span>.<span class="ruby-identifier">ole_type</span> <span class="ruby-operator">==</span> <span class="ruby-string">&quot;Dispatch&quot;</span> <span class="ruby-operator">||</span>
+     <span class="ruby-identifier">klass</span>.<span class="ruby-identifier">ole_type</span> <span class="ruby-operator">==</span> <span class="ruby-string">&quot;Enum&quot;</span>)
+  }.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">klass</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">generate_class</span>(<span class="ruby-identifier">klass</span>, <span class="ruby-identifier">io</span>)
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">begin</span>
+    <span class="ruby-ivar">@ole</span>.<span class="ruby-identifier">quit</span> <span class="ruby-keyword">if</span> <span class="ruby-ivar">@ole</span>
+  <span class="ruby-keyword">rescue</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-generate_args">
+            
+              <b>generate_args</b>(method)
+            
+            <a href="../classes/WIN32COMGen.html#method-i-generate_args" name="method-i-generate_args" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-generate_args_source')" id="l_method-i-generate_args_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/287a34ae0dfc23e4158f67cb7783d239f202c368/ext/win32ole/sample/olegen.rb#L24" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-generate_args_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/win32ole/sample/olegen.rb, line 24</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">generate_args</span>(<span class="ruby-identifier">method</span>)
+  <span class="ruby-identifier">args</span> = []
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">method</span>.<span class="ruby-identifier">size_opt_params</span> <span class="ruby-operator">&gt;=</span> <span class="ruby-number">0</span>
+    <span class="ruby-identifier">size_required_params</span> = <span class="ruby-identifier">method</span>.<span class="ruby-identifier">size_params</span> <span class="ruby-operator">-</span> <span class="ruby-identifier">method</span>.<span class="ruby-identifier">size_opt_params</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">size_required_params</span> = <span class="ruby-identifier">method</span>.<span class="ruby-identifier">size_params</span> <span class="ruby-operator">-</span> <span class="ruby-number">1</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">size_required_params</span>.<span class="ruby-identifier">times</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">i</span><span class="ruby-operator">|</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">method</span>.<span class="ruby-identifier">params</span>[<span class="ruby-identifier">i</span>] <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">method</span>.<span class="ruby-identifier">params</span>[<span class="ruby-identifier">i</span>].<span class="ruby-identifier">optional?</span>
+      <span class="ruby-identifier">args</span>.<span class="ruby-identifier">push</span> <span class="ruby-node">&quot;arg#{i}=nil&quot;</span>
+    <span class="ruby-keyword">else</span>
+      <span class="ruby-identifier">args</span>.<span class="ruby-identifier">push</span> <span class="ruby-node">&quot;arg#{i}&quot;</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">method</span>.<span class="ruby-identifier">size_opt_params</span> <span class="ruby-operator">&gt;=</span> <span class="ruby-number">0</span>
+    <span class="ruby-identifier">method</span>.<span class="ruby-identifier">size_opt_params</span>.<span class="ruby-identifier">times</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">i</span><span class="ruby-operator">|</span>
+      <span class="ruby-identifier">args</span>.<span class="ruby-identifier">push</span> <span class="ruby-node">&quot;arg#{i + size_required_params}=nil&quot;</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">args</span>.<span class="ruby-identifier">push</span> <span class="ruby-string">&quot;*arg&quot;</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">args</span>.<span class="ruby-identifier">join</span>(<span class="ruby-string">&quot;, &quot;</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-generate_argtype">
+            
+              <b>generate_argtype</b>(typedetails)
+            
+            <a href="../classes/WIN32COMGen.html#method-i-generate_argtype" name="method-i-generate_argtype" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-generate_argtype_source')" id="l_method-i-generate_argtype_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/287a34ae0dfc23e4158f67cb7783d239f202c368/ext/win32ole/sample/olegen.rb#L48" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-generate_argtype_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/win32ole/sample/olegen.rb, line 48</span>
+  <span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">generate_argtype</span>(<span class="ruby-identifier">typedetails</span>)
+    <span class="ruby-identifier">ts</span> = <span class="ruby-string">&#39;&#39;</span>
+    <span class="ruby-identifier">typedetails</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">t</span><span class="ruby-operator">|</span>
+      <span class="ruby-keyword">case</span> <span class="ruby-identifier">t</span>
+      <span class="ruby-keyword">when</span> <span class="ruby-string">&#39;CARRAY&#39;</span>, <span class="ruby-string">&#39;VOID&#39;</span>, <span class="ruby-string">&#39;UINT&#39;</span>, <span class="ruby-string">&#39;RESULT&#39;</span>, <span class="ruby-string">&#39;DECIMAL&#39;</span>, <span class="ruby-string">&#39;I8&#39;</span>, <span class="ruby-string">&#39;UI8&#39;</span>
+<span class="ruby-comment">#         raise &quot;Sorry type\&quot;&quot; + t + &quot;\&quot; not supported&quot;</span>
+      <span class="ruby-identifier">ts</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-node">&quot;\&quot;??? NOT SUPPORTED TYPE:`#{t}&#39;\&quot;&quot;</span>
+      <span class="ruby-keyword">when</span> <span class="ruby-string">&#39;USERDEFINED&#39;</span>, <span class="ruby-string">&#39;Unknown Type 9&#39;</span>
+        <span class="ruby-identifier">ts</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-string">&#39;VT_DISPATCH&#39;</span>
+        <span class="ruby-keyword">break</span>;
+      <span class="ruby-keyword">when</span> <span class="ruby-string">&#39;SAFEARRAY&#39;</span>
+        <span class="ruby-identifier">ts</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-string">&#39;VT_ARRAY|&#39;</span>
+      <span class="ruby-keyword">when</span> <span class="ruby-string">&#39;PTR&#39;</span>
+        <span class="ruby-identifier">ts</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-string">&#39;VT_BYREF|&#39;</span>
+      <span class="ruby-keyword">when</span> <span class="ruby-string">&#39;INT&#39;</span>
+        <span class="ruby-identifier">ts</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-string">&#39;VT_I4&#39;</span>
+      <span class="ruby-keyword">else</span>
+        <span class="ruby-keyword">if</span> <span class="ruby-constant">String</span> <span class="ruby-operator">===</span> <span class="ruby-identifier">t</span>
+          <span class="ruby-identifier">ts</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-string">&#39;VT_&#39;</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">t</span>
+        <span class="ruby-keyword">end</span>
+      <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">ts</span>.<span class="ruby-identifier">empty?</span>
+      <span class="ruby-identifier">ts</span> = <span class="ruby-string">&#39;VT_VARIANT&#39;</span>
+    <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">ts</span>[<span class="ruby-number">-1</span>] <span class="ruby-operator">==</span> <span class="ruby-value">?|</span>
+        <span class="ruby-identifier">ts</span> <span class="ruby-operator">+=</span> <span class="ruby-string">&#39;VT_VARIANT&#39;</span>
+    <span class="ruby-keyword">end</span>
+    <span class="ruby-identifier">ts</span>
+  <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-generate_argtypes">
+            
+              <b>generate_argtypes</b>(method, proptypes)
+            
+            <a href="../classes/WIN32COMGen.html#method-i-generate_argtypes" name="method-i-generate_argtypes" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-generate_argtypes_source')" id="l_method-i-generate_argtypes_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/287a34ae0dfc23e4158f67cb7783d239f202c368/ext/win32ole/sample/olegen.rb#L78" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-generate_argtypes_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/win32ole/sample/olegen.rb, line 78</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">generate_argtypes</span>(<span class="ruby-identifier">method</span>, <span class="ruby-identifier">proptypes</span>)
+  <span class="ruby-identifier">types</span> = <span class="ruby-identifier">method</span>.<span class="ruby-identifier">params</span>.<span class="ruby-identifier">collect</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">param</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">generate_argtype</span>(<span class="ruby-identifier">param</span>.<span class="ruby-identifier">ole_type_detail</span>)
+  }.<span class="ruby-identifier">join</span>(<span class="ruby-string">&quot;, &quot;</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">proptypes</span>
+    <span class="ruby-identifier">types</span> <span class="ruby-operator">+=</span> <span class="ruby-string">&quot;, &quot;</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">types</span>.<span class="ruby-identifier">size</span> <span class="ruby-operator">&gt;</span> <span class="ruby-number">0</span>
+    <span class="ruby-identifier">types</span> <span class="ruby-operator">+=</span> <span class="ruby-identifier">generate_argtype</span>(<span class="ruby-identifier">proptypes</span>)
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">types</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-generate_class">
+            
+              <b>generate_class</b>(klass, io = STDOUT)
+            
+            <a href="../classes/WIN32COMGen.html#method-i-generate_class" name="method-i-generate_class" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-generate_class_source')" id="l_method-i-generate_class_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/287a34ae0dfc23e4158f67cb7783d239f202c368/ext/win32ole/sample/olegen.rb#L301" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-generate_class_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/win32ole/sample/olegen.rb, line 301</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">generate_class</span>(<span class="ruby-identifier">klass</span>, <span class="ruby-identifier">io</span> = <span class="ruby-constant">STDOUT</span>)
+  <span class="ruby-identifier">io</span>.<span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;\n# #{klass.helpstring}&quot;</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">klass</span>.<span class="ruby-identifier">ole_type</span> <span class="ruby-operator">==</span> <span class="ruby-string">&quot;Class&quot;</span> <span class="ruby-operator">&amp;&amp;</span>
+     <span class="ruby-identifier">klass</span>.<span class="ruby-identifier">guid</span> <span class="ruby-operator">&amp;&amp;</span>
+     <span class="ruby-identifier">klass</span>.<span class="ruby-identifier">progid</span>
+    <span class="ruby-ivar">@reciever</span> = <span class="ruby-string">&quot;@dispatch.&quot;</span>
+    <span class="ruby-identifier">define_class</span>(<span class="ruby-identifier">klass</span>, <span class="ruby-identifier">io</span>)
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-ivar">@reciever</span> = <span class="ruby-string">&quot;&quot;</span>
+    <span class="ruby-identifier">define_module</span>(<span class="ruby-identifier">klass</span>, <span class="ruby-identifier">io</span>)
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">generate_constants</span>(<span class="ruby-identifier">klass</span>, <span class="ruby-identifier">io</span>)
+  <span class="ruby-identifier">generate_methods</span>(<span class="ruby-identifier">klass</span>, <span class="ruby-identifier">io</span>)
+  <span class="ruby-identifier">io</span>.<span class="ruby-identifier">puts</span> <span class="ruby-string">&quot;end&quot;</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-generate_constants">
+            
+              <b>generate_constants</b>(klass, io = STDOUT)
+            
+            <a href="../classes/WIN32COMGen.html#method-i-generate_constants" name="method-i-generate_constants" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-generate_constants_source')" id="l_method-i-generate_constants_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/287a34ae0dfc23e4158f67cb7783d239f202c368/ext/win32ole/sample/olegen.rb#L228" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-generate_constants_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/win32ole/sample/olegen.rb, line 228</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">generate_constants</span>(<span class="ruby-identifier">klass</span>, <span class="ruby-identifier">io</span> = <span class="ruby-constant">STDOUT</span>)
+  <span class="ruby-identifier">klass</span>.<span class="ruby-identifier">variables</span>.<span class="ruby-identifier">select</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">v</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">v</span>.<span class="ruby-identifier">visible?</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">v</span>.<span class="ruby-identifier">variable_kind</span> <span class="ruby-operator">==</span> <span class="ruby-string">&#39;CONSTANT&#39;</span>
+  }.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">v</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">io</span>.<span class="ruby-identifier">print</span> <span class="ruby-string">&quot;  &quot;</span>
+    <span class="ruby-identifier">io</span>.<span class="ruby-identifier">print</span> <span class="ruby-identifier">v</span>.<span class="ruby-identifier">name</span>.<span class="ruby-identifier">sub</span>(<span class="ruby-regexp">/^./</span>){<span class="ruby-node">$&amp;</span>.<span class="ruby-identifier">upcase</span>}
+    <span class="ruby-identifier">io</span>.<span class="ruby-identifier">print</span> <span class="ruby-string">&quot; = &quot;</span>
+    <span class="ruby-identifier">io</span>.<span class="ruby-identifier">puts</span>  <span class="ruby-identifier">v</span>.<span class="ruby-identifier">value</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-generate_func_methods">
+            
+              <b>generate_func_methods</b>(klass, io = STDOUT)
+            
+            <a href="../classes/WIN32COMGen.html#method-i-generate_func_methods" name="method-i-generate_func_methods" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-generate_func_methods_source')" id="l_method-i-generate_func_methods_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/287a34ae0dfc23e4158f67cb7783d239f202c368/ext/win32ole/sample/olegen.rb#L212" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-generate_func_methods_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/win32ole/sample/olegen.rb, line 212</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">generate_func_methods</span>(<span class="ruby-identifier">klass</span>, <span class="ruby-identifier">io</span> = <span class="ruby-constant">STDOUT</span>)
+  <span class="ruby-identifier">klass</span>.<span class="ruby-identifier">ole_methods</span>.<span class="ruby-identifier">select</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">method</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">method</span>.<span class="ruby-identifier">invoke_kind</span> <span class="ruby-operator">==</span> <span class="ruby-string">&quot;FUNC&quot;</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">method</span>.<span class="ruby-identifier">visible?</span>
+  }.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">method</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">generate_method</span>(<span class="ruby-identifier">method</span>, <span class="ruby-string">&#39;_invoke&#39;</span>, <span class="ruby-identifier">io</span>)
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-generate_method">
+            
+              <b>generate_method</b>(method, disptype, io = STDOUT, types = nil)
+            
+            <a href="../classes/WIN32COMGen.html#method-i-generate_method" name="method-i-generate_method" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-generate_method_source')" id="l_method-i-generate_method_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/287a34ae0dfc23e4158f67cb7783d239f202c368/ext/win32ole/sample/olegen.rb#L141" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-generate_method_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/win32ole/sample/olegen.rb, line 141</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">generate_method</span>(<span class="ruby-identifier">method</span>, <span class="ruby-identifier">disptype</span>, <span class="ruby-identifier">io</span> = <span class="ruby-constant">STDOUT</span>, <span class="ruby-identifier">types</span> = <span class="ruby-keyword">nil</span>)
+  <span class="ruby-identifier">io</span>.<span class="ruby-identifier">puts</span> <span class="ruby-string">&quot;\n&quot;</span>
+  <span class="ruby-identifier">io</span>.<span class="ruby-identifier">puts</span>  <span class="ruby-identifier">generate_method_help</span>(<span class="ruby-identifier">method</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">method</span>.<span class="ruby-identifier">invoke_kind</span> <span class="ruby-operator">==</span> <span class="ruby-string">&#39;PROPERTYPUT&#39;</span>
+    <span class="ruby-identifier">io</span>.<span class="ruby-identifier">print</span> <span class="ruby-node">&quot;  def #{method.name}=(&quot;</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">io</span>.<span class="ruby-identifier">print</span> <span class="ruby-node">&quot;  def #{method.name}(&quot;</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">io</span>.<span class="ruby-identifier">print</span> <span class="ruby-identifier">generate_args</span>(<span class="ruby-identifier">method</span>)
+  <span class="ruby-identifier">io</span>.<span class="ruby-identifier">puts</span> <span class="ruby-string">&quot;)&quot;</span>
+  <span class="ruby-identifier">io</span>.<span class="ruby-identifier">puts</span> <span class="ruby-identifier">generate_method_body</span>(<span class="ruby-identifier">method</span>, <span class="ruby-identifier">disptype</span>, <span class="ruby-identifier">types</span>)
+  <span class="ruby-identifier">io</span>.<span class="ruby-identifier">puts</span> <span class="ruby-string">&quot;  end&quot;</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-generate_method_args_help">
+            
+              <b>generate_method_args_help</b>(method)
+            
+            <a href="../classes/WIN32COMGen.html#method-i-generate_method_args_help" name="method-i-generate_method_args_help" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-generate_method_args_help_source')" id="l_method-i-generate_method_args_help_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/287a34ae0dfc23e4158f67cb7783d239f202c368/ext/win32ole/sample/olegen.rb#L123" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-generate_method_args_help_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/win32ole/sample/olegen.rb, line 123</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">generate_method_args_help</span>(<span class="ruby-identifier">method</span>)
+  <span class="ruby-identifier">args</span> = []
+  <span class="ruby-identifier">method</span>.<span class="ruby-identifier">params</span>.<span class="ruby-identifier">each_with_index</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">param</span>, <span class="ruby-identifier">i</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">h</span> = <span class="ruby-node">&quot;  #   #{param.ole_type} arg#{i} --- #{param.name}&quot;</span>
+    <span class="ruby-identifier">inout</span> = []
+    <span class="ruby-identifier">inout</span>.<span class="ruby-identifier">push</span> <span class="ruby-string">&quot;IN&quot;</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">param</span>.<span class="ruby-identifier">input?</span>
+    <span class="ruby-identifier">inout</span>.<span class="ruby-identifier">push</span> <span class="ruby-string">&quot;OUT&quot;</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">param</span>.<span class="ruby-identifier">output?</span>
+    <span class="ruby-identifier">h</span> <span class="ruby-operator">+=</span> <span class="ruby-node">&quot; [#{inout.join(&#39;/&#39;)}]&quot;</span>
+    <span class="ruby-identifier">h</span> <span class="ruby-operator">+=</span> <span class="ruby-node">&quot; ( = #{param.default})&quot;</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">param</span>.<span class="ruby-identifier">default</span>
+    <span class="ruby-identifier">args</span>.<span class="ruby-identifier">push</span> <span class="ruby-identifier">h</span>
+  }
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">args</span>.<span class="ruby-identifier">size</span> <span class="ruby-operator">&gt;</span> <span class="ruby-number">0</span>
+    <span class="ruby-identifier">args</span>.<span class="ruby-identifier">join</span>(<span class="ruby-string">&quot;\n&quot;</span>)
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-keyword">nil</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-generate_method_body">
+            
+              <b>generate_method_body</b>(method, disptype, types=nil)
+            
+            <a href="../classes/WIN32COMGen.html#method-i-generate_method_body" name="method-i-generate_method_body" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-generate_method_body_source')" id="l_method-i-generate_method_body_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/287a34ae0dfc23e4158f67cb7783d239f202c368/ext/win32ole/sample/olegen.rb#L89" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-generate_method_body_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/win32ole/sample/olegen.rb, line 89</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">generate_method_body</span>(<span class="ruby-identifier">method</span>, <span class="ruby-identifier">disptype</span>, <span class="ruby-identifier">types</span>=<span class="ruby-keyword">nil</span>)
+  <span class="ruby-node">&quot;    ret = #{@reciever}#{disptype}(#{method.dispid}, [&quot;</span> <span class="ruby-operator">+</span>
+  <span class="ruby-identifier">generate_args</span>(<span class="ruby-identifier">method</span>).<span class="ruby-identifier">gsub</span>(<span class="ruby-string">&quot;=nil&quot;</span>, <span class="ruby-string">&quot;&quot;</span>) <span class="ruby-operator">+</span>
+  <span class="ruby-string">&quot;], [&quot;</span> <span class="ruby-operator">+</span>
+  <span class="ruby-identifier">generate_argtypes</span>(<span class="ruby-identifier">method</span>, <span class="ruby-identifier">types</span>) <span class="ruby-operator">+</span>
+  <span class="ruby-string">&quot;])\n&quot;</span> <span class="ruby-operator">+</span>
+  <span class="ruby-string">&quot;    @lastargs = WIN32OLE::ARGV\n&quot;</span> <span class="ruby-operator">+</span>
+  <span class="ruby-string">&quot;    ret&quot;</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-generate_method_help">
+            
+              <b>generate_method_help</b>(method, type = nil)
+            
+            <a href="../classes/WIN32COMGen.html#method-i-generate_method_help" name="method-i-generate_method_help" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-generate_method_help_source')" id="l_method-i-generate_method_help_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/287a34ae0dfc23e4158f67cb7783d239f202c368/ext/win32ole/sample/olegen.rb#L99" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-generate_method_help_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/win32ole/sample/olegen.rb, line 99</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">generate_method_help</span>(<span class="ruby-identifier">method</span>, <span class="ruby-identifier">type</span> = <span class="ruby-keyword">nil</span>)
+  <span class="ruby-identifier">str</span> = <span class="ruby-node">&quot;  # &quot;</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">type</span>
+    <span class="ruby-identifier">str</span> <span class="ruby-operator">+=</span> <span class="ruby-identifier">type</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">str</span> <span class="ruby-operator">+=</span> <span class="ruby-identifier">method</span>.<span class="ruby-identifier">return_type</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">str</span> <span class="ruby-operator">+=</span> <span class="ruby-node">&quot; #{method.name}&quot;</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">method</span>.<span class="ruby-identifier">event?</span>
+    <span class="ruby-identifier">str</span> <span class="ruby-operator">+=</span> <span class="ruby-string">&quot; EVENT&quot;</span>
+    <span class="ruby-identifier">str</span> <span class="ruby-operator">+=</span> <span class="ruby-node">&quot; in #{method.event_interface}&quot;</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">method</span>.<span class="ruby-identifier">helpstring</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">method</span>.<span class="ruby-identifier">helpstring</span> <span class="ruby-operator">!=</span> <span class="ruby-string">&quot;&quot;</span>
+    <span class="ruby-identifier">str</span> <span class="ruby-operator">+=</span> <span class="ruby-node">&quot;\n  # &quot;</span>
+    <span class="ruby-identifier">str</span> <span class="ruby-operator">+=</span> <span class="ruby-identifier">method</span>.<span class="ruby-identifier">helpstring</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">args_help</span> = <span class="ruby-identifier">generate_method_args_help</span>(<span class="ruby-identifier">method</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">args_help</span>
+    <span class="ruby-identifier">str</span> <span class="ruby-operator">+=</span> <span class="ruby-string">&quot;\n&quot;</span>
+    <span class="ruby-identifier">str</span> <span class="ruby-operator">+=</span> <span class="ruby-identifier">args_help</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">str</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-generate_methods">
+            
+              <b>generate_methods</b>(klass, io = STDOUT)
+            
+            <a href="../classes/WIN32COMGen.html#method-i-generate_methods" name="method-i-generate_methods" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-generate_methods_source')" id="l_method-i-generate_methods_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/287a34ae0dfc23e4158f67cb7783d239f202c368/ext/win32ole/sample/olegen.rb#L220" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-generate_methods_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/win32ole/sample/olegen.rb, line 220</span>
+  <span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">generate_methods</span>(<span class="ruby-identifier">klass</span>, <span class="ruby-identifier">io</span> = <span class="ruby-constant">STDOUT</span>)
+    <span class="ruby-identifier">generate_propget_methods</span>(<span class="ruby-identifier">klass</span>, <span class="ruby-identifier">io</span>)
+    <span class="ruby-identifier">generate_propput_methods</span>(<span class="ruby-identifier">klass</span>, <span class="ruby-identifier">io</span>)
+    <span class="ruby-identifier">generate_properties_with_args</span>(<span class="ruby-identifier">klass</span>, <span class="ruby-identifier">io</span>)
+    <span class="ruby-identifier">generate_func_methods</span>(<span class="ruby-identifier">klass</span>, <span class="ruby-identifier">io</span>)
+<span class="ruby-comment">#   generate_propputref_methods(klass, io)</span>
+  <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-generate_properties_with_args">
+            
+              <b>generate_properties_with_args</b>(klass, io = STDOUT)
+            
+            <a href="../classes/WIN32COMGen.html#method-i-generate_properties_with_args" name="method-i-generate_properties_with_args" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-generate_properties_with_args_source')" id="l_method-i-generate_properties_with_args_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/287a34ae0dfc23e4158f67cb7783d239f202c368/ext/win32ole/sample/olegen.rb#L163" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-generate_properties_with_args_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/win32ole/sample/olegen.rb, line 163</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">generate_properties_with_args</span>(<span class="ruby-identifier">klass</span>, <span class="ruby-identifier">io</span> = <span class="ruby-constant">STDOUT</span>)
+  <span class="ruby-identifier">klass</span>.<span class="ruby-identifier">ole_methods</span>.<span class="ruby-identifier">select</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">method</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">method</span>.<span class="ruby-identifier">invoke_kind</span> <span class="ruby-operator">==</span> <span class="ruby-string">&#39;PROPERTYGET&#39;</span> <span class="ruby-operator">&amp;&amp;</span>
+    <span class="ruby-identifier">method</span>.<span class="ruby-identifier">visible?</span> <span class="ruby-operator">&amp;&amp;</span>
+    <span class="ruby-identifier">method</span>.<span class="ruby-identifier">size_params</span> <span class="ruby-operator">&gt;</span> <span class="ruby-number">0</span>
+  }.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">method</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">types</span> = <span class="ruby-identifier">method</span>.<span class="ruby-identifier">return_type_detail</span>
+    <span class="ruby-identifier">io</span>.<span class="ruby-identifier">puts</span> <span class="ruby-string">&quot;\n&quot;</span>
+    <span class="ruby-identifier">io</span>.<span class="ruby-identifier">puts</span>  <span class="ruby-identifier">generate_method_help</span>(<span class="ruby-identifier">method</span>, <span class="ruby-identifier">types</span>[<span class="ruby-number">0</span>])
+    <span class="ruby-identifier">io</span>.<span class="ruby-identifier">puts</span>  <span class="ruby-node">&quot;  def #{method.name}&quot;</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">klass</span>.<span class="ruby-identifier">ole_type</span> <span class="ruby-operator">==</span> <span class="ruby-string">&quot;Class&quot;</span>
+      <span class="ruby-identifier">io</span>.<span class="ruby-identifier">print</span> <span class="ruby-node">&quot;    OLEProperty.new(@dispatch, #{method.dispid}, [&quot;</span>
+    <span class="ruby-keyword">else</span>
+      <span class="ruby-identifier">io</span>.<span class="ruby-identifier">print</span> <span class="ruby-node">&quot;    OLEProperty.new(self, #{method.dispid}, [&quot;</span>
+    <span class="ruby-keyword">end</span>
+    <span class="ruby-identifier">io</span>.<span class="ruby-identifier">print</span> <span class="ruby-identifier">generate_argtypes</span>(<span class="ruby-identifier">method</span>, <span class="ruby-keyword">nil</span>)
+    <span class="ruby-identifier">io</span>.<span class="ruby-identifier">print</span> <span class="ruby-string">&quot;], [&quot;</span>
+    <span class="ruby-identifier">io</span>.<span class="ruby-identifier">print</span> <span class="ruby-identifier">generate_argtypes</span>(<span class="ruby-identifier">method</span>, <span class="ruby-identifier">types</span>)
+    <span class="ruby-identifier">io</span>.<span class="ruby-identifier">puts</span> <span class="ruby-string">&quot;])&quot;</span>
+    <span class="ruby-identifier">io</span>.<span class="ruby-identifier">puts</span>  <span class="ruby-string">&quot;  end&quot;</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-generate_propget_methods">
+            
+              <b>generate_propget_methods</b>(klass, io = STDOUT)
+            
+            <a href="../classes/WIN32COMGen.html#method-i-generate_propget_methods" name="method-i-generate_propget_methods" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-generate_propget_methods_source')" id="l_method-i-generate_propget_methods_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/287a34ae0dfc23e4158f67cb7783d239f202c368/ext/win32ole/sample/olegen.rb#L203" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-generate_propget_methods_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/win32ole/sample/olegen.rb, line 203</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">generate_propget_methods</span>(<span class="ruby-identifier">klass</span>, <span class="ruby-identifier">io</span> = <span class="ruby-constant">STDOUT</span>)
+  <span class="ruby-identifier">klass</span>.<span class="ruby-identifier">ole_methods</span>.<span class="ruby-identifier">select</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">method</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">method</span>.<span class="ruby-identifier">invoke_kind</span> <span class="ruby-operator">==</span> <span class="ruby-string">&#39;PROPERTYGET&#39;</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">method</span>.<span class="ruby-identifier">visible?</span> <span class="ruby-operator">&amp;&amp;</span>
+    <span class="ruby-identifier">method</span>.<span class="ruby-identifier">size_params</span> <span class="ruby-operator">==</span> <span class="ruby-number">0</span>
+  }.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">method</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">generate_method</span>(<span class="ruby-identifier">method</span>, <span class="ruby-string">&#39;_getproperty&#39;</span>, <span class="ruby-identifier">io</span>)
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-generate_propput_methods">
+            
+              <b>generate_propput_methods</b>(klass, io = STDOUT)
+            
+            <a href="../classes/WIN32COMGen.html#method-i-generate_propput_methods" name="method-i-generate_propput_methods" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-generate_propput_methods_source')" id="l_method-i-generate_propput_methods_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/287a34ae0dfc23e4158f67cb7783d239f202c368/ext/win32ole/sample/olegen.rb#L186" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-generate_propput_methods_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/win32ole/sample/olegen.rb, line 186</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">generate_propput_methods</span>(<span class="ruby-identifier">klass</span>, <span class="ruby-identifier">io</span> = <span class="ruby-constant">STDOUT</span>)
+  <span class="ruby-identifier">klass</span>.<span class="ruby-identifier">ole_methods</span>.<span class="ruby-identifier">select</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">method</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">method</span>.<span class="ruby-identifier">invoke_kind</span> <span class="ruby-operator">==</span> <span class="ruby-string">&#39;PROPERTYPUT&#39;</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">method</span>.<span class="ruby-identifier">visible?</span> <span class="ruby-operator">&amp;&amp;</span>
+    <span class="ruby-identifier">method</span>.<span class="ruby-identifier">size_params</span> <span class="ruby-operator">==</span> <span class="ruby-number">1</span>
+  }.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">method</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">ms</span> = <span class="ruby-identifier">klass</span>.<span class="ruby-identifier">ole_methods</span>.<span class="ruby-identifier">select</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">m</span><span class="ruby-operator">|</span>
+      <span class="ruby-identifier">m</span>.<span class="ruby-identifier">invoke_kind</span> <span class="ruby-operator">==</span> <span class="ruby-string">&#39;PROPERTYGET&#39;</span> <span class="ruby-operator">&amp;&amp;</span>
+      <span class="ruby-identifier">m</span>.<span class="ruby-identifier">dispid</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">method</span>.<span class="ruby-identifier">dispid</span>
+    }
+    <span class="ruby-identifier">types</span> = []
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">ms</span>.<span class="ruby-identifier">size</span> <span class="ruby-operator">==</span> <span class="ruby-number">1</span>
+      <span class="ruby-identifier">types</span> = <span class="ruby-identifier">ms</span>[<span class="ruby-number">0</span>].<span class="ruby-identifier">return_type_detail</span>
+    <span class="ruby-keyword">end</span>
+    <span class="ruby-identifier">generate_method</span>(<span class="ruby-identifier">method</span>, <span class="ruby-string">&#39;_setproperty&#39;</span>, <span class="ruby-identifier">io</span>, <span class="ruby-identifier">types</span>)
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-generate_propputref_methods">
+            
+              <b>generate_propputref_methods</b>(klass, io = STDOUT)
+            
+            <a href="../classes/WIN32COMGen.html#method-i-generate_propputref_methods" name="method-i-generate_propputref_methods" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-generate_propputref_methods_source')" id="l_method-i-generate_propputref_methods_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/287a34ae0dfc23e4158f67cb7783d239f202c368/ext/win32ole/sample/olegen.rb#L155" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-generate_propputref_methods_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/win32ole/sample/olegen.rb, line 155</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">generate_propputref_methods</span>(<span class="ruby-identifier">klass</span>, <span class="ruby-identifier">io</span> = <span class="ruby-constant">STDOUT</span>)
+  <span class="ruby-identifier">klass</span>.<span class="ruby-identifier">ole_methods</span>.<span class="ruby-identifier">select</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">method</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">method</span>.<span class="ruby-identifier">invoke_kind</span> <span class="ruby-operator">==</span> <span class="ruby-string">&#39;PROPERTYPUTREF&#39;</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">method</span>.<span class="ruby-identifier">visible?</span>
+  }.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">method</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">generate_method</span>(<span class="ruby-identifier">method</span>, <span class="ruby-identifier">io</span>)
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-ole_classes">
+            
+              <b>ole_classes</b>(typelib)
+            
+            <a href="../classes/WIN32COMGen.html#method-i-ole_classes" name="method-i-ole_classes" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-ole_classes_source')" id="l_method-i-ole_classes_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/287a34ae0dfc23e4158f67cb7783d239f202c368/ext/win32ole/sample/olegen.rb#L15" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-ole_classes_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/win32ole/sample/olegen.rb, line 15</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">ole_classes</span>(<span class="ruby-identifier">typelib</span>)
+  <span class="ruby-keyword">begin</span>
+    <span class="ruby-ivar">@ole</span> = <span class="ruby-constant">WIN32OLE</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">typelib</span>)
+    [<span class="ruby-ivar">@ole</span>.<span class="ruby-identifier">ole_obj_help</span>]
+  <span class="ruby-keyword">rescue</span>
+    <span class="ruby-constant">WIN32OLE_TYPE</span>.<span class="ruby-identifier">ole_classes</span>(<span class="ruby-identifier">typelib</span>)
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                    </div>
+
+    </div>
+  </body>
+</html>    

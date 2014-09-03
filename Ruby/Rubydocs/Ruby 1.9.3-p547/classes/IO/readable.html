@@ -1,0 +1,431 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>IO::readable</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="../../css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../../css/main.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../../css/github.css" type="text/css" media="screen" />
+<script src="../../js/jquery-1.3.2.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../js/jquery-effect.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../js/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+
+<body>     
+    <div class="banner">
+        
+        <h1>
+            <span class="type">Module</span> 
+            IO::readable 
+            
+        </h1>
+        <ul class="files">
+            
+            <li><a href="../../files/ext/io/console/console_c.html">ext/io/console/console.c</a></li>
+            
+        </ul>
+    </div>
+    <div id="bodyContent">
+        <div id="content">
+  
+
+
+  
+
+
+  
+  
+
+
+  
+
+
+  
+    <!-- Method ref -->
+    <div class="sectiontitle">Methods</div>
+    <dl class="methods">
+      
+        <dt>G</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-getch">getch</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>R</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-read_nonblock">read_nonblock</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-readbyte">readbyte</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-readchar">readchar</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-readline">readline</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-readpartial">readpartial</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>S</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-sysread">sysread</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+    </dl>
+  
+
+  
+
+
+
+  
+
+    
+
+    
+
+    
+
+
+    
+
+
+    <!-- Methods -->
+        
+      <div class="sectiontitle">Instance Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-i-getch">
+            
+              <b>getch</b>(*args)
+            
+            <a href="../../classes/IO/readable.html#method-i-getch" name="method-i-getch" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-getch_source')" id="l_method-i-getch_source">show</a>
+                
+              </p>
+              <div id="method-i-getch_source" class="dyn-source">
+                <pre>static VALUE
+io_getch(int argc, VALUE *argv, VALUE io)
+{
+    return rb_funcall2(io, rb_intern(&quot;getc&quot;), argc, argv);
+}</pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-read_nonblock">
+            
+              <b>strio.sysread(integer[, outbuf])    &rarr; string
+</b>
+            
+            <a href="../../classes/IO/readable.html#method-i-read_nonblock" name="method-i-read_nonblock" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Similar to read, but raises <code>EOFError</code> at end of string instead
+of returning <code>nil</code>, as well as <a
+href="../IO.html#method-i-sysread">IO#sysread</a> does.</p>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-read_nonblock_source')" id="l_method-i-read_nonblock_source">show</a>
+                
+              </p>
+              <div id="method-i-read_nonblock_source" class="dyn-source">
+                <pre>static VALUE
+strio_sysread(int argc, VALUE *argv, VALUE self)
+{
+    VALUE val = rb_funcall2(self, rb_intern(&quot;read&quot;), argc, argv);
+    if (NIL_P(val)) {
+        rb_eof_error();
+    }
+    return val;
+}</pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-readbyte">
+            
+              <b>strio.readbyte   &rarr; fixnum
+</b>
+            
+            <a href="../../classes/IO/readable.html#method-i-readbyte" name="method-i-readbyte" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>See <a href="../IO.html#method-i-readbyte">IO#readbyte</a>.</p>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-readbyte_source')" id="l_method-i-readbyte_source">show</a>
+                
+              </p>
+              <div id="method-i-readbyte_source" class="dyn-source">
+                <pre>static VALUE
+strio_readbyte(VALUE self)
+{
+    VALUE c = rb_funcall2(self, rb_intern(&quot;getbyte&quot;), 0, 0);
+    if (NIL_P(c)) rb_eof_error();
+    return c;
+}</pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-readchar">
+            
+              <b>strio.readchar   &rarr; string
+</b>
+            
+            <a href="../../classes/IO/readable.html#method-i-readchar" name="method-i-readchar" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>See <a href="../IO.html#method-i-readchar">IO#readchar</a>.</p>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-readchar_source')" id="l_method-i-readchar_source">show</a>
+                
+              </p>
+              <div id="method-i-readchar_source" class="dyn-source">
+                <pre>static VALUE
+strio_readchar(VALUE self)
+{
+    VALUE c = rb_funcall2(self, rb_intern(&quot;getc&quot;), 0, 0);
+    if (NIL_P(c)) rb_eof_error();
+    return c;
+}</pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-readline">
+            
+              <b>strio.readline(sep=$/)     &rarr; string
+strio.readline(limit)      &rarr; string or nil
+strio.readline(sep, limit) &rarr; string or nil
+</b>
+            
+            <a href="../../classes/IO/readable.html#method-i-readline" name="method-i-readline" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>See <a href="../IO.html#method-i-readline">IO#readline</a>.</p>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-readline_source')" id="l_method-i-readline_source">show</a>
+                
+              </p>
+              <div id="method-i-readline_source" class="dyn-source">
+                <pre>static VALUE
+strio_readline(int argc, VALUE *argv, VALUE self)
+{
+    VALUE line = rb_funcall2(self, rb_intern(&quot;gets&quot;), argc, argv);
+    if (NIL_P(line)) rb_eof_error();
+    return line;
+}</pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-readpartial">
+            
+              <b>strio.sysread(integer[, outbuf])    &rarr; string
+</b>
+            
+            <a href="../../classes/IO/readable.html#method-i-readpartial" name="method-i-readpartial" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Similar to read, but raises <code>EOFError</code> at end of string instead
+of returning <code>nil</code>, as well as <a
+href="../IO.html#method-i-sysread">IO#sysread</a> does.</p>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-readpartial_source')" id="l_method-i-readpartial_source">show</a>
+                
+              </p>
+              <div id="method-i-readpartial_source" class="dyn-source">
+                <pre>static VALUE
+strio_sysread(int argc, VALUE *argv, VALUE self)
+{
+    VALUE val = rb_funcall2(self, rb_intern(&quot;read&quot;), argc, argv);
+    if (NIL_P(val)) {
+        rb_eof_error();
+    }
+    return val;
+}</pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-sysread">
+            
+              <b>strio.sysread(integer[, outbuf])    &rarr; string</b>
+            
+            <a href="../../classes/IO/readable.html#method-i-sysread" name="method-i-sysread" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Similar to read, but raises <code>EOFError</code> at end of string instead
+of returning <code>nil</code>, as well as <a
+href="../IO.html#method-i-sysread">IO#sysread</a> does.</p>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-sysread_source')" id="l_method-i-sysread_source">show</a>
+                
+              </p>
+              <div id="method-i-sysread_source" class="dyn-source">
+                <pre>static VALUE
+strio_sysread(int argc, VALUE *argv, VALUE self)
+{
+    VALUE val = rb_funcall2(self, rb_intern(&quot;read&quot;), argc, argv);
+    if (NIL_P(val)) {
+        rb_eof_error();
+    }
+    return val;
+}</pre>
+              </div>
+            </div>
+            
+          </div>
+                    </div>
+
+    </div>
+  </body>
+</html>    

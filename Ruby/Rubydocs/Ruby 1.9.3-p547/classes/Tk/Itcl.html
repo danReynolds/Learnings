@@ -1,0 +1,1024 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>Tk::Itcl</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="../../css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../../css/main.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../../css/github.css" type="text/css" media="screen" />
+<script src="../../js/jquery-1.3.2.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../js/jquery-effect.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../js/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+
+<body>     
+    <div class="banner">
+        
+        <h1>
+            <span class="type">Module</span> 
+            Tk::Itcl 
+            
+        </h1>
+        <ul class="files">
+            
+            <li><a href="../../files/ext/tk/lib/tkextlib/itcl/incr_tcl_rb.html">ext/tk/lib/tkextlib/itcl/incr_tcl.rb</a></li>
+            
+        </ul>
+    </div>
+    <div id="bodyContent">
+        <div id="content">
+  
+
+
+  
+
+
+  
+  
+
+
+  
+    <!-- Namespace -->
+    <div class="sectiontitle">Namespace</div>
+    <ul>
+      
+        <li>
+          <span class="type">CLASS</span>
+          <a href="Itcl/ItclObject.html">Tk::Itcl::ItclObject</a>
+        </li>
+      
+    </ul>
+  
+
+
+  
+    <!-- Method ref -->
+    <div class="sectiontitle">Methods</div>
+    <dl class="methods">
+      
+        <dt>B</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-body">body</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>C</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-code">code</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-c-code_in_namespace">code_in_namespace</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-c-configbody">configbody</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-c-create_itcl_class">create_itcl_class</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-c-create_local_obj">create_local_obj</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>D</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-delete_itcl_class">delete_itcl_class</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-c-delete_itcl_object">delete_itcl_object</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-c-delete_namespace">delete_namespace</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>E</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-ensemble">ensemble</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>F</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-find_classes">find_classes</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-c-find_objects">find_objects</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>I</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-is_itcl_class">is_itcl_class</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-c-is_itcl_instance">is_itcl_instance</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-c-is_itcl_object">is_itcl_object</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>P</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-package_name">package_name</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-c-package_version">package_version</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>S</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-scope">scope</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+    </dl>
+  
+
+  
+    <!-- Includes -->
+    <div class="sectiontitle">Included Modules</div>
+    <ul>
+      
+        <li>
+          
+            <a href="../Tk.html">
+              Tk
+            </a>
+          
+        </li>
+      
+    </ul>
+  
+
+
+
+  
+
+    
+
+    
+
+    
+      <!-- Section constants -->
+      <div class="sectiontitle">Constants</div>
+      <table border='0' cellpadding='5'>
+        
+          <tr valign='top'>
+            <td class="attr-name">LIBRARY</td>
+            <td>=</td>
+            <td class="attr-value">TkVarAccess.new(&#39;::itcl::library&#39;)</td>
+          </tr>
+          
+            <tr valign='top'>
+              <td>&nbsp;</td>
+              <td colspan="2" class="attr-desc"></td>
+            </tr>
+          
+        
+          <tr valign='top'>
+            <td class="attr-name">PURIST</td>
+            <td>=</td>
+            <td class="attr-value">TkVarAccess.new(&#39;::itcl::purist&#39;)</td>
+          </tr>
+          
+            <tr valign='top'>
+              <td>&nbsp;</td>
+              <td colspan="2" class="attr-desc"></td>
+            </tr>
+          
+        
+          <tr valign='top'>
+            <td class="attr-name">VERSION</td>
+            <td>=</td>
+            <td class="attr-value">TkCore::INTERP._invoke(&quot;set&quot;, &quot;::itcl::version&quot;).freeze</td>
+          </tr>
+          
+            <tr valign='top'>
+              <td>&nbsp;</td>
+              <td colspan="2" class="attr-desc"></td>
+            </tr>
+          
+        
+          <tr valign='top'>
+            <td class="attr-name">PATCHLEVEL</td>
+            <td>=</td>
+            <td class="attr-value">TkCore::INTERP._invoke(&quot;set&quot;, &quot;::itcl::patchLevel&quot;).freeze</td>
+          </tr>
+          
+            <tr valign='top'>
+              <td>&nbsp;</td>
+              <td colspan="2" class="attr-desc"></td>
+            </tr>
+          
+        
+          <tr valign='top'>
+            <td class="attr-name">PACKAGE_NAME</td>
+            <td>=</td>
+            <td class="attr-value">&#39;Itcl&#39;.freeze</td>
+          </tr>
+          
+            <tr valign='top'>
+              <td>&nbsp;</td>
+              <td colspan="2" class="attr-desc"></td>
+            </tr>
+          
+        
+      </table>
+    
+
+
+    
+
+
+    <!-- Methods -->
+    
+      <div class="sectiontitle">Class Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-c-body">
+            
+              <b>body</b>(klass, func, args, body)
+            
+            <a href="../../classes/Tk/Itcl.html#method-c-body" name="method-c-body" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-body_source')" id="l_method-c-body_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/itcl/incr_tcl.rb#L111" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-body_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/itcl/incr_tcl.rb, line 111</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">body</span>(<span class="ruby-identifier">klass</span>, <span class="ruby-identifier">func</span>, <span class="ruby-identifier">args</span>, <span class="ruby-identifier">body</span>)
+  <span class="ruby-identifier">tk_call</span>(<span class="ruby-string">&#39;::itcl::body&#39;</span>, <span class="ruby-node">&quot;#{klass}::#{func}&quot;</span>, <span class="ruby-identifier">args</span>, <span class="ruby-identifier">body</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-code">
+            
+              <b>code</b>(cmd, *args)
+            
+            <a href="../../classes/Tk/Itcl.html#method-c-code" name="method-c-code" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-code_source')" id="l_method-c-code_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/itcl/incr_tcl.rb#L115" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-code_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/itcl/incr_tcl.rb, line 115</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">code</span>(<span class="ruby-identifier">cmd</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">args</span>)
+  <span class="ruby-identifier">tk_call</span>(<span class="ruby-string">&#39;::itcl::code&#39;</span>, <span class="ruby-identifier">cmd</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">args</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-code_in_namespace">
+            
+              <b>code_in_namespace</b>(namespace, cmd, *args)
+            
+            <a href="../../classes/Tk/Itcl.html#method-c-code_in_namespace" name="method-c-code_in_namespace" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-code_in_namespace_source')" id="l_method-c-code_in_namespace_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/itcl/incr_tcl.rb#L119" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-code_in_namespace_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/itcl/incr_tcl.rb, line 119</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">code_in_namespace</span>(<span class="ruby-identifier">namespace</span>, <span class="ruby-identifier">cmd</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">args</span>)
+  <span class="ruby-identifier">tk_call</span>(<span class="ruby-string">&#39;::itcl::code&#39;</span>, <span class="ruby-string">&#39;-namespace&#39;</span>, <span class="ruby-identifier">namespace</span>, <span class="ruby-identifier">cmd</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">args</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-configbody">
+            
+              <b>configbody</b>(klass, var, body)
+            
+            <a href="../../classes/Tk/Itcl.html#method-c-configbody" name="method-c-configbody" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-configbody_source')" id="l_method-c-configbody_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/itcl/incr_tcl.rb#L123" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-configbody_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/itcl/incr_tcl.rb, line 123</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">configbody</span>(<span class="ruby-identifier">klass</span>, <span class="ruby-identifier">var</span>, <span class="ruby-identifier">body</span>)
+  <span class="ruby-identifier">tk_call</span>(<span class="ruby-string">&#39;::itcl::configbody&#39;</span>, <span class="ruby-node">&quot;#{klass}::#{var}&quot;</span>, <span class="ruby-identifier">body</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-create_itcl_class">
+            
+              <b>create_itcl_class</b>(name, body)
+            
+            <a href="../../classes/Tk/Itcl.html#method-c-create_itcl_class" name="method-c-create_itcl_class" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-create_itcl_class_source')" id="l_method-c-create_itcl_class_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/itcl/incr_tcl.rb#L127" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-create_itcl_class_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/itcl/incr_tcl.rb, line 127</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">create_itcl_class</span>(<span class="ruby-identifier">name</span>, <span class="ruby-identifier">body</span>)
+  <span class="ruby-constant">TkCore</span><span class="ruby-operator">::</span><span class="ruby-constant">INTERP</span>.<span class="ruby-identifier">_invoke</span>(<span class="ruby-string">&#39;::itcl::class&#39;</span>, <span class="ruby-identifier">name</span>, <span class="ruby-identifier">body</span>)
+  <span class="ruby-identifier">klass</span> = <span class="ruby-constant">Class</span>.<span class="ruby-identifier">new</span>(<span class="ruby-constant">Tk</span><span class="ruby-operator">::</span><span class="ruby-constant">Itcl</span><span class="ruby-operator">::</span><span class="ruby-constant">ItclObject</span>)
+  <span class="ruby-identifier">klass</span>.<span class="ruby-identifier">const_set</span>(<span class="ruby-string">&#39;ITCL_CLASSNAME&#39;</span>, <span class="ruby-identifier">name</span>.<span class="ruby-identifier">dup</span>.<span class="ruby-identifier">freeze</span>)
+  <span class="ruby-identifier">klass</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-create_local_obj">
+            
+              <b>create_local_obj</b>(klass, name, *args)
+            
+            <a href="../../classes/Tk/Itcl.html#method-c-create_local_obj" name="method-c-create_local_obj" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-create_local_obj_source')" id="l_method-c-create_local_obj_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/itcl/incr_tcl.rb#L166" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-create_local_obj_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/itcl/incr_tcl.rb, line 166</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">create_local_obj</span>(<span class="ruby-identifier">klass</span>, <span class="ruby-identifier">name</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">args</span>)
+  <span class="ruby-identifier">tk_call</span>(<span class="ruby-string">&#39;::itcl::local&#39;</span>, <span class="ruby-identifier">klass</span>, <span class="ruby-identifier">name</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">args</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-delete_itcl_class">
+            
+              <b>delete_itcl_class</b>(*names)
+            
+            <a href="../../classes/Tk/Itcl.html#method-c-delete_itcl_class" name="method-c-delete_itcl_class" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-delete_itcl_class_source')" id="l_method-c-delete_itcl_class_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/itcl/incr_tcl.rb#L134" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-delete_itcl_class_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/itcl/incr_tcl.rb, line 134</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">delete_itcl_class</span>(<span class="ruby-operator">*</span><span class="ruby-identifier">names</span>)
+  <span class="ruby-identifier">tk_call</span>(<span class="ruby-string">&#39;::itcl::delete&#39;</span>, <span class="ruby-string">&#39;class&#39;</span>,  <span class="ruby-operator">*</span><span class="ruby-identifier">names</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-delete_itcl_object">
+            
+              <b>delete_itcl_object</b>(*names)
+            
+            <a href="../../classes/Tk/Itcl.html#method-c-delete_itcl_object" name="method-c-delete_itcl_object" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-delete_itcl_object_source')" id="l_method-c-delete_itcl_object_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/itcl/incr_tcl.rb#L138" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-delete_itcl_object_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/itcl/incr_tcl.rb, line 138</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">delete_itcl_object</span>(<span class="ruby-operator">*</span><span class="ruby-identifier">names</span>)
+  <span class="ruby-identifier">tk_call</span>(<span class="ruby-string">&#39;::itcl::delete&#39;</span>, <span class="ruby-string">&#39;object&#39;</span>,  <span class="ruby-operator">*</span><span class="ruby-identifier">names</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-delete_namespace">
+            
+              <b>delete_namespace</b>(*names)
+            
+            <a href="../../classes/Tk/Itcl.html#method-c-delete_namespace" name="method-c-delete_namespace" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-delete_namespace_source')" id="l_method-c-delete_namespace_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/itcl/incr_tcl.rb#L142" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-delete_namespace_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/itcl/incr_tcl.rb, line 142</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">delete_namespace</span>(<span class="ruby-operator">*</span><span class="ruby-identifier">names</span>)
+  <span class="ruby-identifier">tk_call</span>(<span class="ruby-string">&#39;::itcl::delete&#39;</span>, <span class="ruby-string">&#39;namespace&#39;</span>,  <span class="ruby-operator">*</span><span class="ruby-identifier">names</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-ensemble">
+            
+              <b>ensemble</b>(name, *args)
+            
+            <a href="../../classes/Tk/Itcl.html#method-c-ensemble" name="method-c-ensemble" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-ensemble_source')" id="l_method-c-ensemble_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/itcl/incr_tcl.rb#L146" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-ensemble_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/itcl/incr_tcl.rb, line 146</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">ensemble</span>(<span class="ruby-identifier">name</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">args</span>)
+  <span class="ruby-identifier">tk_call</span>(<span class="ruby-string">&#39;::itcl::ensemble&#39;</span>, <span class="ruby-identifier">name</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">args</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-find_classes">
+            
+              <b>find_classes</b>(pat=None)
+            
+            <a href="../../classes/Tk/Itcl.html#method-c-find_classes" name="method-c-find_classes" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-find_classes_source')" id="l_method-c-find_classes_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/itcl/incr_tcl.rb#L150" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-find_classes_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/itcl/incr_tcl.rb, line 150</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">find_classes</span>(<span class="ruby-identifier">pat</span>=<span class="ruby-constant">None</span>)
+  <span class="ruby-identifier">simplelist</span>(<span class="ruby-identifier">tk_call</span>(<span class="ruby-string">&#39;::itcl::find&#39;</span>, <span class="ruby-string">&#39;classes&#39;</span>, <span class="ruby-identifier">pat</span>))
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-find_objects">
+            
+              <b>find_objects</b>(*args)
+            
+            <a href="../../classes/Tk/Itcl.html#method-c-find_objects" name="method-c-find_objects" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-find_objects_source')" id="l_method-c-find_objects_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/itcl/incr_tcl.rb#L154" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-find_objects_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/itcl/incr_tcl.rb, line 154</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">find_objects</span>(<span class="ruby-operator">*</span><span class="ruby-identifier">args</span>)
+  <span class="ruby-identifier">simplelist</span>(<span class="ruby-identifier">tk_call</span>(<span class="ruby-string">&#39;::itcl::find&#39;</span>, <span class="ruby-string">&#39;objects&#39;</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">args</span>))
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-is_itcl_class">
+            
+              <b>is_itcl_class</b>(target)
+            
+            <a href="../../classes/Tk/Itcl.html#method-c-is_itcl_class" name="method-c-is_itcl_class" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-is_itcl_class_source')" id="l_method-c-is_itcl_class_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/itcl/incr_tcl.rb#L158" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-is_itcl_class_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/itcl/incr_tcl.rb, line 158</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">is_itcl_class</span>(<span class="ruby-identifier">target</span>)
+  <span class="ruby-identifier">bool</span>(<span class="ruby-identifier">tk_call</span>(<span class="ruby-string">&#39;::itcl::is&#39;</span>, <span class="ruby-string">&#39;class&#39;</span>, <span class="ruby-identifier">target</span>))
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-is_itcl_instance">
+            
+              <b>is_itcl_instance</b>(klass, target)
+            
+            <a href="../../classes/Tk/Itcl.html#method-c-is_itcl_instance" name="method-c-is_itcl_instance" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-is_itcl_instance_source')" id="l_method-c-is_itcl_instance_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/itcl/incr_tcl.rb#L170" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-is_itcl_instance_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/itcl/incr_tcl.rb, line 170</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">is_itcl_instance</span>(<span class="ruby-identifier">klass</span>, <span class="ruby-identifier">target</span>)
+  <span class="ruby-identifier">bool</span>(<span class="ruby-identifier">tk_call</span>(<span class="ruby-string">&#39;::itcl::is&#39;</span>, <span class="ruby-string">&#39;object&#39;</span>, <span class="ruby-string">&#39;-class&#39;</span>, <span class="ruby-identifier">klass</span>, <span class="ruby-identifier">target</span>))
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-is_itcl_object">
+            
+              <b>is_itcl_object</b>(target)
+            
+            <a href="../../classes/Tk/Itcl.html#method-c-is_itcl_object" name="method-c-is_itcl_object" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-is_itcl_object_source')" id="l_method-c-is_itcl_object_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/itcl/incr_tcl.rb#L162" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-is_itcl_object_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/itcl/incr_tcl.rb, line 162</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">is_itcl_object</span>(<span class="ruby-identifier">target</span>)
+  <span class="ruby-identifier">bool</span>(<span class="ruby-identifier">tk_call</span>(<span class="ruby-string">&#39;::itcl::is&#39;</span>, <span class="ruby-string">&#39;object&#39;</span>, <span class="ruby-identifier">target</span>))
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-package_name">
+            
+              <b>package_name</b>()
+            
+            <a href="../../classes/Tk/Itcl.html#method-c-package_name" name="method-c-package_name" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-package_name_source')" id="l_method-c-package_name_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/itcl/incr_tcl.rb#L26" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-package_name_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/itcl/incr_tcl.rb, line 26</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">package_name</span>
+  <span class="ruby-constant">PACKAGE_NAME</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-package_version">
+            
+              <b>package_version</b>()
+            
+            <a href="../../classes/Tk/Itcl.html#method-c-package_version" name="method-c-package_version" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-package_version_source')" id="l_method-c-package_version_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/itcl/incr_tcl.rb#L30" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-package_version_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/itcl/incr_tcl.rb, line 30</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">package_version</span>
+  <span class="ruby-keyword">begin</span>
+    <span class="ruby-constant">TkPackage</span>.<span class="ruby-identifier">require</span>(<span class="ruby-string">&#39;Itcl&#39;</span>)
+  <span class="ruby-keyword">rescue</span>
+    <span class="ruby-string">&#39;&#39;</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-scope">
+            
+              <b>scope</b>(var)
+            
+            <a href="../../classes/Tk/Itcl.html#method-c-scope" name="method-c-scope" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-scope_source')" id="l_method-c-scope_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/itcl/incr_tcl.rb#L174" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-scope_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/itcl/incr_tcl.rb, line 174</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">scope</span>(<span class="ruby-identifier">var</span>)
+  <span class="ruby-identifier">tk_call</span>(<span class="ruby-string">&#39;::itcl::scope&#39;</span>, <span class="ruby-identifier">var</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                        </div>
+
+    </div>
+  </body>
+</html>    

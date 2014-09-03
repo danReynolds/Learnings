@@ -1,0 +1,340 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>DRb::HTTP0::Callback</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="../../../css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../../../css/main.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../../../css/github.css" type="text/css" media="screen" />
+<script src="../../../js/jquery-1.3.2.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../../js/jquery-effect.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../../js/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+
+<body>     
+    <div class="banner">
+        
+        <h1>
+            <span class="type">Class</span> 
+            DRb::HTTP0::Callback 
+            
+                <span class="parent">&lt; 
+                    
+                    <a href="../../WEBrick/HTTPServlet/AbstractServlet.html">WEBrick::HTTPServlet::AbstractServlet</a>
+                    
+                </span>
+            
+        </h1>
+        <ul class="files">
+            
+            <li><a href="../../../files/sample/drb/http0serv_rb.html">sample/drb/http0serv.rb</a></li>
+            
+        </ul>
+    </div>
+    <div id="bodyContent">
+        <div id="content">
+  
+
+
+  
+
+
+  
+  
+
+
+  
+
+
+  
+    <!-- Method ref -->
+    <div class="sectiontitle">Methods</div>
+    <dl class="methods">
+      
+        <dt>C</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-close">close</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>D</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-do_POST">do_POST</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>N</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-new">new</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>R</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-reply">reply</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-req_body">req_body</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+    </dl>
+  
+
+  
+
+
+
+  
+
+    
+
+    
+
+    
+
+
+    
+
+
+    <!-- Methods -->
+    
+      <div class="sectiontitle">Class Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-c-new">
+            
+              <b>new</b>(config, drb)
+            
+            <a href="../../../classes/DRb/HTTP0/Callback.html#method-c-new" name="method-c-new" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-new_source')" id="l_method-c-new_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/3a47cf3395dd4c4fe8bdd5df13aab698f2ca314b/sample/drb/http0serv.rb#L18" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-new_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File sample/drb/http0serv.rb, line 18</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">initialize</span>(<span class="ruby-identifier">config</span>, <span class="ruby-identifier">drb</span>)
+  <span class="ruby-ivar">@config</span> = <span class="ruby-identifier">config</span>
+  <span class="ruby-ivar">@drb</span> = <span class="ruby-identifier">drb</span>
+  <span class="ruby-ivar">@queue</span> = <span class="ruby-constant">Queue</span>.<span class="ruby-identifier">new</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                  
+      <div class="sectiontitle">Instance Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-i-close">
+            
+              <b>close</b>()
+            
+            <a href="../../../classes/DRb/HTTP0/Callback.html#method-i-close" name="method-i-close" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-close_source')" id="l_method-i-close_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/3a47cf3395dd4c4fe8bdd5df13aab698f2ca314b/sample/drb/http0serv.rb#L40" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-close_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File sample/drb/http0serv.rb, line 40</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">close</span>
+  <span class="ruby-ivar">@queue</span>.<span class="ruby-identifier">push</span>(<span class="ruby-string">&#39;&#39;</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-do_POST">
+            
+              <b>do_POST</b>(req, res)
+            
+            <a href="../../../classes/DRb/HTTP0/Callback.html#method-i-do_POST" name="method-i-do_POST" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-do_POST_source')" id="l_method-i-do_POST_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/3a47cf3395dd4c4fe8bdd5df13aab698f2ca314b/sample/drb/http0serv.rb#L24" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-do_POST_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File sample/drb/http0serv.rb, line 24</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">do_POST</span>(<span class="ruby-identifier">req</span>, <span class="ruby-identifier">res</span>)
+  <span class="ruby-ivar">@req</span> = <span class="ruby-identifier">req</span>
+  <span class="ruby-ivar">@res</span> = <span class="ruby-identifier">res</span>
+  <span class="ruby-ivar">@drb</span>.<span class="ruby-identifier">push</span>(<span class="ruby-keyword">self</span>)
+  <span class="ruby-ivar">@res</span>.<span class="ruby-identifier">body</span> = <span class="ruby-ivar">@queue</span>.<span class="ruby-identifier">pop</span>
+  <span class="ruby-ivar">@res</span>[<span class="ruby-string">&#39;content-type&#39;</span>] = <span class="ruby-string">&#39;application/octet-stream;&#39;</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-reply">
+            
+              <b>reply</b>(body)
+            
+            <a href="../../../classes/DRb/HTTP0/Callback.html#method-i-reply" name="method-i-reply" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-reply_source')" id="l_method-i-reply_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/3a47cf3395dd4c4fe8bdd5df13aab698f2ca314b/sample/drb/http0serv.rb#L36" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-reply_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File sample/drb/http0serv.rb, line 36</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">reply</span>(<span class="ruby-identifier">body</span>)
+  <span class="ruby-ivar">@queue</span>.<span class="ruby-identifier">push</span>(<span class="ruby-identifier">body</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-req_body">
+            
+              <b>req_body</b>()
+            
+            <a href="../../../classes/DRb/HTTP0/Callback.html#method-i-req_body" name="method-i-req_body" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-req_body_source')" id="l_method-i-req_body_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/3a47cf3395dd4c4fe8bdd5df13aab698f2ca314b/sample/drb/http0serv.rb#L32" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-req_body_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File sample/drb/http0serv.rb, line 32</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">req_body</span>
+  <span class="ruby-ivar">@req</span>.<span class="ruby-identifier">body</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                    </div>
+
+    </div>
+  </body>
+</html>    

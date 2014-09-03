@@ -1,0 +1,609 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>RubyVM::Instruction</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="../../css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../../css/main.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../../css/github.css" type="text/css" media="screen" />
+<script src="../../js/jquery-1.3.2.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../js/jquery-effect.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../js/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+
+<body>     
+    <div class="banner">
+        
+        <h1>
+            <span class="type">Class</span> 
+            RubyVM::Instruction 
+            
+                <span class="parent">&lt; 
+                    
+                    <a href="../Object.html">Object</a>
+                    
+                </span>
+            
+        </h1>
+        <ul class="files">
+            
+            <li><a href="../../files/tool/instruction_rb.html">tool/instruction.rb</a></li>
+            
+        </ul>
+    </div>
+    <div id="bodyContent">
+        <div id="content">
+  
+
+
+  
+
+
+  
+  
+
+
+  
+
+
+  
+    <!-- Method ref -->
+    <div class="sectiontitle">Methods</div>
+    <dl class="methods">
+      
+        <dt>A</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-add_optimized">add_optimized</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-add_sc">add_sc</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-add_unif">add_unif</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>I</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-inspect">inspect</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>N</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-new">new</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>S</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-set_sc">set_sc</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-sp_increase_c_expr">sp_increase_c_expr</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+    </dl>
+  
+
+  
+
+
+
+  
+
+    
+
+    
+
+    
+
+
+    
+      <!-- Section attributes -->
+      <div class="sectiontitle">Attributes</div>
+      <table border='0' cellpadding='5'>
+        
+          <tr valign='top'>
+            <td class='attr-rw'>
+              [R]
+            </td>
+            <td class='attr-name'>body</td>
+            <td class='attr-desc'></td>
+          </tr>
+        
+          <tr valign='top'>
+            <td class='attr-rw'>
+              [R]
+            </td>
+            <td class='attr-name'>comm</td>
+            <td class='attr-desc'></td>
+          </tr>
+        
+          <tr valign='top'>
+            <td class='attr-rw'>
+              [R]
+            </td>
+            <td class='attr-name'>defopes</td>
+            <td class='attr-desc'></td>
+          </tr>
+        
+          <tr valign='top'>
+            <td class='attr-rw'>
+              [R]
+            </td>
+            <td class='attr-name'>is_sc</td>
+            <td class='attr-desc'></td>
+          </tr>
+        
+          <tr valign='top'>
+            <td class='attr-rw'>
+              [R]
+            </td>
+            <td class='attr-name'>name</td>
+            <td class='attr-desc'></td>
+          </tr>
+        
+          <tr valign='top'>
+            <td class='attr-rw'>
+              [R]
+            </td>
+            <td class='attr-name'>nextsc</td>
+            <td class='attr-desc'></td>
+          </tr>
+        
+          <tr valign='top'>
+            <td class='attr-rw'>
+              [R]
+            </td>
+            <td class='attr-name'>opes</td>
+            <td class='attr-desc'></td>
+          </tr>
+        
+          <tr valign='top'>
+            <td class='attr-rw'>
+              [R]
+            </td>
+            <td class='attr-name'>optimized</td>
+            <td class='attr-desc'></td>
+          </tr>
+        
+          <tr valign='top'>
+            <td class='attr-rw'>
+              [R]
+            </td>
+            <td class='attr-name'>orig</td>
+            <td class='attr-desc'></td>
+          </tr>
+        
+          <tr valign='top'>
+            <td class='attr-rw'>
+              [R]
+            </td>
+            <td class='attr-name'>pops</td>
+            <td class='attr-desc'></td>
+          </tr>
+        
+          <tr valign='top'>
+            <td class='attr-rw'>
+              [R]
+            </td>
+            <td class='attr-name'>pushsc</td>
+            <td class='attr-desc'></td>
+          </tr>
+        
+          <tr valign='top'>
+            <td class='attr-rw'>
+              [R]
+            </td>
+            <td class='attr-name'>rets</td>
+            <td class='attr-desc'></td>
+          </tr>
+        
+          <tr valign='top'>
+            <td class='attr-rw'>
+              [R]
+            </td>
+            <td class='attr-name'>sc</td>
+            <td class='attr-desc'></td>
+          </tr>
+        
+          <tr valign='top'>
+            <td class='attr-rw'>
+              [R]
+            </td>
+            <td class='attr-name'>sp_inc</td>
+            <td class='attr-desc'></td>
+          </tr>
+        
+          <tr valign='top'>
+            <td class='attr-rw'>
+              [R]
+            </td>
+            <td class='attr-name'>tvars</td>
+            <td class='attr-desc'></td>
+          </tr>
+        
+          <tr valign='top'>
+            <td class='attr-rw'>
+              [R]
+            </td>
+            <td class='attr-name'>type</td>
+            <td class='attr-desc'></td>
+          </tr>
+        
+          <tr valign='top'>
+            <td class='attr-rw'>
+              [R]
+            </td>
+            <td class='attr-name'>unifs</td>
+            <td class='attr-desc'></td>
+          </tr>
+        
+      </table>
+    
+
+
+    <!-- Methods -->
+    
+      <div class="sectiontitle">Class Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-c-new">
+            
+              <b>new</b>(name, opes, pops, rets, comm, body, tvars, sp_inc, orig = self, defopes = [], type = nil, nsc = [], psc = [[], []])
+            
+            <a href="../../classes/RubyVM/Instruction.html#method-c-new" name="method-c-new" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-new_source')" id="l_method-c-new_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/3a47cf3395dd4c4fe8bdd5df13aab698f2ca314b/tool/instruction.rb#L9" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-new_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File tool/instruction.rb, line 9</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">initialize</span> <span class="ruby-identifier">name</span>, <span class="ruby-identifier">opes</span>, <span class="ruby-identifier">pops</span>, <span class="ruby-identifier">rets</span>, <span class="ruby-identifier">comm</span>, <span class="ruby-identifier">body</span>, <span class="ruby-identifier">tvars</span>, <span class="ruby-identifier">sp_inc</span>,
+               <span class="ruby-identifier">orig</span> = <span class="ruby-keyword">self</span>, <span class="ruby-identifier">defopes</span> = [], <span class="ruby-identifier">type</span> = <span class="ruby-keyword">nil</span>,
+               <span class="ruby-identifier">nsc</span> = [], <span class="ruby-identifier">psc</span> = [[], []]
+
+  <span class="ruby-ivar">@name</span> = <span class="ruby-identifier">name</span>
+  <span class="ruby-ivar">@opes</span> = <span class="ruby-identifier">opes</span> <span class="ruby-comment"># [[type, name], ...]</span>
+  <span class="ruby-ivar">@pops</span> = <span class="ruby-identifier">pops</span> <span class="ruby-comment"># [[type, name], ...]</span>
+  <span class="ruby-ivar">@rets</span> = <span class="ruby-identifier">rets</span> <span class="ruby-comment"># [[type, name], ...]</span>
+  <span class="ruby-ivar">@comm</span> = <span class="ruby-identifier">comm</span> <span class="ruby-comment"># {:c =&gt; category, :e =&gt; en desc, :j =&gt; ja desc}</span>
+  <span class="ruby-ivar">@body</span> = <span class="ruby-identifier">body</span> <span class="ruby-comment"># &#39;...&#39;</span>
+
+  <span class="ruby-ivar">@orig</span>    = <span class="ruby-identifier">orig</span>
+  <span class="ruby-ivar">@defopes</span> = <span class="ruby-identifier">defopes</span>
+  <span class="ruby-ivar">@type</span>    = <span class="ruby-identifier">type</span>
+  <span class="ruby-ivar">@tvars</span>   = <span class="ruby-identifier">tvars</span>
+
+  <span class="ruby-ivar">@nextsc</span> = <span class="ruby-identifier">nsc</span>
+  <span class="ruby-ivar">@pushsc</span> = <span class="ruby-identifier">psc</span>
+  <span class="ruby-ivar">@sc</span>     = []
+  <span class="ruby-ivar">@unifs</span>  = []
+  <span class="ruby-ivar">@optimized</span> = []
+  <span class="ruby-ivar">@is_sc</span>  = <span class="ruby-keyword">false</span>
+  <span class="ruby-ivar">@sp_inc</span> = <span class="ruby-identifier">sp_inc</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                  
+      <div class="sectiontitle">Instance Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-i-add_optimized">
+            
+              <b>add_optimized</b>(insn)
+            
+            <a href="../../classes/RubyVM/Instruction.html#method-i-add_optimized" name="method-i-add_optimized" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-add_optimized_source')" id="l_method-i-add_optimized_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/3a47cf3395dd4c4fe8bdd5df13aab698f2ca314b/tool/instruction.rb#L57" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-add_optimized_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File tool/instruction.rb, line 57</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">add_optimized</span> <span class="ruby-identifier">insn</span>
+  <span class="ruby-ivar">@optimized</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">insn</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-add_sc">
+            
+              <b>add_sc</b>(sci)
+            
+            <a href="../../classes/RubyVM/Instruction.html#method-i-add_sc" name="method-i-add_sc" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-add_sc_source')" id="l_method-i-add_sc_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/3a47cf3395dd4c4fe8bdd5df13aab698f2ca314b/tool/instruction.rb#L34" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-add_sc_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File tool/instruction.rb, line 34</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">add_sc</span> <span class="ruby-identifier">sci</span>
+  <span class="ruby-ivar">@sc</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">sci</span>
+  <span class="ruby-identifier">sci</span>.<span class="ruby-identifier">set_sc</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-add_unif">
+            
+              <b>add_unif</b>(insns)
+            
+            <a href="../../classes/RubyVM/Instruction.html#method-i-add_unif" name="method-i-add_unif" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-add_unif_source')" id="l_method-i-add_unif_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/3a47cf3395dd4c4fe8bdd5df13aab698f2ca314b/tool/instruction.rb#L53" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-add_unif_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File tool/instruction.rb, line 53</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">add_unif</span> <span class="ruby-identifier">insns</span>
+  <span class="ruby-ivar">@unifs</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">insns</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-inspect">
+            
+              <b>inspect</b>()
+            
+            <a href="../../classes/RubyVM/Instruction.html#method-i-inspect" name="method-i-inspect" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-inspect_source')" id="l_method-i-inspect_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/3a47cf3395dd4c4fe8bdd5df13aab698f2ca314b/tool/instruction.rb#L88" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-inspect_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File tool/instruction.rb, line 88</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">inspect</span>
+  <span class="ruby-node">&quot;#&lt;Instruction:#{@name}&gt;&quot;</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-set_sc">
+            
+              <b>set_sc</b>()
+            
+            <a href="../../classes/RubyVM/Instruction.html#method-i-set_sc" name="method-i-set_sc" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-set_sc_source')" id="l_method-i-set_sc_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/3a47cf3395dd4c4fe8bdd5df13aab698f2ca314b/tool/instruction.rb#L49" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-set_sc_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File tool/instruction.rb, line 49</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">set_sc</span>
+  <span class="ruby-ivar">@is_sc</span> = <span class="ruby-keyword">true</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-sp_increase_c_expr">
+            
+              <b>sp_increase_c_expr</b>()
+            
+            <a href="../../classes/RubyVM/Instruction.html#method-i-sp_increase_c_expr" name="method-i-sp_increase_c_expr" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-sp_increase_c_expr_source')" id="l_method-i-sp_increase_c_expr_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/3a47cf3395dd4c4fe8bdd5df13aab698f2ca314b/tool/instruction.rb#L61" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-sp_increase_c_expr_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File tool/instruction.rb, line 61</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">sp_increase_c_expr</span>
+  <span class="ruby-keyword">if</span>(<span class="ruby-identifier">pops</span>.<span class="ruby-identifier">any?</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">t</span>, <span class="ruby-identifier">v</span><span class="ruby-operator">|</span> <span class="ruby-identifier">v</span> <span class="ruby-operator">==</span> <span class="ruby-string">&#39;...&#39;</span>} <span class="ruby-operator">||</span>
+     <span class="ruby-identifier">rets</span>.<span class="ruby-identifier">any?</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">t</span>, <span class="ruby-identifier">v</span><span class="ruby-operator">|</span> <span class="ruby-identifier">v</span> <span class="ruby-operator">==</span> <span class="ruby-string">&#39;...&#39;</span>})
+    <span class="ruby-comment"># user definision</span>
+    <span class="ruby-identifier">raise</span> <span class="ruby-string">&quot;no sp increase definition&quot;</span> <span class="ruby-keyword">if</span> <span class="ruby-ivar">@sp_inc</span>.<span class="ruby-identifier">nil?</span>
+    <span class="ruby-identifier">ret</span> = <span class="ruby-string">&quot;int inc = 0;\n&quot;</span>
+
+    <span class="ruby-ivar">@opes</span>.<span class="ruby-identifier">each_with_index</span>{<span class="ruby-operator">|</span>(<span class="ruby-identifier">t</span>, <span class="ruby-identifier">v</span>), <span class="ruby-identifier">i</span><span class="ruby-operator">|</span>
+      <span class="ruby-keyword">if</span> <span class="ruby-identifier">t</span> <span class="ruby-operator">==</span> <span class="ruby-string">&#39;rb_num_t&#39;</span> <span class="ruby-operator">&amp;&amp;</span> ((<span class="ruby-identifier">re</span> = <span class="ruby-node">/\b#{v}\b/n</span>) <span class="ruby-operator">=~</span> <span class="ruby-ivar">@sp_inc</span> <span class="ruby-operator">||</span>
+                             <span class="ruby-ivar">@defopes</span>.<span class="ruby-identifier">any?</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">t</span>, <span class="ruby-identifier">val</span><span class="ruby-operator">|</span> <span class="ruby-identifier">re</span> <span class="ruby-operator">=~</span> <span class="ruby-identifier">val</span>})
+        <span class="ruby-identifier">ret</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-node">&quot;        int #{v} = FIX2INT(opes[#{i}]);\n&quot;</span>
+      <span class="ruby-keyword">end</span>
+    }
+    <span class="ruby-ivar">@defopes</span>.<span class="ruby-identifier">each_with_index</span>{<span class="ruby-operator">|</span>((<span class="ruby-identifier">t</span>, <span class="ruby-identifier">var</span>), <span class="ruby-identifier">val</span>), <span class="ruby-identifier">i</span><span class="ruby-operator">|</span>
+      <span class="ruby-keyword">if</span> <span class="ruby-identifier">t</span> <span class="ruby-operator">==</span> <span class="ruby-string">&#39;rb_num_t&#39;</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">val</span> <span class="ruby-operator">!=</span> <span class="ruby-string">&#39;*&#39;</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-node">/\b#{var}\b/</span> <span class="ruby-operator">=~</span> <span class="ruby-ivar">@sp_inc</span>
+        <span class="ruby-identifier">ret</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-node">&quot;        #{t} #{var} = #{val};\n&quot;</span>
+      <span class="ruby-keyword">end</span>
+    }
+
+    <span class="ruby-identifier">ret</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-node">&quot;        #{@sp_inc};\n&quot;</span>
+    <span class="ruby-identifier">ret</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-string">&quot;        return depth + inc;&quot;</span>
+    <span class="ruby-identifier">ret</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-node">&quot;return depth + #{rets.size - pops.size};&quot;</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                    </div>
+
+    </div>
+  </body>
+</html>    

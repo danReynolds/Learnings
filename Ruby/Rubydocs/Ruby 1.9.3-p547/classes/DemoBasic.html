@@ -1,0 +1,638 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>DemoBasic</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="../css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/main.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/github.css" type="text/css" media="screen" />
+<script src="../js/jquery-1.3.2.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/jquery-effect.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+
+<body>     
+    <div class="banner">
+        
+        <h1>
+            <span class="type">Module</span> 
+            DemoBasic 
+            
+        </h1>
+        <ul class="files">
+            
+            <li><a href="../files/ext/tk/sample/tkextlib/bwidget/basic_rb.html">ext/tk/sample/tkextlib/bwidget/basic.rb</a></li>
+            
+        </ul>
+    </div>
+    <div id="bodyContent">
+        <div id="content">
+  
+
+
+  
+
+
+  
+  
+
+
+  
+
+
+  
+    <!-- Method ref -->
+    <div class="sectiontitle">Methods</div>
+    <dl class="methods">
+      
+        <dt>#</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-_barmcmd">_barmcmd</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-c-_brelief">_brelief</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-c-_bside">_bside</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-c-_bstate">_bstate</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-c-_butcmd">_butcmd</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-c-_button">_button</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-c-_entry">_entry</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-c-_label">_label</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>C</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-create">create</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+    </dl>
+  
+
+  
+
+
+
+  
+
+    
+
+    
+
+    
+
+
+    
+
+
+    <!-- Methods -->
+    
+      <div class="sectiontitle">Class Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-c-_barmcmd">
+            
+              <b>_barmcmd</b>(value, but, arr1, arr2)
+            
+            <a href="../classes/DemoBasic.html#method-c-_barmcmd" name="method-c-_barmcmd" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-_barmcmd_source')" id="l_method-c-_barmcmd_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/287a34ae0dfc23e4158f67cb7783d239f202c368/ext/tk/sample/tkextlib/bwidget/basic.rb#L164" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-_barmcmd_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/sample/tkextlib/bwidget/basic.rb, line 164</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">_barmcmd</span>(<span class="ruby-identifier">value</span>, <span class="ruby-identifier">but</span>, <span class="ruby-identifier">arr1</span>, <span class="ruby-identifier">arr2</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-constant">TkComm</span>.<span class="ruby-identifier">bool</span>(<span class="ruby-identifier">value</span>)
+    <span class="ruby-identifier">but</span>.<span class="ruby-identifier">configure</span>(<span class="ruby-value">:armcommand=</span><span class="ruby-operator">&gt;</span><span class="ruby-identifier">proc</span>{<span class="ruby-identifier">_butcmd</span>(<span class="ruby-string">&#39;arm&#39;</span>)},
+                  <span class="ruby-value">:disarmcommand=</span><span class="ruby-operator">&gt;</span><span class="ruby-identifier">proc</span>{<span class="ruby-identifier">_butcmd</span>(<span class="ruby-string">&#39;disarm&#39;</span>)},
+                  <span class="ruby-value">:command=</span><span class="ruby-operator">&gt;</span><span class="ruby-string">&#39;&#39;</span>)
+    [<span class="ruby-identifier">arr1</span>, <span class="ruby-identifier">arr2</span>].<span class="ruby-identifier">each</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">arr</span><span class="ruby-operator">|</span>
+      <span class="ruby-identifier">arr</span>.<span class="ruby-identifier">configure</span>(<span class="ruby-value">:armcommand=</span><span class="ruby-operator">&gt;</span><span class="ruby-identifier">proc</span>{<span class="ruby-identifier">_butcmd</span>(<span class="ruby-string">&#39;arm&#39;</span>)},
+                    <span class="ruby-value">:disarmcommand=</span><span class="ruby-operator">&gt;</span><span class="ruby-identifier">proc</span>{<span class="ruby-identifier">_butcmd</span>(<span class="ruby-string">&#39;disarm&#39;</span>)},
+                    <span class="ruby-value">:command=</span><span class="ruby-operator">&gt;</span><span class="ruby-string">&#39;&#39;</span>)
+    }
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">but</span>.<span class="ruby-identifier">configure</span>(<span class="ruby-value">:armcommand=</span><span class="ruby-operator">&gt;</span><span class="ruby-string">&#39;&#39;</span>, <span class="ruby-value">:disarmcommand=</span><span class="ruby-operator">&gt;</span><span class="ruby-string">&#39;&#39;</span>,
+                  <span class="ruby-value">:command=</span><span class="ruby-operator">&gt;</span><span class="ruby-identifier">proc</span>{<span class="ruby-identifier">_butcmd</span>(<span class="ruby-string">&#39;command&#39;</span>)})
+    [<span class="ruby-identifier">arr1</span>, <span class="ruby-identifier">arr2</span>].<span class="ruby-identifier">each</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">arr</span><span class="ruby-operator">|</span>
+      <span class="ruby-identifier">arr</span>.<span class="ruby-identifier">configure</span>(<span class="ruby-value">:armcommand=</span><span class="ruby-operator">&gt;</span><span class="ruby-string">&#39;&#39;</span>, <span class="ruby-value">:disarmcommand=</span><span class="ruby-operator">&gt;</span><span class="ruby-string">&#39;&#39;</span>,
+                    <span class="ruby-value">:command=</span><span class="ruby-operator">&gt;</span><span class="ruby-identifier">proc</span>{<span class="ruby-identifier">_butcmd</span>(<span class="ruby-string">&#39;command&#39;</span>)})
+    }
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-_brelief">
+            
+              <b>_brelief</b>(relief, but, arr1, arr2)
+            
+            <a href="../classes/DemoBasic.html#method-c-_brelief" name="method-c-_brelief" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-_brelief_source')" id="l_method-c-_brelief_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/287a34ae0dfc23e4158f67cb7783d239f202c368/ext/tk/sample/tkextlib/bwidget/basic.rb#L153" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-_brelief_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/sample/tkextlib/bwidget/basic.rb, line 153</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">_brelief</span>(<span class="ruby-identifier">relief</span>, <span class="ruby-identifier">but</span>, <span class="ruby-identifier">arr1</span>, <span class="ruby-identifier">arr2</span>)
+  <span class="ruby-identifier">but</span>[<span class="ruby-value">:relief</span>] = <span class="ruby-identifier">relief</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">relief</span>.<span class="ruby-identifier">to_s</span> <span class="ruby-operator">!=</span> <span class="ruby-string">&#39;link&#39;</span>
+    [<span class="ruby-identifier">arr1</span>, <span class="ruby-identifier">arr2</span>].<span class="ruby-identifier">each</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">arr</span><span class="ruby-operator">|</span> <span class="ruby-identifier">arr</span>[<span class="ruby-value">:relief</span>] = <span class="ruby-identifier">relief</span>}
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-_bside">
+            
+              <b>_bside</b>(side, *args)
+            
+            <a href="../classes/DemoBasic.html#method-c-_bside" name="method-c-_bside" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-_bside_source')" id="l_method-c-_bside_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/287a34ae0dfc23e4158f67cb7783d239f202c368/ext/tk/sample/tkextlib/bwidget/basic.rb#L160" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-_bside_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/sample/tkextlib/bwidget/basic.rb, line 160</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">_bside</span>(<span class="ruby-identifier">side</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">args</span>)
+  <span class="ruby-identifier">args</span>.<span class="ruby-identifier">each</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">arr</span><span class="ruby-operator">|</span> <span class="ruby-identifier">arr</span>[<span class="ruby-value">:dir</span>] = <span class="ruby-identifier">side</span>}
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-_bstate">
+            
+              <b>_bstate</b>(state, but, arr1, arr2)
+            
+            <a href="../classes/DemoBasic.html#method-c-_bstate" name="method-c-_bstate" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-_bstate_source')" id="l_method-c-_bstate_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/287a34ae0dfc23e4158f67cb7783d239f202c368/ext/tk/sample/tkextlib/bwidget/basic.rb#L149" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-_bstate_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/sample/tkextlib/bwidget/basic.rb, line 149</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">_bstate</span>(<span class="ruby-identifier">state</span>, <span class="ruby-identifier">but</span>, <span class="ruby-identifier">arr1</span>, <span class="ruby-identifier">arr2</span>)
+  [<span class="ruby-identifier">but</span>, <span class="ruby-identifier">arr1</span>, <span class="ruby-identifier">arr2</span>].<span class="ruby-identifier">each</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">b</span><span class="ruby-operator">|</span> <span class="ruby-identifier">b</span>[<span class="ruby-value">:state</span>] = <span class="ruby-identifier">state</span>}
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-_butcmd">
+            
+              <b>_butcmd</b>(reason)
+            
+            <a href="../classes/DemoBasic.html#method-c-_butcmd" name="method-c-_butcmd" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-_butcmd_source')" id="l_method-c-_butcmd_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/287a34ae0dfc23e4158f67cb7783d239f202c368/ext/tk/sample/tkextlib/bwidget/basic.rb#L184" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-_butcmd_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/sample/tkextlib/bwidget/basic.rb, line 184</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">_butcmd</span>(<span class="ruby-identifier">reason</span>)
+  <span class="ruby-keyword">unless</span> <span class="ruby-identifier">@@after</span>
+    <span class="ruby-identifier">@@after</span> = <span class="ruby-constant">TkTimer</span>.<span class="ruby-identifier">new</span>(<span class="ruby-number">500</span>, <span class="ruby-number">1</span>, <span class="ruby-identifier">proc</span>{<span class="ruby-identifier">@@var</span>[<span class="ruby-string">&#39;butcmd&#39;</span>] = <span class="ruby-string">&#39;&#39;</span>})
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">@@after</span>.<span class="ruby-identifier">stop</span>
+  <span class="ruby-keyword">if</span> (<span class="ruby-identifier">reason</span> <span class="ruby-operator">==</span> <span class="ruby-string">&#39;arm&#39;</span>)
+    <span class="ruby-identifier">@@count</span> <span class="ruby-operator">+=</span> <span class="ruby-number">1</span>
+    <span class="ruby-identifier">@@var</span>[<span class="ruby-string">&#39;butcmd&#39;</span>] = <span class="ruby-node">&quot;#{reason} command called (#{@@count})&quot;</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">@@count</span> = <span class="ruby-number">0</span>
+    <span class="ruby-identifier">@@var</span>[<span class="ruby-string">&#39;butcmd&#39;</span>] = <span class="ruby-node">&quot;#{reason} command called&quot;</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">@@after</span>.<span class="ruby-identifier">start</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-_button">
+            
+              <b>_button</b>(parent)
+            
+            <a href="../classes/DemoBasic.html#method-c-_button" name="method-c-_button" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-_button_source')" id="l_method-c-_button_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/287a34ae0dfc23e4158f67cb7783d239f202c368/ext/tk/sample/tkextlib/bwidget/basic.rb#L70" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-_button_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/sample/tkextlib/bwidget/basic.rb, line 70</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">_button</span>(<span class="ruby-identifier">parent</span>)
+  <span class="ruby-identifier">frame</span> = <span class="ruby-constant">TkFrame</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">parent</span>)
+  <span class="ruby-identifier">but</span>  = <span class="ruby-constant">Tk</span><span class="ruby-operator">::</span><span class="ruby-constant">BWidget</span><span class="ruby-operator">::</span><span class="ruby-constant">Button</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">frame</span>, <span class="ruby-value">:text=</span><span class="ruby-operator">&gt;</span><span class="ruby-string">&#39;Press me!&#39;</span>,
+                                 <span class="ruby-value">:repeatdelay=</span><span class="ruby-operator">&gt;</span><span class="ruby-number">300</span>,
+                                 <span class="ruby-value">:command=</span><span class="ruby-operator">&gt;</span><span class="ruby-identifier">proc</span>{<span class="ruby-identifier">_butcmd</span>(<span class="ruby-string">&#39;command&#39;</span>)},
+                                 <span class="ruby-value">:helptext=</span><span class="ruby-operator">&gt;</span><span class="ruby-string">&#39;This is a Button widget&#39;</span>)
+
+  <span class="ruby-identifier">sep1</span> = <span class="ruby-constant">Tk</span><span class="ruby-operator">::</span><span class="ruby-constant">BWidget</span><span class="ruby-operator">::</span><span class="ruby-constant">Separator</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">frame</span>, <span class="ruby-value">:orient=</span><span class="ruby-operator">&gt;</span><span class="ruby-value">:vertical</span>)
+  <span class="ruby-identifier">arr1</span> = <span class="ruby-constant">Tk</span><span class="ruby-operator">::</span><span class="ruby-constant">BWidget</span><span class="ruby-operator">::</span><span class="ruby-constant">ArrowButton</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">frame</span>, <span class="ruby-value">:type=</span><span class="ruby-operator">&gt;</span><span class="ruby-value">:button</span>,
+              <span class="ruby-value">:width=</span><span class="ruby-operator">&gt;</span><span class="ruby-number">25</span>, <span class="ruby-value">:height=</span><span class="ruby-operator">&gt;</span><span class="ruby-number">25</span>, <span class="ruby-value">:repeatdelay=</span><span class="ruby-operator">&gt;</span><span class="ruby-number">300</span>,
+              <span class="ruby-value">:command=</span><span class="ruby-operator">&gt;</span><span class="ruby-identifier">proc</span>{<span class="ruby-identifier">_butcmd</span>(<span class="ruby-string">&#39;command&#39;</span>)},
+              <span class="ruby-value">:helptext=</span><span class="ruby-operator">&gt;</span><span class="ruby-string">&quot;This is an ArrowButton widget\nof type button&quot;</span>)
+
+  <span class="ruby-identifier">sep2</span> = <span class="ruby-constant">Tk</span><span class="ruby-operator">::</span><span class="ruby-constant">BWidget</span><span class="ruby-operator">::</span><span class="ruby-constant">Separator</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">frame</span>, <span class="ruby-value">:orient=</span><span class="ruby-operator">&gt;</span><span class="ruby-value">:vertical</span>)
+  <span class="ruby-identifier">arr2</span> = <span class="ruby-constant">Tk</span><span class="ruby-operator">::</span><span class="ruby-constant">BWidget</span><span class="ruby-operator">::</span><span class="ruby-constant">ArrowButton</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">frame</span>, <span class="ruby-value">:type=</span><span class="ruby-operator">&gt;</span><span class="ruby-value">:arrow</span>,
+              <span class="ruby-value">:width=</span><span class="ruby-operator">&gt;</span><span class="ruby-number">25</span>, <span class="ruby-value">:height=</span><span class="ruby-operator">&gt;</span><span class="ruby-number">25</span>, <span class="ruby-value">:relief=</span><span class="ruby-operator">&gt;</span><span class="ruby-value">:sunken</span>,
+              <span class="ruby-value">:ipadx=</span><span class="ruby-operator">&gt;</span><span class="ruby-number">0</span>, <span class="ruby-value">:ipady=</span><span class="ruby-operator">&gt;</span><span class="ruby-number">0</span>, <span class="ruby-value">:repeatdelay=</span><span class="ruby-operator">&gt;</span><span class="ruby-number">300</span>,
+              <span class="ruby-value">:command=</span><span class="ruby-operator">&gt;</span><span class="ruby-identifier">proc</span>{<span class="ruby-identifier">_butcmd</span>(<span class="ruby-string">&#39;command&#39;</span>)},
+              <span class="ruby-value">:helptext=</span><span class="ruby-operator">&gt;</span><span class="ruby-string">&quot;This is an ArrowButton widget\nof type arrow&quot;</span>)
+
+  <span class="ruby-identifier">but</span>.<span class="ruby-identifier">pack</span>(<span class="ruby-value">:side=</span><span class="ruby-operator">&gt;</span><span class="ruby-value">:left</span>, <span class="ruby-value">:padx=</span><span class="ruby-operator">&gt;</span><span class="ruby-number">4</span>)
+  <span class="ruby-identifier">sep1</span>.<span class="ruby-identifier">pack</span>(<span class="ruby-value">:side=</span><span class="ruby-operator">&gt;</span><span class="ruby-value">:left</span>, <span class="ruby-value">:padx=</span><span class="ruby-operator">&gt;</span><span class="ruby-number">4</span>, <span class="ruby-value">:fill=</span><span class="ruby-operator">&gt;</span><span class="ruby-value">:y</span>)
+  <span class="ruby-identifier">arr1</span>.<span class="ruby-identifier">pack</span>(<span class="ruby-value">:side=</span><span class="ruby-operator">&gt;</span><span class="ruby-value">:left</span>, <span class="ruby-value">:padx=</span><span class="ruby-operator">&gt;</span><span class="ruby-number">4</span>)
+  <span class="ruby-identifier">sep2</span>.<span class="ruby-identifier">pack</span>(<span class="ruby-value">:side=</span><span class="ruby-operator">&gt;</span><span class="ruby-value">:left</span>, <span class="ruby-value">:padx=</span><span class="ruby-operator">&gt;</span><span class="ruby-number">4</span>, <span class="ruby-value">:fill=</span><span class="ruby-operator">&gt;</span><span class="ruby-value">:y</span>)
+  <span class="ruby-identifier">arr2</span>.<span class="ruby-identifier">pack</span>(<span class="ruby-value">:side=</span><span class="ruby-operator">&gt;</span><span class="ruby-value">:left</span>, <span class="ruby-value">:padx=</span><span class="ruby-operator">&gt;</span><span class="ruby-number">4</span>)
+  <span class="ruby-identifier">frame</span>.<span class="ruby-identifier">pack</span>
+
+  <span class="ruby-constant">Tk</span><span class="ruby-operator">::</span><span class="ruby-constant">BWidget</span><span class="ruby-operator">::</span><span class="ruby-constant">Separator</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">parent</span>,
+                             <span class="ruby-value">:orient=</span><span class="ruby-operator">&gt;</span><span class="ruby-value">:horizontal</span>).<span class="ruby-identifier">pack</span>(<span class="ruby-value">:fill=</span><span class="ruby-operator">&gt;</span><span class="ruby-value">:x</span>, <span class="ruby-value">:pady=</span><span class="ruby-operator">&gt;</span><span class="ruby-number">10</span>)
+
+  <span class="ruby-identifier">labf1</span> = <span class="ruby-constant">Tk</span><span class="ruby-operator">::</span><span class="ruby-constant">BWidget</span><span class="ruby-operator">::</span><span class="ruby-constant">LabelFrame</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">parent</span>, <span class="ruby-value">:text=</span><span class="ruby-operator">&gt;</span><span class="ruby-string">&#39;Command&#39;</span>,
+                                      <span class="ruby-value">:side=</span><span class="ruby-operator">&gt;</span><span class="ruby-value">:top</span>, <span class="ruby-value">:anchor=</span><span class="ruby-operator">&gt;</span><span class="ruby-value">:w</span>,
+                                      <span class="ruby-value">:relief=</span><span class="ruby-operator">&gt;</span><span class="ruby-value">:sunken</span>, <span class="ruby-value">:borderwidth=</span><span class="ruby-operator">&gt;</span><span class="ruby-number">1</span>)
+  <span class="ruby-identifier">subf</span> = <span class="ruby-identifier">labf1</span>.<span class="ruby-identifier">get_frame</span>
+  <span class="ruby-identifier">chk1</span> = <span class="ruby-constant">TkCheckbutton</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">subf</span>, <span class="ruby-value">:text=</span><span class="ruby-operator">&gt;</span><span class="ruby-string">&#39;Disabled&#39;</span>,
+                           <span class="ruby-value">:variable=</span><span class="ruby-operator">&gt;</span><span class="ruby-identifier">@@var</span>.<span class="ruby-identifier">ref</span>(<span class="ruby-string">&#39;bstate&#39;</span>),
+                           <span class="ruby-value">:onvalue=</span><span class="ruby-operator">&gt;</span><span class="ruby-string">&#39;disabled&#39;</span>, <span class="ruby-value">:offvalue=</span><span class="ruby-operator">&gt;</span><span class="ruby-string">&#39;normal&#39;</span>,
+                           <span class="ruby-value">:command=</span><span class="ruby-operator">&gt;</span><span class="ruby-identifier">proc</span>{<span class="ruby-identifier">_bstate</span>(<span class="ruby-identifier">@@var</span>[<span class="ruby-string">&#39;bstate&#39;</span>],
+                                                   <span class="ruby-identifier">but</span>, <span class="ruby-identifier">arr1</span>, <span class="ruby-identifier">arr2</span>)})
+  <span class="ruby-identifier">chk2</span> = <span class="ruby-constant">TkCheckbutton</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">subf</span>, <span class="ruby-value">:text=</span><span class="ruby-operator">&gt;</span><span class="ruby-string">&quot;Use armcommand/\ndisarmcommand&quot;</span>,
+                           <span class="ruby-value">:variable=</span><span class="ruby-operator">&gt;</span><span class="ruby-identifier">@@var</span>.<span class="ruby-identifier">ref</span>(<span class="ruby-string">&#39;barmcmd&#39;</span>),
+                           <span class="ruby-value">:command=</span><span class="ruby-operator">&gt;</span><span class="ruby-identifier">proc</span>{<span class="ruby-identifier">_barmcmd</span>(<span class="ruby-identifier">@@var</span>[<span class="ruby-string">&#39;barmcmd&#39;</span>],
+                                                   <span class="ruby-identifier">but</span>, <span class="ruby-identifier">arr1</span>, <span class="ruby-identifier">arr2</span>)})
+  <span class="ruby-constant">Tk</span>.<span class="ruby-identifier">pack</span>(<span class="ruby-identifier">chk1</span>, <span class="ruby-identifier">chk2</span>, <span class="ruby-value">:anchor=</span><span class="ruby-operator">&gt;</span><span class="ruby-value">:w</span>)
+
+  <span class="ruby-identifier">label</span> = <span class="ruby-constant">TkLabel</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">parent</span>, <span class="ruby-value">:textvariable=</span><span class="ruby-operator">&gt;</span><span class="ruby-identifier">@@var</span>.<span class="ruby-identifier">ref</span>(<span class="ruby-string">&#39;butcmd&#39;</span>),
+                      <span class="ruby-value">:foreground=</span><span class="ruby-operator">&gt;</span><span class="ruby-string">&#39;red&#39;</span>).<span class="ruby-identifier">pack</span>(<span class="ruby-value">:side=</span><span class="ruby-operator">&gt;</span><span class="ruby-value">:bottom</span>, <span class="ruby-value">:pady=</span><span class="ruby-operator">&gt;</span><span class="ruby-number">4</span>)
+
+  <span class="ruby-identifier">labf2</span> = <span class="ruby-constant">Tk</span><span class="ruby-operator">::</span><span class="ruby-constant">BWidget</span><span class="ruby-operator">::</span><span class="ruby-constant">LabelFrame</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">parent</span>, <span class="ruby-value">:text=</span><span class="ruby-operator">&gt;</span><span class="ruby-string">&#39;Direction&#39;</span>,
+                                      <span class="ruby-value">:side=</span><span class="ruby-operator">&gt;</span><span class="ruby-value">:top</span>, <span class="ruby-value">:anchor=</span><span class="ruby-operator">&gt;</span><span class="ruby-value">:w</span>,
+                                      <span class="ruby-value">:relief=</span><span class="ruby-operator">&gt;</span><span class="ruby-value">:sunken</span>, <span class="ruby-value">:borderwidth=</span><span class="ruby-operator">&gt;</span><span class="ruby-number">1</span>)
+  <span class="ruby-identifier">subf</span> = <span class="ruby-identifier">labf2</span>.<span class="ruby-identifier">get_frame</span>
+  <span class="ruby-identifier">@@var</span>[<span class="ruby-string">&#39;bside&#39;</span>] = <span class="ruby-value">:top</span>
+  [<span class="ruby-value">:top</span>, <span class="ruby-value">:left</span>, <span class="ruby-value">:bottom</span>, <span class="ruby-value">:right</span>].<span class="ruby-identifier">each</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">dir</span><span class="ruby-operator">|</span>
+    <span class="ruby-constant">TkRadiobutton</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">subf</span>, <span class="ruby-value">:text=</span><span class="ruby-operator">&gt;</span><span class="ruby-node">&quot;#{dir} arrow&quot;</span>,
+                      <span class="ruby-value">:variable=</span><span class="ruby-operator">&gt;</span><span class="ruby-identifier">@@var</span>.<span class="ruby-identifier">ref</span>(<span class="ruby-string">&#39;bside&#39;</span>), <span class="ruby-value">:value=</span><span class="ruby-operator">&gt;</span><span class="ruby-identifier">dir</span>,
+                      <span class="ruby-value">:command=</span><span class="ruby-operator">&gt;</span><span class="ruby-identifier">proc</span>{<span class="ruby-identifier">_bside</span>(<span class="ruby-identifier">@@var</span>[<span class="ruby-string">&#39;bside&#39;</span>], <span class="ruby-identifier">arr1</span>, <span class="ruby-identifier">arr2</span>)}
+                      ).<span class="ruby-identifier">pack</span>(<span class="ruby-value">:anchor=</span><span class="ruby-operator">&gt;</span><span class="ruby-value">:w</span>)
+  }
+
+  <span class="ruby-identifier">labf3</span> = <span class="ruby-constant">Tk</span><span class="ruby-operator">::</span><span class="ruby-constant">BWidget</span><span class="ruby-operator">::</span><span class="ruby-constant">LabelFrame</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">parent</span>, <span class="ruby-value">:text=</span><span class="ruby-operator">&gt;</span><span class="ruby-string">&#39;Relief&#39;</span>,
+                                      <span class="ruby-value">:side=</span><span class="ruby-operator">&gt;</span><span class="ruby-value">:top</span>, <span class="ruby-value">:anchor=</span><span class="ruby-operator">&gt;</span><span class="ruby-value">:w</span>,
+                                      <span class="ruby-value">:relief=</span><span class="ruby-operator">&gt;</span><span class="ruby-value">:sunken</span>, <span class="ruby-value">:borderwidth=</span><span class="ruby-operator">&gt;</span><span class="ruby-number">1</span>)
+  <span class="ruby-identifier">subf</span> = <span class="ruby-identifier">labf3</span>.<span class="ruby-identifier">get_frame</span>
+  <span class="ruby-identifier">@@var</span>[<span class="ruby-string">&#39;brelief&#39;</span>] = <span class="ruby-value">:raised</span>
+  [ <span class="ruby-node">%w(raised sunken ridge groove)</span>, <span class="ruby-node">%w(flat solid link)</span>].<span class="ruby-identifier">each</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">lrelief</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">f</span> = <span class="ruby-constant">TkFrame</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">subf</span>)
+    <span class="ruby-identifier">lrelief</span>.<span class="ruby-identifier">each</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">relief</span><span class="ruby-operator">|</span>
+      <span class="ruby-constant">TkRadiobutton</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">f</span>, <span class="ruby-value">:text=</span><span class="ruby-operator">&gt;</span><span class="ruby-identifier">relief</span>,
+                        <span class="ruby-value">:variable=</span><span class="ruby-operator">&gt;</span><span class="ruby-identifier">@@var</span>.<span class="ruby-identifier">ref</span>(<span class="ruby-string">&#39;brelief&#39;</span>), <span class="ruby-value">:value=</span><span class="ruby-operator">&gt;</span><span class="ruby-identifier">relief</span>,
+                        <span class="ruby-value">:command=</span><span class="ruby-operator">&gt;</span><span class="ruby-identifier">proc</span>{
+                          <span class="ruby-identifier">_brelief</span>(<span class="ruby-identifier">@@var</span>[<span class="ruby-string">&#39;brelief&#39;</span>], <span class="ruby-identifier">but</span>, <span class="ruby-identifier">arr1</span>, <span class="ruby-identifier">arr2</span>)
+                        }).<span class="ruby-identifier">pack</span>(<span class="ruby-value">:anchor=</span><span class="ruby-operator">&gt;</span><span class="ruby-value">:w</span>)
+    }
+    <span class="ruby-identifier">f</span>.<span class="ruby-identifier">pack</span>(<span class="ruby-value">:side=</span><span class="ruby-operator">&gt;</span><span class="ruby-value">:left</span>, <span class="ruby-value">:padx=</span><span class="ruby-operator">&gt;</span><span class="ruby-number">2</span>, <span class="ruby-value">:anchor=</span><span class="ruby-operator">&gt;</span><span class="ruby-value">:n</span>)
+  }
+  <span class="ruby-constant">Tk</span>.<span class="ruby-identifier">pack</span>(<span class="ruby-identifier">labf1</span>, <span class="ruby-identifier">labf2</span>, <span class="ruby-identifier">labf3</span>, <span class="ruby-value">:side=</span><span class="ruby-operator">&gt;</span><span class="ruby-value">:left</span>, <span class="ruby-value">:fill=</span><span class="ruby-operator">&gt;</span><span class="ruby-value">:y</span>, <span class="ruby-value">:padx=</span><span class="ruby-operator">&gt;</span><span class="ruby-number">4</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-_entry">
+            
+              <b>_entry</b>(parent)
+            
+            <a href="../classes/DemoBasic.html#method-c-_entry" name="method-c-_entry" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-_entry_source')" id="l_method-c-_entry_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/287a34ae0dfc23e4158f67cb7783d239f202c368/ext/tk/sample/tkextlib/bwidget/basic.rb#L42" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-_entry_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/sample/tkextlib/bwidget/basic.rb, line 42</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">_entry</span>(<span class="ruby-identifier">parent</span>)
+  <span class="ruby-identifier">ent</span> = <span class="ruby-constant">Tk</span><span class="ruby-operator">::</span><span class="ruby-constant">BWidget</span><span class="ruby-operator">::</span><span class="ruby-constant">Entry</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">parent</span>, <span class="ruby-value">:text=</span><span class="ruby-operator">&gt;</span><span class="ruby-string">&#39;Press enter&#39;</span>,
+                               <span class="ruby-value">:helptext=</span><span class="ruby-operator">&gt;</span><span class="ruby-string">&#39;Entry widtet&#39;</span>,
+                               <span class="ruby-value">:command=</span><span class="ruby-operator">&gt;</span><span class="ruby-identifier">proc</span>{
+                                 <span class="ruby-identifier">@@var</span>[<span class="ruby-string">&#39;entcmd&#39;</span>] = <span class="ruby-string">&#39;command called&#39;</span>
+                                 <span class="ruby-constant">Tk</span>.<span class="ruby-identifier">after</span>(<span class="ruby-number">500</span>, <span class="ruby-identifier">proc</span>{<span class="ruby-identifier">@@var</span>[<span class="ruby-string">&#39;entcmd&#39;</span>] = <span class="ruby-string">&#39;&#39;</span>})
+                               })
+
+  <span class="ruby-identifier">chk1</span> = <span class="ruby-constant">TkCheckbutton</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">parent</span>, <span class="ruby-value">:text=</span><span class="ruby-operator">&gt;</span><span class="ruby-string">&#39;Disabled&#39;</span>,
+                           <span class="ruby-value">:variable=</span><span class="ruby-operator">&gt;</span><span class="ruby-identifier">@@var</span>.<span class="ruby-identifier">ref</span>(<span class="ruby-identifier">ent</span>, <span class="ruby-string">&#39;state&#39;</span>),
+                           <span class="ruby-value">:onvalue=</span><span class="ruby-operator">&gt;</span><span class="ruby-string">&#39;disabled&#39;</span>, <span class="ruby-value">:offvalue=</span><span class="ruby-operator">&gt;</span><span class="ruby-string">&#39;normal&#39;</span>,
+                           <span class="ruby-value">:command=</span><span class="ruby-operator">&gt;</span><span class="ruby-identifier">proc</span>{<span class="ruby-identifier">ent</span>.<span class="ruby-identifier">state</span> = <span class="ruby-identifier">@@var</span>[<span class="ruby-identifier">ent</span>, <span class="ruby-string">&#39;state&#39;</span>]})
+
+  <span class="ruby-identifier">chk2</span> = <span class="ruby-constant">TkCheckbutton</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">parent</span>, <span class="ruby-value">:text=</span><span class="ruby-operator">&gt;</span><span class="ruby-string">&#39;Non editable&#39;</span>,
+                           <span class="ruby-value">:variable=</span><span class="ruby-operator">&gt;</span><span class="ruby-identifier">@@var</span>.<span class="ruby-identifier">ref</span>(<span class="ruby-identifier">ent</span>, <span class="ruby-string">&#39;editable&#39;</span>),
+                           <span class="ruby-value">:onvalue=</span><span class="ruby-operator">&gt;</span><span class="ruby-keyword">false</span>, <span class="ruby-value">:offvalue=</span><span class="ruby-operator">&gt;</span><span class="ruby-keyword">true</span>,
+                           <span class="ruby-value">:command=</span><span class="ruby-operator">&gt;</span><span class="ruby-identifier">proc</span>{
+                             <span class="ruby-identifier">ent</span>.<span class="ruby-identifier">editable</span> = <span class="ruby-identifier">@@var</span>[<span class="ruby-identifier">ent</span>, <span class="ruby-string">&#39;editable&#39;</span>]
+                           })
+
+  <span class="ruby-identifier">lab</span> = <span class="ruby-constant">TkLabel</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">parent</span>, <span class="ruby-value">:textvariable=</span><span class="ruby-operator">&gt;</span><span class="ruby-identifier">@@var</span>.<span class="ruby-identifier">ref</span>(<span class="ruby-string">&#39;entcmd&#39;</span>),
+                    <span class="ruby-value">:foreground=</span><span class="ruby-operator">&gt;</span><span class="ruby-string">&#39;red&#39;</span>)
+
+  <span class="ruby-identifier">ent</span>.<span class="ruby-identifier">pack</span>(<span class="ruby-value">:pady=</span><span class="ruby-operator">&gt;</span><span class="ruby-number">4</span>, <span class="ruby-value">:anchor=</span><span class="ruby-operator">&gt;</span><span class="ruby-value">:w</span>)
+  <span class="ruby-constant">Tk</span>.<span class="ruby-identifier">pack</span>(<span class="ruby-identifier">chk1</span>, <span class="ruby-identifier">chk2</span>, <span class="ruby-value">:anchor=</span><span class="ruby-operator">&gt;</span><span class="ruby-value">:w</span>)
+  <span class="ruby-identifier">lab</span>.<span class="ruby-identifier">pack</span>(<span class="ruby-value">:pady=</span><span class="ruby-operator">&gt;</span><span class="ruby-number">4</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-_label">
+            
+              <b>_label</b>(parent)
+            
+            <a href="../classes/DemoBasic.html#method-c-_label" name="method-c-_label" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-_label_source')" id="l_method-c-_label_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/287a34ae0dfc23e4158f67cb7783d239f202c368/ext/tk/sample/tkextlib/bwidget/basic.rb#L31" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-_label_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/sample/tkextlib/bwidget/basic.rb, line 31</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">_label</span>(<span class="ruby-identifier">parent</span>)
+  <span class="ruby-identifier">lab</span> = <span class="ruby-constant">Tk</span><span class="ruby-operator">::</span><span class="ruby-constant">BWidget</span><span class="ruby-operator">::</span><span class="ruby-constant">Label</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">parent</span>, <span class="ruby-value">:text=</span><span class="ruby-operator">&gt;</span><span class="ruby-string">&#39;This is a Label widget&#39;</span>,
+                               <span class="ruby-value">:helptext=</span><span class="ruby-operator">&gt;</span><span class="ruby-string">&#39;Label widget&#39;</span>)
+  <span class="ruby-identifier">chk</span> = <span class="ruby-constant">TkCheckbutton</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">parent</span>, <span class="ruby-value">:text=</span><span class="ruby-operator">&gt;</span><span class="ruby-string">&#39;Disabled&#39;</span>,
+                          <span class="ruby-value">:variable=</span><span class="ruby-operator">&gt;</span><span class="ruby-identifier">@@var</span>.<span class="ruby-identifier">ref</span>(<span class="ruby-identifier">lab</span>, <span class="ruby-string">&#39;state&#39;</span>),
+                          <span class="ruby-value">:onvalue=</span><span class="ruby-operator">&gt;</span><span class="ruby-string">&#39;disabled&#39;</span>, <span class="ruby-value">:offvalue=</span><span class="ruby-operator">&gt;</span><span class="ruby-string">&#39;normal&#39;</span>,
+                          <span class="ruby-value">:command=</span><span class="ruby-operator">&gt;</span><span class="ruby-identifier">proc</span>{<span class="ruby-identifier">lab</span>[<span class="ruby-value">:state</span>] = <span class="ruby-identifier">@@var</span>[<span class="ruby-identifier">lab</span>, <span class="ruby-string">&#39;state&#39;</span>]})
+  <span class="ruby-identifier">lab</span>.<span class="ruby-identifier">pack</span>(<span class="ruby-value">:anchor=</span><span class="ruby-operator">&gt;</span><span class="ruby-value">:w</span>, <span class="ruby-value">:pady=</span><span class="ruby-operator">&gt;</span><span class="ruby-number">4</span>)
+  <span class="ruby-identifier">chk</span>.<span class="ruby-identifier">pack</span>(<span class="ruby-value">:anchor=</span><span class="ruby-operator">&gt;</span><span class="ruby-value">:w</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-create">
+            
+              <b>create</b>(nb)
+            
+            <a href="../classes/DemoBasic.html#method-c-create" name="method-c-create" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-create_source')" id="l_method-c-create_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/287a34ae0dfc23e4158f67cb7783d239f202c368/ext/tk/sample/tkextlib/bwidget/basic.rb#L13" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-create_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/sample/tkextlib/bwidget/basic.rb, line 13</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">create</span>(<span class="ruby-identifier">nb</span>)
+  <span class="ruby-identifier">frame</span> = <span class="ruby-identifier">nb</span>.<span class="ruby-identifier">insert</span>(<span class="ruby-string">&#39;end&#39;</span>, <span class="ruby-string">&#39;demoBasic&#39;</span>, <span class="ruby-value">:text=</span><span class="ruby-operator">&gt;</span><span class="ruby-string">&#39;Basic&#39;</span>)
+  <span class="ruby-identifier">topf</span>  = <span class="ruby-constant">TkFrame</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">frame</span>)
+
+  <span class="ruby-identifier">titf1</span> = <span class="ruby-constant">Tk</span><span class="ruby-operator">::</span><span class="ruby-constant">BWidget</span><span class="ruby-operator">::</span><span class="ruby-constant">TitleFrame</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">topf</span>, <span class="ruby-value">:text=</span><span class="ruby-operator">&gt;</span><span class="ruby-string">&#39;Label&#39;</span>)
+  <span class="ruby-identifier">titf2</span> = <span class="ruby-constant">Tk</span><span class="ruby-operator">::</span><span class="ruby-constant">BWidget</span><span class="ruby-operator">::</span><span class="ruby-constant">TitleFrame</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">topf</span>, <span class="ruby-value">:text=</span><span class="ruby-operator">&gt;</span><span class="ruby-string">&#39;Entry&#39;</span>)
+
+  <span class="ruby-identifier">titf3</span> = <span class="ruby-constant">Tk</span><span class="ruby-operator">::</span><span class="ruby-constant">BWidget</span><span class="ruby-operator">::</span><span class="ruby-constant">TitleFrame</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">frame</span>, <span class="ruby-value">:text=</span><span class="ruby-operator">&gt;</span><span class="ruby-string">&#39;Button and ArrowButton&#39;</span>)
+
+  <span class="ruby-identifier">_label</span>(<span class="ruby-identifier">titf1</span>.<span class="ruby-identifier">get_frame</span>)
+  <span class="ruby-identifier">_entry</span>(<span class="ruby-identifier">titf2</span>.<span class="ruby-identifier">get_frame</span>)
+  <span class="ruby-identifier">_button</span>(<span class="ruby-identifier">titf3</span>.<span class="ruby-identifier">get_frame</span>)
+
+  <span class="ruby-constant">Tk</span>.<span class="ruby-identifier">pack</span>(<span class="ruby-identifier">titf1</span>, <span class="ruby-identifier">titf2</span>, <span class="ruby-value">:side=</span><span class="ruby-operator">&gt;</span><span class="ruby-value">:left</span>, <span class="ruby-value">:fill=</span><span class="ruby-operator">&gt;</span><span class="ruby-value">:both</span>, <span class="ruby-value">:padx=</span><span class="ruby-operator">&gt;</span><span class="ruby-number">4</span>, <span class="ruby-value">:expand=</span><span class="ruby-operator">&gt;</span><span class="ruby-keyword">true</span>)
+  <span class="ruby-identifier">topf</span>.<span class="ruby-identifier">pack</span>(<span class="ruby-value">:pady=</span><span class="ruby-operator">&gt;</span><span class="ruby-number">2</span>, <span class="ruby-value">:fill=</span><span class="ruby-operator">&gt;</span><span class="ruby-value">:x</span>)
+  <span class="ruby-identifier">titf3</span>.<span class="ruby-identifier">pack</span>(<span class="ruby-value">:pady=</span><span class="ruby-operator">&gt;</span><span class="ruby-number">2</span>, <span class="ruby-value">:padx=</span><span class="ruby-operator">&gt;</span><span class="ruby-number">4</span>, <span class="ruby-value">:fill=</span><span class="ruby-operator">&gt;</span><span class="ruby-value">:x</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                        </div>
+
+    </div>
+  </body>
+</html>    

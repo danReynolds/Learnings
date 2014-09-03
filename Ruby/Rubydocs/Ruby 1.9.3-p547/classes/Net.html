@@ -1,0 +1,1771 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>Net</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="../css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/main.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/github.css" type="text/css" media="screen" />
+<script src="../js/jquery-1.3.2.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/jquery-effect.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+
+<body>     
+    <div class="banner">
+        
+        <h1>
+            <span class="type">Module</span> 
+            Net 
+            
+        </h1>
+        <ul class="files">
+            
+            <li><a href="../files/lib/net/ftp_rb.html">lib/net/ftp.rb</a></li>
+            
+            <li><a href="../files/lib/net/http_rb.html">lib/net/http.rb</a></li>
+            
+            <li><a href="../files/lib/net/imap_rb.html">lib/net/imap.rb</a></li>
+            
+            <li><a href="../files/lib/net/pop_rb.html">lib/net/pop.rb</a></li>
+            
+            <li><a href="../files/lib/net/protocol_rb.html">lib/net/protocol.rb</a></li>
+            
+            <li><a href="../files/lib/net/smtp_rb.html">lib/net/smtp.rb</a></li>
+            
+            <li><a href="../files/lib/net/telnet_rb.html">lib/net/telnet.rb</a></li>
+            
+            <li><a href="../files/lib/open-uri_rb.html">lib/open-uri.rb</a></li>
+            
+            <li><a href="../files/lib/rake/contrib/ftptools_rb.html">lib/rake/contrib/ftptools.rb</a></li>
+            
+            <li><a href="../files/lib/rubygems/gemcutter_utilities_rb.html">lib/rubygems/gemcutter_utilities.rb</a></li>
+            
+            <li><a href="../files/lib/rubygems/remote_fetcher_rb.html">lib/rubygems/remote_fetcher.rb</a></li>
+            
+            <li><a href="../files/lib/webrick/httpproxy_rb.html">lib/webrick/httpproxy.rb</a></li>
+            
+            <li><a href="../files/lib/xmlrpc/client_rb.html">lib/xmlrpc/client.rb</a></li>
+            
+            <li><a href="../files/sample/drb/http0_rb.html">sample/drb/http0.rb</a></li>
+            
+            <li><a href="../files/sample/openssl/wget_rb.html">sample/openssl/wget.rb</a></li>
+            
+        </ul>
+    </div>
+    <div id="bodyContent">
+        <div id="content">
+  
+
+
+  
+
+
+  
+  
+
+
+  
+    <!-- Namespace -->
+    <div class="sectiontitle">Namespace</div>
+    <ul>
+      
+        <li>
+          <span class="type">MODULE</span>
+          <a href="Net/HTTPExceptions.html">Net::HTTPExceptions</a>
+        </li>
+      
+        <li>
+          <span class="type">MODULE</span>
+          <a href="Net/HTTPHeader.html">Net::HTTPHeader</a>
+        </li>
+      
+        <li>
+          <span class="type">MODULE</span>
+          <a href="Net/SMTPError.html">Net::SMTPError</a>
+        </li>
+      
+        <li>
+          <span class="type">CLASS</span>
+          <a href="Net/APOP.html">Net::APOP</a>
+        </li>
+      
+        <li>
+          <span class="type">CLASS</span>
+          <a href="Net/APOP.html">Net::APOPSession</a>
+        </li>
+      
+        <li>
+          <span class="type">CLASS</span>
+          <a href="Net/FTP.html">Net::FTP</a>
+        </li>
+      
+        <li>
+          <span class="type">CLASS</span>
+          <a href="Net/FTPConnectionError.html">Net::FTPConnectionError</a>
+        </li>
+      
+        <li>
+          <span class="type">CLASS</span>
+          <a href="Net/FTPError.html">Net::FTPError</a>
+        </li>
+      
+        <li>
+          <span class="type">CLASS</span>
+          <a href="Net/FTPPermError.html">Net::FTPPermError</a>
+        </li>
+      
+        <li>
+          <span class="type">CLASS</span>
+          <a href="Net/FTPProtoError.html">Net::FTPProtoError</a>
+        </li>
+      
+        <li>
+          <span class="type">CLASS</span>
+          <a href="Net/FTPReplyError.html">Net::FTPReplyError</a>
+        </li>
+      
+        <li>
+          <span class="type">CLASS</span>
+          <a href="Net/FTPTempError.html">Net::FTPTempError</a>
+        </li>
+      
+        <li>
+          <span class="type">CLASS</span>
+          <a href="Net/HTTP.html">Net::HTTP</a>
+        </li>
+      
+        <li>
+          <span class="type">CLASS</span>
+          <a href="Net/HTTPAccepted.html">Net::HTTPAccepted</a>
+        </li>
+      
+        <li>
+          <span class="type">CLASS</span>
+          <a href="Net/HTTPBadGateway.html">Net::HTTPBadGateway</a>
+        </li>
+      
+        <li>
+          <span class="type">CLASS</span>
+          <a href="Net/HTTPBadRequest.html">Net::HTTPBadRequest</a>
+        </li>
+      
+        <li>
+          <span class="type">CLASS</span>
+          <a href="Net/HTTPBadResponse.html">Net::HTTPBadResponse</a>
+        </li>
+      
+        <li>
+          <span class="type">CLASS</span>
+          <a href="Net/HTTPClientError.html">Net::HTTPClientError</a>
+        </li>
+      
+        <li>
+          <span class="type">CLASS</span>
+          <a href="Net/HTTPConflict.html">Net::HTTPConflict</a>
+        </li>
+      
+        <li>
+          <span class="type">CLASS</span>
+          <a href="Net/HTTPContinue.html">Net::HTTPContinue</a>
+        </li>
+      
+        <li>
+          <span class="type">CLASS</span>
+          <a href="Net/HTTPCreated.html">Net::HTTPCreated</a>
+        </li>
+      
+        <li>
+          <span class="type">CLASS</span>
+          <a href="Net/HTTPError.html">Net::HTTPError</a>
+        </li>
+      
+        <li>
+          <span class="type">CLASS</span>
+          <a href="Net/HTTPExpectationFailed.html">Net::HTTPExpectationFailed</a>
+        </li>
+      
+        <li>
+          <span class="type">CLASS</span>
+          <a href="Net/HTTPFatalError.html">Net::HTTPFatalError</a>
+        </li>
+      
+        <li>
+          <span class="type">CLASS</span>
+          <a href="Net/HTTPForbidden.html">Net::HTTPForbidden</a>
+        </li>
+      
+        <li>
+          <span class="type">CLASS</span>
+          <a href="Net/HTTPFound.html">Net::HTTPFound</a>
+        </li>
+      
+        <li>
+          <span class="type">CLASS</span>
+          <a href="Net/HTTPGatewayTimeOut.html">Net::HTTPGatewayTimeOut</a>
+        </li>
+      
+        <li>
+          <span class="type">CLASS</span>
+          <a href="Net/HTTPGenericRequest.html">Net::HTTPGenericRequest</a>
+        </li>
+      
+        <li>
+          <span class="type">CLASS</span>
+          <a href="Net/HTTPGone.html">Net::HTTPGone</a>
+        </li>
+      
+        <li>
+          <span class="type">CLASS</span>
+          <a href="Net/HTTPHeaderSyntaxError.html">Net::HTTPHeaderSyntaxError</a>
+        </li>
+      
+        <li>
+          <span class="type">CLASS</span>
+          <a href="Net/HTTPInformation.html">Net::HTTPInformation</a>
+        </li>
+      
+        <li>
+          <span class="type">CLASS</span>
+          <a href="Net/HTTPInternalServerError.html">Net::HTTPInternalServerError</a>
+        </li>
+      
+        <li>
+          <span class="type">CLASS</span>
+          <a href="Net/HTTPLengthRequired.html">Net::HTTPLengthRequired</a>
+        </li>
+      
+        <li>
+          <span class="type">CLASS</span>
+          <a href="Net/HTTPMethodNotAllowed.html">Net::HTTPMethodNotAllowed</a>
+        </li>
+      
+        <li>
+          <span class="type">CLASS</span>
+          <a href="Net/HTTPMovedPermanently.html">Net::HTTPMovedPermanently</a>
+        </li>
+      
+        <li>
+          <span class="type">CLASS</span>
+          <a href="Net/HTTPMovedTemporarily.html">Net::HTTPMovedTemporarily</a>
+        </li>
+      
+        <li>
+          <span class="type">CLASS</span>
+          <a href="Net/HTTPMultipleChoice.html">Net::HTTPMultipleChoice</a>
+        </li>
+      
+        <li>
+          <span class="type">CLASS</span>
+          <a href="Net/HTTPNoContent.html">Net::HTTPNoContent</a>
+        </li>
+      
+        <li>
+          <span class="type">CLASS</span>
+          <a href="Net/HTTPNonAuthoritativeInformation.html">Net::HTTPNonAuthoritativeInformation</a>
+        </li>
+      
+        <li>
+          <span class="type">CLASS</span>
+          <a href="Net/HTTPNotAcceptable.html">Net::HTTPNotAcceptable</a>
+        </li>
+      
+        <li>
+          <span class="type">CLASS</span>
+          <a href="Net/HTTPNotFound.html">Net::HTTPNotFound</a>
+        </li>
+      
+        <li>
+          <span class="type">CLASS</span>
+          <a href="Net/HTTPNotImplemented.html">Net::HTTPNotImplemented</a>
+        </li>
+      
+        <li>
+          <span class="type">CLASS</span>
+          <a href="Net/HTTPNotModified.html">Net::HTTPNotModified</a>
+        </li>
+      
+        <li>
+          <span class="type">CLASS</span>
+          <a href="Net/HTTPOK.html">Net::HTTPOK</a>
+        </li>
+      
+        <li>
+          <span class="type">CLASS</span>
+          <a href="Net/HTTPPartialContent.html">Net::HTTPPartialContent</a>
+        </li>
+      
+        <li>
+          <span class="type">CLASS</span>
+          <a href="Net/HTTPPaymentRequired.html">Net::HTTPPaymentRequired</a>
+        </li>
+      
+        <li>
+          <span class="type">CLASS</span>
+          <a href="Net/HTTPPreconditionFailed.html">Net::HTTPPreconditionFailed</a>
+        </li>
+      
+        <li>
+          <span class="type">CLASS</span>
+          <a href="Net/HTTPProxyAuthenticationRequired.html">Net::HTTPProxyAuthenticationRequired</a>
+        </li>
+      
+        <li>
+          <span class="type">CLASS</span>
+          <a href="Net/HTTPRedirection.html">Net::HTTPRedirection</a>
+        </li>
+      
+        <li>
+          <span class="type">CLASS</span>
+          <a href="Net/HTTPRequest.html">Net::HTTPRequest</a>
+        </li>
+      
+        <li>
+          <span class="type">CLASS</span>
+          <a href="Net/HTTPRequestEntityTooLarge.html">Net::HTTPRequestEntityTooLarge</a>
+        </li>
+      
+        <li>
+          <span class="type">CLASS</span>
+          <a href="Net/HTTPRequestTimeOut.html">Net::HTTPRequestTimeOut</a>
+        </li>
+      
+        <li>
+          <span class="type">CLASS</span>
+          <a href="Net/HTTPRequestURITooLarge.html">Net::HTTPRequestURITooLarge</a>
+        </li>
+      
+        <li>
+          <span class="type">CLASS</span>
+          <a href="Net/HTTPRequestURITooLong.html">Net::HTTPRequestURITooLong</a>
+        </li>
+      
+        <li>
+          <span class="type">CLASS</span>
+          <a href="Net/HTTPRequestedRangeNotSatisfiable.html">Net::HTTPRequestedRangeNotSatisfiable</a>
+        </li>
+      
+        <li>
+          <span class="type">CLASS</span>
+          <a href="Net/HTTPResetContent.html">Net::HTTPResetContent</a>
+        </li>
+      
+        <li>
+          <span class="type">CLASS</span>
+          <a href="Net/HTTPResponse.html">Net::HTTPResponse</a>
+        </li>
+      
+        <li>
+          <span class="type">CLASS</span>
+          <a href="Net/HTTPRetriableError.html">Net::HTTPRetriableError</a>
+        </li>
+      
+        <li>
+          <span class="type">CLASS</span>
+          <a href="Net/HTTPSeeOther.html">Net::HTTPSeeOther</a>
+        </li>
+      
+        <li>
+          <span class="type">CLASS</span>
+          <a href="Net/HTTPServerError.html">Net::HTTPServerError</a>
+        </li>
+      
+        <li>
+          <span class="type">CLASS</span>
+          <a href="Net/HTTPServerException.html">Net::HTTPServerException</a>
+        </li>
+      
+        <li>
+          <span class="type">CLASS</span>
+          <a href="Net/HTTPServiceUnavailable.html">Net::HTTPServiceUnavailable</a>
+        </li>
+      
+        <li>
+          <span class="type">CLASS</span>
+          <a href="Net/HTTP.html">Net::HTTPSession</a>
+        </li>
+      
+        <li>
+          <span class="type">CLASS</span>
+          <a href="Net/HTTPSuccess.html">Net::HTTPSuccess</a>
+        </li>
+      
+        <li>
+          <span class="type">CLASS</span>
+          <a href="Net/HTTPSwitchProtocol.html">Net::HTTPSwitchProtocol</a>
+        </li>
+      
+        <li>
+          <span class="type">CLASS</span>
+          <a href="Net/HTTPTemporaryRedirect.html">Net::HTTPTemporaryRedirect</a>
+        </li>
+      
+        <li>
+          <span class="type">CLASS</span>
+          <a href="Net/HTTPUnauthorized.html">Net::HTTPUnauthorized</a>
+        </li>
+      
+        <li>
+          <span class="type">CLASS</span>
+          <a href="Net/HTTPUnknownResponse.html">Net::HTTPUnknownResponse</a>
+        </li>
+      
+        <li>
+          <span class="type">CLASS</span>
+          <a href="Net/HTTPUnsupportedMediaType.html">Net::HTTPUnsupportedMediaType</a>
+        </li>
+      
+        <li>
+          <span class="type">CLASS</span>
+          <a href="Net/HTTPUseProxy.html">Net::HTTPUseProxy</a>
+        </li>
+      
+        <li>
+          <span class="type">CLASS</span>
+          <a href="Net/HTTPVersionNotSupported.html">Net::HTTPVersionNotSupported</a>
+        </li>
+      
+        <li>
+          <span class="type">CLASS</span>
+          <a href="Net/IMAP.html">Net::IMAP</a>
+        </li>
+      
+        <li>
+          <span class="type">CLASS</span>
+          <a href="Net/InternetMessageIO.html">Net::InternetMessageIO</a>
+        </li>
+      
+        <li>
+          <span class="type">CLASS</span>
+          <a href="Net/POP3.html">Net::POP</a>
+        </li>
+      
+        <li>
+          <span class="type">CLASS</span>
+          <a href="Net/POP3.html">Net::POP3</a>
+        </li>
+      
+        <li>
+          <span class="type">CLASS</span>
+          <a href="Net/POP3.html">Net::POP3Session</a>
+        </li>
+      
+        <li>
+          <span class="type">CLASS</span>
+          <a href="Net/POPAuthenticationError.html">Net::POPAuthenticationError</a>
+        </li>
+      
+        <li>
+          <span class="type">CLASS</span>
+          <a href="Net/POPBadResponse.html">Net::POPBadResponse</a>
+        </li>
+      
+        <li>
+          <span class="type">CLASS</span>
+          <a href="Net/POPError.html">Net::POPError</a>
+        </li>
+      
+        <li>
+          <span class="type">CLASS</span>
+          <a href="Net/POPMail.html">Net::POPMail</a>
+        </li>
+      
+        <li>
+          <span class="type">CLASS</span>
+          <a href="Net/POP3.html">Net::POPSession</a>
+        </li>
+      
+        <li>
+          <span class="type">CLASS</span>
+          <a href="Net/ProtoAuthError.html">Net::ProtoAuthError</a>
+        </li>
+      
+        <li>
+          <span class="type">CLASS</span>
+          <a href="Net/ProtoCommandError.html">Net::ProtoCommandError</a>
+        </li>
+      
+        <li>
+          <span class="type">CLASS</span>
+          <a href="Net/ProtoFatalError.html">Net::ProtoFatalError</a>
+        </li>
+      
+        <li>
+          <span class="type">CLASS</span>
+          <a href="Net/ProtoRetriableError.html">Net::ProtoRetriableError</a>
+        </li>
+      
+        <li>
+          <span class="type">CLASS</span>
+          <a href="Net/ProtoServerError.html">Net::ProtoServerError</a>
+        </li>
+      
+        <li>
+          <span class="type">CLASS</span>
+          <a href="Net/ProtoSyntaxError.html">Net::ProtoSyntaxError</a>
+        </li>
+      
+        <li>
+          <span class="type">CLASS</span>
+          <a href="Net/ProtoUnknownError.html">Net::ProtoUnknownError</a>
+        </li>
+      
+        <li>
+          <span class="type">CLASS</span>
+          <a href="Net/ProtocRetryError.html">Net::ProtocRetryError</a>
+        </li>
+      
+        <li>
+          <span class="type">CLASS</span>
+          <a href="Net/ProtocolError.html">Net::ProtocolError</a>
+        </li>
+      
+        <li>
+          <span class="type">CLASS</span>
+          <a href="Net/SMTP.html">Net::SMTP</a>
+        </li>
+      
+        <li>
+          <span class="type">CLASS</span>
+          <a href="Net/SMTPAuthenticationError.html">Net::SMTPAuthenticationError</a>
+        </li>
+      
+        <li>
+          <span class="type">CLASS</span>
+          <a href="Net/SMTPFatalError.html">Net::SMTPFatalError</a>
+        </li>
+      
+        <li>
+          <span class="type">CLASS</span>
+          <a href="Net/SMTPServerBusy.html">Net::SMTPServerBusy</a>
+        </li>
+      
+        <li>
+          <span class="type">CLASS</span>
+          <a href="Net/SMTP.html">Net::SMTPSession</a>
+        </li>
+      
+        <li>
+          <span class="type">CLASS</span>
+          <a href="Net/SMTPSyntaxError.html">Net::SMTPSyntaxError</a>
+        </li>
+      
+        <li>
+          <span class="type">CLASS</span>
+          <a href="Net/SMTPUnknownError.html">Net::SMTPUnknownError</a>
+        </li>
+      
+        <li>
+          <span class="type">CLASS</span>
+          <a href="Net/SMTPUnsupportedCommand.html">Net::SMTPUnsupportedCommand</a>
+        </li>
+      
+        <li>
+          <span class="type">CLASS</span>
+          <a href="Net/Telnet.html">Net::Telnet</a>
+        </li>
+      
+    </ul>
+  
+
+
+  
+
+  
+
+
+
+  
+
+    
+
+    
+
+    
+      <!-- Section constants -->
+      <div class="sectiontitle">Constants</div>
+      <table border='0' cellpadding='5'>
+        
+          <tr valign='top'>
+            <td class="attr-name">HTTPSession</td>
+            <td>=</td>
+            <td class="attr-value">HTTP</td>
+          </tr>
+          
+            <tr valign='top'>
+              <td>&nbsp;</td>
+              <td colspan="2" class="attr-desc"><h2 id="label-An+HTTP+client+API+for+Ruby.">An HTTP client API for Ruby.</h2>
+
+<p>Net::HTTP provides a rich library which can be used to build HTTP
+user-agents.  For more details about HTTP see [RFC2616](<a
+href="http://www.ietf.org/rfc/rfc2616.txt">www.ietf.org/rfc/rfc2616.txt</a>)</p>
+
+<p>Net::HTTP is designed to work closely with <a href="URI.html">URI</a>.  <a
+href="URI/Generic.html#attribute-i-host">URI::Generic#host</a>, <a
+href="URI/Generic.html#attribute-i-port">URI::Generic#port</a> and <a
+href="URI/HTTP.html#method-i-request_uri">URI::HTTP#request_uri</a> are
+designed to work with Net::HTTP.</p>
+
+<p>If you are only performing a few GET requests you should try <a
+href="OpenURI.html">OpenURI</a>.</p>
+
+<h2 id="label-Simple+Examples">Simple Examples</h2>
+
+<p>All examples assume you have loaded Net::HTTP with:</p>
+
+<pre><code>require &#39;net/http&#39;
+</code></pre>
+
+<p>This will also require &#39;uri&#39; so you don&#39;t need to require it
+separately.</p>
+
+<p>The Net::HTTP methods in the following section do not persist connections. 
+They are not recommended if you are performing many HTTP requests.</p>
+
+<h3 id="label-GET">GET</h3>
+
+<pre><code>Net::HTTP.get(&#39;example.com&#39;, &#39;/index.html&#39;) # =&gt; String
+</code></pre>
+
+<h3 id="label-GET+by+URI">GET by <a href="URI.html">URI</a></h3>
+
+<pre><code>uri = URI(&#39;http://example.com/index.html?count=10&#39;)
+Net::HTTP.get(uri) # =&gt; String
+</code></pre>
+
+<h3 id="label-GET+with+Dynamic+Parameters">GET with Dynamic Parameters</h3>
+
+<pre><code>uri = URI(&#39;http://example.com/index.html&#39;)
+params = { :limit =&gt; 10, :page =&gt; 3 }
+uri.query = URI.encode_www_form(params)
+
+res = Net::HTTP.get_response(uri)
+puts res.body if res.is_a?(Net::HTTPSuccess)
+</code></pre>
+
+<h3 id="label-POST">POST</h3>
+
+<pre><code>uri = URI(&#39;http://www.example.com/search.cgi&#39;)
+res = Net::HTTP.post_form(uri, &#39;q&#39; =&gt; &#39;ruby&#39;, &#39;max&#39; =&gt; &#39;50&#39;)
+puts res.body
+</code></pre>
+
+<h3 id="label-POST+with+Multiple+Values">POST with Multiple Values</h3>
+
+<pre><code>uri = URI(&#39;http://www.example.com/search.cgi&#39;)
+res = Net::HTTP.post_form(uri, &#39;q&#39; =&gt; [&#39;ruby&#39;, &#39;perl&#39;], &#39;max&#39; =&gt; &#39;50&#39;)
+puts res.body
+</code></pre>
+
+<h2 id="label-How+to+use+Net%3A%3AHTTP">How to use Net::HTTP</h2>
+
+<p>The following example code can be used as the basis of a HTTP user-agent
+which can perform a variety of request types using persistent connections.</p>
+
+<pre><code>uri = URI(&#39;http://example.com/some_path?query=string&#39;)
+
+Net::HTTP.start(uri.host, uri.port) do |http|
+  request = Net::HTTP::Get.new uri.request_uri
+
+  response = http.request request # Net::HTTPResponse object
+end
+</code></pre>
+
+<p><a href="Net/HTTP.html#method-c-start">Net::HTTP.start</a> immediately
+creates a connection to an HTTP server which is kept open for the duration
+of the block.  The connection will remain open for multiple requests in the
+block if the server indicates it supports persistent connections.</p>
+
+<p>The request types Net::HTTP supports are listed below in the section “HTTP
+Request Classes”.</p>
+
+<p>If you wish to re-use a connection across multiple HTTP requests without
+automatically closing it you can use ::new instead of ::start.  request
+will automatically open a connection to the server if one is not currently
+open.  You can manually close the connection with finish.</p>
+
+<h3 id="label-Response+Data">Response <a href="Data.html">Data</a></h3>
+
+<pre><code>uri = URI(&#39;http://example.com/index.html&#39;)
+res = Net::HTTP.get_response(uri)
+
+# Headers
+res[&#39;Set-Cookie&#39;]            # =&gt; String
+res.get_fields(&#39;set-cookie&#39;) # =&gt; Array
+res.to_hash[&#39;set-cookie&#39;]    # =&gt; Array
+puts &quot;Headers: #{res.to_hash.inspect}&quot;
+
+# Status
+puts res.code       # =&gt; &#39;200&#39;
+puts res.message    # =&gt; &#39;OK&#39;
+puts res.class.name # =&gt; &#39;HTTPOK&#39;
+
+# Body
+puts res.body if res.response_body_permitted?
+</code></pre>
+
+<h3 id="label-Following+Redirection">Following Redirection</h3>
+
+<p>Each <a href="Net/HTTPResponse.html">Net::HTTPResponse</a> object belongs
+to a class for its response code.</p>
+
+<p>For example, all 2XX responses are instances of a Net::HTTPSuccess
+subclass, a 3XX response is an instance of a Net::HTTPRedirection subclass
+and a 200 response is an instance of the Net::HTTPOK class.  For details of
+response classes, see the section “HTTP Response Classes” below.</p>
+
+<p>Using a case statement you can handle various types of responses properly:</p>
+
+<pre><code>def fetch(uri_str, limit = 10)
+  # You should choose a better exception.
+  raise ArgumentError, &#39;too many HTTP redirects&#39; if limit == 0
+
+  response = Net::HTTP.get_response(URI(uri_str))
+
+  case response
+  when Net::HTTPSuccess then
+    response
+  when Net::HTTPRedirection then
+    location = response[&#39;location&#39;]
+    warn &quot;redirected to #{location}&quot;
+    fetch(location, limit - 1)
+  else
+    response.value
+  end
+end
+
+print fetch(&#39;http://www.ruby-lang.org&#39;)
+</code></pre>
+
+<h3 id="label-POST">POST</h3>
+
+<p>A POST can be made using the <a
+href="Net/HTTP/Post.html">Net::HTTP::Post</a> request class.  This example
+creates a urlencoded POST body:</p>
+
+<pre><code>uri = URI(&#39;http://www.example.com/todo.cgi&#39;)
+req = Net::HTTP::Post.new(uri.path)
+req.set_form_data(&#39;from&#39; =&gt; &#39;2005-01-01&#39;, &#39;to&#39; =&gt; &#39;2005-03-31&#39;)
+
+res = Net::HTTP.start(uri.hostname, uri.port) do |http|
+  http.request(req)
+end
+
+case res
+when Net::HTTPSuccess, Net::HTTPRedirection
+  # OK
+else
+  res.value
+end
+</code></pre>
+
+<p>At this time Net::HTTP does not support multipart/form-data.  To send
+multipart/form-data use <a
+href="Net/HTTPGenericRequest.html#method-i-body-3D">Net::HTTPGenericRequest#body=</a>
+and <a
+href="Net/HTTPHeader.html#method-i-content_type-3D">Net::HTTPHeader#content_type=</a>:</p>
+
+<pre><code>req = Net::HTTP::Post.new(uri.path)
+req.body = multipart_data
+req.content_type = &#39;multipart/form-data&#39;</code></pre>
+
+<p>Other requests that can contain a body such as PUT can be created in the
+same way using the corresponding request class (Net::HTTP::Put).</p>
+
+<h3 id="label-Setting+Headers">Setting Headers</h3>
+
+<p>The following example performs a conditional GET using the
+If-Modified-Since header.  If the files has not been modified since the
+time in the header a Not Modified response will be returned.  See RFC 2616
+section 9.3 for further details.</p>
+
+<pre><code>uri = URI(&#39;http://example.com/cached_response&#39;)
+file = File.stat &#39;cached_response&#39;
+
+req = Net::HTTP::Get.new(uri.request_uri)
+req[&#39;If-Modified-Since&#39;] = file.mtime.rfc2822
+
+res = Net::HTTP.start(uri.hostname, uri.port) {|http|
+  http.request(req)
+}
+
+open &#39;cached_response&#39;, &#39;w&#39; do |io|
+  io.write res.body
+end if res.is_a?(Net::HTTPSuccess)
+</code></pre>
+
+<h3 id="label-Basic+Authentication">Basic Authentication</h3>
+
+<p>Basic authentication is performed according to [RFC2617](<a
+href="http://www.ietf.org/rfc/rfc2617.txt">www.ietf.org/rfc/rfc2617.txt</a>)</p>
+
+<pre><code>uri = URI(&#39;http://example.com/index.html?key=value&#39;)
+
+req = Net::HTTP::Get.new(uri.request_uri)
+req.basic_auth &#39;user&#39;, &#39;pass&#39;
+
+res = Net::HTTP.start(uri.hostname, uri.port) {|http|
+  http.request(req)
+}
+puts res.body
+</code></pre>
+
+<h3 id="label-Streaming+Response+Bodies">Streaming Response Bodies</h3>
+
+<p>By default Net::HTTP reads an entire response into memory.  If you are
+handling large files or wish to implement a progress bar you can instead
+stream the body directly to an <a href="IO.html">IO</a>.</p>
+
+<pre><code>uri = URI(&#39;http://example.com/large_file&#39;)
+
+Net::HTTP.start(uri.host, uri.port) do |http|
+  request = Net::HTTP::Get.new uri.request_uri
+
+  http.request request do |response|
+    open &#39;large_file&#39;, &#39;w&#39; do |io|
+      response.read_body do |chunk|
+        io.write chunk
+      end
+    end
+  end
+end
+</code></pre>
+
+<h3 id="label-HTTPS">HTTPS</h3>
+
+<p>HTTPS is enabled for an HTTP connection by <a
+href="Net/HTTP.html#method-i-use_ssl-3D">Net::HTTP#use_ssl=</a>.</p>
+
+<pre><code>uri = URI(&#39;https://secure.example.com/some_path?query=string&#39;)
+
+Net::HTTP.start(uri.host, uri.port,
+  :use_ssl =&gt; uri.scheme == &#39;https&#39;).start do |http|
+  request = Net::HTTP::Get.new uri.request_uri
+
+  response = http.request request # Net::HTTPResponse object
+end
+</code></pre>
+
+<p>In previous versions of ruby you would need to require &#39;net/https&#39;
+to use HTTPS.  This is no longer true.</p>
+
+<h3 id="label-Proxies">Proxies</h3>
+
+<p>Net::HTTP::Proxy has the same methods as Net::HTTP but its instances always
+connect via the proxy instead of directly to the given host.</p>
+
+<pre><code>proxy_addr = &#39;your.proxy.host&#39;
+proxy_port = 8080
+
+Net::HTTP::Proxy(proxy_addr, proxy_port).start(&#39;www.example.com&#39;) {|http|
+  # always connect to your.proxy.addr:8080
+}
+</code></pre>
+
+<p>Net::HTTP::Proxy returns a Net::HTTP instance when proxy_addr is nil so
+there is no need for conditional code.</p>
+
+<p>See Net::HTTP::Proxy for further details and examples such as proxies that
+require a username and password.</p>
+
+<h2 id="label-HTTP+Request+Classes">HTTP Request Classes</h2>
+
+<p>Here is the HTTP request class hierarchy.</p>
+<ul><li>
+<p><a href="Net/HTTPRequest.html">Net::HTTPRequest</a></p>
+<ul><li>
+<p><a href="Net/HTTP/Get.html">Net::HTTP::Get</a></p>
+</li><li>
+<p><a href="Net/HTTP/Head.html">Net::HTTP::Head</a></p>
+</li><li>
+<p><a href="Net/HTTP/Post.html">Net::HTTP::Post</a></p>
+</li><li>
+<p><a href="Net/HTTP/Put.html">Net::HTTP::Put</a></p>
+</li><li>
+<p><a href="Net/HTTP/Proppatch.html">Net::HTTP::Proppatch</a></p>
+</li><li>
+<p><a href="Net/HTTP/Lock.html">Net::HTTP::Lock</a></p>
+</li><li>
+<p><a href="Net/HTTP/Unlock.html">Net::HTTP::Unlock</a></p>
+</li><li>
+<p><a href="Net/HTTP/Options.html">Net::HTTP::Options</a></p>
+</li><li>
+<p><a href="Net/HTTP/Propfind.html">Net::HTTP::Propfind</a></p>
+</li><li>
+<p><a href="Net/HTTP/Delete.html">Net::HTTP::Delete</a></p>
+</li><li>
+<p><a href="Net/HTTP/Move.html">Net::HTTP::Move</a></p>
+</li><li>
+<p><a href="Net/HTTP/Copy.html">Net::HTTP::Copy</a></p>
+</li><li>
+<p><a href="Net/HTTP/Mkcol.html">Net::HTTP::Mkcol</a></p>
+</li><li>
+<p><a href="Net/HTTP/Trace.html">Net::HTTP::Trace</a></p>
+</li></ul>
+</li></ul>
+
+<h2 id="label-HTTP+Response+Classes">HTTP Response Classes</h2>
+
+<p>Here is HTTP response class hierarchy.  All classes are defined in <a
+href="Net.html">Net</a> module and are subclasses of <a
+href="Net/HTTPResponse.html">Net::HTTPResponse</a>.</p>
+<dl class="rdoc-list note-list"><dt>HTTPUnknownResponse
+<dd>
+<p>For unhandled HTTP extensions</p>
+</dd><dt>HTTPInformation
+<dd>
+<p>1xx</p>
+</dd><dt>HTTPContinue
+<dd>
+<p>100</p>
+</dd><dt>HTTPSwitchProtocol
+<dd>
+<p>101</p>
+</dd><dt>HTTPSuccess
+<dd>
+<p>2xx</p>
+</dd><dt>HTTPOK
+<dd>
+<p>200</p>
+</dd><dt>HTTPCreated
+<dd>
+<p>201</p>
+</dd><dt>HTTPAccepted
+<dd>
+<p>202</p>
+</dd><dt>HTTPNonAuthoritativeInformation
+<dd>
+<p>203</p>
+</dd><dt>HTTPNoContent
+<dd>
+<p>204</p>
+</dd><dt>HTTPResetContent
+<dd>
+<p>205</p>
+</dd><dt>HTTPPartialContent
+<dd>
+<p>206</p>
+</dd><dt>HTTPRedirection
+<dd>
+<p>3xx</p>
+</dd><dt>HTTPMultipleChoice
+<dd>
+<p>300</p>
+</dd><dt>HTTPMovedPermanently
+<dd>
+<p>301</p>
+</dd><dt>HTTPFound
+<dd>
+<p>302</p>
+</dd><dt>HTTPSeeOther
+<dd>
+<p>303</p>
+</dd><dt>HTTPNotModified
+<dd>
+<p>304</p>
+</dd><dt>HTTPUseProxy
+<dd>
+<p>305</p>
+</dd><dt>HTTPTemporaryRedirect
+<dd>
+<p>307</p>
+</dd><dt>HTTPClientError
+<dd>
+<p>4xx</p>
+</dd><dt>HTTPBadRequest
+<dd>
+<p>400</p>
+</dd><dt>HTTPUnauthorized
+<dd>
+<p>401</p>
+</dd><dt>HTTPPaymentRequired
+<dd>
+<p>402</p>
+</dd><dt>HTTPForbidden
+<dd>
+<p>403</p>
+</dd><dt>HTTPNotFound
+<dd>
+<p>404</p>
+</dd><dt>HTTPMethodNotAllowed
+<dd>
+<p>405</p>
+</dd><dt>HTTPNotAcceptable
+<dd>
+<p>406</p>
+</dd><dt>HTTPProxyAuthenticationRequired
+<dd>
+<p>407</p>
+</dd><dt>HTTPRequestTimeOut
+<dd>
+<p>408</p>
+</dd><dt>HTTPConflict
+<dd>
+<p>409</p>
+</dd><dt>HTTPGone
+<dd>
+<p>410</p>
+</dd><dt>HTTPLengthRequired
+<dd>
+<p>411</p>
+</dd><dt>HTTPPreconditionFailed
+<dd>
+<p>412</p>
+</dd><dt>HTTPRequestEntityTooLarge
+<dd>
+<p>413</p>
+</dd><dt>HTTPRequestURITooLong
+<dd>
+<p>414</p>
+</dd><dt>HTTPUnsupportedMediaType
+<dd>
+<p>415</p>
+</dd><dt>HTTPRequestedRangeNotSatisfiable
+<dd>
+<p>416</p>
+</dd><dt>HTTPExpectationFailed
+<dd>
+<p>417</p>
+</dd><dt>HTTPServerError
+<dd>
+<p>5xx</p>
+</dd><dt>HTTPInternalServerError
+<dd>
+<p>500</p>
+</dd><dt>HTTPNotImplemented
+<dd>
+<p>501</p>
+</dd><dt>HTTPBadGateway
+<dd>
+<p>502</p>
+</dd><dt>HTTPServiceUnavailable
+<dd>
+<p>503</p>
+</dd><dt>HTTPGatewayTimeOut
+<dd>
+<p>504</p>
+</dd><dt>HTTPVersionNotSupported
+<dd>
+<p>505</p>
+</dd></dl>
+
+<p>There is also the Net::HTTPBadResponse exception which is raised when there
+is a protocol error.</p></td>
+            </tr>
+          
+        
+          <tr valign='top'>
+            <td class="attr-name">POP</td>
+            <td>=</td>
+            <td class="attr-value">POP3</td>
+          </tr>
+          
+            <tr valign='top'>
+              <td>&nbsp;</td>
+              <td colspan="2" class="attr-desc"><h1 id="label-Net%3A%3APOP3"><a href="Net/POP3.html">Net::POP3</a></h1>
+
+<h2 id="label-What+is+This+Library%3F">What is This Library?</h2>
+
+<p>This library provides functionality for retrieving email via <a
+href="Net/POP3.html">POP3</a>, the Post Office Protocol version 3. For
+details of <a href="Net/POP3.html">POP3</a>, see [RFC1939] (<a
+href="http://www.ietf.org/rfc/rfc1939.txt">www.ietf.org/rfc/rfc1939.txt</a>).</p>
+
+<h2 id="label-Examples">Examples</h2>
+
+<h3 id="label-Retrieving+Messages">Retrieving Messages</h3>
+
+<p>This example retrieves messages from the server and deletes them on the
+server.</p>
+
+<p>Messages are written to files named &#39;inbox/1&#39;, &#39;inbox/2&#39;,
+.… Replace &#39;pop.example.com&#39; with your <a
+href="Net/POP3.html">POP3</a> server address, and &#39;YourAccount&#39; and
+&#39;YourPassword&#39; with the appropriate account details.</p>
+
+<pre><code>require &#39;net/pop&#39;
+
+pop = Net::POP3.new(&#39;pop.example.com&#39;)
+pop.start(&#39;YourAccount&#39;, &#39;YourPassword&#39;)             # (1)
+if pop.mails.empty?
+  puts &#39;No mail.&#39;
+else
+  i = 0
+  pop.each_mail do |m|   # or &quot;pop.mails.each ...&quot;   # (2)
+    File.open(&quot;inbox/#{i}&quot;, &#39;w&#39;) do |f|
+      f.write m.pop
+    end
+    m.delete
+    i += 1
+  end
+  puts &quot;#{pop.mails.size} mails popped.&quot;
+end
+pop.finish                                           # (3)
+</code></pre>
+<ol><li>
+<p>Call <a href="Net/POP3.html#method-i-start">Net::POP3#start</a> and start
+<a href="Net/POP3.html">POP</a> session.</p>
+</li><li>
+<p>Access messages by using <a
+href="Net/POP3.html#method-i-each_mail">Net::POP3#each_mail</a> and/or <a
+href="Net/POP3.html#method-i-mails">Net::POP3#mails</a>.</p>
+</li><li>
+<p>Close <a href="Net/POP3.html">POP</a> session by calling <a
+href="Net/POP3.html#method-i-finish">Net::POP3#finish</a> or use the block
+form of start.</p>
+</li></ol>
+
+<h3 id="label-Shortened+Code">Shortened Code</h3>
+
+<p>The example above is very verbose. You can shorten the code by using some
+utility methods. First, the block form of <a
+href="Net/POP3.html#method-c-start">Net::POP3.start</a> can be used instead
+of <a href="Net/POP3.html#method-c-new">Net::POP3.new</a>, <a
+href="Net/POP3.html#method-i-start">Net::POP3#start</a> and <a
+href="Net/POP3.html#method-i-finish">Net::POP3#finish</a>.</p>
+
+<pre><code>require &#39;net/pop&#39;
+
+Net::POP3.start(&#39;pop.example.com&#39;, 110,
+                &#39;YourAccount&#39;, &#39;YourPassword&#39;) do |pop|
+  if pop.mails.empty?
+    puts &#39;No mail.&#39;
+  else
+    i = 0
+    pop.each_mail do |m|   # or &quot;pop.mails.each ...&quot;
+      File.open(&quot;inbox/#{i}&quot;, &#39;w&#39;) do |f|
+        f.write m.pop
+      end
+      m.delete
+      i += 1
+    end
+    puts &quot;#{pop.mails.size} mails popped.&quot;
+  end
+end
+</code></pre>
+
+<p><a href="Net/POP3.html#method-i-delete_all">Net::POP3#delete_all</a> is an
+alternative for each_mail and delete.</p>
+
+<pre><code>require &#39;net/pop&#39;
+
+Net::POP3.start(&#39;pop.example.com&#39;, 110,
+                &#39;YourAccount&#39;, &#39;YourPassword&#39;) do |pop|
+  if pop.mails.empty?
+    puts &#39;No mail.&#39;
+  else
+    i = 1
+    pop.delete_all do |m|
+      File.open(&quot;inbox/#{i}&quot;, &#39;w&#39;) do |f|
+        f.write m.pop
+      end
+      i += 1
+    end
+  end
+end
+</code></pre>
+
+<p>And here is an even shorter example.</p>
+
+<pre><code>require &#39;net/pop&#39;
+
+i = 0
+Net::POP3.delete_all(&#39;pop.example.com&#39;, 110,
+                     &#39;YourAccount&#39;, &#39;YourPassword&#39;) do |m|
+  File.open(&quot;inbox/#{i}&quot;, &#39;w&#39;) do |f|
+    f.write m.pop
+  end
+  i += 1
+end
+</code></pre>
+
+<h3 id="label-Memory+Space+Issues">Memory Space Issues</h3>
+
+<p>All the examples above get each message as one big string. This example
+avoids this.</p>
+
+<pre><code>require &#39;net/pop&#39;
+
+i = 1
+Net::POP3.delete_all(&#39;pop.example.com&#39;, 110,
+                     &#39;YourAccount&#39;, &#39;YourPassword&#39;) do |m|
+  File.open(&quot;inbox/#{i}&quot;, &#39;w&#39;) do |f|
+    m.pop do |chunk|    # get a message little by little.
+      f.write chunk
+    end
+    i += 1
+  end
+end
+</code></pre>
+
+<h3 id="label-Using+APOP">Using <a href="Net/APOP.html">APOP</a></h3>
+
+<p>The net/pop library supports <a href="Net/APOP.html">APOP</a>
+authentication. To use <a href="Net/APOP.html">APOP</a>, use the <a
+href="Net/APOP.html">Net::APOP</a> class instead of the <a
+href="Net/POP3.html">Net::POP3</a> class. You can use the utility method,
+<a href="Net/POP3.html">Net::POP3</a>.APOP(). For example:</p>
+
+<pre><code>require &#39;net/pop&#39;
+
+# Use APOP authentication if $isapop == true
+pop = Net::POP3.APOP($is_apop).new(&#39;apop.example.com&#39;, 110)
+pop.start(YourAccount&#39;, &#39;YourPassword&#39;) do |pop|
+  # Rest of the code is the same.
+end
+</code></pre>
+
+<h3 id="label-Fetch+Only+Selected+Mail+Using+%27UIDL%27+POP+Command">Fetch Only Selected <a href="Mail.html">Mail</a> Using &#39;UIDL&#39; <a href="Net/POP3.html">POP</a> Command</h3>
+
+<p>If your <a href="Net/POP3.html">POP</a> server provides UIDL functionality,
+you can grab only selected mails from the <a href="Net/POP3.html">POP</a>
+server. e.g.</p>
+
+<pre><code>def need_pop?( id )
+  # determine if we need pop this mail...
+end
+
+Net::POP3.start(&#39;pop.example.com&#39;, 110,
+                &#39;Your account&#39;, &#39;Your password&#39;) do |pop|
+  pop.mails.select { |m| need_pop?(m.unique_id) }.each do |m|
+    do_something(m.pop)
+  end
+end
+</code></pre>
+
+<p>The <a
+href="Net/POPMail.html#method-i-unique_id">Net::POPMail#unique_id</a>
+method returns the unique-id of the message as a String. Normally the
+unique-id is a hash of the message.</p></td>
+            </tr>
+          
+        
+          <tr valign='top'>
+            <td class="attr-name">POPSession</td>
+            <td>=</td>
+            <td class="attr-value">POP3</td>
+          </tr>
+          
+            <tr valign='top'>
+              <td>&nbsp;</td>
+              <td colspan="2" class="attr-desc"><h1 id="label-Net%3A%3APOP3"><a href="Net/POP3.html">Net::POP3</a></h1>
+
+<h2 id="label-What+is+This+Library%3F">What is This Library?</h2>
+
+<p>This library provides functionality for retrieving email via <a
+href="Net/POP3.html">POP3</a>, the Post Office Protocol version 3. For
+details of <a href="Net/POP3.html">POP3</a>, see [RFC1939] (<a
+href="http://www.ietf.org/rfc/rfc1939.txt">www.ietf.org/rfc/rfc1939.txt</a>).</p>
+
+<h2 id="label-Examples">Examples</h2>
+
+<h3 id="label-Retrieving+Messages">Retrieving Messages</h3>
+
+<p>This example retrieves messages from the server and deletes them on the
+server.</p>
+
+<p>Messages are written to files named &#39;inbox/1&#39;, &#39;inbox/2&#39;,
+.… Replace &#39;pop.example.com&#39; with your <a
+href="Net/POP3.html">POP3</a> server address, and &#39;YourAccount&#39; and
+&#39;YourPassword&#39; with the appropriate account details.</p>
+
+<pre><code>require &#39;net/pop&#39;
+
+pop = Net::POP3.new(&#39;pop.example.com&#39;)
+pop.start(&#39;YourAccount&#39;, &#39;YourPassword&#39;)             # (1)
+if pop.mails.empty?
+  puts &#39;No mail.&#39;
+else
+  i = 0
+  pop.each_mail do |m|   # or &quot;pop.mails.each ...&quot;   # (2)
+    File.open(&quot;inbox/#{i}&quot;, &#39;w&#39;) do |f|
+      f.write m.pop
+    end
+    m.delete
+    i += 1
+  end
+  puts &quot;#{pop.mails.size} mails popped.&quot;
+end
+pop.finish                                           # (3)
+</code></pre>
+<ol><li>
+<p>Call <a href="Net/POP3.html#method-i-start">Net::POP3#start</a> and start
+<a href="Net/POP3.html">POP</a> session.</p>
+</li><li>
+<p>Access messages by using <a
+href="Net/POP3.html#method-i-each_mail">Net::POP3#each_mail</a> and/or <a
+href="Net/POP3.html#method-i-mails">Net::POP3#mails</a>.</p>
+</li><li>
+<p>Close <a href="Net/POP3.html">POP</a> session by calling <a
+href="Net/POP3.html#method-i-finish">Net::POP3#finish</a> or use the block
+form of start.</p>
+</li></ol>
+
+<h3 id="label-Shortened+Code">Shortened Code</h3>
+
+<p>The example above is very verbose. You can shorten the code by using some
+utility methods. First, the block form of <a
+href="Net/POP3.html#method-c-start">Net::POP3.start</a> can be used instead
+of <a href="Net/POP3.html#method-c-new">Net::POP3.new</a>, <a
+href="Net/POP3.html#method-i-start">Net::POP3#start</a> and <a
+href="Net/POP3.html#method-i-finish">Net::POP3#finish</a>.</p>
+
+<pre><code>require &#39;net/pop&#39;
+
+Net::POP3.start(&#39;pop.example.com&#39;, 110,
+                &#39;YourAccount&#39;, &#39;YourPassword&#39;) do |pop|
+  if pop.mails.empty?
+    puts &#39;No mail.&#39;
+  else
+    i = 0
+    pop.each_mail do |m|   # or &quot;pop.mails.each ...&quot;
+      File.open(&quot;inbox/#{i}&quot;, &#39;w&#39;) do |f|
+        f.write m.pop
+      end
+      m.delete
+      i += 1
+    end
+    puts &quot;#{pop.mails.size} mails popped.&quot;
+  end
+end
+</code></pre>
+
+<p><a href="Net/POP3.html#method-i-delete_all">Net::POP3#delete_all</a> is an
+alternative for each_mail and delete.</p>
+
+<pre><code>require &#39;net/pop&#39;
+
+Net::POP3.start(&#39;pop.example.com&#39;, 110,
+                &#39;YourAccount&#39;, &#39;YourPassword&#39;) do |pop|
+  if pop.mails.empty?
+    puts &#39;No mail.&#39;
+  else
+    i = 1
+    pop.delete_all do |m|
+      File.open(&quot;inbox/#{i}&quot;, &#39;w&#39;) do |f|
+        f.write m.pop
+      end
+      i += 1
+    end
+  end
+end
+</code></pre>
+
+<p>And here is an even shorter example.</p>
+
+<pre><code>require &#39;net/pop&#39;
+
+i = 0
+Net::POP3.delete_all(&#39;pop.example.com&#39;, 110,
+                     &#39;YourAccount&#39;, &#39;YourPassword&#39;) do |m|
+  File.open(&quot;inbox/#{i}&quot;, &#39;w&#39;) do |f|
+    f.write m.pop
+  end
+  i += 1
+end
+</code></pre>
+
+<h3 id="label-Memory+Space+Issues">Memory Space Issues</h3>
+
+<p>All the examples above get each message as one big string. This example
+avoids this.</p>
+
+<pre><code>require &#39;net/pop&#39;
+
+i = 1
+Net::POP3.delete_all(&#39;pop.example.com&#39;, 110,
+                     &#39;YourAccount&#39;, &#39;YourPassword&#39;) do |m|
+  File.open(&quot;inbox/#{i}&quot;, &#39;w&#39;) do |f|
+    m.pop do |chunk|    # get a message little by little.
+      f.write chunk
+    end
+    i += 1
+  end
+end
+</code></pre>
+
+<h3 id="label-Using+APOP">Using <a href="Net/APOP.html">APOP</a></h3>
+
+<p>The net/pop library supports <a href="Net/APOP.html">APOP</a>
+authentication. To use <a href="Net/APOP.html">APOP</a>, use the <a
+href="Net/APOP.html">Net::APOP</a> class instead of the <a
+href="Net/POP3.html">Net::POP3</a> class. You can use the utility method,
+<a href="Net/POP3.html">Net::POP3</a>.APOP(). For example:</p>
+
+<pre><code>require &#39;net/pop&#39;
+
+# Use APOP authentication if $isapop == true
+pop = Net::POP3.APOP($is_apop).new(&#39;apop.example.com&#39;, 110)
+pop.start(YourAccount&#39;, &#39;YourPassword&#39;) do |pop|
+  # Rest of the code is the same.
+end
+</code></pre>
+
+<h3 id="label-Fetch+Only+Selected+Mail+Using+%27UIDL%27+POP+Command">Fetch Only Selected <a href="Mail.html">Mail</a> Using &#39;UIDL&#39; <a href="Net/POP3.html">POP</a> Command</h3>
+
+<p>If your <a href="Net/POP3.html">POP</a> server provides UIDL functionality,
+you can grab only selected mails from the <a href="Net/POP3.html">POP</a>
+server. e.g.</p>
+
+<pre><code>def need_pop?( id )
+  # determine if we need pop this mail...
+end
+
+Net::POP3.start(&#39;pop.example.com&#39;, 110,
+                &#39;Your account&#39;, &#39;Your password&#39;) do |pop|
+  pop.mails.select { |m| need_pop?(m.unique_id) }.each do |m|
+    do_something(m.pop)
+  end
+end
+</code></pre>
+
+<p>The <a
+href="Net/POPMail.html#method-i-unique_id">Net::POPMail#unique_id</a>
+method returns the unique-id of the message as a String. Normally the
+unique-id is a hash of the message.</p></td>
+            </tr>
+          
+        
+          <tr valign='top'>
+            <td class="attr-name">POP3Session</td>
+            <td>=</td>
+            <td class="attr-value">POP3</td>
+          </tr>
+          
+            <tr valign='top'>
+              <td>&nbsp;</td>
+              <td colspan="2" class="attr-desc"><h1 id="label-Net%3A%3APOP3"><a href="Net/POP3.html">Net::POP3</a></h1>
+
+<h2 id="label-What+is+This+Library%3F">What is This Library?</h2>
+
+<p>This library provides functionality for retrieving email via <a
+href="Net/POP3.html">POP3</a>, the Post Office Protocol version 3. For
+details of <a href="Net/POP3.html">POP3</a>, see [RFC1939] (<a
+href="http://www.ietf.org/rfc/rfc1939.txt">www.ietf.org/rfc/rfc1939.txt</a>).</p>
+
+<h2 id="label-Examples">Examples</h2>
+
+<h3 id="label-Retrieving+Messages">Retrieving Messages</h3>
+
+<p>This example retrieves messages from the server and deletes them on the
+server.</p>
+
+<p>Messages are written to files named &#39;inbox/1&#39;, &#39;inbox/2&#39;,
+.… Replace &#39;pop.example.com&#39; with your <a
+href="Net/POP3.html">POP3</a> server address, and &#39;YourAccount&#39; and
+&#39;YourPassword&#39; with the appropriate account details.</p>
+
+<pre><code>require &#39;net/pop&#39;
+
+pop = Net::POP3.new(&#39;pop.example.com&#39;)
+pop.start(&#39;YourAccount&#39;, &#39;YourPassword&#39;)             # (1)
+if pop.mails.empty?
+  puts &#39;No mail.&#39;
+else
+  i = 0
+  pop.each_mail do |m|   # or &quot;pop.mails.each ...&quot;   # (2)
+    File.open(&quot;inbox/#{i}&quot;, &#39;w&#39;) do |f|
+      f.write m.pop
+    end
+    m.delete
+    i += 1
+  end
+  puts &quot;#{pop.mails.size} mails popped.&quot;
+end
+pop.finish                                           # (3)
+</code></pre>
+<ol><li>
+<p>Call <a href="Net/POP3.html#method-i-start">Net::POP3#start</a> and start
+<a href="Net/POP3.html">POP</a> session.</p>
+</li><li>
+<p>Access messages by using <a
+href="Net/POP3.html#method-i-each_mail">Net::POP3#each_mail</a> and/or <a
+href="Net/POP3.html#method-i-mails">Net::POP3#mails</a>.</p>
+</li><li>
+<p>Close <a href="Net/POP3.html">POP</a> session by calling <a
+href="Net/POP3.html#method-i-finish">Net::POP3#finish</a> or use the block
+form of start.</p>
+</li></ol>
+
+<h3 id="label-Shortened+Code">Shortened Code</h3>
+
+<p>The example above is very verbose. You can shorten the code by using some
+utility methods. First, the block form of <a
+href="Net/POP3.html#method-c-start">Net::POP3.start</a> can be used instead
+of <a href="Net/POP3.html#method-c-new">Net::POP3.new</a>, <a
+href="Net/POP3.html#method-i-start">Net::POP3#start</a> and <a
+href="Net/POP3.html#method-i-finish">Net::POP3#finish</a>.</p>
+
+<pre><code>require &#39;net/pop&#39;
+
+Net::POP3.start(&#39;pop.example.com&#39;, 110,
+                &#39;YourAccount&#39;, &#39;YourPassword&#39;) do |pop|
+  if pop.mails.empty?
+    puts &#39;No mail.&#39;
+  else
+    i = 0
+    pop.each_mail do |m|   # or &quot;pop.mails.each ...&quot;
+      File.open(&quot;inbox/#{i}&quot;, &#39;w&#39;) do |f|
+        f.write m.pop
+      end
+      m.delete
+      i += 1
+    end
+    puts &quot;#{pop.mails.size} mails popped.&quot;
+  end
+end
+</code></pre>
+
+<p><a href="Net/POP3.html#method-i-delete_all">Net::POP3#delete_all</a> is an
+alternative for each_mail and delete.</p>
+
+<pre><code>require &#39;net/pop&#39;
+
+Net::POP3.start(&#39;pop.example.com&#39;, 110,
+                &#39;YourAccount&#39;, &#39;YourPassword&#39;) do |pop|
+  if pop.mails.empty?
+    puts &#39;No mail.&#39;
+  else
+    i = 1
+    pop.delete_all do |m|
+      File.open(&quot;inbox/#{i}&quot;, &#39;w&#39;) do |f|
+        f.write m.pop
+      end
+      i += 1
+    end
+  end
+end
+</code></pre>
+
+<p>And here is an even shorter example.</p>
+
+<pre><code>require &#39;net/pop&#39;
+
+i = 0
+Net::POP3.delete_all(&#39;pop.example.com&#39;, 110,
+                     &#39;YourAccount&#39;, &#39;YourPassword&#39;) do |m|
+  File.open(&quot;inbox/#{i}&quot;, &#39;w&#39;) do |f|
+    f.write m.pop
+  end
+  i += 1
+end
+</code></pre>
+
+<h3 id="label-Memory+Space+Issues">Memory Space Issues</h3>
+
+<p>All the examples above get each message as one big string. This example
+avoids this.</p>
+
+<pre><code>require &#39;net/pop&#39;
+
+i = 1
+Net::POP3.delete_all(&#39;pop.example.com&#39;, 110,
+                     &#39;YourAccount&#39;, &#39;YourPassword&#39;) do |m|
+  File.open(&quot;inbox/#{i}&quot;, &#39;w&#39;) do |f|
+    m.pop do |chunk|    # get a message little by little.
+      f.write chunk
+    end
+    i += 1
+  end
+end
+</code></pre>
+
+<h3 id="label-Using+APOP">Using <a href="Net/APOP.html">APOP</a></h3>
+
+<p>The net/pop library supports <a href="Net/APOP.html">APOP</a>
+authentication. To use <a href="Net/APOP.html">APOP</a>, use the <a
+href="Net/APOP.html">Net::APOP</a> class instead of the <a
+href="Net/POP3.html">Net::POP3</a> class. You can use the utility method,
+<a href="Net/POP3.html">Net::POP3</a>.APOP(). For example:</p>
+
+<pre><code>require &#39;net/pop&#39;
+
+# Use APOP authentication if $isapop == true
+pop = Net::POP3.APOP($is_apop).new(&#39;apop.example.com&#39;, 110)
+pop.start(YourAccount&#39;, &#39;YourPassword&#39;) do |pop|
+  # Rest of the code is the same.
+end
+</code></pre>
+
+<h3 id="label-Fetch+Only+Selected+Mail+Using+%27UIDL%27+POP+Command">Fetch Only Selected <a href="Mail.html">Mail</a> Using &#39;UIDL&#39; <a href="Net/POP3.html">POP</a> Command</h3>
+
+<p>If your <a href="Net/POP3.html">POP</a> server provides UIDL functionality,
+you can grab only selected mails from the <a href="Net/POP3.html">POP</a>
+server. e.g.</p>
+
+<pre><code>def need_pop?( id )
+  # determine if we need pop this mail...
+end
+
+Net::POP3.start(&#39;pop.example.com&#39;, 110,
+                &#39;Your account&#39;, &#39;Your password&#39;) do |pop|
+  pop.mails.select { |m| need_pop?(m.unique_id) }.each do |m|
+    do_something(m.pop)
+  end
+end
+</code></pre>
+
+<p>The <a
+href="Net/POPMail.html#method-i-unique_id">Net::POPMail#unique_id</a>
+method returns the unique-id of the message as a String. Normally the
+unique-id is a hash of the message.</p></td>
+            </tr>
+          
+        
+          <tr valign='top'>
+            <td class="attr-name">APOPSession</td>
+            <td>=</td>
+            <td class="attr-value">APOP</td>
+          </tr>
+          
+            <tr valign='top'>
+              <td>&nbsp;</td>
+              <td colspan="2" class="attr-desc"><p>This class is equivalent to <a href="Net/POP3.html">POP3</a>, except that
+it uses <a href="Net/APOP.html">APOP</a> authentication.</p></td>
+            </tr>
+          
+        
+          <tr valign='top'>
+            <td class="attr-name">SMTPSession</td>
+            <td>=</td>
+            <td class="attr-value">SMTP</td>
+          </tr>
+          
+            <tr valign='top'>
+              <td>&nbsp;</td>
+              <td colspan="2" class="attr-desc"><h1 id="label-Net%3A%3ASMTP"><a href="Net/SMTP.html">Net::SMTP</a></h1>
+
+<h2 id="label-What+is+This+Library%3F">What is This Library?</h2>
+
+<p>This library provides functionality to send internet mail via <a
+href="Net/SMTP.html">SMTP</a>, the Simple <a href="Mail.html">Mail</a>
+Transfer Protocol. For details of <a href="Net/SMTP.html">SMTP</a> itself,
+see [RFC2821] (<a
+href="http://www.ietf.org/rfc/rfc2821.txt">www.ietf.org/rfc/rfc2821.txt</a>).</p>
+
+<h2 id="label-What+is+This+Library+NOT%3F">What is This Library NOT?</h2>
+
+<p>This library does NOT provide functions to compose internet mails. You must
+create them by yourself. If you want better mail support, try RubyMail or
+TMail or search for alternatives in <a
+href="https://rubygems.org/">RubyGems.org</a> or <a
+href="https://www.ruby-toolbox.com/">The Ruby Toolbox</a>.</p>
+
+<p>FYI: the official documentation on internet mail is: [RFC2822] (<a
+href="http://www.ietf.org/rfc/rfc2822.txt">www.ietf.org/rfc/rfc2822.txt</a>).</p>
+
+<h2 id="label-Examples">Examples</h2>
+
+<h3 id="label-Sending+Messages">Sending Messages</h3>
+
+<p>You must open a connection to an <a href="Net/SMTP.html">SMTP</a> server
+before sending messages. The first argument is the address of your <a
+href="Net/SMTP.html">SMTP</a> server, and the second argument is the port
+number. Using <a href="Net/SMTP.html#method-c-start">Net::SMTP.start</a>
+with a block is the simplest way to do this. This way, the <a
+href="Net/SMTP.html">SMTP</a> connection is closed automatically after the
+block is executed.</p>
+
+<pre><code>require &#39;net/smtp&#39;
+Net::SMTP.start(&#39;your.smtp.server&#39;, 25) do |smtp|
+  # Use the SMTP object smtp only in this block.
+end
+</code></pre>
+
+<p>Replace &#39;your.smtp.server&#39; with your <a
+href="Net/SMTP.html">SMTP</a> server. Normally your system manager or
+internet provider supplies a server for you.</p>
+
+<p>Then you can send messages.</p>
+
+<pre><code>msgstr = &lt;&lt;END_OF_MESSAGE
+From: Your Name &lt;your@mail.address&gt;
+To: Destination Address &lt;someone@example.com&gt;
+Subject: test message
+Date: Sat, 23 Jun 2001 16:26:43 +0900
+Message-Id: &lt;unique.message.id.string@example.com&gt;
+
+This is a test message.
+END_OF_MESSAGE
+
+require &#39;net/smtp&#39;
+Net::SMTP.start(&#39;your.smtp.server&#39;, 25) do |smtp|
+  smtp.send_message msgstr,
+                    &#39;your@mail.address&#39;,
+                    &#39;his_address@example.com&#39;
+end
+</code></pre>
+
+<h3 id="label-Closing+the+Session">Closing the Session</h3>
+
+<p>You MUST close the <a href="Net/SMTP.html">SMTP</a> session after sending
+messages, by calling the finish method:</p>
+
+<pre><code># using SMTP#finish
+smtp = Net::SMTP.start(&#39;your.smtp.server&#39;, 25)
+smtp.send_message msgstr, &#39;from@address&#39;, &#39;to@address&#39;
+smtp.finish</code></pre>
+
+<p>You can also use the block form of <a
+href="Net/SMTP.html#method-c-start">Net::SMTP.start</a>/SMTP#start.  This
+closes the <a href="Net/SMTP.html">SMTP</a> session automatically:</p>
+
+<pre><code># using block form of SMTP.start
+Net::SMTP.start(&#39;your.smtp.server&#39;, 25) do |smtp|
+  smtp.send_message msgstr, &#39;from@address&#39;, &#39;to@address&#39;
+end
+</code></pre>
+
+<p>I strongly recommend this scheme.  This form is simpler and more robust.</p>
+
+<h3 id="label-HELO+domain">HELO domain</h3>
+
+<p>In almost all situations, you must provide a third argument to <a
+href="Net/SMTP.html#method-c-start">Net::SMTP.start</a>/SMTP#start. This is
+the domain name which you are on (the host to send mail from). It is called
+the “HELO domain”. The <a href="Net/SMTP.html">SMTP</a> server will judge
+whether it should send or reject the <a href="Net/SMTP.html">SMTP</a>
+session by inspecting the HELO domain.</p>
+
+<pre><code>Net::SMTP.start(&#39;your.smtp.server&#39;, 25,
+                &#39;mail.from.domain&#39;) { |smtp| ... }
+</code></pre>
+
+<h3 id="label-SMTP+Authentication"><a href="Net/SMTP.html">SMTP</a> Authentication</h3>
+
+<p>The <a href="Net/SMTP.html">Net::SMTP</a> class supports three
+authentication schemes; PLAIN, LOGIN and CRAM MD5.  (SMTP Authentication:
+[RFC2554]) To use <a href="Net/SMTP.html">SMTP</a> authentication, pass
+extra arguments to <a
+href="Net/SMTP.html#method-c-start">Net::SMTP.start</a>/SMTP#start.</p>
+
+<pre><code># PLAIN
+Net::SMTP.start(&#39;your.smtp.server&#39;, 25, &#39;mail.from.domain&#39;,
+                &#39;Your Account&#39;, &#39;Your Password&#39;, :plain)
+# LOGIN
+Net::SMTP.start(&#39;your.smtp.server&#39;, 25, &#39;mail.from.domain&#39;,
+                &#39;Your Account&#39;, &#39;Your Password&#39;, :login)
+
+# CRAM MD5
+Net::SMTP.start(&#39;your.smtp.server&#39;, 25, &#39;mail.from.domain&#39;,
+                &#39;Your Account&#39;, &#39;Your Password&#39;, :cram_md5)</code></pre></td>
+            </tr>
+          
+        
+      </table>
+    
+
+
+    
+
+
+    <!-- Methods -->
+              </div>
+
+    </div>
+  </body>
+</html>    

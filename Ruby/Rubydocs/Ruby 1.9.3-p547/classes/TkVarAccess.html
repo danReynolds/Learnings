@@ -1,0 +1,324 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>TkVarAccess</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="../css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/main.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/github.css" type="text/css" media="screen" />
+<script src="../js/jquery-1.3.2.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/jquery-effect.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+
+<body>     
+    <div class="banner">
+        
+        <h1>
+            <span class="type">Class</span> 
+            TkVarAccess 
+            
+                <span class="parent">&lt; 
+                    
+                    <a href="TkVariable.html">TkVariable</a>
+                    
+                </span>
+            
+        </h1>
+        <ul class="files">
+            
+            <li><a href="../files/ext/tk/lib/tk/variable_rb.html">ext/tk/lib/tk/variable.rb</a></li>
+            
+        </ul>
+    </div>
+    <div id="bodyContent">
+        <div id="content">
+  
+
+
+  
+
+
+  
+  
+
+
+  
+
+
+  
+    <!-- Method ref -->
+    <div class="sectiontitle">Methods</div>
+    <dl class="methods">
+      
+        <dt>N</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-new">new</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-c-new">new</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-c-new_hash">new_hash</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+    </dl>
+  
+
+  
+
+
+
+  
+
+    
+
+    
+
+    
+
+
+    
+
+
+    <!-- Methods -->
+    
+      <div class="sectiontitle">Class Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-c-new">
+            
+              <b>new</b>(name, *args)
+            
+            <a href="../classes/TkVarAccess.html#method-c-new" name="method-c-new" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-new_source')" id="l_method-c-new_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/d71eab14fb5a711f43957aeb27ebad06af050193/ext/tk/lib/tk/variable.rb#L1655" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-new_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tk/variable.rb, line 1655</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">name</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">args</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">name</span>.<span class="ruby-identifier">kind_of?</span>(<span class="ruby-constant">TkVariable</span>)
+    <span class="ruby-identifier">name</span>.<span class="ruby-identifier">value</span> = <span class="ruby-identifier">args</span>[<span class="ruby-number">0</span>] <span class="ruby-keyword">unless</span> <span class="ruby-identifier">args</span>.<span class="ruby-identifier">empty?</span>
+    <span class="ruby-keyword">return</span> <span class="ruby-identifier">name</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-identifier">name</span> = <span class="ruby-identifier">name</span>.<span class="ruby-identifier">to_s</span>
+  <span class="ruby-identifier">v</span> = <span class="ruby-keyword">nil</span>
+  <span class="ruby-constant">TkVar_ID_TBL</span>.<span class="ruby-identifier">mutex</span>.<span class="ruby-identifier">synchronize</span>{
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">v</span> = <span class="ruby-constant">TkVar_ID_TBL</span>[<span class="ruby-identifier">name</span>]
+      <span class="ruby-identifier">v</span>.<span class="ruby-identifier">value</span> = <span class="ruby-identifier">args</span>[<span class="ruby-number">0</span>] <span class="ruby-keyword">unless</span> <span class="ruby-identifier">args</span>.<span class="ruby-identifier">empty?</span>
+      <span class="ruby-keyword">return</span> <span class="ruby-identifier">v</span>
+    <span class="ruby-keyword">else</span>
+      (<span class="ruby-identifier">v</span> = <span class="ruby-keyword">self</span>.<span class="ruby-identifier">allocate</span>).<span class="ruby-identifier">instance_eval</span>{
+        <span class="ruby-ivar">@id</span> = <span class="ruby-identifier">name</span>
+        <span class="ruby-constant">TkVar_ID_TBL</span>[<span class="ruby-ivar">@id</span>] = <span class="ruby-keyword">self</span>
+        <span class="ruby-ivar">@var</span> = <span class="ruby-ivar">@id</span>
+      }
+    <span class="ruby-keyword">end</span>
+  }
+
+  <span class="ruby-identifier">v</span>.<span class="ruby-identifier">instance_eval</span>{ <span class="ruby-identifier">initialize</span>(<span class="ruby-identifier">name</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">args</span>) }
+  <span class="ruby-identifier">v</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-new">
+            
+              <b>new</b>(varname, val=nil)
+            
+            <a href="../classes/TkVarAccess.html#method-c-new" name="method-c-new" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-new_source')" id="l_method-c-new_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/d71eab14fb5a711f43957aeb27ebad06af050193/ext/tk/lib/tk/variable.rb#L1716" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-new_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tk/variable.rb, line 1716</span>
+  <span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">initialize</span>(<span class="ruby-identifier">varname</span>, <span class="ruby-identifier">val</span>=<span class="ruby-keyword">nil</span>)
+    <span class="ruby-comment"># @id = varname</span>
+    <span class="ruby-comment"># TkVar_ID_TBL[@id] = self</span>
+
+    <span class="ruby-comment"># @var  = @id</span>
+    <span class="ruby-ivar">@elem</span> = <span class="ruby-keyword">nil</span>
+
+    <span class="ruby-ivar">@def_default</span> = <span class="ruby-keyword">false</span>
+    <span class="ruby-ivar">@default_val</span> = <span class="ruby-keyword">nil</span>
+
+    <span class="ruby-ivar">@trace_var</span>  = <span class="ruby-keyword">nil</span>
+    <span class="ruby-ivar">@trace_elem</span> = <span class="ruby-keyword">nil</span>
+    <span class="ruby-ivar">@trace_opts</span> = <span class="ruby-keyword">nil</span>
+
+    <span class="ruby-ivar">@type</span> = <span class="ruby-keyword">nil</span>
+    <span class="ruby-identifier">var</span> = <span class="ruby-keyword">self</span>
+    <span class="ruby-ivar">@element_type</span> = <span class="ruby-constant">Hash</span>.<span class="ruby-identifier">new</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">k</span>,<span class="ruby-identifier">v</span><span class="ruby-operator">|</span> <span class="ruby-identifier">var</span>.<span class="ruby-identifier">default_value_type</span> }
+
+    <span class="ruby-comment"># is an element?</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-ivar">@id</span> <span class="ruby-operator">=~</span> <span class="ruby-regexp">/^([^(]+)\((.+)\)$/</span>
+      <span class="ruby-comment"># is an element --&gt; var == $1, elem == $2</span>
+      <span class="ruby-ivar">@var</span>  = <span class="ruby-node">$1</span>
+      <span class="ruby-ivar">@elem</span> = <span class="ruby-node">$2</span>
+    <span class="ruby-keyword">end</span>
+
+    <span class="ruby-comment"># teach Tk-ip that @id is global var</span>
+    <span class="ruby-constant">INTERP</span>.<span class="ruby-identifier">_invoke_without_enc</span>(<span class="ruby-string">&#39;global&#39;</span>, <span class="ruby-ivar">@var</span>)
+<span class="ruby-comment">    begin
+      INTERP._invoke_without_enc(&#39;global&#39;, @id)
+    rescue =&gt; e
+      if @id =~ /^(.+)\([^()]+\)$/
+        # is an element --&gt; varname == $1
+        INTERP._invoke_without_enc(&#39;global&#39;, $1)
+      else
+        fail e
+      end
+    end
+</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">val</span>
+      <span class="ruby-keyword">if</span> <span class="ruby-identifier">val</span>.<span class="ruby-identifier">kind_of?</span>(<span class="ruby-constant">Hash</span>)
+        <span class="ruby-comment"># assoc-array variable</span>
+        <span class="ruby-keyword">self</span>[<span class="ruby-string">&#39;&#39;</span>] = <span class="ruby-number">0</span>
+        <span class="ruby-keyword">self</span>.<span class="ruby-identifier">clear</span>
+      <span class="ruby-keyword">end</span>
+      <span class="ruby-comment">#s = &#39;&quot;&#39; + _get_eval_string(val).gsub(/[\[\]$&quot;]/, &#39;\\\\\&amp;&#39;) + &#39;&quot;&#39; #&quot;</span>
+      <span class="ruby-comment">#s = &#39;&quot;&#39; + _get_eval_string(val).gsub(/[\[\]$&quot;\\]/, &#39;\\\\\&amp;&#39;) + &#39;&quot;&#39; #&quot;</span>
+      <span class="ruby-comment">#INTERP._eval(Kernel.format(&#39;global %s; set %s %s&#39;, @id, @id, s))</span>
+      <span class="ruby-comment">#INTERP._set_global_var(@id, _toUTF8(_get_eval_string(val)))</span>
+      <span class="ruby-keyword">self</span>.<span class="ruby-identifier">value</span> = <span class="ruby-identifier">val</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-new_hash">
+            
+              <b>new_hash</b>(name, *args)
+            
+            <a href="../classes/TkVarAccess.html#method-c-new_hash" name="method-c-new_hash" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-new_hash_source')" id="l_method-c-new_hash_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/d71eab14fb5a711f43957aeb27ebad06af050193/ext/tk/lib/tk/variable.rb#L1680" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-new_hash_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tk/variable.rb, line 1680</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">new_hash</span>(<span class="ruby-identifier">name</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">args</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">name</span>.<span class="ruby-identifier">kind_of?</span>(<span class="ruby-constant">TkVariable</span>)
+    <span class="ruby-keyword">unless</span> <span class="ruby-identifier">name</span>.<span class="ruby-identifier">is_hash?</span>
+      <span class="ruby-identifier">fail</span> <span class="ruby-constant">ArgumentError</span>, <span class="ruby-string">&quot;already exist as a scalar variable&quot;</span>
+    <span class="ruby-keyword">end</span>
+    <span class="ruby-identifier">name</span>.<span class="ruby-identifier">value</span> = <span class="ruby-identifier">args</span>[<span class="ruby-number">0</span>] <span class="ruby-keyword">unless</span> <span class="ruby-identifier">args</span>.<span class="ruby-identifier">empty?</span>
+    <span class="ruby-keyword">return</span> <span class="ruby-identifier">name</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-identifier">name</span> = <span class="ruby-identifier">name</span>.<span class="ruby-identifier">to_s</span>
+  <span class="ruby-identifier">v</span> = <span class="ruby-keyword">nil</span>
+  <span class="ruby-constant">TkVar_ID_TBL</span>.<span class="ruby-identifier">mutex</span>.<span class="ruby-identifier">synchronize</span>{
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">v</span> = <span class="ruby-constant">TkVar_ID_TBL</span>[<span class="ruby-identifier">name</span>]
+      <span class="ruby-keyword">unless</span> <span class="ruby-identifier">v</span>.<span class="ruby-identifier">is_hash?</span>
+        <span class="ruby-identifier">fail</span> <span class="ruby-constant">ArgumentError</span>, <span class="ruby-string">&quot;already exist as a scalar variable&quot;</span>
+      <span class="ruby-keyword">end</span>
+      <span class="ruby-identifier">v</span>.<span class="ruby-identifier">value</span> = <span class="ruby-identifier">args</span>[<span class="ruby-number">0</span>] <span class="ruby-keyword">unless</span> <span class="ruby-identifier">args</span>.<span class="ruby-identifier">empty?</span>
+      <span class="ruby-keyword">return</span> <span class="ruby-identifier">v</span>
+    <span class="ruby-keyword">else</span>
+      (<span class="ruby-identifier">v</span> = <span class="ruby-keyword">self</span>.<span class="ruby-identifier">allocate</span>).<span class="ruby-identifier">instance_eval</span>{
+        <span class="ruby-ivar">@id</span> = <span class="ruby-identifier">name</span>
+        <span class="ruby-constant">TkVar_ID_TBL</span>[<span class="ruby-ivar">@id</span>] = <span class="ruby-keyword">self</span>
+        <span class="ruby-ivar">@var</span> = <span class="ruby-ivar">@id</span>
+      }
+    <span class="ruby-keyword">end</span>
+  }
+
+  <span class="ruby-constant">INTERP</span>.<span class="ruby-identifier">_invoke_without_enc</span>(<span class="ruby-string">&#39;global&#39;</span>, <span class="ruby-identifier">name</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">args</span>.<span class="ruby-identifier">empty?</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-constant">INTERP</span>.<span class="ruby-identifier">_invoke_without_enc</span>(<span class="ruby-string">&#39;array&#39;</span>, <span class="ruby-string">&#39;exist&#39;</span>, <span class="ruby-identifier">name</span>) <span class="ruby-operator">==</span> <span class="ruby-string">&#39;0&#39;</span>
+    <span class="ruby-identifier">v</span>.<span class="ruby-identifier">instance_eval</span>{ <span class="ruby-identifier">initialize</span>(<span class="ruby-identifier">name</span>, {}) }  <span class="ruby-comment"># force creating</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">v</span>.<span class="ruby-identifier">instance_eval</span>{ <span class="ruby-identifier">initialize</span>(<span class="ruby-identifier">name</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">args</span>) }
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">v</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                        </div>
+
+    </div>
+  </body>
+</html>    

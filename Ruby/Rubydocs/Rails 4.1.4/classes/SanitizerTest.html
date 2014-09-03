@@ -1,0 +1,2433 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>SanitizerTest</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="../css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/main.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/github.css" type="text/css" media="screen" />
+<script src="../js/jquery-1.3.2.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/jquery-effect.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+
+<body>     
+    <div class="banner">
+        
+        <h1>
+            <span class="type">Class</span> 
+            SanitizerTest 
+            
+                <span class="parent">&lt; 
+                    
+                    <a href="ActionController/TestCase.html">ActionController::TestCase</a>
+                    
+                </span>
+            
+        </h1>
+        <ul class="files">
+            
+            <li><a href="../files/actionview/test/template/html-scanner/sanitizer_test_rb.html">actionview/test/template/html-scanner/sanitizer_test.rb</a></li>
+            
+        </ul>
+    </div>
+    <div id="bodyContent">
+        <div id="content">
+  
+
+
+  
+
+
+  
+  
+
+
+  
+
+
+  
+    <!-- Method ref -->
+    <div class="sectiontitle">Methods</div>
+    <dl class="methods">
+      
+        <dt>A</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-assert_sanitized">assert_sanitized</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>S</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-sanitize_css">sanitize_css</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-setup">setup</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>T</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-test_allow_colons_in_path_component">test_allow_colons_in_path_component</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-test_sanitize_form">test_sanitize_form</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-test_sanitize_image_src">test_sanitize_image_src</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-test_sanitize_javascript_href">test_sanitize_javascript_href</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-test_sanitize_js_handlers">test_sanitize_js_handlers</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-test_sanitize_plaintext">test_sanitize_plaintext</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-test_sanitize_script">test_sanitize_script</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-test_should_accept_good_protocols">test_should_accept_good_protocols</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-test_should_accept_good_protocols_ignoring_case">test_should_accept_good_protocols_ignoring_case</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-test_should_accept_good_protocols_ignoring_space">test_should_accept_good_protocols_ignoring_space</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-test_should_allow_anchors">test_should_allow_anchors</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-test_should_allow_custom_tags">test_should_allow_custom_tags</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-test_should_allow_custom_tags_with_attributes">test_should_allow_custom_tags_with_attributes</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-test_should_allow_custom_tags_with_custom_attributes">test_should_allow_custom_tags_with_custom_attributes</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-test_should_allow_only_custom_tags">test_should_allow_only_custom_tags</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-test_should_block_script_tag">test_should_block_script_tag</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-test_should_flag_bad_protocols">test_should_flag_bad_protocols</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-test_should_handle_blank_text">test_should_handle_blank_text</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-test_should_handle_non_html">test_should_handle_non_html</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-test_should_not_fall_for_ridiculous_hack">test_should_not_fall_for_ridiculous_hack</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-test_should_not_mangle_urls_with_ampersand">test_should_not_mangle_urls_with_ampersand</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-test_should_raise_argument_error_if_attributes_is_not_enumerable">test_should_raise_argument_error_if_attributes_is_not_enumerable</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-test_should_raise_argument_error_if_tags_is_not_enumerable">test_should_raise_argument_error_if_tags_is_not_enumerable</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-test_should_reject_hex_codes_in_protocol">test_should_reject_hex_codes_in_protocol</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-test_should_sanitize_across_newlines">test_should_sanitize_across_newlines</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-test_should_sanitize_attributes">test_should_sanitize_attributes</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-test_should_sanitize_cdata_section">test_should_sanitize_cdata_section</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-test_should_sanitize_div_background_image_unicode_encoded">test_should_sanitize_div_background_image_unicode_encoded</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-test_should_sanitize_div_style_expression">test_should_sanitize_div_style_expression</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-test_should_sanitize_half_open_scripts">test_should_sanitize_half_open_scripts</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-test_should_sanitize_illegal_style_properties">test_should_sanitize_illegal_style_properties</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-test_should_sanitize_img_dynsrc_lowsrc">test_should_sanitize_img_dynsrc_lowsrc</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-test_should_sanitize_img_vbscript">test_should_sanitize_img_vbscript</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-test_should_sanitize_invalid_script_tag">test_should_sanitize_invalid_script_tag</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-test_should_sanitize_invalid_tag_names">test_should_sanitize_invalid_tag_names</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-test_should_sanitize_invalid_tag_names_in_single_tags">test_should_sanitize_invalid_tag_names_in_single_tags</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-test_should_sanitize_neverending_attribute">test_should_sanitize_neverending_attribute</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-test_should_sanitize_non_alpha_and_non_digit_characters_in_tags">test_should_sanitize_non_alpha_and_non_digit_characters_in_tags</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-test_should_sanitize_script_tag_with_multiple_open_brackets">test_should_sanitize_script_tag_with_multiple_open_brackets</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-test_should_sanitize_tag_broken_up_by_null">test_should_sanitize_tag_broken_up_by_null</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-test_should_sanitize_unclosed_script">test_should_sanitize_unclosed_script</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-test_should_sanitize_unterminated_cdata_section">test_should_sanitize_unterminated_cdata_section</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-test_should_sanitize_with_trailing_space">test_should_sanitize_with_trailing_space</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-test_should_sanitize_xul_style_attributes">test_should_sanitize_xul_style_attributes</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-test_strip_links">test_strip_links</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-test_strip_tags">test_strip_tags</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-test_strip_tags_with_quote">test_strip_tags_with_quote</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-test_x03a">test_x03a</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+    </dl>
+  
+
+  
+
+
+
+  
+
+    
+
+    
+
+    
+
+
+    
+
+
+    <!-- Methods -->
+        
+      <div class="sectiontitle">Instance Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-i-setup">
+            
+              <b>setup</b>()
+            
+            <a href="../classes/SanitizerTest.html#method-i-setup" name="method-i-setup" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-setup_source')" id="l_method-i-setup_source">show</a>
+                
+                  | <a href="https://github.com/rails/rails/blob/eb23754ebbfbf2d465cc0f900720704fb3703633/actionview/test/template/html-scanner/sanitizer_test.rb#L4" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-setup_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File actionview/test/template/html-scanner/sanitizer_test.rb, line 4</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">setup</span>
+  <span class="ruby-ivar">@sanitizer</span> = <span class="ruby-keyword">nil</span> <span class="ruby-comment"># used by assert_sanitizer</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-test_allow_colons_in_path_component">
+            
+              <b>test_allow_colons_in_path_component</b>()
+            
+            <a href="../classes/SanitizerTest.html#method-i-test_allow_colons_in_path_component" name="method-i-test_allow_colons_in_path_component" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>RFC 3986, sec 4.2</p>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-test_allow_colons_in_path_component_source')" id="l_method-i-test_allow_colons_in_path_component_source">show</a>
+                
+                  | <a href="https://github.com/rails/rails/blob/eb23754ebbfbf2d465cc0f900720704fb3703633/actionview/test/template/html-scanner/sanitizer_test.rb#L85" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-test_allow_colons_in_path_component_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File actionview/test/template/html-scanner/sanitizer_test.rb, line 85</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">test_allow_colons_in_path_component</span>
+  <span class="ruby-identifier">assert_sanitized</span>(<span class="ruby-string">&quot;&lt;a href=\&quot;./this:that\&quot;&gt;foo&lt;/a&gt;&quot;</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-test_sanitize_form">
+            
+              <b>test_sanitize_form</b>()
+            
+            <a href="../classes/SanitizerTest.html#method-i-test_sanitize_form" name="method-i-test_sanitize_form" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-test_sanitize_form_source')" id="l_method-i-test_sanitize_form_source">show</a>
+                
+                  | <a href="https://github.com/rails/rails/blob/eb23754ebbfbf2d465cc0f900720704fb3703633/actionview/test/template/html-scanner/sanitizer_test.rb#L46" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-test_sanitize_form_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File actionview/test/template/html-scanner/sanitizer_test.rb, line 46</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">test_sanitize_form</span>
+  <span class="ruby-identifier">assert_sanitized</span> <span class="ruby-string">&quot;&lt;form action=\&quot;/foo/bar\&quot; method=\&quot;post\&quot;&gt;&lt;input&gt;&lt;/form&gt;&quot;</span>, <span class="ruby-string">&#39;&#39;</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-test_sanitize_image_src">
+            
+              <b>test_sanitize_image_src</b>()
+            
+            <a href="../classes/SanitizerTest.html#method-i-test_sanitize_image_src" name="method-i-test_sanitize_image_src" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-test_sanitize_image_src_source')" id="l_method-i-test_sanitize_image_src_source">show</a>
+                
+                  | <a href="https://github.com/rails/rails/blob/eb23754ebbfbf2d465cc0f900720704fb3703633/actionview/test/template/html-scanner/sanitizer_test.rb#L69" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-test_sanitize_image_src_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File actionview/test/template/html-scanner/sanitizer_test.rb, line 69</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">test_sanitize_image_src</span>
+  <span class="ruby-identifier">raw</span> = <span class="ruby-string">%Q{src=&quot;javascript:bang&quot; &lt;img src=&quot;javascript:bang&quot; width=&quot;5&quot;&gt;foo&lt;/img&gt;, &lt;span src=&quot;javascript:bang&quot;&gt;bar&lt;/span&gt;}</span>
+  <span class="ruby-identifier">assert_sanitized</span> <span class="ruby-identifier">raw</span>, <span class="ruby-string">%Q{src=&quot;javascript:bang&quot; &lt;img width=&quot;5&quot;&gt;foo&lt;/img&gt;, &lt;span&gt;bar&lt;/span&gt;}</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-test_sanitize_javascript_href">
+            
+              <b>test_sanitize_javascript_href</b>()
+            
+            <a href="../classes/SanitizerTest.html#method-i-test_sanitize_javascript_href" name="method-i-test_sanitize_javascript_href" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-test_sanitize_javascript_href_source')" id="l_method-i-test_sanitize_javascript_href_source">show</a>
+                
+                  | <a href="https://github.com/rails/rails/blob/eb23754ebbfbf2d465cc0f900720704fb3703633/actionview/test/template/html-scanner/sanitizer_test.rb#L64" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-test_sanitize_javascript_href_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File actionview/test/template/html-scanner/sanitizer_test.rb, line 64</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">test_sanitize_javascript_href</span>
+  <span class="ruby-identifier">raw</span> = <span class="ruby-string">%Q{href=&quot;javascript:bang&quot; &lt;a href=&quot;javascript:bang&quot; name=&quot;hello&quot;&gt;foo&lt;/a&gt;, &lt;span href=&quot;javascript:bang&quot;&gt;bar&lt;/span&gt;}</span>
+  <span class="ruby-identifier">assert_sanitized</span> <span class="ruby-identifier">raw</span>, <span class="ruby-string">%Q{href=&quot;javascript:bang&quot; &lt;a name=&quot;hello&quot;&gt;foo&lt;/a&gt;, &lt;span&gt;bar&lt;/span&gt;}</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-test_sanitize_js_handlers">
+            
+              <b>test_sanitize_js_handlers</b>()
+            
+            <a href="../classes/SanitizerTest.html#method-i-test_sanitize_js_handlers" name="method-i-test_sanitize_js_handlers" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-test_sanitize_js_handlers_source')" id="l_method-i-test_sanitize_js_handlers_source">show</a>
+                
+                  | <a href="https://github.com/rails/rails/blob/eb23754ebbfbf2d465cc0f900720704fb3703633/actionview/test/template/html-scanner/sanitizer_test.rb#L59" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-test_sanitize_js_handlers_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File actionview/test/template/html-scanner/sanitizer_test.rb, line 59</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">test_sanitize_js_handlers</span>
+  <span class="ruby-identifier">raw</span> = <span class="ruby-node">%Q{onthis=&quot;do that&quot; &lt;a href=&quot;#&quot; onclick=&quot;hello&quot; name=&quot;foo&quot; onbogus=&quot;remove me&quot;&gt;hello&lt;/a&gt;}</span>
+  <span class="ruby-identifier">assert_sanitized</span> <span class="ruby-identifier">raw</span>, <span class="ruby-node">%Q{onthis=&quot;do that&quot; &lt;a name=&quot;foo&quot; href=&quot;#&quot;&gt;hello&lt;/a&gt;}</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-test_sanitize_plaintext">
+            
+              <b>test_sanitize_plaintext</b>()
+            
+            <a href="../classes/SanitizerTest.html#method-i-test_sanitize_plaintext" name="method-i-test_sanitize_plaintext" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-test_sanitize_plaintext_source')" id="l_method-i-test_sanitize_plaintext_source">show</a>
+                
+                  | <a href="https://github.com/rails/rails/blob/eb23754ebbfbf2d465cc0f900720704fb3703633/actionview/test/template/html-scanner/sanitizer_test.rb#L50" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-test_sanitize_plaintext_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File actionview/test/template/html-scanner/sanitizer_test.rb, line 50</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">test_sanitize_plaintext</span>
+  <span class="ruby-identifier">raw</span> = <span class="ruby-string">&quot;&lt;plaintext&gt;&lt;span&gt;foo&lt;/span&gt;&lt;/plaintext&gt;&quot;</span>
+  <span class="ruby-identifier">assert_sanitized</span> <span class="ruby-identifier">raw</span>, <span class="ruby-string">&quot;&lt;span&gt;foo&lt;/span&gt;&quot;</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-test_sanitize_script">
+            
+              <b>test_sanitize_script</b>()
+            
+            <a href="../classes/SanitizerTest.html#method-i-test_sanitize_script" name="method-i-test_sanitize_script" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-test_sanitize_script_source')" id="l_method-i-test_sanitize_script_source">show</a>
+                
+                  | <a href="https://github.com/rails/rails/blob/eb23754ebbfbf2d465cc0f900720704fb3703633/actionview/test/template/html-scanner/sanitizer_test.rb#L55" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-test_sanitize_script_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File actionview/test/template/html-scanner/sanitizer_test.rb, line 55</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">test_sanitize_script</span>
+  <span class="ruby-identifier">assert_sanitized</span> <span class="ruby-string">&quot;a b c&lt;script language=\&quot;Javascript\&quot;&gt;blah blah blah&lt;/script&gt;d e f&quot;</span>, <span class="ruby-string">&quot;a b cd e f&quot;</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-test_should_accept_good_protocols">
+            
+              <b>test_should_accept_good_protocols</b>()
+            
+            <a href="../classes/SanitizerTest.html#method-i-test_should_accept_good_protocols" name="method-i-test_should_accept_good_protocols" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-test_should_accept_good_protocols_source')" id="l_method-i-test_should_accept_good_protocols_source">show</a>
+                
+                  | <a href="https://github.com/rails/rails/blob/eb23754ebbfbf2d465cc0f900720704fb3703633/actionview/test/template/html-scanner/sanitizer_test.rb#L173" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-test_should_accept_good_protocols_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File actionview/test/template/html-scanner/sanitizer_test.rb, line 173</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">test_should_accept_good_protocols</span>
+  <span class="ruby-identifier">sanitizer</span> = <span class="ruby-constant">HTML</span><span class="ruby-operator">::</span><span class="ruby-constant">WhiteListSanitizer</span>.<span class="ruby-identifier">new</span>
+  <span class="ruby-constant">HTML</span><span class="ruby-operator">::</span><span class="ruby-constant">WhiteListSanitizer</span>.<span class="ruby-identifier">allowed_protocols</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">proto</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">assert</span> <span class="ruby-operator">!</span><span class="ruby-identifier">sanitizer</span>.<span class="ruby-identifier">send</span>(<span class="ruby-value">:contains_bad_protocols?</span>, <span class="ruby-string">&#39;src&#39;</span>, <span class="ruby-node">&quot;#{proto}://good&quot;</span>)
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-test_should_accept_good_protocols_ignoring_case">
+            
+              <b>test_should_accept_good_protocols_ignoring_case</b>()
+            
+            <a href="../classes/SanitizerTest.html#method-i-test_should_accept_good_protocols_ignoring_case" name="method-i-test_should_accept_good_protocols_ignoring_case" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-test_should_accept_good_protocols_ignoring_case_source')" id="l_method-i-test_should_accept_good_protocols_ignoring_case_source">show</a>
+                
+                  | <a href="https://github.com/rails/rails/blob/eb23754ebbfbf2d465cc0f900720704fb3703633/actionview/test/template/html-scanner/sanitizer_test.rb#L159" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-test_should_accept_good_protocols_ignoring_case_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File actionview/test/template/html-scanner/sanitizer_test.rb, line 159</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">test_should_accept_good_protocols_ignoring_case</span>
+  <span class="ruby-identifier">sanitizer</span> = <span class="ruby-constant">HTML</span><span class="ruby-operator">::</span><span class="ruby-constant">WhiteListSanitizer</span>.<span class="ruby-identifier">new</span>
+  <span class="ruby-constant">HTML</span><span class="ruby-operator">::</span><span class="ruby-constant">WhiteListSanitizer</span>.<span class="ruby-identifier">allowed_protocols</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">proto</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">assert</span> <span class="ruby-operator">!</span><span class="ruby-identifier">sanitizer</span>.<span class="ruby-identifier">send</span>(<span class="ruby-value">:contains_bad_protocols?</span>, <span class="ruby-string">&#39;src&#39;</span>, <span class="ruby-node">&quot;#{proto.capitalize}://good&quot;</span>)
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-test_should_accept_good_protocols_ignoring_space">
+            
+              <b>test_should_accept_good_protocols_ignoring_space</b>()
+            
+            <a href="../classes/SanitizerTest.html#method-i-test_should_accept_good_protocols_ignoring_space" name="method-i-test_should_accept_good_protocols_ignoring_space" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-test_should_accept_good_protocols_ignoring_space_source')" id="l_method-i-test_should_accept_good_protocols_ignoring_space_source">show</a>
+                
+                  | <a href="https://github.com/rails/rails/blob/eb23754ebbfbf2d465cc0f900720704fb3703633/actionview/test/template/html-scanner/sanitizer_test.rb#L166" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-test_should_accept_good_protocols_ignoring_space_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File actionview/test/template/html-scanner/sanitizer_test.rb, line 166</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">test_should_accept_good_protocols_ignoring_space</span>
+  <span class="ruby-identifier">sanitizer</span> = <span class="ruby-constant">HTML</span><span class="ruby-operator">::</span><span class="ruby-constant">WhiteListSanitizer</span>.<span class="ruby-identifier">new</span>
+  <span class="ruby-constant">HTML</span><span class="ruby-operator">::</span><span class="ruby-constant">WhiteListSanitizer</span>.<span class="ruby-identifier">allowed_protocols</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">proto</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">assert</span> <span class="ruby-operator">!</span><span class="ruby-identifier">sanitizer</span>.<span class="ruby-identifier">send</span>(<span class="ruby-value">:contains_bad_protocols?</span>, <span class="ruby-string">&#39;src&#39;</span>, <span class="ruby-node">&quot; #{proto}://good&quot;</span>)
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-test_should_allow_anchors">
+            
+              <b>test_should_allow_anchors</b>()
+            
+            <a href="../classes/SanitizerTest.html#method-i-test_should_allow_anchors" name="method-i-test_should_allow_anchors" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-test_should_allow_anchors_source')" id="l_method-i-test_should_allow_anchors_source">show</a>
+                
+                  | <a href="https://github.com/rails/rails/blob/eb23754ebbfbf2d465cc0f900720704fb3703633/actionview/test/template/html-scanner/sanitizer_test.rb#L80" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-test_should_allow_anchors_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File actionview/test/template/html-scanner/sanitizer_test.rb, line 80</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">test_should_allow_anchors</span>
+  <span class="ruby-identifier">assert_sanitized</span> <span class="ruby-string">%Q(&lt;a href=&quot;foo&quot; onclick=&quot;bar&quot;&gt;&lt;script&gt;baz&lt;/script&gt;&lt;/a&gt;)</span>, <span class="ruby-string">%Q(&lt;a href=&quot;foo&quot;&gt;&lt;/a&gt;)</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-test_should_allow_custom_tags">
+            
+              <b>test_should_allow_custom_tags</b>()
+            
+            <a href="../classes/SanitizerTest.html#method-i-test_should_allow_custom_tags" name="method-i-test_should_allow_custom_tags" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-test_should_allow_custom_tags_source')" id="l_method-i-test_should_allow_custom_tags_source">show</a>
+                
+                  | <a href="https://github.com/rails/rails/blob/eb23754ebbfbf2d465cc0f900720704fb3703633/actionview/test/template/html-scanner/sanitizer_test.rb#L104" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-test_should_allow_custom_tags_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File actionview/test/template/html-scanner/sanitizer_test.rb, line 104</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">test_should_allow_custom_tags</span>
+  <span class="ruby-identifier">text</span> = <span class="ruby-string">&quot;&lt;u&gt;foo&lt;/u&gt;&quot;</span>
+  <span class="ruby-identifier">sanitizer</span> = <span class="ruby-constant">HTML</span><span class="ruby-operator">::</span><span class="ruby-constant">WhiteListSanitizer</span>.<span class="ruby-identifier">new</span>
+  <span class="ruby-identifier">assert_equal</span>(<span class="ruby-identifier">text</span>, <span class="ruby-identifier">sanitizer</span>.<span class="ruby-identifier">sanitize</span>(<span class="ruby-identifier">text</span>, <span class="ruby-value">:tags</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-node">%w(u)</span>))
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-test_should_allow_custom_tags_with_attributes">
+            
+              <b>test_should_allow_custom_tags_with_attributes</b>()
+            
+            <a href="../classes/SanitizerTest.html#method-i-test_should_allow_custom_tags_with_attributes" name="method-i-test_should_allow_custom_tags_with_attributes" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-test_should_allow_custom_tags_with_attributes_source')" id="l_method-i-test_should_allow_custom_tags_with_attributes_source">show</a>
+                
+                  | <a href="https://github.com/rails/rails/blob/eb23754ebbfbf2d465cc0f900720704fb3703633/actionview/test/template/html-scanner/sanitizer_test.rb#L116" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-test_should_allow_custom_tags_with_attributes_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File actionview/test/template/html-scanner/sanitizer_test.rb, line 116</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">test_should_allow_custom_tags_with_attributes</span>
+  <span class="ruby-identifier">text</span> = <span class="ruby-string">%Q(&lt;blockquote cite=&quot;http://example.com/&quot;&gt;foo&lt;/blockquote&gt;)</span>
+  <span class="ruby-identifier">sanitizer</span> = <span class="ruby-constant">HTML</span><span class="ruby-operator">::</span><span class="ruby-constant">WhiteListSanitizer</span>.<span class="ruby-identifier">new</span>
+  <span class="ruby-identifier">assert_equal</span>(<span class="ruby-identifier">text</span>, <span class="ruby-identifier">sanitizer</span>.<span class="ruby-identifier">sanitize</span>(<span class="ruby-identifier">text</span>))
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-test_should_allow_custom_tags_with_custom_attributes">
+            
+              <b>test_should_allow_custom_tags_with_custom_attributes</b>()
+            
+            <a href="../classes/SanitizerTest.html#method-i-test_should_allow_custom_tags_with_custom_attributes" name="method-i-test_should_allow_custom_tags_with_custom_attributes" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-test_should_allow_custom_tags_with_custom_attributes_source')" id="l_method-i-test_should_allow_custom_tags_with_custom_attributes_source">show</a>
+                
+                  | <a href="https://github.com/rails/rails/blob/eb23754ebbfbf2d465cc0f900720704fb3703633/actionview/test/template/html-scanner/sanitizer_test.rb#L122" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-test_should_allow_custom_tags_with_custom_attributes_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File actionview/test/template/html-scanner/sanitizer_test.rb, line 122</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">test_should_allow_custom_tags_with_custom_attributes</span>
+  <span class="ruby-identifier">text</span> = <span class="ruby-string">%Q(&lt;blockquote foo=&quot;bar&quot;&gt;Lorem ipsum&lt;/blockquote&gt;)</span>
+  <span class="ruby-identifier">sanitizer</span> = <span class="ruby-constant">HTML</span><span class="ruby-operator">::</span><span class="ruby-constant">WhiteListSanitizer</span>.<span class="ruby-identifier">new</span>
+  <span class="ruby-identifier">assert_equal</span>(<span class="ruby-identifier">text</span>, <span class="ruby-identifier">sanitizer</span>.<span class="ruby-identifier">sanitize</span>(<span class="ruby-identifier">text</span>, <span class="ruby-value">:attributes</span> =<span class="ruby-operator">&gt;</span> [<span class="ruby-string">&#39;foo&#39;</span>]))
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-test_should_allow_only_custom_tags">
+            
+              <b>test_should_allow_only_custom_tags</b>()
+            
+            <a href="../classes/SanitizerTest.html#method-i-test_should_allow_only_custom_tags" name="method-i-test_should_allow_only_custom_tags" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-test_should_allow_only_custom_tags_source')" id="l_method-i-test_should_allow_only_custom_tags_source">show</a>
+                
+                  | <a href="https://github.com/rails/rails/blob/eb23754ebbfbf2d465cc0f900720704fb3703633/actionview/test/template/html-scanner/sanitizer_test.rb#L110" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-test_should_allow_only_custom_tags_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File actionview/test/template/html-scanner/sanitizer_test.rb, line 110</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">test_should_allow_only_custom_tags</span>
+  <span class="ruby-identifier">text</span> = <span class="ruby-string">&quot;&lt;u&gt;foo&lt;/u&gt; with &lt;i&gt;bar&lt;/i&gt;&quot;</span>
+  <span class="ruby-identifier">sanitizer</span> = <span class="ruby-constant">HTML</span><span class="ruby-operator">::</span><span class="ruby-constant">WhiteListSanitizer</span>.<span class="ruby-identifier">new</span>
+  <span class="ruby-identifier">assert_equal</span>(<span class="ruby-string">&quot;&lt;u&gt;foo&lt;/u&gt; with bar&quot;</span>, <span class="ruby-identifier">sanitizer</span>.<span class="ruby-identifier">sanitize</span>(<span class="ruby-identifier">text</span>, <span class="ruby-value">:tags</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-node">%w(u)</span>))
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-test_should_block_script_tag">
+            
+              <b>test_should_block_script_tag</b>()
+            
+            <a href="../classes/SanitizerTest.html#method-i-test_should_block_script_tag" name="method-i-test_should_block_script_tag" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-test_should_block_script_tag_source')" id="l_method-i-test_should_block_script_tag_source">show</a>
+                
+                  | <a href="https://github.com/rails/rails/blob/eb23754ebbfbf2d465cc0f900720704fb3703633/actionview/test/template/html-scanner/sanitizer_test.rb#L185" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-test_should_block_script_tag_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File actionview/test/template/html-scanner/sanitizer_test.rb, line 185</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">test_should_block_script_tag</span>
+  <span class="ruby-identifier">assert_sanitized</span> <span class="ruby-string">%Q(&lt;SCRIPT\nSRC=http://ha.ckers.org/xss.js&gt;&lt;/SCRIPT&gt;)</span>, <span class="ruby-string">&quot;&quot;</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-test_should_flag_bad_protocols">
+            
+              <b>test_should_flag_bad_protocols</b>()
+            
+            <a href="../classes/SanitizerTest.html#method-i-test_should_flag_bad_protocols" name="method-i-test_should_flag_bad_protocols" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-test_should_flag_bad_protocols_source')" id="l_method-i-test_should_flag_bad_protocols_source">show</a>
+                
+                  | <a href="https://github.com/rails/rails/blob/eb23754ebbfbf2d465cc0f900720704fb3703633/actionview/test/template/html-scanner/sanitizer_test.rb#L152" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-test_should_flag_bad_protocols_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File actionview/test/template/html-scanner/sanitizer_test.rb, line 152</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">test_should_flag_bad_protocols</span>
+  <span class="ruby-identifier">sanitizer</span> = <span class="ruby-constant">HTML</span><span class="ruby-operator">::</span><span class="ruby-constant">WhiteListSanitizer</span>.<span class="ruby-identifier">new</span>
+  <span class="ruby-node">%w(about chrome data disk hcp help javascript livescript lynxcgi lynxexec ms-help ms-its mhtml mocha opera res resource shell vbscript view-source vnd.ms.radio wysiwyg)</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">proto</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">assert</span> <span class="ruby-identifier">sanitizer</span>.<span class="ruby-identifier">send</span>(<span class="ruby-value">:contains_bad_protocols?</span>, <span class="ruby-string">&#39;src&#39;</span>, <span class="ruby-node">&quot;#{proto}://bad&quot;</span>)
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-test_should_handle_blank_text">
+            
+              <b>test_should_handle_blank_text</b>()
+            
+            <a href="../classes/SanitizerTest.html#method-i-test_should_handle_blank_text" name="method-i-test_should_handle_blank_text" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-test_should_handle_blank_text_source')" id="l_method-i-test_should_handle_blank_text_source">show</a>
+                
+                  | <a href="https://github.com/rails/rails/blob/eb23754ebbfbf2d465cc0f900720704fb3703633/actionview/test/template/html-scanner/sanitizer_test.rb#L99" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-test_should_handle_blank_text_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File actionview/test/template/html-scanner/sanitizer_test.rb, line 99</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">test_should_handle_blank_text</span>
+  <span class="ruby-identifier">assert_sanitized</span> <span class="ruby-keyword">nil</span>
+  <span class="ruby-identifier">assert_sanitized</span> <span class="ruby-string">&#39;&#39;</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-test_should_handle_non_html">
+            
+              <b>test_should_handle_non_html</b>()
+            
+            <a href="../classes/SanitizerTest.html#method-i-test_should_handle_non_html" name="method-i-test_should_handle_non_html" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-test_should_handle_non_html_source')" id="l_method-i-test_should_handle_non_html_source">show</a>
+                
+                  | <a href="https://github.com/rails/rails/blob/eb23754ebbfbf2d465cc0f900720704fb3703633/actionview/test/template/html-scanner/sanitizer_test.rb#L95" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-test_should_handle_non_html_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File actionview/test/template/html-scanner/sanitizer_test.rb, line 95</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">test_should_handle_non_html</span>
+  <span class="ruby-identifier">assert_sanitized</span> <span class="ruby-string">&#39;abc&#39;</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-test_should_not_fall_for_ridiculous_hack">
+            
+              <b>test_should_not_fall_for_ridiculous_hack</b>()
+            
+            <a href="../classes/SanitizerTest.html#method-i-test_should_not_fall_for_ridiculous_hack" name="method-i-test_should_not_fall_for_ridiculous_hack" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-test_should_not_fall_for_ridiculous_hack_source')" id="l_method-i-test_should_not_fall_for_ridiculous_hack_source">show</a>
+                
+                  | <a href="https://github.com/rails/rails/blob/eb23754ebbfbf2d465cc0f900720704fb3703633/actionview/test/template/html-scanner/sanitizer_test.rb#L231" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-test_should_not_fall_for_ridiculous_hack_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File actionview/test/template/html-scanner/sanitizer_test.rb, line 231</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">test_should_not_fall_for_ridiculous_hack</span>
+  <span class="ruby-identifier">img_hack</span> = <span class="ruby-string">%Q(&lt;IMG\nSRC\n=\n&quot;\nj\na\nv\na\ns\nc\nr\ni\np\nt\n:\na\nl\ne\nr\nt\n(\n&#39;\nX\nS\nS\n&#39;\n)\n&quot;\n&gt;)</span>
+  <span class="ruby-identifier">assert_sanitized</span> <span class="ruby-identifier">img_hack</span>, <span class="ruby-string">&quot;&lt;img&gt;&quot;</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-test_should_not_mangle_urls_with_ampersand">
+            
+              <b>test_should_not_mangle_urls_with_ampersand</b>()
+            
+            <a href="../classes/SanitizerTest.html#method-i-test_should_not_mangle_urls_with_ampersand" name="method-i-test_should_not_mangle_urls_with_ampersand" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-test_should_not_mangle_urls_with_ampersand_source')" id="l_method-i-test_should_not_mangle_urls_with_ampersand_source">show</a>
+                
+                  | <a href="https://github.com/rails/rails/blob/eb23754ebbfbf2d465cc0f900720704fb3703633/actionview/test/template/html-scanner/sanitizer_test.rb#L300" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-test_should_not_mangle_urls_with_ampersand_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File actionview/test/template/html-scanner/sanitizer_test.rb, line 300</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">test_should_not_mangle_urls_with_ampersand</span>
+   <span class="ruby-identifier">assert_sanitized</span> <span class="ruby-string">%Q{&lt;a href=\&quot;http://www.domain.com?var1=1&amp;amp;var2=2\&quot;&gt;my link&lt;/a&gt;}</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-test_should_raise_argument_error_if_attributes_is_not_enumerable">
+            
+              <b>test_should_raise_argument_error_if_attributes_is_not_enumerable</b>()
+            
+            <a href="../classes/SanitizerTest.html#method-i-test_should_raise_argument_error_if_attributes_is_not_enumerable" name="method-i-test_should_raise_argument_error_if_attributes_is_not_enumerable" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-test_should_raise_argument_error_if_attributes_is_not_enumerable_source')" id="l_method-i-test_should_raise_argument_error_if_attributes_is_not_enumerable_source">show</a>
+                
+                  | <a href="https://github.com/rails/rails/blob/eb23754ebbfbf2d465cc0f900720704fb3703633/actionview/test/template/html-scanner/sanitizer_test.rb#L137" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-test_should_raise_argument_error_if_attributes_is_not_enumerable_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File actionview/test/template/html-scanner/sanitizer_test.rb, line 137</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">test_should_raise_argument_error_if_attributes_is_not_enumerable</span>
+  <span class="ruby-identifier">sanitizer</span> = <span class="ruby-constant">HTML</span><span class="ruby-operator">::</span><span class="ruby-constant">WhiteListSanitizer</span>.<span class="ruby-identifier">new</span>
+  <span class="ruby-identifier">e</span> = <span class="ruby-identifier">assert_raise</span>(<span class="ruby-constant">ArgumentError</span>) <span class="ruby-keyword">do</span>
+    <span class="ruby-identifier">sanitizer</span>.<span class="ruby-identifier">sanitize</span>(<span class="ruby-string">&#39;&#39;</span>, <span class="ruby-value">:attributes</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&#39;foo&#39;</span>)
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-identifier">assert_equal</span> <span class="ruby-string">&quot;You should pass :attributes as an Enumerable&quot;</span>, <span class="ruby-identifier">e</span>.<span class="ruby-identifier">message</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-test_should_raise_argument_error_if_tags_is_not_enumerable">
+            
+              <b>test_should_raise_argument_error_if_tags_is_not_enumerable</b>()
+            
+            <a href="../classes/SanitizerTest.html#method-i-test_should_raise_argument_error_if_tags_is_not_enumerable" name="method-i-test_should_raise_argument_error_if_tags_is_not_enumerable" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-test_should_raise_argument_error_if_tags_is_not_enumerable_source')" id="l_method-i-test_should_raise_argument_error_if_tags_is_not_enumerable_source">show</a>
+                
+                  | <a href="https://github.com/rails/rails/blob/eb23754ebbfbf2d465cc0f900720704fb3703633/actionview/test/template/html-scanner/sanitizer_test.rb#L128" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-test_should_raise_argument_error_if_tags_is_not_enumerable_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File actionview/test/template/html-scanner/sanitizer_test.rb, line 128</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">test_should_raise_argument_error_if_tags_is_not_enumerable</span>
+  <span class="ruby-identifier">sanitizer</span> = <span class="ruby-constant">HTML</span><span class="ruby-operator">::</span><span class="ruby-constant">WhiteListSanitizer</span>.<span class="ruby-identifier">new</span>
+  <span class="ruby-identifier">e</span> = <span class="ruby-identifier">assert_raise</span>(<span class="ruby-constant">ArgumentError</span>) <span class="ruby-keyword">do</span>
+    <span class="ruby-identifier">sanitizer</span>.<span class="ruby-identifier">sanitize</span>(<span class="ruby-string">&#39;&#39;</span>, <span class="ruby-value">:tags</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&#39;foo&#39;</span>)
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-identifier">assert_equal</span> <span class="ruby-string">&quot;You should pass :tags as an Enumerable&quot;</span>, <span class="ruby-identifier">e</span>.<span class="ruby-identifier">message</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-test_should_reject_hex_codes_in_protocol">
+            
+              <b>test_should_reject_hex_codes_in_protocol</b>()
+            
+            <a href="../classes/SanitizerTest.html#method-i-test_should_reject_hex_codes_in_protocol" name="method-i-test_should_reject_hex_codes_in_protocol" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-test_should_reject_hex_codes_in_protocol_source')" id="l_method-i-test_should_reject_hex_codes_in_protocol_source">show</a>
+                
+                  | <a href="https://github.com/rails/rails/blob/eb23754ebbfbf2d465cc0f900720704fb3703633/actionview/test/template/html-scanner/sanitizer_test.rb#L180" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-test_should_reject_hex_codes_in_protocol_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File actionview/test/template/html-scanner/sanitizer_test.rb, line 180</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">test_should_reject_hex_codes_in_protocol</span>
+  <span class="ruby-identifier">assert_sanitized</span> <span class="ruby-node">%Q(&lt;a href=&quot;&amp;#37;6A&amp;#37;61&amp;#37;76&amp;#37;61&amp;#37;73&amp;#37;63&amp;#37;72&amp;#37;69&amp;#37;70&amp;#37;74&amp;#37;3A&amp;#37;61&amp;#37;6C&amp;#37;65&amp;#37;72&amp;#37;74&amp;#37;28&amp;#37;22&amp;#37;58&amp;#37;53&amp;#37;53&amp;#37;22&amp;#37;29&quot;&gt;1&lt;/a&gt;)</span>, <span class="ruby-string">&quot;&lt;a&gt;1&lt;/a&gt;&quot;</span>
+  <span class="ruby-identifier">assert</span> <span class="ruby-ivar">@sanitizer</span>.<span class="ruby-identifier">send</span>(<span class="ruby-value">:contains_bad_protocols?</span>, <span class="ruby-string">&#39;src&#39;</span>, <span class="ruby-string">&quot;%6A%61%76%61%73%63%72%69%70%74%3A%61%6C%65%72%74%28%22%58%53%53%22%29&quot;</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-test_should_sanitize_across_newlines">
+            
+              <b>test_should_sanitize_across_newlines</b>()
+            
+            <a href="../classes/SanitizerTest.html#method-i-test_should_sanitize_across_newlines" name="method-i-test_should_sanitize_across_newlines" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-test_should_sanitize_across_newlines_source')" id="l_method-i-test_should_sanitize_across_newlines_source">show</a>
+                
+                  | <a href="https://github.com/rails/rails/blob/eb23754ebbfbf2d465cc0f900720704fb3703633/actionview/test/template/html-scanner/sanitizer_test.rb#L283" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-test_should_sanitize_across_newlines_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File actionview/test/template/html-scanner/sanitizer_test.rb, line 283</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">test_should_sanitize_across_newlines</span>
+  <span class="ruby-identifier">raw</span> = <span class="ruby-string">%Q(\nwidth:\nexpression(alert(&#39;XSS&#39;));\n)</span>
+  <span class="ruby-identifier">assert_equal</span> <span class="ruby-string">&#39;&#39;</span>, <span class="ruby-identifier">sanitize_css</span>(<span class="ruby-identifier">raw</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-test_should_sanitize_attributes">
+            
+              <b>test_should_sanitize_attributes</b>()
+            
+            <a href="../classes/SanitizerTest.html#method-i-test_should_sanitize_attributes" name="method-i-test_should_sanitize_attributes" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-test_should_sanitize_attributes_source')" id="l_method-i-test_should_sanitize_attributes_source">show</a>
+                
+                  | <a href="https://github.com/rails/rails/blob/eb23754ebbfbf2d465cc0f900720704fb3703633/actionview/test/template/html-scanner/sanitizer_test.rb#L236" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-test_should_sanitize_attributes_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File actionview/test/template/html-scanner/sanitizer_test.rb, line 236</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">test_should_sanitize_attributes</span>
+  <span class="ruby-identifier">assert_sanitized</span> <span class="ruby-string">%Q(&lt;SPAN title=&quot;&#39;&gt;&lt;script&gt;alert()&lt;/script&gt;&quot;&gt;blah&lt;/SPAN&gt;)</span>, <span class="ruby-node">%Q(&lt;span title=&quot;#{CGI.escapeHTML &quot;&#39;&gt;&lt;script&gt;alert()&lt;/script&gt;&quot;}&quot;&gt;blah&lt;/span&gt;)</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-test_should_sanitize_cdata_section">
+            
+              <b>test_should_sanitize_cdata_section</b>()
+            
+            <a href="../classes/SanitizerTest.html#method-i-test_should_sanitize_cdata_section" name="method-i-test_should_sanitize_cdata_section" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-test_should_sanitize_cdata_section_source')" id="l_method-i-test_should_sanitize_cdata_section_source">show</a>
+                
+                  | <a href="https://github.com/rails/rails/blob/eb23754ebbfbf2d465cc0f900720704fb3703633/actionview/test/template/html-scanner/sanitizer_test.rb#L292" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-test_should_sanitize_cdata_section_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File actionview/test/template/html-scanner/sanitizer_test.rb, line 292</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">test_should_sanitize_cdata_section</span>
+  <span class="ruby-identifier">assert_sanitized</span> <span class="ruby-string">&quot;&lt;![CDATA[&lt;span&gt;section&lt;/span&gt;]]&gt;&quot;</span>, <span class="ruby-string">&quot;&amp;lt;![CDATA[&amp;lt;span&gt;section&amp;lt;/span&gt;]]&gt;&quot;</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-test_should_sanitize_div_background_image_unicode_encoded">
+            
+              <b>test_should_sanitize_div_background_image_unicode_encoded</b>()
+            
+            <a href="../classes/SanitizerTest.html#method-i-test_should_sanitize_div_background_image_unicode_encoded" name="method-i-test_should_sanitize_div_background_image_unicode_encoded" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-test_should_sanitize_div_background_image_unicode_encoded_source')" id="l_method-i-test_should_sanitize_div_background_image_unicode_encoded_source">show</a>
+                
+                  | <a href="https://github.com/rails/rails/blob/eb23754ebbfbf2d465cc0f900720704fb3703633/actionview/test/template/html-scanner/sanitizer_test.rb#L273" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-test_should_sanitize_div_background_image_unicode_encoded_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File actionview/test/template/html-scanner/sanitizer_test.rb, line 273</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">test_should_sanitize_div_background_image_unicode_encoded</span>
+  <span class="ruby-identifier">raw</span> = <span class="ruby-string">%Q(background-image:\0075\0072\006C\0028&#39;\006a\0061\0076\0061\0073\0063\0072\0069\0070\0074\003a\0061\006c\0065\0072\0074\0028.1027\0058.1053\0053\0027\0029&#39;\0029)</span>
+  <span class="ruby-identifier">assert_equal</span> <span class="ruby-string">&#39;&#39;</span>, <span class="ruby-identifier">sanitize_css</span>(<span class="ruby-identifier">raw</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-test_should_sanitize_div_style_expression">
+            
+              <b>test_should_sanitize_div_style_expression</b>()
+            
+            <a href="../classes/SanitizerTest.html#method-i-test_should_sanitize_div_style_expression" name="method-i-test_should_sanitize_div_style_expression" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-test_should_sanitize_div_style_expression_source')" id="l_method-i-test_should_sanitize_div_style_expression_source">show</a>
+                
+                  | <a href="https://github.com/rails/rails/blob/eb23754ebbfbf2d465cc0f900720704fb3703633/actionview/test/template/html-scanner/sanitizer_test.rb#L278" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-test_should_sanitize_div_style_expression_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File actionview/test/template/html-scanner/sanitizer_test.rb, line 278</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">test_should_sanitize_div_style_expression</span>
+  <span class="ruby-identifier">raw</span> = <span class="ruby-string">%Q(width: expression(alert(&#39;XSS&#39;));)</span>
+  <span class="ruby-identifier">assert_equal</span> <span class="ruby-string">&#39;&#39;</span>, <span class="ruby-identifier">sanitize_css</span>(<span class="ruby-identifier">raw</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-test_should_sanitize_half_open_scripts">
+            
+              <b>test_should_sanitize_half_open_scripts</b>()
+            
+            <a href="../classes/SanitizerTest.html#method-i-test_should_sanitize_half_open_scripts" name="method-i-test_should_sanitize_half_open_scripts" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-test_should_sanitize_half_open_scripts_source')" id="l_method-i-test_should_sanitize_half_open_scripts_source">show</a>
+                
+                  | <a href="https://github.com/rails/rails/blob/eb23754ebbfbf2d465cc0f900720704fb3703633/actionview/test/template/html-scanner/sanitizer_test.rb#L227" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-test_should_sanitize_half_open_scripts_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File actionview/test/template/html-scanner/sanitizer_test.rb, line 227</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">test_should_sanitize_half_open_scripts</span>
+  <span class="ruby-identifier">assert_sanitized</span> <span class="ruby-string">%Q(&lt;IMG SRC=&quot;javascript:alert(&#39;XSS&#39;)&quot;)</span>, <span class="ruby-string">&quot;&lt;img&gt;&quot;</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-test_should_sanitize_illegal_style_properties">
+            
+              <b>test_should_sanitize_illegal_style_properties</b>()
+            
+            <a href="../classes/SanitizerTest.html#method-i-test_should_sanitize_illegal_style_properties" name="method-i-test_should_sanitize_illegal_style_properties" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-test_should_sanitize_illegal_style_properties_source')" id="l_method-i-test_should_sanitize_illegal_style_properties_source">show</a>
+                
+                  | <a href="https://github.com/rails/rails/blob/eb23754ebbfbf2d465cc0f900720704fb3703633/actionview/test/template/html-scanner/sanitizer_test.rb#L240" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-test_should_sanitize_illegal_style_properties_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File actionview/test/template/html-scanner/sanitizer_test.rb, line 240</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">test_should_sanitize_illegal_style_properties</span>
+  <span class="ruby-identifier">raw</span>      = <span class="ruby-string">%Q(display:block; position:absolute; left:0; top:0; width:100%; height:100%; z-index:1; background-color:black; background-image:url(http://www.ragingplatypus.com/i/cam-full.jpg); background-x:center; background-y:center; background-repeat:repeat;)</span>
+  <span class="ruby-identifier">expected</span> = <span class="ruby-string">%Q(display: block; width: 100%; height: 100%; background-color: black; background-image: ; background-x: center; background-y: center;)</span>
+  <span class="ruby-identifier">assert_equal</span> <span class="ruby-identifier">expected</span>, <span class="ruby-identifier">sanitize_css</span>(<span class="ruby-identifier">raw</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-test_should_sanitize_img_dynsrc_lowsrc">
+            
+              <b>test_should_sanitize_img_dynsrc_lowsrc</b>()
+            
+            <a href="../classes/SanitizerTest.html#method-i-test_should_sanitize_img_dynsrc_lowsrc" name="method-i-test_should_sanitize_img_dynsrc_lowsrc" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-test_should_sanitize_img_dynsrc_lowsrc_source')" id="l_method-i-test_should_sanitize_img_dynsrc_lowsrc_source">show</a>
+                
+                  | <a href="https://github.com/rails/rails/blob/eb23754ebbfbf2d465cc0f900720704fb3703633/actionview/test/template/html-scanner/sanitizer_test.rb#L269" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-test_should_sanitize_img_dynsrc_lowsrc_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File actionview/test/template/html-scanner/sanitizer_test.rb, line 269</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">test_should_sanitize_img_dynsrc_lowsrc</span>
+  <span class="ruby-identifier">assert_sanitized</span>(<span class="ruby-string">%Q(&lt;img lowsrc=&quot;javascript:alert(&#39;XSS&#39;)&quot; /&gt;)</span>, <span class="ruby-string">&quot;&lt;img /&gt;&quot;</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-test_should_sanitize_img_vbscript">
+            
+              <b>test_should_sanitize_img_vbscript</b>()
+            
+            <a href="../classes/SanitizerTest.html#method-i-test_should_sanitize_img_vbscript" name="method-i-test_should_sanitize_img_vbscript" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-test_should_sanitize_img_vbscript_source')" id="l_method-i-test_should_sanitize_img_vbscript_source">show</a>
+                
+                  | <a href="https://github.com/rails/rails/blob/eb23754ebbfbf2d465cc0f900720704fb3703633/actionview/test/template/html-scanner/sanitizer_test.rb#L288" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-test_should_sanitize_img_vbscript_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File actionview/test/template/html-scanner/sanitizer_test.rb, line 288</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">test_should_sanitize_img_vbscript</span>
+  <span class="ruby-identifier">assert_sanitized</span> <span class="ruby-string">%Q(&lt;img src=&#39;vbscript:msgbox(&quot;XSS&quot;)&#39; /&gt;)</span>, <span class="ruby-string">&#39;&lt;img /&gt;&#39;</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-test_should_sanitize_invalid_script_tag">
+            
+              <b>test_should_sanitize_invalid_script_tag</b>()
+            
+            <a href="../classes/SanitizerTest.html#method-i-test_should_sanitize_invalid_script_tag" name="method-i-test_should_sanitize_invalid_script_tag" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-test_should_sanitize_invalid_script_tag_source')" id="l_method-i-test_should_sanitize_invalid_script_tag_source">show</a>
+                
+                  | <a href="https://github.com/rails/rails/blob/eb23754ebbfbf2d465cc0f900720704fb3703633/actionview/test/template/html-scanner/sanitizer_test.rb#L214" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-test_should_sanitize_invalid_script_tag_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File actionview/test/template/html-scanner/sanitizer_test.rb, line 214</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">test_should_sanitize_invalid_script_tag</span>
+  <span class="ruby-identifier">assert_sanitized</span> <span class="ruby-string">%Q(&lt;SCRIPT/XSS SRC=&quot;http://ha.ckers.org/xss.js&quot;&gt;&lt;/SCRIPT&gt;)</span>, <span class="ruby-string">&quot;&quot;</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-test_should_sanitize_invalid_tag_names">
+            
+              <b>test_should_sanitize_invalid_tag_names</b>()
+            
+            <a href="../classes/SanitizerTest.html#method-i-test_should_sanitize_invalid_tag_names" name="method-i-test_should_sanitize_invalid_tag_names" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-test_should_sanitize_invalid_tag_names_source')" id="l_method-i-test_should_sanitize_invalid_tag_names_source">show</a>
+                
+                  | <a href="https://github.com/rails/rails/blob/eb23754ebbfbf2d465cc0f900720704fb3703633/actionview/test/template/html-scanner/sanitizer_test.rb#L257" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-test_should_sanitize_invalid_tag_names_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File actionview/test/template/html-scanner/sanitizer_test.rb, line 257</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">test_should_sanitize_invalid_tag_names</span>
+  <span class="ruby-identifier">assert_sanitized</span>(<span class="ruby-string">%Q(a b c&lt;script/XSS src=&quot;http://ha.ckers.org/xss.js&quot;&gt;&lt;/script&gt;d e f)</span>, <span class="ruby-string">&quot;a b cd e f&quot;</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-test_should_sanitize_invalid_tag_names_in_single_tags">
+            
+              <b>test_should_sanitize_invalid_tag_names_in_single_tags</b>()
+            
+            <a href="../classes/SanitizerTest.html#method-i-test_should_sanitize_invalid_tag_names_in_single_tags" name="method-i-test_should_sanitize_invalid_tag_names_in_single_tags" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-test_should_sanitize_invalid_tag_names_in_single_tags_source')" id="l_method-i-test_should_sanitize_invalid_tag_names_in_single_tags_source">show</a>
+                
+                  | <a href="https://github.com/rails/rails/blob/eb23754ebbfbf2d465cc0f900720704fb3703633/actionview/test/template/html-scanner/sanitizer_test.rb#L265" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-test_should_sanitize_invalid_tag_names_in_single_tags_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File actionview/test/template/html-scanner/sanitizer_test.rb, line 265</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">test_should_sanitize_invalid_tag_names_in_single_tags</span>
+  <span class="ruby-identifier">assert_sanitized</span>(<span class="ruby-string">&#39;&lt;img/src=&quot;http://ha.ckers.org/xss.js&quot;/&gt;&#39;</span>, <span class="ruby-string">&quot;&lt;img /&gt;&quot;</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-test_should_sanitize_neverending_attribute">
+            
+              <b>test_should_sanitize_neverending_attribute</b>()
+            
+            <a href="../classes/SanitizerTest.html#method-i-test_should_sanitize_neverending_attribute" name="method-i-test_should_sanitize_neverending_attribute" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-test_should_sanitize_neverending_attribute_source')" id="l_method-i-test_should_sanitize_neverending_attribute_source">show</a>
+                
+                  | <a href="https://github.com/rails/rails/blob/eb23754ebbfbf2d465cc0f900720704fb3703633/actionview/test/template/html-scanner/sanitizer_test.rb#L304" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-test_should_sanitize_neverending_attribute_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File actionview/test/template/html-scanner/sanitizer_test.rb, line 304</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">test_should_sanitize_neverending_attribute</span>
+  <span class="ruby-identifier">assert_sanitized</span> <span class="ruby-string">&quot;&lt;span class=\&quot;\\&quot;</span>, <span class="ruby-string">&quot;&lt;span class=\&quot;\\\&quot;&gt;&quot;</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-test_should_sanitize_non_alpha_and_non_digit_characters_in_tags">
+            
+              <b>test_should_sanitize_non_alpha_and_non_digit_characters_in_tags</b>()
+            
+            <a href="../classes/SanitizerTest.html#method-i-test_should_sanitize_non_alpha_and_non_digit_characters_in_tags" name="method-i-test_should_sanitize_non_alpha_and_non_digit_characters_in_tags" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-test_should_sanitize_non_alpha_and_non_digit_characters_in_tags_source')" id="l_method-i-test_should_sanitize_non_alpha_and_non_digit_characters_in_tags_source">show</a>
+                
+                  | <a href="https://github.com/rails/rails/blob/eb23754ebbfbf2d465cc0f900720704fb3703633/actionview/test/template/html-scanner/sanitizer_test.rb#L261" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-test_should_sanitize_non_alpha_and_non_digit_characters_in_tags_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File actionview/test/template/html-scanner/sanitizer_test.rb, line 261</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">test_should_sanitize_non_alpha_and_non_digit_characters_in_tags</span>
+  <span class="ruby-identifier">assert_sanitized</span>(<span class="ruby-string">&#39;&lt;a onclick!#$%&amp;()*~+-_.,:;?@[/|\]^`=alert(&quot;XSS&quot;)&gt;foo&lt;/a&gt;&#39;</span>, <span class="ruby-string">&quot;&lt;a&gt;foo&lt;/a&gt;&quot;</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-test_should_sanitize_script_tag_with_multiple_open_brackets">
+            
+              <b>test_should_sanitize_script_tag_with_multiple_open_brackets</b>()
+            
+            <a href="../classes/SanitizerTest.html#method-i-test_should_sanitize_script_tag_with_multiple_open_brackets" name="method-i-test_should_sanitize_script_tag_with_multiple_open_brackets" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-test_should_sanitize_script_tag_with_multiple_open_brackets_source')" id="l_method-i-test_should_sanitize_script_tag_with_multiple_open_brackets_source">show</a>
+                
+                  | <a href="https://github.com/rails/rails/blob/eb23754ebbfbf2d465cc0f900720704fb3703633/actionview/test/template/html-scanner/sanitizer_test.rb#L218" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-test_should_sanitize_script_tag_with_multiple_open_brackets_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File actionview/test/template/html-scanner/sanitizer_test.rb, line 218</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">test_should_sanitize_script_tag_with_multiple_open_brackets</span>
+  <span class="ruby-identifier">assert_sanitized</span> <span class="ruby-string">%Q(&lt;&lt;SCRIPT&gt;alert(&quot;XSS&quot;);//&lt;&lt;/SCRIPT&gt;)</span>, <span class="ruby-string">&quot;&amp;lt;&quot;</span>
+  <span class="ruby-identifier">assert_sanitized</span> <span class="ruby-string">%Q(&lt;iframe src=http://ha.ckers.org/scriptlet.html\n&lt;a)</span>, <span class="ruby-string">%Q(&amp;lt;a)</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-test_should_sanitize_tag_broken_up_by_null">
+            
+              <b>test_should_sanitize_tag_broken_up_by_null</b>()
+            
+            <a href="../classes/SanitizerTest.html#method-i-test_should_sanitize_tag_broken_up_by_null" name="method-i-test_should_sanitize_tag_broken_up_by_null" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-test_should_sanitize_tag_broken_up_by_null_source')" id="l_method-i-test_should_sanitize_tag_broken_up_by_null_source">show</a>
+                
+                  | <a href="https://github.com/rails/rails/blob/eb23754ebbfbf2d465cc0f900720704fb3703633/actionview/test/template/html-scanner/sanitizer_test.rb#L210" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-test_should_sanitize_tag_broken_up_by_null_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File actionview/test/template/html-scanner/sanitizer_test.rb, line 210</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">test_should_sanitize_tag_broken_up_by_null</span>
+  <span class="ruby-identifier">assert_sanitized</span> <span class="ruby-string">%Q(&lt;SCR\0IPT&gt;alert(\&quot;XSS\&quot;)&lt;/SCR\0IPT&gt;)</span>, <span class="ruby-string">&quot;alert(\&quot;XSS\&quot;)&quot;</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-test_should_sanitize_unclosed_script">
+            
+              <b>test_should_sanitize_unclosed_script</b>()
+            
+            <a href="../classes/SanitizerTest.html#method-i-test_should_sanitize_unclosed_script" name="method-i-test_should_sanitize_unclosed_script" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-test_should_sanitize_unclosed_script_source')" id="l_method-i-test_should_sanitize_unclosed_script_source">show</a>
+                
+                  | <a href="https://github.com/rails/rails/blob/eb23754ebbfbf2d465cc0f900720704fb3703633/actionview/test/template/html-scanner/sanitizer_test.rb#L223" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-test_should_sanitize_unclosed_script_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File actionview/test/template/html-scanner/sanitizer_test.rb, line 223</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">test_should_sanitize_unclosed_script</span>
+  <span class="ruby-identifier">assert_sanitized</span> <span class="ruby-string">%Q(&lt;SCRIPT SRC=http://ha.ckers.org/xss.js?&lt;B&gt;)</span>, <span class="ruby-string">&quot;&lt;b&gt;&quot;</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-test_should_sanitize_unterminated_cdata_section">
+            
+              <b>test_should_sanitize_unterminated_cdata_section</b>()
+            
+            <a href="../classes/SanitizerTest.html#method-i-test_should_sanitize_unterminated_cdata_section" name="method-i-test_should_sanitize_unterminated_cdata_section" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-test_should_sanitize_unterminated_cdata_section_source')" id="l_method-i-test_should_sanitize_unterminated_cdata_section_source">show</a>
+                
+                  | <a href="https://github.com/rails/rails/blob/eb23754ebbfbf2d465cc0f900720704fb3703633/actionview/test/template/html-scanner/sanitizer_test.rb#L296" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-test_should_sanitize_unterminated_cdata_section_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File actionview/test/template/html-scanner/sanitizer_test.rb, line 296</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">test_should_sanitize_unterminated_cdata_section</span>
+  <span class="ruby-identifier">assert_sanitized</span> <span class="ruby-string">&quot;&lt;![CDATA[&lt;span&gt;neverending...&quot;</span>, <span class="ruby-string">&quot;&amp;lt;![CDATA[&amp;lt;span&gt;neverending...]]&gt;&quot;</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-test_should_sanitize_with_trailing_space">
+            
+              <b>test_should_sanitize_with_trailing_space</b>()
+            
+            <a href="../classes/SanitizerTest.html#method-i-test_should_sanitize_with_trailing_space" name="method-i-test_should_sanitize_with_trailing_space" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-test_should_sanitize_with_trailing_space_source')" id="l_method-i-test_should_sanitize_with_trailing_space_source">show</a>
+                
+                  | <a href="https://github.com/rails/rails/blob/eb23754ebbfbf2d465cc0f900720704fb3703633/actionview/test/template/html-scanner/sanitizer_test.rb#L246" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-test_should_sanitize_with_trailing_space_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File actionview/test/template/html-scanner/sanitizer_test.rb, line 246</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">test_should_sanitize_with_trailing_space</span>
+  <span class="ruby-identifier">raw</span> = <span class="ruby-string">&quot;display:block; &quot;</span>
+  <span class="ruby-identifier">expected</span> = <span class="ruby-string">&quot;display: block;&quot;</span>
+  <span class="ruby-identifier">assert_equal</span> <span class="ruby-identifier">expected</span>, <span class="ruby-identifier">sanitize_css</span>(<span class="ruby-identifier">raw</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-test_should_sanitize_xul_style_attributes">
+            
+              <b>test_should_sanitize_xul_style_attributes</b>()
+            
+            <a href="../classes/SanitizerTest.html#method-i-test_should_sanitize_xul_style_attributes" name="method-i-test_should_sanitize_xul_style_attributes" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-test_should_sanitize_xul_style_attributes_source')" id="l_method-i-test_should_sanitize_xul_style_attributes_source">show</a>
+                
+                  | <a href="https://github.com/rails/rails/blob/eb23754ebbfbf2d465cc0f900720704fb3703633/actionview/test/template/html-scanner/sanitizer_test.rb#L252" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-test_should_sanitize_xul_style_attributes_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File actionview/test/template/html-scanner/sanitizer_test.rb, line 252</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">test_should_sanitize_xul_style_attributes</span>
+  <span class="ruby-identifier">raw</span> = <span class="ruby-node">%Q(-moz-binding:url(&#39;http://ha.ckers.org/xssmoz.xml#xss&#39;))</span>
+  <span class="ruby-identifier">assert_equal</span> <span class="ruby-string">&#39;&#39;</span>, <span class="ruby-identifier">sanitize_css</span>(<span class="ruby-identifier">raw</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-test_strip_links">
+            
+              <b>test_strip_links</b>()
+            
+            <a href="../classes/SanitizerTest.html#method-i-test_strip_links" name="method-i-test_strip_links" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-test_strip_links_source')" id="l_method-i-test_strip_links_source">show</a>
+                
+                  | <a href="https://github.com/rails/rails/blob/eb23754ebbfbf2d465cc0f900720704fb3703633/actionview/test/template/html-scanner/sanitizer_test.rb#L33" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-test_strip_links_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File actionview/test/template/html-scanner/sanitizer_test.rb, line 33</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">test_strip_links</span>
+  <span class="ruby-identifier">sanitizer</span> = <span class="ruby-constant">HTML</span><span class="ruby-operator">::</span><span class="ruby-constant">LinkSanitizer</span>.<span class="ruby-identifier">new</span>
+  <span class="ruby-identifier">assert_equal</span> <span class="ruby-string">&quot;Dont touch me&quot;</span>, <span class="ruby-identifier">sanitizer</span>.<span class="ruby-identifier">sanitize</span>(<span class="ruby-string">&quot;Dont touch me&quot;</span>)
+  <span class="ruby-identifier">assert_equal</span> <span class="ruby-string">&quot;on my mind\nall day long&quot;</span>, <span class="ruby-identifier">sanitizer</span>.<span class="ruby-identifier">sanitize</span>(<span class="ruby-string">&quot;&lt;a href=&#39;almost&#39;&gt;on my mind&lt;/a&gt;\n&lt;A href=&#39;almost&#39;&gt;all day long&lt;/A&gt;&quot;</span>)
+  <span class="ruby-identifier">assert_equal</span> <span class="ruby-string">&quot;0wn3d&quot;</span>, <span class="ruby-identifier">sanitizer</span>.<span class="ruby-identifier">sanitize</span>(<span class="ruby-string">&quot;&lt;a href=&#39;http://www.rubyonrails.com/&#39;&gt;&lt;a href=&#39;http://www.rubyonrails.com/&#39; onlclick=&#39;steal()&#39;&gt;0wn3d&lt;/a&gt;&lt;/a&gt;&quot;</span>)
+  <span class="ruby-identifier">assert_equal</span> <span class="ruby-string">&quot;Magic&quot;</span>, <span class="ruby-identifier">sanitizer</span>.<span class="ruby-identifier">sanitize</span>(<span class="ruby-string">&quot;&lt;a href=&#39;http://www.rubyonrails.com/&#39;&gt;Mag&lt;a href=&#39;http://www.ruby-lang.org/&#39;&gt;ic&quot;</span>)
+  <span class="ruby-identifier">assert_equal</span> <span class="ruby-string">&quot;FrrFox&quot;</span>, <span class="ruby-identifier">sanitizer</span>.<span class="ruby-identifier">sanitize</span>(<span class="ruby-string">&quot;&lt;href onlclick=&#39;steal()&#39;&gt;FrrFox&lt;/a&gt;&lt;/href&gt;&quot;</span>)
+  <span class="ruby-identifier">assert_equal</span> <span class="ruby-string">&quot;My mind\nall &lt;b&gt;day&lt;/b&gt; long&quot;</span>, <span class="ruby-identifier">sanitizer</span>.<span class="ruby-identifier">sanitize</span>(<span class="ruby-string">&quot;&lt;a href=&#39;almost&#39;&gt;My mind&lt;/a&gt;\n&lt;A href=&#39;almost&#39;&gt;all &lt;b&gt;day&lt;/b&gt; long&lt;/A&gt;&quot;</span>)
+  <span class="ruby-identifier">assert_equal</span> <span class="ruby-string">&quot;all &lt;b&gt;day&lt;/b&gt; long&quot;</span>, <span class="ruby-identifier">sanitizer</span>.<span class="ruby-identifier">sanitize</span>(<span class="ruby-string">&quot;&lt;&lt;a&gt;a href=&#39;hello&#39;&gt;all &lt;b&gt;day&lt;/b&gt; long&lt;&lt;/A&gt;/a&gt;&quot;</span>)
+
+  <span class="ruby-identifier">assert_equal</span> <span class="ruby-string">&quot;&lt;a&lt;a&quot;</span>, <span class="ruby-identifier">sanitizer</span>.<span class="ruby-identifier">sanitize</span>(<span class="ruby-string">&quot;&lt;a&lt;a&quot;</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-test_strip_tags">
+            
+              <b>test_strip_tags</b>()
+            
+            <a href="../classes/SanitizerTest.html#method-i-test_strip_tags" name="method-i-test_strip_tags" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-test_strip_tags_source')" id="l_method-i-test_strip_tags_source">show</a>
+                
+                  | <a href="https://github.com/rails/rails/blob/eb23754ebbfbf2d465cc0f900720704fb3703633/actionview/test/template/html-scanner/sanitizer_test.rb#L15" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-test_strip_tags_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File actionview/test/template/html-scanner/sanitizer_test.rb, line 15</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">test_strip_tags</span>
+  <span class="ruby-identifier">sanitizer</span> = <span class="ruby-constant">HTML</span><span class="ruby-operator">::</span><span class="ruby-constant">FullSanitizer</span>.<span class="ruby-identifier">new</span>
+  <span class="ruby-identifier">assert_equal</span>(<span class="ruby-string">&quot;&lt;&lt;&lt;bad html&quot;</span>, <span class="ruby-identifier">sanitizer</span>.<span class="ruby-identifier">sanitize</span>(<span class="ruby-string">&quot;&lt;&lt;&lt;bad html&quot;</span>))
+  <span class="ruby-identifier">assert_equal</span>(<span class="ruby-string">&quot;&lt;&lt;&quot;</span>, <span class="ruby-identifier">sanitizer</span>.<span class="ruby-identifier">sanitize</span>(<span class="ruby-string">&quot;&lt;&lt;&lt;bad html&gt;&quot;</span>))
+  <span class="ruby-identifier">assert_equal</span>(<span class="ruby-string">&quot;Dont touch me&quot;</span>, <span class="ruby-identifier">sanitizer</span>.<span class="ruby-identifier">sanitize</span>(<span class="ruby-string">&quot;Dont touch me&quot;</span>))
+  <span class="ruby-identifier">assert_equal</span>(<span class="ruby-string">&quot;This is a test.&quot;</span>, <span class="ruby-identifier">sanitizer</span>.<span class="ruby-identifier">sanitize</span>(<span class="ruby-string">&quot;&lt;p&gt;This &lt;u&gt;is&lt;u&gt; a &lt;a href=&#39;test.html&#39;&gt;&lt;strong&gt;test&lt;/strong&gt;&lt;/a&gt;.&lt;/p&gt;&quot;</span>))
+  <span class="ruby-identifier">assert_equal</span>(<span class="ruby-string">&quot;Weirdos&quot;</span>, <span class="ruby-identifier">sanitizer</span>.<span class="ruby-identifier">sanitize</span>(<span class="ruby-string">&quot;Wei&lt;&lt;a&gt;a onclick=&#39;alert(document.cookie);&#39;&lt;/a&gt;/&gt;rdos&quot;</span>))
+  <span class="ruby-identifier">assert_equal</span>(<span class="ruby-string">&quot;This is a test.&quot;</span>, <span class="ruby-identifier">sanitizer</span>.<span class="ruby-identifier">sanitize</span>(<span class="ruby-string">&quot;This is a test.&quot;</span>))
+  <span class="ruby-identifier">assert_equal</span>(
+  <span class="ruby-string">%Q{This is a test.\n\n\nIt no longer contains any HTML.\n}</span>, <span class="ruby-identifier">sanitizer</span>.<span class="ruby-identifier">sanitize</span>(
+  <span class="ruby-string">%Q{&lt;title&gt;This is &lt;b&gt;a &lt;a href=&quot;&quot; target=&quot;_blank&quot;&gt;test&lt;/a&gt;&lt;/b&gt;.&lt;/title&gt;\n\n&lt;!-- it has a comment --&gt;\n\n&lt;p&gt;It no &lt;b&gt;longer &lt;strong&gt;contains &lt;em&gt;any &lt;strike&gt;HTML&lt;/strike&gt;&lt;/em&gt;.&lt;/strong&gt;&lt;/b&gt;&lt;/p&gt;\n}</span>))
+  <span class="ruby-identifier">assert_equal</span> <span class="ruby-string">&quot;This has a  here.&quot;</span>, <span class="ruby-identifier">sanitizer</span>.<span class="ruby-identifier">sanitize</span>(<span class="ruby-string">&quot;This has a &lt;!-- comment --&gt; here.&quot;</span>)
+  <span class="ruby-identifier">assert_equal</span> <span class="ruby-string">&quot;This has a  here.&quot;</span>, <span class="ruby-identifier">sanitizer</span>.<span class="ruby-identifier">sanitize</span>(<span class="ruby-string">&quot;This has a &lt;![CDATA[&lt;section&gt;]]&gt; here.&quot;</span>)
+  <span class="ruby-identifier">assert_equal</span> <span class="ruby-string">&quot;This has an unclosed &quot;</span>, <span class="ruby-identifier">sanitizer</span>.<span class="ruby-identifier">sanitize</span>(<span class="ruby-string">&quot;This has an unclosed &lt;![CDATA[&lt;section&gt;]] here...&quot;</span>)
+  [<span class="ruby-keyword">nil</span>, <span class="ruby-string">&#39;&#39;</span>, <span class="ruby-string">&#39;   &#39;</span>].<span class="ruby-identifier">each</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">blank</span><span class="ruby-operator">|</span> <span class="ruby-identifier">assert_equal</span> <span class="ruby-identifier">blank</span>, <span class="ruby-identifier">sanitizer</span>.<span class="ruby-identifier">sanitize</span>(<span class="ruby-identifier">blank</span>) }
+  <span class="ruby-identifier">assert_nothing_raised</span> { <span class="ruby-identifier">sanitizer</span>.<span class="ruby-identifier">sanitize</span>(<span class="ruby-string">&quot;This is a frozen string with no tags&quot;</span>.<span class="ruby-identifier">freeze</span>) }
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-test_strip_tags_with_quote">
+            
+              <b>test_strip_tags_with_quote</b>()
+            
+            <a href="../classes/SanitizerTest.html#method-i-test_strip_tags_with_quote" name="method-i-test_strip_tags_with_quote" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-test_strip_tags_with_quote_source')" id="l_method-i-test_strip_tags_with_quote_source">show</a>
+                
+                  | <a href="https://github.com/rails/rails/blob/eb23754ebbfbf2d465cc0f900720704fb3703633/actionview/test/template/html-scanner/sanitizer_test.rb#L8" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-test_strip_tags_with_quote_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File actionview/test/template/html-scanner/sanitizer_test.rb, line 8</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">test_strip_tags_with_quote</span>
+  <span class="ruby-identifier">sanitizer</span> = <span class="ruby-constant">HTML</span><span class="ruby-operator">::</span><span class="ruby-constant">FullSanitizer</span>.<span class="ruby-identifier">new</span>
+  <span class="ruby-identifier">string</span>    = <span class="ruby-string">&#39;&lt;&quot; &lt;img src=&quot;trollface.gif&quot; onload=&quot;alert(1)&quot;&gt; hi&#39;</span>
+
+  <span class="ruby-identifier">assert_equal</span> <span class="ruby-string">&#39; hi&#39;</span>, <span class="ruby-identifier">sanitizer</span>.<span class="ruby-identifier">sanitize</span>(<span class="ruby-identifier">string</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-test_x03a">
+            
+              <b>test_x03a</b>()
+            
+            <a href="../classes/SanitizerTest.html#method-i-test_x03a" name="method-i-test_x03a" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-test_x03a_source')" id="l_method-i-test_x03a_source">show</a>
+                
+                  | <a href="https://github.com/rails/rails/blob/eb23754ebbfbf2d465cc0f900720704fb3703633/actionview/test/template/html-scanner/sanitizer_test.rb#L308" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-test_x03a_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File actionview/test/template/html-scanner/sanitizer_test.rb, line 308</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">test_x03a</span>
+  <span class="ruby-identifier">assert_sanitized</span> <span class="ruby-node">%Q(&lt;a href=&quot;javascript&amp;#x3a;alert(&#39;XSS&#39;);&quot;&gt;)</span>, <span class="ruby-string">&quot;&lt;a&gt;&quot;</span>
+  <span class="ruby-identifier">assert_sanitized</span> <span class="ruby-node">%Q(&lt;a href=&quot;javascript&amp;#x003a;alert(&#39;XSS&#39;);&quot;&gt;)</span>, <span class="ruby-string">&quot;&lt;a&gt;&quot;</span>
+  <span class="ruby-identifier">assert_sanitized</span> <span class="ruby-node">%Q(&lt;a href=&quot;http&amp;#x3a;//legit&quot;&gt;)</span>, <span class="ruby-string">%Q(&lt;a href=&quot;http://legit&quot;&gt;)</span>
+  <span class="ruby-identifier">assert_sanitized</span> <span class="ruby-node">%Q(&lt;a href=&quot;javascript&amp;#x3A;alert(&#39;XSS&#39;);&quot;&gt;)</span>, <span class="ruby-string">&quot;&lt;a&gt;&quot;</span>
+  <span class="ruby-identifier">assert_sanitized</span> <span class="ruby-node">%Q(&lt;a href=&quot;javascript&amp;#x003A;alert(&#39;XSS&#39;);&quot;&gt;)</span>, <span class="ruby-string">&quot;&lt;a&gt;&quot;</span>
+  <span class="ruby-identifier">assert_sanitized</span> <span class="ruby-node">%Q(&lt;a href=&quot;http&amp;#x3A;//legit&quot;&gt;)</span>, <span class="ruby-string">%Q(&lt;a href=&quot;http://legit&quot;&gt;)</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+              
+      <div class="sectiontitle">Instance Protected methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-i-assert_sanitized">
+            
+              <b>assert_sanitized</b>(input, expected = nil)
+            
+            <a href="../classes/SanitizerTest.html#method-i-assert_sanitized" name="method-i-assert_sanitized" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-assert_sanitized_source')" id="l_method-i-assert_sanitized_source">show</a>
+                
+                  | <a href="https://github.com/rails/rails/blob/eb23754ebbfbf2d465cc0f900720704fb3703633/actionview/test/template/html-scanner/sanitizer_test.rb#L318" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-assert_sanitized_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File actionview/test/template/html-scanner/sanitizer_test.rb, line 318</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">assert_sanitized</span>(<span class="ruby-identifier">input</span>, <span class="ruby-identifier">expected</span> = <span class="ruby-keyword">nil</span>)
+  <span class="ruby-ivar">@sanitizer</span> <span class="ruby-operator">||=</span> <span class="ruby-constant">HTML</span><span class="ruby-operator">::</span><span class="ruby-constant">WhiteListSanitizer</span>.<span class="ruby-identifier">new</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">input</span>
+    <span class="ruby-identifier">assert_dom_equal</span> <span class="ruby-identifier">expected</span> <span class="ruby-operator">||</span> <span class="ruby-identifier">input</span>, <span class="ruby-ivar">@sanitizer</span>.<span class="ruby-identifier">sanitize</span>(<span class="ruby-identifier">input</span>)
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">assert_nil</span> <span class="ruby-ivar">@sanitizer</span>.<span class="ruby-identifier">sanitize</span>(<span class="ruby-identifier">input</span>)
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-sanitize_css">
+            
+              <b>sanitize_css</b>(input)
+            
+            <a href="../classes/SanitizerTest.html#method-i-sanitize_css" name="method-i-sanitize_css" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-sanitize_css_source')" id="l_method-i-sanitize_css_source">show</a>
+                
+                  | <a href="https://github.com/rails/rails/blob/eb23754ebbfbf2d465cc0f900720704fb3703633/actionview/test/template/html-scanner/sanitizer_test.rb#L327" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-sanitize_css_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File actionview/test/template/html-scanner/sanitizer_test.rb, line 327</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">sanitize_css</span>(<span class="ruby-identifier">input</span>)
+  (<span class="ruby-ivar">@sanitizer</span> <span class="ruby-operator">||=</span> <span class="ruby-constant">HTML</span><span class="ruby-operator">::</span><span class="ruby-constant">WhiteListSanitizer</span>.<span class="ruby-identifier">new</span>).<span class="ruby-identifier">sanitize_css</span>(<span class="ruby-identifier">input</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                    </div>
+
+    </div>
+  </body>
+</html>    

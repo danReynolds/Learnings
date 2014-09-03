@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>autoscroll.rb</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="../../../../../../css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../../../../../../css/main.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../../../../../../css/github.css" type="text/css" media="screen" />
+<script src="../../../../../../js/jquery-1.3.2.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../../../../../js/jquery-effect.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../../../../../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../../../../../js/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+
+<body>     
+    <div class="banner">
+        
+        <h1>
+            autoscroll.rb
+        </h1>
+        <ul class="files">
+            <li>ext/tk/lib/tkextlib/tcllib/autoscroll.rb</li>
+            <li>Last modified: 2014-05-16 18:32:33 +0000</li>
+        </ul>
+    </div>
+
+    <div id="bodyContent">
+        <div id="content">
+  
+    <div class="description">
+      
+<pre><code>tkextlib/tcllib/autoscroll.rb
+                             by Hidetoshi NAGAI (nagai@ai.kyutech.ac.jp)
+
+ * Part of tcllib extension
+ * Provides for a scrollbar to automatically mapped and unmapped as needed</code></pre>
+
+<p>(The following is the original description of the library.)</p>
+
+<p>This package allows scrollbars to be mapped and unmapped as needed
+depending on the size and content of the scrollbars scrolled widget. The
+scrollbar must be managed by either pack or grid, other geometry managers
+are not supported.</p>
+
+<p>When managed by pack, any geometry changes made in the scrollbars parent
+between the time a scrollbar is unmapped, and when it is mapped will be
+lost. It is an error to destroy any of the scrollbars siblings while the
+scrollbar is unmapped. When managed by grid, if anything becomes gridded in
+the same row and column the scrollbar occupied it will be replaced by the
+scrollbar when remapped.</p>
+
+<p>This package may be used on any scrollbar-like widget as long as it
+supports the set subcommand in the same style as scrollbar. If the set
+subcommand is not used then this package will have no effect.</p>
+
+    </div>
+  
+
+
+  
+    <!-- File only: requires -->
+    <div class="sectiontitle">Required Files</div>
+    <ul>
+      
+        <li>tk</li>
+      
+        <li>tk/scrollbar</li>
+      
+        <li>tkextlib/tcllib.rb</li>
+      
+        <li>autoscroll</li>
+      
+        <li>autoscroll</li>
+      
+    </ul>
+  
+
+
+  
+  
+
+
+  
+    <!-- Namespace -->
+    <div class="sectiontitle">Namespace</div>
+    <ul>
+      
+        <li>
+          <span class="type">MODULE</span>
+          <a href="../../../../../../classes/Tk.html">Tk</a>
+        </li>
+      
+        <li>
+          <span class="type">MODULE</span>
+          <a href="../../../../../../classes/Tk/Scrollable.html">Tk::Scrollable</a>
+        </li>
+      
+        <li>
+          <span class="type">MODULE</span>
+          <a href="../../../../../../classes/Tk/Tcllib.html">Tk::Tcllib</a>
+        </li>
+      
+        <li>
+          <span class="type">MODULE</span>
+          <a href="../../../../../../classes/Tk/Tcllib/Autoscroll.html">Tk::Tcllib::Autoscroll</a>
+        </li>
+      
+        <li>
+          <span class="type">CLASS</span>
+          <a href="../../../../../../classes/Tk/Scrollbar.html">Tk::Scrollbar</a>
+        </li>
+      
+    </ul>
+  
+
+
+  
+
+  
+
+
+
+  
+
+    
+
+    
+
+    
+
+
+    
+
+
+    <!-- Methods -->
+              </div>
+
+    </div>
+  </body>
+</html>

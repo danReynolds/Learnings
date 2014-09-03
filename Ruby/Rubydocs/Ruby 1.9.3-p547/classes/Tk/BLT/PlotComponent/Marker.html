@@ -1,0 +1,1015 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>Tk::BLT::PlotComponent::Marker</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="../../../../css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../../../../css/main.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../../../../css/github.css" type="text/css" media="screen" />
+<script src="../../../../js/jquery-1.3.2.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../../../js/jquery-effect.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../../../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../../../js/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+
+<body>     
+    <div class="banner">
+        
+        <h1>
+            <span class="type">Class</span> 
+            Tk::BLT::PlotComponent::Marker 
+            
+                <span class="parent">&lt; 
+                    
+                    <a href="../../../TkObject.html">TkObject</a>
+                    
+                </span>
+            
+        </h1>
+        <ul class="files">
+            
+            <li><a href="../../../../files/ext/tk/lib/tkextlib/blt/component_rb.html">ext/tk/lib/tkextlib/blt/component.rb</a></li>
+            
+        </ul>
+    </div>
+    <div id="bodyContent">
+        <div id="content">
+  
+
+
+  
+
+
+  
+  
+
+
+  
+
+
+  
+    <!-- Method ref -->
+    <div class="sectiontitle">Methods</div>
+    <dl class="methods">
+      
+        <dt>A</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-after">after</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>B</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-before">before</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>C</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-cget">cget</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-cget_strict">cget_strict</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-cget_tkstring">cget_tkstring</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-configinfo">configinfo</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-configure">configure</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-c-create">create</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-c-create_type">create_type</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-current_configinfo">current_configinfo</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>D</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-delete">delete</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>E</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-exist-3F">exist?</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>I</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-id">id</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-c-id2obj">id2obj</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>N</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-new">new</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>T</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-to_eval">to_eval</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-type">type</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-c-type2class">type2class</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+    </dl>
+  
+
+  
+
+
+
+  
+
+    
+
+    
+
+    
+      <!-- Section constants -->
+      <div class="sectiontitle">Constants</div>
+      <table border='0' cellpadding='5'>
+        
+          <tr valign='top'>
+            <td class="attr-name">MarkerTypeName</td>
+            <td>=</td>
+            <td class="attr-value">nil</td>
+          </tr>
+          
+            <tr valign='top'>
+              <td>&nbsp;</td>
+              <td colspan="2" class="attr-desc"></td>
+            </tr>
+          
+        
+          <tr valign='top'>
+            <td class="attr-name">MarkerTypeToClass</td>
+            <td>=</td>
+            <td class="attr-value">{}</td>
+          </tr>
+          
+            <tr valign='top'>
+              <td>&nbsp;</td>
+              <td colspan="2" class="attr-desc"></td>
+            </tr>
+          
+        
+          <tr valign='top'>
+            <td class="attr-name">MarkerID_TBL</td>
+            <td>=</td>
+            <td class="attr-value">TkCore::INTERP.create_table</td>
+          </tr>
+          
+            <tr valign='top'>
+              <td>&nbsp;</td>
+              <td colspan="2" class="attr-desc"></td>
+            </tr>
+          
+        
+      </table>
+    
+
+
+    
+
+
+    <!-- Methods -->
+    
+      <div class="sectiontitle">Class Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-c-create">
+            
+              <b>create</b>(chart, keys={})
+            
+            <a href="../../../../classes/Tk/BLT/PlotComponent/Marker.html#method-c-create" name="method-c-create" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-create_source')" id="l_method-c-create_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/cb732bbbdc94d2a969f5f727d6018b9d7d3e291c/ext/tk/lib/tkextlib/blt/component.rb#L1275" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-create_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/blt/component.rb, line 1275</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">create</span>(<span class="ruby-identifier">chart</span>, <span class="ruby-identifier">keys</span>={})
+  <span class="ruby-keyword">unless</span> <span class="ruby-keyword">self</span><span class="ruby-operator">::</span><span class="ruby-constant">MarkerTypeName</span>
+    <span class="ruby-identifier">fail</span> <span class="ruby-constant">RuntimeError</span>, <span class="ruby-node">&quot;#{self} is an abstract class&quot;</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">args</span>, <span class="ruby-identifier">fontkeys</span>, <span class="ruby-identifier">methodkeys</span> = <span class="ruby-identifier">_parse_create_args</span>(<span class="ruby-identifier">keys</span>)
+  <span class="ruby-identifier">idnum</span> = <span class="ruby-identifier">tk_call_without_enc</span>(<span class="ruby-identifier">chart</span>.<span class="ruby-identifier">path</span>, <span class="ruby-string">&#39;marker&#39;</span>, <span class="ruby-string">&#39;create&#39;</span>,
+                              <span class="ruby-keyword">self</span><span class="ruby-operator">::</span><span class="ruby-constant">MarkerTypeName</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">args</span>)
+  <span class="ruby-identifier">chart</span>.<span class="ruby-identifier">marker_configure</span>(<span class="ruby-identifier">idnum</span>, <span class="ruby-identifier">fontkeys</span>) <span class="ruby-keyword">unless</span> <span class="ruby-identifier">fontkeys</span>.<span class="ruby-identifier">empty?</span>
+  <span class="ruby-identifier">chart</span>.<span class="ruby-identifier">marker_configure</span>(<span class="ruby-identifier">idnum</span>, <span class="ruby-identifier">methodkeys</span>) <span class="ruby-keyword">unless</span> <span class="ruby-identifier">methodkeys</span>.<span class="ruby-identifier">empty?</span>
+  <span class="ruby-identifier">idnum</span>.<span class="ruby-identifier">to_i</span>  <span class="ruby-comment"># &#39;item id&#39; is an integer number</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-create_type">
+            
+              <b>create_type</b>(chart, type, keys={})
+            
+            <a href="../../../../classes/Tk/BLT/PlotComponent/Marker.html#method-c-create_type" name="method-c-create_type" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-create_type_source')" id="l_method-c-create_type_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/cb732bbbdc94d2a969f5f727d6018b9d7d3e291c/ext/tk/lib/tkextlib/blt/component.rb#L1287" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-create_type_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/blt/component.rb, line 1287</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">create_type</span>(<span class="ruby-identifier">chart</span>, <span class="ruby-identifier">type</span>, <span class="ruby-identifier">keys</span>={})
+  <span class="ruby-identifier">args</span>, <span class="ruby-identifier">fontkeys</span>, <span class="ruby-identifier">methodkeys</span> = <span class="ruby-identifier">_parse_create_args</span>(<span class="ruby-identifier">keys</span>)
+  <span class="ruby-identifier">idnum</span> = <span class="ruby-identifier">tk_call_without_enc</span>(<span class="ruby-identifier">chart</span>.<span class="ruby-identifier">path</span>, <span class="ruby-string">&#39;marker&#39;</span>, <span class="ruby-string">&#39;create&#39;</span>,
+                              <span class="ruby-identifier">type</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">args</span>)
+  <span class="ruby-identifier">chart</span>.<span class="ruby-identifier">marker_configure</span>(<span class="ruby-identifier">idnum</span>, <span class="ruby-identifier">fontkeys</span>) <span class="ruby-keyword">unless</span> <span class="ruby-identifier">fontkeys</span>.<span class="ruby-identifier">empty?</span>
+  <span class="ruby-identifier">chart</span>.<span class="ruby-identifier">marker_configure</span>(<span class="ruby-identifier">idnum</span>, <span class="ruby-identifier">methodkeys</span>) <span class="ruby-keyword">unless</span> <span class="ruby-identifier">methodkeys</span>.<span class="ruby-identifier">empty?</span>
+  <span class="ruby-identifier">id</span> = <span class="ruby-identifier">idnum</span>.<span class="ruby-identifier">to_i</span>  <span class="ruby-comment"># &#39;item id&#39; is an integer number</span>
+  <span class="ruby-identifier">obj</span> = <span class="ruby-keyword">self</span>.<span class="ruby-identifier">allocate</span>
+  <span class="ruby-identifier">obj</span>.<span class="ruby-identifier">instance_eval</span>{
+    <span class="ruby-ivar">@parent</span> = <span class="ruby-ivar">@chart</span> = <span class="ruby-identifier">chart</span>
+    <span class="ruby-ivar">@cpath</span> = <span class="ruby-identifier">chart</span>.<span class="ruby-identifier">path</span>
+    <span class="ruby-ivar">@id</span> = <span class="ruby-identifier">id</span>
+    <span class="ruby-constant">Tk</span><span class="ruby-operator">::</span><span class="ruby-constant">BLT</span><span class="ruby-operator">::</span><span class="ruby-constant">PlotComponent</span><span class="ruby-operator">::</span><span class="ruby-constant">Marker</span><span class="ruby-operator">::</span><span class="ruby-constant">MarkerID_TBL</span>.<span class="ruby-identifier">mutex</span>.<span class="ruby-identifier">synchronize</span>{
+      <span class="ruby-constant">Tk</span><span class="ruby-operator">::</span><span class="ruby-constant">BLT</span><span class="ruby-operator">::</span><span class="ruby-constant">PlotComponent</span><span class="ruby-operator">::</span><span class="ruby-constant">Marker</span><span class="ruby-operator">::</span><span class="ruby-constant">MarkerID_TBL</span>[<span class="ruby-ivar">@cpath</span>] <span class="ruby-operator">||=</span> {}
+      <span class="ruby-constant">Tk</span><span class="ruby-operator">::</span><span class="ruby-constant">BLT</span><span class="ruby-operator">::</span><span class="ruby-constant">PlotComponent</span><span class="ruby-operator">::</span><span class="ruby-constant">Marker</span><span class="ruby-operator">::</span><span class="ruby-constant">MarkerID_TBL</span>[<span class="ruby-ivar">@cpath</span>][<span class="ruby-ivar">@id</span>] = <span class="ruby-keyword">self</span>
+    }
+  }
+  <span class="ruby-identifier">obj</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-id2obj">
+            
+              <b>id2obj</b>(chart, id)
+            
+            <a href="../../../../classes/Tk/BLT/PlotComponent/Marker.html#method-c-id2obj" name="method-c-id2obj" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-id2obj_source')" id="l_method-c-id2obj_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/cb732bbbdc94d2a969f5f727d6018b9d7d3e291c/ext/tk/lib/tkextlib/blt/component.rb#L1218" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-id2obj_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/blt/component.rb, line 1218</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">Marker</span>.<span class="ruby-identifier">id2obj</span>(<span class="ruby-identifier">chart</span>, <span class="ruby-identifier">id</span>)
+  <span class="ruby-identifier">cpath</span> = <span class="ruby-identifier">chart</span>.<span class="ruby-identifier">path</span>
+  <span class="ruby-constant">MarkerID_TBL</span>.<span class="ruby-identifier">mutex</span>.<span class="ruby-identifier">synchronize</span>{
+    <span class="ruby-keyword">if</span> <span class="ruby-constant">MarkerID_TBL</span>[<span class="ruby-identifier">cpath</span>]
+      <span class="ruby-constant">MarkerID_TBL</span>[<span class="ruby-identifier">cpath</span>][<span class="ruby-identifier">id</span>]<span class="ruby-operator">?</span> <span class="ruby-constant">MarkerID_TBL</span>[<span class="ruby-identifier">cpath</span>][<span class="ruby-identifier">id</span>]<span class="ruby-operator">:</span> <span class="ruby-identifier">id</span>
+    <span class="ruby-keyword">else</span>
+      <span class="ruby-identifier">id</span>
+    <span class="ruby-keyword">end</span>
+  }
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-new">
+            
+              <b>new</b>(parent, *args)
+            
+            <a href="../../../../classes/Tk/BLT/PlotComponent/Marker.html#method-c-new" name="method-c-new" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-new_source')" id="l_method-c-new_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/cb732bbbdc94d2a969f5f727d6018b9d7d3e291c/ext/tk/lib/tkextlib/blt/component.rb#L1307" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-new_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/blt/component.rb, line 1307</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">initialize</span>(<span class="ruby-identifier">parent</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">args</span>)
+  <span class="ruby-ivar">@parent</span> = <span class="ruby-ivar">@chart</span> = <span class="ruby-identifier">parent</span>
+  <span class="ruby-ivar">@cpath</span> = <span class="ruby-identifier">parent</span>.<span class="ruby-identifier">path</span>
+
+  <span class="ruby-ivar">@path</span> = <span class="ruby-ivar">@id</span> = <span class="ruby-identifier">create_self</span>(<span class="ruby-operator">*</span><span class="ruby-identifier">args</span>) <span class="ruby-comment"># an integer number as &#39;item id&#39;</span>
+  <span class="ruby-constant">Tk</span><span class="ruby-operator">::</span><span class="ruby-constant">BLT</span><span class="ruby-operator">::</span><span class="ruby-constant">PlotComponent</span><span class="ruby-operator">::</span><span class="ruby-constant">Marker</span><span class="ruby-operator">::</span><span class="ruby-constant">MarkerID_TBL</span>.<span class="ruby-identifier">mutex</span>.<span class="ruby-identifier">synchronize</span>{
+    <span class="ruby-constant">Tk</span><span class="ruby-operator">::</span><span class="ruby-constant">BLT</span><span class="ruby-operator">::</span><span class="ruby-constant">PlotComponent</span><span class="ruby-operator">::</span><span class="ruby-constant">Marker</span><span class="ruby-operator">::</span><span class="ruby-constant">MarkerID_TBL</span>[<span class="ruby-ivar">@cpath</span>] <span class="ruby-operator">||=</span> {}
+    <span class="ruby-constant">Tk</span><span class="ruby-operator">::</span><span class="ruby-constant">BLT</span><span class="ruby-operator">::</span><span class="ruby-constant">PlotComponent</span><span class="ruby-operator">::</span><span class="ruby-constant">Marker</span><span class="ruby-operator">::</span><span class="ruby-constant">MarkerID_TBL</span>[<span class="ruby-ivar">@cpath</span>][<span class="ruby-ivar">@id</span>] = <span class="ruby-keyword">self</span>
+  }
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-type2class">
+            
+              <b>type2class</b>(type)
+            
+            <a href="../../../../classes/Tk/BLT/PlotComponent/Marker.html#method-c-type2class" name="method-c-type2class" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-type2class_source')" id="l_method-c-type2class_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/cb732bbbdc94d2a969f5f727d6018b9d7d3e291c/ext/tk/lib/tkextlib/blt/component.rb#L1214" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-type2class_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/blt/component.rb, line 1214</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">Marker</span>.<span class="ruby-identifier">type2class</span>(<span class="ruby-identifier">type</span>)
+  <span class="ruby-constant">MarkerTypeToClass</span>[<span class="ruby-identifier">type</span>]
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                  
+      <div class="sectiontitle">Instance Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-i-after">
+            
+              <b>after</b>(target=None)
+            
+            <a href="../../../../classes/Tk/BLT/PlotComponent/Marker.html#method-i-after" name="method-i-after" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-after_source')" id="l_method-i-after_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/cb732bbbdc94d2a969f5f727d6018b9d7d3e291c/ext/tk/lib/tkextlib/blt/component.rb#L1350" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-after_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/blt/component.rb, line 1350</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">after</span>(<span class="ruby-identifier">target</span>=<span class="ruby-constant">None</span>)
+  <span class="ruby-ivar">@chart</span>.<span class="ruby-identifier">marker_after</span>(<span class="ruby-ivar">@id</span>, <span class="ruby-identifier">target</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-before">
+            
+              <b>before</b>(target=None)
+            
+            <a href="../../../../classes/Tk/BLT/PlotComponent/Marker.html#method-i-before" name="method-i-before" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-before_source')" id="l_method-i-before_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/cb732bbbdc94d2a969f5f727d6018b9d7d3e291c/ext/tk/lib/tkextlib/blt/component.rb#L1354" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-before_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/blt/component.rb, line 1354</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">before</span>(<span class="ruby-identifier">target</span>=<span class="ruby-constant">None</span>)
+  <span class="ruby-ivar">@chart</span>.<span class="ruby-identifier">marker_before</span>(<span class="ruby-ivar">@id</span>, <span class="ruby-identifier">target</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-cget">
+            
+              <b>cget</b>(option)
+            
+            <a href="../../../../classes/Tk/BLT/PlotComponent/Marker.html#method-i-cget" name="method-i-cget" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-cget_source')" id="l_method-i-cget_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/cb732bbbdc94d2a969f5f727d6018b9d7d3e291c/ext/tk/lib/tkextlib/blt/component.rb#L1333" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-cget_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/blt/component.rb, line 1333</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">cget</span>(<span class="ruby-identifier">option</span>)
+  <span class="ruby-ivar">@chart</span>.<span class="ruby-identifier">marker_cget</span>(<span class="ruby-ivar">@id</span>, <span class="ruby-identifier">option</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-cget_strict">
+            
+              <b>cget_strict</b>(option)
+            
+            <a href="../../../../classes/Tk/BLT/PlotComponent/Marker.html#method-i-cget_strict" name="method-i-cget_strict" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-cget_strict_source')" id="l_method-i-cget_strict_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/cb732bbbdc94d2a969f5f727d6018b9d7d3e291c/ext/tk/lib/tkextlib/blt/component.rb#L1336" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-cget_strict_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/blt/component.rb, line 1336</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">cget_strict</span>(<span class="ruby-identifier">option</span>)
+  <span class="ruby-ivar">@chart</span>.<span class="ruby-identifier">marker_cget_strict</span>(<span class="ruby-ivar">@id</span>, <span class="ruby-identifier">option</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-cget_tkstring">
+            
+              <b>cget_tkstring</b>(option)
+            
+            <a href="../../../../classes/Tk/BLT/PlotComponent/Marker.html#method-i-cget_tkstring" name="method-i-cget_tkstring" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-cget_tkstring_source')" id="l_method-i-cget_tkstring_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/cb732bbbdc94d2a969f5f727d6018b9d7d3e291c/ext/tk/lib/tkextlib/blt/component.rb#L1330" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-cget_tkstring_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/blt/component.rb, line 1330</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">cget_tkstring</span>(<span class="ruby-identifier">option</span>)
+  <span class="ruby-ivar">@chart</span>.<span class="ruby-identifier">marker_cget_tkstring</span>(<span class="ruby-ivar">@id</span>, <span class="ruby-identifier">option</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-configinfo">
+            
+              <b>configinfo</b>(key=nil)
+            
+            <a href="../../../../classes/Tk/BLT/PlotComponent/Marker.html#method-i-configinfo" name="method-i-configinfo" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-configinfo_source')" id="l_method-i-configinfo_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/cb732bbbdc94d2a969f5f727d6018b9d7d3e291c/ext/tk/lib/tkextlib/blt/component.rb#L1343" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-configinfo_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/blt/component.rb, line 1343</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">configinfo</span>(<span class="ruby-identifier">key</span>=<span class="ruby-keyword">nil</span>)
+  <span class="ruby-ivar">@chart</span>.<span class="ruby-identifier">marker_configinfo</span>(<span class="ruby-ivar">@id</span>, <span class="ruby-identifier">key</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-configure">
+            
+              <b>configure</b>(key, value=None)
+            
+            <a href="../../../../classes/Tk/BLT/PlotComponent/Marker.html#method-i-configure" name="method-i-configure" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-configure_source')" id="l_method-i-configure_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/cb732bbbdc94d2a969f5f727d6018b9d7d3e291c/ext/tk/lib/tkextlib/blt/component.rb#L1339" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-configure_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/blt/component.rb, line 1339</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">configure</span>(<span class="ruby-identifier">key</span>, <span class="ruby-identifier">value</span>=<span class="ruby-constant">None</span>)
+  <span class="ruby-ivar">@chart</span>.<span class="ruby-identifier">marker_configure</span>(<span class="ruby-ivar">@id</span>, <span class="ruby-identifier">key</span>, <span class="ruby-identifier">value</span>)
+  <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-current_configinfo">
+            
+              <b>current_configinfo</b>(key=nil)
+            
+            <a href="../../../../classes/Tk/BLT/PlotComponent/Marker.html#method-i-current_configinfo" name="method-i-current_configinfo" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-current_configinfo_source')" id="l_method-i-current_configinfo_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/cb732bbbdc94d2a969f5f727d6018b9d7d3e291c/ext/tk/lib/tkextlib/blt/component.rb#L1346" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-current_configinfo_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/blt/component.rb, line 1346</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">current_configinfo</span>(<span class="ruby-identifier">key</span>=<span class="ruby-keyword">nil</span>)
+  <span class="ruby-ivar">@chart</span>.<span class="ruby-identifier">current_marker_configinfo</span>(<span class="ruby-ivar">@id</span>, <span class="ruby-identifier">key</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-delete">
+            
+              <b>delete</b>()
+            
+            <a href="../../../../classes/Tk/BLT/PlotComponent/Marker.html#method-i-delete" name="method-i-delete" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-delete_source')" id="l_method-i-delete_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/cb732bbbdc94d2a969f5f727d6018b9d7d3e291c/ext/tk/lib/tkextlib/blt/component.rb#L1358" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-delete_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/blt/component.rb, line 1358</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">delete</span>
+  <span class="ruby-ivar">@chart</span>.<span class="ruby-identifier">marker_delete</span>(<span class="ruby-ivar">@id</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-exist-3F">
+            
+              <b>exist?</b>()
+            
+            <a href="../../../../classes/Tk/BLT/PlotComponent/Marker.html#method-i-exist-3F" name="method-i-exist-3F" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-exist-3F_source')" id="l_method-i-exist-3F_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/cb732bbbdc94d2a969f5f727d6018b9d7d3e291c/ext/tk/lib/tkextlib/blt/component.rb#L1362" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-exist-3F_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/blt/component.rb, line 1362</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">exist?</span>
+  <span class="ruby-ivar">@chart</span>.<span class="ruby-identifier">marker_exist</span>(<span class="ruby-ivar">@id</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-id">
+            
+              <b>id</b>()
+            
+            <a href="../../../../classes/Tk/BLT/PlotComponent/Marker.html#method-i-id" name="method-i-id" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-id_source')" id="l_method-i-id_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/cb732bbbdc94d2a969f5f727d6018b9d7d3e291c/ext/tk/lib/tkextlib/blt/component.rb#L1322" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-id_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/blt/component.rb, line 1322</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">id</span>
+  <span class="ruby-ivar">@id</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-to_eval">
+            
+              <b>to_eval</b>()
+            
+            <a href="../../../../classes/Tk/BLT/PlotComponent/Marker.html#method-i-to_eval" name="method-i-to_eval" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-to_eval_source')" id="l_method-i-to_eval_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/cb732bbbdc94d2a969f5f727d6018b9d7d3e291c/ext/tk/lib/tkextlib/blt/component.rb#L1326" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-to_eval_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/blt/component.rb, line 1326</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">to_eval</span>
+  <span class="ruby-ivar">@id</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-type">
+            
+              <b>type</b>()
+            
+            <a href="../../../../classes/Tk/BLT/PlotComponent/Marker.html#method-i-type" name="method-i-type" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-type_source')" id="l_method-i-type_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/cb732bbbdc94d2a969f5f727d6018b9d7d3e291c/ext/tk/lib/tkextlib/blt/component.rb#L1366" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-type_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/blt/component.rb, line 1366</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">type</span>
+  <span class="ruby-ivar">@chart</span>.<span class="ruby-identifier">marker_type</span>(<span class="ruby-ivar">@id</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                    </div>
+
+    </div>
+  </body>
+</html>    

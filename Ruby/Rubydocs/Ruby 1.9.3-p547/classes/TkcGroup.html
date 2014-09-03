@@ -1,0 +1,370 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>TkcGroup</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="../css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/main.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/github.css" type="text/css" media="screen" />
+<script src="../js/jquery-1.3.2.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/jquery-effect.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+
+<body>     
+    <div class="banner">
+        
+        <h1>
+            <span class="type">Class</span> 
+            TkcGroup 
+            
+                <span class="parent">&lt; 
+                    
+                    <a href="TkcTag.html">TkcTag</a>
+                    
+                </span>
+            
+        </h1>
+        <ul class="files">
+            
+            <li><a href="../files/ext/tk/lib/tk/canvastag_rb.html">ext/tk/lib/tk/canvastag.rb</a></li>
+            
+        </ul>
+    </div>
+    <div id="bodyContent">
+        <div id="content">
+  
+
+
+  
+
+
+  
+  
+
+
+  
+
+
+  
+    <!-- Method ref -->
+    <div class="sectiontitle">Methods</div>
+    <dl class="methods">
+      
+        <dt>A</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-add">add</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>E</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-exclude">exclude</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>I</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-include">include</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>M</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-mutex">mutex</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>N</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-new">new</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+    </dl>
+  
+
+  
+
+
+
+  
+
+    
+
+    
+
+    
+      <!-- Section constants -->
+      <div class="sectiontitle">Constants</div>
+      <table border='0' cellpadding='5'>
+        
+          <tr valign='top'>
+            <td class="attr-name">Tk_cGroup_ID</td>
+            <td>=</td>
+            <td class="attr-value">[&#39;tkcg&#39;.freeze, TkUtil.untrust(&#39;00000&#39;)]).instance_eval{
+@mutex = Mutex.new</td>
+          </tr>
+          
+            <tr valign='top'>
+              <td>&nbsp;</td>
+              <td colspan="2" class="attr-desc"></td>
+            </tr>
+          
+        
+      </table>
+    
+
+
+    
+
+
+    <!-- Methods -->
+    
+      <div class="sectiontitle">Class Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-c-new">
+            
+              <b>new</b>(parent, *args)
+            
+            <a href="../classes/TkcGroup.html#method-c-new" name="method-c-new" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>def create_self(parent, *args)</p>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-new_source')" id="l_method-c-new_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tk/canvastag.rb#L424" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-new_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tk/canvastag.rb, line 424</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">initialize</span>(<span class="ruby-identifier">parent</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">args</span>)
+  <span class="ruby-comment">#unless parent.kind_of?(TkCanvas)</span>
+  <span class="ruby-comment">#  fail ArgumentError, &quot;expect TkCanvas for 1st argument&quot;</span>
+  <span class="ruby-comment">#end</span>
+  <span class="ruby-ivar">@c</span> = <span class="ruby-identifier">parent</span>
+  <span class="ruby-ivar">@cpath</span> = <span class="ruby-identifier">parent</span>.<span class="ruby-identifier">path</span>
+  <span class="ruby-constant">Tk_cGroup_ID</span>.<span class="ruby-identifier">mutex</span>.<span class="ruby-identifier">synchronize</span>{
+    <span class="ruby-comment"># @path = @id = Tk_cGroup_ID.join(&#39;&#39;)</span>
+    <span class="ruby-ivar">@path</span> = <span class="ruby-ivar">@id</span> = <span class="ruby-constant">Tk_cGroup_ID</span>.<span class="ruby-identifier">join</span>(<span class="ruby-constant">TkCore</span><span class="ruby-operator">::</span><span class="ruby-constant">INTERP</span>.<span class="ruby-identifier">_ip_id_</span>)
+    <span class="ruby-constant">Tk_cGroup_ID</span>[<span class="ruby-number">1</span>].<span class="ruby-identifier">succ!</span>
+  }
+  <span class="ruby-constant">CTagID_TBL</span>.<span class="ruby-identifier">mutex</span>.<span class="ruby-identifier">synchronize</span>{
+    <span class="ruby-constant">CTagID_TBL</span>[<span class="ruby-ivar">@cpath</span>] = {} <span class="ruby-keyword">unless</span> <span class="ruby-constant">CTagID_TBL</span>[<span class="ruby-ivar">@cpath</span>]
+    <span class="ruby-constant">CTagID_TBL</span>[<span class="ruby-ivar">@cpath</span>][<span class="ruby-ivar">@id</span>] = <span class="ruby-keyword">self</span>
+  }
+  <span class="ruby-identifier">include</span>(<span class="ruby-operator">*</span><span class="ruby-identifier">args</span>) <span class="ruby-keyword">if</span> <span class="ruby-identifier">args</span> <span class="ruby-operator">!=</span> []
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                  
+      <div class="sectiontitle">Instance Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-i-add">
+            
+              <b>add</b>(*tags)
+            
+            <a href="../classes/TkcGroup.html#method-i-add" name="method-i-add" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+            <div class="aka">
+              Alias for: <a href="TkcGroup.html#method-i-include">include</a>
+            </div>
+          
+          
+          
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-exclude">
+            
+              <b>exclude</b>(*tags)
+            
+            <a href="../classes/TkcGroup.html#method-i-exclude" name="method-i-exclude" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-exclude_source')" id="l_method-i-exclude_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tk/canvastag.rb#L452" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-exclude_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tk/canvastag.rb, line 452</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">exclude</span>(<span class="ruby-operator">*</span><span class="ruby-identifier">tags</span>)
+  <span class="ruby-keyword">for</span> <span class="ruby-identifier">i</span> <span class="ruby-keyword">in</span> <span class="ruby-identifier">tags</span>
+    <span class="ruby-comment">#i.dtag(@id)</span>
+    <span class="ruby-ivar">@c</span>.<span class="ruby-identifier">dtag</span>(<span class="ruby-identifier">i</span>, <span class="ruby-ivar">@id</span>)
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-include">
+            
+              <b>include</b>(*tags)
+            
+            <a href="../classes/TkcGroup.html#method-i-include" name="method-i-include" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>private :create_self</p>
+            </div>
+          
+          
+          
+            <div class="aka">
+              Also aliased as: <a href="TkcGroup.html#method-i-add">add</a>
+            </div>
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-include_source')" id="l_method-i-include_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tk/canvastag.rb#L443" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-include_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tk/canvastag.rb, line 443</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">include</span>(<span class="ruby-operator">*</span><span class="ruby-identifier">tags</span>)
+  <span class="ruby-keyword">for</span> <span class="ruby-identifier">i</span> <span class="ruby-keyword">in</span> <span class="ruby-identifier">tags</span>
+    <span class="ruby-comment">#i.addtag(@id)</span>
+    <span class="ruby-ivar">@c</span>.<span class="ruby-identifier">addtag_withtag</span>(<span class="ruby-ivar">@id</span>, <span class="ruby-identifier">i</span>)
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-mutex">
+            
+              <b>mutex</b>()
+            
+            <a href="../classes/TkcGroup.html#method-i-mutex" name="method-i-mutex" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-mutex_source')" id="l_method-i-mutex_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tk/canvastag.rb#L419" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-mutex_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tk/canvastag.rb, line 419</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">mutex</span>; <span class="ruby-ivar">@mutex</span>; <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                    </div>
+
+    </div>
+  </body>
+</html>    

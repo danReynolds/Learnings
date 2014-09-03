@@ -1,0 +1,540 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>Tk::Tcllib::Plotchart::Timechart</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="../../../../css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../../../../css/main.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../../../../css/github.css" type="text/css" media="screen" />
+<script src="../../../../js/jquery-1.3.2.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../../../js/jquery-effect.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../../../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../../../js/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+
+<body>     
+    <div class="banner">
+        
+        <h1>
+            <span class="type">Class</span> 
+            Tk::Tcllib::Plotchart::Timechart 
+            
+                <span class="parent">&lt; 
+                    
+                    <a href="../../Canvas.html">Tk::Canvas</a>
+                    
+                </span>
+            
+        </h1>
+        <ul class="files">
+            
+            <li><a href="../../../../files/ext/tk/lib/tkextlib/tcllib/plotchart_rb.html">ext/tk/lib/tkextlib/tcllib/plotchart.rb</a></li>
+            
+        </ul>
+    </div>
+    <div id="bodyContent">
+        <div id="content">
+  
+
+
+  
+
+
+  
+  
+
+
+  
+
+
+  
+    <!-- Method ref -->
+    <div class="sectiontitle">Methods</div>
+    <dl class="methods">
+      
+        <dt>H</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-hscroll">hscroll</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-hscroll-3D">hscroll=</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>M</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-milestone">milestone</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>N</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-new">new</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>P</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-period">period</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>V</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-vertline">vertline</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-vscroll">vscroll</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-vscroll-3D">vscroll=</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+    </dl>
+  
+
+  
+    <!-- Includes -->
+    <div class="sectiontitle">Included Modules</div>
+    <ul>
+      
+        <li>
+          
+            <a href="ChartMethod.html">
+              Tk::Tcllib::Plotchart::ChartMethod
+            </a>
+          
+        </li>
+      
+    </ul>
+  
+
+
+
+  
+
+    
+
+    
+
+    
+      <!-- Section constants -->
+      <div class="sectiontitle">Constants</div>
+      <table border='0' cellpadding='5'>
+        
+          <tr valign='top'>
+            <td class="attr-name">TkCommandNames</td>
+            <td>=</td>
+            <td class="attr-value">[
+&#39;canvas&#39;.freeze,
+&#39;::Plotchart::createTimechart&#39;.freeze
+].freeze</td>
+          </tr>
+          
+            <tr valign='top'>
+              <td>&nbsp;</td>
+              <td colspan="2" class="attr-desc"></td>
+            </tr>
+          
+        
+      </table>
+    
+
+
+    
+
+
+    <!-- Methods -->
+    
+      <div class="sectiontitle">Class Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-c-new">
+            
+              <b>new</b>(*args)
+            
+            <a href="../../../../classes/Tk/Tcllib/Plotchart/Timechart.html#method-c-new" name="method-c-new" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-new_source')" id="l_method-c-new_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/3a47cf3395dd4c4fe8bdd5df13aab698f2ca314b/ext/tk/lib/tkextlib/tcllib/plotchart.rb#L1181" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-new_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/tcllib/plotchart.rb, line 1181</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">initialize</span>(<span class="ruby-operator">*</span><span class="ruby-identifier">args</span>)
+  <span class="ruby-comment"># args := ([parent,] time_begin, time_end, items [, keys])</span>
+  <span class="ruby-comment"># time_begin := String of time format (e.g. &quot;1 january 2004&quot;)</span>
+  <span class="ruby-comment"># time_end   := String of time format (e.g. &quot;1 january 2004&quot;)</span>
+  <span class="ruby-comment"># items := Expected/maximum number of items</span>
+  <span class="ruby-comment">#          ( This determines the vertical spacing. )</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">args</span>[<span class="ruby-number">0</span>].<span class="ruby-identifier">kind_of?</span>(<span class="ruby-constant">String</span>)
+    <span class="ruby-ivar">@time_begin</span> = <span class="ruby-identifier">args</span>.<span class="ruby-identifier">shift</span>
+    <span class="ruby-ivar">@time_end</span>   = <span class="ruby-identifier">args</span>.<span class="ruby-identifier">shift</span>
+    <span class="ruby-ivar">@items</span>      = <span class="ruby-identifier">args</span>.<span class="ruby-identifier">shift</span>
+
+    <span class="ruby-keyword">super</span>(<span class="ruby-operator">*</span><span class="ruby-identifier">args</span>) <span class="ruby-comment"># create canvas widget</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">parent</span> = <span class="ruby-identifier">args</span>.<span class="ruby-identifier">shift</span>
+
+    <span class="ruby-ivar">@time_begin</span> = <span class="ruby-identifier">args</span>.<span class="ruby-identifier">shift</span>
+    <span class="ruby-ivar">@time_end</span>   = <span class="ruby-identifier">args</span>.<span class="ruby-identifier">shift</span>
+    <span class="ruby-ivar">@items</span>      = <span class="ruby-identifier">args</span>.<span class="ruby-identifier">shift</span>
+
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">parent</span>.<span class="ruby-identifier">kind_of?</span>(<span class="ruby-constant">Tk</span><span class="ruby-operator">::</span><span class="ruby-constant">Canvas</span>)
+      <span class="ruby-ivar">@path</span> = <span class="ruby-identifier">parent</span>.<span class="ruby-identifier">path</span>
+    <span class="ruby-keyword">else</span>
+      <span class="ruby-keyword">super</span>(<span class="ruby-identifier">parent</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">args</span>) <span class="ruby-comment"># create canvas widget</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-ivar">@chart</span> = <span class="ruby-identifier">_create_chart</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                  
+      <div class="sectiontitle">Instance Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-i-hscroll">
+            
+              <b>hscroll</b>(scr)
+            
+            <a href="../../../../classes/Tk/Tcllib/Plotchart/Timechart.html#method-i-hscroll" name="method-i-hscroll" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-hscroll_source')" id="l_method-i-hscroll_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/3a47cf3395dd4c4fe8bdd5df13aab698f2ca314b/ext/tk/lib/tkextlib/tcllib/plotchart.rb#L1236" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-hscroll_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/tcllib/plotchart.rb, line 1236</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">hscroll</span>(<span class="ruby-identifier">scr</span>)
+  <span class="ruby-identifier">tk_call_without_enc</span>(<span class="ruby-ivar">@chart</span>, <span class="ruby-string">&#39;hscroll&#39;</span>, <span class="ruby-identifier">scr</span>)
+  <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-hscroll-3D">
+            
+              <b>hscroll=</b>(scr)
+            
+            <a href="../../../../classes/Tk/Tcllib/Plotchart/Timechart.html#method-i-hscroll-3D" name="method-i-hscroll-3D" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-hscroll-3D_source')" id="l_method-i-hscroll-3D_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/3a47cf3395dd4c4fe8bdd5df13aab698f2ca314b/ext/tk/lib/tkextlib/tcllib/plotchart.rb#L1232" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-hscroll-3D_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/tcllib/plotchart.rb, line 1232</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">hscroll=</span>(<span class="ruby-identifier">scr</span>)
+  <span class="ruby-identifier">tk_call_without_enc</span>(<span class="ruby-ivar">@chart</span>, <span class="ruby-string">&#39;hscroll&#39;</span>, <span class="ruby-identifier">scr</span>)
+  <span class="ruby-identifier">scr</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-milestone">
+            
+              <b>milestone</b>(txt, time, col=None)
+            
+            <a href="../../../../classes/Tk/Tcllib/Plotchart/Timechart.html#method-i-milestone" name="method-i-milestone" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-milestone_source')" id="l_method-i-milestone_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/3a47cf3395dd4c4fe8bdd5df13aab698f2ca314b/ext/tk/lib/tkextlib/tcllib/plotchart.rb#L1222" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-milestone_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/tcllib/plotchart.rb, line 1222</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">milestone</span>(<span class="ruby-identifier">txt</span>, <span class="ruby-identifier">time</span>, <span class="ruby-identifier">col</span>=<span class="ruby-constant">None</span>)
+  <span class="ruby-identifier">tk_call</span>(<span class="ruby-ivar">@chart</span>, <span class="ruby-string">&#39;milestone&#39;</span>, <span class="ruby-identifier">txt</span>, <span class="ruby-identifier">time</span>, <span class="ruby-identifier">col</span>)
+  <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-period">
+            
+              <b>period</b>(txt, time_begin, time_end, col=None)
+            
+            <a href="../../../../classes/Tk/Tcllib/Plotchart/Timechart.html#method-i-period" name="method-i-period" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-period_source')" id="l_method-i-period_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/3a47cf3395dd4c4fe8bdd5df13aab698f2ca314b/ext/tk/lib/tkextlib/tcllib/plotchart.rb#L1217" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-period_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/tcllib/plotchart.rb, line 1217</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">period</span>(<span class="ruby-identifier">txt</span>, <span class="ruby-identifier">time_begin</span>, <span class="ruby-identifier">time_end</span>, <span class="ruby-identifier">col</span>=<span class="ruby-constant">None</span>)
+  <span class="ruby-identifier">tk_call</span>(<span class="ruby-ivar">@chart</span>, <span class="ruby-string">&#39;period&#39;</span>, <span class="ruby-identifier">txt</span>, <span class="ruby-identifier">time_begin</span>, <span class="ruby-identifier">time_end</span>, <span class="ruby-identifier">col</span>)
+  <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-vertline">
+            
+              <b>vertline</b>(txt, time)
+            
+            <a href="../../../../classes/Tk/Tcllib/Plotchart/Timechart.html#method-i-vertline" name="method-i-vertline" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-vertline_source')" id="l_method-i-vertline_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/3a47cf3395dd4c4fe8bdd5df13aab698f2ca314b/ext/tk/lib/tkextlib/tcllib/plotchart.rb#L1227" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-vertline_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/tcllib/plotchart.rb, line 1227</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">vertline</span>(<span class="ruby-identifier">txt</span>, <span class="ruby-identifier">time</span>)
+  <span class="ruby-identifier">tk_call</span>(<span class="ruby-ivar">@chart</span>, <span class="ruby-string">&#39;vertline&#39;</span>, <span class="ruby-identifier">txt</span>, <span class="ruby-identifier">time</span>)
+  <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-vscroll">
+            
+              <b>vscroll</b>(scr)
+            
+            <a href="../../../../classes/Tk/Tcllib/Plotchart/Timechart.html#method-i-vscroll" name="method-i-vscroll" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-vscroll_source')" id="l_method-i-vscroll_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/3a47cf3395dd4c4fe8bdd5df13aab698f2ca314b/ext/tk/lib/tkextlib/tcllib/plotchart.rb#L1245" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-vscroll_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/tcllib/plotchart.rb, line 1245</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">vscroll</span>(<span class="ruby-identifier">scr</span>)
+  <span class="ruby-identifier">tk_call_without_enc</span>(<span class="ruby-ivar">@chart</span>, <span class="ruby-string">&#39;vscroll&#39;</span>, <span class="ruby-identifier">scr</span>)
+  <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-vscroll-3D">
+            
+              <b>vscroll=</b>(scr)
+            
+            <a href="../../../../classes/Tk/Tcllib/Plotchart/Timechart.html#method-i-vscroll-3D" name="method-i-vscroll-3D" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-vscroll-3D_source')" id="l_method-i-vscroll-3D_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/3a47cf3395dd4c4fe8bdd5df13aab698f2ca314b/ext/tk/lib/tkextlib/tcllib/plotchart.rb#L1241" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-vscroll-3D_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/tcllib/plotchart.rb, line 1241</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">vscroll=</span>(<span class="ruby-identifier">scr</span>)
+  <span class="ruby-identifier">tk_call_without_enc</span>(<span class="ruby-ivar">@chart</span>, <span class="ruby-string">&#39;vscroll&#39;</span>, <span class="ruby-identifier">scr</span>)
+  <span class="ruby-identifier">scr</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                    </div>
+
+    </div>
+  </body>
+</html>    

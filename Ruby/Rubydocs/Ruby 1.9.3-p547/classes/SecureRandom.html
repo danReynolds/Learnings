@@ -1,0 +1,561 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>SecureRandom</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="../css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/main.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/github.css" type="text/css" media="screen" />
+<script src="../js/jquery-1.3.2.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/jquery-effect.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+
+<body>     
+    <div class="banner">
+        
+        <h1>
+            <span class="type">Module</span> 
+            SecureRandom 
+            
+        </h1>
+        <ul class="files">
+            
+            <li><a href="../files/lib/securerandom_rb.html">lib/securerandom.rb</a></li>
+            
+        </ul>
+    </div>
+    <div id="bodyContent">
+        <div id="content">
+  
+
+
+  
+
+
+  
+  
+
+
+  
+
+
+  
+    <!-- Method ref -->
+    <div class="sectiontitle">Methods</div>
+    <dl class="methods">
+      
+        <dt>B</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-base64">base64</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>H</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-hex">hex</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>R</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-random_bytes">random_bytes</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-c-random_number">random_number</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>U</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-urlsafe_base64">urlsafe_base64</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-c-uuid">uuid</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+    </dl>
+  
+
+  
+
+
+
+  
+
+    
+
+    
+
+    
+
+
+    
+
+
+    <!-- Methods -->
+    
+      <div class="sectiontitle">Class Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-c-base64">
+            
+              <b>base64</b>(n=nil)
+            
+            <a href="../classes/SecureRandom.html#method-c-base64" name="method-c-base64" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p><a href="SecureRandom.html#method-c-base64">::base64</a> generates a random
+base64 string.</p>
+
+<p>The argument <em>n</em> specifies the length of the random length. The
+length of the result string is about 4/3 of <em>n</em>.</p>
+
+<p>If <em>n</em> is not specified, 16 is assumed. It may be larger in future.</p>
+
+<p>The result may contain A-Z, a-z, 0-9, “+”, “/” and “=”.</p>
+
+<pre><code>p SecureRandom.base64 #=&gt; &quot;/2BuBuLf3+WfSKyQbRcc/A==&quot;
+p SecureRandom.base64 #=&gt; &quot;6BbW0pxO0YENxn38HMUbcQ==&quot;
+</code></pre>
+
+<p>If secure random number generator is not available, <a
+href="NotImplementedError.html">NotImplementedError</a> is raised.</p>
+
+<p>See RFC 3548 for the definition of base64.</p>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-base64_source')" id="l_method-c-base64_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/2099780eb653e46bd46d68939e04c7a2ebe2f13a/lib/securerandom.rb#L160" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-base64_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File lib/securerandom.rb, line 160</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">base64</span>(<span class="ruby-identifier">n</span>=<span class="ruby-keyword">nil</span>)
+  [<span class="ruby-identifier">random_bytes</span>(<span class="ruby-identifier">n</span>)].<span class="ruby-identifier">pack</span>(<span class="ruby-string">&quot;m*&quot;</span>).<span class="ruby-identifier">delete</span>(<span class="ruby-string">&quot;\n&quot;</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-hex">
+            
+              <b>hex</b>(n=nil)
+            
+            <a href="../classes/SecureRandom.html#method-c-hex" name="method-c-hex" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p><a href="SecureRandom.html#method-c-hex">::hex</a> generates a random hex
+string.</p>
+
+<p>The argument <em>n</em> specifies the length of the random length. The
+length of the result string is twice of <em>n</em>.</p>
+
+<p>If <em>n</em> is not specified, 16 is assumed. It may be larger in future.</p>
+
+<p>The result may contain 0-9 and a-f.</p>
+
+<pre><code>p SecureRandom.hex #=&gt; &quot;eb693ec8252cd630102fd0d0fb7c3485&quot;
+p SecureRandom.hex #=&gt; &quot;91dc3bfb4de5b11d029d376634589b61&quot;
+</code></pre>
+
+<p>If secure random number generator is not available, <a
+href="NotImplementedError.html">NotImplementedError</a> is raised.</p>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-hex_source')" id="l_method-c-hex_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/2099780eb653e46bd46d68939e04c7a2ebe2f13a/lib/securerandom.rb#L139" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-hex_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File lib/securerandom.rb, line 139</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">hex</span>(<span class="ruby-identifier">n</span>=<span class="ruby-keyword">nil</span>)
+  <span class="ruby-identifier">random_bytes</span>(<span class="ruby-identifier">n</span>).<span class="ruby-identifier">unpack</span>(<span class="ruby-string">&quot;H*&quot;</span>)[<span class="ruby-number">0</span>]
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-random_bytes">
+            
+              <b>random_bytes</b>(n=nil)
+            
+            <a href="../classes/SecureRandom.html#method-c-random_bytes" name="method-c-random_bytes" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p><a href="SecureRandom.html#method-c-random_bytes">::random_bytes</a>
+generates a random binary string.</p>
+
+<p>The argument <em>n</em> specifies the length of the result string.</p>
+
+<p>If <em>n</em> is not specified, 16 is assumed. It may be larger in future.</p>
+
+<p>The result may contain any byte: “x00” - “xff”.</p>
+
+<pre><code>p SecureRandom.random_bytes #=&gt; &quot;\xD8\\\xE0\xF4\r\xB2\xFC*WM\xFF\x83\x18\xF45\xB6&quot;
+p SecureRandom.random_bytes #=&gt; &quot;m\xDC\xFC/\a\x00Uf\xB2\xB2P\xBD\xFF6S\x97&quot;
+</code></pre>
+
+<p>If secure random number generator is not available, <a
+href="NotImplementedError.html">NotImplementedError</a> is raised.</p>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-random_bytes_source')" id="l_method-c-random_bytes_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/2099780eb653e46bd46d68939e04c7a2ebe2f13a/lib/securerandom.rb#L56" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-random_bytes_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File lib/securerandom.rb, line 56</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">random_bytes</span>(<span class="ruby-identifier">n</span>=<span class="ruby-keyword">nil</span>)
+  <span class="ruby-identifier">n</span> = <span class="ruby-identifier">n</span> <span class="ruby-operator">?</span> <span class="ruby-identifier">n</span>.<span class="ruby-identifier">to_int</span> <span class="ruby-operator">:</span> <span class="ruby-number">16</span>
+
+  <span class="ruby-keyword">if</span> <span class="ruby-keyword">defined?</span> <span class="ruby-constant">OpenSSL</span><span class="ruby-operator">::</span><span class="ruby-constant">Random</span>
+    <span class="ruby-ivar">@pid</span> = <span class="ruby-number">0</span> <span class="ruby-keyword">if</span> <span class="ruby-operator">!</span><span class="ruby-keyword">defined?</span>(<span class="ruby-ivar">@pid</span>)
+    <span class="ruby-identifier">pid</span> = <span class="ruby-identifier">$$</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-ivar">@pid</span> <span class="ruby-operator">!=</span> <span class="ruby-identifier">pid</span>
+      <span class="ruby-identifier">now</span> = <span class="ruby-constant">Time</span>.<span class="ruby-identifier">now</span>
+      <span class="ruby-identifier">ary</span> = [<span class="ruby-identifier">now</span>.<span class="ruby-identifier">to_i</span>, <span class="ruby-identifier">now</span>.<span class="ruby-identifier">nsec</span>, <span class="ruby-ivar">@pid</span>, <span class="ruby-identifier">pid</span>]
+      <span class="ruby-constant">OpenSSL</span><span class="ruby-operator">::</span><span class="ruby-constant">Random</span>.<span class="ruby-identifier">seed</span>(<span class="ruby-identifier">ary</span>.<span class="ruby-identifier">to_s</span>)
+      <span class="ruby-ivar">@pid</span> = <span class="ruby-identifier">pid</span>
+    <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">return</span> <span class="ruby-constant">OpenSSL</span><span class="ruby-operator">::</span><span class="ruby-constant">Random</span>.<span class="ruby-identifier">random_bytes</span>(<span class="ruby-identifier">n</span>)
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-keyword">if</span> <span class="ruby-operator">!</span><span class="ruby-keyword">defined?</span>(<span class="ruby-ivar">@has_urandom</span>) <span class="ruby-operator">||</span> <span class="ruby-ivar">@has_urandom</span>
+    <span class="ruby-identifier">flags</span> = <span class="ruby-constant">File</span><span class="ruby-operator">::</span><span class="ruby-constant">RDONLY</span>
+    <span class="ruby-identifier">flags</span> <span class="ruby-operator">|=</span> <span class="ruby-constant">File</span><span class="ruby-operator">::</span><span class="ruby-constant">NONBLOCK</span> <span class="ruby-keyword">if</span> <span class="ruby-keyword">defined?</span> <span class="ruby-constant">File</span><span class="ruby-operator">::</span><span class="ruby-constant">NONBLOCK</span>
+    <span class="ruby-identifier">flags</span> <span class="ruby-operator">|=</span> <span class="ruby-constant">File</span><span class="ruby-operator">::</span><span class="ruby-constant">NOCTTY</span> <span class="ruby-keyword">if</span> <span class="ruby-keyword">defined?</span> <span class="ruby-constant">File</span><span class="ruby-operator">::</span><span class="ruby-constant">NOCTTY</span>
+    <span class="ruby-keyword">begin</span>
+      <span class="ruby-constant">File</span>.<span class="ruby-identifier">open</span>(<span class="ruby-string">&quot;/dev/urandom&quot;</span>, <span class="ruby-identifier">flags</span>) {<span class="ruby-operator">|</span><span class="ruby-identifier">f</span><span class="ruby-operator">|</span>
+        <span class="ruby-keyword">unless</span> <span class="ruby-identifier">f</span>.<span class="ruby-identifier">stat</span>.<span class="ruby-identifier">chardev?</span>
+          <span class="ruby-identifier">raise</span> <span class="ruby-constant">Errno</span><span class="ruby-operator">::</span><span class="ruby-constant">ENOENT</span>
+        <span class="ruby-keyword">end</span>
+        <span class="ruby-ivar">@has_urandom</span> = <span class="ruby-keyword">true</span>
+        <span class="ruby-identifier">ret</span> = <span class="ruby-identifier">f</span>.<span class="ruby-identifier">readpartial</span>(<span class="ruby-identifier">n</span>)
+        <span class="ruby-keyword">if</span> <span class="ruby-identifier">ret</span>.<span class="ruby-identifier">length</span> <span class="ruby-operator">!=</span> <span class="ruby-identifier">n</span>
+          <span class="ruby-identifier">raise</span> <span class="ruby-constant">NotImplementedError</span>, <span class="ruby-node">&quot;Unexpected partial read from random device: only #{ret.length} for #{n} bytes&quot;</span>
+        <span class="ruby-keyword">end</span>
+        <span class="ruby-keyword">return</span> <span class="ruby-identifier">ret</span>
+      }
+    <span class="ruby-keyword">rescue</span> <span class="ruby-constant">Errno</span><span class="ruby-operator">::</span><span class="ruby-constant">ENOENT</span>
+      <span class="ruby-ivar">@has_urandom</span> = <span class="ruby-keyword">false</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-keyword">if</span> <span class="ruby-operator">!</span><span class="ruby-keyword">defined?</span>(<span class="ruby-ivar">@has_win32</span>)
+    <span class="ruby-keyword">begin</span>
+      <span class="ruby-identifier">require</span> <span class="ruby-string">&#39;Win32API&#39;</span>
+
+      <span class="ruby-identifier">crypt_acquire_context</span> = <span class="ruby-constant">Win32API</span>.<span class="ruby-identifier">new</span>(<span class="ruby-string">&quot;advapi32&quot;</span>, <span class="ruby-string">&quot;CryptAcquireContext&quot;</span>, <span class="ruby-string">&#39;PPPII&#39;</span>, <span class="ruby-string">&#39;L&#39;</span>)
+      <span class="ruby-ivar">@crypt_gen_random</span> = <span class="ruby-constant">Win32API</span>.<span class="ruby-identifier">new</span>(<span class="ruby-string">&quot;advapi32&quot;</span>, <span class="ruby-string">&quot;CryptGenRandom&quot;</span>, <span class="ruby-string">&#39;LIP&#39;</span>, <span class="ruby-string">&#39;L&#39;</span>)
+
+      <span class="ruby-identifier">hProvStr</span> = <span class="ruby-string">&quot; &quot;</span> <span class="ruby-operator">*</span> <span class="ruby-number">4</span>
+      <span class="ruby-identifier">prov_rsa_full</span> = <span class="ruby-number">1</span>
+      <span class="ruby-identifier">crypt_verifycontext</span> = <span class="ruby-number">0xF0000000</span>
+
+      <span class="ruby-keyword">if</span> <span class="ruby-identifier">crypt_acquire_context</span>.<span class="ruby-identifier">call</span>(<span class="ruby-identifier">hProvStr</span>, <span class="ruby-keyword">nil</span>, <span class="ruby-keyword">nil</span>, <span class="ruby-identifier">prov_rsa_full</span>, <span class="ruby-identifier">crypt_verifycontext</span>) <span class="ruby-operator">==</span> <span class="ruby-number">0</span>
+        <span class="ruby-identifier">raise</span> <span class="ruby-constant">SystemCallError</span>, <span class="ruby-node">&quot;CryptAcquireContext failed: #{lastWin32ErrorMessage}&quot;</span>
+      <span class="ruby-keyword">end</span>
+      <span class="ruby-ivar">@hProv</span>, = <span class="ruby-identifier">hProvStr</span>.<span class="ruby-identifier">unpack</span>(<span class="ruby-string">&#39;L&#39;</span>)
+
+      <span class="ruby-ivar">@has_win32</span> = <span class="ruby-keyword">true</span>
+    <span class="ruby-keyword">rescue</span> <span class="ruby-constant">LoadError</span>
+      <span class="ruby-ivar">@has_win32</span> = <span class="ruby-keyword">false</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-ivar">@has_win32</span>
+    <span class="ruby-identifier">bytes</span> = <span class="ruby-string">&quot; &quot;</span>.<span class="ruby-identifier">force_encoding</span>(<span class="ruby-string">&quot;ASCII-8BIT&quot;</span>) <span class="ruby-operator">*</span> <span class="ruby-identifier">n</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-ivar">@crypt_gen_random</span>.<span class="ruby-identifier">call</span>(<span class="ruby-ivar">@hProv</span>, <span class="ruby-identifier">bytes</span>.<span class="ruby-identifier">size</span>, <span class="ruby-identifier">bytes</span>) <span class="ruby-operator">==</span> <span class="ruby-number">0</span>
+      <span class="ruby-identifier">raise</span> <span class="ruby-constant">SystemCallError</span>, <span class="ruby-node">&quot;CryptGenRandom failed: #{lastWin32ErrorMessage}&quot;</span>
+    <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">return</span> <span class="ruby-identifier">bytes</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-identifier">raise</span> <span class="ruby-constant">NotImplementedError</span>, <span class="ruby-string">&quot;No random device&quot;</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-random_number">
+            
+              <b>random_number</b>(n=0)
+            
+            <a href="../classes/SecureRandom.html#method-c-random_number" name="method-c-random_number" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p><a href="SecureRandom.html#method-c-random_number">::random_number</a>
+generates a random number.</p>
+
+<p>If a positive integer is given as <em>n</em>, <a
+href="SecureRandom.html#method-c-random_number">::random_number</a> returns
+an integer: 0 &lt;= <a
+href="SecureRandom.html#method-c-random_number">::random_number</a> &lt; n.</p>
+
+<pre><code>p SecureRandom.random_number(100) #=&gt; 15
+p SecureRandom.random_number(100) #=&gt; 88
+</code></pre>
+
+<p>If 0 is given or an argument is not given, <a
+href="SecureRandom.html#method-c-random_number">::random_number</a> returns
+a float: 0.0 &lt;= <a
+href="SecureRandom.html#method-c-random_number">::random_number</a> &lt;
+1.0.</p>
+
+<pre><code>p SecureRandom.random_number #=&gt; 0.596506046187744
+p SecureRandom.random_number #=&gt; 0.350621695741409
+</code></pre>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-random_number_source')" id="l_method-c-random_number_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/2099780eb653e46bd46d68939e04c7a2ebe2f13a/lib/securerandom.rb#L214" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-random_number_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File lib/securerandom.rb, line 214</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">random_number</span>(<span class="ruby-identifier">n</span>=<span class="ruby-number">0</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-number">0</span> <span class="ruby-operator">&lt;</span> <span class="ruby-identifier">n</span>
+    <span class="ruby-identifier">hex</span> = <span class="ruby-identifier">n</span>.<span class="ruby-identifier">to_s</span>(<span class="ruby-number">16</span>)
+    <span class="ruby-identifier">hex</span> = <span class="ruby-string">&#39;0&#39;</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">hex</span> <span class="ruby-keyword">if</span> (<span class="ruby-identifier">hex</span>.<span class="ruby-identifier">length</span> <span class="ruby-operator">&amp;</span> <span class="ruby-number">1</span>) <span class="ruby-operator">==</span> <span class="ruby-number">1</span>
+    <span class="ruby-identifier">bin</span> = [<span class="ruby-identifier">hex</span>].<span class="ruby-identifier">pack</span>(<span class="ruby-string">&quot;H*&quot;</span>)
+    <span class="ruby-identifier">mask</span> = <span class="ruby-identifier">bin</span>[<span class="ruby-number">0</span>].<span class="ruby-identifier">ord</span>
+    <span class="ruby-identifier">mask</span> <span class="ruby-operator">|=</span> <span class="ruby-identifier">mask</span> <span class="ruby-operator">&gt;&gt;</span> <span class="ruby-number">1</span>
+    <span class="ruby-identifier">mask</span> <span class="ruby-operator">|=</span> <span class="ruby-identifier">mask</span> <span class="ruby-operator">&gt;&gt;</span> <span class="ruby-number">2</span>
+    <span class="ruby-identifier">mask</span> <span class="ruby-operator">|=</span> <span class="ruby-identifier">mask</span> <span class="ruby-operator">&gt;&gt;</span> <span class="ruby-number">4</span>
+    <span class="ruby-keyword">begin</span>
+      <span class="ruby-identifier">rnd</span> = <span class="ruby-constant">SecureRandom</span>.<span class="ruby-identifier">random_bytes</span>(<span class="ruby-identifier">bin</span>.<span class="ruby-identifier">length</span>)
+      <span class="ruby-identifier">rnd</span>[<span class="ruby-number">0</span>] = (<span class="ruby-identifier">rnd</span>[<span class="ruby-number">0</span>].<span class="ruby-identifier">ord</span> <span class="ruby-operator">&amp;</span> <span class="ruby-identifier">mask</span>).<span class="ruby-identifier">chr</span>
+    <span class="ruby-keyword">end</span> <span class="ruby-keyword">until</span> <span class="ruby-identifier">rnd</span> <span class="ruby-operator">&lt;</span> <span class="ruby-identifier">bin</span>
+    <span class="ruby-identifier">rnd</span>.<span class="ruby-identifier">unpack</span>(<span class="ruby-string">&quot;H*&quot;</span>)[<span class="ruby-number">0</span>].<span class="ruby-identifier">hex</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-comment"># assumption: Float::MANT_DIG &lt;= 64</span>
+    <span class="ruby-identifier">i64</span> = <span class="ruby-constant">SecureRandom</span>.<span class="ruby-identifier">random_bytes</span>(<span class="ruby-number">8</span>).<span class="ruby-identifier">unpack</span>(<span class="ruby-string">&quot;Q&quot;</span>)[<span class="ruby-number">0</span>]
+    <span class="ruby-constant">Math</span>.<span class="ruby-identifier">ldexp</span>(<span class="ruby-identifier">i64</span> <span class="ruby-operator">&gt;&gt;</span> (<span class="ruby-number">64</span><span class="ruby-operator">-</span><span class="ruby-constant">Float</span><span class="ruby-operator">::</span><span class="ruby-constant">MANT_DIG</span>), <span class="ruby-operator">-</span><span class="ruby-constant">Float</span><span class="ruby-operator">::</span><span class="ruby-constant">MANT_DIG</span>)
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-urlsafe_base64">
+            
+              <b>urlsafe_base64</b>(n=nil, padding=false)
+            
+            <a href="../classes/SecureRandom.html#method-c-urlsafe_base64" name="method-c-urlsafe_base64" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p><a href="SecureRandom.html#method-c-urlsafe_base64">::urlsafe_base64</a>
+generates a random URL-safe base64 string.</p>
+
+<p>The argument <em>n</em> specifies the length of the random length. The
+length of the result string is about 4/3 of <em>n</em>.</p>
+
+<p>If <em>n</em> is not specified, 16 is assumed. It may be larger in future.</p>
+
+<p>The boolean argument <em>padding</em> specifies the padding. If it is false
+or nil, padding is not generated. Otherwise padding is generated. By
+default, padding is not generated because “=” may be used as a URL
+delimiter.</p>
+
+<p>The result may contain A-Z, a-z, 0-9, “-” and “_”. “=” is also used if
+<em>padding</em> is true.</p>
+
+<pre><code>p SecureRandom.urlsafe_base64 #=&gt; &quot;b4GOKm4pOYU_-BOXcrUGDg&quot;
+p SecureRandom.urlsafe_base64 #=&gt; &quot;UZLdOkzop70Ddx-IJR0ABg&quot;
+
+p SecureRandom.urlsafe_base64(nil, true) #=&gt; &quot;i0XQ-7gglIsHGV2_BNPrdQ==&quot;
+p SecureRandom.urlsafe_base64(nil, true) #=&gt; &quot;-M8rLhr7JEpJlqFGUMmOxg==&quot;
+</code></pre>
+
+<p>If secure random number generator is not available, <a
+href="NotImplementedError.html">NotImplementedError</a> is raised.</p>
+
+<p>See RFC 3548 for the definition of URL-safe base64.</p>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-urlsafe_base64_source')" id="l_method-c-urlsafe_base64_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/2099780eb653e46bd46d68939e04c7a2ebe2f13a/lib/securerandom.rb#L190" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-urlsafe_base64_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File lib/securerandom.rb, line 190</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">urlsafe_base64</span>(<span class="ruby-identifier">n</span>=<span class="ruby-keyword">nil</span>, <span class="ruby-identifier">padding</span>=<span class="ruby-keyword">false</span>)
+  <span class="ruby-identifier">s</span> = [<span class="ruby-identifier">random_bytes</span>(<span class="ruby-identifier">n</span>)].<span class="ruby-identifier">pack</span>(<span class="ruby-string">&quot;m*&quot;</span>)
+  <span class="ruby-identifier">s</span>.<span class="ruby-identifier">delete!</span>(<span class="ruby-string">&quot;\n&quot;</span>)
+  <span class="ruby-identifier">s</span>.<span class="ruby-identifier">tr!</span>(<span class="ruby-string">&quot;+/&quot;</span>, <span class="ruby-string">&quot;-_&quot;</span>)
+  <span class="ruby-identifier">s</span>.<span class="ruby-identifier">delete!</span>(<span class="ruby-string">&quot;=&quot;</span>) <span class="ruby-keyword">if</span> <span class="ruby-operator">!</span><span class="ruby-identifier">padding</span>
+  <span class="ruby-identifier">s</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-uuid">
+            
+              <b>uuid</b>()
+            
+            <a href="../classes/SecureRandom.html#method-c-uuid" name="method-c-uuid" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p><a href="SecureRandom.html#method-c-uuid">::uuid</a> generates a v4 random
+UUID (Universally Unique IDentifier).</p>
+
+<pre><code>p SecureRandom.uuid #=&gt; &quot;2d931510-d99f-494a-8c67-87feb05e1594&quot;
+p SecureRandom.uuid #=&gt; &quot;bad85eb9-0713-4da7-8d36-07a8e4b00eab&quot;
+p SecureRandom.uuid #=&gt; &quot;62936e70-1815-439b-bf89-8492855a7e6b&quot;
+</code></pre>
+
+<p>The version 4 UUID is purely random (except the version). It doesn&#39;t
+contain meaningful information such as MAC address, time, etc.</p>
+
+<p>See RFC 4122 for details of UUID.</p>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-uuid_source')" id="l_method-c-uuid_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/2099780eb653e46bd46d68939e04c7a2ebe2f13a/lib/securerandom.rb#L246" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-uuid_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File lib/securerandom.rb, line 246</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">uuid</span>
+  <span class="ruby-identifier">ary</span> = <span class="ruby-keyword">self</span>.<span class="ruby-identifier">random_bytes</span>(<span class="ruby-number">16</span>).<span class="ruby-identifier">unpack</span>(<span class="ruby-string">&quot;NnnnnN&quot;</span>)
+  <span class="ruby-identifier">ary</span>[<span class="ruby-number">2</span>] = (<span class="ruby-identifier">ary</span>[<span class="ruby-number">2</span>] <span class="ruby-operator">&amp;</span> <span class="ruby-number">0x0fff</span>) <span class="ruby-operator">|</span> <span class="ruby-number">0x4000</span>
+  <span class="ruby-identifier">ary</span>[<span class="ruby-number">3</span>] = (<span class="ruby-identifier">ary</span>[<span class="ruby-number">3</span>] <span class="ruby-operator">&amp;</span> <span class="ruby-number">0x3fff</span>) <span class="ruby-operator">|</span> <span class="ruby-number">0x8000</span>
+  <span class="ruby-string">&quot;%08x-%04x-%04x-%04x-%04x%08x&quot;</span> <span class="ruby-operator">%</span> <span class="ruby-identifier">ary</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                        </div>
+
+    </div>
+  </body>
+</html>    

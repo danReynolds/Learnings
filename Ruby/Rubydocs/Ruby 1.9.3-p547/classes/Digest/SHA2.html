@@ -1,0 +1,428 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>Digest::SHA2</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="../../css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../../css/main.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../../css/github.css" type="text/css" media="screen" />
+<script src="../../js/jquery-1.3.2.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../js/jquery-effect.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../js/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+
+<body>     
+    <div class="banner">
+        
+        <h1>
+            <span class="type">Class</span> 
+            Digest::SHA2 
+            
+                <span class="parent">&lt; 
+                    
+                    <a href="Class.html">Digest::Class</a>
+                    
+                </span>
+            
+        </h1>
+        <ul class="files">
+            
+            <li><a href="../../files/ext/digest/sha2/lib/sha2_rb.html">ext/digest/sha2/lib/sha2.rb</a></li>
+            
+        </ul>
+    </div>
+    <div id="bodyContent">
+        <div id="content">
+  
+    <div class="description">
+      
+<p>A meta digest provider class for SHA256, SHA384 and SHA512.</p>
+
+    </div>
+  
+
+
+  
+
+
+  
+  
+
+
+  
+
+
+  
+    <!-- Method ref -->
+    <div class="sectiontitle">Methods</div>
+    <dl class="methods">
+      
+        <dt>#</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-3C-3C">&lt;&lt;</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>B</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-block_length">block_length</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>D</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-digest_length">digest_length</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>N</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-new">new</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>R</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-reset">reset</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>U</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-update">update</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+    </dl>
+  
+
+  
+
+
+
+  
+
+    
+
+    
+
+    
+
+
+    
+
+
+    <!-- Methods -->
+    
+      <div class="sectiontitle">Class Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-c-new">
+            
+              <b>Digest::SHA2.new(bitlen = 256) &rarr; digest_obj
+</b>
+            
+            <a href="../../classes/Digest/SHA2.html#method-c-new" name="method-c-new" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Creates a new <a href="SHA2.html">SHA2</a> hash object with a given bit
+length.</p>
+
+<p>Valid bit lengths are 256, 384 and 512.</p>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-new_source')" id="l_method-c-new_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/c648243c3d94076959d77a3af3c4b72ebd9268a0/ext/digest/sha2/lib/sha2.rb#L26" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-new_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/digest/sha2/lib/sha2.rb, line 26</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">initialize</span>(<span class="ruby-identifier">bitlen</span> = <span class="ruby-number">256</span>)
+  <span class="ruby-keyword">case</span> <span class="ruby-identifier">bitlen</span>
+  <span class="ruby-keyword">when</span> <span class="ruby-number">256</span>
+    <span class="ruby-ivar">@sha2</span> = <span class="ruby-constant">Digest</span><span class="ruby-operator">::</span><span class="ruby-constant">SHA256</span>.<span class="ruby-identifier">new</span>
+  <span class="ruby-keyword">when</span> <span class="ruby-number">384</span>
+    <span class="ruby-ivar">@sha2</span> = <span class="ruby-constant">Digest</span><span class="ruby-operator">::</span><span class="ruby-constant">SHA384</span>.<span class="ruby-identifier">new</span>
+  <span class="ruby-keyword">when</span> <span class="ruby-number">512</span>
+    <span class="ruby-ivar">@sha2</span> = <span class="ruby-constant">Digest</span><span class="ruby-operator">::</span><span class="ruby-constant">SHA512</span>.<span class="ruby-identifier">new</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">raise</span> <span class="ruby-constant">ArgumentError</span>, <span class="ruby-string">&quot;unsupported bit length: %s&quot;</span> <span class="ruby-operator">%</span> <span class="ruby-identifier">bitlen</span>.<span class="ruby-identifier">inspect</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-ivar">@bitlen</span> = <span class="ruby-identifier">bitlen</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                  
+      <div class="sectiontitle">Instance Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-i-3C-3C">
+            
+              <b>&lt;&lt;</b>(str)
+            
+            <a href="../../classes/Digest/SHA2.html#method-i-3C-3C" name="method-i-3C-3C" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+            <div class="aka">
+              Alias for: <a href="SHA2.html#method-i-update">update</a>
+            </div>
+          
+          
+          
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-block_length">
+            
+              <b>digest_obj.block_length &rarr; Integer
+</b>
+            
+            <a href="../../classes/Digest/SHA2.html#method-i-block_length" name="method-i-block_length" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Returns the block length of the digest in bytes.</p>
+
+<pre><code>Digest::SHA256.new.digest_length * 8
+# =&gt; 512
+Digest::SHA384.new.digest_length * 8
+# =&gt; 1024
+Digest::SHA512.new.digest_length * 8
+# =&gt; 1024
+</code></pre>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-block_length_source')" id="l_method-i-block_length_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/c648243c3d94076959d77a3af3c4b72ebd9268a0/ext/digest/sha2/lib/sha2.rb#L77" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-block_length_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/digest/sha2/lib/sha2.rb, line 77</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">block_length</span>
+  <span class="ruby-ivar">@sha2</span>.<span class="ruby-identifier">block_length</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-digest_length">
+            
+              <b>digest_obj.digest_length &rarr; Integer
+</b>
+            
+            <a href="../../classes/Digest/SHA2.html#method-i-digest_length" name="method-i-digest_length" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Returns the length of the hash value of the digest in bytes.</p>
+
+<pre><code>Digest::SHA256.new.digest_length * 8
+# =&gt; 256
+Digest::SHA384.new.digest_length * 8
+# =&gt; 384
+Digest::SHA512.new.digest_length * 8
+# =&gt; 512
+</code></pre>
+
+<p>For example, digests produced by Digest::SHA256 will always be 32 bytes
+(256 bits) in size.</p>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-digest_length_source')" id="l_method-i-digest_length_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/c648243c3d94076959d77a3af3c4b72ebd9268a0/ext/digest/sha2/lib/sha2.rb#L95" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-digest_length_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/digest/sha2/lib/sha2.rb, line 95</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">digest_length</span>
+  <span class="ruby-ivar">@sha2</span>.<span class="ruby-identifier">digest_length</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-reset">
+            
+              <b>digest_obj.reset &rarr; digest_obj
+</b>
+            
+            <a href="../../classes/Digest/SHA2.html#method-i-reset" name="method-i-reset" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Resets the digest to the initial state and returns self.</p>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-reset_source')" id="l_method-i-reset_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/c648243c3d94076959d77a3af3c4b72ebd9268a0/ext/digest/sha2/lib/sha2.rb#L44" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-reset_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/digest/sha2/lib/sha2.rb, line 44</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">reset</span>
+  <span class="ruby-ivar">@sha2</span>.<span class="ruby-identifier">reset</span>
+  <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-update">
+            
+              <b>digest_obj.update(string) &rarr; digest_obj
+digest_obj << string &rarr; digest_obj
+</b>
+            
+            <a href="../../classes/Digest/SHA2.html#method-i-update" name="method-i-update" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Updates the digest using a given <em>string</em> and returns self.</p>
+            </div>
+          
+          
+          
+            <div class="aka">
+              Also aliased as: <a href="SHA2.html#method-i-3C-3C">&lt;&lt;</a>
+            </div>
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-update_source')" id="l_method-i-update_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/c648243c3d94076959d77a3af3c4b72ebd9268a0/ext/digest/sha2/lib/sha2.rb#L54" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-update_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/digest/sha2/lib/sha2.rb, line 54</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">update</span>(<span class="ruby-identifier">str</span>)
+  <span class="ruby-ivar">@sha2</span>.<span class="ruby-identifier">update</span>(<span class="ruby-identifier">str</span>)
+  <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                    </div>
+
+    </div>
+  </body>
+</html>    

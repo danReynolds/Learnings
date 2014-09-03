@@ -1,0 +1,1603 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>TagNodeTest</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="../css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/main.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/github.css" type="text/css" media="screen" />
+<script src="../js/jquery-1.3.2.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/jquery-effect.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+
+<body>     
+    <div class="banner">
+        
+        <h1>
+            <span class="type">Class</span> 
+            TagNodeTest 
+            
+                <span class="parent">&lt; 
+                    
+                    <a href="ActiveSupport/TestCase.html">ActiveSupport::TestCase</a>
+                    
+                </span>
+            
+        </h1>
+        <ul class="files">
+            
+            <li><a href="../files/actionview/test/template/html-scanner/tag_node_test_rb.html">actionview/test/template/html-scanner/tag_node_test.rb</a></li>
+            
+        </ul>
+    </div>
+    <div id="bodyContent">
+        <div id="content">
+  
+
+
+  
+
+
+  
+  
+
+
+  
+
+
+  
+    <!-- Method ref -->
+    <div class="sectiontitle">Methods</div>
+    <dl class="methods">
+      
+        <dt>T</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-test_attributes_as_symbols">test_attributes_as_symbols</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-test_attributes_with_escaped_quotes">test_attributes_with_escaped_quotes</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-test_bracket_op_when_attributes">test_bracket_op_when_attributes</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-test_bracket_op_when_no_attributes">test_bracket_op_when_no_attributes</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-test_closing_without_attributes">test_closing_without_attributes</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-test_conditions_as_strings">test_conditions_as_strings</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-test_match_ancestor_fail">test_match_ancestor_fail</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-test_match_ancestor_success">test_match_ancestor_success</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-test_match_attributes_as_number">test_match_attributes_as_number</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-test_match_attributes_as_regexp">test_match_attributes_as_regexp</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-test_match_attributes_as_string">test_match_attributes_as_string</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-test_match_attributes_exist">test_match_attributes_exist</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-test_match_attributes_not_exist">test_match_attributes_not_exist</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-test_match_child_count">test_match_child_count</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-test_match_child_fail">test_match_child_fail</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-test_match_child_success">test_match_child_success</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-test_match_descendant_fail">test_match_descendant_fail</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-test_match_descendant_success">test_match_descendant_success</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-test_match_parent_fail">test_match_parent_fail</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-test_match_parent_success">test_match_parent_success</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-test_match_sibling">test_match_sibling</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-test_match_sibling_after">test_match_sibling_after</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-test_match_sibling_before">test_match_sibling_before</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-test_match_tag_as_regexp">test_match_tag_as_regexp</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-test_match_tag_as_string">test_match_tag_as_string</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-test_open_with_attributes">test_open_with_attributes</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-test_open_without_attributes">test_open_without_attributes</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-test_self_closing_with_attributes">test_self_closing_with_attributes</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-test_self_closing_without_attributes">test_self_closing_without_attributes</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-test_tag">test_tag</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-test_tag_to_s">test_tag_to_s</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-test_to_s">test_to_s</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+    </dl>
+  
+
+  
+
+
+
+  
+
+    
+
+    
+
+    
+
+
+    
+
+
+    <!-- Methods -->
+        
+      <div class="sectiontitle">Instance Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-i-test_attributes_as_symbols">
+            
+              <b>test_attributes_as_symbols</b>()
+            
+            <a href="../classes/TagNodeTest.html#method-i-test_attributes_as_symbols" name="method-i-test_attributes_as_symbols" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-test_attributes_as_symbols_source')" id="l_method-i-test_attributes_as_symbols_source">show</a>
+                
+                  | <a href="https://github.com/rails/rails/blob/eb23754ebbfbf2d465cc0f900720704fb3703633/actionview/test/template/html-scanner/tag_node_test.rb#L184" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-test_attributes_as_symbols_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File actionview/test/template/html-scanner/tag_node_test.rb, line 184</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">test_attributes_as_symbols</span>
+  <span class="ruby-identifier">t</span> = <span class="ruby-identifier">tag</span>(<span class="ruby-string">&quot;&lt;child v=john a=kelly&gt;&quot;</span>)
+  <span class="ruby-identifier">assert</span> <span class="ruby-identifier">t</span>.<span class="ruby-identifier">match</span>(<span class="ruby-value">:attributes</span> =<span class="ruby-operator">&gt;</span> { <span class="ruby-value">:v</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-regexp">/oh/</span> })
+  <span class="ruby-identifier">assert</span> <span class="ruby-identifier">t</span>.<span class="ruby-identifier">match</span>(<span class="ruby-value">:attributes</span> =<span class="ruby-operator">&gt;</span> { <span class="ruby-value">:a</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-regexp">/ll/</span> })
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-test_attributes_with_escaped_quotes">
+            
+              <b>test_attributes_with_escaped_quotes</b>()
+            
+            <a href="../classes/TagNodeTest.html#method-i-test_attributes_with_escaped_quotes" name="method-i-test_attributes_with_escaped_quotes" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-test_attributes_with_escaped_quotes_source')" id="l_method-i-test_attributes_with_escaped_quotes_source">show</a>
+                
+                  | <a href="https://github.com/rails/rails/blob/eb23754ebbfbf2d465cc0f900720704fb3703633/actionview/test/template/html-scanner/tag_node_test.rb#L50" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-test_attributes_with_escaped_quotes_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File actionview/test/template/html-scanner/tag_node_test.rb, line 50</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">test_attributes_with_escaped_quotes</span>
+  <span class="ruby-identifier">node</span> = <span class="ruby-identifier">tag</span>(<span class="ruby-string">&quot;&lt;tag a=&#39;b\\&#39;c&#39; b=\&quot;bob \\\&quot;float\\\&quot;\&quot;&gt;&quot;</span>)
+  <span class="ruby-identifier">assert_equal</span> <span class="ruby-string">&quot;b\\&#39;c&quot;</span>, <span class="ruby-identifier">node</span>[<span class="ruby-string">&quot;a&quot;</span>]
+  <span class="ruby-identifier">assert_equal</span> <span class="ruby-string">&quot;bob \\\&quot;float\\\&quot;&quot;</span>, <span class="ruby-identifier">node</span>[<span class="ruby-string">&quot;b&quot;</span>]
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-test_bracket_op_when_attributes">
+            
+              <b>test_bracket_op_when_attributes</b>()
+            
+            <a href="../classes/TagNodeTest.html#method-i-test_bracket_op_when_attributes" name="method-i-test_bracket_op_when_attributes" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-test_bracket_op_when_attributes_source')" id="l_method-i-test_bracket_op_when_attributes_source">show</a>
+                
+                  | <a href="https://github.com/rails/rails/blob/eb23754ebbfbf2d465cc0f900720704fb3703633/actionview/test/template/html-scanner/tag_node_test.rb#L45" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-test_bracket_op_when_attributes_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File actionview/test/template/html-scanner/tag_node_test.rb, line 45</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">test_bracket_op_when_attributes</span>
+  <span class="ruby-identifier">node</span> = <span class="ruby-identifier">tag</span>(<span class="ruby-string">&quot;&lt;tag a=b/&gt;&quot;</span>)
+  <span class="ruby-identifier">assert_equal</span> <span class="ruby-string">&quot;b&quot;</span>, <span class="ruby-identifier">node</span>[<span class="ruby-string">&quot;a&quot;</span>]
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-test_bracket_op_when_no_attributes">
+            
+              <b>test_bracket_op_when_no_attributes</b>()
+            
+            <a href="../classes/TagNodeTest.html#method-i-test_bracket_op_when_no_attributes" name="method-i-test_bracket_op_when_no_attributes" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-test_bracket_op_when_no_attributes_source')" id="l_method-i-test_bracket_op_when_no_attributes_source">show</a>
+                
+                  | <a href="https://github.com/rails/rails/blob/eb23754ebbfbf2d465cc0f900720704fb3703633/actionview/test/template/html-scanner/tag_node_test.rb#L40" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-test_bracket_op_when_no_attributes_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File actionview/test/template/html-scanner/tag_node_test.rb, line 40</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">test_bracket_op_when_no_attributes</span>
+  <span class="ruby-identifier">node</span> = <span class="ruby-identifier">tag</span>(<span class="ruby-string">&quot;&lt;/tag&gt;&quot;</span>)
+  <span class="ruby-identifier">assert_nil</span> <span class="ruby-identifier">node</span>[<span class="ruby-string">&quot;foo&quot;</span>]
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-test_closing_without_attributes">
+            
+              <b>test_closing_without_attributes</b>()
+            
+            <a href="../classes/TagNodeTest.html#method-i-test_closing_without_attributes" name="method-i-test_closing_without_attributes" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-test_closing_without_attributes_source')" id="l_method-i-test_closing_without_attributes_source">show</a>
+                
+                  | <a href="https://github.com/rails/rails/blob/eb23754ebbfbf2d465cc0f900720704fb3703633/actionview/test/template/html-scanner/tag_node_test.rb#L33" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-test_closing_without_attributes_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File actionview/test/template/html-scanner/tag_node_test.rb, line 33</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">test_closing_without_attributes</span>
+  <span class="ruby-identifier">node</span> = <span class="ruby-identifier">tag</span>(<span class="ruby-string">&quot;&lt;/tag&gt;&quot;</span>)
+  <span class="ruby-identifier">assert_equal</span> <span class="ruby-string">&quot;tag&quot;</span>, <span class="ruby-identifier">node</span>.<span class="ruby-identifier">name</span>
+  <span class="ruby-identifier">assert_nil</span> <span class="ruby-identifier">node</span>.<span class="ruby-identifier">attributes</span>
+  <span class="ruby-identifier">assert_equal</span> <span class="ruby-value">:close</span>, <span class="ruby-identifier">node</span>.<span class="ruby-identifier">closing</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-test_conditions_as_strings">
+            
+              <b>test_conditions_as_strings</b>()
+            
+            <a href="../classes/TagNodeTest.html#method-i-test_conditions_as_strings" name="method-i-test_conditions_as_strings" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-test_conditions_as_strings_source')" id="l_method-i-test_conditions_as_strings_source">show</a>
+                
+                  | <a href="https://github.com/rails/rails/blob/eb23754ebbfbf2d465cc0f900720704fb3703633/actionview/test/template/html-scanner/tag_node_test.rb#L176" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-test_conditions_as_strings_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File actionview/test/template/html-scanner/tag_node_test.rb, line 176</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">test_conditions_as_strings</span>
+  <span class="ruby-identifier">t</span> = <span class="ruby-identifier">tag</span>(<span class="ruby-string">&quot;&lt;tag x:k=&#39;something&#39;&gt;&quot;</span>)
+  <span class="ruby-identifier">assert</span> <span class="ruby-identifier">t</span>.<span class="ruby-identifier">match</span>(<span class="ruby-string">&quot;tag&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;tag&quot;</span>)
+  <span class="ruby-identifier">assert</span> <span class="ruby-identifier">t</span>.<span class="ruby-identifier">match</span>(<span class="ruby-string">&quot;attributes&quot;</span> =<span class="ruby-operator">&gt;</span> { <span class="ruby-string">&quot;x:k&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;something&quot;</span> })
+  <span class="ruby-identifier">assert</span> <span class="ruby-operator">!</span><span class="ruby-identifier">t</span>.<span class="ruby-identifier">match</span>(<span class="ruby-string">&quot;tag&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;gat&quot;</span>)
+  <span class="ruby-identifier">assert</span> <span class="ruby-operator">!</span><span class="ruby-identifier">t</span>.<span class="ruby-identifier">match</span>(<span class="ruby-string">&quot;attributes&quot;</span> =<span class="ruby-operator">&gt;</span> { <span class="ruby-string">&quot;x:j&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;something&quot;</span> })
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-test_match_ancestor_fail">
+            
+              <b>test_match_ancestor_fail</b>()
+            
+            <a href="../classes/TagNodeTest.html#method-i-test_match_ancestor_fail" name="method-i-test_match_ancestor_fail" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-test_match_ancestor_fail_source')" id="l_method-i-test_match_ancestor_fail_source">show</a>
+                
+                  | <a href="https://github.com/rails/rails/blob/eb23754ebbfbf2d465cc0f900720704fb3703633/actionview/test/template/html-scanner/tag_node_test.rb#L146" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-test_match_ancestor_fail_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File actionview/test/template/html-scanner/tag_node_test.rb, line 146</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">test_match_ancestor_fail</span>
+  <span class="ruby-identifier">t</span> = <span class="ruby-identifier">tag</span>(<span class="ruby-string">&quot;&lt;tag x:k=&#39;something&#39;&gt;&quot;</span>, <span class="ruby-identifier">tag</span>(<span class="ruby-string">&quot;&lt;parent v=john a=kelly&gt;&quot;</span>, <span class="ruby-identifier">tag</span>(<span class="ruby-string">&quot;&lt;grandparent m=vaughn v=james&gt;&quot;</span>)))
+  <span class="ruby-identifier">assert</span> <span class="ruby-operator">!</span><span class="ruby-identifier">t</span>.<span class="ruby-identifier">match</span>(<span class="ruby-value">:ancestor</span> =<span class="ruby-operator">&gt;</span> {<span class="ruby-value">:tag</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-regexp">/^parent/</span>, <span class="ruby-value">:attributes</span> =<span class="ruby-operator">&gt;</span> {<span class="ruby-string">&quot;v&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-regexp">/m/</span>}})
+  <span class="ruby-identifier">assert</span> <span class="ruby-operator">!</span><span class="ruby-identifier">t</span>.<span class="ruby-identifier">match</span>(<span class="ruby-value">:ancestor</span> =<span class="ruby-operator">&gt;</span> {<span class="ruby-value">:attributes</span> =<span class="ruby-operator">&gt;</span> {<span class="ruby-string">&quot;v&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword">false</span>}})
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-test_match_ancestor_success">
+            
+              <b>test_match_ancestor_success</b>()
+            
+            <a href="../classes/TagNodeTest.html#method-i-test_match_ancestor_success" name="method-i-test_match_ancestor_success" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-test_match_ancestor_success_source')" id="l_method-i-test_match_ancestor_success_source">show</a>
+                
+                  | <a href="https://github.com/rails/rails/blob/eb23754ebbfbf2d465cc0f900720704fb3703633/actionview/test/template/html-scanner/tag_node_test.rb#L140" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-test_match_ancestor_success_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File actionview/test/template/html-scanner/tag_node_test.rb, line 140</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">test_match_ancestor_success</span>
+  <span class="ruby-identifier">t</span> = <span class="ruby-identifier">tag</span>(<span class="ruby-string">&quot;&lt;tag x:k=&#39;something&#39;&gt;&quot;</span>, <span class="ruby-identifier">tag</span>(<span class="ruby-string">&quot;&lt;parent v=john a=kelly&gt;&quot;</span>, <span class="ruby-identifier">tag</span>(<span class="ruby-string">&quot;&lt;grandparent m=vaughn v=james&gt;&quot;</span>)))
+  <span class="ruby-identifier">assert</span> <span class="ruby-identifier">t</span>.<span class="ruby-identifier">match</span>(<span class="ruby-value">:ancestor</span> =<span class="ruby-operator">&gt;</span> {<span class="ruby-value">:tag</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;parent&quot;</span>, <span class="ruby-value">:attributes</span> =<span class="ruby-operator">&gt;</span> {<span class="ruby-string">&quot;a&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-regexp">/ll/</span>}})
+  <span class="ruby-identifier">assert</span> <span class="ruby-identifier">t</span>.<span class="ruby-identifier">match</span>(<span class="ruby-value">:ancestor</span> =<span class="ruby-operator">&gt;</span> {<span class="ruby-value">:attributes</span> =<span class="ruby-operator">&gt;</span> {<span class="ruby-string">&quot;m&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;vaughn&quot;</span>}})
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-test_match_attributes_as_number">
+            
+              <b>test_match_attributes_as_number</b>()
+            
+            <a href="../classes/TagNodeTest.html#method-i-test_match_attributes_as_number" name="method-i-test_match_attributes_as_number" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-test_match_attributes_as_number_source')" id="l_method-i-test_match_attributes_as_number_source">show</a>
+                
+                  | <a href="https://github.com/rails/rails/blob/eb23754ebbfbf2d465cc0f900720704fb3703633/actionview/test/template/html-scanner/tag_node_test.rb#L93" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-test_match_attributes_as_number_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File actionview/test/template/html-scanner/tag_node_test.rb, line 93</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">test_match_attributes_as_number</span>
+  <span class="ruby-identifier">t</span> = <span class="ruby-identifier">tag</span>(<span class="ruby-string">&quot;&lt;tag a=15 b=3.1415 /&gt;&quot;</span>)
+  <span class="ruby-identifier">assert</span> <span class="ruby-identifier">t</span>.<span class="ruby-identifier">match</span>(<span class="ruby-value">:attributes</span> =<span class="ruby-operator">&gt;</span> {<span class="ruby-string">&quot;a&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-number">15</span>})
+  <span class="ruby-identifier">assert</span> <span class="ruby-identifier">t</span>.<span class="ruby-identifier">match</span>(<span class="ruby-value">:attributes</span> =<span class="ruby-operator">&gt;</span> {<span class="ruby-string">&quot;b&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-number">3.1415</span>})
+  <span class="ruby-identifier">assert</span> <span class="ruby-identifier">t</span>.<span class="ruby-identifier">match</span>(<span class="ruby-value">:attributes</span> =<span class="ruby-operator">&gt;</span> {<span class="ruby-string">&quot;a&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-number">15</span>, <span class="ruby-string">&quot;b&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-number">3.1415</span>})
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-test_match_attributes_as_regexp">
+            
+              <b>test_match_attributes_as_regexp</b>()
+            
+            <a href="../classes/TagNodeTest.html#method-i-test_match_attributes_as_regexp" name="method-i-test_match_attributes_as_regexp" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-test_match_attributes_as_regexp_source')" id="l_method-i-test_match_attributes_as_regexp_source">show</a>
+                
+                  | <a href="https://github.com/rails/rails/blob/eb23754ebbfbf2d465cc0f900720704fb3703633/actionview/test/template/html-scanner/tag_node_test.rb#L86" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-test_match_attributes_as_regexp_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File actionview/test/template/html-scanner/tag_node_test.rb, line 86</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">test_match_attributes_as_regexp</span>
+  <span class="ruby-identifier">t</span> = <span class="ruby-identifier">tag</span>(<span class="ruby-string">&quot;&lt;tag a=something b=else /&gt;&quot;</span>)
+  <span class="ruby-identifier">assert</span> <span class="ruby-identifier">t</span>.<span class="ruby-identifier">match</span>(<span class="ruby-value">:attributes</span> =<span class="ruby-operator">&gt;</span> {<span class="ruby-string">&quot;a&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-regexp">/^something$/</span>})
+  <span class="ruby-identifier">assert</span> <span class="ruby-identifier">t</span>.<span class="ruby-identifier">match</span>(<span class="ruby-value">:attributes</span> =<span class="ruby-operator">&gt;</span> {<span class="ruby-string">&quot;b&quot;</span> =<span class="ruby-operator">&gt;</span>  <span class="ruby-regexp">/e.*e/</span>})
+  <span class="ruby-identifier">assert</span> <span class="ruby-identifier">t</span>.<span class="ruby-identifier">match</span>(<span class="ruby-value">:attributes</span> =<span class="ruby-operator">&gt;</span> {<span class="ruby-string">&quot;a&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-regexp">/me..i/</span>, <span class="ruby-string">&quot;b&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-regexp">/.ls.$/</span>})
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-test_match_attributes_as_string">
+            
+              <b>test_match_attributes_as_string</b>()
+            
+            <a href="../classes/TagNodeTest.html#method-i-test_match_attributes_as_string" name="method-i-test_match_attributes_as_string" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-test_match_attributes_as_string_source')" id="l_method-i-test_match_attributes_as_string_source">show</a>
+                
+                  | <a href="https://github.com/rails/rails/blob/eb23754ebbfbf2d465cc0f900720704fb3703633/actionview/test/template/html-scanner/tag_node_test.rb#L80" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-test_match_attributes_as_string_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File actionview/test/template/html-scanner/tag_node_test.rb, line 80</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">test_match_attributes_as_string</span>
+  <span class="ruby-identifier">t</span> = <span class="ruby-identifier">tag</span>(<span class="ruby-string">&quot;&lt;tag a=something b=else /&gt;&quot;</span>)
+  <span class="ruby-identifier">assert</span> <span class="ruby-identifier">t</span>.<span class="ruby-identifier">match</span>(<span class="ruby-value">:attributes</span> =<span class="ruby-operator">&gt;</span> {<span class="ruby-string">&quot;a&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;something&quot;</span>})
+  <span class="ruby-identifier">assert</span> <span class="ruby-identifier">t</span>.<span class="ruby-identifier">match</span>(<span class="ruby-value">:attributes</span> =<span class="ruby-operator">&gt;</span> {<span class="ruby-string">&quot;b&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;else&quot;</span>})
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-test_match_attributes_exist">
+            
+              <b>test_match_attributes_exist</b>()
+            
+            <a href="../classes/TagNodeTest.html#method-i-test_match_attributes_exist" name="method-i-test_match_attributes_exist" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-test_match_attributes_exist_source')" id="l_method-i-test_match_attributes_exist_source">show</a>
+                
+                  | <a href="https://github.com/rails/rails/blob/eb23754ebbfbf2d465cc0f900720704fb3703633/actionview/test/template/html-scanner/tag_node_test.rb#L100" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-test_match_attributes_exist_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File actionview/test/template/html-scanner/tag_node_test.rb, line 100</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">test_match_attributes_exist</span>
+  <span class="ruby-identifier">t</span> = <span class="ruby-identifier">tag</span>(<span class="ruby-string">&quot;&lt;tag a=15 b=3.1415 /&gt;&quot;</span>)
+  <span class="ruby-identifier">assert</span> <span class="ruby-identifier">t</span>.<span class="ruby-identifier">match</span>(<span class="ruby-value">:attributes</span> =<span class="ruby-operator">&gt;</span> {<span class="ruby-string">&quot;a&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword">true</span>})
+  <span class="ruby-identifier">assert</span> <span class="ruby-identifier">t</span>.<span class="ruby-identifier">match</span>(<span class="ruby-value">:attributes</span> =<span class="ruby-operator">&gt;</span> {<span class="ruby-string">&quot;b&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword">true</span>})
+  <span class="ruby-identifier">assert</span> <span class="ruby-identifier">t</span>.<span class="ruby-identifier">match</span>(<span class="ruby-value">:attributes</span> =<span class="ruby-operator">&gt;</span> {<span class="ruby-string">&quot;a&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword">true</span>, <span class="ruby-string">&quot;b&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword">true</span>})
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-test_match_attributes_not_exist">
+            
+              <b>test_match_attributes_not_exist</b>()
+            
+            <a href="../classes/TagNodeTest.html#method-i-test_match_attributes_not_exist" name="method-i-test_match_attributes_not_exist" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-test_match_attributes_not_exist_source')" id="l_method-i-test_match_attributes_not_exist_source">show</a>
+                
+                  | <a href="https://github.com/rails/rails/blob/eb23754ebbfbf2d465cc0f900720704fb3703633/actionview/test/template/html-scanner/tag_node_test.rb#L107" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-test_match_attributes_not_exist_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File actionview/test/template/html-scanner/tag_node_test.rb, line 107</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">test_match_attributes_not_exist</span>
+  <span class="ruby-identifier">t</span> = <span class="ruby-identifier">tag</span>(<span class="ruby-string">&quot;&lt;tag a=15 b=3.1415 /&gt;&quot;</span>)
+  <span class="ruby-identifier">assert</span> <span class="ruby-identifier">t</span>.<span class="ruby-identifier">match</span>(<span class="ruby-value">:attributes</span> =<span class="ruby-operator">&gt;</span> {<span class="ruby-string">&quot;c&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword">false</span>})
+  <span class="ruby-identifier">assert</span> <span class="ruby-identifier">t</span>.<span class="ruby-identifier">match</span>(<span class="ruby-value">:attributes</span> =<span class="ruby-operator">&gt;</span> {<span class="ruby-string">&quot;c&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword">nil</span>})
+  <span class="ruby-identifier">assert</span> <span class="ruby-identifier">t</span>.<span class="ruby-identifier">match</span>(<span class="ruby-value">:attributes</span> =<span class="ruby-operator">&gt;</span> {<span class="ruby-string">&quot;a&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword">true</span>, <span class="ruby-string">&quot;c&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword">false</span>})
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-test_match_child_count">
+            
+              <b>test_match_child_count</b>()
+            
+            <a href="../classes/TagNodeTest.html#method-i-test_match_child_count" name="method-i-test_match_child_count" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-test_match_child_count_source')" id="l_method-i-test_match_child_count_source">show</a>
+                
+                  | <a href="https://github.com/rails/rails/blob/eb23754ebbfbf2d465cc0f900720704fb3703633/actionview/test/template/html-scanner/tag_node_test.rb#L164" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-test_match_child_count_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File actionview/test/template/html-scanner/tag_node_test.rb, line 164</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">test_match_child_count</span>
+  <span class="ruby-identifier">t</span> = <span class="ruby-identifier">tag</span>(<span class="ruby-string">&quot;&lt;tag x:k=&#39;something&#39;&gt;&quot;</span>)
+  <span class="ruby-identifier">tag</span>(<span class="ruby-string">&quot;hello&quot;</span>, <span class="ruby-identifier">t</span>)
+  <span class="ruby-identifier">tag</span>(<span class="ruby-string">&quot;&lt;child v=john a=kelly&gt;&quot;</span>, <span class="ruby-identifier">t</span>)
+  <span class="ruby-identifier">tag</span>(<span class="ruby-string">&quot;&lt;sib m=vaughn v=james&gt;&quot;</span>, <span class="ruby-identifier">t</span>)
+  <span class="ruby-identifier">assert</span> <span class="ruby-identifier">t</span>.<span class="ruby-identifier">match</span>(<span class="ruby-value">:children</span> =<span class="ruby-operator">&gt;</span> { <span class="ruby-value">:count</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-number">2</span> })
+  <span class="ruby-identifier">assert</span> <span class="ruby-identifier">t</span>.<span class="ruby-identifier">match</span>(<span class="ruby-value">:children</span> =<span class="ruby-operator">&gt;</span> { <span class="ruby-value">:count</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-number">2</span><span class="ruby-operator">..</span><span class="ruby-number">4</span> })
+  <span class="ruby-identifier">assert</span> <span class="ruby-identifier">t</span>.<span class="ruby-identifier">match</span>(<span class="ruby-value">:children</span> =<span class="ruby-operator">&gt;</span> { <span class="ruby-value">:less_than</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-number">4</span> })
+  <span class="ruby-identifier">assert</span> <span class="ruby-identifier">t</span>.<span class="ruby-identifier">match</span>(<span class="ruby-value">:children</span> =<span class="ruby-operator">&gt;</span> { <span class="ruby-value">:greater_than</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-number">1</span> })
+  <span class="ruby-identifier">assert</span> <span class="ruby-operator">!</span><span class="ruby-identifier">t</span>.<span class="ruby-identifier">match</span>(<span class="ruby-value">:children</span> =<span class="ruby-operator">&gt;</span> { <span class="ruby-value">:count</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-number">3</span> })
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-test_match_child_fail">
+            
+              <b>test_match_child_fail</b>()
+            
+            <a href="../classes/TagNodeTest.html#method-i-test_match_child_fail" name="method-i-test_match_child_fail" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-test_match_child_fail_source')" id="l_method-i-test_match_child_fail_source">show</a>
+                
+                  | <a href="https://github.com/rails/rails/blob/eb23754ebbfbf2d465cc0f900720704fb3703633/actionview/test/template/html-scanner/tag_node_test.rb#L132" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-test_match_child_fail_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File actionview/test/template/html-scanner/tag_node_test.rb, line 132</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">test_match_child_fail</span>
+  <span class="ruby-identifier">t</span> = <span class="ruby-identifier">tag</span>(<span class="ruby-string">&quot;&lt;tag x:k=&#39;something&#39;&gt;&quot;</span>)
+  <span class="ruby-identifier">tag</span>(<span class="ruby-string">&quot;&lt;child v=john a=kelly&gt;&quot;</span>, <span class="ruby-identifier">t</span>)
+  <span class="ruby-identifier">tag</span>(<span class="ruby-string">&quot;&lt;sib m=vaughn v=james&gt;&quot;</span>, <span class="ruby-identifier">t</span>)
+  <span class="ruby-identifier">assert</span> <span class="ruby-operator">!</span><span class="ruby-identifier">t</span>.<span class="ruby-identifier">match</span>(<span class="ruby-value">:child</span> =<span class="ruby-operator">&gt;</span> { <span class="ruby-value">:tag</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;sib&quot;</span>, <span class="ruby-value">:attributes</span> =<span class="ruby-operator">&gt;</span> {<span class="ruby-string">&quot;v&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-regexp">/r/</span>}})
+  <span class="ruby-identifier">assert</span> <span class="ruby-operator">!</span><span class="ruby-identifier">t</span>.<span class="ruby-identifier">match</span>(<span class="ruby-value">:child</span> =<span class="ruby-operator">&gt;</span> { <span class="ruby-value">:attributes</span> =<span class="ruby-operator">&gt;</span> {<span class="ruby-string">&quot;v&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword">false</span>}})
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-test_match_child_success">
+            
+              <b>test_match_child_success</b>()
+            
+            <a href="../classes/TagNodeTest.html#method-i-test_match_child_success" name="method-i-test_match_child_success" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-test_match_child_success_source')" id="l_method-i-test_match_child_success_source">show</a>
+                
+                  | <a href="https://github.com/rails/rails/blob/eb23754ebbfbf2d465cc0f900720704fb3703633/actionview/test/template/html-scanner/tag_node_test.rb#L124" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-test_match_child_success_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File actionview/test/template/html-scanner/tag_node_test.rb, line 124</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">test_match_child_success</span>
+  <span class="ruby-identifier">t</span> = <span class="ruby-identifier">tag</span>(<span class="ruby-string">&quot;&lt;tag x:k=&#39;something&#39;&gt;&quot;</span>)
+  <span class="ruby-identifier">tag</span>(<span class="ruby-string">&quot;&lt;child v=john a=kelly&gt;&quot;</span>, <span class="ruby-identifier">t</span>)
+  <span class="ruby-identifier">tag</span>(<span class="ruby-string">&quot;&lt;sib m=vaughn v=james&gt;&quot;</span>, <span class="ruby-identifier">t</span>)
+  <span class="ruby-identifier">assert</span> <span class="ruby-identifier">t</span>.<span class="ruby-identifier">match</span>(<span class="ruby-value">:child</span> =<span class="ruby-operator">&gt;</span> { <span class="ruby-value">:tag</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;sib&quot;</span>, <span class="ruby-value">:attributes</span> =<span class="ruby-operator">&gt;</span> {<span class="ruby-string">&quot;v&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-regexp">/j/</span>}})
+  <span class="ruby-identifier">assert</span> <span class="ruby-identifier">t</span>.<span class="ruby-identifier">match</span>(<span class="ruby-value">:child</span> =<span class="ruby-operator">&gt;</span> { <span class="ruby-value">:attributes</span> =<span class="ruby-operator">&gt;</span> {<span class="ruby-string">&quot;a&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;kelly&quot;</span>}})
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-test_match_descendant_fail">
+            
+              <b>test_match_descendant_fail</b>()
+            
+            <a href="../classes/TagNodeTest.html#method-i-test_match_descendant_fail" name="method-i-test_match_descendant_fail" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-test_match_descendant_fail_source')" id="l_method-i-test_match_descendant_fail_source">show</a>
+                
+                  | <a href="https://github.com/rails/rails/blob/eb23754ebbfbf2d465cc0f900720704fb3703633/actionview/test/template/html-scanner/tag_node_test.rb#L158" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-test_match_descendant_fail_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File actionview/test/template/html-scanner/tag_node_test.rb, line 158</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">test_match_descendant_fail</span>
+  <span class="ruby-identifier">tag</span>(<span class="ruby-string">&quot;&lt;grandchild m=vaughn v=james&gt;&quot;</span>, <span class="ruby-identifier">tag</span>(<span class="ruby-string">&quot;&lt;child v=john a=kelly&gt;&quot;</span>, <span class="ruby-identifier">t</span> = <span class="ruby-identifier">tag</span>(<span class="ruby-string">&quot;&lt;tag x:k=&#39;something&#39;&gt;&quot;</span>)))
+  <span class="ruby-identifier">assert</span> <span class="ruby-operator">!</span><span class="ruby-identifier">t</span>.<span class="ruby-identifier">match</span>(<span class="ruby-value">:descendant</span> =<span class="ruby-operator">&gt;</span> {<span class="ruby-value">:tag</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-regexp">/^child/</span>, <span class="ruby-value">:attributes</span> =<span class="ruby-operator">&gt;</span> {<span class="ruby-string">&quot;v&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-regexp">/m/</span>}})
+  <span class="ruby-identifier">assert</span> <span class="ruby-operator">!</span><span class="ruby-identifier">t</span>.<span class="ruby-identifier">match</span>(<span class="ruby-value">:descendant</span> =<span class="ruby-operator">&gt;</span> {<span class="ruby-value">:attributes</span> =<span class="ruby-operator">&gt;</span> {<span class="ruby-string">&quot;v&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword">false</span>}})
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-test_match_descendant_success">
+            
+              <b>test_match_descendant_success</b>()
+            
+            <a href="../classes/TagNodeTest.html#method-i-test_match_descendant_success" name="method-i-test_match_descendant_success" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-test_match_descendant_success_source')" id="l_method-i-test_match_descendant_success_source">show</a>
+                
+                  | <a href="https://github.com/rails/rails/blob/eb23754ebbfbf2d465cc0f900720704fb3703633/actionview/test/template/html-scanner/tag_node_test.rb#L152" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-test_match_descendant_success_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File actionview/test/template/html-scanner/tag_node_test.rb, line 152</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">test_match_descendant_success</span>
+  <span class="ruby-identifier">tag</span>(<span class="ruby-string">&quot;&lt;grandchild m=vaughn v=james&gt;&quot;</span>, <span class="ruby-identifier">tag</span>(<span class="ruby-string">&quot;&lt;child v=john a=kelly&gt;&quot;</span>, <span class="ruby-identifier">t</span> = <span class="ruby-identifier">tag</span>(<span class="ruby-string">&quot;&lt;tag x:k=&#39;something&#39;&gt;&quot;</span>)))
+  <span class="ruby-identifier">assert</span> <span class="ruby-identifier">t</span>.<span class="ruby-identifier">match</span>(<span class="ruby-value">:descendant</span> =<span class="ruby-operator">&gt;</span> {<span class="ruby-value">:tag</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;child&quot;</span>, <span class="ruby-value">:attributes</span> =<span class="ruby-operator">&gt;</span> {<span class="ruby-string">&quot;a&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-regexp">/ll/</span>}})
+  <span class="ruby-identifier">assert</span> <span class="ruby-identifier">t</span>.<span class="ruby-identifier">match</span>(<span class="ruby-value">:descendant</span> =<span class="ruby-operator">&gt;</span> {<span class="ruby-value">:attributes</span> =<span class="ruby-operator">&gt;</span> {<span class="ruby-string">&quot;m&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;vaughn&quot;</span>}})
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-test_match_parent_fail">
+            
+              <b>test_match_parent_fail</b>()
+            
+            <a href="../classes/TagNodeTest.html#method-i-test_match_parent_fail" name="method-i-test_match_parent_fail" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-test_match_parent_fail_source')" id="l_method-i-test_match_parent_fail_source">show</a>
+                
+                  | <a href="https://github.com/rails/rails/blob/eb23754ebbfbf2d465cc0f900720704fb3703633/actionview/test/template/html-scanner/tag_node_test.rb#L119" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-test_match_parent_fail_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File actionview/test/template/html-scanner/tag_node_test.rb, line 119</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">test_match_parent_fail</span>
+  <span class="ruby-identifier">t</span> = <span class="ruby-identifier">tag</span>(<span class="ruby-string">&quot;&lt;tag a=15 b=&#39;hello&#39;&gt;&quot;</span>, <span class="ruby-identifier">tag</span>(<span class="ruby-string">&quot;&lt;foo k=&#39;value&#39;&gt;&quot;</span>))
+  <span class="ruby-identifier">assert</span> <span class="ruby-operator">!</span><span class="ruby-identifier">t</span>.<span class="ruby-identifier">match</span>(<span class="ruby-value">:parent</span> =<span class="ruby-operator">&gt;</span> {<span class="ruby-value">:tag</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-regexp">/kafka/</span>})
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-test_match_parent_success">
+            
+              <b>test_match_parent_success</b>()
+            
+            <a href="../classes/TagNodeTest.html#method-i-test_match_parent_success" name="method-i-test_match_parent_success" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-test_match_parent_success_source')" id="l_method-i-test_match_parent_success_source">show</a>
+                
+                  | <a href="https://github.com/rails/rails/blob/eb23754ebbfbf2d465cc0f900720704fb3703633/actionview/test/template/html-scanner/tag_node_test.rb#L114" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-test_match_parent_success_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File actionview/test/template/html-scanner/tag_node_test.rb, line 114</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">test_match_parent_success</span>
+  <span class="ruby-identifier">t</span> = <span class="ruby-identifier">tag</span>(<span class="ruby-string">&quot;&lt;tag a=15 b=&#39;hello&#39;&gt;&quot;</span>, <span class="ruby-identifier">tag</span>(<span class="ruby-string">&quot;&lt;foo k=&#39;value&#39;&gt;&quot;</span>))
+  <span class="ruby-identifier">assert</span> <span class="ruby-identifier">t</span>.<span class="ruby-identifier">match</span>(<span class="ruby-value">:parent</span> =<span class="ruby-operator">&gt;</span> {<span class="ruby-value">:tag</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;foo&quot;</span>, <span class="ruby-value">:attributes</span> =<span class="ruby-operator">&gt;</span> {<span class="ruby-string">&quot;k&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-regexp">/v.l/</span>, <span class="ruby-string">&quot;j&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword">false</span>}})
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-test_match_sibling">
+            
+              <b>test_match_sibling</b>()
+            
+            <a href="../classes/TagNodeTest.html#method-i-test_match_sibling" name="method-i-test_match_sibling" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-test_match_sibling_source')" id="l_method-i-test_match_sibling_source">show</a>
+                
+                  | <a href="https://github.com/rails/rails/blob/eb23754ebbfbf2d465cc0f900720704fb3703633/actionview/test/template/html-scanner/tag_node_test.rb#L190" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-test_match_sibling_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File actionview/test/template/html-scanner/tag_node_test.rb, line 190</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">test_match_sibling</span>
+  <span class="ruby-identifier">t</span> = <span class="ruby-identifier">tag</span>(<span class="ruby-string">&quot;&lt;tag x:k=&#39;something&#39;&gt;&quot;</span>)
+  <span class="ruby-identifier">tag</span>(<span class="ruby-string">&quot;hello&quot;</span>, <span class="ruby-identifier">t</span>)
+  <span class="ruby-identifier">tag</span>(<span class="ruby-string">&quot;&lt;span a=b&gt;&quot;</span>, <span class="ruby-identifier">t</span>)
+  <span class="ruby-identifier">tag</span>(<span class="ruby-string">&quot;world&quot;</span>, <span class="ruby-identifier">t</span>)
+  <span class="ruby-identifier">m</span> = <span class="ruby-identifier">tag</span>(<span class="ruby-string">&quot;&lt;span k=r&gt;&quot;</span>, <span class="ruby-identifier">t</span>)
+  <span class="ruby-identifier">tag</span>(<span class="ruby-string">&quot;&lt;span m=l&gt;&quot;</span>, <span class="ruby-identifier">t</span>)
+
+  <span class="ruby-identifier">assert</span> <span class="ruby-identifier">m</span>.<span class="ruby-identifier">match</span>(<span class="ruby-value">:sibling</span> =<span class="ruby-operator">&gt;</span> {<span class="ruby-value">:tag</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;span&quot;</span>, <span class="ruby-value">:attributes</span> =<span class="ruby-operator">&gt;</span> {<span class="ruby-value">:a</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword">true</span>}})
+  <span class="ruby-identifier">assert</span> <span class="ruby-identifier">m</span>.<span class="ruby-identifier">match</span>(<span class="ruby-value">:sibling</span> =<span class="ruby-operator">&gt;</span> {<span class="ruby-value">:tag</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;span&quot;</span>, <span class="ruby-value">:attributes</span> =<span class="ruby-operator">&gt;</span> {<span class="ruby-value">:m</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword">true</span>}})
+  <span class="ruby-identifier">assert</span> <span class="ruby-operator">!</span><span class="ruby-identifier">m</span>.<span class="ruby-identifier">match</span>(<span class="ruby-value">:sibling</span> =<span class="ruby-operator">&gt;</span> {<span class="ruby-value">:tag</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;span&quot;</span>, <span class="ruby-value">:attributes</span> =<span class="ruby-operator">&gt;</span> {<span class="ruby-value">:k</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword">true</span>}})
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-test_match_sibling_after">
+            
+              <b>test_match_sibling_after</b>()
+            
+            <a href="../classes/TagNodeTest.html#method-i-test_match_sibling_after" name="method-i-test_match_sibling_after" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-test_match_sibling_after_source')" id="l_method-i-test_match_sibling_after_source">show</a>
+                
+                  | <a href="https://github.com/rails/rails/blob/eb23754ebbfbf2d465cc0f900720704fb3703633/actionview/test/template/html-scanner/tag_node_test.rb#L216" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-test_match_sibling_after_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File actionview/test/template/html-scanner/tag_node_test.rb, line 216</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">test_match_sibling_after</span>
+  <span class="ruby-identifier">t</span> = <span class="ruby-identifier">tag</span>(<span class="ruby-string">&quot;&lt;tag x:k=&#39;something&#39;&gt;&quot;</span>)
+  <span class="ruby-identifier">tag</span>(<span class="ruby-string">&quot;hello&quot;</span>, <span class="ruby-identifier">t</span>)
+  <span class="ruby-identifier">tag</span>(<span class="ruby-string">&quot;&lt;span a=b&gt;&quot;</span>, <span class="ruby-identifier">t</span>)
+  <span class="ruby-identifier">tag</span>(<span class="ruby-string">&quot;world&quot;</span>, <span class="ruby-identifier">t</span>)
+  <span class="ruby-identifier">m</span> = <span class="ruby-identifier">tag</span>(<span class="ruby-string">&quot;&lt;span k=r&gt;&quot;</span>, <span class="ruby-identifier">t</span>)
+  <span class="ruby-identifier">tag</span>(<span class="ruby-string">&quot;&lt;span m=l&gt;&quot;</span>, <span class="ruby-identifier">t</span>)
+
+  <span class="ruby-identifier">assert</span> <span class="ruby-identifier">m</span>.<span class="ruby-identifier">match</span>(<span class="ruby-value">:after</span> =<span class="ruby-operator">&gt;</span> {<span class="ruby-value">:tag</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;span&quot;</span>, <span class="ruby-value">:attributes</span> =<span class="ruby-operator">&gt;</span> {<span class="ruby-value">:a</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword">true</span>}})
+  <span class="ruby-identifier">assert</span> <span class="ruby-operator">!</span><span class="ruby-identifier">m</span>.<span class="ruby-identifier">match</span>(<span class="ruby-value">:after</span> =<span class="ruby-operator">&gt;</span> {<span class="ruby-value">:tag</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;span&quot;</span>, <span class="ruby-value">:attributes</span> =<span class="ruby-operator">&gt;</span> {<span class="ruby-value">:m</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword">true</span>}})
+  <span class="ruby-identifier">assert</span> <span class="ruby-operator">!</span><span class="ruby-identifier">m</span>.<span class="ruby-identifier">match</span>(<span class="ruby-value">:after</span> =<span class="ruby-operator">&gt;</span> {<span class="ruby-value">:tag</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;span&quot;</span>, <span class="ruby-value">:attributes</span> =<span class="ruby-operator">&gt;</span> {<span class="ruby-value">:k</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword">true</span>}})
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-test_match_sibling_before">
+            
+              <b>test_match_sibling_before</b>()
+            
+            <a href="../classes/TagNodeTest.html#method-i-test_match_sibling_before" name="method-i-test_match_sibling_before" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-test_match_sibling_before_source')" id="l_method-i-test_match_sibling_before_source">show</a>
+                
+                  | <a href="https://github.com/rails/rails/blob/eb23754ebbfbf2d465cc0f900720704fb3703633/actionview/test/template/html-scanner/tag_node_test.rb#L203" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-test_match_sibling_before_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File actionview/test/template/html-scanner/tag_node_test.rb, line 203</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">test_match_sibling_before</span>
+  <span class="ruby-identifier">t</span> = <span class="ruby-identifier">tag</span>(<span class="ruby-string">&quot;&lt;tag x:k=&#39;something&#39;&gt;&quot;</span>)
+  <span class="ruby-identifier">tag</span>(<span class="ruby-string">&quot;hello&quot;</span>, <span class="ruby-identifier">t</span>)
+  <span class="ruby-identifier">tag</span>(<span class="ruby-string">&quot;&lt;span a=b&gt;&quot;</span>, <span class="ruby-identifier">t</span>)
+  <span class="ruby-identifier">tag</span>(<span class="ruby-string">&quot;world&quot;</span>, <span class="ruby-identifier">t</span>)
+  <span class="ruby-identifier">m</span> = <span class="ruby-identifier">tag</span>(<span class="ruby-string">&quot;&lt;span k=r&gt;&quot;</span>, <span class="ruby-identifier">t</span>)
+  <span class="ruby-identifier">tag</span>(<span class="ruby-string">&quot;&lt;span m=l&gt;&quot;</span>, <span class="ruby-identifier">t</span>)
+
+  <span class="ruby-identifier">assert</span> <span class="ruby-identifier">m</span>.<span class="ruby-identifier">match</span>(<span class="ruby-value">:before</span> =<span class="ruby-operator">&gt;</span> {<span class="ruby-value">:tag</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;span&quot;</span>, <span class="ruby-value">:attributes</span> =<span class="ruby-operator">&gt;</span> {<span class="ruby-value">:m</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword">true</span>}})
+  <span class="ruby-identifier">assert</span> <span class="ruby-operator">!</span><span class="ruby-identifier">m</span>.<span class="ruby-identifier">match</span>(<span class="ruby-value">:before</span> =<span class="ruby-operator">&gt;</span> {<span class="ruby-value">:tag</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;span&quot;</span>, <span class="ruby-value">:attributes</span> =<span class="ruby-operator">&gt;</span> {<span class="ruby-value">:a</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword">true</span>}})
+  <span class="ruby-identifier">assert</span> <span class="ruby-operator">!</span><span class="ruby-identifier">m</span>.<span class="ruby-identifier">match</span>(<span class="ruby-value">:before</span> =<span class="ruby-operator">&gt;</span> {<span class="ruby-value">:tag</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;span&quot;</span>, <span class="ruby-value">:attributes</span> =<span class="ruby-operator">&gt;</span> {<span class="ruby-value">:k</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword">true</span>}})
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-test_match_tag_as_regexp">
+            
+              <b>test_match_tag_as_regexp</b>()
+            
+            <a href="../classes/TagNodeTest.html#method-i-test_match_tag_as_regexp" name="method-i-test_match_tag_as_regexp" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-test_match_tag_as_regexp_source')" id="l_method-i-test_match_tag_as_regexp_source">show</a>
+                
+                  | <a href="https://github.com/rails/rails/blob/eb23754ebbfbf2d465cc0f900720704fb3703633/actionview/test/template/html-scanner/tag_node_test.rb#L75" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-test_match_tag_as_regexp_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File actionview/test/template/html-scanner/tag_node_test.rb, line 75</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">test_match_tag_as_regexp</span>
+  <span class="ruby-identifier">assert</span> <span class="ruby-identifier">tag</span>(<span class="ruby-string">&quot;&lt;tag&gt;&quot;</span>).<span class="ruby-identifier">match</span>(<span class="ruby-value">:tag</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-regexp">/t.g/</span>)
+  <span class="ruby-identifier">assert</span> <span class="ruby-operator">!</span><span class="ruby-identifier">tag</span>(<span class="ruby-string">&quot;&lt;tag&gt;&quot;</span>).<span class="ruby-identifier">match</span>(<span class="ruby-value">:tag</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-regexp">/t[bqs]g/</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-test_match_tag_as_string">
+            
+              <b>test_match_tag_as_string</b>()
+            
+            <a href="../classes/TagNodeTest.html#method-i-test_match_tag_as_string" name="method-i-test_match_tag_as_string" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-test_match_tag_as_string_source')" id="l_method-i-test_match_tag_as_string_source">show</a>
+                
+                  | <a href="https://github.com/rails/rails/blob/eb23754ebbfbf2d465cc0f900720704fb3703633/actionview/test/template/html-scanner/tag_node_test.rb#L70" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-test_match_tag_as_string_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File actionview/test/template/html-scanner/tag_node_test.rb, line 70</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">test_match_tag_as_string</span>
+  <span class="ruby-identifier">assert</span> <span class="ruby-identifier">tag</span>(<span class="ruby-string">&quot;&lt;tag&gt;&quot;</span>).<span class="ruby-identifier">match</span>(<span class="ruby-value">:tag</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;tag&quot;</span>)
+  <span class="ruby-identifier">assert</span> <span class="ruby-operator">!</span><span class="ruby-identifier">tag</span>(<span class="ruby-string">&quot;&lt;tag&gt;&quot;</span>).<span class="ruby-identifier">match</span>(<span class="ruby-value">:tag</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;b&quot;</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-test_open_with_attributes">
+            
+              <b>test_open_with_attributes</b>()
+            
+            <a href="../classes/TagNodeTest.html#method-i-test_open_with_attributes" name="method-i-test_open_with_attributes" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-test_open_with_attributes_source')" id="l_method-i-test_open_with_attributes_source">show</a>
+                
+                  | <a href="https://github.com/rails/rails/blob/eb23754ebbfbf2d465cc0f900720704fb3703633/actionview/test/template/html-scanner/tag_node_test.rb#L11" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-test_open_with_attributes_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File actionview/test/template/html-scanner/tag_node_test.rb, line 11</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">test_open_with_attributes</span>
+  <span class="ruby-identifier">node</span> = <span class="ruby-identifier">tag</span>(<span class="ruby-string">&quot;&lt;TAG1 foo=hey_ho x:bar=\&quot;blah blah\&quot; BAZ=&#39;blah blah blah&#39; &gt;&quot;</span>)
+  <span class="ruby-identifier">assert_equal</span> <span class="ruby-string">&quot;tag1&quot;</span>, <span class="ruby-identifier">node</span>.<span class="ruby-identifier">name</span>
+  <span class="ruby-identifier">assert_equal</span> <span class="ruby-string">&quot;hey_ho&quot;</span>, <span class="ruby-identifier">node</span>[<span class="ruby-string">&quot;foo&quot;</span>]
+  <span class="ruby-identifier">assert_equal</span> <span class="ruby-string">&quot;blah blah&quot;</span>, <span class="ruby-identifier">node</span>[<span class="ruby-string">&quot;x:bar&quot;</span>]
+  <span class="ruby-identifier">assert_equal</span> <span class="ruby-string">&quot;blah blah blah&quot;</span>, <span class="ruby-identifier">node</span>[<span class="ruby-string">&quot;baz&quot;</span>]
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-test_open_without_attributes">
+            
+              <b>test_open_without_attributes</b>()
+            
+            <a href="../classes/TagNodeTest.html#method-i-test_open_without_attributes" name="method-i-test_open_without_attributes" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-test_open_without_attributes_source')" id="l_method-i-test_open_without_attributes_source">show</a>
+                
+                  | <a href="https://github.com/rails/rails/blob/eb23754ebbfbf2d465cc0f900720704fb3703633/actionview/test/template/html-scanner/tag_node_test.rb#L4" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-test_open_without_attributes_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File actionview/test/template/html-scanner/tag_node_test.rb, line 4</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">test_open_without_attributes</span>
+  <span class="ruby-identifier">node</span> = <span class="ruby-identifier">tag</span>(<span class="ruby-string">&quot;&lt;tag&gt;&quot;</span>)
+  <span class="ruby-identifier">assert_equal</span> <span class="ruby-string">&quot;tag&quot;</span>, <span class="ruby-identifier">node</span>.<span class="ruby-identifier">name</span>
+  <span class="ruby-identifier">assert_equal</span> <span class="ruby-constant">Hash</span>.<span class="ruby-identifier">new</span>, <span class="ruby-identifier">node</span>.<span class="ruby-identifier">attributes</span>
+  <span class="ruby-identifier">assert_nil</span> <span class="ruby-identifier">node</span>.<span class="ruby-identifier">closing</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-test_self_closing_with_attributes">
+            
+              <b>test_self_closing_with_attributes</b>()
+            
+            <a href="../classes/TagNodeTest.html#method-i-test_self_closing_with_attributes" name="method-i-test_self_closing_with_attributes" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-test_self_closing_with_attributes_source')" id="l_method-i-test_self_closing_with_attributes_source">show</a>
+                
+                  | <a href="https://github.com/rails/rails/blob/eb23754ebbfbf2d465cc0f900720704fb3703633/actionview/test/template/html-scanner/tag_node_test.rb#L26" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-test_self_closing_with_attributes_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File actionview/test/template/html-scanner/tag_node_test.rb, line 26</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">test_self_closing_with_attributes</span>
+  <span class="ruby-identifier">node</span> = <span class="ruby-identifier">tag</span>(<span class="ruby-string">&quot;&lt;tag a=b/&gt;&quot;</span>)
+  <span class="ruby-identifier">assert_equal</span> <span class="ruby-string">&quot;tag&quot;</span>, <span class="ruby-identifier">node</span>.<span class="ruby-identifier">name</span>
+  <span class="ruby-identifier">assert_equal</span>( { <span class="ruby-string">&quot;a&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;b&quot;</span> }, <span class="ruby-identifier">node</span>.<span class="ruby-identifier">attributes</span> )
+  <span class="ruby-identifier">assert_equal</span> <span class="ruby-value">:self</span>, <span class="ruby-identifier">node</span>.<span class="ruby-identifier">closing</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-test_self_closing_without_attributes">
+            
+              <b>test_self_closing_without_attributes</b>()
+            
+            <a href="../classes/TagNodeTest.html#method-i-test_self_closing_without_attributes" name="method-i-test_self_closing_without_attributes" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-test_self_closing_without_attributes_source')" id="l_method-i-test_self_closing_without_attributes_source">show</a>
+                
+                  | <a href="https://github.com/rails/rails/blob/eb23754ebbfbf2d465cc0f900720704fb3703633/actionview/test/template/html-scanner/tag_node_test.rb#L19" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-test_self_closing_without_attributes_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File actionview/test/template/html-scanner/tag_node_test.rb, line 19</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">test_self_closing_without_attributes</span>
+  <span class="ruby-identifier">node</span> = <span class="ruby-identifier">tag</span>(<span class="ruby-string">&quot;&lt;tag/&gt;&quot;</span>)
+  <span class="ruby-identifier">assert_equal</span> <span class="ruby-string">&quot;tag&quot;</span>, <span class="ruby-identifier">node</span>.<span class="ruby-identifier">name</span>
+  <span class="ruby-identifier">assert_equal</span> <span class="ruby-constant">Hash</span>.<span class="ruby-identifier">new</span>, <span class="ruby-identifier">node</span>.<span class="ruby-identifier">attributes</span>
+  <span class="ruby-identifier">assert_equal</span> <span class="ruby-value">:self</span>, <span class="ruby-identifier">node</span>.<span class="ruby-identifier">closing</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-test_tag">
+            
+              <b>test_tag</b>()
+            
+            <a href="../classes/TagNodeTest.html#method-i-test_tag" name="method-i-test_tag" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-test_tag_source')" id="l_method-i-test_tag_source">show</a>
+                
+                  | <a href="https://github.com/rails/rails/blob/eb23754ebbfbf2d465cc0f900720704fb3703633/actionview/test/template/html-scanner/tag_node_test.rb#L66" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-test_tag_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File actionview/test/template/html-scanner/tag_node_test.rb, line 66</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">test_tag</span>
+  <span class="ruby-identifier">assert</span> <span class="ruby-identifier">tag</span>(<span class="ruby-string">&quot;&lt;tag&gt;&quot;</span>).<span class="ruby-identifier">tag?</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-test_tag_to_s">
+            
+              <b>test_tag_to_s</b>()
+            
+            <a href="../classes/TagNodeTest.html#method-i-test_tag_to_s" name="method-i-test_tag_to_s" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-test_tag_to_s_source')" id="l_method-i-test_tag_to_s_source">show</a>
+                
+                  | <a href="https://github.com/rails/rails/blob/eb23754ebbfbf2d465cc0f900720704fb3703633/actionview/test/template/html-scanner/tag_node_test.rb#L229" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-test_tag_to_s_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File actionview/test/template/html-scanner/tag_node_test.rb, line 229</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">test_tag_to_s</span>
+  <span class="ruby-identifier">t</span> = <span class="ruby-identifier">tag</span>(<span class="ruby-string">&quot;&lt;b x=&#39;foo&#39;&gt;&quot;</span>)
+  <span class="ruby-identifier">tag</span>(<span class="ruby-string">&quot;hello&quot;</span>, <span class="ruby-identifier">t</span>)
+  <span class="ruby-identifier">tag</span>(<span class="ruby-string">&quot;&lt;hr /&gt;&quot;</span>, <span class="ruby-identifier">t</span>)
+  <span class="ruby-identifier">assert_equal</span> <span class="ruby-string">%Q(&lt;b x=&quot;foo&quot;&gt;hello&lt;hr /&gt;&lt;/b&gt;)</span>, <span class="ruby-identifier">t</span>.<span class="ruby-identifier">to_s</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-test_to_s">
+            
+              <b>test_to_s</b>()
+            
+            <a href="../classes/TagNodeTest.html#method-i-test_to_s" name="method-i-test_to_s" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-test_to_s_source')" id="l_method-i-test_to_s_source">show</a>
+                
+                  | <a href="https://github.com/rails/rails/blob/eb23754ebbfbf2d465cc0f900720704fb3703633/actionview/test/template/html-scanner/tag_node_test.rb#L56" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-test_to_s_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File actionview/test/template/html-scanner/tag_node_test.rb, line 56</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">test_to_s</span>
+  <span class="ruby-identifier">node</span> = <span class="ruby-identifier">tag</span>(<span class="ruby-string">&quot;&lt;a b=c d=&#39;f&#39; g=\&quot;h &#39;i&#39;\&quot; /&gt;&quot;</span>)
+  <span class="ruby-identifier">node</span> = <span class="ruby-identifier">node</span>.<span class="ruby-identifier">to_s</span>
+  <span class="ruby-identifier">assert</span> <span class="ruby-identifier">node</span>.<span class="ruby-identifier">include?</span>(<span class="ruby-string">&#39;a&#39;</span>)
+  <span class="ruby-identifier">assert</span> <span class="ruby-identifier">node</span>.<span class="ruby-identifier">include?</span>(<span class="ruby-string">&#39;b=&quot;c&quot;&#39;</span>)
+  <span class="ruby-identifier">assert</span> <span class="ruby-identifier">node</span>.<span class="ruby-identifier">include?</span>(<span class="ruby-string">&#39;d=&quot;f&quot;&#39;</span>)
+  <span class="ruby-identifier">assert</span> <span class="ruby-identifier">node</span>.<span class="ruby-identifier">include?</span>(<span class="ruby-string">&#39;g=&quot;h&#39;</span>)
+  <span class="ruby-identifier">assert</span> <span class="ruby-identifier">node</span>.<span class="ruby-identifier">include?</span>(<span class="ruby-string">&#39;i&#39;</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                    </div>
+
+    </div>
+  </body>
+</html>    

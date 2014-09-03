@@ -1,0 +1,333 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>Tk::BWidget::DropSite</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="../../../css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../../../css/main.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../../../css/github.css" type="text/css" media="screen" />
+<script src="../../../js/jquery-1.3.2.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../../js/jquery-effect.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../../js/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+
+<body>     
+    <div class="banner">
+        
+        <h1>
+            <span class="type">Module</span> 
+            Tk::BWidget::DropSite 
+            
+        </h1>
+        <ul class="files">
+            
+            <li><a href="../../../files/ext/tk/lib/tkextlib/bwidget/dropsite_rb.html">ext/tk/lib/tkextlib/bwidget/dropsite.rb</a></li>
+            
+        </ul>
+    </div>
+    <div id="bodyContent">
+        <div id="content">
+  
+
+
+  
+
+
+  
+  
+
+
+  
+
+
+  
+    <!-- Method ref -->
+    <div class="sectiontitle">Methods</div>
+    <dl class="methods">
+      
+        <dt>I</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-include">include</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>R</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-register">register</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>S</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-set_cursor">set_cursor</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-c-set_drop">set_drop</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-c-set_operation">set_operation</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+    </dl>
+  
+
+  
+    <!-- Includes -->
+    <div class="sectiontitle">Included Modules</div>
+    <ul>
+      
+        <li>
+          
+            <a href="../../Tk.html">
+              Tk
+            </a>
+          
+        </li>
+      
+    </ul>
+  
+
+
+
+  
+
+    
+
+    
+
+    
+
+
+    
+
+
+    <!-- Methods -->
+    
+      <div class="sectiontitle">Class Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-c-include">
+            
+              <b>include</b>(klass, type)
+            
+            <a href="../../../classes/Tk/BWidget/DropSite.html#method-c-include" name="method-c-include" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-include_source')" id="l_method-c-include_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/d8465ff9abf63545262b7d8f88b069522ae82823/ext/tk/lib/tkextlib/bwidget/dropsite.rb#L20" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-include_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/bwidget/dropsite.rb, line 20</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">include</span>(<span class="ruby-identifier">klass</span>, <span class="ruby-identifier">type</span>)
+  <span class="ruby-identifier">tk_call</span>(<span class="ruby-string">&#39;DropSite::include&#39;</span>, <span class="ruby-identifier">klass</span>, <span class="ruby-identifier">type</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-register">
+            
+              <b>register</b>(path, keys={})
+            
+            <a href="../../../classes/Tk/BWidget/DropSite.html#method-c-register" name="method-c-register" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-register_source')" id="l_method-c-register_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/d8465ff9abf63545262b7d8f88b069522ae82823/ext/tk/lib/tkextlib/bwidget/dropsite.rb#L24" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-register_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/bwidget/dropsite.rb, line 24</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">register</span>(<span class="ruby-identifier">path</span>, <span class="ruby-identifier">keys</span>={})
+  <span class="ruby-identifier">tk_call</span>(<span class="ruby-string">&#39;DropSite::register&#39;</span>, <span class="ruby-identifier">path</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">hash_kv</span>(<span class="ruby-identifier">keys</span>))
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-set_cursor">
+            
+              <b>set_cursor</b>(cursor)
+            
+            <a href="../../../classes/Tk/BWidget/DropSite.html#method-c-set_cursor" name="method-c-set_cursor" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-set_cursor_source')" id="l_method-c-set_cursor_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/d8465ff9abf63545262b7d8f88b069522ae82823/ext/tk/lib/tkextlib/bwidget/dropsite.rb#L28" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-set_cursor_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/bwidget/dropsite.rb, line 28</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">set_cursor</span>(<span class="ruby-identifier">cursor</span>)
+  <span class="ruby-identifier">tk_call</span>(<span class="ruby-string">&#39;DropSite::setcursor&#39;</span>, <span class="ruby-identifier">cursor</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-set_drop">
+            
+              <b>set_drop</b>(path, subpath, dropover, drop, force=None)
+            
+            <a href="../../../classes/Tk/BWidget/DropSite.html#method-c-set_drop" name="method-c-set_drop" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-set_drop_source')" id="l_method-c-set_drop_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/d8465ff9abf63545262b7d8f88b069522ae82823/ext/tk/lib/tkextlib/bwidget/dropsite.rb#L32" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-set_drop_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/bwidget/dropsite.rb, line 32</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">set_drop</span>(<span class="ruby-identifier">path</span>, <span class="ruby-identifier">subpath</span>, <span class="ruby-identifier">dropover</span>, <span class="ruby-identifier">drop</span>, <span class="ruby-identifier">force</span>=<span class="ruby-constant">None</span>)
+  <span class="ruby-identifier">tk_call</span>(<span class="ruby-string">&#39;DropSite::setdrop&#39;</span>, <span class="ruby-identifier">path</span>, <span class="ruby-identifier">subpath</span>, <span class="ruby-identifier">dropover</span>, <span class="ruby-identifier">drop</span>, <span class="ruby-identifier">force</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-set_operation">
+            
+              <b>set_operation</b>(op)
+            
+            <a href="../../../classes/Tk/BWidget/DropSite.html#method-c-set_operation" name="method-c-set_operation" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-set_operation_source')" id="l_method-c-set_operation_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/d8465ff9abf63545262b7d8f88b069522ae82823/ext/tk/lib/tkextlib/bwidget/dropsite.rb#L36" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-set_operation_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/bwidget/dropsite.rb, line 36</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">set_operation</span>(<span class="ruby-identifier">op</span>)
+  <span class="ruby-identifier">tk_call</span>(<span class="ruby-string">&#39;DropSite::setoperation&#39;</span>, <span class="ruby-identifier">op</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                        </div>
+
+    </div>
+  </body>
+</html>    

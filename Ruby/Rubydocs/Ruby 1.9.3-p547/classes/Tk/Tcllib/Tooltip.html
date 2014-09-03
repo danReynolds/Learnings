@@ -1,0 +1,960 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>Tk::Tcllib::Tooltip</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="../../../css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../../../css/main.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../../../css/github.css" type="text/css" media="screen" />
+<script src="../../../js/jquery-1.3.2.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../../js/jquery-effect.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../../js/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+
+<body>     
+    <div class="banner">
+        
+        <h1>
+            <span class="type">Module</span> 
+            Tk::Tcllib::Tooltip 
+            
+        </h1>
+        <ul class="files">
+            
+            <li><a href="../../../files/ext/tk/lib/tkextlib/tcllib/tooltip_rb.html">ext/tk/lib/tkextlib/tcllib/tooltip.rb</a></li>
+            
+        </ul>
+    </div>
+    <div id="bodyContent">
+        <div id="content">
+  
+
+
+  
+
+
+  
+  
+
+
+  
+
+
+  
+    <!-- Method ref -->
+    <div class="sectiontitle">Methods</div>
+    <dl class="methods">
+      
+        <dt>C</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-clear">clear</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-c-clear_children">clear_children</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-c-clear_glob">clear_glob</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-c-clear_widgets">clear_widgets</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>D</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-database_class">database_class</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-c-database_classname">database_classname</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-c-delay">delay</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-c-delay-3D">delay=</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-c-disable">disable</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>E</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-enable">enable</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-c-erase">erase</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>F</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-fade">fade</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-c-fade-3F">fade?</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>O</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-off">off</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-c-on">on</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>P</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-package_name">package_name</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-c-package_version">package_version</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>R</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-register">register</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+    </dl>
+  
+
+  
+
+
+
+  
+
+    
+
+    
+
+    
+      <!-- Section constants -->
+      <div class="sectiontitle">Constants</div>
+      <table border='0' cellpadding='5'>
+        
+          <tr valign='top'>
+            <td class="attr-name">PACKAGE_NAME</td>
+            <td>=</td>
+            <td class="attr-value">&#39;tooltip&#39;.freeze</td>
+          </tr>
+          
+            <tr valign='top'>
+              <td>&nbsp;</td>
+              <td colspan="2" class="attr-desc"></td>
+            </tr>
+          
+        
+          <tr valign='top'>
+            <td class="attr-name">WidgetClassName</td>
+            <td>=</td>
+            <td class="attr-value">&#39;Tooltip&#39;.freeze</td>
+          </tr>
+          
+            <tr valign='top'>
+              <td>&nbsp;</td>
+              <td colspan="2" class="attr-desc"></td>
+            </tr>
+          
+        
+      </table>
+    
+
+
+    
+
+
+    <!-- Methods -->
+    
+      <div class="sectiontitle">Class Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-c-clear">
+            
+              <b>clear</b>(glob_path_pat = None)
+            
+            <a href="../../../classes/Tk/Tcllib/Tooltip.html#method-c-clear" name="method-c-clear" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-clear_source')" id="l_method-c-clear_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/tcllib/tooltip.rb#L46" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-clear_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/tcllib/tooltip.rb, line 46</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">clear</span>(<span class="ruby-identifier">glob_path_pat</span> = <span class="ruby-constant">None</span>)
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">clear_glob</span>(<span class="ruby-identifier">glob_path_pat</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-clear_children">
+            
+              <b>clear_children</b>(*args)
+            
+            <a href="../../../classes/Tk/Tcllib/Tooltip.html#method-c-clear_children" name="method-c-clear_children" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-clear_children_source')" id="l_method-c-clear_children_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/tcllib/tooltip.rb#L58" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-clear_children_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/tcllib/tooltip.rb, line 58</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">clear_children</span>(<span class="ruby-operator">*</span><span class="ruby-identifier">args</span>)
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">clear_glob</span>(<span class="ruby-node">&quot;{#{args.collect{|w| s = _get_eval_string(w); &quot;#{s},#{s}.*&quot;}.join(&#39;,&#39;)}}&quot;</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-clear_glob">
+            
+              <b>clear_glob</b>(glob_path_pat)
+            
+            <a href="../../../classes/Tk/Tcllib/Tooltip.html#method-c-clear_glob" name="method-c-clear_glob" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-clear_glob_source')" id="l_method-c-clear_glob_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/tcllib/tooltip.rb#L50" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-clear_glob_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/tcllib/tooltip.rb, line 50</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">clear_glob</span>(<span class="ruby-identifier">glob_path_pat</span>)
+  <span class="ruby-identifier">tk_call_without_enc</span>(<span class="ruby-string">&#39;::tooltip::tooltip&#39;</span>, <span class="ruby-string">&#39;clear&#39;</span>, <span class="ruby-identifier">glob_path_pat</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-clear_widgets">
+            
+              <b>clear_widgets</b>(*args)
+            
+            <a href="../../../classes/Tk/Tcllib/Tooltip.html#method-c-clear_widgets" name="method-c-clear_widgets" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-clear_widgets_source')" id="l_method-c-clear_widgets_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/tcllib/tooltip.rb#L54" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-clear_widgets_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/tcllib/tooltip.rb, line 54</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">clear_widgets</span>(<span class="ruby-operator">*</span><span class="ruby-identifier">args</span>)
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">clear_glob</span>(<span class="ruby-node">&quot;{#{args.collect{|w| _get_eval_string(w)}.join(&#39;,&#39;)}}&quot;</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-database_class">
+            
+              <b>database_class</b>()
+            
+            <a href="../../../classes/Tk/Tcllib/Tooltip.html#method-c-database_class" name="method-c-database_class" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-database_class_source')" id="l_method-c-database_class_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/tcllib/tooltip.rb#L42" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-database_class_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/tcllib/tooltip.rb, line 42</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">database_class</span>
+  <span class="ruby-constant">WidgetClassNames</span>[<span class="ruby-keyword">self</span><span class="ruby-operator">::</span><span class="ruby-constant">WidgetClassName</span>]
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-database_classname">
+            
+              <b>database_classname</b>()
+            
+            <a href="../../../classes/Tk/Tcllib/Tooltip.html#method-c-database_classname" name="method-c-database_classname" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-database_classname_source')" id="l_method-c-database_classname_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/tcllib/tooltip.rb#L39" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-database_classname_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/tcllib/tooltip.rb, line 39</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">database_classname</span>
+  <span class="ruby-keyword">self</span><span class="ruby-operator">::</span><span class="ruby-constant">WidgetClassName</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-delay">
+            
+              <b>delay</b>(millisecs=None)
+            
+            <a href="../../../classes/Tk/Tcllib/Tooltip.html#method-c-delay" name="method-c-delay" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-delay_source')" id="l_method-c-delay_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/tcllib/tooltip.rb#L62" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-delay_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/tcllib/tooltip.rb, line 62</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">delay</span>(<span class="ruby-identifier">millisecs</span>=<span class="ruby-constant">None</span>)
+  <span class="ruby-identifier">number</span>(<span class="ruby-identifier">tk_call_without_enc</span>(<span class="ruby-string">&#39;::tooltip::tooltip&#39;</span>, <span class="ruby-string">&#39;delay&#39;</span>, <span class="ruby-identifier">millisecs</span>))
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-delay-3D">
+            
+              <b>delay=</b>(millisecs)
+            
+            <a href="../../../classes/Tk/Tcllib/Tooltip.html#method-c-delay-3D" name="method-c-delay-3D" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-delay-3D_source')" id="l_method-c-delay-3D_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/tcllib/tooltip.rb#L65" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-delay-3D_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/tcllib/tooltip.rb, line 65</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">delay=</span>(<span class="ruby-identifier">millisecs</span>)
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">delay</span>(<span class="ruby-identifier">millisecs</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-disable">
+            
+              <b>disable</b>()
+            
+            <a href="../../../classes/Tk/Tcllib/Tooltip.html#method-c-disable" name="method-c-disable" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-disable_source')" id="l_method-c-disable_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/tcllib/tooltip.rb#L76" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-disable_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/tcllib/tooltip.rb, line 76</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">disable</span>
+  <span class="ruby-identifier">tk_call_without_enc</span>(<span class="ruby-string">&#39;::tooltip::tooltip&#39;</span>, <span class="ruby-string">&#39;disable&#39;</span>)
+  <span class="ruby-keyword">false</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-enable">
+            
+              <b>enable</b>()
+            
+            <a href="../../../classes/Tk/Tcllib/Tooltip.html#method-c-enable" name="method-c-enable" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-enable_source')" id="l_method-c-enable_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/tcllib/tooltip.rb#L84" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-enable_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/tcllib/tooltip.rb, line 84</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">enable</span>
+  <span class="ruby-identifier">tk_call_without_enc</span>(<span class="ruby-string">&#39;::tooltip::tooltip&#39;</span>, <span class="ruby-string">&#39;enable&#39;</span>)
+  <span class="ruby-keyword">true</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-erase">
+            
+              <b>erase</b>(widget)
+            
+            <a href="../../../classes/Tk/Tcllib/Tooltip.html#method-c-erase" name="method-c-erase" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-erase_source')" id="l_method-c-erase_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/tcllib/tooltip.rb#L101" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-erase_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/tcllib/tooltip.rb, line 101</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">erase</span>(<span class="ruby-identifier">widget</span>)
+  <span class="ruby-identifier">tk_call_without_enc</span>(<span class="ruby-string">&#39;::tooltip::tooltip&#39;</span>, <span class="ruby-identifier">widget</span>.<span class="ruby-identifier">path</span>, <span class="ruby-string">&#39;&#39;</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-fade">
+            
+              <b>fade</b>(mode)
+            
+            <a href="../../../classes/Tk/Tcllib/Tooltip.html#method-c-fade" name="method-c-fade" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-fade_source')" id="l_method-c-fade_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/tcllib/tooltip.rb#L72" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-fade_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/tcllib/tooltip.rb, line 72</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">fade</span>(<span class="ruby-identifier">mode</span>)
+  <span class="ruby-identifier">tk_call_without_enc</span>(<span class="ruby-string">&#39;::tooltip::tooltip&#39;</span>, <span class="ruby-string">&#39;fade&#39;</span>, <span class="ruby-identifier">mode</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-fade-3F">
+            
+              <b>fade?</b>()
+            
+            <a href="../../../classes/Tk/Tcllib/Tooltip.html#method-c-fade-3F" name="method-c-fade-3F" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-fade-3F_source')" id="l_method-c-fade-3F_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/tcllib/tooltip.rb#L69" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-fade-3F_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/tcllib/tooltip.rb, line 69</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">fade?</span>
+  <span class="ruby-identifier">bool</span>(<span class="ruby-identifier">tk_call_without_enc</span>(<span class="ruby-string">&#39;::tooltip::tooltip&#39;</span>, <span class="ruby-string">&#39;fade&#39;</span>))
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-off">
+            
+              <b>off</b>()
+            
+            <a href="../../../classes/Tk/Tcllib/Tooltip.html#method-c-off" name="method-c-off" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-off_source')" id="l_method-c-off_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/tcllib/tooltip.rb#L80" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-off_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/tcllib/tooltip.rb, line 80</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">off</span>
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">disable</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-on">
+            
+              <b>on</b>()
+            
+            <a href="../../../classes/Tk/Tcllib/Tooltip.html#method-c-on" name="method-c-on" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-on_source')" id="l_method-c-on_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/tcllib/tooltip.rb#L88" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-on_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/tcllib/tooltip.rb, line 88</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">on</span>
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">enable</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-package_name">
+            
+              <b>package_name</b>()
+            
+            <a href="../../../classes/Tk/Tcllib/Tooltip.html#method-c-package_name" name="method-c-package_name" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-package_name_source')" id="l_method-c-package_name_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/tcllib/tooltip.rb#L19" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-package_name_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/tcllib/tooltip.rb, line 19</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">package_name</span>
+  <span class="ruby-constant">PACKAGE_NAME</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-package_version">
+            
+              <b>package_version</b>()
+            
+            <a href="../../../classes/Tk/Tcllib/Tooltip.html#method-c-package_version" name="method-c-package_version" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-package_version_source')" id="l_method-c-package_version_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/tcllib/tooltip.rb#L23" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-package_version_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/tcllib/tooltip.rb, line 23</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">package_version</span>
+  <span class="ruby-keyword">begin</span>
+    <span class="ruby-constant">TkPackage</span>.<span class="ruby-identifier">require</span>(<span class="ruby-string">&#39;tooltip&#39;</span>)
+  <span class="ruby-keyword">rescue</span>
+    <span class="ruby-string">&#39;&#39;</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-register">
+            
+              <b>register</b>(widget, msg, keys=nil)
+            
+            <a href="../../../classes/Tk/Tcllib/Tooltip.html#method-c-register" name="method-c-register" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-register_source')" id="l_method-c-register_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/tcllib/tooltip.rb#L92" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-register_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/tcllib/tooltip.rb, line 92</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">register</span>(<span class="ruby-identifier">widget</span>, <span class="ruby-identifier">msg</span>, <span class="ruby-identifier">keys</span>=<span class="ruby-keyword">nil</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">keys</span>.<span class="ruby-identifier">kind_of?</span>(<span class="ruby-constant">Hash</span>)
+    <span class="ruby-identifier">args</span> = <span class="ruby-identifier">hash_kv</span>(<span class="ruby-identifier">keys</span>) <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">msg</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">args</span> = <span class="ruby-identifier">msg</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">tk_call</span>(<span class="ruby-string">&#39;::tooltip::tooltip&#39;</span>, <span class="ruby-identifier">widget</span>.<span class="ruby-identifier">path</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">args</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                        </div>
+
+    </div>
+  </body>
+</html>    

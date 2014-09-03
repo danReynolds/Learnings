@@ -1,0 +1,2123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>Tk::BLT::Tabset</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="../../../css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../../../css/main.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../../../css/github.css" type="text/css" media="screen" />
+<script src="../../../js/jquery-1.3.2.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../../js/jquery-effect.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../../js/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+
+<body>     
+    <div class="banner">
+        
+        <h1>
+            <span class="type">Class</span> 
+            Tk::BLT::Tabset 
+            
+                <span class="parent">&lt; 
+                    
+                    <a href="../../TkWindow.html">TkWindow</a>
+                    
+                </span>
+            
+        </h1>
+        <ul class="files">
+            
+            <li><a href="../../../files/ext/tk/lib/tkextlib/blt/tabset_rb.html">ext/tk/lib/tkextlib/blt/tabset.rb</a></li>
+            
+        </ul>
+    </div>
+    <div id="bodyContent">
+        <div id="content">
+  
+
+
+  
+
+
+  
+  
+
+
+  
+    <!-- Namespace -->
+    <div class="sectiontitle">Namespace</div>
+    <ul>
+      
+        <li>
+          <span class="type">CLASS</span>
+          <a href="Tabset/NamedTab.html">Tk::BLT::Tabset::NamedTab</a>
+        </li>
+      
+        <li>
+          <span class="type">CLASS</span>
+          <a href="Tabset/Tab.html">Tk::BLT::Tabset::Tab</a>
+        </li>
+      
+    </ul>
+  
+
+
+  
+    <!-- Method ref -->
+    <div class="sectiontitle">Methods</div>
+    <dl class="methods">
+      
+        <dt>#</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-__boolval_optkeys">__boolval_optkeys</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-__destroy_hook__">__destroy_hook__</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>A</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-activate">activate</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>D</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-delete">delete</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>F</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-focus">focus</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>G</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-get_tab">get_tab</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-get_tabobj">get_tabobj</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>H</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-highlight">highlight</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>I</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-index">index</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-index_name">index_name</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-insert">insert</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-insert_tabs">insert_tabs</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-invoke">invoke</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>M</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-move_after">move_after</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-move_before">move_before</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>N</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-nearest">nearest</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>P</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-perforation_activate">perforation_activate</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-perforation_highlight">perforation_highlight</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-perforation_invoke">perforation_invoke</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>S</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-scan_dragto">scan_dragto</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-scan_mark">scan_mark</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-scrollcommand">scrollcommand</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-see">see</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-select">select</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-size">size</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>T</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-tab_dockall">tab_dockall</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-tab_ids">tab_ids</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-tab_names">tab_names</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-tab_objs">tab_objs</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-tab_pageheight">tab_pageheight</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-tab_pagewidth">tab_pagewidth</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-tab_tearoff">tab_tearoff</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-tabbind">tabbind</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-tabbind_append">tabbind_append</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-tabbind_remove">tabbind_remove</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-tabbindinfo">tabbindinfo</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-tagid">tagid</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-tagindex">tagindex</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>V</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-view">view</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>X</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-xscrollcommand">xscrollcommand</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-xview">xview</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+    </dl>
+  
+
+  
+    <!-- Includes -->
+    <div class="sectiontitle">Included Modules</div>
+    <ul>
+      
+        <li>
+          
+            <a href="../X_Scrollable.html">
+              Tk::X_Scrollable
+            </a>
+          
+        </li>
+      
+        <li>
+          
+            <a href="../../TkItemConfigMethod.html">
+              TkItemConfigMethod
+            </a>
+          
+        </li>
+      
+    </ul>
+  
+
+
+
+  
+
+    
+
+    
+
+    
+      <!-- Section constants -->
+      <div class="sectiontitle">Constants</div>
+      <table border='0' cellpadding='5'>
+        
+          <tr valign='top'>
+            <td class="attr-name">TkCommandNames</td>
+            <td>=</td>
+            <td class="attr-value">[&#39;::blt::tabset&#39;.freeze].freeze</td>
+          </tr>
+          
+            <tr valign='top'>
+              <td>&nbsp;</td>
+              <td colspan="2" class="attr-desc"></td>
+            </tr>
+          
+        
+          <tr valign='top'>
+            <td class="attr-name">WidgetClassName</td>
+            <td>=</td>
+            <td class="attr-value">&#39;Tabset&#39;.freeze</td>
+          </tr>
+          
+            <tr valign='top'>
+              <td>&nbsp;</td>
+              <td colspan="2" class="attr-desc"></td>
+            </tr>
+          
+        
+      </table>
+    
+
+
+    
+
+
+    <!-- Methods -->
+        
+      <div class="sectiontitle">Instance Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-i-__boolval_optkeys">
+            
+              <b>__boolval_optkeys</b>()
+            
+            <a href="../../../classes/Tk/BLT/Tabset.html#method-i-__boolval_optkeys" name="method-i-__boolval_optkeys" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-__boolval_optkeys_source')" id="l_method-i-__boolval_optkeys_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/blt/tabset.rb#L226" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-__boolval_optkeys_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/blt/tabset.rb, line 226</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">__boolval_optkeys</span>
+  <span class="ruby-keyword">super</span>() <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-string">&#39;samewidth&#39;</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-string">&#39;tearoff&#39;</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-__destroy_hook__">
+            
+              <b>__destroy_hook__</b>()
+            
+            <a href="../../../classes/Tk/BLT/Tabset.html#method-i-__destroy_hook__" name="method-i-__destroy_hook__" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-__destroy_hook___source')" id="l_method-i-__destroy_hook___source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/blt/tabset.rb#L218" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-__destroy_hook___source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/blt/tabset.rb, line 218</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">__destroy_hook__</span>
+  <span class="ruby-constant">Tk</span><span class="ruby-operator">::</span><span class="ruby-constant">BLT</span><span class="ruby-operator">::</span><span class="ruby-constant">Tabset</span><span class="ruby-operator">::</span><span class="ruby-constant">Tab</span><span class="ruby-operator">::</span><span class="ruby-constant">TabID_TBL</span>.<span class="ruby-identifier">mutex</span>.<span class="ruby-identifier">synchronize</span>{
+    <span class="ruby-constant">Tk</span><span class="ruby-operator">::</span><span class="ruby-constant">BLT</span><span class="ruby-operator">::</span><span class="ruby-constant">Tabset</span><span class="ruby-operator">::</span><span class="ruby-constant">Tab</span><span class="ruby-operator">::</span><span class="ruby-constant">TabID_TBL</span>.<span class="ruby-identifier">delete</span>(<span class="ruby-ivar">@path</span>)
+  }
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-activate">
+            
+              <b>activate</b>(index)
+            
+            <a href="../../../classes/Tk/BLT/Tabset.html#method-i-activate" name="method-i-activate" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+            <div class="aka">
+              Also aliased as: <a href="Tabset.html#method-i-highlight">highlight</a>
+            </div>
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-activate_source')" id="l_method-i-activate_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/blt/tabset.rb#L285" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-activate_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/blt/tabset.rb, line 285</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">activate</span>(<span class="ruby-identifier">index</span>)
+  <span class="ruby-identifier">tk_send</span>(<span class="ruby-string">&#39;activate&#39;</span>, <span class="ruby-identifier">tagindex</span>(<span class="ruby-identifier">index</span>))
+  <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-delete">
+            
+              <b>delete</b>(first, last=None)
+            
+            <a href="../../../classes/Tk/BLT/Tabset.html#method-i-delete" name="method-i-delete" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-delete_source')" id="l_method-i-delete_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/blt/tabset.rb#L327" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-delete_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/blt/tabset.rb, line 327</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">delete</span>(<span class="ruby-identifier">first</span>, <span class="ruby-identifier">last</span>=<span class="ruby-constant">None</span>)
+  <span class="ruby-identifier">tk_send</span>(<span class="ruby-string">&#39;delete&#39;</span>, <span class="ruby-identifier">tagindex</span>(<span class="ruby-identifier">first</span>), <span class="ruby-identifier">tagindex</span>(<span class="ruby-identifier">last</span>))
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">first</span>.<span class="ruby-identifier">kind_of?</span>(<span class="ruby-constant">Tk</span><span class="ruby-operator">::</span><span class="ruby-constant">BLT</span><span class="ruby-operator">::</span><span class="ruby-constant">Tabset</span><span class="ruby-operator">::</span><span class="ruby-constant">Tab</span>)
+    <span class="ruby-constant">TabID_TBL</span>.<span class="ruby-identifier">mutex</span>.<span class="ruby-identifier">synchronize</span>{
+      <span class="ruby-constant">TabID_TBL</span>[<span class="ruby-ivar">@path</span>].<span class="ruby-identifier">delete</span>(<span class="ruby-identifier">first</span>.<span class="ruby-identifier">id</span>)
+    }
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-comment"># middle tabs of the range are unknown</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">last</span>.<span class="ruby-identifier">kind_of?</span>(<span class="ruby-constant">Tk</span><span class="ruby-operator">::</span><span class="ruby-constant">BLT</span><span class="ruby-operator">::</span><span class="ruby-constant">Tabset</span><span class="ruby-operator">::</span><span class="ruby-constant">Tab</span>)
+    <span class="ruby-constant">TabID_TBL</span>.<span class="ruby-identifier">mutex</span>.<span class="ruby-identifier">synchronize</span>{
+      <span class="ruby-constant">TabID_TBL</span>[<span class="ruby-ivar">@path</span>].<span class="ruby-identifier">delete</span>(<span class="ruby-identifier">last</span>.<span class="ruby-identifier">id</span>)
+    }
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-focus">
+            
+              <b>focus</b>(index)
+            
+            <a href="../../../classes/Tk/BLT/Tabset.html#method-i-focus" name="method-i-focus" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-focus_source')" id="l_method-i-focus_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/blt/tabset.rb#L343" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-focus_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/blt/tabset.rb, line 343</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">focus</span>(<span class="ruby-identifier">index</span>)
+  <span class="ruby-identifier">tk_send</span>(<span class="ruby-string">&#39;focus&#39;</span>, <span class="ruby-identifier">tagindex</span>(<span class="ruby-identifier">index</span>))
+  <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-get_tab">
+            
+              <b>get_tab</b>(index)
+            
+            <a href="../../../classes/Tk/BLT/Tabset.html#method-i-get_tab" name="method-i-get_tab" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-get_tab_source')" id="l_method-i-get_tab_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/blt/tabset.rb#L348" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-get_tab_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/blt/tabset.rb, line 348</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">get_tab</span>(<span class="ruby-identifier">index</span>)
+  <span class="ruby-keyword">if</span> (<span class="ruby-identifier">idx</span> = <span class="ruby-identifier">tk_send_without_enc</span>(<span class="ruby-string">&#39;get&#39;</span>, <span class="ruby-identifier">tagindex</span>(<span class="ruby-identifier">index</span>))).<span class="ruby-identifier">empty?</span>
+    <span class="ruby-keyword">nil</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-constant">Tk</span><span class="ruby-operator">::</span><span class="ruby-constant">BLT</span><span class="ruby-operator">::</span><span class="ruby-constant">Tabset</span><span class="ruby-operator">::</span><span class="ruby-constant">Tab</span>.<span class="ruby-identifier">id2obj</span>(<span class="ruby-keyword">self</span>, <span class="ruby-identifier">idx</span>)
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-get_tabobj">
+            
+              <b>get_tabobj</b>(index)
+            
+            <a href="../../../classes/Tk/BLT/Tabset.html#method-i-get_tabobj" name="method-i-get_tabobj" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-get_tabobj_source')" id="l_method-i-get_tabobj_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/blt/tabset.rb#L355" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-get_tabobj_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/blt/tabset.rb, line 355</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">get_tabobj</span>(<span class="ruby-identifier">index</span>)
+  <span class="ruby-keyword">if</span> (<span class="ruby-identifier">idx</span> = <span class="ruby-identifier">tk_send_without_enc</span>(<span class="ruby-string">&#39;get&#39;</span>, <span class="ruby-identifier">tagindex</span>(<span class="ruby-identifier">index</span>))).<span class="ruby-identifier">empty?</span>
+    <span class="ruby-keyword">nil</span>
+  <span class="ruby-keyword">else</span>
+   <span class="ruby-constant">Tk</span><span class="ruby-operator">::</span><span class="ruby-constant">BLT</span><span class="ruby-operator">::</span><span class="ruby-constant">Tabset</span><span class="ruby-operator">::</span><span class="ruby-constant">Tab</span>.<span class="ruby-identifier">new</span>(<span class="ruby-keyword">self</span>, <span class="ruby-keyword">nil</span>, <span class="ruby-identifier">name</span>, {})
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-highlight">
+            
+              <b>highlight</b>(index)
+            
+            <a href="../../../classes/Tk/BLT/Tabset.html#method-i-highlight" name="method-i-highlight" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+            <div class="aka">
+              Alias for: <a href="Tabset.html#method-i-activate">activate</a>
+            </div>
+          
+          
+          
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-index">
+            
+              <b>index</b>(str)
+            
+            <a href="../../../classes/Tk/BLT/Tabset.html#method-i-index" name="method-i-index" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-index_source')" id="l_method-i-index_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/blt/tabset.rb#L363" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-index_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/blt/tabset.rb, line 363</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">index</span>(<span class="ruby-identifier">str</span>)
+  <span class="ruby-identifier">num_or_str</span>(<span class="ruby-identifier">tk_send</span>(<span class="ruby-string">&#39;index&#39;</span>, <span class="ruby-identifier">str</span>))
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-index_name">
+            
+              <b>index_name</b>(tab)
+            
+            <a href="../../../classes/Tk/BLT/Tabset.html#method-i-index_name" name="method-i-index_name" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-index_name_source')" id="l_method-i-index_name_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/blt/tabset.rb#L366" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-index_name_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/blt/tabset.rb, line 366</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">index_name</span>(<span class="ruby-identifier">tab</span>)
+  <span class="ruby-identifier">num_or_str</span>(<span class="ruby-identifier">tk_send</span>(<span class="ruby-string">&#39;index&#39;</span>, <span class="ruby-string">&#39;-name&#39;</span>, <span class="ruby-identifier">tagid</span>(<span class="ruby-identifier">tab</span>)))
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-insert">
+            
+              <b>insert</b>(pos, tab, keys={})
+            
+            <a href="../../../classes/Tk/BLT/Tabset.html#method-i-insert" name="method-i-insert" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-insert_source')" id="l_method-i-insert_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/blt/tabset.rb#L370" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-insert_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/blt/tabset.rb, line 370</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">insert</span>(<span class="ruby-identifier">pos</span>, <span class="ruby-identifier">tab</span>, <span class="ruby-identifier">keys</span>={})
+  <span class="ruby-identifier">pos</span> = <span class="ruby-string">&#39;end&#39;</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">pos</span>.<span class="ruby-identifier">nil?</span>
+  <span class="ruby-constant">Tk</span><span class="ruby-operator">::</span><span class="ruby-constant">BLT</span><span class="ruby-operator">::</span><span class="ruby-constant">Tabset</span><span class="ruby-operator">::</span><span class="ruby-constant">Tab</span>.<span class="ruby-identifier">new</span>(<span class="ruby-keyword">self</span>, <span class="ruby-identifier">tagindex</span>(<span class="ruby-identifier">pos</span>), <span class="ruby-identifier">tagid</span>(<span class="ruby-identifier">tab</span>), <span class="ruby-identifier">keys</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-insert_tabs">
+            
+              <b>insert_tabs</b>(pos, *tabs)
+            
+            <a href="../../../classes/Tk/BLT/Tabset.html#method-i-insert_tabs" name="method-i-insert_tabs" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-insert_tabs_source')" id="l_method-i-insert_tabs_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/blt/tabset.rb#L374" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-insert_tabs_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/blt/tabset.rb, line 374</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">insert_tabs</span>(<span class="ruby-identifier">pos</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">tabs</span>)
+  <span class="ruby-identifier">pos</span> = <span class="ruby-string">&#39;end&#39;</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">pos</span>.<span class="ruby-identifier">nil?</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">tabs</span>[<span class="ruby-number">-1</span>].<span class="ruby-identifier">kind_of?</span>(<span class="ruby-constant">Hash</span>)
+    <span class="ruby-identifier">keys</span> = <span class="ruby-identifier">tabs</span>.<span class="ruby-identifier">pop</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">keys</span> = {}
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">fail</span> <span class="ruby-constant">ArgumentError</span>, <span class="ruby-string">&#39;no tabs is given&#39;</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">tabs</span>.<span class="ruby-identifier">empty?</span>
+  <span class="ruby-identifier">tabs</span>.<span class="ruby-identifier">map!</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">tab</span><span class="ruby-operator">|</span> <span class="ruby-identifier">tagid</span>(<span class="ruby-identifier">tab</span>)}
+  <span class="ruby-identifier">tk_send</span>(<span class="ruby-string">&#39;insert&#39;</span>, <span class="ruby-identifier">tagindex</span>(<span class="ruby-identifier">pos</span>), <span class="ruby-operator">*</span>(<span class="ruby-identifier">tabs</span> <span class="ruby-operator">+</span> [<span class="ruby-identifier">keys</span>]))
+  <span class="ruby-identifier">tabs</span>.<span class="ruby-identifier">collect</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">tab</span><span class="ruby-operator">|</span> <span class="ruby-constant">Tk</span><span class="ruby-operator">::</span><span class="ruby-constant">BLT</span><span class="ruby-operator">::</span><span class="ruby-constant">Tabset</span><span class="ruby-operator">::</span><span class="ruby-constant">Tab</span>.<span class="ruby-identifier">new</span>(<span class="ruby-keyword">self</span>, <span class="ruby-keyword">nil</span>, <span class="ruby-identifier">tagid</span>(<span class="ruby-identifier">tab</span>))}
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-invoke">
+            
+              <b>invoke</b>(index)
+            
+            <a href="../../../classes/Tk/BLT/Tabset.html#method-i-invoke" name="method-i-invoke" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-invoke_source')" id="l_method-i-invoke_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/blt/tabset.rb#L387" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-invoke_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/blt/tabset.rb, line 387</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">invoke</span>(<span class="ruby-identifier">index</span>)
+  <span class="ruby-identifier">tk_send</span>(<span class="ruby-string">&#39;invoke&#39;</span>, <span class="ruby-identifier">tagindex</span>(<span class="ruby-identifier">index</span>))
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-move_after">
+            
+              <b>move_after</b>(index, base_idx)
+            
+            <a href="../../../classes/Tk/BLT/Tabset.html#method-i-move_after" name="method-i-move_after" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-move_after_source')" id="l_method-i-move_after_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/blt/tabset.rb#L395" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-move_after_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/blt/tabset.rb, line 395</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">move_after</span>(<span class="ruby-identifier">index</span>, <span class="ruby-identifier">base_idx</span>)
+  <span class="ruby-identifier">tk_send</span>(<span class="ruby-string">&#39;move&#39;</span>, <span class="ruby-identifier">tagindex</span>(<span class="ruby-identifier">index</span>), <span class="ruby-string">&#39;after&#39;</span>, <span class="ruby-identifier">tagindex</span>(<span class="ruby-identifier">base_idx</span>))
+  <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-move_before">
+            
+              <b>move_before</b>(index, base_idx)
+            
+            <a href="../../../classes/Tk/BLT/Tabset.html#method-i-move_before" name="method-i-move_before" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-move_before_source')" id="l_method-i-move_before_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/blt/tabset.rb#L391" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-move_before_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/blt/tabset.rb, line 391</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">move_before</span>(<span class="ruby-identifier">index</span>, <span class="ruby-identifier">base_idx</span>)
+  <span class="ruby-identifier">tk_send</span>(<span class="ruby-string">&#39;move&#39;</span>, <span class="ruby-identifier">tagindex</span>(<span class="ruby-identifier">index</span>), <span class="ruby-string">&#39;before&#39;</span>, <span class="ruby-identifier">tagindex</span>(<span class="ruby-identifier">base_idx</span>))
+  <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-nearest">
+            
+              <b>nearest</b>(x, y)
+            
+            <a href="../../../classes/Tk/BLT/Tabset.html#method-i-nearest" name="method-i-nearest" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-nearest_source')" id="l_method-i-nearest_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/blt/tabset.rb#L400" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-nearest_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/blt/tabset.rb, line 400</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">nearest</span>(<span class="ruby-identifier">x</span>, <span class="ruby-identifier">y</span>)
+  <span class="ruby-constant">Tk</span><span class="ruby-operator">::</span><span class="ruby-constant">BLT</span><span class="ruby-operator">::</span><span class="ruby-constant">Tabset</span><span class="ruby-operator">::</span><span class="ruby-constant">Tab</span>.<span class="ruby-identifier">id2obj</span>(<span class="ruby-keyword">self</span>, <span class="ruby-identifier">num_or_str</span>(<span class="ruby-identifier">tk_send_without_enc</span>(<span class="ruby-string">&#39;nearest&#39;</span>, <span class="ruby-identifier">x</span>, <span class="ruby-identifier">y</span>)))
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-perforation_activate">
+            
+              <b>perforation_activate</b>(mode)
+            
+            <a href="../../../classes/Tk/BLT/Tabset.html#method-i-perforation_activate" name="method-i-perforation_activate" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-perforation_activate_source')" id="l_method-i-perforation_activate_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/blt/tabset.rb#L404" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-perforation_activate_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/blt/tabset.rb, line 404</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">perforation_activate</span>(<span class="ruby-identifier">mode</span>)
+  <span class="ruby-identifier">tk_send</span>(<span class="ruby-string">&#39;perforation&#39;</span>, <span class="ruby-string">&#39;activate&#39;</span>, <span class="ruby-identifier">mode</span>)
+  <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-perforation_highlight">
+            
+              <b>perforation_highlight</b>(index, *args)
+            
+            <a href="../../../classes/Tk/BLT/Tabset.html#method-i-perforation_highlight" name="method-i-perforation_highlight" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-perforation_highlight_source')" id="l_method-i-perforation_highlight_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/blt/tabset.rb#L408" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-perforation_highlight_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/blt/tabset.rb, line 408</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">perforation_highlight</span>(<span class="ruby-identifier">index</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">args</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">args</span>.<span class="ruby-identifier">empty?</span>
+    <span class="ruby-comment"># index --&gt; mode</span>
+    <span class="ruby-identifier">tk_send</span>(<span class="ruby-string">&#39;perforation&#39;</span>, <span class="ruby-string">&#39;highlight&#39;</span>, <span class="ruby-identifier">index</span>)
+  <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">args</span>.<span class="ruby-identifier">size</span> <span class="ruby-operator">==</span> <span class="ruby-number">1</span>
+    <span class="ruby-comment"># args[0] --&gt; mode</span>
+    <span class="ruby-identifier">tk_send</span>(<span class="ruby-string">&#39;perforation&#39;</span>, <span class="ruby-string">&#39;highlight&#39;</span>, <span class="ruby-identifier">tagindex</span>(<span class="ruby-identifier">index</span>), <span class="ruby-identifier">args</span>[<span class="ruby-number">0</span>])
+  <span class="ruby-keyword">else</span> <span class="ruby-comment"># Error: call to get Tcl&#39;s error message</span>
+    <span class="ruby-identifier">tk_send</span>(<span class="ruby-string">&#39;perforation&#39;</span>, <span class="ruby-string">&#39;highlight&#39;</span>, <span class="ruby-identifier">tagindex</span>(<span class="ruby-identifier">index</span>), <span class="ruby-operator">*</span><span class="ruby-identifier">args</span>)
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-perforation_invoke">
+            
+              <b>perforation_invoke</b>(index=nil)
+            
+            <a href="../../../classes/Tk/BLT/Tabset.html#method-i-perforation_invoke" name="method-i-perforation_invoke" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-perforation_invoke_source')" id="l_method-i-perforation_invoke_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/blt/tabset.rb#L420" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-perforation_invoke_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/blt/tabset.rb, line 420</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">perforation_invoke</span>(<span class="ruby-identifier">index</span>=<span class="ruby-keyword">nil</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">index</span>
+    <span class="ruby-identifier">tk_send</span>(<span class="ruby-string">&#39;perforation&#39;</span>, <span class="ruby-string">&#39;invoke&#39;</span>, <span class="ruby-identifier">tagindex</span>(<span class="ruby-identifier">index</span>))
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">tk_send</span>(<span class="ruby-string">&#39;perforation&#39;</span>, <span class="ruby-string">&#39;invoke&#39;</span>)
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-scan_dragto">
+            
+              <b>scan_dragto</b>(x, y)
+            
+            <a href="../../../classes/Tk/BLT/Tabset.html#method-i-scan_dragto" name="method-i-scan_dragto" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-scan_dragto_source')" id="l_method-i-scan_dragto_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/blt/tabset.rb#L432" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-scan_dragto_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/blt/tabset.rb, line 432</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">scan_dragto</span>(<span class="ruby-identifier">x</span>, <span class="ruby-identifier">y</span>)
+  <span class="ruby-identifier">tk_send_without_enc</span>(<span class="ruby-string">&#39;scan&#39;</span>, <span class="ruby-string">&#39;dragto&#39;</span>, <span class="ruby-identifier">x</span>, <span class="ruby-identifier">y</span>)
+  <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-scan_mark">
+            
+              <b>scan_mark</b>(x, y)
+            
+            <a href="../../../classes/Tk/BLT/Tabset.html#method-i-scan_mark" name="method-i-scan_mark" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-scan_mark_source')" id="l_method-i-scan_mark_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/blt/tabset.rb#L428" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-scan_mark_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/blt/tabset.rb, line 428</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">scan_mark</span>(<span class="ruby-identifier">x</span>, <span class="ruby-identifier">y</span>)
+  <span class="ruby-identifier">tk_send_without_enc</span>(<span class="ruby-string">&#39;scan&#39;</span>, <span class="ruby-string">&#39;mark&#39;</span>, <span class="ruby-identifier">x</span>, <span class="ruby-identifier">y</span>)
+  <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-scrollcommand">
+            
+              <b>scrollcommand</b>(cmd=Proc.new)
+            
+            <a href="../../../classes/Tk/BLT/Tabset.html#method-i-scrollcommand" name="method-i-scrollcommand" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+            <div class="aka">
+              Alias for: <a href="Tabset.html#method-i-xscrollcommand">xscrollcommand</a>
+            </div>
+          
+          
+          
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-see">
+            
+              <b>see</b>(index)
+            
+            <a href="../../../classes/Tk/BLT/Tabset.html#method-i-see" name="method-i-see" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-see_source')" id="l_method-i-see_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/blt/tabset.rb#L437" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-see_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/blt/tabset.rb, line 437</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">see</span>(<span class="ruby-identifier">index</span>)
+  <span class="ruby-identifier">tk_send</span>(<span class="ruby-string">&#39;see&#39;</span>, <span class="ruby-identifier">tagindex</span>(<span class="ruby-identifier">index</span>))
+  <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-select">
+            
+              <b>select</b>(index)
+            
+            <a href="../../../classes/Tk/BLT/Tabset.html#method-i-select" name="method-i-select" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-select_source')" id="l_method-i-select_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/blt/tabset.rb#L446" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-select_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/blt/tabset.rb, line 446</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">select</span>(<span class="ruby-identifier">index</span>)
+  <span class="ruby-identifier">tk_send</span>(<span class="ruby-string">&#39;select&#39;</span>, <span class="ruby-identifier">tagindex</span>(<span class="ruby-identifier">index</span>))
+  <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-size">
+            
+              <b>size</b>()
+            
+            <a href="../../../classes/Tk/BLT/Tabset.html#method-i-size" name="method-i-size" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-size_source')" id="l_method-i-size_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/blt/tabset.rb#L442" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-size_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/blt/tabset.rb, line 442</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">size</span>()
+  <span class="ruby-identifier">number</span>(<span class="ruby-identifier">tk_send_without_enc</span>(<span class="ruby-string">&#39;size&#39;</span>))
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-tab_dockall">
+            
+              <b>tab_dockall</b>()
+            
+            <a href="../../../classes/Tk/BLT/Tabset.html#method-i-tab_dockall" name="method-i-tab_dockall" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-tab_dockall_source')" id="l_method-i-tab_dockall_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/blt/tabset.rb#L451" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-tab_dockall_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/blt/tabset.rb, line 451</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">tab_dockall</span>
+  <span class="ruby-identifier">tk_send</span>(<span class="ruby-string">&#39;tab&#39;</span>, <span class="ruby-string">&#39;dockall&#39;</span>)
+  <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-tab_ids">
+            
+              <b>tab_ids</b>(pat=None)
+            
+            <a href="../../../classes/Tk/BLT/Tabset.html#method-i-tab_ids" name="method-i-tab_ids" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-tab_ids_source')" id="l_method-i-tab_ids_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/blt/tabset.rb#L468" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-tab_ids_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/blt/tabset.rb, line 468</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">tab_ids</span>(<span class="ruby-identifier">pat</span>=<span class="ruby-constant">None</span>)
+  <span class="ruby-identifier">simplelist</span>(<span class="ruby-identifier">tk_send</span>(<span class="ruby-string">&#39;tab&#39;</span>, <span class="ruby-string">&#39;names&#39;</span>, <span class="ruby-identifier">pat</span>))
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-tab_names">
+            
+              <b>tab_names</b>(pat=None)
+            
+            <a href="../../../classes/Tk/BLT/Tabset.html#method-i-tab_names" name="method-i-tab_names" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-tab_names_source')" id="l_method-i-tab_names_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/blt/tabset.rb#L456" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-tab_names_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/blt/tabset.rb, line 456</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">tab_names</span>(<span class="ruby-identifier">pat</span>=<span class="ruby-constant">None</span>)
+  <span class="ruby-identifier">simplelist</span>(<span class="ruby-identifier">tk_send</span>(<span class="ruby-string">&#39;tab&#39;</span>, <span class="ruby-string">&#39;names&#39;</span>, <span class="ruby-identifier">pat</span>)).<span class="ruby-identifier">collect</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">name</span><span class="ruby-operator">|</span>
+    <span class="ruby-constant">Tk</span><span class="ruby-operator">::</span><span class="ruby-constant">BLT</span><span class="ruby-operator">::</span><span class="ruby-constant">Tabset</span><span class="ruby-operator">::</span><span class="ruby-constant">Tab</span>.<span class="ruby-identifier">id2obj</span>(<span class="ruby-keyword">self</span>, <span class="ruby-identifier">name</span>)
+  }
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-tab_objs">
+            
+              <b>tab_objs</b>(pat=None)
+            
+            <a href="../../../classes/Tk/BLT/Tabset.html#method-i-tab_objs" name="method-i-tab_objs" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-tab_objs_source')" id="l_method-i-tab_objs_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/blt/tabset.rb#L462" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-tab_objs_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/blt/tabset.rb, line 462</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">tab_objs</span>(<span class="ruby-identifier">pat</span>=<span class="ruby-constant">None</span>)
+  <span class="ruby-identifier">simplelist</span>(<span class="ruby-identifier">tk_send</span>(<span class="ruby-string">&#39;tab&#39;</span>, <span class="ruby-string">&#39;names&#39;</span>, <span class="ruby-identifier">pat</span>)).<span class="ruby-identifier">collect</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">name</span><span class="ruby-operator">|</span>
+    <span class="ruby-constant">Tk</span><span class="ruby-operator">::</span><span class="ruby-constant">BLT</span><span class="ruby-operator">::</span><span class="ruby-constant">Tabset</span><span class="ruby-operator">::</span><span class="ruby-constant">Tab</span>.<span class="ruby-identifier">new</span>(<span class="ruby-keyword">self</span>, <span class="ruby-keyword">nil</span>, <span class="ruby-identifier">name</span>, {})
+  }
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-tab_pageheight">
+            
+              <b>tab_pageheight</b>()
+            
+            <a href="../../../classes/Tk/BLT/Tabset.html#method-i-tab_pageheight" name="method-i-tab_pageheight" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-tab_pageheight_source')" id="l_method-i-tab_pageheight_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/blt/tabset.rb#L472" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-tab_pageheight_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/blt/tabset.rb, line 472</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">tab_pageheight</span>
+  <span class="ruby-identifier">number</span>(<span class="ruby-identifier">tk_send</span>(<span class="ruby-string">&#39;tab&#39;</span>, <span class="ruby-string">&#39;pageheight&#39;</span>))
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-tab_pagewidth">
+            
+              <b>tab_pagewidth</b>()
+            
+            <a href="../../../classes/Tk/BLT/Tabset.html#method-i-tab_pagewidth" name="method-i-tab_pagewidth" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-tab_pagewidth_source')" id="l_method-i-tab_pagewidth_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/blt/tabset.rb#L476" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-tab_pagewidth_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/blt/tabset.rb, line 476</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">tab_pagewidth</span>
+  <span class="ruby-identifier">number</span>(<span class="ruby-identifier">tk_send</span>(<span class="ruby-string">&#39;tab&#39;</span>, <span class="ruby-string">&#39;pagewidth&#39;</span>))
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-tab_tearoff">
+            
+              <b>tab_tearoff</b>(index, parent=None)
+            
+            <a href="../../../classes/Tk/BLT/Tabset.html#method-i-tab_tearoff" name="method-i-tab_tearoff" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-tab_tearoff_source')" id="l_method-i-tab_tearoff_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/blt/tabset.rb#L480" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-tab_tearoff_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/blt/tabset.rb, line 480</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">tab_tearoff</span>(<span class="ruby-identifier">index</span>, <span class="ruby-identifier">parent</span>=<span class="ruby-constant">None</span>)
+  <span class="ruby-identifier">window</span>(<span class="ruby-identifier">tk_send</span>(<span class="ruby-string">&#39;tab&#39;</span>, <span class="ruby-string">&#39;tearoff&#39;</span>, <span class="ruby-identifier">tagindex</span>(<span class="ruby-identifier">index</span>), <span class="ruby-identifier">parent</span>))
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-tabbind">
+            
+              <b>tabbind</b>(tag, context, *args)
+            
+            <a href="../../../classes/Tk/BLT/Tabset.html#method-i-tabbind" name="method-i-tabbind" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>def tabbind(tag, context, cmd=Proc.new, *args)</p>
+
+<pre><code>_bind([path, &quot;bind&quot;, tagid(tag)], context, cmd, *args)
+self</code></pre>
+
+<p>end</p>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-tabbind_source')" id="l_method-i-tabbind_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/blt/tabset.rb#L295" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-tabbind_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/blt/tabset.rb, line 295</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">tabbind</span>(<span class="ruby-identifier">tag</span>, <span class="ruby-identifier">context</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">args</span>)
+  <span class="ruby-comment"># if args[0].kind_of?(Proc) || args[0].kind_of?(Method)</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-constant">TkComm</span>.<span class="ruby-identifier">_callback_entry?</span>(<span class="ruby-identifier">args</span>[<span class="ruby-number">0</span>]) <span class="ruby-operator">||</span> <span class="ruby-operator">!</span><span class="ruby-identifier">block_given?</span>
+    <span class="ruby-identifier">cmd</span> = <span class="ruby-identifier">args</span>.<span class="ruby-identifier">shift</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">cmd</span> = <span class="ruby-constant">Proc</span>.<span class="ruby-identifier">new</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">_bind</span>([<span class="ruby-identifier">path</span>, <span class="ruby-string">&quot;bind&quot;</span>, <span class="ruby-identifier">tagid</span>(<span class="ruby-identifier">tag</span>)], <span class="ruby-identifier">context</span>, <span class="ruby-identifier">cmd</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">args</span>)
+  <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-tabbind_append">
+            
+              <b>tabbind_append</b>(tag, context, *args)
+            
+            <a href="../../../classes/Tk/BLT/Tabset.html#method-i-tabbind_append" name="method-i-tabbind_append" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>def <a href="Tabset.html#method-i-tabbind_append">#tabbind_append</a>(tag,
+context, cmd=Proc.new, *args)</p>
+
+<pre><code>_bind_append([path, &quot;bind&quot;, tagid(tag)], context, cmd, *args)
+self</code></pre>
+
+<p>end</p>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-tabbind_append_source')" id="l_method-i-tabbind_append_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/blt/tabset.rb#L309" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-tabbind_append_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/blt/tabset.rb, line 309</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">tabbind_append</span>(<span class="ruby-identifier">tag</span>, <span class="ruby-identifier">context</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">args</span>)
+  <span class="ruby-comment"># if args[0].kind_of?(Proc) || args[0].kind_of?(Method)</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-constant">TkComm</span>.<span class="ruby-identifier">_callback_entry?</span>(<span class="ruby-identifier">args</span>[<span class="ruby-number">0</span>]) <span class="ruby-operator">||</span> <span class="ruby-operator">!</span><span class="ruby-identifier">block_given?</span>
+    <span class="ruby-identifier">cmd</span> = <span class="ruby-identifier">args</span>.<span class="ruby-identifier">shift</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">cmd</span> = <span class="ruby-constant">Proc</span>.<span class="ruby-identifier">new</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">_bind_append</span>([<span class="ruby-identifier">path</span>, <span class="ruby-string">&quot;bind&quot;</span>, <span class="ruby-identifier">tagid</span>(<span class="ruby-identifier">tag</span>)], <span class="ruby-identifier">context</span>, <span class="ruby-identifier">cmd</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">args</span>)
+  <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-tabbind_remove">
+            
+              <b>tabbind_remove</b>(tag, context)
+            
+            <a href="../../../classes/Tk/BLT/Tabset.html#method-i-tabbind_remove" name="method-i-tabbind_remove" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-tabbind_remove_source')" id="l_method-i-tabbind_remove_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/blt/tabset.rb#L319" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-tabbind_remove_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/blt/tabset.rb, line 319</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">tabbind_remove</span>(<span class="ruby-identifier">tag</span>, <span class="ruby-identifier">context</span>)
+  <span class="ruby-identifier">_bind_remove</span>([<span class="ruby-identifier">path</span>, <span class="ruby-string">&quot;bind&quot;</span>, <span class="ruby-identifier">tagid</span>(<span class="ruby-identifier">tag</span>)], <span class="ruby-identifier">context</span>)
+  <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-tabbindinfo">
+            
+              <b>tabbindinfo</b>(tag, context=nil)
+            
+            <a href="../../../classes/Tk/BLT/Tabset.html#method-i-tabbindinfo" name="method-i-tabbindinfo" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-tabbindinfo_source')" id="l_method-i-tabbindinfo_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/blt/tabset.rb#L323" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-tabbindinfo_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/blt/tabset.rb, line 323</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">tabbindinfo</span>(<span class="ruby-identifier">tag</span>, <span class="ruby-identifier">context</span>=<span class="ruby-keyword">nil</span>)
+  <span class="ruby-identifier">_bindinfo</span>([<span class="ruby-identifier">path</span>, <span class="ruby-string">&quot;bind&quot;</span>, <span class="ruby-identifier">tagid</span>(<span class="ruby-identifier">tag</span>)], <span class="ruby-identifier">context</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-tagid">
+            
+              <b>tagid</b>(tab)
+            
+            <a href="../../../classes/Tk/BLT/Tabset.html#method-i-tagid" name="method-i-tagid" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-tagid_source')" id="l_method-i-tagid_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/blt/tabset.rb#L267" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-tagid_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/blt/tabset.rb, line 267</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">tagid</span>(<span class="ruby-identifier">tab</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">tab</span>.<span class="ruby-identifier">kind_of?</span>(<span class="ruby-constant">Tk</span><span class="ruby-operator">::</span><span class="ruby-constant">BLT</span><span class="ruby-operator">::</span><span class="ruby-constant">Tabset</span><span class="ruby-operator">::</span><span class="ruby-constant">Tab</span>)
+    <span class="ruby-identifier">tab</span>.<span class="ruby-identifier">id</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">tab</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-tagindex">
+            
+              <b>tagindex</b>(tab)
+            
+            <a href="../../../classes/Tk/BLT/Tabset.html#method-i-tagindex" name="method-i-tagindex" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-tagindex_source')" id="l_method-i-tagindex_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/blt/tabset.rb#L275" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-tagindex_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/blt/tabset.rb, line 275</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">tagindex</span>(<span class="ruby-identifier">tab</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">tab</span>.<span class="ruby-identifier">kind_of?</span>(<span class="ruby-constant">Tk</span><span class="ruby-operator">::</span><span class="ruby-constant">BLT</span><span class="ruby-operator">::</span><span class="ruby-constant">Tabset</span><span class="ruby-operator">::</span><span class="ruby-constant">Tab</span>)
+    <span class="ruby-identifier">tab</span>.<span class="ruby-identifier">index</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">tab</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-view">
+            
+              <b>view</b>(*index)
+            
+            <a href="../../../classes/Tk/BLT/Tabset.html#method-i-view" name="method-i-view" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+            <div class="aka">
+              Alias for: <a href="Tabset.html#method-i-xview">xview</a>
+            </div>
+          
+          
+          
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-xscrollcommand">
+            
+              <b>xscrollcommand</b>(cmd=Proc.new)
+            
+            <a href="../../../classes/Tk/BLT/Tabset.html#method-i-xscrollcommand" name="method-i-xscrollcommand" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+            <div class="aka">
+              Also aliased as: <a href="Tabset.html#method-i-scrollcommand">scrollcommand</a>
+            </div>
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-xscrollcommand_source')" id="l_method-i-xscrollcommand_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/blt/tabset.rb#L484" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-xscrollcommand_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/blt/tabset.rb, line 484</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">xscrollcommand</span>(<span class="ruby-identifier">cmd</span>=<span class="ruby-constant">Proc</span>.<span class="ruby-identifier">new</span>)
+  <span class="ruby-identifier">configure_cmd</span> <span class="ruby-string">&#39;scrollcommand&#39;</span>, <span class="ruby-identifier">cmd</span>
+  <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-xview">
+            
+              <b>xview</b>(*index)
+            
+            <a href="../../../classes/Tk/BLT/Tabset.html#method-i-xview" name="method-i-xview" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+            <div class="aka">
+              Also aliased as: <a href="Tabset.html#method-i-view">view</a>
+            </div>
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-xview_source')" id="l_method-i-xview_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/blt/tabset.rb#L490" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-xview_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/blt/tabset.rb, line 490</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">xview</span>(<span class="ruby-operator">*</span><span class="ruby-identifier">index</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">index</span>.<span class="ruby-identifier">empty?</span>
+    <span class="ruby-identifier">list</span>(<span class="ruby-identifier">tk_send_without_enc</span>(<span class="ruby-string">&#39;view&#39;</span>))
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">tk_send_without_enc</span>(<span class="ruby-string">&#39;view&#39;</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">index</span>)
+    <span class="ruby-keyword">self</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                    </div>
+
+    </div>
+  </body>
+</html>    

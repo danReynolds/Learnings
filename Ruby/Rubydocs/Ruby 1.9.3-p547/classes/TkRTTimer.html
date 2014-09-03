@@ -1,0 +1,549 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>TkRTTimer</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="../css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/main.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/github.css" type="text/css" media="screen" />
+<script src="../js/jquery-1.3.2.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/jquery-effect.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+
+<body>     
+    <div class="banner">
+        
+        <h1>
+            <span class="type">Class</span> 
+            TkRTTimer 
+            
+                <span class="parent">&lt; 
+                    
+                    <a href="TkTimer.html">TkTimer</a>
+                    
+                </span>
+            
+        </h1>
+        <ul class="files">
+            
+            <li><a href="../files/ext/tk/lib/tk/timer_rb.html">ext/tk/lib/tk/timer.rb</a></li>
+            
+        </ul>
+    </div>
+    <div id="bodyContent">
+        <div id="content">
+  
+
+
+  
+
+
+  
+  
+
+
+  
+
+
+  
+    <!-- Method ref -->
+    <div class="sectiontitle">Methods</div>
+    <dl class="methods">
+      
+        <dt>C</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-cancel">cancel</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-cb_call">cb_call</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-continue">continue</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>N</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-new">new</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>S</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-set_interval">set_interval</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-set_next_callback">set_next_callback</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-start">start</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-stop">stop</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+    </dl>
+  
+
+  
+
+
+
+  
+
+    
+
+    
+
+    
+      <!-- Section constants -->
+      <div class="sectiontitle">Constants</div>
+      <table border='0' cellpadding='5'>
+        
+          <tr valign='top'>
+            <td class="attr-name">DEFAULT_OFFSET_LIST_SIZE</td>
+            <td>=</td>
+            <td class="attr-value">5</td>
+          </tr>
+          
+            <tr valign='top'>
+              <td>&nbsp;</td>
+              <td colspan="2" class="attr-desc"></td>
+            </tr>
+          
+        
+      </table>
+    
+
+
+    
+
+
+    <!-- Methods -->
+    
+      <div class="sectiontitle">Class Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-c-new">
+            
+              <b>new</b>(*args, &amp;b)
+            
+            <a href="../classes/TkRTTimer.html#method-c-new" name="method-c-new" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-new_source')" id="l_method-c-new_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/4293a98596af89a882629e47e84da8e5c05e1459/ext/tk/lib/tk/timer.rb#L543" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-new_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tk/timer.rb, line 543</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">initialize</span>(<span class="ruby-operator">*</span><span class="ruby-identifier">args</span>, <span class="ruby-operator">&amp;</span><span class="ruby-identifier">b</span>)
+  <span class="ruby-keyword">super</span>(<span class="ruby-operator">*</span><span class="ruby-identifier">args</span>, <span class="ruby-operator">&amp;</span><span class="ruby-identifier">b</span>)
+
+  <span class="ruby-ivar">@offset_list</span> = <span class="ruby-constant">Array</span>.<span class="ruby-identifier">new</span>(<span class="ruby-constant">DEFAULT_OFFSET_LIST_SIZE</span>){ [<span class="ruby-number">0</span>, <span class="ruby-number">0</span>] }
+  <span class="ruby-ivar">@offset_s</span> = <span class="ruby-number">0</span>
+  <span class="ruby-ivar">@offset_u</span> = <span class="ruby-number">0</span>
+  <span class="ruby-ivar">@est_time</span> = <span class="ruby-keyword">nil</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                  
+      <div class="sectiontitle">Instance Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-i-cancel">
+            
+              <b>cancel</b>()
+            
+            <a href="../classes/TkRTTimer.html#method-i-cancel" name="method-i-cancel" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+            <div class="aka">
+              Also aliased as: <a href="TkRTTimer.html#method-i-stop">stop</a>
+            </div>
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-cancel_source')" id="l_method-i-cancel_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/4293a98596af89a882629e47e84da8e5c05e1459/ext/tk/lib/tk/timer.rb#L559" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-cancel_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tk/timer.rb, line 559</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">cancel</span>
+  <span class="ruby-keyword">super</span>()
+  <span class="ruby-ivar">@est_time</span> = <span class="ruby-keyword">nil</span>
+  <span class="ruby-ivar">@cb_start_time</span> = <span class="ruby-constant">Time</span>.<span class="ruby-identifier">now</span>
+  <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-cb_call">
+            
+              <b>cb_call</b>()
+            
+            <a href="../classes/TkRTTimer.html#method-i-cb_call" name="method-i-cb_call" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-cb_call_source')" id="l_method-i-cb_call_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/4293a98596af89a882629e47e84da8e5c05e1459/ext/tk/lib/tk/timer.rb#L648" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-cb_call_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tk/timer.rb, line 648</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">cb_call</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-ivar">@est_time</span>
+    <span class="ruby-ivar">@offset_list</span>.<span class="ruby-identifier">shift</span>
+
+    <span class="ruby-ivar">@cb_start_time</span> = <span class="ruby-constant">Time</span>.<span class="ruby-identifier">now</span>
+
+    <span class="ruby-keyword">if</span> <span class="ruby-ivar">@current_sleep</span> <span class="ruby-operator">==</span> <span class="ruby-number">0</span>
+      <span class="ruby-ivar">@offset_list</span>.<span class="ruby-identifier">push</span>([
+                          <span class="ruby-ivar">@offset_s</span> <span class="ruby-operator">-</span> <span class="ruby-ivar">@cb_start_time</span>.<span class="ruby-identifier">to_i</span>,
+                          <span class="ruby-ivar">@offset_u</span> <span class="ruby-operator">-</span> <span class="ruby-ivar">@cb_start_time</span>.<span class="ruby-identifier">usec</span>
+                        ])
+    <span class="ruby-keyword">else</span>
+      <span class="ruby-ivar">@offset_list</span>.<span class="ruby-identifier">push</span>([
+                          <span class="ruby-ivar">@offset_s</span> <span class="ruby-operator">+</span> (<span class="ruby-ivar">@est_time</span>.<span class="ruby-identifier">to_i</span> <span class="ruby-operator">-</span> <span class="ruby-ivar">@cb_start_time</span>.<span class="ruby-identifier">to_i</span>),
+                          <span class="ruby-ivar">@offset_u</span> <span class="ruby-operator">+</span> (<span class="ruby-ivar">@est_time</span>.<span class="ruby-identifier">usec</span> <span class="ruby-operator">-</span> <span class="ruby-ivar">@cb_start_time</span>.<span class="ruby-identifier">usec</span>)
+                        ])
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-ivar">@cb_cmd</span>.<span class="ruby-identifier">call</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-continue">
+            
+              <b>continue</b>(wait=nil)
+            
+            <a href="../classes/TkRTTimer.html#method-i-continue" name="method-i-continue" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-continue_source')" id="l_method-i-continue_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/4293a98596af89a882629e47e84da8e5c05e1459/ext/tk/lib/tk/timer.rb#L567" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-continue_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tk/timer.rb, line 567</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">continue</span>(<span class="ruby-identifier">wait</span>=<span class="ruby-keyword">nil</span>)
+  <span class="ruby-identifier">fail</span> <span class="ruby-constant">RuntimeError</span>, <span class="ruby-string">&quot;is already running&quot;</span> <span class="ruby-keyword">if</span> <span class="ruby-ivar">@running</span>
+  <span class="ruby-ivar">@cb_start_time</span> = <span class="ruby-constant">Time</span>.<span class="ruby-identifier">now</span>
+  <span class="ruby-keyword">super</span>(<span class="ruby-identifier">wait</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-set_interval">
+            
+              <b>set_interval</b>(interval)
+            
+            <a href="../classes/TkRTTimer.html#method-i-set_interval" name="method-i-set_interval" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-set_interval_source')" id="l_method-i-set_interval_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/4293a98596af89a882629e47e84da8e5c05e1459/ext/tk/lib/tk/timer.rb#L573" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-set_interval_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tk/timer.rb, line 573</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">set_interval</span>(<span class="ruby-identifier">interval</span>)
+  <span class="ruby-keyword">super</span>(<span class="ruby-identifier">interval</span>)
+  <span class="ruby-ivar">@est_time</span> = <span class="ruby-keyword">nil</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-set_next_callback">
+            
+              <b>set_next_callback</b>(args)
+            
+            <a href="../classes/TkRTTimer.html#method-i-set_next_callback" name="method-i-set_next_callback" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-set_next_callback_source')" id="l_method-i-set_next_callback_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/4293a98596af89a882629e47e84da8e5c05e1459/ext/tk/lib/tk/timer.rb#L594" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-set_next_callback_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tk/timer.rb, line 594</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">set_next_callback</span>(<span class="ruby-identifier">args</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-ivar">@running</span> <span class="ruby-operator">==</span> <span class="ruby-keyword">false</span> <span class="ruby-operator">||</span> <span class="ruby-ivar">@proc_max</span> <span class="ruby-operator">==</span> <span class="ruby-number">0</span> <span class="ruby-operator">||</span> <span class="ruby-ivar">@do_loop</span> <span class="ruby-operator">==</span> <span class="ruby-number">0</span>
+    <span class="ruby-constant">Tk_CBTBL</span>.<span class="ruby-identifier">delete</span>(<span class="ruby-ivar">@id</span>) ;<span class="ruby-comment"># for GC</span>
+    <span class="ruby-ivar">@running</span> = <span class="ruby-keyword">false</span>
+    <span class="ruby-comment"># @wait_var.value = 0</span>
+    <span class="ruby-identifier">__at_end__</span>
+    <span class="ruby-keyword">return</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-ivar">@current_pos</span> <span class="ruby-operator">&gt;=</span> <span class="ruby-ivar">@proc_max</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-ivar">@do_loop</span> <span class="ruby-operator">&lt;</span> <span class="ruby-number">0</span> <span class="ruby-operator">||</span> (<span class="ruby-ivar">@do_loop</span> <span class="ruby-operator">-=</span> <span class="ruby-number">1</span>) <span class="ruby-operator">&gt;</span> <span class="ruby-number">0</span>
+      <span class="ruby-ivar">@current_pos</span> = <span class="ruby-number">0</span>
+    <span class="ruby-keyword">else</span>
+      <span class="ruby-constant">Tk_CBTBL</span>.<span class="ruby-identifier">delete</span>(<span class="ruby-ivar">@id</span>) ;<span class="ruby-comment"># for GC</span>
+      <span class="ruby-ivar">@running</span> = <span class="ruby-keyword">false</span>
+      <span class="ruby-comment"># @wait_var.value = 0</span>
+      <span class="ruby-identifier">__at_end__</span>
+      <span class="ruby-keyword">return</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-ivar">@current_args</span> = <span class="ruby-identifier">args</span>
+
+  <span class="ruby-identifier">cmd</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">cmd_args</span> = <span class="ruby-ivar">@loop_proc</span>[<span class="ruby-ivar">@current_pos</span>]
+  <span class="ruby-ivar">@current_pos</span> <span class="ruby-operator">+=</span> <span class="ruby-number">1</span>
+  <span class="ruby-ivar">@current_proc</span> = <span class="ruby-identifier">cmd</span>
+
+  <span class="ruby-ivar">@offset_s</span>, <span class="ruby-ivar">@offset_u</span> = <span class="ruby-identifier">_offset_ave</span>
+
+  <span class="ruby-keyword">if</span> <span class="ruby-constant">TkComm</span>.<span class="ruby-identifier">_callback_entry?</span>(<span class="ruby-ivar">@sleep_time</span>)
+    <span class="ruby-identifier">sleep</span> = <span class="ruby-ivar">@sleep_time</span>.<span class="ruby-identifier">call</span>(<span class="ruby-keyword">self</span>)
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">sleep</span> = <span class="ruby-ivar">@sleep_time</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-keyword">if</span> <span class="ruby-ivar">@est_time</span>
+    <span class="ruby-ivar">@est_time</span> = <span class="ruby-constant">Time</span>.<span class="ruby-identifier">at</span>(<span class="ruby-ivar">@est_time</span>.<span class="ruby-identifier">to_i</span>, <span class="ruby-ivar">@est_time</span>.<span class="ruby-identifier">usec</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">sleep</span><span class="ruby-operator">*</span><span class="ruby-number">1000</span>)
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-ivar">@est_time</span> = <span class="ruby-constant">Time</span>.<span class="ruby-identifier">at</span>(<span class="ruby-ivar">@cb_start_time</span>.<span class="ruby-identifier">to_i</span>,
+                        <span class="ruby-ivar">@cb_start_time</span>.<span class="ruby-identifier">usec</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">sleep</span><span class="ruby-operator">*</span><span class="ruby-number">1000</span>)
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-identifier">now</span> = <span class="ruby-constant">Time</span>.<span class="ruby-identifier">now</span>
+  <span class="ruby-identifier">real_sleep</span> = ((<span class="ruby-ivar">@est_time</span>.<span class="ruby-identifier">to_i</span> <span class="ruby-operator">-</span> <span class="ruby-identifier">now</span>.<span class="ruby-identifier">to_i</span> <span class="ruby-operator">+</span> <span class="ruby-ivar">@offset_s</span>)<span class="ruby-operator">*</span><span class="ruby-number">1000.0</span> <span class="ruby-operator">+</span>
+                (<span class="ruby-ivar">@est_time</span>.<span class="ruby-identifier">usec</span> <span class="ruby-operator">-</span> <span class="ruby-identifier">now</span>.<span class="ruby-identifier">usec</span> <span class="ruby-operator">+</span> <span class="ruby-ivar">@offset_u</span>)<span class="ruby-operator">/</span><span class="ruby-number">1000.0</span>).<span class="ruby-identifier">round</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">real_sleep</span> <span class="ruby-operator">&lt;=</span> <span class="ruby-number">0</span>
+    <span class="ruby-identifier">real_sleep</span> = <span class="ruby-number">0</span>
+    <span class="ruby-ivar">@offset_s</span> = <span class="ruby-identifier">now</span>.<span class="ruby-identifier">to_i</span>
+    <span class="ruby-ivar">@offset_u</span> = <span class="ruby-identifier">now</span>.<span class="ruby-identifier">usec</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-ivar">@current_sleep</span> = <span class="ruby-identifier">real_sleep</span>
+
+  <span class="ruby-identifier">set_callback</span>(<span class="ruby-identifier">real_sleep</span>, <span class="ruby-identifier">cmd_args</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-start">
+            
+              <b>start</b>(*args, &amp;b)
+            
+            <a href="../classes/TkRTTimer.html#method-i-start" name="method-i-start" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-start_source')" id="l_method-i-start_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/4293a98596af89a882629e47e84da8e5c05e1459/ext/tk/lib/tk/timer.rb#L552" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-start_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tk/timer.rb, line 552</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">start</span>(<span class="ruby-operator">*</span><span class="ruby-identifier">args</span>, <span class="ruby-operator">&amp;</span><span class="ruby-identifier">b</span>)
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">nil</span> <span class="ruby-keyword">if</span> <span class="ruby-ivar">@running</span>
+  <span class="ruby-ivar">@est_time</span> = <span class="ruby-keyword">nil</span>
+  <span class="ruby-ivar">@cb_start_time</span> = <span class="ruby-constant">Time</span>.<span class="ruby-identifier">now</span>
+  <span class="ruby-keyword">super</span>(<span class="ruby-operator">*</span><span class="ruby-identifier">args</span>, <span class="ruby-operator">&amp;</span><span class="ruby-identifier">b</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-stop">
+            
+              <b>stop</b>()
+            
+            <a href="../classes/TkRTTimer.html#method-i-stop" name="method-i-stop" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+            <div class="aka">
+              Alias for: <a href="TkRTTimer.html#method-i-cancel">cancel</a>
+            </div>
+          
+          
+          
+          </div>
+                    </div>
+
+    </div>
+  </body>
+</html>    

@@ -1,0 +1,958 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>Tk::Iwidgets::Selectionbox</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="../../../css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../../../css/main.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../../../css/github.css" type="text/css" media="screen" />
+<script src="../../../js/jquery-1.3.2.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../../js/jquery-effect.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../../js/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+
+<body>     
+    <div class="banner">
+        
+        <h1>
+            <span class="type">Class</span> 
+            Tk::Iwidgets::Selectionbox 
+            
+                <span class="parent">&lt; 
+                    
+                    <a href="../Itk/Widget.html">Tk::Itk::Widget</a>
+                    
+                </span>
+            
+        </h1>
+        <ul class="files">
+            
+            <li><a href="../../../files/ext/tk/lib/tkextlib/iwidgets/selectionbox_rb.html">ext/tk/lib/tkextlib/iwidgets/selectionbox.rb</a></li>
+            
+        </ul>
+    </div>
+    <div id="bodyContent">
+        <div id="content">
+  
+
+
+  
+
+
+  
+  
+
+
+  
+
+
+  
+    <!-- Method ref -->
+    <div class="sectiontitle">Methods</div>
+    <dl class="methods">
+      
+        <dt>C</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-child_site">child_site</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-clear_items">clear_items</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-clear_selection">clear_selection</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-curselection">curselection</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>D</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-delete">delete</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>G</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-get">get</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>I</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-index">index</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-insert_items">insert_items</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-insert_selection">insert_selection</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>N</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-nearest">nearest</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>S</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-scan_dragto">scan_dragto</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-scan_mark">scan_mark</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-select_item">select_item</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-selection_anchor">selection_anchor</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-selection_clear">selection_clear</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-selection_includes">selection_includes</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-selection_set">selection_set</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-size">size</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+    </dl>
+  
+
+  
+
+
+
+  
+
+    
+
+    
+
+    
+      <!-- Section constants -->
+      <div class="sectiontitle">Constants</div>
+      <table border='0' cellpadding='5'>
+        
+          <tr valign='top'>
+            <td class="attr-name">TkCommandNames</td>
+            <td>=</td>
+            <td class="attr-value">[&#39;::iwidgets::selectionbox&#39;.freeze].freeze</td>
+          </tr>
+          
+            <tr valign='top'>
+              <td>&nbsp;</td>
+              <td colspan="2" class="attr-desc"></td>
+            </tr>
+          
+        
+          <tr valign='top'>
+            <td class="attr-name">WidgetClassName</td>
+            <td>=</td>
+            <td class="attr-value">&#39;Selectionbox&#39;.freeze</td>
+          </tr>
+          
+            <tr valign='top'>
+              <td>&nbsp;</td>
+              <td colspan="2" class="attr-desc"></td>
+            </tr>
+          
+        
+      </table>
+    
+
+
+    
+
+
+    <!-- Methods -->
+        
+      <div class="sectiontitle">Instance Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-i-child_site">
+            
+              <b>child_site</b>()
+            
+            <a href="../../../classes/Tk/Iwidgets/Selectionbox.html#method-i-child_site" name="method-i-child_site" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-child_site_source')" id="l_method-i-child_site_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/iwidgets/selectionbox.rb#L31" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-child_site_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/iwidgets/selectionbox.rb, line 31</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">child_site</span>
+  <span class="ruby-identifier">window</span>(<span class="ruby-identifier">tk_call</span>(<span class="ruby-ivar">@path</span>, <span class="ruby-string">&#39;childsite&#39;</span>))
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-clear_items">
+            
+              <b>clear_items</b>()
+            
+            <a href="../../../classes/Tk/Iwidgets/Selectionbox.html#method-i-clear_items" name="method-i-clear_items" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-clear_items_source')" id="l_method-i-clear_items_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/iwidgets/selectionbox.rb#L35" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-clear_items_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/iwidgets/selectionbox.rb, line 35</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">clear_items</span>
+  <span class="ruby-identifier">tk_call</span>(<span class="ruby-ivar">@path</span>, <span class="ruby-string">&#39;clear&#39;</span>, <span class="ruby-string">&#39;items&#39;</span>)
+  <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-clear_selection">
+            
+              <b>clear_selection</b>()
+            
+            <a href="../../../classes/Tk/Iwidgets/Selectionbox.html#method-i-clear_selection" name="method-i-clear_selection" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-clear_selection_source')" id="l_method-i-clear_selection_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/iwidgets/selectionbox.rb#L40" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-clear_selection_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/iwidgets/selectionbox.rb, line 40</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">clear_selection</span>
+  <span class="ruby-identifier">tk_call</span>(<span class="ruby-ivar">@path</span>, <span class="ruby-string">&#39;clear&#39;</span>, <span class="ruby-string">&#39;selection&#39;</span>)
+  <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-curselection">
+            
+              <b>curselection</b>()
+            
+            <a href="../../../classes/Tk/Iwidgets/Selectionbox.html#method-i-curselection" name="method-i-curselection" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>based on <a href="../Listbox.html">Tk::Listbox</a> ( and <a
+href="../../TkTextWin.html">TkTextWin</a> )</p>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-curselection_source')" id="l_method-i-curselection_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/iwidgets/selectionbox.rb#L63" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-curselection_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/iwidgets/selectionbox.rb, line 63</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">curselection</span>
+  <span class="ruby-identifier">list</span>(<span class="ruby-identifier">tk_send_without_enc</span>(<span class="ruby-string">&#39;curselection&#39;</span>))
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-delete">
+            
+              <b>delete</b>(first, last=None)
+            
+            <a href="../../../classes/Tk/Iwidgets/Selectionbox.html#method-i-delete" name="method-i-delete" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-delete_source')" id="l_method-i-delete_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/iwidgets/selectionbox.rb#L66" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-delete_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/iwidgets/selectionbox.rb, line 66</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">delete</span>(<span class="ruby-identifier">first</span>, <span class="ruby-identifier">last</span>=<span class="ruby-constant">None</span>)
+  <span class="ruby-identifier">tk_send_without_enc</span>(<span class="ruby-string">&#39;delete&#39;</span>, <span class="ruby-identifier">first</span>, <span class="ruby-identifier">last</span>)
+  <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-get">
+            
+              <b>get</b>()
+            
+            <a href="../../../classes/Tk/Iwidgets/Selectionbox.html#method-i-get" name="method-i-get" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-get_source')" id="l_method-i-get_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/iwidgets/selectionbox.rb#L45" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-get_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/iwidgets/selectionbox.rb, line 45</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">get</span>
+  <span class="ruby-identifier">tk_call</span>(<span class="ruby-ivar">@path</span>, <span class="ruby-string">&#39;get&#39;</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-index">
+            
+              <b>index</b>(idx)
+            
+            <a href="../../../classes/Tk/Iwidgets/Selectionbox.html#method-i-index" name="method-i-index" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-index_source')" id="l_method-i-index_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/iwidgets/selectionbox.rb#L70" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-index_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/iwidgets/selectionbox.rb, line 70</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">index</span>(<span class="ruby-identifier">idx</span>)
+  <span class="ruby-identifier">tk_send_without_enc</span>(<span class="ruby-string">&#39;index&#39;</span>, <span class="ruby-identifier">idx</span>).<span class="ruby-identifier">to_i</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-insert_items">
+            
+              <b>insert_items</b>(idx, *args)
+            
+            <a href="../../../classes/Tk/Iwidgets/Selectionbox.html#method-i-insert_items" name="method-i-insert_items" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-insert_items_source')" id="l_method-i-insert_items_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/iwidgets/selectionbox.rb#L49" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-insert_items_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/iwidgets/selectionbox.rb, line 49</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">insert_items</span>(<span class="ruby-identifier">idx</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">args</span>)
+  <span class="ruby-identifier">tk_call</span>(<span class="ruby-ivar">@path</span>, <span class="ruby-string">&#39;insert&#39;</span>, <span class="ruby-string">&#39;items&#39;</span>, <span class="ruby-identifier">idx</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">args</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-insert_selection">
+            
+              <b>insert_selection</b>(pos, text)
+            
+            <a href="../../../classes/Tk/Iwidgets/Selectionbox.html#method-i-insert_selection" name="method-i-insert_selection" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-insert_selection_source')" id="l_method-i-insert_selection_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/iwidgets/selectionbox.rb#L53" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-insert_selection_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/iwidgets/selectionbox.rb, line 53</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">insert_selection</span>(<span class="ruby-identifier">pos</span>, <span class="ruby-identifier">text</span>)
+  <span class="ruby-identifier">tk_call</span>(<span class="ruby-ivar">@path</span>, <span class="ruby-string">&#39;insert&#39;</span>, <span class="ruby-string">&#39;selection&#39;</span>, <span class="ruby-identifier">pos</span>, <span class="ruby-identifier">text</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-nearest">
+            
+              <b>nearest</b>(y)
+            
+            <a href="../../../classes/Tk/Iwidgets/Selectionbox.html#method-i-nearest" name="method-i-nearest" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-nearest_source')" id="l_method-i-nearest_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/iwidgets/selectionbox.rb#L73" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-nearest_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/iwidgets/selectionbox.rb, line 73</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">nearest</span>(<span class="ruby-identifier">y</span>)
+  <span class="ruby-identifier">tk_send_without_enc</span>(<span class="ruby-string">&#39;nearest&#39;</span>, <span class="ruby-identifier">y</span>).<span class="ruby-identifier">to_i</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-scan_dragto">
+            
+              <b>scan_dragto</b>(x, y)
+            
+            <a href="../../../classes/Tk/Iwidgets/Selectionbox.html#method-i-scan_dragto" name="method-i-scan_dragto" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-scan_dragto_source')" id="l_method-i-scan_dragto_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/iwidgets/selectionbox.rb#L80" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-scan_dragto_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/iwidgets/selectionbox.rb, line 80</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">scan_dragto</span>(<span class="ruby-identifier">x</span>, <span class="ruby-identifier">y</span>)
+  <span class="ruby-identifier">tk_send_without_enc</span>(<span class="ruby-string">&#39;scan&#39;</span>, <span class="ruby-string">&#39;dragto&#39;</span>, <span class="ruby-identifier">x</span>, <span class="ruby-identifier">y</span>)
+  <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-scan_mark">
+            
+              <b>scan_mark</b>(x, y)
+            
+            <a href="../../../classes/Tk/Iwidgets/Selectionbox.html#method-i-scan_mark" name="method-i-scan_mark" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-scan_mark_source')" id="l_method-i-scan_mark_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/iwidgets/selectionbox.rb#L76" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-scan_mark_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/iwidgets/selectionbox.rb, line 76</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">scan_mark</span>(<span class="ruby-identifier">x</span>, <span class="ruby-identifier">y</span>)
+  <span class="ruby-identifier">tk_send_without_enc</span>(<span class="ruby-string">&#39;scan&#39;</span>, <span class="ruby-string">&#39;mark&#39;</span>, <span class="ruby-identifier">x</span>, <span class="ruby-identifier">y</span>)
+  <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-select_item">
+            
+              <b>select_item</b>()
+            
+            <a href="../../../classes/Tk/Iwidgets/Selectionbox.html#method-i-select_item" name="method-i-select_item" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-select_item_source')" id="l_method-i-select_item_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/iwidgets/selectionbox.rb#L57" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-select_item_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/iwidgets/selectionbox.rb, line 57</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">select_item</span>
+  <span class="ruby-identifier">tk_call</span>(<span class="ruby-ivar">@path</span>, <span class="ruby-string">&#39;selectitem&#39;</span>)
+  <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-selection_anchor">
+            
+              <b>selection_anchor</b>(index)
+            
+            <a href="../../../classes/Tk/Iwidgets/Selectionbox.html#method-i-selection_anchor" name="method-i-selection_anchor" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-selection_anchor_source')" id="l_method-i-selection_anchor_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/iwidgets/selectionbox.rb#L84" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-selection_anchor_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/iwidgets/selectionbox.rb, line 84</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">selection_anchor</span>(<span class="ruby-identifier">index</span>)
+  <span class="ruby-identifier">tk_send_without_enc</span>(<span class="ruby-string">&#39;selection&#39;</span>, <span class="ruby-string">&#39;anchor&#39;</span>, <span class="ruby-identifier">index</span>)
+  <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-selection_clear">
+            
+              <b>selection_clear</b>(first, last=None)
+            
+            <a href="../../../classes/Tk/Iwidgets/Selectionbox.html#method-i-selection_clear" name="method-i-selection_clear" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-selection_clear_source')" id="l_method-i-selection_clear_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/iwidgets/selectionbox.rb#L88" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-selection_clear_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/iwidgets/selectionbox.rb, line 88</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">selection_clear</span>(<span class="ruby-identifier">first</span>, <span class="ruby-identifier">last</span>=<span class="ruby-constant">None</span>)
+  <span class="ruby-identifier">tk_send_without_enc</span>(<span class="ruby-string">&#39;selection&#39;</span>, <span class="ruby-string">&#39;clear&#39;</span>, <span class="ruby-identifier">first</span>, <span class="ruby-identifier">last</span>)
+  <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-selection_includes">
+            
+              <b>selection_includes</b>(index)
+            
+            <a href="../../../classes/Tk/Iwidgets/Selectionbox.html#method-i-selection_includes" name="method-i-selection_includes" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-selection_includes_source')" id="l_method-i-selection_includes_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/iwidgets/selectionbox.rb#L92" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-selection_includes_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/iwidgets/selectionbox.rb, line 92</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">selection_includes</span>(<span class="ruby-identifier">index</span>)
+  <span class="ruby-identifier">bool</span>(<span class="ruby-identifier">tk_send_without_enc</span>(<span class="ruby-string">&#39;selection&#39;</span>, <span class="ruby-string">&#39;includes&#39;</span>, <span class="ruby-identifier">index</span>))
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-selection_set">
+            
+              <b>selection_set</b>(first, last=None)
+            
+            <a href="../../../classes/Tk/Iwidgets/Selectionbox.html#method-i-selection_set" name="method-i-selection_set" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-selection_set_source')" id="l_method-i-selection_set_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/iwidgets/selectionbox.rb#L95" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-selection_set_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/iwidgets/selectionbox.rb, line 95</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">selection_set</span>(<span class="ruby-identifier">first</span>, <span class="ruby-identifier">last</span>=<span class="ruby-constant">None</span>)
+  <span class="ruby-identifier">tk_send_without_enc</span>(<span class="ruby-string">&#39;selection&#39;</span>, <span class="ruby-string">&#39;set&#39;</span>, <span class="ruby-identifier">first</span>, <span class="ruby-identifier">last</span>)
+  <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-size">
+            
+              <b>size</b>()
+            
+            <a href="../../../classes/Tk/Iwidgets/Selectionbox.html#method-i-size" name="method-i-size" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-size_source')" id="l_method-i-size_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/iwidgets/selectionbox.rb#L99" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-size_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/iwidgets/selectionbox.rb, line 99</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">size</span>
+  <span class="ruby-identifier">tk_send_without_enc</span>(<span class="ruby-string">&#39;size&#39;</span>).<span class="ruby-identifier">to_i</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                    </div>
+
+    </div>
+  </body>
+</html>    

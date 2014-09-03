@@ -1,0 +1,796 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>Tk::Tile::Notebook</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="../../../css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../../../css/main.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../../../css/github.css" type="text/css" media="screen" />
+<script src="../../../js/jquery-1.3.2.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../../js/jquery-effect.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../../js/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+
+<body>     
+    <div class="banner">
+        
+        <h1>
+            <span class="type">Class</span> 
+            Tk::Tile::Notebook 
+            
+                <span class="parent">&lt; 
+                    
+                    <a href="../../TkWindow.html">TkWindow</a>
+                    
+                </span>
+            
+        </h1>
+        <ul class="files">
+            
+            <li><a href="../../../files/ext/tk/lib/tkextlib/tile/tnotebook_rb.html">ext/tk/lib/tkextlib/tile/tnotebook.rb</a></li>
+            
+        </ul>
+    </div>
+    <div id="bodyContent">
+        <div id="content">
+  
+
+
+  
+
+
+  
+  
+
+
+  
+
+
+  
+    <!-- Method ref -->
+    <div class="sectiontitle">Methods</div>
+    <dl class="methods">
+      
+        <dt>A</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-add">add</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>E</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-enable_traversal">enable_traversal</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>F</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-forget">forget</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>H</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-hide">hide</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>I</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-index">index</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-insert">insert</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>S</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-select">select</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-selected">selected</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-c-style">style</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>T</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-tabcget">tabcget</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-tabcget_strict">tabcget_strict</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-tabcget_tkstring">tabcget_tkstring</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-tabs">tabs</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+    </dl>
+  
+
+  
+    <!-- Includes -->
+    <div class="sectiontitle">Included Modules</div>
+    <ul>
+      
+        <li>
+          
+            <a href="../../TkItemConfigMethod.html">
+              TkItemConfigMethod
+            </a>
+          
+        </li>
+      
+        <li>
+          
+            <a href="TileWidget.html">
+              Tk::Tile::TileWidget
+            </a>
+          
+        </li>
+      
+    </ul>
+  
+
+
+
+  
+
+    
+
+    
+
+    
+      <!-- Section constants -->
+      <div class="sectiontitle">Constants</div>
+      <table border='0' cellpadding='5'>
+        
+          <tr valign='top'>
+            <td class="attr-name">TkCommandNames</td>
+            <td>=</td>
+            <td class="attr-value">[&#39;::ttk::notebook&#39;.freeze].freeze</td>
+          </tr>
+          
+            <tr valign='top'>
+              <td>&nbsp;</td>
+              <td colspan="2" class="attr-desc"></td>
+            </tr>
+          
+        
+          <tr valign='top'>
+            <td class="attr-name">WidgetClassName</td>
+            <td>=</td>
+            <td class="attr-value">&#39;TNotebook&#39;.freeze</td>
+          </tr>
+          
+            <tr valign='top'>
+              <td>&nbsp;</td>
+              <td colspan="2" class="attr-desc"></td>
+            </tr>
+          
+        
+      </table>
+    
+
+
+    
+
+
+    <!-- Methods -->
+    
+      <div class="sectiontitle">Class Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-c-style">
+            
+              <b>style</b>(*args)
+            
+            <a href="../../../classes/Tk/Tile/Notebook.html#method-c-style" name="method-c-style" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-style_source')" id="l_method-c-style_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/tile/tnotebook.rb#L85" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-style_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/tile/tnotebook.rb, line 85</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">style</span>(<span class="ruby-operator">*</span><span class="ruby-identifier">args</span>)
+  [<span class="ruby-keyword">self</span><span class="ruby-operator">::</span><span class="ruby-constant">WidgetClassName</span>, <span class="ruby-operator">*</span>(<span class="ruby-identifier">args</span>.<span class="ruby-identifier">map!</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">a</span><span class="ruby-operator">|</span> <span class="ruby-identifier">_get_eval_string</span>(<span class="ruby-identifier">a</span>)})].<span class="ruby-identifier">join</span>(<span class="ruby-string">&#39;.&#39;</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                  
+      <div class="sectiontitle">Instance Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-i-add">
+            
+              <b>add</b>(child, keys=nil)
+            
+            <a href="../../../classes/Tk/Tile/Notebook.html#method-i-add" name="method-i-add" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-add_source')" id="l_method-i-add_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/tile/tnotebook.rb#L100" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-add_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/tile/tnotebook.rb, line 100</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">add</span>(<span class="ruby-identifier">child</span>, <span class="ruby-identifier">keys</span>=<span class="ruby-keyword">nil</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">keys</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">keys</span> <span class="ruby-operator">!=</span> <span class="ruby-constant">None</span>
+    <span class="ruby-identifier">tk_send</span>(<span class="ruby-string">&#39;add&#39;</span>, <span class="ruby-identifier">_epath</span>(<span class="ruby-identifier">child</span>), <span class="ruby-operator">*</span><span class="ruby-identifier">hash_kv</span>(<span class="ruby-identifier">keys</span>))
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">tk_send</span>(<span class="ruby-string">&#39;add&#39;</span>, <span class="ruby-identifier">_epath</span>(<span class="ruby-identifier">child</span>))
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-enable_traversal">
+            
+              <b>enable_traversal</b>()
+            
+            <a href="../../../classes/Tk/Tile/Notebook.html#method-i-enable_traversal" name="method-i-enable_traversal" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-enable_traversal_source')" id="l_method-i-enable_traversal_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/tile/tnotebook.rb#L89" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-enable_traversal_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/tile/tnotebook.rb, line 89</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">enable_traversal</span>()
+  <span class="ruby-keyword">if</span> <span class="ruby-constant">Tk</span><span class="ruby-operator">::</span><span class="ruby-constant">Tile</span><span class="ruby-operator">::</span><span class="ruby-constant">TILE_SPEC_VERSION_ID</span> <span class="ruby-operator">&lt;</span> <span class="ruby-number">5</span>
+    <span class="ruby-identifier">tk_call_without_enc</span>(<span class="ruby-string">&#39;::tile::enableNotebookTraversal&#39;</span>, <span class="ruby-ivar">@path</span>)
+  <span class="ruby-keyword">elsif</span> <span class="ruby-constant">Tk</span><span class="ruby-operator">::</span><span class="ruby-constant">Tile</span><span class="ruby-operator">::</span><span class="ruby-constant">TILE_SPEC_VERSION_ID</span> <span class="ruby-operator">&lt;</span> <span class="ruby-number">7</span>
+    <span class="ruby-identifier">tk_call_without_enc</span>(<span class="ruby-string">&#39;::tile::notebook::enableTraversal&#39;</span>, <span class="ruby-ivar">@path</span>)
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">tk_call_without_enc</span>(<span class="ruby-string">&#39;::ttk::notebook::enableTraversal&#39;</span>, <span class="ruby-ivar">@path</span>)
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-forget">
+            
+              <b>forget</b>(idx)
+            
+            <a href="../../../classes/Tk/Tile/Notebook.html#method-i-forget" name="method-i-forget" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-forget_source')" id="l_method-i-forget_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/tile/tnotebook.rb#L109" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-forget_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/tile/tnotebook.rb, line 109</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">forget</span>(<span class="ruby-identifier">idx</span>)
+  <span class="ruby-identifier">tk_send</span>(<span class="ruby-string">&#39;forget&#39;</span>, <span class="ruby-identifier">idx</span>)
+  <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-hide">
+            
+              <b>hide</b>(idx)
+            
+            <a href="../../../classes/Tk/Tile/Notebook.html#method-i-hide" name="method-i-hide" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-hide_source')" id="l_method-i-hide_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/tile/tnotebook.rb#L114" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-hide_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/tile/tnotebook.rb, line 114</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">hide</span>(<span class="ruby-identifier">idx</span>)
+  <span class="ruby-identifier">tk_send</span>(<span class="ruby-string">&#39;hide&#39;</span>, <span class="ruby-identifier">idx</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-index">
+            
+              <b>index</b>(idx)
+            
+            <a href="../../../classes/Tk/Tile/Notebook.html#method-i-index" name="method-i-index" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-index_source')" id="l_method-i-index_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/tile/tnotebook.rb#L118" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-index_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/tile/tnotebook.rb, line 118</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">index</span>(<span class="ruby-identifier">idx</span>)
+  <span class="ruby-identifier">number</span>(<span class="ruby-identifier">tk_send</span>(<span class="ruby-string">&#39;index&#39;</span>, <span class="ruby-identifier">idx</span>))
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-insert">
+            
+              <b>insert</b>(idx, subwin, keys=nil)
+            
+            <a href="../../../classes/Tk/Tile/Notebook.html#method-i-insert" name="method-i-insert" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-insert_source')" id="l_method-i-insert_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/tile/tnotebook.rb#L122" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-insert_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/tile/tnotebook.rb, line 122</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">insert</span>(<span class="ruby-identifier">idx</span>, <span class="ruby-identifier">subwin</span>, <span class="ruby-identifier">keys</span>=<span class="ruby-keyword">nil</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">keys</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">keys</span> <span class="ruby-operator">!=</span> <span class="ruby-constant">None</span>
+    <span class="ruby-identifier">tk_send</span>(<span class="ruby-string">&#39;insert&#39;</span>, <span class="ruby-identifier">idx</span>, <span class="ruby-identifier">subwin</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">hash_kv</span>(<span class="ruby-identifier">keys</span>))
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">tk_send</span>(<span class="ruby-string">&#39;insert&#39;</span>, <span class="ruby-identifier">idx</span>, <span class="ruby-identifier">subwin</span>)
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-select">
+            
+              <b>select</b>(idx)
+            
+            <a href="../../../classes/Tk/Tile/Notebook.html#method-i-select" name="method-i-select" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-select_source')" id="l_method-i-select_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/tile/tnotebook.rb#L131" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-select_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/tile/tnotebook.rb, line 131</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">select</span>(<span class="ruby-identifier">idx</span>)
+  <span class="ruby-identifier">tk_send</span>(<span class="ruby-string">&#39;select&#39;</span>, <span class="ruby-identifier">idx</span>)
+  <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-selected">
+            
+              <b>selected</b>()
+            
+            <a href="../../../classes/Tk/Tile/Notebook.html#method-i-selected" name="method-i-selected" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-selected_source')" id="l_method-i-selected_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/tile/tnotebook.rb#L136" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-selected_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/tile/tnotebook.rb, line 136</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">selected</span>
+  <span class="ruby-identifier">window</span>(<span class="ruby-identifier">tk_send_without_enc</span>(<span class="ruby-string">&#39;select&#39;</span>))
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-tabcget">
+            
+              <b>tabcget</b>(tagOrId, option)
+            
+            <a href="../../../classes/Tk/Tile/Notebook.html#method-i-tabcget" name="method-i-tabcget" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-tabcget_source')" id="l_method-i-tabcget_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/tile/tnotebook.rb#L52" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-tabcget_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/tile/tnotebook.rb, line 52</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">tabcget</span>(<span class="ruby-identifier">tagOrId</span>, <span class="ruby-identifier">option</span>)
+  <span class="ruby-keyword">unless</span> <span class="ruby-constant">TkItemConfigMethod</span>.<span class="ruby-identifier">__IGNORE_UNKNOWN_CONFIGURE_OPTION__</span>
+    <span class="ruby-identifier">tabcget_strict</span>(<span class="ruby-identifier">tagOrId</span>, <span class="ruby-identifier">option</span>)
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-keyword">begin</span>
+      <span class="ruby-identifier">tabcget_strict</span>(<span class="ruby-identifier">tagOrId</span>, <span class="ruby-identifier">option</span>)
+    <span class="ruby-keyword">rescue</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">e</span>
+      <span class="ruby-keyword">begin</span>
+        <span class="ruby-keyword">if</span> <span class="ruby-identifier">current_tabconfiginfo</span>(<span class="ruby-identifier">tagOrId</span>).<span class="ruby-identifier">has_key?</span>(<span class="ruby-identifier">option</span>.<span class="ruby-identifier">to_s</span>)
+          <span class="ruby-comment"># not tag error &amp; option is known -&gt; error on known option</span>
+          <span class="ruby-identifier">fail</span> <span class="ruby-identifier">e</span>
+        <span class="ruby-keyword">else</span>
+          <span class="ruby-comment"># not tag error &amp; option is unknown</span>
+          <span class="ruby-keyword">nil</span>
+        <span class="ruby-keyword">end</span>
+      <span class="ruby-keyword">rescue</span>
+        <span class="ruby-identifier">fail</span> <span class="ruby-identifier">e</span>  <span class="ruby-comment"># tag error</span>
+      <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-tabcget_strict">
+            
+              <b>tabcget_strict</b>(tagOrId, option)
+            
+            <a href="../../../classes/Tk/Tile/Notebook.html#method-i-tabcget_strict" name="method-i-tabcget_strict" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-tabcget_strict_source')" id="l_method-i-tabcget_strict_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/tile/tnotebook.rb#L49" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-tabcget_strict_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/tile/tnotebook.rb, line 49</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">tabcget_strict</span>(<span class="ruby-identifier">tagOrId</span>, <span class="ruby-identifier">option</span>)
+  <span class="ruby-identifier">tabconfiginfo</span>(<span class="ruby-identifier">tagOrId</span>, <span class="ruby-identifier">option</span>)[<span class="ruby-number">-1</span>]
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-tabcget_tkstring">
+            
+              <b>tabcget_tkstring</b>(tagOrId, option)
+            
+            <a href="../../../classes/Tk/Tile/Notebook.html#method-i-tabcget_tkstring" name="method-i-tabcget_tkstring" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-tabcget_tkstring_source')" id="l_method-i-tabcget_tkstring_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/tile/tnotebook.rb#L46" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-tabcget_tkstring_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/tile/tnotebook.rb, line 46</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">tabcget_tkstring</span>(<span class="ruby-identifier">tagOrId</span>, <span class="ruby-identifier">option</span>)
+  <span class="ruby-identifier">tk_split_simplelist</span>(<span class="ruby-identifier">tk_call_without_enc</span>(<span class="ruby-operator">*</span>(<span class="ruby-identifier">__item_confinfo_cmd</span>(<span class="ruby-identifier">tagid</span>(<span class="ruby-identifier">tagOrId</span>)) <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-node">&quot;-#{option}&quot;</span>)), <span class="ruby-keyword">false</span>, <span class="ruby-keyword">true</span>)[<span class="ruby-number">-1</span>]
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-tabs">
+            
+              <b>tabs</b>()
+            
+            <a href="../../../classes/Tk/Tile/Notebook.html#method-i-tabs" name="method-i-tabs" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-tabs_source')" id="l_method-i-tabs_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/tile/tnotebook.rb#L140" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-tabs_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/tile/tnotebook.rb, line 140</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">tabs</span>
+  <span class="ruby-identifier">list</span>(<span class="ruby-identifier">tk_send</span>(<span class="ruby-string">&#39;tabs&#39;</span>))
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                    </div>
+
+    </div>
+  </body>
+</html>    

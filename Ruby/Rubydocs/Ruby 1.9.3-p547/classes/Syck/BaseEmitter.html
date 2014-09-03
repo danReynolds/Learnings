@@ -1,0 +1,877 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>Syck::BaseEmitter</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="../../css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../../css/main.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../../css/github.css" type="text/css" media="screen" />
+<script src="../../js/jquery-1.3.2.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../js/jquery-effect.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../js/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+
+<body>     
+    <div class="banner">
+        
+        <h1>
+            <span class="type">Module</span> 
+            Syck::BaseEmitter 
+            
+        </h1>
+        <ul class="files">
+            
+            <li><a href="../../files/ext/syck/lib/syck/baseemitter_rb.html">ext/syck/lib/syck/baseemitter.rb</a></li>
+            
+        </ul>
+    </div>
+    <div id="bodyContent">
+        <div id="content">
+  
+
+
+  
+
+
+  
+  
+
+
+  
+
+
+  
+    <!-- Method ref -->
+    <div class="sectiontitle">Methods</div>
+    <dl class="methods">
+      
+        <dt>B</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-binary_base64">binary_base64</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>D</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-double">double</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>F</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-fold">fold</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>I</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-indent">indent</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-indent-21">indent!</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-indent_text">indent_text</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>M</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-map">map</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>N</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-node_text">node_text</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>O</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-options">options</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-options-3D">options=</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>S</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-seq">seq</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-seq_map_shortcut">seq_map_shortcut</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-simple">simple</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-single">single</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+    </dl>
+  
+
+  
+
+
+
+  
+
+    
+
+    
+
+    
+
+
+    
+
+
+    <!-- Methods -->
+        
+      <div class="sectiontitle">Instance Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-i-binary_base64">
+            
+              <b>binary_base64</b>( value )
+            
+            <a href="../../classes/Syck/BaseEmitter.html#method-i-binary_base64" name="method-i-binary_base64" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Emit binary data</p>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-binary_base64_source')" id="l_method-i-binary_base64_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/eb71e5cd67f4ce4da5ba331f93a8e36c65457b94/ext/syck/lib/syck/baseemitter.rb#L26" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-binary_base64_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/syck/lib/syck/baseemitter.rb, line 26</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">binary_base64</span>( <span class="ruby-identifier">value</span> )
+  <span class="ruby-keyword">self</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-string">&quot;!binary &quot;</span>
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">node_text</span>( [<span class="ruby-identifier">value</span>].<span class="ruby-identifier">pack</span>(<span class="ruby-string">&quot;m&quot;</span>), <span class="ruby-string">&#39;|&#39;</span> )
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-double">
+            
+              <b>double</b>( value )
+            
+            <a href="../../classes/Syck/BaseEmitter.html#method-i-double" name="method-i-double" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Emit double-quoted string</p>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-double_source')" id="l_method-i-double_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/eb71e5cd67f4ce4da5ba331f93a8e36c65457b94/ext/syck/lib/syck/baseemitter.rb#L86" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-double_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/syck/lib/syck/baseemitter.rb, line 86</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">double</span>( <span class="ruby-identifier">value</span> )
+  <span class="ruby-node">&quot;\&quot;#{Syck.escape( value )}\&quot;&quot;</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-fold">
+            
+              <b>fold</b>( value )
+            
+            <a href="../../classes/Syck/BaseEmitter.html#method-i-fold" name="method-i-fold" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Folding paragraphs within a column</p>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-fold_source')" id="l_method-i-fold_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/eb71e5cd67f4ce4da5ba331f93a8e36c65457b94/ext/syck/lib/syck/baseemitter.rb#L131" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-fold_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/syck/lib/syck/baseemitter.rb, line 131</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">fold</span>( <span class="ruby-identifier">value</span> )
+  <span class="ruby-identifier">value</span>.<span class="ruby-identifier">gsub</span>( <span class="ruby-node">/(^[ \t]+.*$)|(\S.{0,#{options(:BestWidth) - 1}})(?:[ \t]+|(\n+(?=[ \t]|\Z))|$)/</span> ) <span class="ruby-keyword">do</span>
+    <span class="ruby-node">$1</span> <span class="ruby-operator">||</span> <span class="ruby-node">$2</span> <span class="ruby-operator">+</span> ( <span class="ruby-node">$3</span> <span class="ruby-operator">||</span> <span class="ruby-string">&quot;\n&quot;</span> )
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-indent">
+            
+              <b>indent</b>( mod = nil )
+            
+            <a href="../../classes/Syck/BaseEmitter.html#method-i-indent" name="method-i-indent" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Write a current indent</p>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-indent_source')" id="l_method-i-indent_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/eb71e5cd67f4ce4da5ba331f93a8e36c65457b94/ext/syck/lib/syck/baseemitter.rb#L110" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-indent_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/syck/lib/syck/baseemitter.rb, line 110</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">indent</span>( <span class="ruby-identifier">mod</span> = <span class="ruby-keyword">nil</span> )
+  <span class="ruby-comment">#p [ self.id, level, mod, :INDENT ]</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">level</span> <span class="ruby-operator">&lt;=</span> <span class="ruby-number">0</span>
+    <span class="ruby-identifier">mod</span> <span class="ruby-operator">||=</span> <span class="ruby-number">0</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">mod</span> <span class="ruby-operator">||=</span> <span class="ruby-identifier">options</span>(<span class="ruby-value">:Indent</span>)
+    <span class="ruby-identifier">mod</span> <span class="ruby-operator">+=</span> ( <span class="ruby-identifier">level</span> <span class="ruby-operator">-</span> <span class="ruby-number">1</span> ) <span class="ruby-operator">*</span> <span class="ruby-identifier">options</span>(<span class="ruby-value">:Indent</span>)
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-string">&quot; &quot;</span> <span class="ruby-operator">*</span> <span class="ruby-identifier">mod</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-indent-21">
+            
+              <b>indent!</b>()
+            
+            <a href="../../classes/Syck/BaseEmitter.html#method-i-indent-21" name="method-i-indent-21" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Add indent to the buffer</p>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-indent-21_source')" id="l_method-i-indent-21_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/eb71e5cd67f4ce4da5ba331f93a8e36c65457b94/ext/syck/lib/syck/baseemitter.rb#L124" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-indent-21_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/syck/lib/syck/baseemitter.rb, line 124</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">indent!</span>
+  <span class="ruby-keyword">self</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">indent</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-indent_text">
+            
+              <b>indent_text</b>( text, mod, first_line = true )
+            
+            <a href="../../classes/Syck/BaseEmitter.html#method-i-indent_text" name="method-i-indent_text" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Write a text block with the current indent</p>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-indent_text_source')" id="l_method-i-indent_text_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/eb71e5cd67f4ce4da5ba331f93a8e36c65457b94/ext/syck/lib/syck/baseemitter.rb#L100" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-indent_text_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/syck/lib/syck/baseemitter.rb, line 100</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">indent_text</span>( <span class="ruby-identifier">text</span>, <span class="ruby-identifier">mod</span>, <span class="ruby-identifier">first_line</span> = <span class="ruby-keyword">true</span> )
+  <span class="ruby-keyword">return</span> <span class="ruby-string">&quot;&quot;</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">text</span>.<span class="ruby-identifier">to_s</span>.<span class="ruby-identifier">empty?</span>
+  <span class="ruby-identifier">spacing</span> = <span class="ruby-identifier">indent</span>( <span class="ruby-identifier">mod</span> )
+  <span class="ruby-identifier">text</span> = <span class="ruby-identifier">text</span>.<span class="ruby-identifier">gsub</span>( <span class="ruby-regexp">/\A([^\n])/</span>, <span class="ruby-node">&quot;#{ spacing }\\1&quot;</span> ) <span class="ruby-keyword">if</span> <span class="ruby-identifier">first_line</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-identifier">text</span>.<span class="ruby-identifier">gsub</span>( <span class="ruby-regexp">/\n^([^\n])/</span>, <span class="ruby-node">&quot;\n#{spacing}\\1&quot;</span> )
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-map">
+            
+              <b>map</b>( type, &amp;e )
+            
+            <a href="../../classes/Syck/BaseEmitter.html#method-i-map" name="method-i-map" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Quick mapping</p>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-map_source')" id="l_method-i-map_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/eb71e5cd67f4ce4da5ba331f93a8e36c65457b94/ext/syck/lib/syck/baseemitter.rb#L140" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-map_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/syck/lib/syck/baseemitter.rb, line 140</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">map</span>( <span class="ruby-identifier">type</span>, <span class="ruby-operator">&amp;</span><span class="ruby-identifier">e</span> )
+  <span class="ruby-identifier">val</span> = <span class="ruby-constant">Mapping</span>.<span class="ruby-identifier">new</span>
+  <span class="ruby-identifier">e</span>.<span class="ruby-identifier">call</span>( <span class="ruby-identifier">val</span> )
+  <span class="ruby-keyword">self</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-node">&quot;#{type} &quot;</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">type</span>.<span class="ruby-identifier">length</span>.<span class="ruby-identifier">nonzero?</span>
+
+  <span class="ruby-comment">#</span>
+  <span class="ruby-comment"># Empty hashes</span>
+  <span class="ruby-comment">#</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">val</span>.<span class="ruby-identifier">length</span>.<span class="ruby-identifier">zero?</span>
+    <span class="ruby-keyword">self</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-string">&quot;{}&quot;</span>
+    <span class="ruby-ivar">@seq_map</span> = <span class="ruby-keyword">false</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-comment"># FIXME</span>
+    <span class="ruby-comment"># if @buffer.length == 1 and options(:UseHeader) == false and type.length.zero?</span>
+    <span class="ruby-comment">#     @headless = 1</span>
+    <span class="ruby-comment"># end</span>
+
+    <span class="ruby-identifier">defkey</span> = <span class="ruby-ivar">@options</span>.<span class="ruby-identifier">delete</span>( <span class="ruby-value">:DefaultKey</span> )
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">defkey</span>
+      <span class="ruby-identifier">seq_map_shortcut</span>
+      <span class="ruby-keyword">self</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-string">&quot;= : &quot;</span>
+      <span class="ruby-identifier">defkey</span>.<span class="ruby-identifier">to_yaml</span>( <span class="ruby-value">:Emitter</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword">self</span> )
+    <span class="ruby-keyword">end</span>
+
+    <span class="ruby-comment">#</span>
+    <span class="ruby-comment"># Emit the key and value</span>
+    <span class="ruby-comment">#</span>
+    <span class="ruby-identifier">val</span>.<span class="ruby-identifier">each</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">v</span><span class="ruby-operator">|</span>
+      <span class="ruby-identifier">seq_map_shortcut</span>
+      <span class="ruby-keyword">if</span> <span class="ruby-identifier">v</span>[<span class="ruby-number">0</span>].<span class="ruby-identifier">is_complex_yaml?</span>
+        <span class="ruby-keyword">self</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-string">&quot;? &quot;</span>
+      <span class="ruby-keyword">end</span>
+      <span class="ruby-identifier">v</span>[<span class="ruby-number">0</span>].<span class="ruby-identifier">to_yaml</span>( <span class="ruby-value">:Emitter</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword">self</span> )
+      <span class="ruby-keyword">if</span> <span class="ruby-identifier">v</span>[<span class="ruby-number">0</span>].<span class="ruby-identifier">is_complex_yaml?</span>
+        <span class="ruby-keyword">self</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-string">&quot;\n&quot;</span>
+        <span class="ruby-identifier">indent!</span>
+      <span class="ruby-keyword">end</span>
+      <span class="ruby-keyword">self</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-string">&quot;: &quot;</span>
+      <span class="ruby-identifier">v</span>[<span class="ruby-number">1</span>].<span class="ruby-identifier">to_yaml</span>( <span class="ruby-value">:Emitter</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword">self</span> )
+    }
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-node_text">
+            
+              <b>node_text</b>( value, block = nil )
+            
+            <a href="../../classes/Syck/BaseEmitter.html#method-i-node_text" name="method-i-node_text" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Emit plain, normal flowing text</p>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-node_text_source')" id="l_method-i-node_text_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/eb71e5cd67f4ce4da5ba331f93a8e36c65457b94/ext/syck/lib/syck/baseemitter.rb#L34" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-node_text_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/syck/lib/syck/baseemitter.rb, line 34</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">node_text</span>( <span class="ruby-identifier">value</span>, <span class="ruby-identifier">block</span> = <span class="ruby-keyword">nil</span> )
+  <span class="ruby-ivar">@seq_map</span> = <span class="ruby-keyword">false</span>
+  <span class="ruby-identifier">valx</span> = <span class="ruby-identifier">value</span>.<span class="ruby-identifier">dup</span>
+  <span class="ruby-keyword">unless</span> <span class="ruby-identifier">block</span>
+    <span class="ruby-identifier">block</span> =
+      <span class="ruby-keyword">if</span> <span class="ruby-identifier">options</span>(<span class="ruby-value">:UseBlock</span>)
+        <span class="ruby-string">&#39;|&#39;</span>
+      <span class="ruby-keyword">elsif</span> <span class="ruby-keyword">not</span> <span class="ruby-identifier">options</span>(<span class="ruby-value">:UseFold</span>) <span class="ruby-keyword">and</span> <span class="ruby-identifier">valx</span> <span class="ruby-operator">=~</span> <span class="ruby-regexp">/\n[ \t]/</span> <span class="ruby-keyword">and</span> <span class="ruby-keyword">not</span> <span class="ruby-identifier">valx</span> <span class="ruby-operator">=~</span> <span class="ruby-node">/#{ESCAPE_CHAR}/</span>
+        <span class="ruby-string">&#39;|&#39;</span>
+      <span class="ruby-keyword">else</span>
+        <span class="ruby-string">&#39;&gt;&#39;</span>
+      <span class="ruby-keyword">end</span>
+    <span class="ruby-identifier">indt</span> = <span class="ruby-node">$&amp;</span>.<span class="ruby-identifier">to_i</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">block</span> <span class="ruby-operator">=~</span> <span class="ruby-regexp">/\d+/</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">valx</span> <span class="ruby-operator">=~</span> <span class="ruby-node">/(\A\n*[ \t#]|^---\s+)/</span>
+      <span class="ruby-identifier">indt</span> = <span class="ruby-identifier">options</span>(<span class="ruby-value">:Indent</span>) <span class="ruby-keyword">unless</span> <span class="ruby-identifier">indt</span>.<span class="ruby-identifier">to_i</span> <span class="ruby-operator">&gt;</span> <span class="ruby-number">0</span>
+      <span class="ruby-identifier">block</span> <span class="ruby-operator">+=</span> <span class="ruby-identifier">indt</span>.<span class="ruby-identifier">to_s</span>
+    <span class="ruby-keyword">end</span>
+
+    <span class="ruby-identifier">block</span> <span class="ruby-operator">+=</span>
+      <span class="ruby-keyword">if</span> <span class="ruby-identifier">valx</span> <span class="ruby-operator">=~</span> <span class="ruby-regexp">/\n\Z\n/</span>
+        <span class="ruby-string">&quot;+&quot;</span>
+      <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">valx</span> <span class="ruby-operator">=~</span> <span class="ruby-regexp">/\Z\n/</span>
+        <span class="ruby-string">&quot;&quot;</span>
+      <span class="ruby-keyword">else</span>
+        <span class="ruby-string">&quot;-&quot;</span>
+      <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">block</span> <span class="ruby-operator">+=</span> <span class="ruby-string">&quot;\n&quot;</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">block</span>[<span class="ruby-number">0</span>] <span class="ruby-operator">==</span> <span class="ruby-value">?&quot;</span>
+    <span class="ruby-identifier">esc_skip</span> = ( <span class="ruby-string">&quot;\t\n&quot;</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">valx</span> <span class="ruby-operator">=~</span> <span class="ruby-regexp">/^[ \t]/</span> ) <span class="ruby-operator">||</span> <span class="ruby-string">&quot;&quot;</span>
+    <span class="ruby-identifier">valx</span> = <span class="ruby-identifier">fold</span>( <span class="ruby-constant">Syck</span>.<span class="ruby-identifier">escape</span>( <span class="ruby-identifier">valx</span>, <span class="ruby-identifier">esc_skip</span> ) <span class="ruby-operator">+</span> <span class="ruby-string">&quot;\&quot;&quot;</span> ).<span class="ruby-identifier">chomp</span>
+    <span class="ruby-keyword">self</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-string">&#39;&quot;&#39;</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">indent_text</span>( <span class="ruby-identifier">valx</span>, <span class="ruby-identifier">indt</span>, <span class="ruby-keyword">false</span> )
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">block</span>[<span class="ruby-number">0</span>] <span class="ruby-operator">==</span> <span class="ruby-value">?&gt;</span>
+      <span class="ruby-identifier">valx</span> = <span class="ruby-identifier">fold</span>( <span class="ruby-identifier">valx</span> )
+    <span class="ruby-keyword">end</span>
+    <span class="ruby-comment">#p [block, indt]</span>
+    <span class="ruby-keyword">self</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">block</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">indent_text</span>( <span class="ruby-identifier">valx</span>, <span class="ruby-identifier">indt</span> )
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-options">
+            
+              <b>options</b>( opt = nil )
+            
+            <a href="../../classes/Syck/BaseEmitter.html#method-i-options" name="method-i-options" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-options_source')" id="l_method-i-options_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/eb71e5cd67f4ce4da5ba331f93a8e36c65457b94/ext/syck/lib/syck/baseemitter.rb#L11" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-options_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/syck/lib/syck/baseemitter.rb, line 11</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">options</span>( <span class="ruby-identifier">opt</span> = <span class="ruby-keyword">nil</span> )
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">opt</span>
+    <span class="ruby-ivar">@options</span>[<span class="ruby-identifier">opt</span>] <span class="ruby-operator">||</span> <span class="ruby-constant">DEFAULTS</span>[<span class="ruby-identifier">opt</span>]
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-ivar">@options</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-options-3D">
+            
+              <b>options=</b>( opt )
+            
+            <a href="../../classes/Syck/BaseEmitter.html#method-i-options-3D" name="method-i-options-3D" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-options-3D_source')" id="l_method-i-options-3D_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/eb71e5cd67f4ce4da5ba331f93a8e36c65457b94/ext/syck/lib/syck/baseemitter.rb#L19" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-options-3D_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/syck/lib/syck/baseemitter.rb, line 19</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">options=</span>( <span class="ruby-identifier">opt</span> )
+  <span class="ruby-ivar">@options</span> = <span class="ruby-identifier">opt</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-seq">
+            
+              <b>seq</b>( type, &amp;e )
+            
+            <a href="../../classes/Syck/BaseEmitter.html#method-i-seq" name="method-i-seq" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Quick sequence</p>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-seq_source')" id="l_method-i-seq_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/eb71e5cd67f4ce4da5ba331f93a8e36c65457b94/ext/syck/lib/syck/baseemitter.rb#L197" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-seq_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/syck/lib/syck/baseemitter.rb, line 197</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">seq</span>( <span class="ruby-identifier">type</span>, <span class="ruby-operator">&amp;</span><span class="ruby-identifier">e</span> )
+  <span class="ruby-ivar">@seq_map</span> = <span class="ruby-keyword">false</span>
+  <span class="ruby-identifier">val</span> = <span class="ruby-constant">Sequence</span>.<span class="ruby-identifier">new</span>
+  <span class="ruby-identifier">e</span>.<span class="ruby-identifier">call</span>( <span class="ruby-identifier">val</span> )
+  <span class="ruby-keyword">self</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-node">&quot;#{type} &quot;</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">type</span>.<span class="ruby-identifier">length</span>.<span class="ruby-identifier">nonzero?</span>
+
+  <span class="ruby-comment">#</span>
+  <span class="ruby-comment"># Empty arrays</span>
+  <span class="ruby-comment">#</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">val</span>.<span class="ruby-identifier">length</span>.<span class="ruby-identifier">zero?</span>
+    <span class="ruby-keyword">self</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-string">&quot;[]&quot;</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-comment"># FIXME</span>
+    <span class="ruby-comment"># if @buffer.length == 1 and options(:UseHeader) == false and type.length.zero?</span>
+    <span class="ruby-comment">#     @headless = 1</span>
+    <span class="ruby-comment"># end</span>
+
+    <span class="ruby-comment">#</span>
+    <span class="ruby-comment"># Emit the key and value</span>
+    <span class="ruby-comment">#</span>
+    <span class="ruby-identifier">val</span>.<span class="ruby-identifier">each</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">v</span><span class="ruby-operator">|</span>
+      <span class="ruby-keyword">self</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-string">&quot;\n&quot;</span>
+      <span class="ruby-identifier">indent!</span>
+      <span class="ruby-keyword">self</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-string">&quot;- &quot;</span>
+      <span class="ruby-ivar">@seq_map</span> = <span class="ruby-keyword">true</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">v</span>.<span class="ruby-identifier">class</span> <span class="ruby-operator">==</span> <span class="ruby-constant">Hash</span>
+      <span class="ruby-identifier">v</span>.<span class="ruby-identifier">to_yaml</span>( <span class="ruby-value">:Emitter</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword">self</span> )
+    }
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-seq_map_shortcut">
+            
+              <b>seq_map_shortcut</b>()
+            
+            <a href="../../classes/Syck/BaseEmitter.html#method-i-seq_map_shortcut" name="method-i-seq_map_shortcut" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-seq_map_shortcut_source')" id="l_method-i-seq_map_shortcut_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/eb71e5cd67f4ce4da5ba331f93a8e36c65457b94/ext/syck/lib/syck/baseemitter.rb#L183" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-seq_map_shortcut_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/syck/lib/syck/baseemitter.rb, line 183</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">seq_map_shortcut</span>
+  <span class="ruby-comment"># FIXME: seq_map needs to work with the new anchoring system</span>
+  <span class="ruby-comment"># if @seq_map</span>
+  <span class="ruby-comment">#     @anchor_extras[@buffer.length - 1] = &quot;\n&quot; + indent</span>
+  <span class="ruby-comment">#     @seq_map = false</span>
+  <span class="ruby-comment"># else</span>
+  <span class="ruby-keyword">self</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-string">&quot;\n&quot;</span>
+  <span class="ruby-identifier">indent!</span>
+  <span class="ruby-comment"># end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-simple">
+            
+              <b>simple</b>( value )
+            
+            <a href="../../classes/Syck/BaseEmitter.html#method-i-simple" name="method-i-simple" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Emit a simple, unqouted string</p>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-simple_source')" id="l_method-i-simple_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/eb71e5cd67f4ce4da5ba331f93a8e36c65457b94/ext/syck/lib/syck/baseemitter.rb#L78" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-simple_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/syck/lib/syck/baseemitter.rb, line 78</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">simple</span>( <span class="ruby-identifier">value</span> )
+  <span class="ruby-ivar">@seq_map</span> = <span class="ruby-keyword">false</span>
+  <span class="ruby-keyword">self</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">value</span>.<span class="ruby-identifier">to_s</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-single">
+            
+              <b>single</b>( value )
+            
+            <a href="../../classes/Syck/BaseEmitter.html#method-i-single" name="method-i-single" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Emit single-quoted string</p>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-single_source')" id="l_method-i-single_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/eb71e5cd67f4ce4da5ba331f93a8e36c65457b94/ext/syck/lib/syck/baseemitter.rb#L93" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-single_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/syck/lib/syck/baseemitter.rb, line 93</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">single</span>( <span class="ruby-identifier">value</span> )
+  <span class="ruby-node">&quot;&#39;#{value}&#39;&quot;</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                    </div>
+
+    </div>
+  </body>
+</html>    

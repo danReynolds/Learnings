@@ -1,0 +1,714 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>Syck::BaseNode</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="../../css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../../css/main.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../../css/github.css" type="text/css" media="screen" />
+<script src="../../js/jquery-1.3.2.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../js/jquery-effect.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../js/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+
+<body>     
+    <div class="banner">
+        
+        <h1>
+            <span class="type">Module</span> 
+            Syck::BaseNode 
+            
+        </h1>
+        <ul class="files">
+            
+            <li><a href="../../files/ext/syck/lib/syck/basenode_rb.html">ext/syck/lib/syck/basenode.rb</a></li>
+            
+        </ul>
+    </div>
+    <div id="bodyContent">
+        <div id="content">
+  
+    <div class="description">
+      
+<p>YAML Generic Model container</p>
+
+    </div>
+  
+
+
+  
+
+
+  
+  
+
+
+  
+
+
+  
+    <!-- Method ref -->
+    <div class="sectiontitle">Methods</div>
+    <dl class="methods">
+      
+        <dt>#</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-5B-5D">[]</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>A</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-at">at</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>C</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-children">children</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-children_with_index">children_with_index</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>E</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-emit">emit</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>M</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-match_path">match_path</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-match_segment">match_segment</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>S</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-search">search</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-select">select</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-select-21">select!</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+    </dl>
+  
+
+  
+
+
+
+  
+
+    
+
+    
+
+    
+
+
+    
+
+
+    <!-- Methods -->
+        
+      <div class="sectiontitle">Instance Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-i-5B-5D">
+            
+              <b>[]</b>( *key )
+            
+            <a href="../../classes/Syck/BaseNode.html#method-i-5B-5D" name="method-i-5B-5D" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>We want the node to act like as <a href="../Hash.html">Hash</a> if it is.</p>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-5B-5D_source')" id="l_method-i-5B-5D_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/8ef7bb8c211d156b33f1f97f7c500e5b465fdf5b/ext/syck/lib/syck/basenode.rb#L190" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-5B-5D_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/syck/lib/syck/basenode.rb, line 190</span>
+<span class="ruby-keyword">def</span> <span class="ruby-operator">[]</span>( <span class="ruby-operator">*</span><span class="ruby-keyword ruby-title">key</span> )
+    <span class="ruby-keyword">if</span> <span class="ruby-constant">Hash</span> <span class="ruby-operator">===</span> <span class="ruby-ivar">@value</span>
+        <span class="ruby-identifier">v</span> = <span class="ruby-ivar">@value</span>.<span class="ruby-identifier">detect</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">k</span>,<span class="ruby-operator">|</span> <span class="ruby-identifier">k</span>.<span class="ruby-identifier">transform</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">key</span>.<span class="ruby-identifier">first</span> }
+        <span class="ruby-identifier">v</span>[<span class="ruby-number">1</span>] <span class="ruby-keyword">if</span> <span class="ruby-identifier">v</span>
+    <span class="ruby-keyword">elsif</span> <span class="ruby-constant">Array</span> <span class="ruby-operator">===</span> <span class="ruby-ivar">@value</span>
+        <span class="ruby-ivar">@value</span>.[]( <span class="ruby-operator">*</span><span class="ruby-identifier">key</span> )
+    <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-at">
+            
+              <b>at</b>( seg )
+            
+            <a href="../../classes/Syck/BaseNode.html#method-i-at" name="method-i-at" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-at_source')" id="l_method-i-at_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/8ef7bb8c211d156b33f1f97f7c500e5b465fdf5b/ext/syck/lib/syck/basenode.rb#L71" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-at_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/syck/lib/syck/basenode.rb, line 71</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">at</span>( <span class="ruby-identifier">seg</span> )
+    <span class="ruby-identifier">warn</span> <span class="ruby-node">&quot;#{caller[0]}: at() is deprecated&quot;</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">$VERBOSE</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-constant">Hash</span> <span class="ruby-operator">===</span> <span class="ruby-ivar">@value</span>
+        <span class="ruby-keyword">self</span>[<span class="ruby-identifier">seg</span>]
+    <span class="ruby-keyword">elsif</span> <span class="ruby-constant">Array</span> <span class="ruby-operator">===</span> <span class="ruby-ivar">@value</span> <span class="ruby-keyword">and</span> <span class="ruby-identifier">seg</span> <span class="ruby-operator">=~</span> <span class="ruby-regexp">/\A\d+\Z/</span> <span class="ruby-keyword">and</span> <span class="ruby-ivar">@value</span>[<span class="ruby-identifier">seg</span>.<span class="ruby-identifier">to_i</span>]
+        <span class="ruby-ivar">@value</span>[<span class="ruby-identifier">seg</span>.<span class="ruby-identifier">to_i</span>]
+    <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-children">
+            
+              <b>children</b>()
+            
+            <a href="../../classes/Syck/BaseNode.html#method-i-children" name="method-i-children" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-children_source')" id="l_method-i-children_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/8ef7bb8c211d156b33f1f97f7c500e5b465fdf5b/ext/syck/lib/syck/basenode.rb#L199" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-children_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/syck/lib/syck/basenode.rb, line 199</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">children</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-constant">Hash</span> <span class="ruby-operator">===</span> <span class="ruby-ivar">@value</span>
+        <span class="ruby-ivar">@value</span>.<span class="ruby-identifier">values</span>.<span class="ruby-identifier">collect</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">c</span><span class="ruby-operator">|</span> <span class="ruby-identifier">c</span>[<span class="ruby-number">1</span>] }
+    <span class="ruby-keyword">elsif</span> <span class="ruby-constant">Array</span> <span class="ruby-operator">===</span> <span class="ruby-ivar">@value</span>
+        <span class="ruby-ivar">@value</span>
+    <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-children_with_index">
+            
+              <b>children_with_index</b>()
+            
+            <a href="../../classes/Syck/BaseNode.html#method-i-children_with_index" name="method-i-children_with_index" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-children_with_index_source')" id="l_method-i-children_with_index_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/8ef7bb8c211d156b33f1f97f7c500e5b465fdf5b/ext/syck/lib/syck/basenode.rb#L207" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-children_with_index_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/syck/lib/syck/basenode.rb, line 207</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">children_with_index</span>
+    <span class="ruby-identifier">warn</span> <span class="ruby-node">&quot;#{caller[0]}: children_with_index is deprecated, use children&quot;</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">$VERBOSE</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-constant">Hash</span> <span class="ruby-operator">===</span> <span class="ruby-ivar">@value</span>
+        <span class="ruby-ivar">@value</span>.<span class="ruby-identifier">keys</span>.<span class="ruby-identifier">collect</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">i</span><span class="ruby-operator">|</span> [<span class="ruby-keyword">self</span>[<span class="ruby-identifier">i</span>], <span class="ruby-identifier">i</span>] }
+    <span class="ruby-keyword">elsif</span> <span class="ruby-constant">Array</span> <span class="ruby-operator">===</span> <span class="ruby-ivar">@value</span>
+        <span class="ruby-identifier">i</span> = <span class="ruby-number">-1</span>; <span class="ruby-ivar">@value</span>.<span class="ruby-identifier">collect</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">v</span><span class="ruby-operator">|</span> <span class="ruby-identifier">i</span> <span class="ruby-operator">+=</span> <span class="ruby-number">1</span>; [<span class="ruby-identifier">v</span>, <span class="ruby-identifier">i</span>] }
+    <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-emit">
+            
+              <b>emit</b>()
+            
+            <a href="../../classes/Syck/BaseNode.html#method-i-emit" name="method-i-emit" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-emit_source')" id="l_method-i-emit_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/8ef7bb8c211d156b33f1f97f7c500e5b465fdf5b/ext/syck/lib/syck/basenode.rb#L216" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-emit_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/syck/lib/syck/basenode.rb, line 216</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">emit</span>
+    <span class="ruby-identifier">transform</span>.<span class="ruby-identifier">to_yaml</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-match_path">
+            
+              <b>match_path</b>( ypath_str )
+            
+            <a href="../../classes/Syck/BaseNode.html#method-i-match_path" name="method-i-match_path" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p><a href="YPath.html">YPath</a> search returning a complete depth array</p>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-match_path_source')" id="l_method-i-match_path_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/8ef7bb8c211d156b33f1f97f7c500e5b465fdf5b/ext/syck/lib/syck/basenode.rb#L83" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-match_path_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/syck/lib/syck/basenode.rb, line 83</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">match_path</span>( <span class="ruby-identifier">ypath_str</span> )
+    <span class="ruby-identifier">warn</span> <span class="ruby-node">&quot;#{caller[0]}: match_path is deprecated&quot;</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">$VERBOSE</span>
+    <span class="ruby-identifier">require</span> <span class="ruby-string">&#39;syck/ypath&#39;</span>
+    <span class="ruby-identifier">matches</span> = []
+    <span class="ruby-constant">YPath</span>.<span class="ruby-identifier">each_path</span>( <span class="ruby-identifier">ypath_str</span> ) <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">ypath</span><span class="ruby-operator">|</span>
+        <span class="ruby-identifier">seg</span> = <span class="ruby-identifier">match_segment</span>( <span class="ruby-identifier">ypath</span>, <span class="ruby-number">0</span> )
+        <span class="ruby-identifier">matches</span> <span class="ruby-operator">+=</span> <span class="ruby-identifier">seg</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">seg</span>
+    <span class="ruby-keyword">end</span>
+    <span class="ruby-identifier">matches</span>.<span class="ruby-identifier">uniq</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-match_segment">
+            
+              <b>match_segment</b>( ypath, depth )
+            
+            <a href="../../classes/Syck/BaseNode.html#method-i-match_segment" name="method-i-match_segment" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Search a node for a single <a href="YPath.html">YPath</a> segment</p>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-match_segment_source')" id="l_method-i-match_segment_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/8ef7bb8c211d156b33f1f97f7c500e5b465fdf5b/ext/syck/lib/syck/basenode.rb#L97" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-match_segment_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/syck/lib/syck/basenode.rb, line 97</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">match_segment</span>( <span class="ruby-identifier">ypath</span>, <span class="ruby-identifier">depth</span> )
+    <span class="ruby-identifier">warn</span> <span class="ruby-node">&quot;#{caller[0]}: match_segment is deprecated&quot;</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">$VERBOSE</span>
+    <span class="ruby-identifier">deep_nodes</span> = []
+    <span class="ruby-identifier">seg</span> = <span class="ruby-identifier">ypath</span>.<span class="ruby-identifier">segments</span>[ <span class="ruby-identifier">depth</span> ]
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">seg</span> <span class="ruby-operator">==</span> <span class="ruby-string">&quot;/&quot;</span>
+        <span class="ruby-keyword">unless</span> <span class="ruby-constant">String</span> <span class="ruby-operator">===</span> <span class="ruby-ivar">@value</span>
+            <span class="ruby-identifier">idx</span> = <span class="ruby-number">-1</span>
+            <span class="ruby-ivar">@value</span>.<span class="ruby-identifier">collect</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">v</span><span class="ruby-operator">|</span>
+                <span class="ruby-identifier">idx</span> <span class="ruby-operator">+=</span> <span class="ruby-number">1</span>
+                <span class="ruby-keyword">if</span> <span class="ruby-constant">Hash</span> <span class="ruby-operator">===</span> <span class="ruby-ivar">@value</span>
+                    <span class="ruby-identifier">match_init</span> = [<span class="ruby-identifier">v</span>[<span class="ruby-number">0</span>].<span class="ruby-identifier">transform</span>, <span class="ruby-identifier">v</span>[<span class="ruby-number">1</span>]]
+                    <span class="ruby-identifier">match_deep</span> = <span class="ruby-identifier">v</span>[<span class="ruby-number">1</span>].<span class="ruby-identifier">match_segment</span>( <span class="ruby-identifier">ypath</span>, <span class="ruby-identifier">depth</span> )
+                <span class="ruby-keyword">else</span>
+                    <span class="ruby-identifier">match_init</span> = [<span class="ruby-identifier">idx</span>, <span class="ruby-identifier">v</span>]
+                    <span class="ruby-identifier">match_deep</span> = <span class="ruby-identifier">v</span>.<span class="ruby-identifier">match_segment</span>( <span class="ruby-identifier">ypath</span>, <span class="ruby-identifier">depth</span> )
+                <span class="ruby-keyword">end</span>
+                <span class="ruby-keyword">if</span> <span class="ruby-identifier">match_deep</span>
+                    <span class="ruby-identifier">match_deep</span>.<span class="ruby-identifier">each</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">m</span><span class="ruby-operator">|</span>
+                        <span class="ruby-identifier">deep_nodes</span>.<span class="ruby-identifier">push</span>( <span class="ruby-identifier">match_init</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">m</span> )
+                    }
+                <span class="ruby-keyword">end</span>
+            }
+        <span class="ruby-keyword">end</span>
+        <span class="ruby-identifier">depth</span> <span class="ruby-operator">+=</span> <span class="ruby-number">1</span>
+        <span class="ruby-identifier">seg</span> = <span class="ruby-identifier">ypath</span>.<span class="ruby-identifier">segments</span>[ <span class="ruby-identifier">depth</span> ]
+    <span class="ruby-keyword">end</span>
+    <span class="ruby-identifier">match_nodes</span> =
+        <span class="ruby-keyword">case</span> <span class="ruby-identifier">seg</span>
+        <span class="ruby-keyword">when</span> <span class="ruby-string">&quot;.&quot;</span>
+            [[<span class="ruby-keyword">nil</span>, <span class="ruby-keyword">self</span>]]
+        <span class="ruby-keyword">when</span> <span class="ruby-string">&quot;..&quot;</span>
+            [[<span class="ruby-string">&quot;..&quot;</span>, <span class="ruby-keyword">nil</span>]]
+        <span class="ruby-keyword">when</span> <span class="ruby-string">&quot;*&quot;</span>
+            <span class="ruby-keyword">if</span> <span class="ruby-ivar">@value</span>.<span class="ruby-identifier">is_a?</span> <span class="ruby-constant">Enumerable</span>
+                <span class="ruby-identifier">idx</span> = <span class="ruby-number">-1</span>
+                <span class="ruby-ivar">@value</span>.<span class="ruby-identifier">collect</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">h</span><span class="ruby-operator">|</span>
+                    <span class="ruby-identifier">idx</span> <span class="ruby-operator">+=</span> <span class="ruby-number">1</span>
+                    <span class="ruby-keyword">if</span> <span class="ruby-constant">Hash</span> <span class="ruby-operator">===</span> <span class="ruby-ivar">@value</span>
+                        [<span class="ruby-identifier">h</span>[<span class="ruby-number">0</span>].<span class="ruby-identifier">transform</span>, <span class="ruby-identifier">h</span>[<span class="ruby-number">1</span>]]
+                    <span class="ruby-keyword">else</span>
+                        [<span class="ruby-identifier">idx</span>, <span class="ruby-identifier">h</span>]
+                    <span class="ruby-keyword">end</span>
+                }
+            <span class="ruby-keyword">end</span>
+        <span class="ruby-keyword">else</span>
+            <span class="ruby-keyword">if</span> <span class="ruby-identifier">seg</span> <span class="ruby-operator">=~</span> <span class="ruby-regexp">/^&quot;(.*)&quot;$/</span>
+                <span class="ruby-identifier">seg</span> = <span class="ruby-node">$1</span>
+            <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">seg</span> <span class="ruby-operator">=~</span> <span class="ruby-regexp">/^&#39;(.*)&#39;$/</span>
+                <span class="ruby-identifier">seg</span> = <span class="ruby-node">$1</span>
+            <span class="ruby-keyword">end</span>
+            <span class="ruby-keyword">if</span> ( <span class="ruby-identifier">v</span> = <span class="ruby-identifier">at</span>( <span class="ruby-identifier">seg</span> ) )
+                [[ <span class="ruby-identifier">seg</span>, <span class="ruby-identifier">v</span> ]]
+            <span class="ruby-keyword">end</span>
+        <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">return</span> <span class="ruby-identifier">deep_nodes</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">match_nodes</span>
+    <span class="ruby-identifier">pred</span> = <span class="ruby-identifier">ypath</span>.<span class="ruby-identifier">predicates</span>[ <span class="ruby-identifier">depth</span> ]
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">pred</span>
+        <span class="ruby-keyword">case</span> <span class="ruby-identifier">pred</span>
+        <span class="ruby-keyword">when</span> <span class="ruby-regexp">/^\.=/</span>
+            <span class="ruby-identifier">pred</span> = <span class="ruby-node">$&#39;</span>   <span class="ruby-comment"># &#39;</span>
+            <span class="ruby-identifier">match_nodes</span>.<span class="ruby-identifier">reject!</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">n</span><span class="ruby-operator">|</span>
+                <span class="ruby-identifier">n</span>.<span class="ruby-identifier">last</span>.<span class="ruby-identifier">value</span> <span class="ruby-operator">!=</span> <span class="ruby-identifier">pred</span>
+            }
+        <span class="ruby-keyword">else</span>
+            <span class="ruby-identifier">match_nodes</span>.<span class="ruby-identifier">reject!</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">n</span><span class="ruby-operator">|</span>
+                <span class="ruby-identifier">n</span>.<span class="ruby-identifier">last</span>.<span class="ruby-identifier">at</span>( <span class="ruby-identifier">pred</span> ).<span class="ruby-identifier">nil?</span>
+            }
+        <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">return</span> <span class="ruby-identifier">match_nodes</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">deep_nodes</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">ypath</span>.<span class="ruby-identifier">segments</span>.<span class="ruby-identifier">length</span> <span class="ruby-operator">&gt;</span> <span class="ruby-identifier">depth</span> <span class="ruby-operator">+</span> <span class="ruby-number">1</span>
+
+    <span class="ruby-comment">#puts &quot;DEPTH: #{depth + 1}&quot;</span>
+    <span class="ruby-identifier">deep_nodes</span> = []
+    <span class="ruby-identifier">match_nodes</span>.<span class="ruby-identifier">each</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">n</span><span class="ruby-operator">|</span>
+        <span class="ruby-keyword">if</span> <span class="ruby-identifier">n</span>[<span class="ruby-number">1</span>].<span class="ruby-identifier">is_a?</span> <span class="ruby-constant">BaseNode</span>
+            <span class="ruby-identifier">match_deep</span> = <span class="ruby-identifier">n</span>[<span class="ruby-number">1</span>].<span class="ruby-identifier">match_segment</span>( <span class="ruby-identifier">ypath</span>, <span class="ruby-identifier">depth</span> <span class="ruby-operator">+</span> <span class="ruby-number">1</span> )
+            <span class="ruby-keyword">if</span> <span class="ruby-identifier">match_deep</span>
+                <span class="ruby-identifier">match_deep</span>.<span class="ruby-identifier">each</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">m</span><span class="ruby-operator">|</span>
+                    <span class="ruby-identifier">deep_nodes</span>.<span class="ruby-identifier">push</span>( <span class="ruby-identifier">n</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">m</span> )
+                }
+            <span class="ruby-keyword">end</span>
+        <span class="ruby-keyword">else</span>
+            <span class="ruby-identifier">deep_nodes</span> = []
+        <span class="ruby-keyword">end</span>
+    }
+    <span class="ruby-identifier">deep_nodes</span> = <span class="ruby-keyword">nil</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">deep_nodes</span>.<span class="ruby-identifier">length</span> <span class="ruby-operator">==</span> <span class="ruby-number">0</span>
+    <span class="ruby-identifier">deep_nodes</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-search">
+            
+              <b>search</b>( ypath_str )
+            
+            <a href="../../classes/Syck/BaseNode.html#method-i-search" name="method-i-search" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Search for <a href="YPath.html">YPath</a> entry and return a list of
+qualified paths.</p>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-search_source')" id="l_method-i-search_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/8ef7bb8c211d156b33f1f97f7c500e5b465fdf5b/ext/syck/lib/syck/basenode.rb#L56" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-search_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/syck/lib/syck/basenode.rb, line 56</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">search</span>( <span class="ruby-identifier">ypath_str</span> )
+    <span class="ruby-identifier">warn</span> <span class="ruby-node">&quot;#{caller[0]}: search() is deprecated&quot;</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">$VERBOSE</span>
+    <span class="ruby-identifier">matches</span> = <span class="ruby-identifier">match_path</span>( <span class="ruby-identifier">ypath_str</span> )
+
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">matches</span>
+        <span class="ruby-identifier">matches</span>.<span class="ruby-identifier">collect</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">m</span><span class="ruby-operator">|</span>
+            <span class="ruby-identifier">path</span> = []
+            <span class="ruby-identifier">m</span>.<span class="ruby-identifier">each_index</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">i</span><span class="ruby-operator">|</span>
+                <span class="ruby-identifier">path</span>.<span class="ruby-identifier">push</span> <span class="ruby-identifier">m</span>[<span class="ruby-identifier">i</span>] <span class="ruby-keyword">if</span> ( <span class="ruby-identifier">i</span> <span class="ruby-operator">%</span> <span class="ruby-number">2</span> ).<span class="ruby-identifier">zero?</span>
+            }
+            <span class="ruby-string">&quot;/&quot;</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">path</span>.<span class="ruby-identifier">compact</span>.<span class="ruby-identifier">join</span>( <span class="ruby-string">&quot;/&quot;</span> )
+        }
+    <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-select">
+            
+              <b>select</b>( ypath_str )
+            
+            <a href="../../classes/Syck/BaseNode.html#method-i-select" name="method-i-select" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Search for <a href="YPath.html">YPath</a> entry and return qualified nodes.</p>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-select_source')" id="l_method-i-select_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/8ef7bb8c211d156b33f1f97f7c500e5b465fdf5b/ext/syck/lib/syck/basenode.rb#L16" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-select_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/syck/lib/syck/basenode.rb, line 16</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">select</span>( <span class="ruby-identifier">ypath_str</span> )
+    <span class="ruby-identifier">warn</span> <span class="ruby-node">&quot;#{caller[0]}: select is deprecated&quot;</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">$VERBOSE</span>
+    <span class="ruby-identifier">matches</span> = <span class="ruby-identifier">match_path</span>( <span class="ruby-identifier">ypath_str</span> )
+
+    <span class="ruby-comment">#</span>
+    <span class="ruby-comment"># Create a new generic view of the elements selected</span>
+    <span class="ruby-comment">#</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">matches</span>
+        <span class="ruby-identifier">result</span> = []
+        <span class="ruby-identifier">matches</span>.<span class="ruby-identifier">each</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">m</span><span class="ruby-operator">|</span>
+            <span class="ruby-identifier">result</span>.<span class="ruby-identifier">push</span> <span class="ruby-identifier">m</span>.<span class="ruby-identifier">last</span>
+        }
+        <span class="ruby-constant">Syck</span>.<span class="ruby-identifier">transfer</span>( <span class="ruby-string">&#39;seq&#39;</span>, <span class="ruby-identifier">result</span> )
+    <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-select-21">
+            
+              <b>select!</b>( ypath_str )
+            
+            <a href="../../classes/Syck/BaseNode.html#method-i-select-21" name="method-i-select-21" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Search for <a href="YPath.html">YPath</a> entry and return transformed
+nodes.</p>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-select-21_source')" id="l_method-i-select-21_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/8ef7bb8c211d156b33f1f97f7c500e5b465fdf5b/ext/syck/lib/syck/basenode.rb#L36" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-select-21_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/syck/lib/syck/basenode.rb, line 36</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">select!</span>( <span class="ruby-identifier">ypath_str</span> )
+    <span class="ruby-identifier">warn</span> <span class="ruby-node">&quot;#{caller[0]}: select!() is deprecated&quot;</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">$VERBOSE</span>
+    <span class="ruby-identifier">matches</span> = <span class="ruby-identifier">match_path</span>( <span class="ruby-identifier">ypath_str</span> )
+
+    <span class="ruby-comment">#</span>
+    <span class="ruby-comment"># Create a new generic view of the elements selected</span>
+    <span class="ruby-comment">#</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">matches</span>
+        <span class="ruby-identifier">result</span> = []
+        <span class="ruby-identifier">matches</span>.<span class="ruby-identifier">each</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">m</span><span class="ruby-operator">|</span>
+            <span class="ruby-identifier">result</span>.<span class="ruby-identifier">push</span> <span class="ruby-identifier">m</span>.<span class="ruby-identifier">last</span>.<span class="ruby-identifier">transform</span>
+        }
+        <span class="ruby-identifier">result</span>
+    <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                    </div>
+
+    </div>
+  </body>
+</html>    

@@ -1,0 +1,488 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>RubyVM::VPATH</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="../../css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../../css/main.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../../css/github.css" type="text/css" media="screen" />
+<script src="../../js/jquery-1.3.2.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../js/jquery-effect.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../js/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+
+<body>     
+    <div class="banner">
+        
+        <h1>
+            <span class="type">Module</span> 
+            RubyVM::VPATH 
+            
+        </h1>
+        <ul class="files">
+            
+            <li><a href="../../files/tool/instruction_rb.html">tool/instruction.rb</a></li>
+            
+        </ul>
+    </div>
+    <div id="bodyContent">
+        <div id="content">
+  
+
+
+  
+
+
+  
+  
+
+
+  
+
+
+  
+    <!-- Method ref -->
+    <div class="sectiontitle">Methods</div>
+    <dl class="methods">
+      
+        <dt>D</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-def_options">def_options</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>F</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-foreach">foreach</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>L</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-lstat">lstat</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>O</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-open">open</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>P</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-process">process</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>R</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-read">read</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>S</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-search">search</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-stat">stat</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+    </dl>
+  
+
+  
+
+
+
+  
+
+    
+
+    
+
+    
+
+
+    
+
+
+    <!-- Methods -->
+    
+      <div class="sectiontitle">Class Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-c-def_options">
+            
+              <b>def_options</b>(opt)
+            
+            <a href="../../classes/RubyVM/VPATH.html#method-c-def_options" name="method-c-def_options" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-def_options_source')" id="l_method-c-def_options_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/3a47cf3395dd4c4fe8bdd5df13aab698f2ca314b/tool/instruction.rb#L1293" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-def_options_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File tool/instruction.rb, line 1293</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">def_options</span>(<span class="ruby-identifier">opt</span>)
+  <span class="ruby-identifier">vpath</span> = []
+  <span class="ruby-identifier">path_sep</span> = <span class="ruby-string">&#39;:&#39;</span>
+
+  <span class="ruby-identifier">opt</span>.<span class="ruby-identifier">on</span>(<span class="ruby-string">&quot;-I&quot;</span>, <span class="ruby-string">&quot;--srcdir=DIR&quot;</span>, <span class="ruby-string">&quot;add a directory to search path&quot;</span>) {<span class="ruby-operator">|</span><span class="ruby-identifier">dir</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">vpath</span> <span class="ruby-operator">|=</span> [<span class="ruby-identifier">dir</span>]
+  }
+  <span class="ruby-identifier">opt</span>.<span class="ruby-identifier">on</span>(<span class="ruby-string">&quot;-L&quot;</span>, <span class="ruby-string">&quot;--vpath=PATH LIST&quot;</span>, <span class="ruby-string">&quot;add directories to search path&quot;</span>) {<span class="ruby-operator">|</span><span class="ruby-identifier">dirs</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">vpath</span> <span class="ruby-operator">|=</span> <span class="ruby-identifier">dirs</span>.<span class="ruby-identifier">split</span>(<span class="ruby-identifier">path_sep</span>)
+  }
+  <span class="ruby-identifier">opt</span>.<span class="ruby-identifier">on</span>(<span class="ruby-string">&quot;--path-separator=SEP&quot;</span>, <span class="ruby-regexp">/\A\W\z/</span>, <span class="ruby-string">&quot;separator for vpath&quot;</span>) {<span class="ruby-operator">|</span><span class="ruby-identifier">sep</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">path_sep</span> = <span class="ruby-identifier">sep</span>
+  }
+
+  <span class="ruby-identifier">proc</span> {
+    <span class="ruby-identifier">vpath</span>.<span class="ruby-identifier">extend</span>(<span class="ruby-keyword">self</span>) <span class="ruby-keyword">unless</span> <span class="ruby-identifier">vpath</span>.<span class="ruby-identifier">empty?</span>
+  }
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                  
+      <div class="sectiontitle">Instance Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-i-foreach">
+            
+              <b>foreach</b>(file, *args, &amp;block)
+            
+            <a href="../../classes/RubyVM/VPATH.html#method-i-foreach" name="method-i-foreach" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-foreach_source')" id="l_method-i-foreach_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/3a47cf3395dd4c4fe8bdd5df13aab698f2ca314b/tool/instruction.rb#L1289" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-foreach_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File tool/instruction.rb, line 1289</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">foreach</span>(<span class="ruby-identifier">file</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">args</span>, <span class="ruby-operator">&amp;</span><span class="ruby-identifier">block</span>)
+  <span class="ruby-identifier">open</span>(<span class="ruby-identifier">file</span>) {<span class="ruby-operator">|</span><span class="ruby-identifier">f</span><span class="ruby-operator">|</span> <span class="ruby-identifier">f</span>.<span class="ruby-identifier">each</span>(<span class="ruby-operator">*</span><span class="ruby-identifier">args</span>, <span class="ruby-operator">&amp;</span><span class="ruby-identifier">block</span>)}
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-lstat">
+            
+              <b>lstat</b>(*args, &amp;block)
+            
+            <a href="../../classes/RubyVM/VPATH.html#method-i-lstat" name="method-i-lstat" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+            <div class="aka">
+              Alias for: <a href="VPATH.html#method-i-process">process</a>
+            </div>
+          
+          
+          
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-open">
+            
+              <b>open</b>(*args)
+            
+            <a href="../../classes/RubyVM/VPATH.html#method-i-open" name="method-i-open" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-open_source')" id="l_method-i-open_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/3a47cf3395dd4c4fe8bdd5df13aab698f2ca314b/tool/instruction.rb#L1272" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-open_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File tool/instruction.rb, line 1272</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">open</span>(<span class="ruby-operator">*</span><span class="ruby-identifier">args</span>)
+  <span class="ruby-identifier">f</span> = <span class="ruby-identifier">search</span>(<span class="ruby-constant">File</span>.<span class="ruby-identifier">method</span>(<span class="ruby-value">:open</span>), <span class="ruby-operator">*</span><span class="ruby-identifier">args</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">block_given?</span>
+    <span class="ruby-keyword">begin</span>
+      <span class="ruby-keyword">yield</span> <span class="ruby-identifier">f</span>
+    <span class="ruby-keyword">ensure</span>
+      <span class="ruby-identifier">f</span>.<span class="ruby-identifier">close</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">f</span>.<span class="ruby-identifier">closed?</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">f</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-process">
+            
+              <b>process</b>(*args, &amp;block)
+            
+            <a href="../../classes/RubyVM/VPATH.html#method-i-process" name="method-i-process" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+            <div class="aka">
+              Also aliased as: <a href="VPATH.html#method-i-stat">stat</a>, <a href="VPATH.html#method-i-lstat">lstat</a>
+            </div>
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-process_source')" id="l_method-i-process_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/3a47cf3395dd4c4fe8bdd5df13aab698f2ca314b/tool/instruction.rb#L1265" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-process_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File tool/instruction.rb, line 1265</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">process</span>(<span class="ruby-operator">*</span><span class="ruby-identifier">args</span>, <span class="ruby-operator">&amp;</span><span class="ruby-identifier">block</span>)
+  <span class="ruby-identifier">search</span>(<span class="ruby-constant">File</span>.<span class="ruby-identifier">method</span>(<span class="ruby-identifier">__callee__</span>), <span class="ruby-operator">*</span><span class="ruby-identifier">args</span>, <span class="ruby-operator">&amp;</span><span class="ruby-identifier">block</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-read">
+            
+              <b>read</b>(*args)
+            
+            <a href="../../classes/RubyVM/VPATH.html#method-i-read" name="method-i-read" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-read_source')" id="l_method-i-read_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/3a47cf3395dd4c4fe8bdd5df13aab698f2ca314b/tool/instruction.rb#L1285" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-read_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File tool/instruction.rb, line 1285</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">read</span>(<span class="ruby-operator">*</span><span class="ruby-identifier">args</span>)
+  <span class="ruby-identifier">open</span>(<span class="ruby-operator">*</span><span class="ruby-identifier">args</span>) {<span class="ruby-operator">|</span><span class="ruby-identifier">f</span><span class="ruby-operator">|</span> <span class="ruby-identifier">f</span>.<span class="ruby-identifier">read</span>}
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-search">
+            
+              <b>search</b>(meth, base, *rest)
+            
+            <a href="../../classes/RubyVM/VPATH.html#method-i-search" name="method-i-search" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-search_source')" id="l_method-i-search_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/3a47cf3395dd4c4fe8bdd5df13aab698f2ca314b/tool/instruction.rb#L1254" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-search_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File tool/instruction.rb, line 1254</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">search</span>(<span class="ruby-identifier">meth</span>, <span class="ruby-identifier">base</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">rest</span>)
+  <span class="ruby-keyword">begin</span>
+    <span class="ruby-identifier">meth</span>.<span class="ruby-identifier">call</span>(<span class="ruby-identifier">base</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">rest</span>)
+  <span class="ruby-keyword">rescue</span> <span class="ruby-constant">Errno</span><span class="ruby-operator">::</span><span class="ruby-constant">ENOENT</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">error</span>
+    <span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">dir</span><span class="ruby-operator">|</span>
+      <span class="ruby-keyword">return</span> <span class="ruby-identifier">meth</span>.<span class="ruby-identifier">call</span>(<span class="ruby-constant">File</span>.<span class="ruby-identifier">join</span>(<span class="ruby-identifier">dir</span>, <span class="ruby-identifier">base</span>), <span class="ruby-operator">*</span><span class="ruby-identifier">rest</span>) <span class="ruby-keyword">rescue</span> <span class="ruby-keyword">nil</span>
+    <span class="ruby-keyword">end</span>
+    <span class="ruby-identifier">raise</span> <span class="ruby-identifier">error</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-stat">
+            
+              <b>stat</b>(*args, &amp;block)
+            
+            <a href="../../classes/RubyVM/VPATH.html#method-i-stat" name="method-i-stat" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+            <div class="aka">
+              Alias for: <a href="VPATH.html#method-i-process">process</a>
+            </div>
+          
+          
+          
+          </div>
+                    </div>
+
+    </div>
+  </body>
+</html>    

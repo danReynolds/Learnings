@@ -1,0 +1,921 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>REXML::SAX2Listener</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="../../css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../../css/main.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../../css/github.css" type="text/css" media="screen" />
+<script src="../../js/jquery-1.3.2.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../js/jquery-effect.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../js/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+
+<body>     
+    <div class="banner">
+        
+        <h1>
+            <span class="type">Module</span> 
+            REXML::SAX2Listener 
+            
+        </h1>
+        <ul class="files">
+            
+            <li><a href="../../files/lib/rexml/sax2listener_rb.html">lib/rexml/sax2listener.rb</a></li>
+            
+        </ul>
+    </div>
+    <div id="bodyContent">
+        <div id="content">
+  
+    <div class="description">
+      
+<p>A template for stream parser listeners. Note that the declarations
+(attlistdecl, elementdecl, etc) are trivially processed; <a
+href="../REXML.html">REXML</a> doesn&#39;t yet handle doctype entity
+declarations, so you have to parse them out yourself.</p>
+
+<h3 id="module-REXML::SAX2Listener-label-Missing+methods+from+SAX2">Missing methods from SAX2</h3>
+
+<pre><code>ignorable_whitespace</code></pre>
+
+<h3 id="module-REXML::SAX2Listener-label-Methods+extending+SAX2">Methods extending SAX2</h3>
+
+<p><code>WARNING</code> These methods are certainly going to change, until
+DTDs are fully supported.  Be aware of this.</p>
+
+<pre><code>start_document
+end_document
+doctype
+elementdecl
+attlistdecl
+entitydecl
+notationdecl
+cdata
+xmldecl
+comment</code></pre>
+
+    </div>
+  
+
+
+  
+
+
+  
+  
+
+
+  
+
+
+  
+    <!-- Method ref -->
+    <div class="sectiontitle">Methods</div>
+    <dl class="methods">
+      
+        <dt>A</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-attlistdecl">attlistdecl</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>C</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-cdata">cdata</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-characters">characters</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-comment">comment</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>D</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-doctype">doctype</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>E</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-elementdecl">elementdecl</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-end_document">end_document</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-end_element">end_element</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-end_prefix_mapping">end_prefix_mapping</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-entitydecl">entitydecl</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>N</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-notationdecl">notationdecl</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>P</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-processing_instruction">processing_instruction</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-progress">progress</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>S</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-start_document">start_document</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-start_element">start_element</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-start_prefix_mapping">start_prefix_mapping</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>X</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-xmldecl">xmldecl</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+    </dl>
+  
+
+  
+
+
+
+  
+
+    
+
+    
+
+    
+
+
+    
+
+
+    <!-- Methods -->
+        
+      <div class="sectiontitle">Instance Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-i-attlistdecl">
+            
+              <b>attlistdecl</b>(element, pairs, contents)
+            
+            <a href="../../classes/REXML/SAX2Listener.html#method-i-attlistdecl" name="method-i-attlistdecl" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>If a doctype includes an ATTLIST declaration, it will cause this method to
+be called.  The content is the declaration itself, unparsed. EG,
+&lt;!ATTLIST el attr CDATA #REQUIRED&gt; will come to this method as “el
+attr CDATA #REQUIRED”.  This is the same for all of the .*decl methods.</p>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-attlistdecl_source')" id="l_method-i-attlistdecl_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/287a34ae0dfc23e4158f67cb7783d239f202c368/lib/rexml/sax2listener.rb#L52" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-attlistdecl_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File lib/rexml/sax2listener.rb, line 52</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">attlistdecl</span>(<span class="ruby-identifier">element</span>, <span class="ruby-identifier">pairs</span>, <span class="ruby-identifier">contents</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-cdata">
+            
+              <b>cdata</b>(content)
+            
+            <a href="../../classes/REXML/SAX2Listener.html#method-i-cdata" name="method-i-cdata" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Called when &lt;![CDATA[ … ]]&gt; is encountered in a document. @p content
+“…”</p>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-cdata_source')" id="l_method-i-cdata_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/287a34ae0dfc23e4158f67cb7783d239f202c368/lib/rexml/sax2listener.rb#L80" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-cdata_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File lib/rexml/sax2listener.rb, line 80</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">cdata</span> <span class="ruby-identifier">content</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-characters">
+            
+              <b>characters</b>(text)
+            
+            <a href="../../classes/REXML/SAX2Listener.html#method-i-characters" name="method-i-characters" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-characters_source')" id="l_method-i-characters_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/287a34ae0dfc23e4158f67cb7783d239f202c368/lib/rexml/sax2listener.rb#L35" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-characters_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File lib/rexml/sax2listener.rb, line 35</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">characters</span> <span class="ruby-identifier">text</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-comment">
+            
+              <b>comment</b>(comment)
+            
+            <a href="../../classes/REXML/SAX2Listener.html#method-i-comment" name="method-i-comment" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Called when a comment is encountered. @p comment The content of the comment</p>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-comment_source')" id="l_method-i-comment_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/287a34ae0dfc23e4158f67cb7783d239f202c368/lib/rexml/sax2listener.rb#L92" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-comment_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File lib/rexml/sax2listener.rb, line 92</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">comment</span> <span class="ruby-identifier">comment</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-doctype">
+            
+              <b>doctype</b>(name, pub_sys, long_name, uri)
+            
+            <a href="../../classes/REXML/SAX2Listener.html#method-i-doctype" name="method-i-doctype" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Handles a doctype declaration. Any attributes of the doctype which are not
+supplied will be nil.  # EG, &lt;!DOCTYPE me PUBLIC “foo” “bar”&gt; @p name
+the name of the doctype; EG, “me” @p pub_sys “PUBLIC”, “SYSTEM”, or nil. 
+EG, “PUBLIC” @p long_name the supplied long name, or nil.  EG, “foo” @p uri
+the uri of the doctype, or nil.  EG, “bar”</p>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-doctype_source')" id="l_method-i-doctype_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/287a34ae0dfc23e4158f67cb7783d239f202c368/lib/rexml/sax2listener.rb#L45" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-doctype_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File lib/rexml/sax2listener.rb, line 45</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">doctype</span> <span class="ruby-identifier">name</span>, <span class="ruby-identifier">pub_sys</span>, <span class="ruby-identifier">long_name</span>, <span class="ruby-identifier">uri</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-elementdecl">
+            
+              <b>elementdecl</b>(content)
+            
+            <a href="../../classes/REXML/SAX2Listener.html#method-i-elementdecl" name="method-i-elementdecl" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>&lt;!ELEMENT …&gt;</p>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-elementdecl_source')" id="l_method-i-elementdecl_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/287a34ae0dfc23e4158f67cb7783d239f202c368/lib/rexml/sax2listener.rb#L55" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-elementdecl_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File lib/rexml/sax2listener.rb, line 55</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">elementdecl</span> <span class="ruby-identifier">content</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-end_document">
+            
+              <b>end_document</b>()
+            
+            <a href="../../classes/REXML/SAX2Listener.html#method-i-end_document" name="method-i-end_document" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-end_document_source')" id="l_method-i-end_document_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/287a34ae0dfc23e4158f67cb7783d239f202c368/lib/rexml/sax2listener.rb#L25" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-end_document_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File lib/rexml/sax2listener.rb, line 25</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">end_document</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-end_element">
+            
+              <b>end_element</b>(uri, localname, qname)
+            
+            <a href="../../classes/REXML/SAX2Listener.html#method-i-end_element" name="method-i-end_element" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-end_element_source')" id="l_method-i-end_element_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/287a34ae0dfc23e4158f67cb7783d239f202c368/lib/rexml/sax2listener.rb#L33" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-end_element_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File lib/rexml/sax2listener.rb, line 33</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">end_element</span> <span class="ruby-identifier">uri</span>, <span class="ruby-identifier">localname</span>, <span class="ruby-identifier">qname</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-end_prefix_mapping">
+            
+              <b>end_prefix_mapping</b>(prefix)
+            
+            <a href="../../classes/REXML/SAX2Listener.html#method-i-end_prefix_mapping" name="method-i-end_prefix_mapping" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-end_prefix_mapping_source')" id="l_method-i-end_prefix_mapping_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/287a34ae0dfc23e4158f67cb7783d239f202c368/lib/rexml/sax2listener.rb#L29" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-end_prefix_mapping_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File lib/rexml/sax2listener.rb, line 29</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">end_prefix_mapping</span> <span class="ruby-identifier">prefix</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-entitydecl">
+            
+              <b>entitydecl</b>(name, decl)
+            
+            <a href="../../classes/REXML/SAX2Listener.html#method-i-entitydecl" name="method-i-entitydecl" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>&lt;!ENTITY …&gt; The argument passed to this method is an array of the
+entity declaration.  It can be in a number of formats, but in general it
+returns (example, result):</p>
+
+<pre><code>&lt;!ENTITY % YN &#39;&quot;Yes&quot;&#39;&gt;
+[&quot;%&quot;, &quot;YN&quot;, &quot;&#39;\&quot;Yes\&quot;&#39;&quot;, &quot;\&quot;&quot;]
+&lt;!ENTITY % YN &#39;Yes&#39;&gt;
+[&quot;%&quot;, &quot;YN&quot;, &quot;&#39;Yes&#39;&quot;, &quot;s&quot;]
+&lt;!ENTITY WhatHeSaid &quot;He said %YN;&quot;&gt;
+[&quot;WhatHeSaid&quot;, &quot;\&quot;He said %YN;\&quot;&quot;, &quot;YN&quot;]
+&lt;!ENTITY open-hatch SYSTEM &quot;http://www.textuality.com/boilerplate/OpenHatch.xml&quot;&gt;
+[&quot;open-hatch&quot;, &quot;SYSTEM&quot;, &quot;\&quot;http://www.textuality.com/boilerplate/OpenHatch.xml\&quot;&quot;]
+&lt;!ENTITY open-hatch PUBLIC &quot;-//Textuality//TEXT Standard open-hatch boilerplate//EN&quot; &quot;http://www.textuality.com/boilerplate/OpenHatch.xml&quot;&gt;
+[&quot;open-hatch&quot;, &quot;PUBLIC&quot;, &quot;\&quot;-//Textuality//TEXT Standard open-hatch boilerplate//EN\&quot;&quot;, &quot;\&quot;http://www.textuality.com/boilerplate/OpenHatch.xml\&quot;&quot;]
+&lt;!ENTITY hatch-pic SYSTEM &quot;../grafix/OpenHatch.gif&quot; NDATA gif&gt;
+[&quot;hatch-pic&quot;, &quot;SYSTEM&quot;, &quot;\&quot;../grafix/OpenHatch.gif\&quot;&quot;, &quot;\n\t\t\t\t\t\t\tNDATA gif&quot;, &quot;gif&quot;]</code></pre>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-entitydecl_source')" id="l_method-i-entitydecl_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/287a34ae0dfc23e4158f67cb7783d239f202c368/lib/rexml/sax2listener.rb#L73" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-entitydecl_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File lib/rexml/sax2listener.rb, line 73</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">entitydecl</span> <span class="ruby-identifier">name</span>, <span class="ruby-identifier">decl</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-notationdecl">
+            
+              <b>notationdecl</b>(content)
+            
+            <a href="../../classes/REXML/SAX2Listener.html#method-i-notationdecl" name="method-i-notationdecl" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>&lt;!NOTATION …&gt;</p>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-notationdecl_source')" id="l_method-i-notationdecl_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/287a34ae0dfc23e4158f67cb7783d239f202c368/lib/rexml/sax2listener.rb#L76" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-notationdecl_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File lib/rexml/sax2listener.rb, line 76</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">notationdecl</span> <span class="ruby-identifier">content</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-processing_instruction">
+            
+              <b>processing_instruction</b>(target, data)
+            
+            <a href="../../classes/REXML/SAX2Listener.html#method-i-processing_instruction" name="method-i-processing_instruction" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-processing_instruction_source')" id="l_method-i-processing_instruction_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/287a34ae0dfc23e4158f67cb7783d239f202c368/lib/rexml/sax2listener.rb#L37" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-processing_instruction_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File lib/rexml/sax2listener.rb, line 37</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">processing_instruction</span> <span class="ruby-identifier">target</span>, <span class="ruby-identifier">data</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-progress">
+            
+              <b>progress</b>(position)
+            
+            <a href="../../classes/REXML/SAX2Listener.html#method-i-progress" name="method-i-progress" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-progress_source')" id="l_method-i-progress_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/287a34ae0dfc23e4158f67cb7783d239f202c368/lib/rexml/sax2listener.rb#L94" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-progress_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File lib/rexml/sax2listener.rb, line 94</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">progress</span> <span class="ruby-identifier">position</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-start_document">
+            
+              <b>start_document</b>()
+            
+            <a href="../../classes/REXML/SAX2Listener.html#method-i-start_document" name="method-i-start_document" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-start_document_source')" id="l_method-i-start_document_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/287a34ae0dfc23e4158f67cb7783d239f202c368/lib/rexml/sax2listener.rb#L23" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-start_document_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File lib/rexml/sax2listener.rb, line 23</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">start_document</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-start_element">
+            
+              <b>start_element</b>(uri, localname, qname, attributes)
+            
+            <a href="../../classes/REXML/SAX2Listener.html#method-i-start_element" name="method-i-start_element" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-start_element_source')" id="l_method-i-start_element_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/287a34ae0dfc23e4158f67cb7783d239f202c368/lib/rexml/sax2listener.rb#L31" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-start_element_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File lib/rexml/sax2listener.rb, line 31</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">start_element</span> <span class="ruby-identifier">uri</span>, <span class="ruby-identifier">localname</span>, <span class="ruby-identifier">qname</span>, <span class="ruby-identifier">attributes</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-start_prefix_mapping">
+            
+              <b>start_prefix_mapping</b>(prefix, uri)
+            
+            <a href="../../classes/REXML/SAX2Listener.html#method-i-start_prefix_mapping" name="method-i-start_prefix_mapping" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-start_prefix_mapping_source')" id="l_method-i-start_prefix_mapping_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/287a34ae0dfc23e4158f67cb7783d239f202c368/lib/rexml/sax2listener.rb#L27" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-start_prefix_mapping_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File lib/rexml/sax2listener.rb, line 27</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">start_prefix_mapping</span> <span class="ruby-identifier">prefix</span>, <span class="ruby-identifier">uri</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-xmldecl">
+            
+              <b>xmldecl</b>(version, encoding, standalone)
+            
+            <a href="../../classes/REXML/SAX2Listener.html#method-i-xmldecl" name="method-i-xmldecl" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Called when an XML PI is encountered in the document. EG: &lt;?xml
+version=“1.0” encoding=“utf”?&gt; @p version the version attribute value. 
+EG, “1.0” @p encoding the encoding attribute value, or nil.  EG, “utf” @p
+standalone the standalone attribute value, or nil.  EG, nil @p spaced the
+declaration is followed by a line break</p>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-xmldecl_source')" id="l_method-i-xmldecl_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/287a34ae0dfc23e4158f67cb7783d239f202c368/lib/rexml/sax2listener.rb#L88" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-xmldecl_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File lib/rexml/sax2listener.rb, line 88</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">xmldecl</span> <span class="ruby-identifier">version</span>, <span class="ruby-identifier">encoding</span>, <span class="ruby-identifier">standalone</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                    </div>
+
+    </div>
+  </body>
+</html>    

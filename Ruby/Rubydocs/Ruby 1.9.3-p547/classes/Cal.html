@@ -1,0 +1,981 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>Cal</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="../css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/main.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/github.css" type="text/css" media="screen" />
+<script src="../js/jquery-1.3.2.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/jquery-effect.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+
+<body>     
+    <div class="banner">
+        
+        <h1>
+            <span class="type">Class</span> 
+            Cal 
+            
+                <span class="parent">&lt; 
+                    
+                    <a href="Object.html">Object</a>
+                    
+                </span>
+            
+        </h1>
+        <ul class="files">
+            
+            <li><a href="../files/sample/cal_rb.html">sample/cal.rb</a></li>
+            
+        </ul>
+    </div>
+    <div id="bodyContent">
+        <div id="content">
+  
+
+
+  
+
+
+  
+  
+
+
+  
+
+
+  
+    <!-- Method ref -->
+    <div class="sectiontitle">Methods</div>
+    <dl class="methods">
+      
+        <dt>A</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-addmon">addmon</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>B</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-block">block</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>G</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-group">group</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>M</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-monthly">monthly</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>N</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-new">new</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>O</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-opt_c">opt_c</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-opt_j">opt_j</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-opt_m">opt_m</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-opt_t">opt_t</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-opt_y">opt_y</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>P</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-pict">pict</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-print">print</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>S</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-set_params">set_params</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-stack">stack</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>T</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-trans">trans</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>U</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-unlines">unlines</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>Y</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-yearly">yearly</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+    </dl>
+  
+
+  
+
+
+
+  
+
+    
+
+    
+
+    
+      <!-- Section constants -->
+      <div class="sectiontitle">Constants</div>
+      <table border='0' cellpadding='5'>
+        
+          <tr valign='top'>
+            <td class="attr-name">START</td>
+            <td>=</td>
+            <td class="attr-value">{
+&#39;cn&#39; =&gt; Date::GREGORIAN, # China
+&#39;de&#39; =&gt; 2342032,         # Germany (protestant states)
+&#39;dk&#39; =&gt; 2342032,         # Denmark
+&#39;es&#39; =&gt; 2299161,         # Spain
+&#39;fi&#39; =&gt; 2361390,         # Finland
+&#39;fr&#39; =&gt; 2299227,         # France
+&#39;gb&#39; =&gt; 2361222,         # United Kingdom
+&#39;gr&#39; =&gt; 2423868,         # Greece
+&#39;hu&#39; =&gt; 2301004,         # Hungary
+&#39;it&#39; =&gt; 2299161,         # Italy
+&#39;jp&#39; =&gt; Date::GREGORIAN, # Japan
+&#39;no&#39; =&gt; 2342032,         # Norway
+&#39;pl&#39; =&gt; 2299161,         # Poland
+&#39;pt&#39; =&gt; 2299161,         # Portugal
+&#39;ru&#39; =&gt; 2421639,         # Russia
+&#39;se&#39; =&gt; 2361390,         # Sweden
+&#39;us&#39; =&gt; 2361222,         # United States
+&#39;os&#39; =&gt; Date::JULIAN,    # (old style)
+&#39;ns&#39; =&gt; Date::GREGORIAN  # (new style)
+}</td>
+          </tr>
+          
+            <tr valign='top'>
+              <td>&nbsp;</td>
+              <td colspan="2" class="attr-desc"></td>
+            </tr>
+          
+        
+          <tr valign='top'>
+            <td class="attr-name">DEFAULT_START</td>
+            <td>=</td>
+            <td class="attr-value">&#39;gb&#39;</td>
+          </tr>
+          
+            <tr valign='top'>
+              <td>&nbsp;</td>
+              <td colspan="2" class="attr-desc"></td>
+            </tr>
+          
+        
+      </table>
+    
+
+
+    
+
+
+    <!-- Methods -->
+    
+      <div class="sectiontitle">Class Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-c-new">
+            
+              <b>new</b>()
+            
+            <a href="../classes/Cal.html#method-c-new" name="method-c-new" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-new_source')" id="l_method-c-new_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/352d72719b2918cca32eb07d086b90fd3f5dad32/sample/cal.rb#L35" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-new_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File sample/cal.rb, line 35</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">initialize</span>
+  <span class="ruby-identifier">opt_j</span>; <span class="ruby-identifier">opt_m</span>; <span class="ruby-identifier">opt_t</span>; <span class="ruby-identifier">opt_y</span>; <span class="ruby-identifier">opt_c</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                  
+      <div class="sectiontitle">Instance Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-i-addmon">
+            
+              <b>addmon</b>(y, m, n)
+            
+            <a href="../classes/Cal.html#method-i-addmon" name="method-i-addmon" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-addmon_source')" id="l_method-i-addmon_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/352d72719b2918cca32eb07d086b90fd3f5dad32/sample/cal.rb#L105" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-addmon_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File sample/cal.rb, line 105</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">addmon</span>(<span class="ruby-identifier">y</span>, <span class="ruby-identifier">m</span>, <span class="ruby-identifier">n</span>)
+  <span class="ruby-identifier">y</span>, <span class="ruby-identifier">m</span> = (<span class="ruby-identifier">y</span> <span class="ruby-operator">*</span> <span class="ruby-number">12</span> <span class="ruby-operator">+</span> (<span class="ruby-identifier">m</span> <span class="ruby-operator">-</span> <span class="ruby-number">1</span>) <span class="ruby-operator">+</span> <span class="ruby-identifier">n</span>).<span class="ruby-identifier">divmod</span>(<span class="ruby-number">12</span>)
+  <span class="ruby-keyword">return</span> <span class="ruby-identifier">y</span>, <span class="ruby-identifier">m</span> <span class="ruby-operator">+</span> <span class="ruby-number">1</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-block">
+            
+              <b>block</b>(xs, n)
+            
+            <a href="../classes/Cal.html#method-i-block" name="method-i-block" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-block_source')" id="l_method-i-block_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/352d72719b2918cca32eb07d086b90fd3f5dad32/sample/cal.rb#L93" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-block_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File sample/cal.rb, line 93</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">block</span>(<span class="ruby-identifier">xs</span>, <span class="ruby-identifier">n</span>)
+  <span class="ruby-identifier">stack</span>(<span class="ruby-identifier">group</span>(<span class="ruby-identifier">xs</span>, <span class="ruby-identifier">n</span>).<span class="ruby-identifier">collect</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">ys</span><span class="ruby-operator">|</span> <span class="ruby-identifier">trans</span>(<span class="ruby-identifier">ys</span>).<span class="ruby-identifier">collect</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">zs</span><span class="ruby-operator">|</span> <span class="ruby-identifier">zs</span>.<span class="ruby-identifier">join</span>(<span class="ruby-string">&#39;  &#39;</span>)}})
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-group">
+            
+              <b>group</b>(xs, n)
+            
+            <a href="../classes/Cal.html#method-i-group" name="method-i-group" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-group_source')" id="l_method-i-group_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/352d72719b2918cca32eb07d086b90fd3f5dad32/sample/cal.rb#L81" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-group_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File sample/cal.rb, line 81</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">group</span>(<span class="ruby-identifier">xs</span>, <span class="ruby-identifier">n</span>)
+  (<span class="ruby-number">0</span><span class="ruby-operator">..</span><span class="ruby-identifier">xs</span>.<span class="ruby-identifier">size</span> <span class="ruby-operator">/</span> <span class="ruby-identifier">n</span> <span class="ruby-operator">-</span> <span class="ruby-number">1</span>).<span class="ruby-identifier">collect</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">i</span><span class="ruby-operator">|</span> <span class="ruby-identifier">xs</span>[<span class="ruby-identifier">i</span> <span class="ruby-operator">*</span> <span class="ruby-identifier">n</span>, <span class="ruby-identifier">n</span>]}
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-monthly">
+            
+              <b>monthly</b>(y, m)
+            
+            <a href="../classes/Cal.html#method-i-monthly" name="method-i-monthly" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-monthly_source')" id="l_method-i-monthly_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/352d72719b2918cca32eb07d086b90fd3f5dad32/sample/cal.rb#L101" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-monthly_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File sample/cal.rb, line 101</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">monthly</span>(<span class="ruby-identifier">y</span>, <span class="ruby-identifier">m</span>)
+  <span class="ruby-identifier">unlines</span>(<span class="ruby-identifier">pict</span>(<span class="ruby-identifier">y</span>, <span class="ruby-identifier">m</span>))
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-opt_c">
+            
+              <b>opt_c</b>(arg=DEFAULT_START)
+            
+            <a href="../classes/Cal.html#method-i-opt_c" name="method-i-opt_c" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-opt_c_source')" id="l_method-i-opt_c_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/352d72719b2918cca32eb07d086b90fd3f5dad32/sample/cal.rb#L44" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-opt_c_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File sample/cal.rb, line 44</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">opt_c</span>(<span class="ruby-identifier">arg</span>=<span class="ruby-constant">DEFAULT_START</span>) <span class="ruby-ivar">@start</span> = <span class="ruby-constant">START</span>[<span class="ruby-identifier">arg</span>] <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-opt_j">
+            
+              <b>opt_j</b>(flag=false)
+            
+            <a href="../classes/Cal.html#method-i-opt_j" name="method-i-opt_j" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-opt_j_source')" id="l_method-i-opt_j_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/352d72719b2918cca32eb07d086b90fd3f5dad32/sample/cal.rb#L39" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-opt_j_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File sample/cal.rb, line 39</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">opt_j</span>(<span class="ruby-identifier">flag</span>=<span class="ruby-keyword">false</span>) <span class="ruby-ivar">@opt_j</span> = <span class="ruby-identifier">flag</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-opt_m">
+            
+              <b>opt_m</b>(flag=false)
+            
+            <a href="../classes/Cal.html#method-i-opt_m" name="method-i-opt_m" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-opt_m_source')" id="l_method-i-opt_m_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/352d72719b2918cca32eb07d086b90fd3f5dad32/sample/cal.rb#L40" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-opt_m_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File sample/cal.rb, line 40</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">opt_m</span>(<span class="ruby-identifier">flag</span>=<span class="ruby-keyword">false</span>) <span class="ruby-ivar">@opt_m</span> = <span class="ruby-identifier">flag</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-opt_t">
+            
+              <b>opt_t</b>(flag=false)
+            
+            <a href="../classes/Cal.html#method-i-opt_t" name="method-i-opt_t" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-opt_t_source')" id="l_method-i-opt_t_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/352d72719b2918cca32eb07d086b90fd3f5dad32/sample/cal.rb#L41" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-opt_t_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File sample/cal.rb, line 41</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">opt_t</span>(<span class="ruby-identifier">flag</span>=<span class="ruby-keyword">false</span>) <span class="ruby-ivar">@opt_t</span> = <span class="ruby-identifier">flag</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-opt_y">
+            
+              <b>opt_y</b>(flag=false)
+            
+            <a href="../classes/Cal.html#method-i-opt_y" name="method-i-opt_y" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-opt_y_source')" id="l_method-i-opt_y_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/352d72719b2918cca32eb07d086b90fd3f5dad32/sample/cal.rb#L42" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-opt_y_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File sample/cal.rb, line 42</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">opt_y</span>(<span class="ruby-identifier">flag</span>=<span class="ruby-keyword">false</span>) <span class="ruby-ivar">@opt_y</span> = <span class="ruby-identifier">flag</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-pict">
+            
+              <b>pict</b>(y, m)
+            
+            <a href="../classes/Cal.html#method-i-pict" name="method-i-pict" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-pict_source')" id="l_method-i-pict_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/352d72719b2918cca32eb07d086b90fd3f5dad32/sample/cal.rb#L55" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-pict_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File sample/cal.rb, line 55</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">pict</span>(<span class="ruby-identifier">y</span>, <span class="ruby-identifier">m</span>)
+  <span class="ruby-identifier">d</span> = (<span class="ruby-number">1</span><span class="ruby-operator">..</span><span class="ruby-number">31</span>).<span class="ruby-identifier">detect</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">x</span><span class="ruby-operator">|</span> <span class="ruby-constant">Date</span>.<span class="ruby-identifier">valid_date?</span>(<span class="ruby-identifier">y</span>, <span class="ruby-identifier">m</span>, <span class="ruby-identifier">x</span>, <span class="ruby-ivar">@start</span>)}
+  <span class="ruby-identifier">fi</span> = <span class="ruby-constant">Date</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">y</span>, <span class="ruby-identifier">m</span>, <span class="ruby-identifier">d</span>, <span class="ruby-ivar">@start</span>)
+  <span class="ruby-identifier">fi</span> <span class="ruby-operator">-=</span> (<span class="ruby-identifier">fi</span>.<span class="ruby-identifier">jd</span> <span class="ruby-operator">-</span> <span class="ruby-ivar">@k</span> <span class="ruby-operator">+</span> <span class="ruby-number">1</span>) <span class="ruby-operator">%</span> <span class="ruby-number">7</span>
+
+  <span class="ruby-identifier">ve</span>  = (<span class="ruby-identifier">fi</span><span class="ruby-operator">..</span><span class="ruby-identifier">fi</span> <span class="ruby-operator">+</span>  <span class="ruby-number">6</span>).<span class="ruby-identifier">collect</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">cu</span><span class="ruby-operator">|</span>
+    <span class="ruby-node">%w(S M Tu W Th F S)</span>[<span class="ruby-identifier">cu</span>.<span class="ruby-identifier">wday</span>]
+  }
+  <span class="ruby-identifier">ve</span> <span class="ruby-operator">+=</span> (<span class="ruby-identifier">fi</span><span class="ruby-operator">..</span><span class="ruby-identifier">fi</span> <span class="ruby-operator">+</span> <span class="ruby-number">41</span>).<span class="ruby-identifier">collect</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">cu</span><span class="ruby-operator">|</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">cu</span>.<span class="ruby-identifier">mon</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">m</span> <span class="ruby-keyword">then</span> <span class="ruby-identifier">cu</span>.<span class="ruby-identifier">send</span>(<span class="ruby-ivar">@da</span>) <span class="ruby-keyword">end</span>.<span class="ruby-identifier">to_s</span>
+  }
+
+  <span class="ruby-identifier">ve</span> = <span class="ruby-identifier">ve</span>.<span class="ruby-identifier">collect</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">e</span><span class="ruby-operator">|</span> <span class="ruby-identifier">e</span>.<span class="ruby-identifier">rjust</span>(<span class="ruby-ivar">@dw</span>)}
+
+  <span class="ruby-identifier">gr</span> = <span class="ruby-identifier">group</span>(<span class="ruby-identifier">ve</span>, <span class="ruby-number">7</span>)
+  <span class="ruby-identifier">gr</span> = <span class="ruby-identifier">trans</span>(<span class="ruby-identifier">gr</span>) <span class="ruby-keyword">if</span> <span class="ruby-ivar">@opt_t</span>
+  <span class="ruby-identifier">ta</span> = <span class="ruby-identifier">gr</span>.<span class="ruby-identifier">collect</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">xs</span><span class="ruby-operator">|</span> <span class="ruby-identifier">xs</span>.<span class="ruby-identifier">join</span>(<span class="ruby-string">&#39; &#39;</span>)}
+
+  <span class="ruby-identifier">ca</span> = <span class="ruby-node">%w(January February March April May June July
+          August September October November December)</span>[<span class="ruby-identifier">m</span> <span class="ruby-operator">-</span> <span class="ruby-number">1</span>]
+  <span class="ruby-identifier">ca</span> = <span class="ruby-identifier">ca</span> <span class="ruby-operator">+</span> <span class="ruby-string">&#39; &#39;</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">y</span>.<span class="ruby-identifier">to_s</span> <span class="ruby-keyword">if</span> <span class="ruby-operator">!</span><span class="ruby-ivar">@opt_y</span>
+  <span class="ruby-identifier">ca</span> = <span class="ruby-identifier">ca</span>.<span class="ruby-identifier">center</span>(<span class="ruby-ivar">@mw</span>)
+
+  <span class="ruby-identifier">ta</span>.<span class="ruby-identifier">unshift</span>(<span class="ruby-identifier">ca</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-print">
+            
+              <b>print</b>(y, m)
+            
+            <a href="../classes/Cal.html#method-i-print" name="method-i-print" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-print_source')" id="l_method-i-print_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/352d72719b2918cca32eb07d086b90fd3f5dad32/sample/cal.rb#L115" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-print_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File sample/cal.rb, line 115</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">print</span>(<span class="ruby-identifier">y</span>, <span class="ruby-identifier">m</span>)
+  <span class="ruby-identifier">set_params</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-ivar">@opt_y</span> <span class="ruby-keyword">then</span> <span class="ruby-identifier">yearly</span>(<span class="ruby-identifier">y</span>) <span class="ruby-keyword">else</span> <span class="ruby-identifier">monthly</span>(<span class="ruby-identifier">y</span>, <span class="ruby-identifier">m</span>) <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-set_params">
+            
+              <b>set_params</b>()
+            
+            <a href="../classes/Cal.html#method-i-set_params" name="method-i-set_params" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-set_params_source')" id="l_method-i-set_params_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/352d72719b2918cca32eb07d086b90fd3f5dad32/sample/cal.rb#L46" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-set_params_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File sample/cal.rb, line 46</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">set_params</span>
+  <span class="ruby-ivar">@dw</span> = <span class="ruby-keyword">if</span> <span class="ruby-ivar">@opt_j</span> <span class="ruby-keyword">then</span> <span class="ruby-number">3</span> <span class="ruby-keyword">else</span> <span class="ruby-number">2</span> <span class="ruby-keyword">end</span>
+  <span class="ruby-ivar">@mw</span> = (<span class="ruby-ivar">@dw</span> <span class="ruby-operator">+</span> <span class="ruby-number">1</span>) <span class="ruby-operator">*</span> <span class="ruby-number">7</span> <span class="ruby-operator">-</span> <span class="ruby-number">1</span>
+  <span class="ruby-ivar">@mn</span> = <span class="ruby-keyword">if</span> <span class="ruby-ivar">@opt_j</span> <span class="ruby-keyword">then</span> <span class="ruby-number">2</span> <span class="ruby-keyword">else</span> <span class="ruby-number">3</span> <span class="ruby-keyword">end</span>
+  <span class="ruby-ivar">@tw</span> = (<span class="ruby-ivar">@mw</span> <span class="ruby-operator">+</span> <span class="ruby-number">2</span>) <span class="ruby-operator">*</span> <span class="ruby-ivar">@mn</span> <span class="ruby-operator">-</span> <span class="ruby-number">2</span>
+  <span class="ruby-ivar">@k</span>  = <span class="ruby-keyword">if</span> <span class="ruby-ivar">@opt_m</span> <span class="ruby-keyword">then</span> <span class="ruby-number">1</span> <span class="ruby-keyword">else</span> <span class="ruby-number">0</span> <span class="ruby-keyword">end</span>
+  <span class="ruby-ivar">@da</span> = <span class="ruby-keyword">if</span> <span class="ruby-ivar">@opt_j</span> <span class="ruby-keyword">then</span> <span class="ruby-value">:yday</span> <span class="ruby-keyword">else</span> <span class="ruby-value">:mday</span> <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-stack">
+            
+              <b>stack</b>(xs)
+            
+            <a href="../classes/Cal.html#method-i-stack" name="method-i-stack" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-stack_source')" id="l_method-i-stack_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/352d72719b2918cca32eb07d086b90fd3f5dad32/sample/cal.rb#L89" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-stack_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File sample/cal.rb, line 89</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">stack</span>(<span class="ruby-identifier">xs</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">xs</span>.<span class="ruby-identifier">empty?</span> <span class="ruby-keyword">then</span> [] <span class="ruby-keyword">else</span> <span class="ruby-identifier">xs</span>[<span class="ruby-number">0</span>] <span class="ruby-operator">+</span> <span class="ruby-identifier">stack</span>(<span class="ruby-identifier">xs</span>[<span class="ruby-number">1</span><span class="ruby-operator">..</span><span class="ruby-number">-1</span>]) <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-trans">
+            
+              <b>trans</b>(xs)
+            
+            <a href="../classes/Cal.html#method-i-trans" name="method-i-trans" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-trans_source')" id="l_method-i-trans_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/352d72719b2918cca32eb07d086b90fd3f5dad32/sample/cal.rb#L85" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-trans_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File sample/cal.rb, line 85</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">trans</span>(<span class="ruby-identifier">xs</span>)
+  (<span class="ruby-number">0</span><span class="ruby-operator">..</span><span class="ruby-identifier">xs</span>[<span class="ruby-number">0</span>].<span class="ruby-identifier">size</span> <span class="ruby-operator">-</span> <span class="ruby-number">1</span>).<span class="ruby-identifier">collect</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">i</span><span class="ruby-operator">|</span> <span class="ruby-identifier">xs</span>.<span class="ruby-identifier">collect</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">x</span><span class="ruby-operator">|</span> <span class="ruby-identifier">x</span>[<span class="ruby-identifier">i</span>]}}
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-unlines">
+            
+              <b>unlines</b>(xs)
+            
+            <a href="../classes/Cal.html#method-i-unlines" name="method-i-unlines" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-unlines_source')" id="l_method-i-unlines_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/352d72719b2918cca32eb07d086b90fd3f5dad32/sample/cal.rb#L97" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-unlines_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File sample/cal.rb, line 97</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">unlines</span>(<span class="ruby-identifier">xs</span>)
+  <span class="ruby-identifier">xs</span>.<span class="ruby-identifier">collect</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">x</span><span class="ruby-operator">|</span> <span class="ruby-identifier">x</span> <span class="ruby-operator">+</span> <span class="ruby-string">&quot;\n&quot;</span>}.<span class="ruby-identifier">join</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-yearly">
+            
+              <b>yearly</b>(y)
+            
+            <a href="../classes/Cal.html#method-i-yearly" name="method-i-yearly" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-yearly_source')" id="l_method-i-yearly_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/352d72719b2918cca32eb07d086b90fd3f5dad32/sample/cal.rb#L110" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-yearly_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File sample/cal.rb, line 110</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">yearly</span>(<span class="ruby-identifier">y</span>)
+  <span class="ruby-identifier">y</span>.<span class="ruby-identifier">to_s</span>.<span class="ruby-identifier">center</span>(<span class="ruby-ivar">@tw</span>) <span class="ruby-operator">+</span> <span class="ruby-string">&quot;\n\n&quot;</span> <span class="ruby-operator">+</span>
+    <span class="ruby-identifier">unlines</span>(<span class="ruby-identifier">block</span>((<span class="ruby-number">0</span><span class="ruby-operator">..</span><span class="ruby-number">11</span>).<span class="ruby-identifier">collect</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">n</span><span class="ruby-operator">|</span> <span class="ruby-identifier">pict</span>(<span class="ruby-operator">*</span><span class="ruby-identifier">addmon</span>(<span class="ruby-identifier">y</span>, <span class="ruby-number">1</span>, <span class="ruby-identifier">n</span>))}, <span class="ruby-ivar">@mn</span>)) <span class="ruby-operator">+</span> <span class="ruby-string">&quot;\n&quot;</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                    </div>
+
+    </div>
+  </body>
+</html>    

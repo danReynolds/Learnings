@@ -1,0 +1,1133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>Tk::BLT::Winop</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="../../../css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../../../css/main.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../../../css/github.css" type="text/css" media="screen" />
+<script src="../../../js/jquery-1.3.2.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../../js/jquery-effect.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../../js/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+
+<body>     
+    <div class="banner">
+        
+        <h1>
+            <span class="type">Module</span> 
+            Tk::BLT::Winop 
+            
+        </h1>
+        <ul class="files">
+            
+            <li><a href="../../../files/ext/tk/lib/tkextlib/blt/winop_rb.html">ext/tk/lib/tkextlib/blt/winop.rb</a></li>
+            
+        </ul>
+    </div>
+    <div id="bodyContent">
+        <div id="content">
+  
+
+
+  
+
+
+  
+  
+
+
+  
+
+
+  
+    <!-- Method ref -->
+    <div class="sectiontitle">Methods</div>
+    <dl class="methods">
+      
+        <dt>C</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-changes">changes</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-colormap">colormap</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-convolve">convolve</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>I</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-image_convolve">image_convolve</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-image_gradient">image_gradient</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-image_read_jpeg">image_read_jpeg</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-image_resample">image_resample</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-image_rotate">image_rotate</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-image_snap">image_snap</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-image_subsample">image_subsample</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>L</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-lower">lower</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>M</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-map">map</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-move">move</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>Q</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-quantize">quantize</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-query">query</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>R</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-raise">raise</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-read_jpeg">read_jpeg</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-resample">resample</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>S</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-snap">snap</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-subsample">subsample</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>U</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-unmap">unmap</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>W</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-warpto">warpto</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+    </dl>
+  
+
+  
+
+
+
+  
+
+    
+
+    
+
+    
+      <!-- Section constants -->
+      <div class="sectiontitle">Constants</div>
+      <table border='0' cellpadding='5'>
+        
+          <tr valign='top'>
+            <td class="attr-name">TkCommandNames</td>
+            <td>=</td>
+            <td class="attr-value">[&#39;::blt::winop&#39;.freeze].freeze</td>
+          </tr>
+          
+            <tr valign='top'>
+              <td>&nbsp;</td>
+              <td colspan="2" class="attr-desc"></td>
+            </tr>
+          
+        
+      </table>
+    
+
+
+    
+
+
+    <!-- Methods -->
+        
+      <div class="sectiontitle">Instance Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-i-changes">
+            
+              <b>changes</b>(win)
+            
+            <a href="../../../classes/Tk/BLT/Winop.html#method-i-changes" name="method-i-changes" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-changes_source')" id="l_method-i-changes_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/287a34ae0dfc23e4158f67cb7783d239f202c368/ext/tk/lib/tkextlib/blt/winop.rb#L19" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-changes_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/blt/winop.rb, line 19</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">changes</span>(<span class="ruby-identifier">win</span>)
+  <span class="ruby-identifier">tk_call</span>(<span class="ruby-string">&#39;::blt::winop&#39;</span>, <span class="ruby-string">&#39;changes&#39;</span>, <span class="ruby-identifier">win</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-colormap">
+            
+              <b>colormap</b>(win)
+            
+            <a href="../../../classes/Tk/BLT/Winop.html#method-i-colormap" name="method-i-colormap" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-colormap_source')" id="l_method-i-colormap_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/287a34ae0dfc23e4158f67cb7783d239f202c368/ext/tk/lib/tkextlib/blt/winop.rb#L23" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-colormap_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/blt/winop.rb, line 23</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">colormap</span>(<span class="ruby-identifier">win</span>)
+  <span class="ruby-constant">Hash</span>[<span class="ruby-operator">*</span><span class="ruby-identifier">list</span>(<span class="ruby-identifier">tk_call</span>(<span class="ruby-string">&#39;::blt::winop&#39;</span>, <span class="ruby-string">&#39;colormap&#39;</span>, <span class="ruby-identifier">win</span>))]
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-convolve">
+            
+              <b>convolve</b>(src, dest, filter)
+            
+            <a href="../../../classes/Tk/BLT/Winop.html#method-i-convolve" name="method-i-convolve" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-convolve_source')" id="l_method-i-convolve_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/287a34ae0dfc23e4158f67cb7783d239f202c368/ext/tk/lib/tkextlib/blt/winop.rb#L27" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-convolve_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/blt/winop.rb, line 27</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">convolve</span>(<span class="ruby-identifier">src</span>, <span class="ruby-identifier">dest</span>, <span class="ruby-identifier">filter</span>)
+  <span class="ruby-identifier">tk_call</span>(<span class="ruby-string">&#39;::blt::winop&#39;</span>, <span class="ruby-string">&#39;convolve&#39;</span>, <span class="ruby-identifier">src</span>, <span class="ruby-identifier">dest</span>, <span class="ruby-identifier">filter</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-image_convolve">
+            
+              <b>image_convolve</b>(src, dest, filter)
+            
+            <a href="../../../classes/Tk/BLT/Winop.html#method-i-image_convolve" name="method-i-image_convolve" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-image_convolve_source')" id="l_method-i-image_convolve_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/287a34ae0dfc23e4158f67cb7783d239f202c368/ext/tk/lib/tkextlib/blt/winop.rb#L31" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-image_convolve_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/blt/winop.rb, line 31</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">image_convolve</span>(<span class="ruby-identifier">src</span>, <span class="ruby-identifier">dest</span>, <span class="ruby-identifier">filter</span>)
+  <span class="ruby-identifier">tk_call</span>(<span class="ruby-string">&#39;::blt::winop&#39;</span>, <span class="ruby-string">&#39;image&#39;</span>, <span class="ruby-string">&#39;convolve&#39;</span>, <span class="ruby-identifier">src</span>, <span class="ruby-identifier">dest</span>, <span class="ruby-identifier">filter</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-image_gradient">
+            
+              <b>image_gradient</b>(photo, left, right, type)
+            
+            <a href="../../../classes/Tk/BLT/Winop.html#method-i-image_gradient" name="method-i-image_gradient" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-image_gradient_source')" id="l_method-i-image_gradient_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/287a34ae0dfc23e4158f67cb7783d239f202c368/ext/tk/lib/tkextlib/blt/winop.rb#L34" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-image_gradient_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/blt/winop.rb, line 34</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">image_gradient</span>(<span class="ruby-identifier">photo</span>, <span class="ruby-identifier">left</span>, <span class="ruby-identifier">right</span>, <span class="ruby-identifier">type</span>)
+  <span class="ruby-identifier">tk_call</span>(<span class="ruby-string">&#39;::blt::winop&#39;</span>, <span class="ruby-string">&#39;image&#39;</span>, <span class="ruby-string">&#39;gradient&#39;</span>, <span class="ruby-identifier">photo</span>, <span class="ruby-identifier">left</span>, <span class="ruby-identifier">right</span>, <span class="ruby-identifier">type</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-image_read_jpeg">
+            
+              <b>image_read_jpeg</b>(file, photo)
+            
+            <a href="../../../classes/Tk/BLT/Winop.html#method-i-image_read_jpeg" name="method-i-image_read_jpeg" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-image_read_jpeg_source')" id="l_method-i-image_read_jpeg_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/287a34ae0dfc23e4158f67cb7783d239f202c368/ext/tk/lib/tkextlib/blt/winop.rb#L37" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-image_read_jpeg_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/blt/winop.rb, line 37</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">image_read_jpeg</span>(<span class="ruby-identifier">file</span>, <span class="ruby-identifier">photo</span>)
+  <span class="ruby-identifier">tk_call</span>(<span class="ruby-string">&#39;::blt::winop&#39;</span>, <span class="ruby-string">&#39;image&#39;</span>, <span class="ruby-string">&#39;readjpeg&#39;</span>, <span class="ruby-identifier">file</span>, <span class="ruby-identifier">photo</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-image_resample">
+            
+              <b>image_resample</b>(src, dest, horiz_filter=None, vert_filter=None)
+            
+            <a href="../../../classes/Tk/BLT/Winop.html#method-i-image_resample" name="method-i-image_resample" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-image_resample_source')" id="l_method-i-image_resample_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/287a34ae0dfc23e4158f67cb7783d239f202c368/ext/tk/lib/tkextlib/blt/winop.rb#L40" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-image_resample_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/blt/winop.rb, line 40</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">image_resample</span>(<span class="ruby-identifier">src</span>, <span class="ruby-identifier">dest</span>, <span class="ruby-identifier">horiz_filter</span>=<span class="ruby-constant">None</span>, <span class="ruby-identifier">vert_filter</span>=<span class="ruby-constant">None</span>)
+  <span class="ruby-identifier">tk_call</span>(<span class="ruby-string">&#39;::blt::winop&#39;</span>, <span class="ruby-string">&#39;image&#39;</span>, <span class="ruby-string">&#39;resample&#39;</span>,
+          <span class="ruby-identifier">src</span>, <span class="ruby-identifier">dest</span>, <span class="ruby-identifier">horiz_filter</span>, <span class="ruby-identifier">vert_filter</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-image_rotate">
+            
+              <b>image_rotate</b>(src, dest, angle)
+            
+            <a href="../../../classes/Tk/BLT/Winop.html#method-i-image_rotate" name="method-i-image_rotate" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-image_rotate_source')" id="l_method-i-image_rotate_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/287a34ae0dfc23e4158f67cb7783d239f202c368/ext/tk/lib/tkextlib/blt/winop.rb#L44" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-image_rotate_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/blt/winop.rb, line 44</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">image_rotate</span>(<span class="ruby-identifier">src</span>, <span class="ruby-identifier">dest</span>, <span class="ruby-identifier">angle</span>)
+  <span class="ruby-identifier">tk_call</span>(<span class="ruby-string">&#39;::blt::winop&#39;</span>, <span class="ruby-string">&#39;image&#39;</span>, <span class="ruby-string">&#39;rotate&#39;</span>, <span class="ruby-identifier">src</span>, <span class="ruby-identifier">dest</span>, <span class="ruby-identifier">angle</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-image_snap">
+            
+              <b>image_snap</b>(win, photo, width=None, height=None)
+            
+            <a href="../../../classes/Tk/BLT/Winop.html#method-i-image_snap" name="method-i-image_snap" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-image_snap_source')" id="l_method-i-image_snap_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/287a34ae0dfc23e4158f67cb7783d239f202c368/ext/tk/lib/tkextlib/blt/winop.rb#L47" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-image_snap_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/blt/winop.rb, line 47</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">image_snap</span>(<span class="ruby-identifier">win</span>, <span class="ruby-identifier">photo</span>, <span class="ruby-identifier">width</span>=<span class="ruby-constant">None</span>, <span class="ruby-identifier">height</span>=<span class="ruby-constant">None</span>)
+  <span class="ruby-identifier">tk_call</span>(<span class="ruby-string">&#39;::blt::winop&#39;</span>, <span class="ruby-string">&#39;image&#39;</span>, <span class="ruby-string">&#39;snap&#39;</span>, <span class="ruby-identifier">win</span>, <span class="ruby-identifier">photo</span>, <span class="ruby-identifier">width</span>, <span class="ruby-identifier">height</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-image_subsample">
+            
+              <b>image_subsample</b>(src, dest, x, y, width, height, horiz_filter=None, vert_filter=None)
+            
+            <a href="../../../classes/Tk/BLT/Winop.html#method-i-image_subsample" name="method-i-image_subsample" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-image_subsample_source')" id="l_method-i-image_subsample_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/287a34ae0dfc23e4158f67cb7783d239f202c368/ext/tk/lib/tkextlib/blt/winop.rb#L50" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-image_subsample_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/blt/winop.rb, line 50</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">image_subsample</span>(<span class="ruby-identifier">src</span>, <span class="ruby-identifier">dest</span>, <span class="ruby-identifier">x</span>, <span class="ruby-identifier">y</span>, <span class="ruby-identifier">width</span>, <span class="ruby-identifier">height</span>,
+                    <span class="ruby-identifier">horiz_filter</span>=<span class="ruby-constant">None</span>, <span class="ruby-identifier">vert_filter</span>=<span class="ruby-constant">None</span>)
+  <span class="ruby-identifier">tk_call</span>(<span class="ruby-string">&#39;::blt::winop&#39;</span>, <span class="ruby-string">&#39;image&#39;</span>, <span class="ruby-string">&#39;subsample&#39;</span>,
+          <span class="ruby-identifier">src</span>, <span class="ruby-identifier">dest</span>, <span class="ruby-identifier">x</span>, <span class="ruby-identifier">y</span>, <span class="ruby-identifier">width</span>, <span class="ruby-identifier">height</span>, <span class="ruby-identifier">horiz_filter</span>, <span class="ruby-identifier">vert_filter</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-lower">
+            
+              <b>lower</b>(*wins)
+            
+            <a href="../../../classes/Tk/BLT/Winop.html#method-i-lower" name="method-i-lower" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-lower_source')" id="l_method-i-lower_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/287a34ae0dfc23e4158f67cb7783d239f202c368/ext/tk/lib/tkextlib/blt/winop.rb#L83" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-lower_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/blt/winop.rb, line 83</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">lower</span>(<span class="ruby-operator">*</span><span class="ruby-identifier">wins</span>)
+  <span class="ruby-identifier">tk_call</span>(<span class="ruby-string">&#39;::blt::winop&#39;</span>, <span class="ruby-string">&#39;lower&#39;</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">wins</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-map">
+            
+              <b>map</b>(*wins)
+            
+            <a href="../../../classes/Tk/BLT/Winop.html#method-i-map" name="method-i-map" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-map_source')" id="l_method-i-map_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/287a34ae0dfc23e4158f67cb7783d239f202c368/ext/tk/lib/tkextlib/blt/winop.rb#L87" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-map_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/blt/winop.rb, line 87</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">map</span>(<span class="ruby-operator">*</span><span class="ruby-identifier">wins</span>)
+  <span class="ruby-identifier">tk_call</span>(<span class="ruby-string">&#39;::blt::winop&#39;</span>, <span class="ruby-string">&#39;map&#39;</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">wins</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-move">
+            
+              <b>move</b>(win, x, y)
+            
+            <a href="../../../classes/Tk/BLT/Winop.html#method-i-move" name="method-i-move" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-move_source')" id="l_method-i-move_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/287a34ae0dfc23e4158f67cb7783d239f202c368/ext/tk/lib/tkextlib/blt/winop.rb#L95" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-move_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/blt/winop.rb, line 95</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">move</span>(<span class="ruby-identifier">win</span>, <span class="ruby-identifier">x</span>, <span class="ruby-identifier">y</span>)
+  <span class="ruby-identifier">tk_call</span>(<span class="ruby-string">&#39;::blt::winop&#39;</span>, <span class="ruby-string">&#39;move&#39;</span>, <span class="ruby-identifier">win</span>, <span class="ruby-identifier">x</span>, <span class="ruby-identifier">y</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-quantize">
+            
+              <b>quantize</b>(src, dest, colors)
+            
+            <a href="../../../classes/Tk/BLT/Winop.html#method-i-quantize" name="method-i-quantize" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-quantize_source')" id="l_method-i-quantize_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/287a34ae0dfc23e4158f67cb7783d239f202c368/ext/tk/lib/tkextlib/blt/winop.rb#L56" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-quantize_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/blt/winop.rb, line 56</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">quantize</span>(<span class="ruby-identifier">src</span>, <span class="ruby-identifier">dest</span>, <span class="ruby-identifier">colors</span>)
+  <span class="ruby-identifier">tk_call</span>(<span class="ruby-string">&#39;::blt::winop&#39;</span>, <span class="ruby-string">&#39;quantize&#39;</span>, <span class="ruby-identifier">src</span>, <span class="ruby-identifier">dest</span>, <span class="ruby-identifier">colors</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-query">
+            
+              <b>query</b>()
+            
+            <a href="../../../classes/Tk/BLT/Winop.html#method-i-query" name="method-i-query" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-query_source')" id="l_method-i-query_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/287a34ae0dfc23e4158f67cb7783d239f202c368/ext/tk/lib/tkextlib/blt/winop.rb#L60" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-query_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/blt/winop.rb, line 60</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">query</span>()
+  <span class="ruby-identifier">tk_call</span>(<span class="ruby-string">&#39;::blt::winop&#39;</span>, <span class="ruby-string">&#39;query&#39;</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-raise">
+            
+              <b>raise</b>(*wins)
+            
+            <a href="../../../classes/Tk/BLT/Winop.html#method-i-raise" name="method-i-raise" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-raise_source')" id="l_method-i-raise_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/287a34ae0dfc23e4158f67cb7783d239f202c368/ext/tk/lib/tkextlib/blt/winop.rb#L79" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-raise_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/blt/winop.rb, line 79</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">raise</span>(<span class="ruby-operator">*</span><span class="ruby-identifier">wins</span>)
+  <span class="ruby-identifier">tk_call</span>(<span class="ruby-string">&#39;::blt::winop&#39;</span>, <span class="ruby-string">&#39;raise&#39;</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">wins</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-read_jpeg">
+            
+              <b>read_jpeg</b>(file, photo)
+            
+            <a href="../../../classes/Tk/BLT/Winop.html#method-i-read_jpeg" name="method-i-read_jpeg" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-read_jpeg_source')" id="l_method-i-read_jpeg_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/287a34ae0dfc23e4158f67cb7783d239f202c368/ext/tk/lib/tkextlib/blt/winop.rb#L64" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-read_jpeg_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/blt/winop.rb, line 64</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">read_jpeg</span>(<span class="ruby-identifier">file</span>, <span class="ruby-identifier">photo</span>)
+  <span class="ruby-identifier">tk_call</span>(<span class="ruby-string">&#39;::blt::winop&#39;</span>, <span class="ruby-string">&#39;readjpeg&#39;</span>, <span class="ruby-identifier">file</span>, <span class="ruby-identifier">photo</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-resample">
+            
+              <b>resample</b>(src, dest, horiz_filter=None, vert_filter=None)
+            
+            <a href="../../../classes/Tk/BLT/Winop.html#method-i-resample" name="method-i-resample" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-resample_source')" id="l_method-i-resample_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/287a34ae0dfc23e4158f67cb7783d239f202c368/ext/tk/lib/tkextlib/blt/winop.rb#L68" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-resample_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/blt/winop.rb, line 68</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">resample</span>(<span class="ruby-identifier">src</span>, <span class="ruby-identifier">dest</span>, <span class="ruby-identifier">horiz_filter</span>=<span class="ruby-constant">None</span>, <span class="ruby-identifier">vert_filter</span>=<span class="ruby-constant">None</span>)
+  <span class="ruby-identifier">tk_call</span>(<span class="ruby-string">&#39;::blt::winop&#39;</span>, <span class="ruby-string">&#39;resample&#39;</span>,
+          <span class="ruby-identifier">src</span>, <span class="ruby-identifier">dest</span>, <span class="ruby-identifier">horiz_filter</span>, <span class="ruby-identifier">vert_filter</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-snap">
+            
+              <b>snap</b>(win, photo)
+            
+            <a href="../../../classes/Tk/BLT/Winop.html#method-i-snap" name="method-i-snap" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-snap_source')" id="l_method-i-snap_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/287a34ae0dfc23e4158f67cb7783d239f202c368/ext/tk/lib/tkextlib/blt/winop.rb#L99" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-snap_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/blt/winop.rb, line 99</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">snap</span>(<span class="ruby-identifier">win</span>, <span class="ruby-identifier">photo</span>)
+  <span class="ruby-identifier">tk_call</span>(<span class="ruby-string">&#39;::blt::winop&#39;</span>, <span class="ruby-string">&#39;snap&#39;</span>, <span class="ruby-identifier">win</span>, <span class="ruby-identifier">photo</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-subsample">
+            
+              <b>subsample</b>(src, dest, x, y, width, height, horiz_filter=None, vert_filter=None)
+            
+            <a href="../../../classes/Tk/BLT/Winop.html#method-i-subsample" name="method-i-subsample" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-subsample_source')" id="l_method-i-subsample_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/287a34ae0dfc23e4158f67cb7783d239f202c368/ext/tk/lib/tkextlib/blt/winop.rb#L73" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-subsample_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/blt/winop.rb, line 73</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">subsample</span>(<span class="ruby-identifier">src</span>, <span class="ruby-identifier">dest</span>, <span class="ruby-identifier">x</span>, <span class="ruby-identifier">y</span>, <span class="ruby-identifier">width</span>, <span class="ruby-identifier">height</span>,
+              <span class="ruby-identifier">horiz_filter</span>=<span class="ruby-constant">None</span>, <span class="ruby-identifier">vert_filter</span>=<span class="ruby-constant">None</span>)
+  <span class="ruby-identifier">tk_call</span>(<span class="ruby-string">&#39;::blt::winop&#39;</span>, <span class="ruby-string">&#39;subsample&#39;</span>,
+          <span class="ruby-identifier">src</span>, <span class="ruby-identifier">dest</span>, <span class="ruby-identifier">x</span>, <span class="ruby-identifier">y</span>, <span class="ruby-identifier">width</span>, <span class="ruby-identifier">height</span>, <span class="ruby-identifier">horiz_filter</span>, <span class="ruby-identifier">vert_filter</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-unmap">
+            
+              <b>unmap</b>(*wins)
+            
+            <a href="../../../classes/Tk/BLT/Winop.html#method-i-unmap" name="method-i-unmap" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-unmap_source')" id="l_method-i-unmap_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/287a34ae0dfc23e4158f67cb7783d239f202c368/ext/tk/lib/tkextlib/blt/winop.rb#L91" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-unmap_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/blt/winop.rb, line 91</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">unmap</span>(<span class="ruby-operator">*</span><span class="ruby-identifier">wins</span>)
+  <span class="ruby-identifier">tk_call</span>(<span class="ruby-string">&#39;::blt::winop&#39;</span>, <span class="ruby-string">&#39;unmap&#39;</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">wins</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-warpto">
+            
+              <b>warpto</b>(win = None)
+            
+            <a href="../../../classes/Tk/BLT/Winop.html#method-i-warpto" name="method-i-warpto" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-warpto_source')" id="l_method-i-warpto_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/287a34ae0dfc23e4158f67cb7783d239f202c368/ext/tk/lib/tkextlib/blt/winop.rb#L103" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-warpto_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/blt/winop.rb, line 103</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">warpto</span>(<span class="ruby-identifier">win</span> = <span class="ruby-constant">None</span>)
+  <span class="ruby-identifier">tk_call</span>(<span class="ruby-string">&#39;::blt::winop&#39;</span>, <span class="ruby-string">&#39;warpto&#39;</span>, <span class="ruby-identifier">win</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                    </div>
+
+    </div>
+  </body>
+</html>    

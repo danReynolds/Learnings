@@ -1,0 +1,734 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>RubyVM::SourceCodeGenerator</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="../../css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../../css/main.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../../css/github.css" type="text/css" media="screen" />
+<script src="../../js/jquery-1.3.2.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../js/jquery-effect.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../js/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+
+<body>     
+    <div class="banner">
+        
+        <h1>
+            <span class="type">Class</span> 
+            RubyVM::SourceCodeGenerator 
+            
+                <span class="parent">&lt; 
+                    
+                    <a href="../Object.html">Object</a>
+                    
+                </span>
+            
+        </h1>
+        <ul class="files">
+            
+            <li><a href="../../files/tool/instruction_rb.html">tool/instruction.rb</a></li>
+            
+        </ul>
+    </div>
+    <div id="bodyContent">
+        <div id="content">
+  
+
+
+  
+
+
+  
+  
+
+
+  
+
+
+  
+    <!-- Method ref -->
+    <div class="sectiontitle">Methods</div>
+    <dl class="methods">
+      
+        <dt>B</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-build">build</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-build_string">build_string</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>C</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-comment">comment</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-commit">commit</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>D</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-def_options">def_options</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>G</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-generate">generate</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>N</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-new">new</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>O</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-output_path">output_path</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>U</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-use_const-3F">use_const?</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>V</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-verbose-3F">verbose?</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-vpath">vpath</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+    </dl>
+  
+
+  
+
+
+
+  
+
+    
+
+    
+
+    
+      <!-- Section constants -->
+      <div class="sectiontitle">Constants</div>
+      <table border='0' cellpadding='5'>
+        
+          <tr valign='top'>
+            <td class="attr-name">EMPTY_STRING</td>
+            <td>=</td>
+            <td class="attr-value">&#39;&#39;.freeze</td>
+          </tr>
+          
+            <tr valign='top'>
+              <td>&nbsp;</td>
+              <td colspan="2" class="attr-desc"></td>
+            </tr>
+          
+        
+          <tr valign='top'>
+            <td class="attr-name">Files</td>
+            <td>=</td>
+            <td class="attr-value">{ # codes
+&#39;vm.inc&#39;         =&gt; VmBodyGenerator,
+&#39;vmtc.inc&#39;       =&gt; VmTCIncGenerator,
+&#39;insns.inc&#39;      =&gt; InsnsIncGenerator,
+&#39;insns_info.inc&#39; =&gt; InsnsInfoIncGenerator,
+# &#39;minsns.inc&#39;     =&gt; MInsnsIncGenerator,
+&#39;optinsn.inc&#39;    =&gt; OptInsnIncGenerator,
+&#39;optunifs.inc&#39;   =&gt; OptUnifsIncGenerator,
+&#39;opt_sc.inc&#39;     =&gt; OptSCIncGenerator,
+&#39;yasmdata.rb&#39;    =&gt; YASMDataRbGenerator,
+}</td>
+          </tr>
+          
+            <tr valign='top'>
+              <td>&nbsp;</td>
+              <td colspan="2" class="attr-desc"></td>
+            </tr>
+          
+        
+      </table>
+    
+
+
+    
+      <!-- Section attributes -->
+      <div class="sectiontitle">Attributes</div>
+      <table border='0' cellpadding='5'>
+        
+          <tr valign='top'>
+            <td class='attr-rw'>
+              [R]
+            </td>
+            <td class='attr-name'>insns</td>
+            <td class='attr-desc'></td>
+          </tr>
+        
+      </table>
+    
+
+
+    <!-- Methods -->
+    
+      <div class="sectiontitle">Class Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-c-build">
+            
+              <b>build</b>(opts, vpath = [&#39;./&#39;])
+            
+            <a href="../../classes/RubyVM/SourceCodeGenerator.html#method-c-build" name="method-c-build" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-build_source')" id="l_method-c-build_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/3a47cf3395dd4c4fe8bdd5df13aab698f2ca314b/tool/instruction.rb#L1387" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-build_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File tool/instruction.rb, line 1387</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">build</span> <span class="ruby-identifier">opts</span>, <span class="ruby-identifier">vpath</span> = [<span class="ruby-string">&#39;./&#39;</span>]
+  <span class="ruby-identifier">opts</span>[<span class="ruby-value">:VPATH</span>] = <span class="ruby-identifier">vpath</span>.<span class="ruby-identifier">extend</span>(<span class="ruby-constant">VPATH</span>) <span class="ruby-keyword">unless</span> <span class="ruby-identifier">opts</span>[<span class="ruby-value">:VPATH</span>]
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">new</span> <span class="ruby-constant">InstructionsLoader</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">opts</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-def_options">
+            
+              <b>def_options</b>(opt)
+            
+            <a href="../../classes/RubyVM/SourceCodeGenerator.html#method-c-def_options" name="method-c-def_options" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-def_options_source')" id="l_method-c-def_options_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/3a47cf3395dd4c4fe8bdd5df13aab698f2ca314b/tool/instruction.rb#L1334" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-def_options_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File tool/instruction.rb, line 1334</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">def_options</span>(<span class="ruby-identifier">opt</span>)
+  <span class="ruby-identifier">opts</span> = {
+    <span class="ruby-value">:&quot;insns.def&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&#39;insns.def&#39;</span>,
+    <span class="ruby-value">:&quot;opope.def&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&#39;defs/opt_operand.def&#39;</span>,
+    <span class="ruby-value">:&quot;unif.def&quot;</span>  =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&#39;defs/opt_insn_unif.def&#39;</span>,
+  }
+
+  <span class="ruby-identifier">opt</span>.<span class="ruby-identifier">on</span>(<span class="ruby-string">&quot;-Dname&quot;</span>, <span class="ruby-regexp">/\AOPT_(\w+)\z/</span>, <span class="ruby-string">&quot;enable VM option&quot;</span>) {<span class="ruby-operator">|</span><span class="ruby-identifier">s</span>, <span class="ruby-identifier">v</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">opts</span>[<span class="ruby-identifier">v</span>] = <span class="ruby-keyword">true</span>
+  }
+  <span class="ruby-identifier">opt</span>.<span class="ruby-identifier">on</span>(<span class="ruby-string">&quot;--enable=name[,name...]&quot;</span>, <span class="ruby-constant">Array</span>,
+    <span class="ruby-string">&quot;enable VM options (without OPT_ prefix)&quot;</span>) {<span class="ruby-operator">|</span><span class="ruby-operator">*</span><span class="ruby-identifier">a</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">a</span>.<span class="ruby-identifier">each</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">v</span><span class="ruby-operator">|</span> <span class="ruby-identifier">opts</span>[<span class="ruby-identifier">v</span>] = <span class="ruby-keyword">true</span>}
+  }
+  <span class="ruby-identifier">opt</span>.<span class="ruby-identifier">on</span>(<span class="ruby-string">&quot;-Uname&quot;</span>, <span class="ruby-regexp">/\AOPT_(\w+)\z/</span>, <span class="ruby-string">&quot;disable VM option&quot;</span>) {<span class="ruby-operator">|</span><span class="ruby-identifier">s</span>, <span class="ruby-identifier">v</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">opts</span>[<span class="ruby-identifier">v</span>] = <span class="ruby-keyword">false</span>
+  }
+  <span class="ruby-identifier">opt</span>.<span class="ruby-identifier">on</span>(<span class="ruby-string">&quot;--disable=name[,name...]&quot;</span>, <span class="ruby-constant">Array</span>,
+    <span class="ruby-string">&quot;disable VM options (without OPT_ prefix)&quot;</span>) {<span class="ruby-operator">|</span><span class="ruby-operator">*</span><span class="ruby-identifier">a</span><span class="ruby-operator">|</span>
+      <span class="ruby-identifier">a</span>.<span class="ruby-identifier">each</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">v</span><span class="ruby-operator">|</span> <span class="ruby-identifier">opts</span>[<span class="ruby-identifier">v</span>] = <span class="ruby-keyword">false</span>}
+  }
+  <span class="ruby-identifier">opt</span>.<span class="ruby-identifier">on</span>(<span class="ruby-string">&quot;-i&quot;</span>, <span class="ruby-string">&quot;--insnsdef=FILE&quot;</span>, <span class="ruby-string">&quot;--instructions-def&quot;</span>,
+    <span class="ruby-string">&quot;instructions definition file&quot;</span>) {<span class="ruby-operator">|</span><span class="ruby-identifier">n</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">opts</span>[<span class="ruby-value">:insns_def</span>] = <span class="ruby-identifier">n</span>
+  }
+  <span class="ruby-identifier">opt</span>.<span class="ruby-identifier">on</span>(<span class="ruby-string">&quot;-o&quot;</span>, <span class="ruby-string">&quot;--opt-operanddef=FILE&quot;</span>, <span class="ruby-string">&quot;--opt-operand-def&quot;</span>,
+    <span class="ruby-string">&quot;vm option: operand definition file&quot;</span>) {<span class="ruby-operator">|</span><span class="ruby-identifier">n</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">opts</span>[<span class="ruby-value">:opope_def</span>] = <span class="ruby-identifier">n</span>
+  }
+  <span class="ruby-identifier">opt</span>.<span class="ruby-identifier">on</span>(<span class="ruby-string">&quot;-u&quot;</span>, <span class="ruby-string">&quot;--opt-insnunifdef=FILE&quot;</span>, <span class="ruby-string">&quot;--opt-insn-unif-def&quot;</span>,
+    <span class="ruby-string">&quot;vm option: instruction unification file&quot;</span>) {<span class="ruby-operator">|</span><span class="ruby-identifier">n</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">opts</span>[<span class="ruby-value">:unif_def</span>] = <span class="ruby-identifier">n</span>
+  }
+  <span class="ruby-identifier">opt</span>.<span class="ruby-identifier">on</span>(<span class="ruby-string">&quot;-C&quot;</span>, <span class="ruby-string">&quot;--[no-]use-const&quot;</span>,
+    <span class="ruby-string">&quot;use consts for default operands instead of macros&quot;</span>) {<span class="ruby-operator">|</span><span class="ruby-identifier">v</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">opts</span>[<span class="ruby-value">:use_const</span>] = <span class="ruby-identifier">v</span>
+  }
+  <span class="ruby-identifier">opt</span>.<span class="ruby-identifier">on</span>(<span class="ruby-string">&quot;-d&quot;</span>, <span class="ruby-string">&quot;--destdir&quot;</span>, <span class="ruby-string">&quot;--output-directory=DIR&quot;</span>,
+    <span class="ruby-string">&quot;make output file underneath DIR&quot;</span>) {<span class="ruby-operator">|</span><span class="ruby-identifier">v</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">opts</span>[<span class="ruby-value">:destdir</span>] = <span class="ruby-identifier">v</span>
+  }
+  <span class="ruby-identifier">opt</span>.<span class="ruby-identifier">on</span>(<span class="ruby-string">&quot;-V&quot;</span>, <span class="ruby-string">&quot;--[no-]verbose&quot;</span>) {<span class="ruby-operator">|</span><span class="ruby-identifier">v</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">opts</span>[<span class="ruby-value">:verbose</span>] = <span class="ruby-identifier">v</span>
+  }
+
+  <span class="ruby-identifier">vpath</span> = <span class="ruby-constant">VPATH</span>.<span class="ruby-identifier">def_options</span>(<span class="ruby-identifier">opt</span>)
+
+  <span class="ruby-identifier">proc</span> {
+    <span class="ruby-identifier">opts</span>[<span class="ruby-value">:VPATH</span>] = <span class="ruby-identifier">vpath</span>.<span class="ruby-identifier">call</span>
+    <span class="ruby-identifier">build</span> <span class="ruby-identifier">opts</span>
+  }
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-new">
+            
+              <b>new</b>(insns)
+            
+            <a href="../../classes/RubyVM/SourceCodeGenerator.html#method-c-new" name="method-c-new" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-new_source')" id="l_method-c-new_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/3a47cf3395dd4c4fe8bdd5df13aab698f2ca314b/tool/instruction.rb#L615" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-new_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File tool/instruction.rb, line 615</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">initialize</span> <span class="ruby-identifier">insns</span>
+  <span class="ruby-ivar">@insns</span> = <span class="ruby-identifier">insns</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                  
+      <div class="sectiontitle">Instance Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-i-build_string">
+            
+              <b>build_string</b>()
+            
+            <a href="../../classes/RubyVM/SourceCodeGenerator.html#method-i-build_string" name="method-i-build_string" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-build_string_source')" id="l_method-i-build_string_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/3a47cf3395dd4c4fe8bdd5df13aab698f2ca314b/tool/instruction.rb#L637" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-build_string_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File tool/instruction.rb, line 637</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">build_string</span>
+  <span class="ruby-ivar">@lines</span> = []
+  <span class="ruby-keyword">yield</span>
+  <span class="ruby-ivar">@lines</span>.<span class="ruby-identifier">join</span>(<span class="ruby-string">&quot;\n&quot;</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-comment">
+            
+              <b>comment</b>(str)
+            
+            <a href="../../classes/RubyVM/SourceCodeGenerator.html#method-i-comment" name="method-i-comment" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-comment_source')" id="l_method-i-comment_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/3a47cf3395dd4c4fe8bdd5df13aab698f2ca314b/tool/instruction.rb#L649" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-comment_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File tool/instruction.rb, line 649</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">comment</span> <span class="ruby-identifier">str</span>
+  <span class="ruby-ivar">@lines</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">str</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">verbose?</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-commit">
+            
+              <b>commit</b>(str = EMPTY_STRING)
+            
+            <a href="../../classes/RubyVM/SourceCodeGenerator.html#method-i-commit" name="method-i-commit" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-commit_source')" id="l_method-i-commit_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/3a47cf3395dd4c4fe8bdd5df13aab698f2ca314b/tool/instruction.rb#L645" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-commit_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File tool/instruction.rb, line 645</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">commit</span> <span class="ruby-identifier">str</span> = <span class="ruby-constant">EMPTY_STRING</span>
+  <span class="ruby-ivar">@lines</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">str</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-generate">
+            
+              <b>generate</b>()
+            
+            <a href="../../classes/RubyVM/SourceCodeGenerator.html#method-i-generate" name="method-i-generate" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-generate_source')" id="l_method-i-generate_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/3a47cf3395dd4c4fe8bdd5df13aab698f2ca314b/tool/instruction.rb#L621" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-generate_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File tool/instruction.rb, line 621</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">generate</span>
+  <span class="ruby-identifier">raise</span> <span class="ruby-string">&quot;should not reach here&quot;</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-output_path">
+            
+              <b>output_path</b>(fn)
+            
+            <a href="../../classes/RubyVM/SourceCodeGenerator.html#method-i-output_path" name="method-i-output_path" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-output_path_source')" id="l_method-i-output_path_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/3a47cf3395dd4c4fe8bdd5df13aab698f2ca314b/tool/instruction.rb#L653" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-output_path_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File tool/instruction.rb, line 653</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">output_path</span>(<span class="ruby-identifier">fn</span>)
+  <span class="ruby-identifier">d</span> = <span class="ruby-ivar">@insns</span>.<span class="ruby-identifier">destdir</span>
+  <span class="ruby-identifier">fn</span> = <span class="ruby-constant">File</span>.<span class="ruby-identifier">join</span>(<span class="ruby-identifier">d</span>, <span class="ruby-identifier">fn</span>) <span class="ruby-keyword">if</span> <span class="ruby-identifier">d</span>
+  <span class="ruby-identifier">fn</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-use_const-3F">
+            
+              <b>use_const?</b>()
+            
+            <a href="../../classes/RubyVM/SourceCodeGenerator.html#method-i-use_const-3F" name="method-i-use_const-3F" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-use_const-3F_source')" id="l_method-i-use_const-3F_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/3a47cf3395dd4c4fe8bdd5df13aab698f2ca314b/tool/instruction.rb#L633" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-use_const-3F_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File tool/instruction.rb, line 633</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">use_const?</span>
+  <span class="ruby-ivar">@insns</span>.<span class="ruby-identifier">use_const?</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-verbose-3F">
+            
+              <b>verbose?</b>()
+            
+            <a href="../../classes/RubyVM/SourceCodeGenerator.html#method-i-verbose-3F" name="method-i-verbose-3F" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-verbose-3F_source')" id="l_method-i-verbose-3F_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/3a47cf3395dd4c4fe8bdd5df13aab698f2ca314b/tool/instruction.rb#L629" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-verbose-3F_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File tool/instruction.rb, line 629</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">verbose?</span>
+  <span class="ruby-ivar">@insns</span>.<span class="ruby-identifier">verbose?</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-vpath">
+            
+              <b>vpath</b>()
+            
+            <a href="../../classes/RubyVM/SourceCodeGenerator.html#method-i-vpath" name="method-i-vpath" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-vpath_source')" id="l_method-i-vpath_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/3a47cf3395dd4c4fe8bdd5df13aab698f2ca314b/tool/instruction.rb#L625" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-vpath_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File tool/instruction.rb, line 625</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">vpath</span>
+  <span class="ruby-ivar">@insns</span>.<span class="ruby-identifier">vpath</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                    </div>
+
+    </div>
+  </body>
+</html>    

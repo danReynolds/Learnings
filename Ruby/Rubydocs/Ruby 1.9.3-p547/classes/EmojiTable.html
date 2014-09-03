@@ -1,0 +1,327 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>EmojiTable</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="../css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/main.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/github.css" type="text/css" media="screen" />
+<script src="../js/jquery-1.3.2.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/jquery-effect.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+
+<body>     
+    <div class="banner">
+        
+        <h1>
+            <span class="type">Class</span> 
+            EmojiTable 
+            
+                <span class="parent">&lt; 
+                    
+                    <a href="Object.html">Object</a>
+                    
+                </span>
+            
+        </h1>
+        <ul class="files">
+            
+            <li><a href="../files/tool/enc-emoji4unicode_rb.html">tool/enc-emoji4unicode.rb</a></li>
+            
+        </ul>
+    </div>
+    <div id="bodyContent">
+        <div id="content">
+  
+
+
+  
+
+
+  
+  
+
+
+  
+
+
+  
+    <!-- Method ref -->
+    <div class="sectiontitle">Methods</div>
+    <dl class="methods">
+      
+        <dt>C</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-conversion">conversion</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>G</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-generate">generate</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>N</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-new">new</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+    </dl>
+  
+
+  
+
+
+
+  
+
+    
+
+    
+
+    
+      <!-- Section constants -->
+      <div class="sectiontitle">Constants</div>
+      <table border='0' cellpadding='5'>
+        
+          <tr valign='top'>
+            <td class="attr-name">VERBOSE_MODE</td>
+            <td>=</td>
+            <td class="attr-value">false</td>
+          </tr>
+          
+            <tr valign='top'>
+              <td>&nbsp;</td>
+              <td colspan="2" class="attr-desc"></td>
+            </tr>
+          
+        
+      </table>
+    
+
+
+    
+
+
+    <!-- Methods -->
+    
+      <div class="sectiontitle">Class Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-c-new">
+            
+              <b>new</b>(xml_path)
+            
+            <a href="../classes/EmojiTable.html#method-c-new" name="method-c-new" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-new_source')" id="l_method-c-new_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/62f8df2d3c95816028c006ecbe70bc51704eec4b/tool/enc-emoji4unicode.rb#L12" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-new_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File tool/enc-emoji4unicode.rb, line 12</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">initialize</span>(<span class="ruby-identifier">xml_path</span>)
+  <span class="ruby-ivar">@doc</span> = <span class="ruby-constant">REXML</span><span class="ruby-operator">::</span><span class="ruby-constant">Document</span>.<span class="ruby-identifier">new</span> <span class="ruby-constant">File</span>.<span class="ruby-identifier">open</span>(<span class="ruby-identifier">xml_path</span>)
+  <span class="ruby-ivar">@kddi_undoc</span> = <span class="ruby-identifier">make_kddi_undoc_map</span>()
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                  
+      <div class="sectiontitle">Instance Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-i-conversion">
+            
+              <b>conversion</b>(from_carrier, to_carrier, &amp;block)
+            
+            <a href="../classes/EmojiTable.html#method-i-conversion" name="method-i-conversion" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-conversion_source')" id="l_method-i-conversion_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/62f8df2d3c95816028c006ecbe70bc51704eec4b/tool/enc-emoji4unicode.rb#L17" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-conversion_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File tool/enc-emoji4unicode.rb, line 17</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">conversion</span>(<span class="ruby-identifier">from_carrier</span>, <span class="ruby-identifier">to_carrier</span>, <span class="ruby-operator">&amp;</span><span class="ruby-identifier">block</span>)
+  <span class="ruby-constant">REXML</span><span class="ruby-operator">::</span><span class="ruby-constant">XPath</span>.<span class="ruby-identifier">each</span>(<span class="ruby-ivar">@doc</span>.<span class="ruby-identifier">root</span>, <span class="ruby-string">&#39;//e&#39;</span>) <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">e</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">from</span> = <span class="ruby-identifier">e</span>.<span class="ruby-identifier">attribute</span>(<span class="ruby-identifier">from_carrier</span>.<span class="ruby-identifier">downcase</span>).<span class="ruby-identifier">to_s</span>
+    <span class="ruby-identifier">to</span> = <span class="ruby-identifier">e</span>.<span class="ruby-identifier">attribute</span>(<span class="ruby-identifier">to_carrier</span>.<span class="ruby-identifier">downcase</span>).<span class="ruby-identifier">to_s</span>
+    <span class="ruby-identifier">text_fallback</span> = <span class="ruby-identifier">e</span>.<span class="ruby-identifier">attribute</span>(<span class="ruby-string">&#39;text_fallback&#39;</span>).<span class="ruby-identifier">to_s</span>
+    <span class="ruby-identifier">name</span> = <span class="ruby-identifier">e</span>.<span class="ruby-identifier">attribute</span>(<span class="ruby-string">&#39;name&#39;</span>).<span class="ruby-identifier">to_s</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">from</span> <span class="ruby-operator">=~</span> <span class="ruby-regexp">/^(?:\*|\+)(.+)$/</span> <span class="ruby-comment"># proposed or unified</span>
+      <span class="ruby-identifier">from</span> = <span class="ruby-node">$1</span>
+    <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">from</span>.<span class="ruby-identifier">empty?</span> <span class="ruby-operator">||</span> <span class="ruby-identifier">from</span> <span class="ruby-operator">!~</span> <span class="ruby-regexp">/^[0-9A-F]+$/</span>
+      <span class="ruby-comment"># do nothing</span>
+    <span class="ruby-keyword">else</span>
+      <span class="ruby-identifier">from_utf8</span> = [<span class="ruby-identifier">from</span>.<span class="ruby-identifier">hex</span>].<span class="ruby-identifier">pack</span>(<span class="ruby-string">&quot;U&quot;</span>).<span class="ruby-identifier">unpack</span>(<span class="ruby-string">&quot;H*&quot;</span>).<span class="ruby-identifier">first</span>
+      <span class="ruby-keyword">if</span> <span class="ruby-identifier">to</span> <span class="ruby-operator">=~</span> <span class="ruby-regexp">/^(?:&amp;gt;|\*)?([0-9A-F\+]+)$/</span>
+        <span class="ruby-identifier">str_to</span> = <span class="ruby-node">$1</span>
+        <span class="ruby-keyword">if</span> <span class="ruby-identifier">str_to</span> <span class="ruby-operator">=~</span> <span class="ruby-regexp">/^\+/</span> <span class="ruby-comment"># unicode &quot;proposed&quot; begins at &quot;+&quot;</span>
+          <span class="ruby-identifier">proposal</span> = <span class="ruby-keyword">true</span>
+          <span class="ruby-identifier">str_to</span>.<span class="ruby-identifier">sub!</span>(<span class="ruby-regexp">/^\+/</span>, <span class="ruby-string">&#39;&#39;</span>)
+        <span class="ruby-keyword">else</span>
+          <span class="ruby-identifier">proposal</span> = <span class="ruby-keyword">false</span>
+        <span class="ruby-keyword">end</span>
+        <span class="ruby-identifier">tos</span> = <span class="ruby-identifier">str_to</span>.<span class="ruby-identifier">split</span>(<span class="ruby-string">&#39;+&#39;</span>)
+        <span class="ruby-identifier">to_utf8</span> = <span class="ruby-identifier">tos</span>.<span class="ruby-identifier">map</span>(<span class="ruby-operator">&amp;</span><span class="ruby-value">:hex</span>).<span class="ruby-identifier">pack</span>(<span class="ruby-string">&quot;U*&quot;</span>).<span class="ruby-identifier">unpack</span>(<span class="ruby-string">&quot;H*&quot;</span>).<span class="ruby-identifier">first</span>
+        <span class="ruby-identifier">comment</span> = <span class="ruby-string">&quot;[%s] U+%X -&gt; %s&quot;</span> <span class="ruby-operator">%</span> [<span class="ruby-identifier">name</span>, <span class="ruby-identifier">from</span>.<span class="ruby-identifier">hex</span>, <span class="ruby-identifier">tos</span>.<span class="ruby-identifier">map</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">c</span><span class="ruby-operator">|</span> <span class="ruby-string">&quot;U+%X&quot;</span><span class="ruby-operator">%</span><span class="ruby-identifier">c</span>.<span class="ruby-identifier">hex</span>}.<span class="ruby-identifier">join</span>(<span class="ruby-string">&#39; &#39;</span>)]
+        <span class="ruby-identifier">block</span>.<span class="ruby-identifier">call</span>(<span class="ruby-value">:from</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">from_utf8</span>,
+                   <span class="ruby-value">:to</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">to_utf8</span>,
+                   <span class="ruby-value">:comment</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">comment</span>,
+                   <span class="ruby-value">:fallback</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword">false</span>,
+                   <span class="ruby-value">:proposal</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">proposal</span>)
+      <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">to</span>.<span class="ruby-identifier">empty?</span>
+        <span class="ruby-keyword">if</span> <span class="ruby-identifier">text_fallback</span>.<span class="ruby-identifier">empty?</span>
+          <span class="ruby-identifier">comment</span> = <span class="ruby-string">&quot;[%s] U+%X -&gt; U+3013 (GETA)&quot;</span> <span class="ruby-operator">%</span> [<span class="ruby-identifier">name</span>, <span class="ruby-identifier">from</span>.<span class="ruby-identifier">hex</span>]
+          <span class="ruby-identifier">block</span>.<span class="ruby-identifier">call</span>(<span class="ruby-value">:from</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">from_utf8</span>,
+                     <span class="ruby-value">:to</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;\u{3013}&quot;</span>.<span class="ruby-identifier">unpack</span>(<span class="ruby-string">&quot;H*&quot;</span>).<span class="ruby-identifier">first</span>,
+                     <span class="ruby-value">:comment</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">comment</span>, <span class="ruby-comment"># geta</span>
+                     <span class="ruby-value">:fallback</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword">true</span>,
+                     <span class="ruby-value">:proposal</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword">false</span>)
+        <span class="ruby-keyword">else</span>
+          <span class="ruby-identifier">to_utf8</span> = <span class="ruby-identifier">text_fallback</span>.<span class="ruby-identifier">unpack</span>(<span class="ruby-string">&quot;H*&quot;</span>).<span class="ruby-identifier">first</span>
+          <span class="ruby-identifier">comment</span> = <span class="ruby-string">%Q([%s] U+%X -&gt; &quot;%s&quot;)</span> <span class="ruby-operator">%</span> [<span class="ruby-identifier">name</span>, <span class="ruby-identifier">from</span>.<span class="ruby-identifier">hex</span>, <span class="ruby-identifier">text_fallback</span>]
+          <span class="ruby-identifier">block</span>.<span class="ruby-identifier">call</span>(<span class="ruby-value">:from</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">from_utf8</span>,
+                     <span class="ruby-value">:to</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">to_utf8</span>,
+                     <span class="ruby-value">:comment</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">comment</span>,
+                     <span class="ruby-value">:fallback</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword">true</span>,
+                     <span class="ruby-value">:proposal</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword">false</span>)
+        <span class="ruby-keyword">end</span>
+      <span class="ruby-keyword">else</span>
+        <span class="ruby-identifier">raise</span> <span class="ruby-string">&quot;something wrong: %s -&gt; %s&quot;</span> <span class="ruby-operator">%</span> [<span class="ruby-identifier">from</span>, <span class="ruby-identifier">to</span>]
+      <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-generate">
+            
+              <b>generate</b>(io, from_carrier, to_carrier)
+            
+            <a href="../classes/EmojiTable.html#method-i-generate" name="method-i-generate" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-generate_source')" id="l_method-i-generate_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/62f8df2d3c95816028c006ecbe70bc51704eec4b/tool/enc-emoji4unicode.rb#L70" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-generate_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File tool/enc-emoji4unicode.rb, line 70</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">generate</span>(<span class="ruby-identifier">io</span>, <span class="ruby-identifier">from_carrier</span>, <span class="ruby-identifier">to_carrier</span>)
+  <span class="ruby-identifier">from_encoding</span> = (<span class="ruby-identifier">from_carrier</span> <span class="ruby-operator">==</span> <span class="ruby-string">&quot;Unicode&quot;</span>) <span class="ruby-operator">?</span> <span class="ruby-string">&quot;UTF-8&quot;</span> <span class="ruby-operator">:</span> <span class="ruby-string">&quot;UTF8-&quot;</span><span class="ruby-operator">+</span><span class="ruby-identifier">from_carrier</span>
+  <span class="ruby-identifier">to_encoding</span>   = (<span class="ruby-identifier">to_carrier</span> <span class="ruby-operator">==</span> <span class="ruby-string">&quot;Unicode&quot;</span> )  <span class="ruby-operator">?</span> <span class="ruby-string">&quot;UTF-8&quot;</span> <span class="ruby-operator">:</span> <span class="ruby-string">&quot;UTF8-&quot;</span><span class="ruby-operator">+</span><span class="ruby-identifier">to_carrier</span>
+    <span class="ruby-identifier">io</span>.<span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;EMOJI_EXCHANGE_TBL[&#39;#{from_encoding}&#39;][&#39;#{to_encoding}&#39;] = [&quot;</span>
+    <span class="ruby-identifier">io</span>.<span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;  # for documented codepoints&quot;</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">from_carrier</span> <span class="ruby-operator">==</span> <span class="ruby-string">&quot;KDDI&quot;</span>
+    <span class="ruby-keyword">self</span>.<span class="ruby-identifier">conversion</span>(<span class="ruby-identifier">from_carrier</span>, <span class="ruby-identifier">to_carrier</span>) <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">params</span><span class="ruby-operator">|</span>
+      <span class="ruby-identifier">from</span>, <span class="ruby-identifier">to</span> = <span class="ruby-identifier">params</span>[<span class="ruby-value">:from</span>], <span class="ruby-node">%Q{&quot;#{params[:to]}&quot;}</span>
+      <span class="ruby-identifier">to</span> = <span class="ruby-string">&quot;:undef&quot;</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:fallback</span>] <span class="ruby-operator">||</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:proposal</span>]
+      <span class="ruby-identifier">io</span>.<span class="ruby-identifier">puts</span> <span class="ruby-node">%Q{  [&quot;#{from}&quot;, #{to}], # #{params[:comment]}}</span>
+    <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">from_carrier</span> <span class="ruby-operator">==</span> <span class="ruby-string">&quot;KDDI&quot;</span>
+      <span class="ruby-identifier">io</span>.<span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;  # for undocumented codepoints&quot;</span>
+      <span class="ruby-keyword">self</span>.<span class="ruby-identifier">conversion</span>(<span class="ruby-identifier">from_carrier</span>, <span class="ruby-identifier">to_carrier</span>) <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">params</span><span class="ruby-operator">|</span>
+        <span class="ruby-identifier">from</span>, <span class="ruby-identifier">to</span> = <span class="ruby-identifier">params</span>[<span class="ruby-value">:from</span>], <span class="ruby-node">%Q{&quot;#{params[:to]}&quot;}</span>
+        <span class="ruby-identifier">to</span> = <span class="ruby-string">&quot;:undef&quot;</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:fallback</span>] <span class="ruby-operator">||</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:proposal</span>]
+        <span class="ruby-identifier">unicode</span> = <span class="ruby-identifier">utf8_to_ucs</span>(<span class="ruby-identifier">from</span>)
+        <span class="ruby-identifier">undoc</span> = <span class="ruby-identifier">ucs_to_utf8</span>(<span class="ruby-ivar">@kddi_undoc</span>[<span class="ruby-identifier">unicode</span>])
+        <span class="ruby-identifier">io</span>.<span class="ruby-identifier">puts</span> <span class="ruby-node">%Q{  [&quot;#{undoc}&quot;, #{to}], # #{params[:comment]}}</span>
+      <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">end</span>
+    <span class="ruby-identifier">io</span>.<span class="ruby-identifier">puts</span> <span class="ruby-string">&quot;]&quot;</span>
+    <span class="ruby-identifier">io</span>.<span class="ruby-identifier">puts</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                    </div>
+
+    </div>
+  </body>
+</html>    

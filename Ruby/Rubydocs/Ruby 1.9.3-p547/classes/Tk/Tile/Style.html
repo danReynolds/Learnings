@@ -1,0 +1,993 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>Tk::Tile::Style</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="../../../css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../../../css/main.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../../../css/github.css" type="text/css" media="screen" />
+<script src="../../../js/jquery-1.3.2.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../../js/jquery-effect.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../../js/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+
+<body>     
+    <div class="banner">
+        
+        <h1>
+            <span class="type">Module</span> 
+            Tk::Tile::Style 
+            
+        </h1>
+        <ul class="files">
+            
+            <li><a href="../../../files/ext/tk/lib/tkextlib/tile/style_rb.html">ext/tk/lib/tkextlib/tile/style.rb</a></li>
+            
+        </ul>
+    </div>
+    <div id="bodyContent">
+        <div id="content">
+  
+
+
+  
+
+
+  
+  
+
+
+  
+
+
+  
+    <!-- Method ref -->
+    <div class="sectiontitle">Methods</div>
+    <dl class="methods">
+      
+        <dt>#</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-__define_wrapper_proc_for_compatibility__-21">__define_wrapper_proc_for_compatibility__!</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>C</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-configure">configure</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>E</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-element_create">element_create</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-element_create_image">element_create_image</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-element_create_vsapi">element_create_vsapi</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-element_names">element_names</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-element_options">element_options</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>L</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-layout">layout</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-lookup">lookup</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>M</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-map">map</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-map_configinfo">map_configinfo</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-map_default_configinfo">map_default_configinfo</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>T</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-theme_create">theme_create</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-theme_names">theme_names</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-theme_settings">theme_settings</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-theme_use">theme_use</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+    </dl>
+  
+
+  
+    <!-- Includes -->
+    <div class="sectiontitle">Included Modules</div>
+    <ul>
+      
+        <li>
+          
+            <a href="ParseStyleLayout.html">
+              Tk::Tile::ParseStyleLayout
+            </a>
+          
+        </li>
+      
+    </ul>
+  
+
+
+
+  
+
+    
+
+    
+
+    
+      <!-- Section constants -->
+      <div class="sectiontitle">Constants</div>
+      <table border='0' cellpadding='5'>
+        
+          <tr valign='top'>
+            <td class="attr-name">TkCommandNames</td>
+            <td>=</td>
+            <td class="attr-value">[&#39;style&#39;.freeze].freeze</td>
+          </tr>
+          
+            <tr valign='top'>
+              <td>&nbsp;</td>
+              <td colspan="2" class="attr-desc"></td>
+            </tr>
+          
+        
+      </table>
+    
+
+
+    
+
+
+    <!-- Methods -->
+        
+      <div class="sectiontitle">Instance Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-i-__define_wrapper_proc_for_compatibility__-21">
+            
+              <b>__define_wrapper_proc_for_compatibility__!</b>()
+            
+            <a href="../../../classes/Tk/Tile/Style.html#method-i-__define_wrapper_proc_for_compatibility__-21" name="method-i-__define_wrapper_proc_for_compatibility__-21" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-__define_wrapper_proc_for_compatibility__-21_source')" id="l_method-i-__define_wrapper_proc_for_compatibility__-21_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/3a47cf3395dd4c4fe8bdd5df13aab698f2ca314b/ext/tk/lib/tkextlib/tile/style.rb#L35" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-__define_wrapper_proc_for_compatibility__-21_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/tile/style.rb, line 35</span>
+      <span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">__define_wrapper_proc_for_compatibility__!</span>
+        <span class="ruby-identifier">__define_themes_and_setTheme_proc__!</span>
+
+        <span class="ruby-keyword">unless</span> <span class="ruby-constant">Tk</span>.<span class="ruby-identifier">info</span>(<span class="ruby-value">:commands</span>, <span class="ruby-string">&#39;::ttk::style&#39;</span>).<span class="ruby-identifier">empty?</span>
+          <span class="ruby-comment"># fail RuntimeError,</span>
+          <span class="ruby-comment">#      &quot;can&#39;t define &#39;::ttk::style&#39; command (already exist)&quot;</span>
+
+          <span class="ruby-comment"># do nothing !!!</span>
+          <span class="ruby-identifier">warn</span> <span class="ruby-string">&quot;Warning: can&#39;t define &#39;::ttk::style&#39; command (already exist)&quot;</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">$DEBUG</span>
+          <span class="ruby-keyword">return</span>
+        <span class="ruby-keyword">end</span>
+        <span class="ruby-constant">TkCore</span><span class="ruby-operator">::</span><span class="ruby-constant">INTERP</span>.<span class="ruby-identifier">add_tk_procs</span>(<span class="ruby-string">&#39;::ttk::style&#39;</span>, <span class="ruby-string">&#39;args&#39;</span>, <span class="ruby-string">&quot;        if [string equal [lrange $args 0 1] {element create}] {
+          if [string equal [lindex $args 3] image] {
+            set spec [lindex $args 4]
+            set map  [lrange $spec 1 end]
+            if [llength $map] {
+              # return [eval [concat [list ::style element create [lindex $args 2] image [lindex $spec 0] -map $map] [lrange $args 5 end]]]
+              return [uplevel 1 [list ::style element create [lindex $args 2] image [lindex $spec 0] -map $map] [lrange $args 5 end]]
+            }
+          }
+        }
+        # return [eval &quot;::style $args&quot;]
+        return [uplevel 1 ::style $args]
+&quot;</span>)
+        <span class="ruby-comment">#########################</span>
+      <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-configure">
+            
+              <b>configure</b>(style=nil, keys=nil)
+            
+            <a href="../../../classes/Tk/Tile/Style.html#method-i-configure" name="method-i-configure" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-configure_source')" id="l_method-i-configure_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/3a47cf3395dd4c4fe8bdd5df13aab698f2ca314b/ext/tk/lib/tkextlib/tile/style.rb#L159" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-configure_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/tile/style.rb, line 159</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">configure</span>(<span class="ruby-identifier">style</span>=<span class="ruby-keyword">nil</span>, <span class="ruby-identifier">keys</span>=<span class="ruby-keyword">nil</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">style</span>.<span class="ruby-identifier">kind_of?</span>(<span class="ruby-constant">Hash</span>)
+    <span class="ruby-identifier">keys</span> = <span class="ruby-identifier">style</span>
+    <span class="ruby-identifier">style</span> = <span class="ruby-keyword">nil</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">style</span> = <span class="ruby-string">&#39;.&#39;</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">style</span>
+
+  <span class="ruby-keyword">if</span> <span class="ruby-constant">Tk</span><span class="ruby-operator">::</span><span class="ruby-constant">Tile</span><span class="ruby-operator">::</span><span class="ruby-constant">TILE_SPEC_VERSION_ID</span> <span class="ruby-operator">&lt;</span> <span class="ruby-number">7</span>
+    <span class="ruby-identifier">sub_cmd</span> = <span class="ruby-string">&#39;default&#39;</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">sub_cmd</span> = <span class="ruby-string">&#39;configure&#39;</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">keys</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">keys</span> <span class="ruby-operator">!=</span> <span class="ruby-constant">None</span>
+    <span class="ruby-identifier">tk_call</span>(<span class="ruby-constant">TkCommandNames</span>[<span class="ruby-number">0</span>], <span class="ruby-identifier">sub_cmd</span>, <span class="ruby-identifier">style</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">hash_kv</span>(<span class="ruby-identifier">keys</span>))
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">tk_call</span>(<span class="ruby-constant">TkCommandNames</span>[<span class="ruby-number">0</span>], <span class="ruby-identifier">sub_cmd</span>, <span class="ruby-identifier">style</span>)
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-element_create">
+            
+              <b>element_create</b>(name, type, *args)
+            
+            <a href="../../../classes/Tk/Tile/Style.html#method-i-element_create" name="method-i-element_create" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-element_create_source')" id="l_method-i-element_create_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/3a47cf3395dd4c4fe8bdd5df13aab698f2ca314b/ext/tk/lib/tkextlib/tile/style.rb#L233" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-element_create_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/tile/style.rb, line 233</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">element_create</span>(<span class="ruby-identifier">name</span>, <span class="ruby-identifier">type</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">args</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">type</span> <span class="ruby-operator">==</span> <span class="ruby-string">&#39;image&#39;</span> <span class="ruby-operator">||</span> <span class="ruby-identifier">type</span> <span class="ruby-operator">==</span> <span class="ruby-value">:image</span>
+    <span class="ruby-identifier">element_create_image</span>(<span class="ruby-identifier">name</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">args</span>)
+  <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">type</span> <span class="ruby-operator">==</span> <span class="ruby-string">&#39;vsapi&#39;</span> <span class="ruby-operator">||</span> <span class="ruby-identifier">type</span> <span class="ruby-operator">==</span> <span class="ruby-value">:vsapi</span>
+    <span class="ruby-identifier">element_create_vsapi</span>(<span class="ruby-identifier">name</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">args</span>)
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">tk_call</span>(<span class="ruby-constant">TkCommandNames</span>[<span class="ruby-number">0</span>], <span class="ruby-string">&#39;element&#39;</span>, <span class="ruby-string">&#39;create&#39;</span>, <span class="ruby-identifier">name</span>, <span class="ruby-identifier">type</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">args</span>)
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-element_create_image">
+            
+              <b>element_create_image</b>(name, *args)
+            
+            <a href="../../../classes/Tk/Tile/Style.html#method-i-element_create_image" name="method-i-element_create_image" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-element_create_image_source')" id="l_method-i-element_create_image_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/3a47cf3395dd4c4fe8bdd5df13aab698f2ca314b/ext/tk/lib/tkextlib/tile/style.rb#L243" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-element_create_image_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/tile/style.rb, line 243</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">element_create_image</span>(<span class="ruby-identifier">name</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">args</span>)
+  <span class="ruby-identifier">fail</span> <span class="ruby-constant">ArgumentError</span>, <span class="ruby-string">&#39;Must supply a base image&#39;</span> <span class="ruby-keyword">unless</span> (<span class="ruby-identifier">spec</span> = <span class="ruby-identifier">args</span>.<span class="ruby-identifier">shift</span>)
+  <span class="ruby-keyword">if</span> (<span class="ruby-identifier">opts</span> = <span class="ruby-identifier">args</span>.<span class="ruby-identifier">shift</span>)
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">opts</span>.<span class="ruby-identifier">kind_of?</span>(<span class="ruby-constant">Hash</span>)
+      <span class="ruby-identifier">opts</span> = <span class="ruby-identifier">_symbolkey2str</span>(<span class="ruby-identifier">opts</span>)
+    <span class="ruby-keyword">else</span>
+      <span class="ruby-identifier">fail</span> <span class="ruby-constant">ArgumentError</span>, <span class="ruby-string">&#39;bad option&#39;</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">fail</span> <span class="ruby-constant">ArgumentError</span>, <span class="ruby-string">&#39;too many arguments&#39;</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">args</span>.<span class="ruby-identifier">empty?</span>
+
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">spec</span>.<span class="ruby-identifier">kind_of?</span>(<span class="ruby-constant">Array</span>)
+    <span class="ruby-comment"># probably, command format is tile 0.8+ (Tcl/Tk8.5+) style</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-constant">Tk</span><span class="ruby-operator">::</span><span class="ruby-constant">Tile</span><span class="ruby-operator">::</span><span class="ruby-constant">TILE_SPEC_VERSION_ID</span> <span class="ruby-operator">&gt;=</span> <span class="ruby-number">8</span>
+      <span class="ruby-keyword">if</span> <span class="ruby-identifier">opts</span>
+        <span class="ruby-identifier">tk_call</span>(<span class="ruby-constant">TkCommandNames</span>[<span class="ruby-number">0</span>],
+                <span class="ruby-string">&#39;element&#39;</span>, <span class="ruby-string">&#39;create&#39;</span>, <span class="ruby-identifier">name</span>, <span class="ruby-string">&#39;image&#39;</span>, <span class="ruby-identifier">spec</span>, <span class="ruby-identifier">opts</span>)
+      <span class="ruby-keyword">else</span>
+        <span class="ruby-identifier">tk_call</span>(<span class="ruby-constant">TkCommandNames</span>[<span class="ruby-number">0</span>], <span class="ruby-string">&#39;element&#39;</span>, <span class="ruby-string">&#39;create&#39;</span>, <span class="ruby-identifier">name</span>, <span class="ruby-string">&#39;image&#39;</span>, <span class="ruby-identifier">spec</span>)
+      <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">else</span>
+      <span class="ruby-identifier">fail</span> <span class="ruby-constant">ArgumentError</span>, <span class="ruby-string">&#39;illegal arguments&#39;</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">opts</span>.<span class="ruby-identifier">key?</span>(<span class="ruby-string">&#39;map&#39;</span>)
+      <span class="ruby-identifier">base</span> = <span class="ruby-identifier">spec</span>.<span class="ruby-identifier">shift</span>
+      <span class="ruby-identifier">opts</span>[<span class="ruby-string">&#39;map&#39;</span>] = <span class="ruby-identifier">spec</span>
+      <span class="ruby-identifier">tk_call</span>(<span class="ruby-constant">TkCommandNames</span>[<span class="ruby-number">0</span>],
+              <span class="ruby-string">&#39;element&#39;</span>, <span class="ruby-string">&#39;create&#39;</span>, <span class="ruby-identifier">name</span>, <span class="ruby-string">&#39;image&#39;</span>, <span class="ruby-identifier">base</span>, <span class="ruby-identifier">opts</span>)
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-comment"># probably, command format is tile 0.7.8 or older style</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-constant">Tk</span><span class="ruby-operator">::</span><span class="ruby-constant">Tile</span><span class="ruby-operator">::</span><span class="ruby-constant">TILE_SPEC_VERSION_ID</span> <span class="ruby-operator">&gt;=</span> <span class="ruby-number">8</span>
+      <span class="ruby-identifier">spec</span> = [<span class="ruby-identifier">spec</span>, <span class="ruby-operator">*</span>(<span class="ruby-identifier">opts</span>.<span class="ruby-identifier">delete</span>(<span class="ruby-string">&#39;map&#39;</span>))] <span class="ruby-keyword">if</span> <span class="ruby-identifier">opts</span>.<span class="ruby-identifier">key?</span>(<span class="ruby-string">&#39;map&#39;</span>)
+    <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">opts</span>
+      <span class="ruby-identifier">tk_call</span>(<span class="ruby-constant">TkCommandNames</span>[<span class="ruby-number">0</span>],
+              <span class="ruby-string">&#39;element&#39;</span>, <span class="ruby-string">&#39;create&#39;</span>, <span class="ruby-identifier">name</span>, <span class="ruby-string">&#39;image&#39;</span>, <span class="ruby-identifier">spec</span>, <span class="ruby-identifier">opts</span>)
+    <span class="ruby-keyword">else</span>
+      <span class="ruby-identifier">tk_call</span>(<span class="ruby-constant">TkCommandNames</span>[<span class="ruby-number">0</span>], <span class="ruby-string">&#39;element&#39;</span>, <span class="ruby-string">&#39;create&#39;</span>, <span class="ruby-identifier">name</span>, <span class="ruby-string">&#39;image&#39;</span>, <span class="ruby-identifier">spec</span>)
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-element_create_vsapi">
+            
+              <b>element_create_vsapi</b>(name, class_name, part_id, *args)
+            
+            <a href="../../../classes/Tk/Tile/Style.html#method-i-element_create_vsapi" name="method-i-element_create_vsapi" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-element_create_vsapi_source')" id="l_method-i-element_create_vsapi_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/3a47cf3395dd4c4fe8bdd5df13aab698f2ca314b/ext/tk/lib/tkextlib/tile/style.rb#L284" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-element_create_vsapi_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/tile/style.rb, line 284</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">element_create_vsapi</span>(<span class="ruby-identifier">name</span>, <span class="ruby-identifier">class_name</span>, <span class="ruby-identifier">part_id</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">args</span>)
+  <span class="ruby-comment"># supported on Tcl/Tk 8.6 or later</span>
+
+  <span class="ruby-comment"># argument check</span>
+  <span class="ruby-keyword">if</span> (<span class="ruby-identifier">state_map</span> = <span class="ruby-identifier">args</span>.<span class="ruby-identifier">shift</span> <span class="ruby-operator">||</span> <span class="ruby-constant">None</span>)
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">state_map</span>.<span class="ruby-identifier">kind_of?</span>(<span class="ruby-constant">Hash</span>)
+      <span class="ruby-identifier">opts</span> = <span class="ruby-identifier">_symbolkey2str</span>(<span class="ruby-identifier">state_map</span>)
+      <span class="ruby-identifier">state_map</span> = <span class="ruby-constant">None</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">opts</span> = <span class="ruby-identifier">args</span>.<span class="ruby-identifier">shift</span> <span class="ruby-operator">||</span> <span class="ruby-constant">None</span>
+  <span class="ruby-identifier">fail</span> <span class="ruby-constant">ArgumentError</span>, <span class="ruby-string">&quot;too many arguments&quot;</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">args</span>.<span class="ruby-identifier">empty?</span>
+
+  <span class="ruby-comment"># define a Microsoft Visual Styles element</span>
+  <span class="ruby-identifier">tk_call</span>(<span class="ruby-constant">TkCommandNames</span>[<span class="ruby-number">0</span>], <span class="ruby-string">&#39;element&#39;</span>, <span class="ruby-string">&#39;create&#39;</span>, <span class="ruby-identifier">name</span>, <span class="ruby-string">&#39;vsapi&#39;</span>,
+          <span class="ruby-identifier">class_name</span>, <span class="ruby-identifier">part_id</span>, <span class="ruby-identifier">state_map</span>, <span class="ruby-identifier">opts</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-element_names">
+            
+              <b>element_names</b>()
+            
+            <a href="../../../classes/Tk/Tile/Style.html#method-i-element_names" name="method-i-element_names" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-element_names_source')" id="l_method-i-element_names_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/3a47cf3395dd4c4fe8bdd5df13aab698f2ca314b/ext/tk/lib/tkextlib/tile/style.rb#L302" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-element_names_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/tile/style.rb, line 302</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">element_names</span>()
+  <span class="ruby-identifier">list</span>(<span class="ruby-identifier">tk_call</span>(<span class="ruby-constant">TkCommandNames</span>[<span class="ruby-number">0</span>], <span class="ruby-string">&#39;element&#39;</span>, <span class="ruby-string">&#39;names&#39;</span>))
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-element_options">
+            
+              <b>element_options</b>(elem)
+            
+            <a href="../../../classes/Tk/Tile/Style.html#method-i-element_options" name="method-i-element_options" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-element_options_source')" id="l_method-i-element_options_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/3a47cf3395dd4c4fe8bdd5df13aab698f2ca314b/ext/tk/lib/tkextlib/tile/style.rb#L306" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-element_options_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/tile/style.rb, line 306</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">element_options</span>(<span class="ruby-identifier">elem</span>)
+  <span class="ruby-identifier">simplelist</span>(<span class="ruby-identifier">tk_call</span>(<span class="ruby-constant">TkCommandNames</span>[<span class="ruby-number">0</span>], <span class="ruby-string">&#39;element&#39;</span>, <span class="ruby-string">&#39;options&#39;</span>, <span class="ruby-identifier">elem</span>))
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-layout">
+            
+              <b>layout</b>(style=nil, spec=nil)
+            
+            <a href="../../../classes/Tk/Tile/Style.html#method-i-layout" name="method-i-layout" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-layout_source')" id="l_method-i-layout_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/3a47cf3395dd4c4fe8bdd5df13aab698f2ca314b/ext/tk/lib/tkextlib/tile/style.rb#L219" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-layout_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/tile/style.rb, line 219</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">layout</span>(<span class="ruby-identifier">style</span>=<span class="ruby-keyword">nil</span>, <span class="ruby-identifier">spec</span>=<span class="ruby-keyword">nil</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">style</span>.<span class="ruby-identifier">kind_of?</span>(<span class="ruby-constant">Hash</span>)
+    <span class="ruby-identifier">spec</span> = <span class="ruby-identifier">style</span>
+    <span class="ruby-identifier">style</span> = <span class="ruby-keyword">nil</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">style</span> = <span class="ruby-string">&#39;.&#39;</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">style</span>
+
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">spec</span>
+    <span class="ruby-identifier">tk_call</span>(<span class="ruby-constant">TkCommandNames</span>[<span class="ruby-number">0</span>], <span class="ruby-string">&#39;layout&#39;</span>, <span class="ruby-identifier">style</span>, <span class="ruby-identifier">spec</span>)
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">_style_layout</span>(<span class="ruby-identifier">list</span>(<span class="ruby-identifier">tk_call</span>(<span class="ruby-constant">TkCommandNames</span>[<span class="ruby-number">0</span>], <span class="ruby-string">&#39;layout&#39;</span>, <span class="ruby-identifier">style</span>)))
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-lookup">
+            
+              <b>lookup</b>(style, opt, state=None, fallback_value=None)
+            
+            <a href="../../../classes/Tk/Tile/Style.html#method-i-lookup" name="method-i-lookup" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-lookup_source')" id="l_method-i-lookup_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/3a47cf3395dd4c4fe8bdd5df13aab698f2ca314b/ext/tk/lib/tkextlib/tile/style.rb#L212" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-lookup_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/tile/style.rb, line 212</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">lookup</span>(<span class="ruby-identifier">style</span>, <span class="ruby-identifier">opt</span>, <span class="ruby-identifier">state</span>=<span class="ruby-constant">None</span>, <span class="ruby-identifier">fallback_value</span>=<span class="ruby-constant">None</span>)
+  <span class="ruby-identifier">tk_call</span>(<span class="ruby-constant">TkCommandNames</span>[<span class="ruby-number">0</span>], <span class="ruby-string">&#39;lookup&#39;</span>, <span class="ruby-identifier">style</span>,
+          <span class="ruby-string">&#39;-&#39;</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">opt</span>.<span class="ruby-identifier">to_s</span>, <span class="ruby-identifier">state</span>, <span class="ruby-identifier">fallback_value</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-map">
+            
+              <b>map</b>(style=nil, keys=nil)
+            
+            <a href="../../../classes/Tk/Tile/Style.html#method-i-map" name="method-i-map" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-map_source')" id="l_method-i-map_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/3a47cf3395dd4c4fe8bdd5df13aab698f2ca314b/ext/tk/lib/tkextlib/tile/style.rb#L180" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-map_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/tile/style.rb, line 180</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">map</span>(<span class="ruby-identifier">style</span>=<span class="ruby-keyword">nil</span>, <span class="ruby-identifier">keys</span>=<span class="ruby-keyword">nil</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">style</span>.<span class="ruby-identifier">kind_of?</span>(<span class="ruby-constant">Hash</span>)
+    <span class="ruby-identifier">keys</span> = <span class="ruby-identifier">style</span>
+    <span class="ruby-identifier">style</span> = <span class="ruby-keyword">nil</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">style</span> = <span class="ruby-string">&#39;.&#39;</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">style</span>
+
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">keys</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">keys</span> <span class="ruby-operator">!=</span> <span class="ruby-constant">None</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">keys</span>.<span class="ruby-identifier">kind_of?</span>(<span class="ruby-constant">Hash</span>)
+      <span class="ruby-identifier">tk_call</span>(<span class="ruby-constant">TkCommandNames</span>[<span class="ruby-number">0</span>], <span class="ruby-string">&#39;map&#39;</span>, <span class="ruby-identifier">style</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">hash_kv</span>(<span class="ruby-identifier">keys</span>))
+    <span class="ruby-keyword">else</span>
+      <span class="ruby-identifier">simplelist</span>(<span class="ruby-identifier">tk_call</span>(<span class="ruby-constant">TkCommandNames</span>[<span class="ruby-number">0</span>], <span class="ruby-string">&#39;map&#39;</span>, <span class="ruby-identifier">style</span>, <span class="ruby-string">&#39;-&#39;</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">keys</span>.<span class="ruby-identifier">to_s</span>))
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">ret</span> = {}
+    <span class="ruby-constant">Hash</span>[<span class="ruby-operator">*</span>(<span class="ruby-identifier">simplelist</span>(<span class="ruby-identifier">tk_call</span>(<span class="ruby-constant">TkCommandNames</span>[<span class="ruby-number">0</span>], <span class="ruby-string">&#39;map&#39;</span>, <span class="ruby-identifier">style</span>)))].<span class="ruby-identifier">each</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">k</span>, <span class="ruby-identifier">v</span><span class="ruby-operator">|</span>
+      <span class="ruby-identifier">ret</span>[<span class="ruby-identifier">k</span>[<span class="ruby-number">1</span><span class="ruby-operator">..</span><span class="ruby-number">-1</span>]] = <span class="ruby-identifier">list</span>(<span class="ruby-identifier">v</span>)
+    }
+    <span class="ruby-identifier">ret</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-map_configinfo">
+            
+              <b>map_configinfo</b>(style=nil, key=None)
+            
+            <a href="../../../classes/Tk/Tile/Style.html#method-i-map_configinfo" name="method-i-map_configinfo" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-map_configinfo_source')" id="l_method-i-map_configinfo_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/3a47cf3395dd4c4fe8bdd5df13aab698f2ca314b/ext/tk/lib/tkextlib/tile/style.rb#L203" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-map_configinfo_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/tile/style.rb, line 203</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">map_configinfo</span>(<span class="ruby-identifier">style</span>=<span class="ruby-keyword">nil</span>, <span class="ruby-identifier">key</span>=<span class="ruby-constant">None</span>)
+  <span class="ruby-identifier">style</span> = <span class="ruby-string">&#39;.&#39;</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">style</span>
+  <span class="ruby-identifier">map</span>(<span class="ruby-identifier">style</span>, <span class="ruby-identifier">key</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-map_default_configinfo">
+            
+              <b>map_default_configinfo</b>(key=None)
+            
+            <a href="../../../classes/Tk/Tile/Style.html#method-i-map_default_configinfo" name="method-i-map_default_configinfo" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-map_default_configinfo_source')" id="l_method-i-map_default_configinfo_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/3a47cf3395dd4c4fe8bdd5df13aab698f2ca314b/ext/tk/lib/tkextlib/tile/style.rb#L208" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-map_default_configinfo_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/tile/style.rb, line 208</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">map_default_configinfo</span>(<span class="ruby-identifier">key</span>=<span class="ruby-constant">None</span>)
+  <span class="ruby-identifier">map</span>(<span class="ruby-string">&#39;.&#39;</span>, <span class="ruby-identifier">key</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-theme_create">
+            
+              <b>theme_create</b>(name, keys=nil)
+            
+            <a href="../../../classes/Tk/Tile/Style.html#method-i-theme_create" name="method-i-theme_create" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-theme_create_source')" id="l_method-i-theme_create_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/3a47cf3395dd4c4fe8bdd5df13aab698f2ca314b/ext/tk/lib/tkextlib/tile/style.rb#L310" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-theme_create_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/tile/style.rb, line 310</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">theme_create</span>(<span class="ruby-identifier">name</span>, <span class="ruby-identifier">keys</span>=<span class="ruby-keyword">nil</span>)
+  <span class="ruby-identifier">name</span> = <span class="ruby-identifier">name</span>.<span class="ruby-identifier">to_s</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">keys</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">keys</span> <span class="ruby-operator">!=</span> <span class="ruby-constant">None</span>
+    <span class="ruby-identifier">tk_call</span>(<span class="ruby-constant">TkCommandNames</span>[<span class="ruby-number">0</span>], <span class="ruby-string">&#39;theme&#39;</span>, <span class="ruby-string">&#39;create&#39;</span>, <span class="ruby-identifier">name</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">hash_kv</span>(<span class="ruby-identifier">keys</span>))
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">tk_call</span>(<span class="ruby-constant">TkCommandNames</span>[<span class="ruby-number">0</span>], <span class="ruby-string">&#39;theme&#39;</span>, <span class="ruby-string">&#39;create&#39;</span>, <span class="ruby-identifier">name</span>)
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">name</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-theme_names">
+            
+              <b>theme_names</b>()
+            
+            <a href="../../../classes/Tk/Tile/Style.html#method-i-theme_names" name="method-i-theme_names" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-theme_names_source')" id="l_method-i-theme_names_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/3a47cf3395dd4c4fe8bdd5df13aab698f2ca314b/ext/tk/lib/tkextlib/tile/style.rb#L327" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-theme_names_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/tile/style.rb, line 327</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">theme_names</span>()
+  <span class="ruby-identifier">list</span>(<span class="ruby-identifier">tk_call</span>(<span class="ruby-constant">TkCommandNames</span>[<span class="ruby-number">0</span>], <span class="ruby-string">&#39;theme&#39;</span>, <span class="ruby-string">&#39;names&#39;</span>))
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-theme_settings">
+            
+              <b>theme_settings</b>(name, cmd=nil, &amp;b)
+            
+            <a href="../../../classes/Tk/Tile/Style.html#method-i-theme_settings" name="method-i-theme_settings" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-theme_settings_source')" id="l_method-i-theme_settings_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/3a47cf3395dd4c4fe8bdd5df13aab698f2ca314b/ext/tk/lib/tkextlib/tile/style.rb#L320" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-theme_settings_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/tile/style.rb, line 320</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">theme_settings</span>(<span class="ruby-identifier">name</span>, <span class="ruby-identifier">cmd</span>=<span class="ruby-keyword">nil</span>, <span class="ruby-operator">&amp;</span><span class="ruby-identifier">b</span>)
+  <span class="ruby-identifier">name</span> = <span class="ruby-identifier">name</span>.<span class="ruby-identifier">to_s</span>
+  <span class="ruby-identifier">cmd</span> = <span class="ruby-constant">Proc</span>.<span class="ruby-identifier">new</span>(<span class="ruby-operator">&amp;</span><span class="ruby-identifier">b</span>) <span class="ruby-keyword">if</span> <span class="ruby-operator">!</span><span class="ruby-identifier">cmd</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">b</span>
+  <span class="ruby-identifier">tk_call</span>(<span class="ruby-constant">TkCommandNames</span>[<span class="ruby-number">0</span>], <span class="ruby-string">&#39;theme&#39;</span>, <span class="ruby-string">&#39;settings&#39;</span>, <span class="ruby-identifier">name</span>, <span class="ruby-identifier">cmd</span>)
+  <span class="ruby-identifier">name</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-theme_use">
+            
+              <b>theme_use</b>(name)
+            
+            <a href="../../../classes/Tk/Tile/Style.html#method-i-theme_use" name="method-i-theme_use" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-theme_use_source')" id="l_method-i-theme_use_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/3a47cf3395dd4c4fe8bdd5df13aab698f2ca314b/ext/tk/lib/tkextlib/tile/style.rb#L331" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-theme_use_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/tile/style.rb, line 331</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">theme_use</span>(<span class="ruby-identifier">name</span>)
+  <span class="ruby-identifier">name</span> = <span class="ruby-identifier">name</span>.<span class="ruby-identifier">to_s</span>
+  <span class="ruby-identifier">tk_call</span>(<span class="ruby-constant">TkCommandNames</span>[<span class="ruby-number">0</span>], <span class="ruby-string">&#39;theme&#39;</span>, <span class="ruby-string">&#39;use&#39;</span>, <span class="ruby-identifier">name</span>)
+  <span class="ruby-identifier">name</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                    </div>
+
+    </div>
+  </body>
+</html>    

@@ -1,0 +1,1248 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>TranslationHelperTest</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="../css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/main.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/github.css" type="text/css" media="screen" />
+<script src="../js/jquery-1.3.2.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/jquery-effect.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+
+<body>     
+    <div class="banner">
+        
+        <h1>
+            <span class="type">Class</span> 
+            TranslationHelperTest 
+            
+                <span class="parent">&lt; 
+                    
+                    <a href="ActiveSupport/TestCase.html">ActiveSupport::TestCase</a>
+                    
+                </span>
+            
+        </h1>
+        <ul class="files">
+            
+            <li><a href="../files/actionview/test/template/translation_helper_test_rb.html">actionview/test/template/translation_helper_test.rb</a></li>
+            
+        </ul>
+    </div>
+    <div id="bodyContent">
+        <div id="content">
+  
+
+
+  
+
+
+  
+  
+
+
+  
+
+
+  
+    <!-- Method ref -->
+    <div class="sectiontitle">Methods</div>
+    <dl class="methods">
+      
+        <dt>S</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-setup">setup</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>T</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-test_default_lookup_scoped_by_partial">test_default_lookup_scoped_by_partial</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-test_delegates_localize_to_i18n">test_delegates_localize_to_i18n</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-test_delegates_to_i18n_setting_the_rescue_format_option_to_html">test_delegates_to_i18n_setting_the_rescue_format_option_to_html</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-test_finds_array_of_translations_scoped_by_partial">test_finds_array_of_translations_scoped_by_partial</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-test_finds_translation_scoped_by_partial">test_finds_translation_scoped_by_partial</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-test_i18n_translate_defaults_to_nil_rescue_format">test_i18n_translate_defaults_to_nil_rescue_format</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-test_missing_translation_scoped_by_partial">test_missing_translation_scoped_by_partial</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-test_raises_missing_translation_message_with_raise_config_option">test_raises_missing_translation_message_with_raise_config_option</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-test_raises_missing_translation_message_with_raise_option">test_raises_missing_translation_message_with_raise_option</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-test_returns_missing_translation_message_using_nil_as_rescue_format">test_returns_missing_translation_message_using_nil_as_rescue_format</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-test_returns_missing_translation_message_wrapped_into_span">test_returns_missing_translation_message_wrapped_into_span</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-test_translate_does_not_mark_plain_text_as_safe_html">test_translate_does_not_mark_plain_text_as_safe_html</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-test_translate_escapes_interpolations_in_translations_with_a_html_suffix">test_translate_escapes_interpolations_in_translations_with_a_html_suffix</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-test_translate_marks_translations_named_html_as_safe_html">test_translate_marks_translations_named_html_as_safe_html</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-test_translate_marks_translations_with_a_html_suffix_as_safe_html">test_translate_marks_translations_with_a_html_suffix_as_safe_html</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-test_translate_with_array_of_string_defaults">test_translate_with_array_of_string_defaults</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-test_translate_with_default_named_html">test_translate_with_default_named_html</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-test_translate_with_html_count">test_translate_with_html_count</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-test_translate_with_last_default_named_html">test_translate_with_last_default_named_html</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-test_translate_with_string_default">test_translate_with_string_default</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-test_translate_with_two_defaults_named_html">test_translate_with_two_defaults_named_html</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-test_translation_returning_an_array">test_translation_returning_an_array</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-test_translation_returning_an_array_ignores_html_suffix">test_translation_returning_an_array_ignores_html_suffix</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+    </dl>
+  
+
+  
+    <!-- Includes -->
+    <div class="sectiontitle">Included Modules</div>
+    <ul>
+      
+        <li>
+          
+            <a href="ActionView/Helpers/TagHelper.html">
+              ActionView::Helpers::TagHelper
+            </a>
+          
+        </li>
+      
+        <li>
+          
+            <a href="ActionView/Helpers/TranslationHelper.html">
+              ActionView::Helpers::TranslationHelper
+            </a>
+          
+        </li>
+      
+    </ul>
+  
+
+
+
+  
+
+    
+
+    
+
+    
+
+
+    
+      <!-- Section attributes -->
+      <div class="sectiontitle">Attributes</div>
+      <table border='0' cellpadding='5'>
+        
+          <tr valign='top'>
+            <td class='attr-rw'>
+              [R]
+            </td>
+            <td class='attr-name'>request</td>
+            <td class='attr-desc'></td>
+          </tr>
+        
+          <tr valign='top'>
+            <td class='attr-rw'>
+              [R]
+            </td>
+            <td class='attr-name'>view</td>
+            <td class='attr-desc'></td>
+          </tr>
+        
+      </table>
+    
+
+
+    <!-- Methods -->
+        
+      <div class="sectiontitle">Instance Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-i-setup">
+            
+              <b>setup</b>()
+            
+            <a href="../classes/TranslationHelperTest.html#method-i-setup" name="method-i-setup" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-setup_source')" id="l_method-i-setup_source">show</a>
+                
+                  | <a href="https://github.com/rails/rails/blob/433628a45c2f5dd04b115af1b5579dac75255c67/actionview/test/template/translation_helper_test.rb#L9" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-setup_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File actionview/test/template/translation_helper_test.rb, line 9</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">setup</span>
+  <span class="ruby-constant">I18n</span>.<span class="ruby-identifier">backend</span>.<span class="ruby-identifier">store_translations</span>(<span class="ruby-value">:en</span>,
+    <span class="ruby-value">:translations</span> =<span class="ruby-operator">&gt;</span> {
+      <span class="ruby-value">:templates</span> =<span class="ruby-operator">&gt;</span> {
+        <span class="ruby-value">:found</span> =<span class="ruby-operator">&gt;</span> { <span class="ruby-value">:foo</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&#39;Foo&#39;</span> },
+        <span class="ruby-value">:array</span> =<span class="ruby-operator">&gt;</span> { <span class="ruby-value">:foo</span> =<span class="ruby-operator">&gt;</span> { <span class="ruby-value">:bar</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&#39;Foo Bar&#39;</span> } },
+        <span class="ruby-value">:default</span> =<span class="ruby-operator">&gt;</span> { <span class="ruby-value">:foo</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&#39;Foo&#39;</span> }
+      },
+      <span class="ruby-value">:foo</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&#39;Foo&#39;</span>,
+      <span class="ruby-value">:hello</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&#39;&lt;a&gt;Hello World&lt;/a&gt;&#39;</span>,
+      <span class="ruby-value">:html</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&#39;&lt;a&gt;Hello World&lt;/a&gt;&#39;</span>,
+      <span class="ruby-value">:hello_html</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&#39;&lt;a&gt;Hello World&lt;/a&gt;&#39;</span>,
+      <span class="ruby-value">:interpolated_html</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&#39;&lt;a&gt;Hello %{word}&lt;/a&gt;&#39;</span>,
+      <span class="ruby-value">:array_html</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-node">%w(foo bar)</span>,
+      <span class="ruby-value">:array</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-node">%w(foo bar)</span>,
+      <span class="ruby-value">:count_html</span> =<span class="ruby-operator">&gt;</span> {
+        <span class="ruby-value">:one</span>   =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&#39;&lt;a&gt;One %{count}&lt;/a&gt;&#39;</span>,
+        <span class="ruby-value">:other</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&#39;&lt;a&gt;Other %{count}&lt;/a&gt;&#39;</span>
+      }
+    }
+  )
+  <span class="ruby-ivar">@view</span> = <span class="ruby-operator">::</span><span class="ruby-constant">ActionView</span><span class="ruby-operator">::</span><span class="ruby-constant">Base</span>.<span class="ruby-identifier">new</span>(<span class="ruby-constant">ActionController</span><span class="ruby-operator">::</span><span class="ruby-constant">Base</span>.<span class="ruby-identifier">view_paths</span>, {})
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-test_default_lookup_scoped_by_partial">
+            
+              <b>test_default_lookup_scoped_by_partial</b>()
+            
+            <a href="../classes/TranslationHelperTest.html#method-i-test_default_lookup_scoped_by_partial" name="method-i-test_default_lookup_scoped_by_partial" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-test_default_lookup_scoped_by_partial_source')" id="l_method-i-test_default_lookup_scoped_by_partial_source">show</a>
+                
+                  | <a href="https://github.com/rails/rails/blob/433628a45c2f5dd04b115af1b5579dac75255c67/actionview/test/template/translation_helper_test.rb#L91" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-test_default_lookup_scoped_by_partial_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File actionview/test/template/translation_helper_test.rb, line 91</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">test_default_lookup_scoped_by_partial</span>
+  <span class="ruby-identifier">assert_equal</span> <span class="ruby-string">&#39;Foo&#39;</span>, <span class="ruby-identifier">view</span>.<span class="ruby-identifier">render</span>(<span class="ruby-value">:file</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&#39;translations/templates/default&#39;</span>).<span class="ruby-identifier">strip</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-test_delegates_localize_to_i18n">
+            
+              <b>test_delegates_localize_to_i18n</b>()
+            
+            <a href="../classes/TranslationHelperTest.html#method-i-test_delegates_localize_to_i18n" name="method-i-test_delegates_localize_to_i18n" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-test_delegates_localize_to_i18n_source')" id="l_method-i-test_delegates_localize_to_i18n_source">show</a>
+                
+                  | <a href="https://github.com/rails/rails/blob/433628a45c2f5dd04b115af1b5579dac75255c67/actionview/test/template/translation_helper_test.rb#L38" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-test_delegates_localize_to_i18n_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File actionview/test/template/translation_helper_test.rb, line 38</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">test_delegates_localize_to_i18n</span>
+  <span class="ruby-ivar">@time</span> = <span class="ruby-constant">Time</span>.<span class="ruby-identifier">utc</span>(<span class="ruby-number">2008</span>, <span class="ruby-number">7</span>, <span class="ruby-number">8</span>, <span class="ruby-number">12</span>, <span class="ruby-number">18</span>, <span class="ruby-number">38</span>)
+  <span class="ruby-constant">I18n</span>.<span class="ruby-identifier">expects</span>(<span class="ruby-value">:localize</span>).<span class="ruby-identifier">with</span>(<span class="ruby-ivar">@time</span>)
+  <span class="ruby-identifier">localize</span> <span class="ruby-ivar">@time</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-test_delegates_to_i18n_setting_the_rescue_format_option_to_html">
+            
+              <b>test_delegates_to_i18n_setting_the_rescue_format_option_to_html</b>()
+            
+            <a href="../classes/TranslationHelperTest.html#method-i-test_delegates_to_i18n_setting_the_rescue_format_option_to_html" name="method-i-test_delegates_to_i18n_setting_the_rescue_format_option_to_html" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-test_delegates_to_i18n_setting_the_rescue_format_option_to_html_source')" id="l_method-i-test_delegates_to_i18n_setting_the_rescue_format_option_to_html_source">show</a>
+                
+                  | <a href="https://github.com/rails/rails/blob/433628a45c2f5dd04b115af1b5579dac75255c67/actionview/test/template/translation_helper_test.rb#L33" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-test_delegates_to_i18n_setting_the_rescue_format_option_to_html_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File actionview/test/template/translation_helper_test.rb, line 33</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">test_delegates_to_i18n_setting_the_rescue_format_option_to_html</span>
+  <span class="ruby-constant">I18n</span>.<span class="ruby-identifier">expects</span>(<span class="ruby-value">:translate</span>).<span class="ruby-identifier">with</span>(<span class="ruby-value">:foo</span>, <span class="ruby-value">:locale</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&#39;en&#39;</span>, <span class="ruby-value">:raise=</span><span class="ruby-operator">&gt;</span><span class="ruby-keyword">true</span>).<span class="ruby-identifier">returns</span>(<span class="ruby-string">&quot;&quot;</span>)
+  <span class="ruby-identifier">translate</span> <span class="ruby-value">:foo</span>, <span class="ruby-value">:locale</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&#39;en&#39;</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-test_finds_array_of_translations_scoped_by_partial">
+            
+              <b>test_finds_array_of_translations_scoped_by_partial</b>()
+            
+            <a href="../classes/TranslationHelperTest.html#method-i-test_finds_array_of_translations_scoped_by_partial" name="method-i-test_finds_array_of_translations_scoped_by_partial" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-test_finds_array_of_translations_scoped_by_partial_source')" id="l_method-i-test_finds_array_of_translations_scoped_by_partial_source">show</a>
+                
+                  | <a href="https://github.com/rails/rails/blob/433628a45c2f5dd04b115af1b5579dac75255c67/actionview/test/template/translation_helper_test.rb#L87" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-test_finds_array_of_translations_scoped_by_partial_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File actionview/test/template/translation_helper_test.rb, line 87</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">test_finds_array_of_translations_scoped_by_partial</span>
+  <span class="ruby-identifier">assert_equal</span> <span class="ruby-string">&#39;Foo Bar&#39;</span>, <span class="ruby-ivar">@view</span>.<span class="ruby-identifier">render</span>(<span class="ruby-value">:file</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&#39;translations/templates/array&#39;</span>).<span class="ruby-identifier">strip</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-test_finds_translation_scoped_by_partial">
+            
+              <b>test_finds_translation_scoped_by_partial</b>()
+            
+            <a href="../classes/TranslationHelperTest.html#method-i-test_finds_translation_scoped_by_partial" name="method-i-test_finds_translation_scoped_by_partial" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-test_finds_translation_scoped_by_partial_source')" id="l_method-i-test_finds_translation_scoped_by_partial_source">show</a>
+                
+                  | <a href="https://github.com/rails/rails/blob/433628a45c2f5dd04b115af1b5579dac75255c67/actionview/test/template/translation_helper_test.rb#L83" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-test_finds_translation_scoped_by_partial_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File actionview/test/template/translation_helper_test.rb, line 83</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">test_finds_translation_scoped_by_partial</span>
+  <span class="ruby-identifier">assert_equal</span> <span class="ruby-string">&#39;Foo&#39;</span>, <span class="ruby-identifier">view</span>.<span class="ruby-identifier">render</span>(<span class="ruby-value">:file</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&#39;translations/templates/found&#39;</span>).<span class="ruby-identifier">strip</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-test_i18n_translate_defaults_to_nil_rescue_format">
+            
+              <b>test_i18n_translate_defaults_to_nil_rescue_format</b>()
+            
+            <a href="../classes/TranslationHelperTest.html#method-i-test_i18n_translate_defaults_to_nil_rescue_format" name="method-i-test_i18n_translate_defaults_to_nil_rescue_format" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-test_i18n_translate_defaults_to_nil_rescue_format_source')" id="l_method-i-test_i18n_translate_defaults_to_nil_rescue_format_source">show</a>
+                
+                  | <a href="https://github.com/rails/rails/blob/433628a45c2f5dd04b115af1b5579dac75255c67/actionview/test/template/translation_helper_test.rb#L72" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-test_i18n_translate_defaults_to_nil_rescue_format_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File actionview/test/template/translation_helper_test.rb, line 72</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">test_i18n_translate_defaults_to_nil_rescue_format</span>
+  <span class="ruby-identifier">expected</span> = <span class="ruby-string">&#39;translation missing: en.translations.missing&#39;</span>
+  <span class="ruby-identifier">assert_equal</span> <span class="ruby-identifier">expected</span>, <span class="ruby-constant">I18n</span>.<span class="ruby-identifier">translate</span>(<span class="ruby-value">:&quot;translations.missing&quot;</span>)
+  <span class="ruby-identifier">assert_equal</span> <span class="ruby-keyword">false</span>, <span class="ruby-constant">I18n</span>.<span class="ruby-identifier">translate</span>(<span class="ruby-value">:&quot;translations.missing&quot;</span>).<span class="ruby-identifier">html_safe?</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-test_missing_translation_scoped_by_partial">
+            
+              <b>test_missing_translation_scoped_by_partial</b>()
+            
+            <a href="../classes/TranslationHelperTest.html#method-i-test_missing_translation_scoped_by_partial" name="method-i-test_missing_translation_scoped_by_partial" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-test_missing_translation_scoped_by_partial_source')" id="l_method-i-test_missing_translation_scoped_by_partial_source">show</a>
+                
+                  | <a href="https://github.com/rails/rails/blob/433628a45c2f5dd04b115af1b5579dac75255c67/actionview/test/template/translation_helper_test.rb#L95" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-test_missing_translation_scoped_by_partial_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File actionview/test/template/translation_helper_test.rb, line 95</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">test_missing_translation_scoped_by_partial</span>
+  <span class="ruby-identifier">expected</span> = <span class="ruby-string">&#39;&lt;span class=&quot;translation_missing&quot; title=&quot;translation missing: en.translations.templates.missing.missing&quot;&gt;Missing&lt;/span&gt;&#39;</span>
+  <span class="ruby-identifier">assert_equal</span> <span class="ruby-identifier">expected</span>, <span class="ruby-identifier">view</span>.<span class="ruby-identifier">render</span>(<span class="ruby-value">:file</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&#39;translations/templates/missing&#39;</span>).<span class="ruby-identifier">strip</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-test_raises_missing_translation_message_with_raise_config_option">
+            
+              <b>test_raises_missing_translation_message_with_raise_config_option</b>()
+            
+            <a href="../classes/TranslationHelperTest.html#method-i-test_raises_missing_translation_message_with_raise_config_option" name="method-i-test_raises_missing_translation_message_with_raise_config_option" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-test_raises_missing_translation_message_with_raise_config_option_source')" id="l_method-i-test_raises_missing_translation_message_with_raise_config_option_source">show</a>
+                
+                  | <a href="https://github.com/rails/rails/blob/433628a45c2f5dd04b115af1b5579dac75255c67/actionview/test/template/translation_helper_test.rb#L56" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-test_raises_missing_translation_message_with_raise_config_option_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File actionview/test/template/translation_helper_test.rb, line 56</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">test_raises_missing_translation_message_with_raise_config_option</span>
+  <span class="ruby-constant">ActionView</span><span class="ruby-operator">::</span><span class="ruby-constant">Base</span>.<span class="ruby-identifier">raise_on_missing_translations</span> = <span class="ruby-keyword">true</span>
+
+  <span class="ruby-identifier">assert_raise</span>(<span class="ruby-constant">I18n</span><span class="ruby-operator">::</span><span class="ruby-constant">MissingTranslationData</span>) <span class="ruby-keyword">do</span>
+    <span class="ruby-identifier">translate</span>(<span class="ruby-string">&quot;translations.missing&quot;</span>)
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">ensure</span>
+  <span class="ruby-constant">ActionView</span><span class="ruby-operator">::</span><span class="ruby-constant">Base</span>.<span class="ruby-identifier">raise_on_missing_translations</span> = <span class="ruby-keyword">false</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-test_raises_missing_translation_message_with_raise_option">
+            
+              <b>test_raises_missing_translation_message_with_raise_option</b>()
+            
+            <a href="../classes/TranslationHelperTest.html#method-i-test_raises_missing_translation_message_with_raise_option" name="method-i-test_raises_missing_translation_message_with_raise_option" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-test_raises_missing_translation_message_with_raise_option_source')" id="l_method-i-test_raises_missing_translation_message_with_raise_option_source">show</a>
+                
+                  | <a href="https://github.com/rails/rails/blob/433628a45c2f5dd04b115af1b5579dac75255c67/actionview/test/template/translation_helper_test.rb#L66" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-test_raises_missing_translation_message_with_raise_option_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File actionview/test/template/translation_helper_test.rb, line 66</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">test_raises_missing_translation_message_with_raise_option</span>
+  <span class="ruby-identifier">assert_raise</span>(<span class="ruby-constant">I18n</span><span class="ruby-operator">::</span><span class="ruby-constant">MissingTranslationData</span>) <span class="ruby-keyword">do</span>
+    <span class="ruby-identifier">translate</span>(<span class="ruby-value">:&quot;translations.missing&quot;</span>, <span class="ruby-value">:raise</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword">true</span>)
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-test_returns_missing_translation_message_using_nil_as_rescue_format">
+            
+              <b>test_returns_missing_translation_message_using_nil_as_rescue_format</b>()
+            
+            <a href="../classes/TranslationHelperTest.html#method-i-test_returns_missing_translation_message_using_nil_as_rescue_format" name="method-i-test_returns_missing_translation_message_using_nil_as_rescue_format" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-test_returns_missing_translation_message_using_nil_as_rescue_format_source')" id="l_method-i-test_returns_missing_translation_message_using_nil_as_rescue_format_source">show</a>
+                
+                  | <a href="https://github.com/rails/rails/blob/433628a45c2f5dd04b115af1b5579dac75255c67/actionview/test/template/translation_helper_test.rb#L50" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-test_returns_missing_translation_message_using_nil_as_rescue_format_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File actionview/test/template/translation_helper_test.rb, line 50</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">test_returns_missing_translation_message_using_nil_as_rescue_format</span>
+  <span class="ruby-identifier">expected</span> = <span class="ruby-string">&#39;translation missing: en.translations.missing&#39;</span>
+  <span class="ruby-identifier">assert_equal</span> <span class="ruby-identifier">expected</span>, <span class="ruby-identifier">translate</span>(<span class="ruby-value">:&quot;translations.missing&quot;</span>, <span class="ruby-value">:rescue_format</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword">nil</span>)
+  <span class="ruby-identifier">assert_equal</span> <span class="ruby-keyword">false</span>, <span class="ruby-identifier">translate</span>(<span class="ruby-value">:&quot;translations.missing&quot;</span>, <span class="ruby-value">:rescue_format</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword">nil</span>).<span class="ruby-identifier">html_safe?</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-test_returns_missing_translation_message_wrapped_into_span">
+            
+              <b>test_returns_missing_translation_message_wrapped_into_span</b>()
+            
+            <a href="../classes/TranslationHelperTest.html#method-i-test_returns_missing_translation_message_wrapped_into_span" name="method-i-test_returns_missing_translation_message_wrapped_into_span" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-test_returns_missing_translation_message_wrapped_into_span_source')" id="l_method-i-test_returns_missing_translation_message_wrapped_into_span_source">show</a>
+                
+                  | <a href="https://github.com/rails/rails/blob/433628a45c2f5dd04b115af1b5579dac75255c67/actionview/test/template/translation_helper_test.rb#L44" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-test_returns_missing_translation_message_wrapped_into_span_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File actionview/test/template/translation_helper_test.rb, line 44</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">test_returns_missing_translation_message_wrapped_into_span</span>
+  <span class="ruby-identifier">expected</span> = <span class="ruby-string">&#39;&lt;span class=&quot;translation_missing&quot; title=&quot;translation missing: en.translations.missing&quot;&gt;Missing&lt;/span&gt;&#39;</span>
+  <span class="ruby-identifier">assert_equal</span> <span class="ruby-identifier">expected</span>, <span class="ruby-identifier">translate</span>(<span class="ruby-value">:&quot;translations.missing&quot;</span>)
+  <span class="ruby-identifier">assert_equal</span> <span class="ruby-keyword">true</span>, <span class="ruby-identifier">translate</span>(<span class="ruby-value">:&quot;translations.missing&quot;</span>).<span class="ruby-identifier">html_safe?</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-test_translate_does_not_mark_plain_text_as_safe_html">
+            
+              <b>test_translate_does_not_mark_plain_text_as_safe_html</b>()
+            
+            <a href="../classes/TranslationHelperTest.html#method-i-test_translate_does_not_mark_plain_text_as_safe_html" name="method-i-test_translate_does_not_mark_plain_text_as_safe_html" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-test_translate_does_not_mark_plain_text_as_safe_html_source')" id="l_method-i-test_translate_does_not_mark_plain_text_as_safe_html_source">show</a>
+                
+                  | <a href="https://github.com/rails/rails/blob/433628a45c2f5dd04b115af1b5579dac75255c67/actionview/test/template/translation_helper_test.rb#L100" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-test_translate_does_not_mark_plain_text_as_safe_html_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File actionview/test/template/translation_helper_test.rb, line 100</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">test_translate_does_not_mark_plain_text_as_safe_html</span>
+  <span class="ruby-identifier">assert_equal</span> <span class="ruby-keyword">false</span>, <span class="ruby-identifier">translate</span>(<span class="ruby-value">:&#39;translations.hello&#39;</span>).<span class="ruby-identifier">html_safe?</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-test_translate_escapes_interpolations_in_translations_with_a_html_suffix">
+            
+              <b>test_translate_escapes_interpolations_in_translations_with_a_html_suffix</b>()
+            
+            <a href="../classes/TranslationHelperTest.html#method-i-test_translate_escapes_interpolations_in_translations_with_a_html_suffix" name="method-i-test_translate_escapes_interpolations_in_translations_with_a_html_suffix" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-test_translate_escapes_interpolations_in_translations_with_a_html_suffix_source')" id="l_method-i-test_translate_escapes_interpolations_in_translations_with_a_html_suffix_source">show</a>
+                
+                  | <a href="https://github.com/rails/rails/blob/433628a45c2f5dd04b115af1b5579dac75255c67/actionview/test/template/translation_helper_test.rb#L112" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-test_translate_escapes_interpolations_in_translations_with_a_html_suffix_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File actionview/test/template/translation_helper_test.rb, line 112</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">test_translate_escapes_interpolations_in_translations_with_a_html_suffix</span>
+  <span class="ruby-identifier">assert_equal</span> <span class="ruby-string">&#39;&lt;a&gt;Hello &amp;lt;World&amp;gt;&lt;/a&gt;&#39;</span>, <span class="ruby-identifier">translate</span>(<span class="ruby-value">:&#39;translations.interpolated_html&#39;</span>, <span class="ruby-value">:word</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&#39;&lt;World&gt;&#39;</span>)
+  <span class="ruby-identifier">assert_equal</span> <span class="ruby-string">&#39;&lt;a&gt;Hello &amp;lt;World&amp;gt;&lt;/a&gt;&#39;</span>, <span class="ruby-identifier">translate</span>(<span class="ruby-value">:&#39;translations.interpolated_html&#39;</span>, <span class="ruby-value">:word</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">stub</span>(<span class="ruby-value">:to_s</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;&lt;World&gt;&quot;</span>))
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-test_translate_marks_translations_named_html_as_safe_html">
+            
+              <b>test_translate_marks_translations_named_html_as_safe_html</b>()
+            
+            <a href="../classes/TranslationHelperTest.html#method-i-test_translate_marks_translations_named_html_as_safe_html" name="method-i-test_translate_marks_translations_named_html_as_safe_html" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-test_translate_marks_translations_named_html_as_safe_html_source')" id="l_method-i-test_translate_marks_translations_named_html_as_safe_html_source">show</a>
+                
+                  | <a href="https://github.com/rails/rails/blob/433628a45c2f5dd04b115af1b5579dac75255c67/actionview/test/template/translation_helper_test.rb#L104" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-test_translate_marks_translations_named_html_as_safe_html_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File actionview/test/template/translation_helper_test.rb, line 104</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">test_translate_marks_translations_named_html_as_safe_html</span>
+  <span class="ruby-identifier">assert</span> <span class="ruby-identifier">translate</span>(<span class="ruby-value">:&#39;translations.html&#39;</span>).<span class="ruby-identifier">html_safe?</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-test_translate_marks_translations_with_a_html_suffix_as_safe_html">
+            
+              <b>test_translate_marks_translations_with_a_html_suffix_as_safe_html</b>()
+            
+            <a href="../classes/TranslationHelperTest.html#method-i-test_translate_marks_translations_with_a_html_suffix_as_safe_html" name="method-i-test_translate_marks_translations_with_a_html_suffix_as_safe_html" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-test_translate_marks_translations_with_a_html_suffix_as_safe_html_source')" id="l_method-i-test_translate_marks_translations_with_a_html_suffix_as_safe_html_source">show</a>
+                
+                  | <a href="https://github.com/rails/rails/blob/433628a45c2f5dd04b115af1b5579dac75255c67/actionview/test/template/translation_helper_test.rb#L108" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-test_translate_marks_translations_with_a_html_suffix_as_safe_html_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File actionview/test/template/translation_helper_test.rb, line 108</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">test_translate_marks_translations_with_a_html_suffix_as_safe_html</span>
+  <span class="ruby-identifier">assert</span> <span class="ruby-identifier">translate</span>(<span class="ruby-value">:&#39;translations.hello_html&#39;</span>).<span class="ruby-identifier">html_safe?</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-test_translate_with_array_of_string_defaults">
+            
+              <b>test_translate_with_array_of_string_defaults</b>()
+            
+            <a href="../classes/TranslationHelperTest.html#method-i-test_translate_with_array_of_string_defaults" name="method-i-test_translate_with_array_of_string_defaults" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-test_translate_with_array_of_string_defaults_source')" id="l_method-i-test_translate_with_array_of_string_defaults_source">show</a>
+                
+                  | <a href="https://github.com/rails/rails/blob/433628a45c2f5dd04b115af1b5579dac75255c67/actionview/test/template/translation_helper_test.rb#L150" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-test_translate_with_array_of_string_defaults_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File actionview/test/template/translation_helper_test.rb, line 150</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">test_translate_with_array_of_string_defaults</span>
+  <span class="ruby-identifier">translation</span> = <span class="ruby-identifier">translate</span>(<span class="ruby-value">:&#39;translations.missing&#39;</span>, <span class="ruby-identifier">default</span><span class="ruby-operator">:</span> [<span class="ruby-string">&#39;A Generic String&#39;</span>, <span class="ruby-string">&#39;Second generic string&#39;</span>])
+  <span class="ruby-identifier">assert_equal</span> <span class="ruby-string">&#39;A Generic String&#39;</span>, <span class="ruby-identifier">translation</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-test_translate_with_default_named_html">
+            
+              <b>test_translate_with_default_named_html</b>()
+            
+            <a href="../classes/TranslationHelperTest.html#method-i-test_translate_with_default_named_html" name="method-i-test_translate_with_default_named_html" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-test_translate_with_default_named_html_source')" id="l_method-i-test_translate_with_default_named_html_source">show</a>
+                
+                  | <a href="https://github.com/rails/rails/blob/433628a45c2f5dd04b115af1b5579dac75255c67/actionview/test/template/translation_helper_test.rb#L127" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-test_translate_with_default_named_html_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File actionview/test/template/translation_helper_test.rb, line 127</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">test_translate_with_default_named_html</span>
+  <span class="ruby-identifier">translation</span> = <span class="ruby-identifier">translate</span>(<span class="ruby-value">:&#39;translations.missing&#39;</span>, <span class="ruby-value">:default</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">:&#39;translations.hello_html&#39;</span>)
+  <span class="ruby-identifier">assert_equal</span> <span class="ruby-string">&#39;&lt;a&gt;Hello World&lt;/a&gt;&#39;</span>, <span class="ruby-identifier">translation</span>
+  <span class="ruby-identifier">assert_equal</span> <span class="ruby-keyword">true</span>, <span class="ruby-identifier">translation</span>.<span class="ruby-identifier">html_safe?</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-test_translate_with_html_count">
+            
+              <b>test_translate_with_html_count</b>()
+            
+            <a href="../classes/TranslationHelperTest.html#method-i-test_translate_with_html_count" name="method-i-test_translate_with_html_count" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-test_translate_with_html_count_source')" id="l_method-i-test_translate_with_html_count_source">show</a>
+                
+                  | <a href="https://github.com/rails/rails/blob/433628a45c2f5dd04b115af1b5579dac75255c67/actionview/test/template/translation_helper_test.rb#L117" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-test_translate_with_html_count_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File actionview/test/template/translation_helper_test.rb, line 117</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">test_translate_with_html_count</span>
+  <span class="ruby-identifier">assert_equal</span> <span class="ruby-string">&#39;&lt;a&gt;One 1&lt;/a&gt;&#39;</span>, <span class="ruby-identifier">translate</span>(<span class="ruby-value">:&#39;translations.count_html&#39;</span>, <span class="ruby-value">:count</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-number">1</span>)
+  <span class="ruby-identifier">assert_equal</span> <span class="ruby-string">&#39;&lt;a&gt;Other 2&lt;/a&gt;&#39;</span>, <span class="ruby-identifier">translate</span>(<span class="ruby-value">:&#39;translations.count_html&#39;</span>, <span class="ruby-value">:count</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-number">2</span>)
+  <span class="ruby-identifier">assert_equal</span> <span class="ruby-string">&#39;&lt;a&gt;Other &amp;lt;One&amp;gt;&lt;/a&gt;&#39;</span>, <span class="ruby-identifier">translate</span>(<span class="ruby-value">:&#39;translations.count_html&#39;</span>, <span class="ruby-value">:count</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&#39;&lt;One&gt;&#39;</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-test_translate_with_last_default_named_html">
+            
+              <b>test_translate_with_last_default_named_html</b>()
+            
+            <a href="../classes/TranslationHelperTest.html#method-i-test_translate_with_last_default_named_html" name="method-i-test_translate_with_last_default_named_html" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-test_translate_with_last_default_named_html_source')" id="l_method-i-test_translate_with_last_default_named_html_source">show</a>
+                
+                  | <a href="https://github.com/rails/rails/blob/433628a45c2f5dd04b115af1b5579dac75255c67/actionview/test/template/translation_helper_test.rb#L139" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-test_translate_with_last_default_named_html_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File actionview/test/template/translation_helper_test.rb, line 139</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">test_translate_with_last_default_named_html</span>
+  <span class="ruby-identifier">translation</span> = <span class="ruby-identifier">translate</span>(<span class="ruby-value">:&#39;translations.missing&#39;</span>, <span class="ruby-value">:default</span> =<span class="ruby-operator">&gt;</span> [<span class="ruby-value">:&#39;translations.missing&#39;</span>, <span class="ruby-value">:&#39;translations.hello_html&#39;</span>])
+  <span class="ruby-identifier">assert_equal</span> <span class="ruby-string">&#39;&lt;a&gt;Hello World&lt;/a&gt;&#39;</span>, <span class="ruby-identifier">translation</span>
+  <span class="ruby-identifier">assert_equal</span> <span class="ruby-keyword">true</span>, <span class="ruby-identifier">translation</span>.<span class="ruby-identifier">html_safe?</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-test_translate_with_string_default">
+            
+              <b>test_translate_with_string_default</b>()
+            
+            <a href="../classes/TranslationHelperTest.html#method-i-test_translate_with_string_default" name="method-i-test_translate_with_string_default" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-test_translate_with_string_default_source')" id="l_method-i-test_translate_with_string_default_source">show</a>
+                
+                  | <a href="https://github.com/rails/rails/blob/433628a45c2f5dd04b115af1b5579dac75255c67/actionview/test/template/translation_helper_test.rb#L145" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-test_translate_with_string_default_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File actionview/test/template/translation_helper_test.rb, line 145</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">test_translate_with_string_default</span>
+  <span class="ruby-identifier">translation</span> = <span class="ruby-identifier">translate</span>(<span class="ruby-value">:&#39;translations.missing&#39;</span>, <span class="ruby-identifier">default</span><span class="ruby-operator">:</span> <span class="ruby-string">&#39;A Generic String&#39;</span>)
+  <span class="ruby-identifier">assert_equal</span> <span class="ruby-string">&#39;A Generic String&#39;</span>, <span class="ruby-identifier">translation</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-test_translate_with_two_defaults_named_html">
+            
+              <b>test_translate_with_two_defaults_named_html</b>()
+            
+            <a href="../classes/TranslationHelperTest.html#method-i-test_translate_with_two_defaults_named_html" name="method-i-test_translate_with_two_defaults_named_html" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-test_translate_with_two_defaults_named_html_source')" id="l_method-i-test_translate_with_two_defaults_named_html_source">show</a>
+                
+                  | <a href="https://github.com/rails/rails/blob/433628a45c2f5dd04b115af1b5579dac75255c67/actionview/test/template/translation_helper_test.rb#L133" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-test_translate_with_two_defaults_named_html_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File actionview/test/template/translation_helper_test.rb, line 133</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">test_translate_with_two_defaults_named_html</span>
+  <span class="ruby-identifier">translation</span> = <span class="ruby-identifier">translate</span>(<span class="ruby-value">:&#39;translations.missing&#39;</span>, <span class="ruby-value">:default</span> =<span class="ruby-operator">&gt;</span> [<span class="ruby-value">:&#39;translations.missing_html&#39;</span>, <span class="ruby-value">:&#39;translations.hello_html&#39;</span>])
+  <span class="ruby-identifier">assert_equal</span> <span class="ruby-string">&#39;&lt;a&gt;Hello World&lt;/a&gt;&#39;</span>, <span class="ruby-identifier">translation</span>
+  <span class="ruby-identifier">assert_equal</span> <span class="ruby-keyword">true</span>, <span class="ruby-identifier">translation</span>.<span class="ruby-identifier">html_safe?</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-test_translation_returning_an_array">
+            
+              <b>test_translation_returning_an_array</b>()
+            
+            <a href="../classes/TranslationHelperTest.html#method-i-test_translation_returning_an_array" name="method-i-test_translation_returning_an_array" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-test_translation_returning_an_array_source')" id="l_method-i-test_translation_returning_an_array_source">show</a>
+                
+                  | <a href="https://github.com/rails/rails/blob/433628a45c2f5dd04b115af1b5579dac75255c67/actionview/test/template/translation_helper_test.rb#L78" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-test_translation_returning_an_array_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File actionview/test/template/translation_helper_test.rb, line 78</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">test_translation_returning_an_array</span>
+  <span class="ruby-identifier">expected</span> = <span class="ruby-node">%w(foo bar)</span>
+  <span class="ruby-identifier">assert_equal</span> <span class="ruby-identifier">expected</span>, <span class="ruby-identifier">translate</span>(<span class="ruby-value">:&quot;translations.array&quot;</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-test_translation_returning_an_array_ignores_html_suffix">
+            
+              <b>test_translation_returning_an_array_ignores_html_suffix</b>()
+            
+            <a href="../classes/TranslationHelperTest.html#method-i-test_translation_returning_an_array_ignores_html_suffix" name="method-i-test_translation_returning_an_array_ignores_html_suffix" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-test_translation_returning_an_array_ignores_html_suffix_source')" id="l_method-i-test_translation_returning_an_array_ignores_html_suffix_source">show</a>
+                
+                  | <a href="https://github.com/rails/rails/blob/433628a45c2f5dd04b115af1b5579dac75255c67/actionview/test/template/translation_helper_test.rb#L123" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-test_translation_returning_an_array_ignores_html_suffix_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File actionview/test/template/translation_helper_test.rb, line 123</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">test_translation_returning_an_array_ignores_html_suffix</span>
+  <span class="ruby-identifier">assert_equal</span> [<span class="ruby-string">&quot;foo&quot;</span>, <span class="ruby-string">&quot;bar&quot;</span>], <span class="ruby-identifier">translate</span>(<span class="ruby-value">:&#39;translations.array_html&#39;</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                    </div>
+
+    </div>
+  </body>
+</html>    

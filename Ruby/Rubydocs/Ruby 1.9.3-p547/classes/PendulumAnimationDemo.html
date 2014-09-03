@@ -1,0 +1,497 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>PendulumAnimationDemo</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="../css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/main.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/github.css" type="text/css" media="screen" />
+<script src="../js/jquery-1.3.2.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/jquery-effect.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+
+<body>     
+    <div class="banner">
+        
+        <h1>
+            <span class="type">Class</span> 
+            PendulumAnimationDemo 
+            
+                <span class="parent">&lt; 
+                    
+                    <a href="Object.html">Object</a>
+                    
+                </span>
+            
+        </h1>
+        <ul class="files">
+            
+            <li><a href="../files/ext/tk/sample/demos-en/pendulum_rb.html">ext/tk/sample/demos-en/pendulum.rb</a></li>
+            
+            <li><a href="../files/ext/tk/sample/demos-jp/pendulum_rb.html">ext/tk/sample/demos-jp/pendulum.rb</a></li>
+            
+        </ul>
+    </div>
+    <div id="bodyContent">
+        <div id="content">
+  
+    <div class="description">
+      
+<p>animated wave</p>
+
+<p>animated wave</p>
+
+    </div>
+  
+
+
+  
+
+
+  
+  
+
+
+  
+
+
+  
+    <!-- Method ref -->
+    <div class="sectiontitle">Methods</div>
+    <dl class="methods">
+      
+        <dt>N</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-new">new</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>R</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-recomputeAngle">recomputeAngle</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-repeat">repeat</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>S</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-showPendulum">showPendulum</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-showPhase">showPhase</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+    </dl>
+  
+
+  
+
+
+
+  
+
+    
+
+    
+
+    
+
+
+    
+
+
+    <!-- Methods -->
+    
+      <div class="sectiontitle">Class Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-c-new">
+            
+              <b>new</b>(frame)
+            
+            <a href="../classes/PendulumAnimationDemo.html#method-c-new" name="method-c-new" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-new_source')" id="l_method-c-new_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/287a34ae0dfc23e4158f67cb7783d239f202c368/ext/tk/sample/demos-en/pendulum.rb#L52" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-new_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/sample/demos-en/pendulum.rb, line 52</span>
+  <span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">initialize</span>(<span class="ruby-identifier">frame</span>)
+    <span class="ruby-comment"># Create some structural widgets</span>
+    <span class="ruby-ivar">@pane</span> = <span class="ruby-constant">TkPanedWindow</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">frame</span>, <span class="ruby-value">:orient=</span><span class="ruby-operator">&gt;</span><span class="ruby-value">:horizontal</span>).<span class="ruby-identifier">pack</span>(<span class="ruby-value">:fill=</span><span class="ruby-operator">&gt;</span><span class="ruby-value">:both</span>, <span class="ruby-value">:expand=</span><span class="ruby-operator">&gt;</span><span class="ruby-keyword">true</span>)
+<span class="ruby-comment">#    @pane.add(@lf1 = TkLabelFrame.new(@pane, :text=&gt;&#39;Pendulum Simulation&#39;))</span>
+<span class="ruby-comment">#    @pane.add(@lf2 = TkLabelFrame.new(@pane, :text=&gt;&#39;Phase Space&#39;))</span>
+    <span class="ruby-ivar">@lf1</span> = <span class="ruby-constant">TkLabelFrame</span>.<span class="ruby-identifier">new</span>(<span class="ruby-ivar">@pane</span>, <span class="ruby-value">:text=</span><span class="ruby-operator">&gt;</span><span class="ruby-string">&#39;Pendulum Simulation&#39;</span>)
+    <span class="ruby-ivar">@lf2</span> = <span class="ruby-constant">TkLabelFrame</span>.<span class="ruby-identifier">new</span>(<span class="ruby-ivar">@pane</span>, <span class="ruby-value">:text=</span><span class="ruby-operator">&gt;</span><span class="ruby-string">&#39;Phase Space&#39;</span>)
+
+    <span class="ruby-comment"># Create the canvas containing the graphical representation of the</span>
+    <span class="ruby-comment"># simulated system.</span>
+    <span class="ruby-ivar">@c</span> = <span class="ruby-constant">TkCanvas</span>.<span class="ruby-identifier">new</span>(<span class="ruby-ivar">@lf1</span>, <span class="ruby-value">:width=</span><span class="ruby-operator">&gt;</span><span class="ruby-number">320</span>, <span class="ruby-value">:height=</span><span class="ruby-operator">&gt;</span><span class="ruby-number">200</span>, <span class="ruby-value">:background=</span><span class="ruby-operator">&gt;</span><span class="ruby-string">&#39;white&#39;</span>,
+                      <span class="ruby-value">:borderwidth=</span><span class="ruby-operator">&gt;</span><span class="ruby-number">2</span>, <span class="ruby-value">:relief=</span><span class="ruby-operator">&gt;</span><span class="ruby-value">:sunken</span>)
+    <span class="ruby-constant">TkcText</span>.<span class="ruby-identifier">new</span>(<span class="ruby-ivar">@c</span>, <span class="ruby-number">5</span>, <span class="ruby-number">5</span>, <span class="ruby-value">:anchor=</span><span class="ruby-operator">&gt;</span><span class="ruby-value">:nw</span>,
+                <span class="ruby-value">:text=</span><span class="ruby-operator">&gt;</span><span class="ruby-string">&#39;Click to Adjust Bob Start Position&#39;</span>)
+    <span class="ruby-comment"># Coordinates of these items don&#39;t matter; they will be set properly below</span>
+    <span class="ruby-ivar">@plate</span> = <span class="ruby-constant">TkcLine</span>.<span class="ruby-identifier">new</span>(<span class="ruby-ivar">@c</span>, <span class="ruby-number">0</span>, <span class="ruby-number">25</span>, <span class="ruby-number">320</span>, <span class="ruby-number">25</span>, <span class="ruby-value">:width=</span><span class="ruby-operator">&gt;</span><span class="ruby-number">2</span>, <span class="ruby-value">:fill=</span><span class="ruby-operator">&gt;</span><span class="ruby-string">&#39;grey50&#39;</span>)
+    <span class="ruby-ivar">@rod</span> = <span class="ruby-constant">TkcLine</span>.<span class="ruby-identifier">new</span>(<span class="ruby-ivar">@c</span>, <span class="ruby-number">1</span>, <span class="ruby-number">1</span>, <span class="ruby-number">1</span>, <span class="ruby-number">1</span>, <span class="ruby-value">:width=</span><span class="ruby-operator">&gt;</span><span class="ruby-number">3</span>, <span class="ruby-value">:fill=</span><span class="ruby-operator">&gt;</span><span class="ruby-string">&#39;black&#39;</span>)
+    <span class="ruby-ivar">@bob</span> = <span class="ruby-constant">TkcOval</span>.<span class="ruby-identifier">new</span>(<span class="ruby-ivar">@c</span>, <span class="ruby-number">1</span>, <span class="ruby-number">1</span>, <span class="ruby-number">2</span>, <span class="ruby-number">2</span>,
+                       <span class="ruby-value">:width=</span><span class="ruby-operator">&gt;</span><span class="ruby-number">3</span>, <span class="ruby-value">:fill=</span><span class="ruby-operator">&gt;</span><span class="ruby-string">&#39;yellow&#39;</span>, <span class="ruby-value">:outline=</span><span class="ruby-operator">&gt;</span><span class="ruby-string">&#39;black&#39;</span>)
+    <span class="ruby-constant">TkcOval</span>.<span class="ruby-identifier">new</span>(<span class="ruby-ivar">@c</span>, <span class="ruby-number">155</span>, <span class="ruby-number">20</span>, <span class="ruby-number">165</span>, <span class="ruby-number">30</span>, <span class="ruby-value">:fill=</span><span class="ruby-operator">&gt;</span><span class="ruby-string">&#39;grey50&#39;</span>, <span class="ruby-value">:outline=</span><span class="ruby-operator">&gt;</span><span class="ruby-string">&#39;&#39;</span>)
+
+    <span class="ruby-comment"># pack</span>
+    <span class="ruby-ivar">@c</span>.<span class="ruby-identifier">pack</span>(<span class="ruby-value">:fill=</span><span class="ruby-operator">&gt;</span><span class="ruby-value">:both</span>, <span class="ruby-value">:expand=</span><span class="ruby-operator">&gt;</span><span class="ruby-keyword">true</span>)
+
+    <span class="ruby-comment"># Create the canvas containing the phase space graph; this consists of</span>
+    <span class="ruby-comment"># a line that gets gradually paler as it ages, which is an extremely</span>
+    <span class="ruby-comment"># effective visual trick.</span>
+    <span class="ruby-ivar">@k</span> = <span class="ruby-constant">TkCanvas</span>.<span class="ruby-identifier">new</span>(<span class="ruby-ivar">@lf2</span>, <span class="ruby-value">:width=</span><span class="ruby-operator">&gt;</span><span class="ruby-number">320</span>, <span class="ruby-value">:height=</span><span class="ruby-operator">&gt;</span><span class="ruby-number">200</span>, <span class="ruby-value">:background=</span><span class="ruby-operator">&gt;</span><span class="ruby-string">&#39;white&#39;</span>,
+                      <span class="ruby-value">:borderwidth=</span><span class="ruby-operator">&gt;</span><span class="ruby-number">2</span>, <span class="ruby-value">:relief=</span><span class="ruby-operator">&gt;</span><span class="ruby-value">:sunken</span>)
+    <span class="ruby-ivar">@y_axis</span> = <span class="ruby-constant">TkcLine</span>.<span class="ruby-identifier">new</span>(<span class="ruby-ivar">@k</span>, <span class="ruby-number">160</span>, <span class="ruby-number">200</span>, <span class="ruby-number">160</span>, <span class="ruby-number">0</span>, <span class="ruby-value">:fill=</span><span class="ruby-operator">&gt;</span><span class="ruby-string">&#39;grey75&#39;</span>, <span class="ruby-value">:arrow=</span><span class="ruby-operator">&gt;</span><span class="ruby-value">:last</span>)
+    <span class="ruby-ivar">@x_axis</span> = <span class="ruby-constant">TkcLine</span>.<span class="ruby-identifier">new</span>(<span class="ruby-ivar">@k</span>, <span class="ruby-number">0</span>, <span class="ruby-number">100</span>, <span class="ruby-number">320</span>, <span class="ruby-number">100</span>, <span class="ruby-value">:fill=</span><span class="ruby-operator">&gt;</span><span class="ruby-string">&#39;grey75&#39;</span>, <span class="ruby-value">:arrow=</span><span class="ruby-operator">&gt;</span><span class="ruby-value">:last</span>)
+
+    <span class="ruby-ivar">@graph</span> = {}
+    <span class="ruby-number">90</span>.<span class="ruby-identifier">step</span>(<span class="ruby-number">0</span>, <span class="ruby-number">-10</span>){<span class="ruby-operator">|</span><span class="ruby-identifier">i</span><span class="ruby-operator">|</span>
+      <span class="ruby-comment"># Coordinates of these items don&#39;t matter;</span>
+      <span class="ruby-comment"># they will be set properly below</span>
+      <span class="ruby-ivar">@graph</span>[<span class="ruby-identifier">i</span>] = <span class="ruby-constant">TkcLine</span>.<span class="ruby-identifier">new</span>(<span class="ruby-ivar">@k</span>, <span class="ruby-number">0</span>, <span class="ruby-number">0</span>, <span class="ruby-number">1</span>, <span class="ruby-number">1</span>, <span class="ruby-value">:smooth=</span><span class="ruby-operator">&gt;</span><span class="ruby-keyword">true</span>, <span class="ruby-value">:fill=</span><span class="ruby-operator">&gt;</span><span class="ruby-node">&quot;grey#{i}&quot;</span>)
+    }
+
+    <span class="ruby-comment"># labels</span>
+    <span class="ruby-ivar">@label_theta</span> = <span class="ruby-constant">TkcText</span>.<span class="ruby-identifier">new</span>(<span class="ruby-ivar">@k</span>, <span class="ruby-number">0</span>, <span class="ruby-number">0</span>, <span class="ruby-value">:anchor=</span><span class="ruby-operator">&gt;</span><span class="ruby-value">:ne</span>,
+                               <span class="ruby-value">:text=</span><span class="ruby-operator">&gt;</span><span class="ruby-string">&#39;q&#39;</span>, <span class="ruby-value">:font=</span><span class="ruby-operator">&gt;</span><span class="ruby-string">&#39;Symbol 8&#39;</span>)
+    <span class="ruby-ivar">@label_dtheta</span> = <span class="ruby-constant">TkcText</span>.<span class="ruby-identifier">new</span>(<span class="ruby-ivar">@k</span>, <span class="ruby-number">0</span>, <span class="ruby-number">0</span>, <span class="ruby-value">:anchor=</span><span class="ruby-operator">&gt;</span><span class="ruby-value">:ne</span>,
+                               <span class="ruby-value">:text=</span><span class="ruby-operator">&gt;</span><span class="ruby-string">&#39;dq&#39;</span>, <span class="ruby-value">:font=</span><span class="ruby-operator">&gt;</span><span class="ruby-string">&#39;Symbol 8&#39;</span>)
+
+    <span class="ruby-comment"># pack</span>
+    <span class="ruby-ivar">@k</span>.<span class="ruby-identifier">pack</span>(<span class="ruby-value">:fill=</span><span class="ruby-operator">&gt;</span><span class="ruby-value">:both</span>, <span class="ruby-value">:expand=</span><span class="ruby-operator">&gt;</span><span class="ruby-keyword">true</span>)
+
+    <span class="ruby-comment"># Initialize some variables</span>
+    <span class="ruby-ivar">@points</span> = []
+    <span class="ruby-ivar">@theta</span> = <span class="ruby-number">45.0</span>
+    <span class="ruby-ivar">@dTheta</span> = <span class="ruby-number">0.0</span>
+    <span class="ruby-ivar">@length</span> = <span class="ruby-number">150</span>
+
+    <span class="ruby-comment"># animation loop</span>
+    <span class="ruby-ivar">@timer</span> = <span class="ruby-constant">TkTimer</span>.<span class="ruby-identifier">new</span>(<span class="ruby-number">15</span>){ <span class="ruby-identifier">repeat</span> }
+
+    <span class="ruby-comment"># binding</span>
+    <span class="ruby-ivar">@c</span>.<span class="ruby-identifier">bindtags_unshift</span>(<span class="ruby-identifier">btag</span> = <span class="ruby-constant">TkBindTag</span>.<span class="ruby-identifier">new</span>)
+    <span class="ruby-identifier">btag</span>.<span class="ruby-identifier">bind</span>(<span class="ruby-string">&#39;Destroy&#39;</span>){ <span class="ruby-ivar">@timer</span>.<span class="ruby-identifier">stop</span> }
+    <span class="ruby-identifier">btag</span>.<span class="ruby-identifier">bind</span>(<span class="ruby-string">&#39;1&#39;</span>, <span class="ruby-identifier">proc</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">x</span>, <span class="ruby-identifier">y</span><span class="ruby-operator">|</span> <span class="ruby-ivar">@timer</span>.<span class="ruby-identifier">stop</span>; <span class="ruby-identifier">showPendulum</span>(<span class="ruby-identifier">x</span>.<span class="ruby-identifier">to_i</span>, <span class="ruby-identifier">y</span>.<span class="ruby-identifier">to_i</span>)},
+              <span class="ruby-string">&#39;%x %y&#39;</span>)
+    <span class="ruby-identifier">btag</span>.<span class="ruby-identifier">bind</span>(<span class="ruby-string">&#39;B1-Motion&#39;</span>, <span class="ruby-identifier">proc</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">x</span>, <span class="ruby-identifier">y</span><span class="ruby-operator">|</span> <span class="ruby-identifier">showPendulum</span>(<span class="ruby-identifier">x</span>.<span class="ruby-identifier">to_i</span>, <span class="ruby-identifier">y</span>.<span class="ruby-identifier">to_i</span>)}, <span class="ruby-string">&#39;%x %y&#39;</span>)
+    <span class="ruby-identifier">btag</span>.<span class="ruby-identifier">bind</span>(<span class="ruby-string">&#39;ButtonRelease-1&#39;</span>,
+              <span class="ruby-identifier">proc</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">x</span>, <span class="ruby-identifier">y</span><span class="ruby-operator">|</span> <span class="ruby-identifier">showPendulum</span>(<span class="ruby-identifier">x</span>.<span class="ruby-identifier">to_i</span>, <span class="ruby-identifier">y</span>.<span class="ruby-identifier">to_i</span>); <span class="ruby-ivar">@timer</span>.<span class="ruby-identifier">start</span> },
+              <span class="ruby-string">&#39;%x %y&#39;</span>)
+
+    <span class="ruby-identifier">btag</span>.<span class="ruby-identifier">bind</span>(<span class="ruby-string">&#39;Configure&#39;</span>, <span class="ruby-identifier">proc</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">w</span><span class="ruby-operator">|</span> <span class="ruby-ivar">@plate</span>.<span class="ruby-identifier">coords</span>(<span class="ruby-number">0</span>, <span class="ruby-number">25</span>, <span class="ruby-identifier">w</span>.<span class="ruby-identifier">to_i</span>, <span class="ruby-number">25</span>)}, <span class="ruby-string">&#39;%w&#39;</span>)
+
+    <span class="ruby-ivar">@k</span>.<span class="ruby-identifier">bind</span>(<span class="ruby-string">&#39;Configure&#39;</span>, <span class="ruby-identifier">proc</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">h</span>, <span class="ruby-identifier">w</span><span class="ruby-operator">|</span>
+              <span class="ruby-identifier">h</span> = <span class="ruby-identifier">h</span>.<span class="ruby-identifier">to_i</span>
+              <span class="ruby-identifier">w</span> = <span class="ruby-identifier">w</span>.<span class="ruby-identifier">to_i</span>
+              <span class="ruby-ivar">@psh</span> = <span class="ruby-identifier">h</span><span class="ruby-operator">/</span><span class="ruby-number">2</span>;
+              <span class="ruby-ivar">@psw</span> = <span class="ruby-identifier">w</span><span class="ruby-operator">/</span><span class="ruby-number">2</span>
+              <span class="ruby-ivar">@x_axis</span>.<span class="ruby-identifier">coords</span>(<span class="ruby-number">2</span>, <span class="ruby-ivar">@psh</span>, <span class="ruby-identifier">w</span><span class="ruby-operator">-</span><span class="ruby-number">2</span>, <span class="ruby-ivar">@psh</span>)
+              <span class="ruby-ivar">@y_axis</span>.<span class="ruby-identifier">coords</span>(<span class="ruby-ivar">@psw</span>, <span class="ruby-identifier">h</span><span class="ruby-operator">-</span><span class="ruby-number">2</span>, <span class="ruby-ivar">@psw</span>, <span class="ruby-number">2</span>)
+              <span class="ruby-ivar">@label_theta</span>.<span class="ruby-identifier">coords</span>(<span class="ruby-ivar">@psw</span><span class="ruby-operator">-</span><span class="ruby-number">4</span>, <span class="ruby-number">6</span>)
+              <span class="ruby-ivar">@label_dtheta</span>.<span class="ruby-identifier">coords</span>(<span class="ruby-identifier">w</span><span class="ruby-operator">-</span><span class="ruby-number">6</span>, <span class="ruby-ivar">@psh</span><span class="ruby-operator">+</span><span class="ruby-number">4</span>)
+            }, <span class="ruby-string">&#39;%h %w&#39;</span>)
+
+    <span class="ruby-comment"># add</span>
+    <span class="ruby-constant">Tk</span>.<span class="ruby-identifier">update</span>
+    <span class="ruby-ivar">@pane</span>.<span class="ruby-identifier">add</span>(<span class="ruby-ivar">@lf1</span>)
+    <span class="ruby-ivar">@pane</span>.<span class="ruby-identifier">add</span>(<span class="ruby-ivar">@lf2</span>)
+
+    <span class="ruby-comment"># init display</span>
+    <span class="ruby-identifier">showPendulum</span>
+
+    <span class="ruby-comment"># animation start</span>
+    <span class="ruby-ivar">@timer</span>.<span class="ruby-identifier">start</span>(<span class="ruby-number">500</span>)
+  <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                  
+      <div class="sectiontitle">Instance Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-i-recomputeAngle">
+            
+              <b>recomputeAngle</b>()
+            
+            <a href="../classes/PendulumAnimationDemo.html#method-i-recomputeAngle" name="method-i-recomputeAngle" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>This procedure is the “business” part of the simulation that does simple
+numerical integration of the formula for a simple rotational pendulum.</p>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-recomputeAngle_source')" id="l_method-i-recomputeAngle_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/287a34ae0dfc23e4158f67cb7783d239f202c368/ext/tk/sample/demos-en/pendulum.rb#L191" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-recomputeAngle_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/sample/demos-en/pendulum.rb, line 191</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">recomputeAngle</span>
+  <span class="ruby-identifier">scaling</span> = <span class="ruby-number">3000.0</span><span class="ruby-operator">/</span><span class="ruby-ivar">@length</span><span class="ruby-operator">/</span><span class="ruby-ivar">@length</span>
+
+  <span class="ruby-comment"># To estimate the integration accurately, we really need to</span>
+  <span class="ruby-comment"># compute the end-point of our time-step.  But to do *that*, we</span>
+  <span class="ruby-comment"># need to estimate the integration accurately!  So we try this</span>
+  <span class="ruby-comment"># technique, which is inaccurate, but better than doing it in a</span>
+  <span class="ruby-comment"># single step.  What we really want is bound up in the</span>
+  <span class="ruby-comment"># differential equation:</span>
+  <span class="ruby-comment">#       ..             - sin theta</span>
+  <span class="ruby-comment">#      theta + theta = -----------</span>
+  <span class="ruby-comment">#                         length</span>
+  <span class="ruby-comment"># But my math skills are not good enough to solve this!</span>
+
+  <span class="ruby-comment"># first estimate</span>
+  <span class="ruby-identifier">firstDDTheta</span> = <span class="ruby-operator">-</span><span class="ruby-constant">Math</span>.<span class="ruby-identifier">sin</span>(<span class="ruby-ivar">@theta</span> <span class="ruby-operator">*</span> <span class="ruby-constant">Math</span><span class="ruby-operator">::</span><span class="ruby-constant">PI</span><span class="ruby-operator">/</span><span class="ruby-number">180</span>) <span class="ruby-operator">*</span> <span class="ruby-identifier">scaling</span>
+  <span class="ruby-identifier">midDTheta</span> = <span class="ruby-ivar">@dTheta</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">firstDDTheta</span>
+  <span class="ruby-identifier">midTheta</span> = <span class="ruby-ivar">@theta</span> <span class="ruby-operator">+</span> (<span class="ruby-ivar">@dTheta</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">midDTheta</span>)<span class="ruby-operator">/</span><span class="ruby-number">2</span>
+  <span class="ruby-comment"># second estimate</span>
+  <span class="ruby-identifier">midDDTheta</span> = <span class="ruby-operator">-</span><span class="ruby-constant">Math</span>.<span class="ruby-identifier">sin</span>(<span class="ruby-identifier">midTheta</span> <span class="ruby-operator">*</span> <span class="ruby-constant">Math</span><span class="ruby-operator">::</span><span class="ruby-constant">PI</span><span class="ruby-operator">/</span><span class="ruby-number">180</span>) <span class="ruby-operator">*</span> <span class="ruby-identifier">scaling</span>
+  <span class="ruby-identifier">midDTheta</span> = <span class="ruby-ivar">@dTheta</span> <span class="ruby-operator">+</span> (<span class="ruby-identifier">firstDDTheta</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">midDDTheta</span>)<span class="ruby-operator">/</span><span class="ruby-number">2</span>
+  <span class="ruby-identifier">midTheta</span> = <span class="ruby-ivar">@theta</span> <span class="ruby-operator">+</span> (<span class="ruby-ivar">@dTheta</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">midDTheta</span>)<span class="ruby-operator">/</span><span class="ruby-number">2</span>
+  <span class="ruby-comment"># Now we do a double-estimate approach for getting the final value</span>
+  <span class="ruby-comment"># first estimate</span>
+  <span class="ruby-identifier">midDDTheta</span> = <span class="ruby-operator">-</span><span class="ruby-constant">Math</span>.<span class="ruby-identifier">sin</span>(<span class="ruby-identifier">midTheta</span> <span class="ruby-operator">*</span> <span class="ruby-constant">Math</span><span class="ruby-operator">::</span><span class="ruby-constant">PI</span><span class="ruby-operator">/</span><span class="ruby-number">180</span>) <span class="ruby-operator">*</span> <span class="ruby-identifier">scaling</span>
+  <span class="ruby-identifier">lastDTheta</span> = <span class="ruby-identifier">midDTheta</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">midDDTheta</span>
+  <span class="ruby-identifier">lastTheta</span> = <span class="ruby-identifier">midTheta</span> <span class="ruby-operator">+</span> (<span class="ruby-identifier">midDTheta</span><span class="ruby-operator">+</span> <span class="ruby-identifier">lastDTheta</span>)<span class="ruby-operator">/</span><span class="ruby-number">2</span>
+  <span class="ruby-comment"># second estimate</span>
+  <span class="ruby-identifier">lastDDTheta</span> = <span class="ruby-operator">-</span><span class="ruby-constant">Math</span>.<span class="ruby-identifier">sin</span>(<span class="ruby-identifier">lastTheta</span> <span class="ruby-operator">*</span> <span class="ruby-constant">Math</span><span class="ruby-operator">::</span><span class="ruby-constant">PI</span><span class="ruby-operator">/</span><span class="ruby-number">180</span>) <span class="ruby-operator">*</span> <span class="ruby-identifier">scaling</span>
+  <span class="ruby-identifier">lastDTheta</span> = <span class="ruby-identifier">midDTheta</span> <span class="ruby-operator">+</span> (<span class="ruby-identifier">midDDTheta</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">lastDDTheta</span>)<span class="ruby-operator">/</span><span class="ruby-number">2</span>
+  <span class="ruby-identifier">lastTheta</span> = <span class="ruby-identifier">midTheta</span> <span class="ruby-operator">+</span> (<span class="ruby-identifier">midDTheta</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">lastDTheta</span>)<span class="ruby-operator">/</span><span class="ruby-number">2</span>
+  <span class="ruby-comment"># Now put the values back in our globals</span>
+  <span class="ruby-ivar">@dTheta</span> = <span class="ruby-identifier">lastDTheta</span>
+  <span class="ruby-ivar">@theta</span> = <span class="ruby-identifier">lastTheta</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-repeat">
+            
+              <b>repeat</b>()
+            
+            <a href="../classes/PendulumAnimationDemo.html#method-i-repeat" name="method-i-repeat" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>This method ties together the simulation engine and the graphical display
+code that visualizes it.</p>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-repeat_source')" id="l_method-i-repeat_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/287a34ae0dfc23e4158f67cb7783d239f202c368/ext/tk/sample/demos-en/pendulum.rb#L229" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-repeat_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/sample/demos-en/pendulum.rb, line 229</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">repeat</span>
+  <span class="ruby-comment"># Simulate</span>
+  <span class="ruby-identifier">recomputeAngle</span>
+
+  <span class="ruby-comment"># Update the display</span>
+  <span class="ruby-identifier">showPendulum</span>
+  <span class="ruby-identifier">showPhase</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-showPendulum">
+            
+              <b>showPendulum</b>(x=nil, y=nil)
+            
+            <a href="../classes/PendulumAnimationDemo.html#method-i-showPendulum" name="method-i-showPendulum" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>This procedure makes the pendulum appear at the correct place on the
+canvas. If the additional arguments x, y are passed instead of computing
+the position of the pendulum from the length of the pendulum rod and its
+angle, the length and angle are computed in reverse from the given location
+(which is taken to be the centre of the pendulum bob.)</p>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-showPendulum_source')" id="l_method-i-showPendulum_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/287a34ae0dfc23e4158f67cb7783d239f202c368/ext/tk/sample/demos-en/pendulum.rb#L149" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-showPendulum_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/sample/demos-en/pendulum.rb, line 149</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">showPendulum</span>(<span class="ruby-identifier">x</span>=<span class="ruby-keyword">nil</span>, <span class="ruby-identifier">y</span>=<span class="ruby-keyword">nil</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">x</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">y</span> <span class="ruby-operator">&amp;&amp;</span> (<span class="ruby-identifier">x</span> <span class="ruby-operator">!=</span> <span class="ruby-number">160</span> <span class="ruby-operator">||</span> <span class="ruby-identifier">y</span> <span class="ruby-operator">!=</span> <span class="ruby-number">25</span>)
+    <span class="ruby-ivar">@dTheta</span> = <span class="ruby-number">0.0</span>
+    <span class="ruby-identifier">x2</span> = <span class="ruby-identifier">x</span> <span class="ruby-operator">-</span> <span class="ruby-number">160</span>
+    <span class="ruby-identifier">y2</span> = <span class="ruby-identifier">y</span> <span class="ruby-operator">-</span> <span class="ruby-number">25</span>
+    <span class="ruby-ivar">@length</span> = <span class="ruby-constant">Math</span>.<span class="ruby-identifier">hypot</span>(<span class="ruby-identifier">x2</span>, <span class="ruby-identifier">y2</span>)
+    <span class="ruby-ivar">@theta</span> = <span class="ruby-constant">Math</span>.<span class="ruby-identifier">atan2</span>(<span class="ruby-identifier">x2</span>,<span class="ruby-identifier">y2</span>)<span class="ruby-operator">*</span><span class="ruby-number">180</span><span class="ruby-operator">/</span><span class="ruby-constant">Math</span><span class="ruby-operator">::</span><span class="ruby-constant">PI</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">angle</span> = <span class="ruby-ivar">@theta</span><span class="ruby-operator">*</span><span class="ruby-constant">Math</span><span class="ruby-operator">::</span><span class="ruby-constant">PI</span><span class="ruby-operator">/</span><span class="ruby-number">180</span>
+    <span class="ruby-identifier">x</span> = <span class="ruby-number">160</span> <span class="ruby-operator">+</span> <span class="ruby-ivar">@length</span><span class="ruby-operator">*</span><span class="ruby-constant">Math</span>.<span class="ruby-identifier">sin</span>(<span class="ruby-identifier">angle</span>)
+    <span class="ruby-identifier">y</span> = <span class="ruby-number">25</span> <span class="ruby-operator">+</span> <span class="ruby-ivar">@length</span><span class="ruby-operator">*</span><span class="ruby-constant">Math</span>.<span class="ruby-identifier">cos</span>(<span class="ruby-identifier">angle</span>)
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-ivar">@rod</span>.<span class="ruby-identifier">coords</span>(<span class="ruby-number">160</span>, <span class="ruby-number">25</span>, <span class="ruby-identifier">x</span>, <span class="ruby-identifier">y</span>)
+  <span class="ruby-ivar">@bob</span>.<span class="ruby-identifier">coords</span>(<span class="ruby-identifier">x</span><span class="ruby-operator">-</span><span class="ruby-number">15</span>, <span class="ruby-identifier">y</span><span class="ruby-operator">-</span><span class="ruby-number">15</span>, <span class="ruby-identifier">x</span><span class="ruby-operator">+</span><span class="ruby-number">15</span>, <span class="ruby-identifier">y</span><span class="ruby-operator">+</span><span class="ruby-number">15</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-showPhase">
+            
+              <b>showPhase</b>()
+            
+            <a href="../classes/PendulumAnimationDemo.html#method-i-showPhase" name="method-i-showPhase" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Update the phase-space graph according to the current angle and the rate at
+which the angle is changing (the first derivative with respect to time.)</p>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-showPhase_source')" id="l_method-i-showPhase_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/287a34ae0dfc23e4158f67cb7783d239f202c368/ext/tk/sample/demos-en/pendulum.rb#L169" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-showPhase_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/sample/demos-en/pendulum.rb, line 169</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">showPhase</span>
+  <span class="ruby-keyword">unless</span> <span class="ruby-ivar">@psw</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-ivar">@psh</span>
+    <span class="ruby-ivar">@psw</span> = <span class="ruby-ivar">@k</span>.<span class="ruby-identifier">width</span><span class="ruby-operator">/</span><span class="ruby-number">2</span>
+    <span class="ruby-ivar">@psh</span> = <span class="ruby-ivar">@k</span>.<span class="ruby-identifier">height</span><span class="ruby-operator">/</span><span class="ruby-number">2</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-ivar">@points</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-ivar">@theta</span> <span class="ruby-operator">+</span> <span class="ruby-ivar">@psw</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-number">-20</span><span class="ruby-operator">*</span><span class="ruby-ivar">@dTheta</span> <span class="ruby-operator">+</span> <span class="ruby-ivar">@psh</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-ivar">@points</span>.<span class="ruby-identifier">length</span> <span class="ruby-operator">&gt;</span> <span class="ruby-number">100</span>
+    <span class="ruby-ivar">@points</span> = <span class="ruby-ivar">@points</span>[<span class="ruby-number">-100</span><span class="ruby-operator">..</span><span class="ruby-number">-1</span>]
+  <span class="ruby-keyword">end</span>
+  (<span class="ruby-number">0</span><span class="ruby-operator">...</span><span class="ruby-number">100</span>).<span class="ruby-identifier">step</span>(<span class="ruby-number">10</span>){<span class="ruby-operator">|</span><span class="ruby-identifier">i</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">first</span> = <span class="ruby-operator">-</span> <span class="ruby-identifier">i</span>
+    <span class="ruby-identifier">last</span> = <span class="ruby-number">11</span> <span class="ruby-operator">-</span> <span class="ruby-identifier">i</span>
+    <span class="ruby-identifier">last</span> = <span class="ruby-number">-1</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">last</span> <span class="ruby-operator">&gt;=</span> <span class="ruby-number">0</span>
+    <span class="ruby-keyword">next</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">first</span> <span class="ruby-operator">&gt;</span> <span class="ruby-identifier">last</span>
+    <span class="ruby-identifier">lst</span> = <span class="ruby-ivar">@points</span>[<span class="ruby-identifier">first</span><span class="ruby-operator">..</span><span class="ruby-identifier">last</span>]
+    <span class="ruby-ivar">@graph</span>[<span class="ruby-identifier">i</span>].<span class="ruby-identifier">coords</span>(<span class="ruby-identifier">lst</span>) <span class="ruby-keyword">if</span> <span class="ruby-identifier">lst</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">lst</span>.<span class="ruby-identifier">length</span> <span class="ruby-operator">&gt;=</span> <span class="ruby-number">4</span>
+  }
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                    </div>
+
+    </div>
+  </body>
+</html>    

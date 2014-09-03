@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>component.rb</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="../../../../../../css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../../../../../../css/main.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../../../../../../css/github.css" type="text/css" media="screen" />
+<script src="../../../../../../js/jquery-1.3.2.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../../../../../js/jquery-effect.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../../../../../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../../../../../js/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+
+<body>     
+    <div class="banner">
+        
+        <h1>
+            component.rb
+        </h1>
+        <ul class="files">
+            <li>ext/tk/lib/tkextlib/blt/component.rb</li>
+            <li>Last modified: 2014-05-16 18:32:33 +0000</li>
+        </ul>
+    </div>
+
+    <div id="bodyContent">
+        <div id="content">
+  
+    <div class="description">
+      
+<p>tkextlib/blt/component.rb</p>
+
+<pre><code>by Hidetoshi NAGAI (nagai@ai.kyutech.ac.jp)</code></pre>
+
+    </div>
+  
+
+
+  
+    <!-- File only: requires -->
+    <div class="sectiontitle">Required Files</div>
+    <ul>
+      
+        <li>tk</li>
+      
+        <li>tkextlib/blt.rb</li>
+      
+    </ul>
+  
+
+
+  
+  
+
+
+  
+    <!-- Namespace -->
+    <div class="sectiontitle">Namespace</div>
+    <ul>
+      
+        <li>
+          <span class="type">MODULE</span>
+          <a href="../../../../../../classes/Tk.html">Tk</a>
+        </li>
+      
+        <li>
+          <span class="type">MODULE</span>
+          <a href="../../../../../../classes/Tk/BLT.html">Tk::BLT</a>
+        </li>
+      
+        <li>
+          <span class="type">MODULE</span>
+          <a href="../../../../../../classes/Tk/BLT/PlotComponent.html">Tk::BLT::PlotComponent</a>
+        </li>
+      
+        <li>
+          <span class="type">MODULE</span>
+          <a href="../../../../../../classes/Tk/BLT/PlotComponent/OptKeys.html">Tk::BLT::PlotComponent::OptKeys</a>
+        </li>
+      
+        <li>
+          <span class="type">MODULE</span>
+          <a href="../../../../../../classes/TkComm.html">TkComm</a>
+        </li>
+      
+        <li>
+          <span class="type">MODULE</span>
+          <a href="../../../../../../classes/TkCore.html">TkCore</a>
+        </li>
+      
+        <li>
+          <span class="type">CLASS</span>
+          <a href="../../../../../../classes/Tk/BLT/PlotComponent/Axis.html">Tk::BLT::PlotComponent::Axis</a>
+        </li>
+      
+        <li>
+          <span class="type">CLASS</span>
+          <a href="../../../../../../classes/Tk/BLT/PlotComponent/Bar.html">Tk::BLT::PlotComponent::Bar</a>
+        </li>
+      
+        <li>
+          <span class="type">CLASS</span>
+          <a href="../../../../../../classes/Tk/BLT/PlotComponent/BitmapMarker.html">Tk::BLT::PlotComponent::BitmapMarker</a>
+        </li>
+      
+        <li>
+          <span class="type">CLASS</span>
+          <a href="../../../../../../classes/Tk/BLT/PlotComponent/Crosshairs.html">Tk::BLT::PlotComponent::Crosshairs</a>
+        </li>
+      
+        <li>
+          <span class="type">CLASS</span>
+          <a href="../../../../../../classes/Tk/BLT/PlotComponent/Element.html">Tk::BLT::PlotComponent::Element</a>
+        </li>
+      
+        <li>
+          <span class="type">CLASS</span>
+          <a href="../../../../../../classes/Tk/BLT/PlotComponent/GridLine.html">Tk::BLT::PlotComponent::GridLine</a>
+        </li>
+      
+        <li>
+          <span class="type">CLASS</span>
+          <a href="../../../../../../classes/Tk/BLT/PlotComponent/ImageMarker.html">Tk::BLT::PlotComponent::ImageMarker</a>
+        </li>
+      
+        <li>
+          <span class="type">CLASS</span>
+          <a href="../../../../../../classes/Tk/BLT/PlotComponent/Legend.html">Tk::BLT::PlotComponent::Legend</a>
+        </li>
+      
+        <li>
+          <span class="type">CLASS</span>
+          <a href="../../../../../../classes/Tk/BLT/PlotComponent/Line.html">Tk::BLT::PlotComponent::Line</a>
+        </li>
+      
+        <li>
+          <span class="type">CLASS</span>
+          <a href="../../../../../../classes/Tk/BLT/PlotComponent/LineMarker.html">Tk::BLT::PlotComponent::LineMarker</a>
+        </li>
+      
+        <li>
+          <span class="type">CLASS</span>
+          <a href="../../../../../../classes/Tk/BLT/PlotComponent/Marker.html">Tk::BLT::PlotComponent::Marker</a>
+        </li>
+      
+        <li>
+          <span class="type">CLASS</span>
+          <a href="../../../../../../classes/Tk/BLT/PlotComponent/Pen.html">Tk::BLT::PlotComponent::Pen</a>
+        </li>
+      
+        <li>
+          <span class="type">CLASS</span>
+          <a href="../../../../../../classes/Tk/BLT/PlotComponent/PolygonMarker.html">Tk::BLT::PlotComponent::PolygonMarker</a>
+        </li>
+      
+        <li>
+          <span class="type">CLASS</span>
+          <a href="../../../../../../classes/Tk/BLT/PlotComponent/Postscript.html">Tk::BLT::PlotComponent::Postscript</a>
+        </li>
+      
+        <li>
+          <span class="type">CLASS</span>
+          <a href="../../../../../../classes/Tk/BLT/PlotComponent/TextMarker.html">Tk::BLT::PlotComponent::TextMarker</a>
+        </li>
+      
+        <li>
+          <span class="type">CLASS</span>
+          <a href="../../../../../../classes/Tk/BLT/PlotComponent/WindowMarker.html">Tk::BLT::PlotComponent::WindowMarker</a>
+        </li>
+      
+    </ul>
+  
+
+
+  
+
+  
+
+
+
+  
+
+    
+
+    
+
+    
+
+
+    
+
+
+    <!-- Methods -->
+              </div>
+
+    </div>
+  </body>
+</html>

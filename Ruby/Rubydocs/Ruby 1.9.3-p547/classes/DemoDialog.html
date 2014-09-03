@@ -1,0 +1,736 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>DemoDialog</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="../css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/main.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/github.css" type="text/css" media="screen" />
+<script src="../js/jquery-1.3.2.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/jquery-effect.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+
+<body>     
+    <div class="banner">
+        
+        <h1>
+            <span class="type">Module</span> 
+            DemoDialog 
+            
+        </h1>
+        <ul class="files">
+            
+            <li><a href="../files/ext/tk/sample/tkextlib/bwidget/tmpldlg_rb.html">ext/tk/sample/tkextlib/bwidget/tmpldlg.rb</a></li>
+            
+        </ul>
+    </div>
+    <div id="bodyContent">
+        <div id="content">
+  
+
+
+  
+
+
+  
+  
+
+
+  
+
+
+  
+    <!-- Method ref -->
+    <div class="sectiontitle">Methods</div>
+    <dl class="methods">
+      
+        <dt>#</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-_msgdlg">_msgdlg</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-c-_show_color">_show_color</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-c-_show_fontdlg">_show_fontdlg</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-c-_show_msgdlg">_show_msgdlg</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-c-_show_passdlg">_show_passdlg</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-c-_show_progdlg">_show_progdlg</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-c-_show_tmpldlg">_show_tmpldlg</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-c-_stddlg">_stddlg</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-c-_tmpldlg">_tmpldlg</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-c-_update_progdlg">_update_progdlg</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>C</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-create">create</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+    </dl>
+  
+
+  
+
+
+
+  
+
+    
+
+    
+
+    
+
+
+    
+
+
+    <!-- Methods -->
+    
+      <div class="sectiontitle">Class Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-c-_msgdlg">
+            
+              <b>_msgdlg</b>(parent)
+            
+            <a href="../classes/DemoDialog.html#method-c-_msgdlg" name="method-c-_msgdlg" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-_msgdlg_source')" id="l_method-c-_msgdlg_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/287a34ae0dfc23e4158f67cb7783d239f202c368/ext/tk/sample/tkextlib/bwidget/tmpldlg.rb#L87" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-_msgdlg_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/sample/tkextlib/bwidget/tmpldlg.rb, line 87</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">_msgdlg</span>(<span class="ruby-identifier">parent</span>)
+  <span class="ruby-identifier">@@msg</span>[<span class="ruby-string">&#39;type&#39;</span>] = <span class="ruby-string">&#39;ok&#39;</span>
+  <span class="ruby-identifier">@@msg</span>[<span class="ruby-string">&#39;icon&#39;</span>] = <span class="ruby-string">&#39;info&#39;</span>
+
+  <span class="ruby-identifier">labf1</span> = <span class="ruby-constant">Tk</span><span class="ruby-operator">::</span><span class="ruby-constant">BWidget</span><span class="ruby-operator">::</span><span class="ruby-constant">LabelFrame</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">parent</span>, <span class="ruby-value">:text=</span><span class="ruby-operator">&gt;</span><span class="ruby-string">&#39;Type&#39;</span>, <span class="ruby-value">:side=</span><span class="ruby-operator">&gt;</span><span class="ruby-value">:top</span>,
+                                      <span class="ruby-value">:anchor=</span><span class="ruby-operator">&gt;</span><span class="ruby-value">:w</span>, <span class="ruby-value">:relief=</span><span class="ruby-operator">&gt;</span><span class="ruby-value">:sunken</span>,
+                                      <span class="ruby-value">:borderwidth=</span><span class="ruby-operator">&gt;</span><span class="ruby-number">1</span>)
+  <span class="ruby-identifier">subf</span> = <span class="ruby-identifier">labf1</span>.<span class="ruby-identifier">get_frame</span>
+  <span class="ruby-constant">Tk</span>.<span class="ruby-identifier">pack</span>(<span class="ruby-constant">TkRadiobutton</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">subf</span>, <span class="ruby-value">:text=</span><span class="ruby-operator">&gt;</span><span class="ruby-string">&#39;Ok&#39;</span>, <span class="ruby-value">:value=</span><span class="ruby-operator">&gt;</span><span class="ruby-string">&#39;ok&#39;</span>,
+                            <span class="ruby-value">:variable=</span><span class="ruby-operator">&gt;</span><span class="ruby-identifier">@@msg</span>.<span class="ruby-identifier">ref</span>(<span class="ruby-string">&#39;type&#39;</span>), <span class="ruby-value">:anchor=</span><span class="ruby-operator">&gt;</span><span class="ruby-value">:w</span>),
+          <span class="ruby-constant">TkRadiobutton</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">subf</span>, <span class="ruby-value">:text=</span><span class="ruby-operator">&gt;</span><span class="ruby-string">&#39;Ok, Cancel&#39;</span>, <span class="ruby-value">:value=</span><span class="ruby-operator">&gt;</span><span class="ruby-string">&#39;okcancel&#39;</span>,
+                            <span class="ruby-value">:variable=</span><span class="ruby-operator">&gt;</span><span class="ruby-identifier">@@msg</span>.<span class="ruby-identifier">ref</span>(<span class="ruby-string">&#39;type&#39;</span>), <span class="ruby-value">:anchor=</span><span class="ruby-operator">&gt;</span><span class="ruby-value">:w</span>),
+          <span class="ruby-constant">TkRadiobutton</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">subf</span>, <span class="ruby-value">:text=</span><span class="ruby-operator">&gt;</span><span class="ruby-string">&#39;Retry, Cancel&#39;</span>,
+                            <span class="ruby-value">:value=</span><span class="ruby-operator">&gt;</span><span class="ruby-string">&#39;retrycancel&#39;</span>,
+                            <span class="ruby-value">:variable=</span><span class="ruby-operator">&gt;</span><span class="ruby-identifier">@@msg</span>.<span class="ruby-identifier">ref</span>(<span class="ruby-string">&#39;type&#39;</span>), <span class="ruby-value">:anchor=</span><span class="ruby-operator">&gt;</span><span class="ruby-value">:w</span>),
+          <span class="ruby-constant">TkRadiobutton</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">subf</span>, <span class="ruby-value">:text=</span><span class="ruby-operator">&gt;</span><span class="ruby-string">&#39;Yes, No&#39;</span>, <span class="ruby-value">:value=</span><span class="ruby-operator">&gt;</span><span class="ruby-string">&#39;yesno&#39;</span>,
+                            <span class="ruby-value">:variable=</span><span class="ruby-operator">&gt;</span><span class="ruby-identifier">@@msg</span>.<span class="ruby-identifier">ref</span>(<span class="ruby-string">&#39;type&#39;</span>), <span class="ruby-value">:anchor=</span><span class="ruby-operator">&gt;</span><span class="ruby-value">:w</span>),
+          <span class="ruby-constant">TkRadiobutton</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">subf</span>, <span class="ruby-value">:text=</span><span class="ruby-operator">&gt;</span><span class="ruby-string">&#39;Yes, No, Cancel&#39;</span>,
+                            <span class="ruby-value">:value=</span><span class="ruby-operator">&gt;</span><span class="ruby-string">&#39;yesnocancel&#39;</span>,
+                            <span class="ruby-value">:variable=</span><span class="ruby-operator">&gt;</span><span class="ruby-identifier">@@msg</span>.<span class="ruby-identifier">ref</span>(<span class="ruby-string">&#39;type&#39;</span>), <span class="ruby-value">:anchor=</span><span class="ruby-operator">&gt;</span><span class="ruby-value">:w</span>),
+          <span class="ruby-constant">TkRadiobutton</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">subf</span>, <span class="ruby-value">:text=</span><span class="ruby-operator">&gt;</span><span class="ruby-string">&#39;Abort, Retry, Ignore&#39;</span>,
+                            <span class="ruby-value">:value=</span><span class="ruby-operator">&gt;</span><span class="ruby-string">&#39;abortretryignore&#39;</span>,
+                            <span class="ruby-value">:variable=</span><span class="ruby-operator">&gt;</span><span class="ruby-identifier">@@msg</span>.<span class="ruby-identifier">ref</span>(<span class="ruby-string">&#39;type&#39;</span>), <span class="ruby-value">:anchor=</span><span class="ruby-operator">&gt;</span><span class="ruby-value">:w</span>),
+          <span class="ruby-value">:fill=</span><span class="ruby-operator">&gt;</span><span class="ruby-value">:x</span>, <span class="ruby-value">:anchor=</span><span class="ruby-operator">&gt;</span><span class="ruby-value">:w</span>)
+
+  <span class="ruby-constant">Tk</span>.<span class="ruby-identifier">pack</span>(<span class="ruby-constant">TkRadiobutton</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">subf</span>, <span class="ruby-value">:text=</span><span class="ruby-operator">&gt;</span><span class="ruby-string">&#39;User&#39;</span>, <span class="ruby-value">:value=</span><span class="ruby-operator">&gt;</span><span class="ruby-string">&#39;user&#39;</span>,
+                            <span class="ruby-value">:variable=</span><span class="ruby-operator">&gt;</span><span class="ruby-identifier">@@msg</span>.<span class="ruby-identifier">ref</span>(<span class="ruby-string">&#39;type&#39;</span>), <span class="ruby-value">:anchor=</span><span class="ruby-operator">&gt;</span><span class="ruby-value">:w</span>),
+          <span class="ruby-constant">Tk</span><span class="ruby-operator">::</span><span class="ruby-constant">BWidget</span><span class="ruby-operator">::</span><span class="ruby-constant">Entry</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">subf</span>, <span class="ruby-value">:textvariable=</span><span class="ruby-operator">&gt;</span><span class="ruby-identifier">@@msg</span>.<span class="ruby-identifier">ref</span>(<span class="ruby-string">&#39;buttons&#39;</span>)),
+          <span class="ruby-value">:side=</span><span class="ruby-operator">&gt;</span><span class="ruby-value">:left</span>)
+
+  <span class="ruby-identifier">labf2</span> = <span class="ruby-constant">Tk</span><span class="ruby-operator">::</span><span class="ruby-constant">BWidget</span><span class="ruby-operator">::</span><span class="ruby-constant">LabelFrame</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">parent</span>, <span class="ruby-value">:text=</span><span class="ruby-operator">&gt;</span><span class="ruby-string">&#39;Icon&#39;</span>, <span class="ruby-value">:side=</span><span class="ruby-operator">&gt;</span><span class="ruby-value">:top</span>,
+                                      <span class="ruby-value">:anchor=</span><span class="ruby-operator">&gt;</span><span class="ruby-value">:w</span>, <span class="ruby-value">:relief=</span><span class="ruby-operator">&gt;</span><span class="ruby-value">:sunken</span>,
+                                      <span class="ruby-value">:borderwidth=</span><span class="ruby-operator">&gt;</span><span class="ruby-number">1</span>)
+  <span class="ruby-identifier">subf</span> = <span class="ruby-identifier">labf2</span>.<span class="ruby-identifier">get_frame</span>
+  <span class="ruby-constant">Tk</span>.<span class="ruby-identifier">pack</span>(<span class="ruby-constant">TkRadiobutton</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">subf</span>, <span class="ruby-value">:text=</span><span class="ruby-operator">&gt;</span><span class="ruby-string">&#39;Information&#39;</span>, <span class="ruby-value">:value=</span><span class="ruby-operator">&gt;</span><span class="ruby-string">&#39;info&#39;</span>,
+                            <span class="ruby-value">:variable=</span><span class="ruby-operator">&gt;</span><span class="ruby-identifier">@@msg</span>.<span class="ruby-identifier">ref</span>(<span class="ruby-string">&#39;icon&#39;</span>), <span class="ruby-value">:anchor=</span><span class="ruby-operator">&gt;</span><span class="ruby-value">:w</span>),
+          <span class="ruby-constant">TkRadiobutton</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">subf</span>, <span class="ruby-value">:text=</span><span class="ruby-operator">&gt;</span><span class="ruby-string">&#39;Question&#39;</span>,    <span class="ruby-value">:value=</span><span class="ruby-operator">&gt;</span><span class="ruby-string">&#39;question&#39;</span>,
+                            <span class="ruby-value">:variable=</span><span class="ruby-operator">&gt;</span><span class="ruby-identifier">@@msg</span>.<span class="ruby-identifier">ref</span>(<span class="ruby-string">&#39;icon&#39;</span>), <span class="ruby-value">:anchor=</span><span class="ruby-operator">&gt;</span><span class="ruby-value">:w</span>),
+          <span class="ruby-constant">TkRadiobutton</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">subf</span>, <span class="ruby-value">:text=</span><span class="ruby-operator">&gt;</span><span class="ruby-string">&#39;Warning&#39;</span>,     <span class="ruby-value">:value=</span><span class="ruby-operator">&gt;</span><span class="ruby-string">&#39;warning&#39;</span>,
+                            <span class="ruby-value">:variable=</span><span class="ruby-operator">&gt;</span><span class="ruby-identifier">@@msg</span>.<span class="ruby-identifier">ref</span>(<span class="ruby-string">&#39;icon&#39;</span>), <span class="ruby-value">:anchor=</span><span class="ruby-operator">&gt;</span><span class="ruby-value">:w</span>),
+          <span class="ruby-constant">TkRadiobutton</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">subf</span>, <span class="ruby-value">:text=</span><span class="ruby-operator">&gt;</span><span class="ruby-string">&#39;Error&#39;</span>,       <span class="ruby-value">:value=</span><span class="ruby-operator">&gt;</span><span class="ruby-string">&#39;error&#39;</span>,
+                            <span class="ruby-value">:variable=</span><span class="ruby-operator">&gt;</span><span class="ruby-identifier">@@msg</span>.<span class="ruby-identifier">ref</span>(<span class="ruby-string">&#39;icon&#39;</span>), <span class="ruby-value">:anchor=</span><span class="ruby-operator">&gt;</span><span class="ruby-value">:w</span>),
+          <span class="ruby-value">:fill=</span><span class="ruby-operator">&gt;</span><span class="ruby-value">:x</span>, <span class="ruby-value">:anchor=</span><span class="ruby-operator">&gt;</span><span class="ruby-value">:w</span>)
+
+  <span class="ruby-identifier">sep</span> = <span class="ruby-constant">Tk</span><span class="ruby-operator">::</span><span class="ruby-constant">BWidget</span><span class="ruby-operator">::</span><span class="ruby-constant">Separator</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">parent</span>, <span class="ruby-value">:orient=</span><span class="ruby-operator">&gt;</span><span class="ruby-value">:horizontal</span>)
+  <span class="ruby-identifier">button</span> = <span class="ruby-constant">TkButton</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">parent</span>, <span class="ruby-value">:text=</span><span class="ruby-operator">&gt;</span><span class="ruby-string">&#39;Show&#39;</span>, <span class="ruby-value">:command=</span><span class="ruby-operator">&gt;</span><span class="ruby-identifier">proc</span>{<span class="ruby-identifier">_show_msgdlg</span>})
+
+  <span class="ruby-identifier">button</span>.<span class="ruby-identifier">pack</span>(<span class="ruby-value">:side=</span><span class="ruby-operator">&gt;</span><span class="ruby-value">:bottom</span>)
+  <span class="ruby-identifier">sep</span>.<span class="ruby-identifier">pack</span>(<span class="ruby-value">:side=</span><span class="ruby-operator">&gt;</span><span class="ruby-value">:bottom</span>, <span class="ruby-value">:fill=</span><span class="ruby-operator">&gt;</span><span class="ruby-value">:x</span>, <span class="ruby-value">:pady=</span><span class="ruby-operator">&gt;</span><span class="ruby-number">10</span>)
+  <span class="ruby-constant">Tk</span>.<span class="ruby-identifier">pack</span>(<span class="ruby-identifier">labf1</span>, <span class="ruby-identifier">labf2</span>, <span class="ruby-value">:side=</span><span class="ruby-operator">&gt;</span><span class="ruby-value">:left</span>, <span class="ruby-value">:padx=</span><span class="ruby-operator">&gt;</span><span class="ruby-number">4</span>, <span class="ruby-value">:anchor=</span><span class="ruby-operator">&gt;</span><span class="ruby-value">:n</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-_show_color">
+            
+              <b>_show_color</b>(w)
+            
+            <a href="../classes/DemoDialog.html#method-c-_show_color" name="method-c-_show_color" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-_show_color_source')" id="l_method-c-_show_color_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/287a34ae0dfc23e4158f67cb7783d239f202c368/ext/tk/sample/tkextlib/bwidget/tmpldlg.rb#L152" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-_show_color_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/sample/tkextlib/bwidget/tmpldlg.rb, line 152</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">_show_color</span>(<span class="ruby-identifier">w</span>)
+  <span class="ruby-identifier">dlg</span> = <span class="ruby-constant">Tk</span><span class="ruby-operator">::</span><span class="ruby-constant">BWidget</span><span class="ruby-operator">::</span><span class="ruby-constant">SelectColor</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">w</span>, <span class="ruby-value">:color=</span><span class="ruby-operator">&gt;</span><span class="ruby-identifier">w</span>.<span class="ruby-identifier">background</span>)
+  <span class="ruby-identifier">color</span> = <span class="ruby-identifier">dlg</span>.<span class="ruby-identifier">menu</span>([<span class="ruby-value">:below</span>, <span class="ruby-identifier">w</span>])
+  <span class="ruby-keyword">unless</span> <span class="ruby-identifier">color</span>.<span class="ruby-identifier">empty?</span>
+    <span class="ruby-identifier">w</span>.<span class="ruby-identifier">background</span>(<span class="ruby-identifier">color</span>)
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-_show_fontdlg">
+            
+              <b>_show_fontdlg</b>()
+            
+            <a href="../classes/DemoDialog.html#method-c-_show_fontdlg" name="method-c-_show_fontdlg" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-_show_fontdlg_source')" id="l_method-c-_show_fontdlg_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/287a34ae0dfc23e4158f67cb7783d239f202c368/ext/tk/sample/tkextlib/bwidget/tmpldlg.rb#L185" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-_show_fontdlg_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/sample/tkextlib/bwidget/tmpldlg.rb, line 185</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">_show_fontdlg</span>
+  <span class="ruby-identifier">font</span> = <span class="ruby-constant">Tk</span><span class="ruby-operator">::</span><span class="ruby-constant">BWidget</span><span class="ruby-operator">::</span><span class="ruby-constant">SelectFont</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value">:relative=</span><span class="ruby-operator">&gt;</span><span class="ruby-constant">Tk</span>.<span class="ruby-identifier">root</span>,
+                                     <span class="ruby-value">:font=</span><span class="ruby-operator">&gt;</span><span class="ruby-constant">DemoVar</span>.<span class="ruby-identifier">font</span>).<span class="ruby-identifier">create</span>
+  <span class="ruby-constant">DemoVar</span><span class="ruby-operator">::</span><span class="ruby-constant">Demo</span>.<span class="ruby-identifier">update_font</span>(<span class="ruby-identifier">font</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-_show_msgdlg">
+            
+              <b>_show_msgdlg</b>()
+            
+            <a href="../classes/DemoDialog.html#method-c-_show_msgdlg" name="method-c-_show_msgdlg" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-_show_msgdlg_source')" id="l_method-c-_show_msgdlg_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/287a34ae0dfc23e4158f67cb7783d239f202c368/ext/tk/sample/tkextlib/bwidget/tmpldlg.rb#L175" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-_show_msgdlg_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/sample/tkextlib/bwidget/tmpldlg.rb, line 175</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">_show_msgdlg</span>
+  <span class="ruby-identifier">@@msgdlg</span>.<span class="ruby-identifier">destroy</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">@@msgdlg</span>
+  <span class="ruby-identifier">@@msgdlg</span> = <span class="ruby-constant">Tk</span><span class="ruby-operator">::</span><span class="ruby-constant">BWidget</span><span class="ruby-operator">::</span><span class="ruby-constant">MessageDlg</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value">:relative=</span><span class="ruby-operator">&gt;</span><span class="ruby-constant">Tk</span>.<span class="ruby-identifier">root</span>,
+                                         <span class="ruby-value">:message=</span><span class="ruby-operator">&gt;</span><span class="ruby-string">&#39;Message for MessageBox&#39;</span>,
+                                         <span class="ruby-value">:type=</span><span class="ruby-operator">&gt;</span><span class="ruby-identifier">@@msg</span>[<span class="ruby-string">&#39;type&#39;</span>],
+                                         <span class="ruby-value">:icon=</span><span class="ruby-operator">&gt;</span><span class="ruby-identifier">@@msg</span>[<span class="ruby-string">&#39;icon&#39;</span>],
+                                         <span class="ruby-value">:buttons=</span><span class="ruby-operator">&gt;</span><span class="ruby-identifier">@@msg</span>[<span class="ruby-string">&#39;buttons&#39;</span>])
+  <span class="ruby-identifier">@@msgdlg</span>.<span class="ruby-identifier">create</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-_show_passdlg">
+            
+              <b>_show_passdlg</b>()
+            
+            <a href="../classes/DemoDialog.html#method-c-_show_passdlg" name="method-c-_show_passdlg" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-_show_passdlg_source')" id="l_method-c-_show_passdlg_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/287a34ae0dfc23e4158f67cb7783d239f202c368/ext/tk/sample/tkextlib/bwidget/tmpldlg.rb#L217" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-_show_passdlg_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/sample/tkextlib/bwidget/tmpldlg.rb, line 217</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">_show_passdlg</span>
+  <span class="ruby-constant">Tk</span><span class="ruby-operator">::</span><span class="ruby-constant">BWidget</span><span class="ruby-operator">::</span><span class="ruby-constant">PasswdDlg</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value">:relative=</span><span class="ruby-operator">&gt;</span><span class="ruby-constant">Tk</span>.<span class="ruby-identifier">root</span>).<span class="ruby-identifier">create</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-_show_progdlg">
+            
+              <b>_show_progdlg</b>()
+            
+            <a href="../classes/DemoDialog.html#method-c-_show_progdlg" name="method-c-_show_progdlg" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-_show_progdlg_source')" id="l_method-c-_show_progdlg_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/287a34ae0dfc23e4158f67cb7783d239f202c368/ext/tk/sample/tkextlib/bwidget/tmpldlg.rb#L191" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-_show_progdlg_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/sample/tkextlib/bwidget/tmpldlg.rb, line 191</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">_show_progdlg</span>
+  <span class="ruby-identifier">@@progmsg</span>.<span class="ruby-identifier">value</span> = <span class="ruby-string">&quot;Compute in progress...&quot;</span>
+  <span class="ruby-identifier">@@progval</span>.<span class="ruby-identifier">value</span> = <span class="ruby-number">0</span>
+
+  <span class="ruby-identifier">@@progdlg</span> = <span class="ruby-constant">Tk</span><span class="ruby-operator">::</span><span class="ruby-constant">BWidget</span><span class="ruby-operator">::</span><span class="ruby-constant">ProgressDlg</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value">:relative=</span><span class="ruby-operator">&gt;</span><span class="ruby-constant">Tk</span>.<span class="ruby-identifier">root</span>,
+                                           <span class="ruby-value">:title=</span><span class="ruby-operator">&gt;</span><span class="ruby-string">&#39;Wait...&#39;</span>,
+                                           <span class="ruby-value">:type=</span><span class="ruby-operator">&gt;</span><span class="ruby-string">&#39;infinite&#39;</span>, <span class="ruby-value">:width=</span><span class="ruby-operator">&gt;</span><span class="ruby-number">20</span>,
+                                           <span class="ruby-value">:textvariable=</span><span class="ruby-operator">&gt;</span><span class="ruby-identifier">@@progmsg</span>,
+                                           <span class="ruby-value">:variable=</span><span class="ruby-operator">&gt;</span><span class="ruby-identifier">@@progval</span>,
+                                           <span class="ruby-value">:stop=</span><span class="ruby-operator">&gt;</span><span class="ruby-string">&#39;Stop&#39;</span>) {
+    <span class="ruby-identifier">command</span>(<span class="ruby-identifier">proc</span>{<span class="ruby-keyword">self</span>.<span class="ruby-identifier">destroy</span>})
+    <span class="ruby-identifier">create</span>
+  }
+  <span class="ruby-identifier">_update_progdlg</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-_show_tmpldlg">
+            
+              <b>_show_tmpldlg</b>()
+            
+            <a href="../classes/DemoDialog.html#method-c-_show_tmpldlg" name="method-c-_show_tmpldlg" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-_show_tmpldlg_source')" id="l_method-c-_show_tmpldlg_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/287a34ae0dfc23e4158f67cb7783d239f202c368/ext/tk/sample/tkextlib/bwidget/tmpldlg.rb#L160" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-_show_tmpldlg_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/sample/tkextlib/bwidget/tmpldlg.rb, line 160</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">_show_tmpldlg</span>
+  <span class="ruby-identifier">dlg</span> = <span class="ruby-constant">Tk</span><span class="ruby-operator">::</span><span class="ruby-constant">BWidget</span><span class="ruby-operator">::</span><span class="ruby-constant">Dialog</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value">:relative=</span><span class="ruby-operator">&gt;</span><span class="ruby-constant">Tk</span>.<span class="ruby-identifier">root</span>, <span class="ruby-value">:modal=</span><span class="ruby-operator">&gt;</span><span class="ruby-value">:local</span>,
+                                <span class="ruby-value">:separator=</span><span class="ruby-operator">&gt;</span><span class="ruby-keyword">true</span>, <span class="ruby-value">:title=</span><span class="ruby-operator">&gt;</span><span class="ruby-string">&#39;Template dialog&#39;</span>,
+                                <span class="ruby-value">:side=</span><span class="ruby-operator">&gt;</span><span class="ruby-identifier">@@tmpl</span>[<span class="ruby-string">&#39;side&#39;</span>],
+                                <span class="ruby-value">:anchor=</span><span class="ruby-operator">&gt;</span><span class="ruby-identifier">@@tmpl</span>[<span class="ruby-string">&#39;anchor&#39;</span>],
+                                <span class="ruby-value">:default=</span><span class="ruby-operator">&gt;</span><span class="ruby-number">0</span>, <span class="ruby-value">:cancel=</span><span class="ruby-operator">&gt;</span><span class="ruby-number">1</span>)
+  <span class="ruby-identifier">dlg</span>.<span class="ruby-identifier">add</span>(<span class="ruby-string">&#39;name&#39;</span>=<span class="ruby-operator">&gt;</span><span class="ruby-string">&#39;ok&#39;</span>)
+  <span class="ruby-identifier">dlg</span>.<span class="ruby-identifier">add</span>(<span class="ruby-string">&#39;name&#39;</span>=<span class="ruby-operator">&gt;</span><span class="ruby-string">&#39;cancel&#39;</span>)
+  <span class="ruby-constant">TkMessage</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">dlg</span>.<span class="ruby-identifier">get_frame</span>, <span class="ruby-value">:text=</span><span class="ruby-operator">&gt;</span><span class="ruby-string">&quot;Template\nDialog&quot;</span>, <span class="ruby-value">:justify=</span><span class="ruby-operator">&gt;</span><span class="ruby-value">:center</span>,
+                <span class="ruby-value">:anchor=</span><span class="ruby-operator">&gt;</span><span class="ruby-value">:c</span>, <span class="ruby-value">:width=</span><span class="ruby-operator">&gt;</span><span class="ruby-number">80</span>).<span class="ruby-identifier">pack</span>(<span class="ruby-value">:fill=</span><span class="ruby-operator">&gt;</span><span class="ruby-value">:both</span>, <span class="ruby-value">:expand=</span><span class="ruby-operator">&gt;</span><span class="ruby-keyword">true</span>,
+                                              <span class="ruby-value">:padx=</span><span class="ruby-operator">&gt;</span><span class="ruby-number">100</span>, <span class="ruby-value">:pady=</span><span class="ruby-operator">&gt;</span><span class="ruby-number">100</span>)
+  <span class="ruby-identifier">dlg</span>.<span class="ruby-identifier">draw</span>
+  <span class="ruby-identifier">dlg</span>.<span class="ruby-identifier">destroy</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-_stddlg">
+            
+              <b>_stddlg</b>(parent)
+            
+            <a href="../classes/DemoDialog.html#method-c-_stddlg" name="method-c-_stddlg" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-_stddlg_source')" id="l_method-c-_stddlg_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/287a34ae0dfc23e4158f67cb7783d239f202c368/ext/tk/sample/tkextlib/bwidget/tmpldlg.rb#L139" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-_stddlg_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/sample/tkextlib/bwidget/tmpldlg.rb, line 139</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">_stddlg</span>(<span class="ruby-identifier">parent</span>)
+  <span class="ruby-constant">Tk</span>.<span class="ruby-identifier">pack</span>(<span class="ruby-constant">TkButton</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">parent</span>, <span class="ruby-value">:text=</span><span class="ruby-operator">&gt;</span><span class="ruby-string">&#39;Select a color &#39;</span>){<span class="ruby-operator">|</span><span class="ruby-identifier">w</span><span class="ruby-operator">|</span>
+            <span class="ruby-identifier">command</span>(<span class="ruby-identifier">proc</span>{<span class="ruby-constant">DemoDialog</span>.<span class="ruby-identifier">_show_color</span>(<span class="ruby-identifier">w</span>)})
+          },
+          <span class="ruby-constant">TkButton</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">parent</span>, <span class="ruby-value">:text=</span><span class="ruby-operator">&gt;</span><span class="ruby-string">&#39;Font selector dialog&#39;</span>,
+                       <span class="ruby-value">:command=</span><span class="ruby-operator">&gt;</span><span class="ruby-identifier">proc</span>{<span class="ruby-identifier">_show_fontdlg</span>}),
+          <span class="ruby-constant">TkButton</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">parent</span>, <span class="ruby-value">:text=</span><span class="ruby-operator">&gt;</span><span class="ruby-string">&#39;Progression dialog&#39;</span>,
+                       <span class="ruby-value">:command=</span><span class="ruby-operator">&gt;</span><span class="ruby-identifier">proc</span>{<span class="ruby-identifier">_show_progdlg</span>}),
+          <span class="ruby-constant">TkButton</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">parent</span>, <span class="ruby-value">:text=</span><span class="ruby-operator">&gt;</span><span class="ruby-string">&#39;Password dialog&#39;</span>,
+                       <span class="ruby-value">:command=</span><span class="ruby-operator">&gt;</span><span class="ruby-identifier">proc</span>{<span class="ruby-identifier">_show_passdlg</span>}),
+          <span class="ruby-value">:side=</span><span class="ruby-operator">&gt;</span><span class="ruby-value">:left</span>, <span class="ruby-value">:padx=</span><span class="ruby-operator">&gt;</span><span class="ruby-number">5</span>, <span class="ruby-value">:anchor=</span><span class="ruby-operator">&gt;</span><span class="ruby-value">:w</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-_tmpldlg">
+            
+              <b>_tmpldlg</b>(parent)
+            
+            <a href="../classes/DemoDialog.html#method-c-_tmpldlg" name="method-c-_tmpldlg" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-_tmpldlg_source')" id="l_method-c-_tmpldlg_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/287a34ae0dfc23e4158f67cb7783d239f202c368/ext/tk/sample/tkextlib/bwidget/tmpldlg.rb#L45" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-_tmpldlg_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/sample/tkextlib/bwidget/tmpldlg.rb, line 45</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">_tmpldlg</span>(<span class="ruby-identifier">parent</span>)
+  <span class="ruby-identifier">@@tmpl</span>[<span class="ruby-string">&#39;side&#39;</span>] = <span class="ruby-value">:bottom</span>
+  <span class="ruby-identifier">@@tmpl</span>[<span class="ruby-string">&#39;anchor&#39;</span>] = <span class="ruby-value">:c</span>
+
+  <span class="ruby-identifier">labf1</span> = <span class="ruby-constant">Tk</span><span class="ruby-operator">::</span><span class="ruby-constant">BWidget</span><span class="ruby-operator">::</span><span class="ruby-constant">LabelFrame</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">parent</span>, <span class="ruby-value">:text=</span><span class="ruby-operator">&gt;</span><span class="ruby-string">&#39;Button side&#39;</span>,
+                                      <span class="ruby-value">:side=</span><span class="ruby-operator">&gt;</span><span class="ruby-value">:top</span>, <span class="ruby-value">:anchor=</span><span class="ruby-operator">&gt;</span><span class="ruby-value">:w</span>,
+                                      <span class="ruby-value">:relief=</span><span class="ruby-operator">&gt;</span><span class="ruby-value">:sunken</span>, <span class="ruby-value">:borderwidth=</span><span class="ruby-operator">&gt;</span><span class="ruby-number">1</span>)
+  <span class="ruby-identifier">subf</span> = <span class="ruby-identifier">labf1</span>.<span class="ruby-identifier">get_frame</span>
+  <span class="ruby-constant">Tk</span>.<span class="ruby-identifier">pack</span>(<span class="ruby-constant">TkRadiobutton</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">subf</span>, <span class="ruby-value">:text=</span><span class="ruby-operator">&gt;</span><span class="ruby-string">&#39;Bottom&#39;</span>, <span class="ruby-value">:value=</span><span class="ruby-operator">&gt;</span><span class="ruby-value">:bottom</span>,
+                            <span class="ruby-value">:variable=</span><span class="ruby-operator">&gt;</span><span class="ruby-identifier">@@tmpl</span>.<span class="ruby-identifier">ref</span>(<span class="ruby-string">&#39;side&#39;</span>), <span class="ruby-value">:anchor=</span><span class="ruby-operator">&gt;</span><span class="ruby-value">:w</span>),
+          <span class="ruby-constant">TkRadiobutton</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">subf</span>, <span class="ruby-value">:text=</span><span class="ruby-operator">&gt;</span><span class="ruby-string">&#39;Left&#39;</span>, <span class="ruby-value">:value=</span><span class="ruby-operator">&gt;</span><span class="ruby-value">:left</span>,
+                            <span class="ruby-value">:variable=</span><span class="ruby-operator">&gt;</span><span class="ruby-identifier">@@tmpl</span>.<span class="ruby-identifier">ref</span>(<span class="ruby-string">&#39;side&#39;</span>), <span class="ruby-value">:anchor=</span><span class="ruby-operator">&gt;</span><span class="ruby-value">:w</span>),
+          <span class="ruby-constant">TkRadiobutton</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">subf</span>, <span class="ruby-value">:text=</span><span class="ruby-operator">&gt;</span><span class="ruby-string">&#39;Right&#39;</span>, <span class="ruby-value">:value=</span><span class="ruby-operator">&gt;</span><span class="ruby-value">:right</span>,
+                            <span class="ruby-value">:variable=</span><span class="ruby-operator">&gt;</span><span class="ruby-identifier">@@tmpl</span>.<span class="ruby-identifier">ref</span>(<span class="ruby-string">&#39;side&#39;</span>), <span class="ruby-value">:anchor=</span><span class="ruby-operator">&gt;</span><span class="ruby-value">:w</span>),
+          <span class="ruby-constant">TkRadiobutton</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">subf</span>, <span class="ruby-value">:text=</span><span class="ruby-operator">&gt;</span><span class="ruby-string">&#39;Top&#39;</span>, <span class="ruby-value">:value=</span><span class="ruby-operator">&gt;</span><span class="ruby-value">:top</span>,
+                            <span class="ruby-value">:variable=</span><span class="ruby-operator">&gt;</span><span class="ruby-identifier">@@tmpl</span>.<span class="ruby-identifier">ref</span>(<span class="ruby-string">&#39;side&#39;</span>), <span class="ruby-value">:anchor=</span><span class="ruby-operator">&gt;</span><span class="ruby-value">:w</span>),
+          <span class="ruby-value">:fill=</span><span class="ruby-operator">&gt;</span><span class="ruby-value">:x</span>, <span class="ruby-value">:anchor=</span><span class="ruby-operator">&gt;</span><span class="ruby-value">:w</span>)
+
+  <span class="ruby-identifier">labf2</span> = <span class="ruby-constant">Tk</span><span class="ruby-operator">::</span><span class="ruby-constant">BWidget</span><span class="ruby-operator">::</span><span class="ruby-constant">LabelFrame</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">parent</span>, <span class="ruby-value">:text=</span><span class="ruby-operator">&gt;</span><span class="ruby-string">&#39;Button anchor&#39;</span>,
+                                      <span class="ruby-value">:side=</span><span class="ruby-operator">&gt;</span><span class="ruby-value">:top</span>, <span class="ruby-value">:anchor=</span><span class="ruby-operator">&gt;</span><span class="ruby-value">:w</span>,
+                                      <span class="ruby-value">:relief=</span><span class="ruby-operator">&gt;</span><span class="ruby-value">:sunken</span>, <span class="ruby-value">:borderwidth=</span><span class="ruby-operator">&gt;</span><span class="ruby-number">1</span>)
+  <span class="ruby-identifier">subf</span> = <span class="ruby-identifier">labf2</span>.<span class="ruby-identifier">get_frame</span>
+  <span class="ruby-constant">Tk</span>.<span class="ruby-identifier">pack</span>(<span class="ruby-constant">TkRadiobutton</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">subf</span>, <span class="ruby-value">:text=</span><span class="ruby-operator">&gt;</span><span class="ruby-string">&#39;North&#39;</span>, <span class="ruby-value">:value=</span><span class="ruby-operator">&gt;</span><span class="ruby-value">:n</span>,
+                            <span class="ruby-value">:variable=</span><span class="ruby-operator">&gt;</span><span class="ruby-identifier">@@tmpl</span>.<span class="ruby-identifier">ref</span>(<span class="ruby-string">&#39;anchor&#39;</span>), <span class="ruby-value">:anchor=</span><span class="ruby-operator">&gt;</span><span class="ruby-value">:w</span>),
+          <span class="ruby-constant">TkRadiobutton</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">subf</span>, <span class="ruby-value">:text=</span><span class="ruby-operator">&gt;</span><span class="ruby-string">&#39;West&#39;</span>, <span class="ruby-value">:value=</span><span class="ruby-operator">&gt;</span><span class="ruby-value">:w</span>,
+                            <span class="ruby-value">:variable=</span><span class="ruby-operator">&gt;</span><span class="ruby-identifier">@@tmpl</span>.<span class="ruby-identifier">ref</span>(<span class="ruby-string">&#39;anchor&#39;</span>), <span class="ruby-value">:anchor=</span><span class="ruby-operator">&gt;</span><span class="ruby-value">:w</span>),
+          <span class="ruby-constant">TkRadiobutton</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">subf</span>, <span class="ruby-value">:text=</span><span class="ruby-operator">&gt;</span><span class="ruby-string">&#39;East&#39;</span>, <span class="ruby-value">:value=</span><span class="ruby-operator">&gt;</span><span class="ruby-value">:e</span>,
+                            <span class="ruby-value">:variable=</span><span class="ruby-operator">&gt;</span><span class="ruby-identifier">@@tmpl</span>.<span class="ruby-identifier">ref</span>(<span class="ruby-string">&#39;anchor&#39;</span>), <span class="ruby-value">:anchor=</span><span class="ruby-operator">&gt;</span><span class="ruby-value">:w</span>),
+          <span class="ruby-constant">TkRadiobutton</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">subf</span>, <span class="ruby-value">:text=</span><span class="ruby-operator">&gt;</span><span class="ruby-string">&#39;South&#39;</span>, <span class="ruby-value">:value=</span><span class="ruby-operator">&gt;</span><span class="ruby-value">:s</span>,
+                            <span class="ruby-value">:variable=</span><span class="ruby-operator">&gt;</span><span class="ruby-identifier">@@tmpl</span>.<span class="ruby-identifier">ref</span>(<span class="ruby-string">&#39;anchor&#39;</span>), <span class="ruby-value">:anchor=</span><span class="ruby-operator">&gt;</span><span class="ruby-value">:w</span>),
+          <span class="ruby-constant">TkRadiobutton</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">subf</span>, <span class="ruby-value">:text=</span><span class="ruby-operator">&gt;</span><span class="ruby-string">&#39;Center&#39;</span>, <span class="ruby-value">:value=</span><span class="ruby-operator">&gt;</span><span class="ruby-value">:c</span>,
+                            <span class="ruby-value">:variable=</span><span class="ruby-operator">&gt;</span><span class="ruby-identifier">@@tmpl</span>.<span class="ruby-identifier">ref</span>(<span class="ruby-string">&#39;anchor&#39;</span>), <span class="ruby-value">:anchor=</span><span class="ruby-operator">&gt;</span><span class="ruby-value">:w</span>),
+          <span class="ruby-value">:fill=</span><span class="ruby-operator">&gt;</span><span class="ruby-value">:x</span>, <span class="ruby-value">:anchor=</span><span class="ruby-operator">&gt;</span><span class="ruby-value">:w</span>)
+
+  <span class="ruby-identifier">sep</span> = <span class="ruby-constant">Tk</span><span class="ruby-operator">::</span><span class="ruby-constant">BWidget</span><span class="ruby-operator">::</span><span class="ruby-constant">Separator</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">parent</span>, <span class="ruby-value">:orient=</span><span class="ruby-operator">&gt;</span><span class="ruby-value">:horizontal</span>)
+  <span class="ruby-identifier">button</span> = <span class="ruby-constant">TkButton</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">parent</span>, <span class="ruby-value">:text=</span><span class="ruby-operator">&gt;</span><span class="ruby-string">&#39;Show&#39;</span>, <span class="ruby-value">:command=</span><span class="ruby-operator">&gt;</span><span class="ruby-identifier">proc</span>{<span class="ruby-identifier">_show_tmpldlg</span>})
+
+  <span class="ruby-identifier">button</span>.<span class="ruby-identifier">pack</span>(<span class="ruby-value">:side=</span><span class="ruby-operator">&gt;</span><span class="ruby-value">:bottom</span>)
+  <span class="ruby-identifier">sep</span>.<span class="ruby-identifier">pack</span>(<span class="ruby-value">:side=</span><span class="ruby-operator">&gt;</span><span class="ruby-value">:bottom</span>, <span class="ruby-value">:fill=</span><span class="ruby-operator">&gt;</span><span class="ruby-value">:x</span>, <span class="ruby-value">:pady=</span><span class="ruby-operator">&gt;</span><span class="ruby-number">10</span>)
+  <span class="ruby-constant">Tk</span>.<span class="ruby-identifier">pack</span>(<span class="ruby-identifier">labf1</span>, <span class="ruby-identifier">labf2</span>, <span class="ruby-value">:side=</span><span class="ruby-operator">&gt;</span><span class="ruby-value">:left</span>, <span class="ruby-value">:padx=</span><span class="ruby-operator">&gt;</span><span class="ruby-number">4</span>, <span class="ruby-value">:anchor=</span><span class="ruby-operator">&gt;</span><span class="ruby-value">:n</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-_update_progdlg">
+            
+              <b>_update_progdlg</b>()
+            
+            <a href="../classes/DemoDialog.html#method-c-_update_progdlg" name="method-c-_update_progdlg" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-_update_progdlg_source')" id="l_method-c-_update_progdlg_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/287a34ae0dfc23e4158f67cb7783d239f202c368/ext/tk/sample/tkextlib/bwidget/tmpldlg.rb#L207" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-_update_progdlg_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/sample/tkextlib/bwidget/tmpldlg.rb, line 207</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">_update_progdlg</span>
+  <span class="ruby-constant">TkTimer</span>.<span class="ruby-identifier">new</span>(<span class="ruby-number">20</span>, <span class="ruby-number">-1</span>, <span class="ruby-identifier">proc</span>{
+                <span class="ruby-keyword">if</span> <span class="ruby-identifier">@@progdlg</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">@@progdlg</span>.<span class="ruby-identifier">winfo_exist?</span>
+                  <span class="ruby-identifier">@@progval</span>.<span class="ruby-identifier">value</span> = <span class="ruby-number">2</span>
+                <span class="ruby-keyword">else</span>
+                  <span class="ruby-identifier">stop</span>
+                <span class="ruby-keyword">end</span>
+              }).<span class="ruby-identifier">start</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-create">
+            
+              <b>create</b>(nb)
+            
+            <a href="../classes/DemoDialog.html#method-c-create" name="method-c-create" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-create_source')" id="l_method-c-create_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/287a34ae0dfc23e4158f67cb7783d239f202c368/ext/tk/sample/tkextlib/bwidget/tmpldlg.rb#L17" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-create_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/sample/tkextlib/bwidget/tmpldlg.rb, line 17</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">create</span>(<span class="ruby-identifier">nb</span>)
+  <span class="ruby-identifier">frame</span> = <span class="ruby-identifier">nb</span>.<span class="ruby-identifier">insert</span>(<span class="ruby-string">&#39;end&#39;</span>, <span class="ruby-string">&#39;demoDlg&#39;</span>, <span class="ruby-value">:text=</span><span class="ruby-operator">&gt;</span><span class="ruby-string">&#39;Dialog&#39;</span>)
+
+  <span class="ruby-identifier">titf1</span> = <span class="ruby-constant">Tk</span><span class="ruby-operator">::</span><span class="ruby-constant">BWidget</span><span class="ruby-operator">::</span><span class="ruby-constant">TitleFrame</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">frame</span>, <span class="ruby-value">:text=</span><span class="ruby-operator">&gt;</span><span class="ruby-string">&#39;Resources&#39;</span>)
+  <span class="ruby-identifier">titf2</span> = <span class="ruby-constant">Tk</span><span class="ruby-operator">::</span><span class="ruby-constant">BWidget</span><span class="ruby-operator">::</span><span class="ruby-constant">TitleFrame</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">frame</span>, <span class="ruby-value">:text=</span><span class="ruby-operator">&gt;</span><span class="ruby-string">&#39;Template Dialog&#39;</span>)
+  <span class="ruby-identifier">titf3</span> = <span class="ruby-constant">Tk</span><span class="ruby-operator">::</span><span class="ruby-constant">BWidget</span><span class="ruby-operator">::</span><span class="ruby-constant">TitleFrame</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">frame</span>, <span class="ruby-value">:text=</span><span class="ruby-operator">&gt;</span><span class="ruby-string">&#39;Message Dialog&#39;</span>)
+  <span class="ruby-identifier">titf4</span> = <span class="ruby-constant">Tk</span><span class="ruby-operator">::</span><span class="ruby-constant">BWidget</span><span class="ruby-operator">::</span><span class="ruby-constant">TitleFrame</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">frame</span>, <span class="ruby-value">:text=</span><span class="ruby-operator">&gt;</span><span class="ruby-string">&#39;Other dialog&#39;</span>)
+
+  <span class="ruby-identifier">subf</span> = <span class="ruby-identifier">titf1</span>.<span class="ruby-identifier">get_frame</span>
+  <span class="ruby-identifier">cmd</span> = <span class="ruby-identifier">proc</span>{ <span class="ruby-constant">TkOption</span>.<span class="ruby-identifier">read_file</span>(<span class="ruby-constant">File</span>.<span class="ruby-identifier">join</span>(<span class="ruby-constant">Tk</span><span class="ruby-operator">::</span><span class="ruby-constant">BWidget</span><span class="ruby-operator">::</span><span class="ruby-constant">LIBRARY</span>, <span class="ruby-string">&#39;lang&#39;</span>,
+                                           <span class="ruby-identifier">@@resources</span>.<span class="ruby-identifier">value</span> <span class="ruby-operator">+</span> <span class="ruby-string">&#39;.rc&#39;</span>)) }
+  <span class="ruby-constant">Tk</span>.<span class="ruby-identifier">pack</span>(<span class="ruby-constant">TkRadiobutton</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">subf</span>, <span class="ruby-value">:text=</span><span class="ruby-operator">&gt;</span><span class="ruby-string">&#39;English&#39;</span>, <span class="ruby-value">:value=</span><span class="ruby-operator">&gt;</span><span class="ruby-string">&#39;en&#39;</span>,
+                            <span class="ruby-value">:variable=</span><span class="ruby-operator">&gt;</span><span class="ruby-identifier">@@resources</span>, <span class="ruby-value">:command=</span><span class="ruby-operator">&gt;</span><span class="ruby-identifier">cmd</span>),
+          <span class="ruby-constant">TkRadiobutton</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">subf</span>, <span class="ruby-value">:text=</span><span class="ruby-operator">&gt;</span><span class="ruby-string">&#39;French&#39;</span>, <span class="ruby-value">:value=</span><span class="ruby-operator">&gt;</span><span class="ruby-string">&#39;fr&#39;</span>,
+                            <span class="ruby-value">:variable=</span><span class="ruby-operator">&gt;</span><span class="ruby-identifier">@@resources</span>, <span class="ruby-value">:command=</span><span class="ruby-operator">&gt;</span><span class="ruby-identifier">cmd</span>),
+          <span class="ruby-constant">TkRadiobutton</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">subf</span>, <span class="ruby-value">:text=</span><span class="ruby-operator">&gt;</span><span class="ruby-string">&#39;German&#39;</span>, <span class="ruby-value">:value=</span><span class="ruby-operator">&gt;</span><span class="ruby-string">&#39;de&#39;</span>,
+                            <span class="ruby-value">:variable=</span><span class="ruby-operator">&gt;</span><span class="ruby-identifier">@@resources</span>, <span class="ruby-value">:command=</span><span class="ruby-operator">&gt;</span><span class="ruby-identifier">cmd</span>),
+          <span class="ruby-value">:side=</span><span class="ruby-operator">&gt;</span><span class="ruby-value">:left</span>)
+
+  <span class="ruby-identifier">_tmpldlg</span>(<span class="ruby-identifier">titf2</span>.<span class="ruby-identifier">get_frame</span>)
+  <span class="ruby-identifier">_msgdlg</span>(<span class="ruby-identifier">titf3</span>.<span class="ruby-identifier">get_frame</span>)
+  <span class="ruby-identifier">_stddlg</span>(<span class="ruby-identifier">titf4</span>.<span class="ruby-identifier">get_frame</span>)
+
+  <span class="ruby-identifier">titf1</span>.<span class="ruby-identifier">pack</span>(<span class="ruby-value">:fill=</span><span class="ruby-operator">&gt;</span><span class="ruby-value">:x</span>, <span class="ruby-value">:pady=</span><span class="ruby-operator">&gt;</span><span class="ruby-number">2</span>, <span class="ruby-value">:padx=</span><span class="ruby-operator">&gt;</span><span class="ruby-number">2</span>)
+  <span class="ruby-identifier">titf4</span>.<span class="ruby-identifier">pack</span>(<span class="ruby-value">:side=</span><span class="ruby-operator">&gt;</span><span class="ruby-value">:bottom</span>, <span class="ruby-value">:fill=</span><span class="ruby-operator">&gt;</span><span class="ruby-value">:x</span>, <span class="ruby-value">:pady=</span><span class="ruby-operator">&gt;</span><span class="ruby-number">2</span>, <span class="ruby-value">:padx=</span><span class="ruby-operator">&gt;</span><span class="ruby-number">2</span>)
+  <span class="ruby-constant">Tk</span>.<span class="ruby-identifier">pack</span>(<span class="ruby-identifier">titf2</span>, <span class="ruby-identifier">titf3</span>, <span class="ruby-value">:side=</span><span class="ruby-operator">&gt;</span><span class="ruby-value">:left</span>, <span class="ruby-value">:padx=</span><span class="ruby-operator">&gt;</span><span class="ruby-number">2</span>, <span class="ruby-value">:fill=</span><span class="ruby-operator">&gt;</span><span class="ruby-value">:both</span>, <span class="ruby-value">:expand=</span><span class="ruby-operator">&gt;</span><span class="ruby-keyword">true</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                        </div>
+
+    </div>
+  </body>
+</html>    

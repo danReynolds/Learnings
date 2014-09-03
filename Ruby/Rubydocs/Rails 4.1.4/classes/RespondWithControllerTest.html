@@ -1,0 +1,2711 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>RespondWithControllerTest</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="../css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/main.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/github.css" type="text/css" media="screen" />
+<script src="../js/jquery-1.3.2.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/jquery-effect.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+
+<body>     
+    <div class="banner">
+        
+        <h1>
+            <span class="type">Class</span> 
+            RespondWithControllerTest 
+            
+                <span class="parent">&lt; 
+                    
+                    <a href="ActionController/TestCase.html">ActionController::TestCase</a>
+                    
+                </span>
+            
+        </h1>
+        <ul class="files">
+            
+            <li><a href="../files/actionpack/test/controller/mime/respond_with_test_rb.html">actionpack/test/controller/mime/respond_with_test.rb</a></li>
+            
+        </ul>
+    </div>
+    <div id="bodyContent">
+        <div id="content">
+  
+
+
+  
+
+
+  
+  
+
+
+  
+
+
+  
+    <!-- Method ref -->
+    <div class="sectiontitle">Methods</div>
+    <dl class="methods">
+      
+        <dt>R</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-render">render</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>S</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-setup">setup</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>T</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-teardown">teardown</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-test_api_response_with_invalid_resource_respect_override_block">test_api_response_with_invalid_resource_respect_override_block</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-test_api_response_with_valid_resource_respect_override_block">test_api_response_with_valid_resource_respect_override_block</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-test_block_inside_respond_with_is_rendered">test_block_inside_respond_with_is_rendered</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-test_clear_respond_to">test_clear_respond_to</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-test_error_is_raised_if_no_respond_to_is_declared_and_respond_with_is_called">test_error_is_raised_if_no_respond_to_is_declared_and_respond_with_is_called</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-test_first_in_respond_to_has_higher_priority">test_first_in_respond_to_has_higher_priority</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-test_no_double_render_is_raised">test_no_double_render_is_raised</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-test_not_acceptable">test_not_acceptable</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-test_raises_missing_renderer_if_an_api_behavior_with_no_renderer">test_raises_missing_renderer_if_an_api_behavior_with_no_renderer</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-test_render_json_object_responds_to_str_still_produce_json">test_render_json_object_responds_to_str_still_produce_json</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-test_respond_as_responder_entry_point">test_respond_as_responder_entry_point</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-test_respond_with_shouldnt_modify_original_hash">test_respond_with_shouldnt_modify_original_hash</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-test_uses_renderer_if_an_api_behavior">test_uses_renderer_if_an_api_behavior</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-test_using_hash_resource">test_using_hash_resource</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-test_using_hash_resource_with_js_raises_an_error_if_template_cant_be_found">test_using_hash_resource_with_js_raises_an_error_if_template_cant_be_found</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-test_using_hash_resource_with_post">test_using_hash_resource_with_post</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-test_using_invalid_resource_with_template">test_using_invalid_resource_with_template</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-test_using_options_with_template">test_using_options_with_template</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-test_using_resource">test_using_resource</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-test_using_resource_for_delete_with_html_redirects_on_failure">test_using_resource_for_delete_with_html_redirects_on_failure</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-test_using_resource_for_delete_with_html_redirects_on_success">test_using_resource_for_delete_with_html_redirects_on_success</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-test_using_resource_for_delete_with_json_yields_no_content_on_success">test_using_resource_for_delete_with_json_yields_no_content_on_success</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-test_using_resource_for_delete_with_xml_yields_no_content_on_success">test_using_resource_for_delete_with_xml_yields_no_content_on_success</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-test_using_resource_for_patch_with_html_redirects_on_success">test_using_resource_for_patch_with_html_redirects_on_success</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-test_using_resource_for_patch_with_html_rerender_on_failure">test_using_resource_for_patch_with_html_rerender_on_failure</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-test_using_resource_for_patch_with_html_rerender_on_failure_even_on_method_override">test_using_resource_for_patch_with_html_rerender_on_failure_even_on_method_override</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-test_using_resource_for_post_with_html_redirects_on_success">test_using_resource_for_post_with_html_redirects_on_success</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-test_using_resource_for_post_with_html_rerender_on_failure">test_using_resource_for_post_with_html_rerender_on_failure</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-test_using_resource_for_post_with_json_yields_unprocessable_entity_on_failure">test_using_resource_for_post_with_json_yields_unprocessable_entity_on_failure</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-test_using_resource_for_post_with_xml_yields_created_on_success">test_using_resource_for_post_with_xml_yields_created_on_success</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-test_using_resource_for_post_with_xml_yields_unprocessable_entity_on_failure">test_using_resource_for_post_with_xml_yields_unprocessable_entity_on_failure</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-test_using_resource_for_put_with_html_redirects_on_success">test_using_resource_for_put_with_html_redirects_on_success</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-test_using_resource_for_put_with_html_rerender_on_failure">test_using_resource_for_put_with_html_rerender_on_failure</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-test_using_resource_for_put_with_html_rerender_on_failure_even_on_method_override">test_using_resource_for_put_with_html_rerender_on_failure_even_on_method_override</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-test_using_resource_for_put_with_json_yields_no_content_on_success">test_using_resource_for_put_with_json_yields_no_content_on_success</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-test_using_resource_for_put_with_json_yields_unprocessable_entity_on_failure">test_using_resource_for_put_with_json_yields_unprocessable_entity_on_failure</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-test_using_resource_for_put_with_xml_yields_no_content_on_success">test_using_resource_for_put_with_xml_yields_no_content_on_success</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-test_using_resource_for_put_with_xml_yields_unprocessable_entity_on_failure">test_using_resource_for_put_with_xml_yields_unprocessable_entity_on_failure</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-test_using_resource_with_action">test_using_resource_with_action</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-test_using_resource_with_block">test_using_resource_with_block</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-test_using_resource_with_collection">test_using_resource_with_collection</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-test_using_resource_with_js_simply_tries_to_render_the_template">test_using_resource_with_js_simply_tries_to_render_the_template</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-test_using_resource_with_overwrite_block">test_using_resource_with_overwrite_block</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-test_using_resource_with_parent_for_get">test_using_resource_with_parent_for_get</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-test_using_resource_with_parent_for_post">test_using_resource_with_parent_for_post</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-test_using_resource_with_responder">test_using_resource_with_responder</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-test_using_resource_with_set_responder">test_using_resource_with_set_responder</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-test_using_resource_with_status_and_location">test_using_resource_with_status_and_location</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-test_using_resource_with_status_and_location_with_invalid_resource">test_using_resource_with_status_and_location_with_invalid_resource</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+    </dl>
+  
+
+  
+
+
+
+  
+
+    
+
+    
+
+    
+
+
+    
+
+
+    <!-- Methods -->
+        
+      <div class="sectiontitle">Instance Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-i-render">
+            
+              <b>render</b>(params={})
+            
+            <a href="../classes/RespondWithControllerTest.html#method-i-render" name="method-i-render" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-render_source')" id="l_method-i-render_source">show</a>
+                
+                  | <a href="https://github.com/rails/rails/blob/8642c2aadc94b6763290711384c265289b02faaa/actionpack/test/controller/mime/respond_with_test.rb#L496" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-render_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File actionpack/test/controller/mime/respond_with_test.rb, line 496</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">render</span>(<span class="ruby-identifier">params</span>={})
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">response_body</span> = <span class="ruby-node">&quot;#{params[:action]} - #{formats}&quot;</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-setup">
+            
+              <b>setup</b>()
+            
+            <a href="../classes/RespondWithControllerTest.html#method-i-setup" name="method-i-setup" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-setup_source')" id="l_method-i-setup_source">show</a>
+                
+                  | <a href="https://github.com/rails/rails/blob/8642c2aadc94b6763290711384c265289b02faaa/actionpack/test/controller/mime/respond_with_test.rb#L143" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-setup_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File actionpack/test/controller/mime/respond_with_test.rb, line 143</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">setup</span>
+  <span class="ruby-keyword">super</span>
+  <span class="ruby-ivar">@request</span>.<span class="ruby-identifier">host</span> = <span class="ruby-string">&quot;www.example.com&quot;</span>
+  <span class="ruby-constant">Mime</span><span class="ruby-operator">::</span><span class="ruby-constant">Type</span>.<span class="ruby-identifier">register_alias</span>(<span class="ruby-string">&#39;text/html&#39;</span>, <span class="ruby-value">:iphone</span>)
+  <span class="ruby-constant">Mime</span><span class="ruby-operator">::</span><span class="ruby-constant">Type</span>.<span class="ruby-identifier">register_alias</span>(<span class="ruby-string">&#39;text/html&#39;</span>, <span class="ruby-value">:touch</span>)
+  <span class="ruby-constant">Mime</span><span class="ruby-operator">::</span><span class="ruby-constant">Type</span>.<span class="ruby-identifier">register</span>(<span class="ruby-string">&#39;text/x-mobile&#39;</span>, <span class="ruby-value">:mobile</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-teardown">
+            
+              <b>teardown</b>()
+            
+            <a href="../classes/RespondWithControllerTest.html#method-i-teardown" name="method-i-teardown" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-teardown_source')" id="l_method-i-teardown_source">show</a>
+                
+                  | <a href="https://github.com/rails/rails/blob/8642c2aadc94b6763290711384c265289b02faaa/actionpack/test/controller/mime/respond_with_test.rb#L151" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-teardown_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File actionpack/test/controller/mime/respond_with_test.rb, line 151</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">teardown</span>
+  <span class="ruby-keyword">super</span>
+  <span class="ruby-constant">Mime</span><span class="ruby-operator">::</span><span class="ruby-constant">Type</span>.<span class="ruby-identifier">unregister</span>(<span class="ruby-value">:iphone</span>)
+  <span class="ruby-constant">Mime</span><span class="ruby-operator">::</span><span class="ruby-constant">Type</span>.<span class="ruby-identifier">unregister</span>(<span class="ruby-value">:touch</span>)
+  <span class="ruby-constant">Mime</span><span class="ruby-operator">::</span><span class="ruby-constant">Type</span>.<span class="ruby-identifier">unregister</span>(<span class="ruby-value">:mobile</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-test_api_response_with_invalid_resource_respect_override_block">
+            
+              <b>test_api_response_with_invalid_resource_respect_override_block</b>()
+            
+            <a href="../classes/RespondWithControllerTest.html#method-i-test_api_response_with_invalid_resource_respect_override_block" name="method-i-test_api_response_with_invalid_resource_respect_override_block" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-test_api_response_with_invalid_resource_respect_override_block_source')" id="l_method-i-test_api_response_with_invalid_resource_respect_override_block_source">show</a>
+                
+                  | <a href="https://github.com/rails/rails/blob/8642c2aadc94b6763290711384c265289b02faaa/actionpack/test/controller/mime/respond_with_test.rb#L555" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-test_api_response_with_invalid_resource_respect_override_block_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File actionpack/test/controller/mime/respond_with_test.rb, line 555</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">test_api_response_with_invalid_resource_respect_override_block</span>
+  <span class="ruby-ivar">@controller</span> = <span class="ruby-constant">RenderJsonRespondWithController</span>.<span class="ruby-identifier">new</span>
+  <span class="ruby-identifier">post</span> <span class="ruby-value">:create</span>, <span class="ruby-value">:name</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;david&quot;</span>, <span class="ruby-value">:format</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">:json</span>
+  <span class="ruby-identifier">assert_equal</span> <span class="ruby-string">&#39;{&quot;valid&quot;:false}&#39;</span>, <span class="ruby-ivar">@response</span>.<span class="ruby-identifier">body</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-test_api_response_with_valid_resource_respect_override_block">
+            
+              <b>test_api_response_with_valid_resource_respect_override_block</b>()
+            
+            <a href="../classes/RespondWithControllerTest.html#method-i-test_api_response_with_valid_resource_respect_override_block" name="method-i-test_api_response_with_valid_resource_respect_override_block" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-test_api_response_with_valid_resource_respect_override_block_source')" id="l_method-i-test_api_response_with_valid_resource_respect_override_block_source">show</a>
+                
+                  | <a href="https://github.com/rails/rails/blob/8642c2aadc94b6763290711384c265289b02faaa/actionpack/test/controller/mime/respond_with_test.rb#L549" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-test_api_response_with_valid_resource_respect_override_block_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File actionpack/test/controller/mime/respond_with_test.rb, line 549</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">test_api_response_with_valid_resource_respect_override_block</span>
+  <span class="ruby-ivar">@controller</span> = <span class="ruby-constant">RenderJsonRespondWithController</span>.<span class="ruby-identifier">new</span>
+  <span class="ruby-identifier">post</span> <span class="ruby-value">:create</span>, <span class="ruby-value">:name</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;sikachu&quot;</span>, <span class="ruby-value">:format</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">:json</span>
+  <span class="ruby-identifier">assert_equal</span> <span class="ruby-string">&#39;{&quot;valid&quot;:true}&#39;</span>, <span class="ruby-ivar">@response</span>.<span class="ruby-identifier">body</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-test_block_inside_respond_with_is_rendered">
+            
+              <b>test_block_inside_respond_with_is_rendered</b>()
+            
+            <a href="../classes/RespondWithControllerTest.html#method-i-test_block_inside_respond_with_is_rendered" name="method-i-test_block_inside_respond_with_is_rendered" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-test_block_inside_respond_with_is_rendered_source')" id="l_method-i-test_block_inside_respond_with_is_rendered_source">show</a>
+                
+                  | <a href="https://github.com/rails/rails/blob/8642c2aadc94b6763290711384c265289b02faaa/actionpack/test/controller/mime/respond_with_test.rb#L534" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-test_block_inside_respond_with_is_rendered_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File actionpack/test/controller/mime/respond_with_test.rb, line 534</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">test_block_inside_respond_with_is_rendered</span>
+  <span class="ruby-ivar">@controller</span> = <span class="ruby-constant">InheritedRespondWithController</span>.<span class="ruby-identifier">new</span>
+  <span class="ruby-ivar">@request</span>.<span class="ruby-identifier">accept</span> = <span class="ruby-string">&quot;application/json&quot;</span>
+  <span class="ruby-identifier">get</span> <span class="ruby-value">:index</span>
+  <span class="ruby-identifier">assert_equal</span> <span class="ruby-string">&quot;JSON&quot;</span>, <span class="ruby-ivar">@response</span>.<span class="ruby-identifier">body</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-test_clear_respond_to">
+            
+              <b>test_clear_respond_to</b>()
+            
+            <a href="../classes/RespondWithControllerTest.html#method-i-test_clear_respond_to" name="method-i-test_clear_respond_to" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-test_clear_respond_to_source')" id="l_method-i-test_clear_respond_to_source">show</a>
+                
+                  | <a href="https://github.com/rails/rails/blob/8642c2aadc94b6763290711384c265289b02faaa/actionpack/test/controller/mime/respond_with_test.rb#L518" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-test_clear_respond_to_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File actionpack/test/controller/mime/respond_with_test.rb, line 518</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">test_clear_respond_to</span>
+  <span class="ruby-ivar">@controller</span> = <span class="ruby-constant">InheritedRespondWithController</span>.<span class="ruby-identifier">new</span>
+  <span class="ruby-ivar">@request</span>.<span class="ruby-identifier">accept</span> = <span class="ruby-string">&quot;text/html&quot;</span>
+  <span class="ruby-identifier">assert_raises</span>(<span class="ruby-constant">ActionController</span><span class="ruby-operator">::</span><span class="ruby-constant">UnknownFormat</span>) <span class="ruby-keyword">do</span>
+    <span class="ruby-identifier">get</span> <span class="ruby-value">:index</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-test_error_is_raised_if_no_respond_to_is_declared_and_respond_with_is_called">
+            
+              <b>test_error_is_raised_if_no_respond_to_is_declared_and_respond_with_is_called</b>()
+            
+            <a href="../classes/RespondWithControllerTest.html#method-i-test_error_is_raised_if_no_respond_to_is_declared_and_respond_with_is_called" name="method-i-test_error_is_raised_if_no_respond_to_is_declared_and_respond_with_is_called" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-test_error_is_raised_if_no_respond_to_is_declared_and_respond_with_is_called_source')" id="l_method-i-test_error_is_raised_if_no_respond_to_is_declared_and_respond_with_is_called_source">show</a>
+                
+                  | <a href="https://github.com/rails/rails/blob/8642c2aadc94b6763290711384c265289b02faaa/actionpack/test/controller/mime/respond_with_test.rb#L657" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-test_error_is_raised_if_no_respond_to_is_declared_and_respond_with_is_called_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File actionpack/test/controller/mime/respond_with_test.rb, line 657</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">test_error_is_raised_if_no_respond_to_is_declared_and_respond_with_is_called</span>
+  <span class="ruby-ivar">@controller</span> = <span class="ruby-constant">EmptyRespondWithController</span>.<span class="ruby-identifier">new</span>
+  <span class="ruby-ivar">@request</span>.<span class="ruby-identifier">accept</span> = <span class="ruby-string">&quot;*/*&quot;</span>
+  <span class="ruby-identifier">assert_raise</span> <span class="ruby-constant">RuntimeError</span> <span class="ruby-keyword">do</span>
+    <span class="ruby-identifier">get</span> <span class="ruby-value">:index</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-test_first_in_respond_to_has_higher_priority">
+            
+              <b>test_first_in_respond_to_has_higher_priority</b>()
+            
+            <a href="../classes/RespondWithControllerTest.html#method-i-test_first_in_respond_to_has_higher_priority" name="method-i-test_first_in_respond_to_has_higher_priority" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-test_first_in_respond_to_has_higher_priority_source')" id="l_method-i-test_first_in_respond_to_has_higher_priority_source">show</a>
+                
+                  | <a href="https://github.com/rails/rails/blob/8642c2aadc94b6763290711384c265289b02faaa/actionpack/test/controller/mime/respond_with_test.rb#L526" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-test_first_in_respond_to_has_higher_priority_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File actionpack/test/controller/mime/respond_with_test.rb, line 526</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">test_first_in_respond_to_has_higher_priority</span>
+  <span class="ruby-ivar">@controller</span> = <span class="ruby-constant">InheritedRespondWithController</span>.<span class="ruby-identifier">new</span>
+  <span class="ruby-ivar">@request</span>.<span class="ruby-identifier">accept</span> = <span class="ruby-string">&quot;*/*&quot;</span>
+  <span class="ruby-identifier">get</span> <span class="ruby-value">:index</span>
+  <span class="ruby-identifier">assert_equal</span> <span class="ruby-string">&quot;application/xml&quot;</span>, <span class="ruby-ivar">@response</span>.<span class="ruby-identifier">content_type</span>
+  <span class="ruby-identifier">assert_equal</span> <span class="ruby-string">&quot;&lt;name&gt;david&lt;/name&gt;&quot;</span>, <span class="ruby-ivar">@response</span>.<span class="ruby-identifier">body</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-test_no_double_render_is_raised">
+            
+              <b>test_no_double_render_is_raised</b>()
+            
+            <a href="../classes/RespondWithControllerTest.html#method-i-test_no_double_render_is_raised" name="method-i-test_no_double_render_is_raised" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-test_no_double_render_is_raised_source')" id="l_method-i-test_no_double_render_is_raised_source">show</a>
+                
+                  | <a href="https://github.com/rails/rails/blob/8642c2aadc94b6763290711384c265289b02faaa/actionpack/test/controller/mime/respond_with_test.rb#L561" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-test_no_double_render_is_raised_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File actionpack/test/controller/mime/respond_with_test.rb, line 561</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">test_no_double_render_is_raised</span>
+  <span class="ruby-ivar">@request</span>.<span class="ruby-identifier">accept</span> = <span class="ruby-string">&quot;text/html&quot;</span>
+  <span class="ruby-identifier">assert_raise</span> <span class="ruby-constant">ActionView</span><span class="ruby-operator">::</span><span class="ruby-constant">MissingTemplate</span> <span class="ruby-keyword">do</span>
+    <span class="ruby-identifier">get</span> <span class="ruby-value">:using_resource</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-test_not_acceptable">
+            
+              <b>test_not_acceptable</b>()
+            
+            <a href="../classes/RespondWithControllerTest.html#method-i-test_not_acceptable" name="method-i-test_not_acceptable" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-test_not_acceptable_source')" id="l_method-i-test_not_acceptable_source">show</a>
+                
+                  | <a href="https://github.com/rails/rails/blob/8642c2aadc94b6763290711384c265289b02faaa/actionpack/test/controller/mime/respond_with_test.rb#L233" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-test_not_acceptable_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File actionpack/test/controller/mime/respond_with_test.rb, line 233</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">test_not_acceptable</span>
+  <span class="ruby-ivar">@request</span>.<span class="ruby-identifier">accept</span> = <span class="ruby-string">&quot;application/xml&quot;</span>
+  <span class="ruby-identifier">assert_raises</span>(<span class="ruby-constant">ActionController</span><span class="ruby-operator">::</span><span class="ruby-constant">UnknownFormat</span>) <span class="ruby-keyword">do</span>
+    <span class="ruby-identifier">get</span> <span class="ruby-value">:using_resource_with_block</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-ivar">@request</span>.<span class="ruby-identifier">accept</span> = <span class="ruby-string">&quot;text/javascript&quot;</span>
+  <span class="ruby-identifier">assert_raises</span>(<span class="ruby-constant">ActionController</span><span class="ruby-operator">::</span><span class="ruby-constant">UnknownFormat</span>) <span class="ruby-keyword">do</span>
+    <span class="ruby-identifier">get</span> <span class="ruby-value">:using_resource_with_overwrite_block</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-test_raises_missing_renderer_if_an_api_behavior_with_no_renderer">
+            
+              <b>test_raises_missing_renderer_if_an_api_behavior_with_no_renderer</b>()
+            
+            <a href="../classes/RespondWithControllerTest.html#method-i-test_raises_missing_renderer_if_an_api_behavior_with_no_renderer" name="method-i-test_raises_missing_renderer_if_an_api_behavior_with_no_renderer" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-test_raises_missing_renderer_if_an_api_behavior_with_no_renderer_source')" id="l_method-i-test_raises_missing_renderer_if_an_api_behavior_with_no_renderer_source">show</a>
+                
+                  | <a href="https://github.com/rails/rails/blob/8642c2aadc94b6763290711384c265289b02faaa/actionpack/test/controller/mime/respond_with_test.rb#L650" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-test_raises_missing_renderer_if_an_api_behavior_with_no_renderer_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File actionpack/test/controller/mime/respond_with_test.rb, line 650</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">test_raises_missing_renderer_if_an_api_behavior_with_no_renderer</span>
+  <span class="ruby-ivar">@controller</span> = <span class="ruby-constant">CsvRespondWithController</span>.<span class="ruby-identifier">new</span>
+  <span class="ruby-identifier">assert_raise</span> <span class="ruby-constant">ActionController</span><span class="ruby-operator">::</span><span class="ruby-constant">MissingRenderer</span> <span class="ruby-keyword">do</span>
+    <span class="ruby-identifier">get</span> <span class="ruby-value">:index</span>, <span class="ruby-identifier">format</span><span class="ruby-operator">:</span> <span class="ruby-string">&#39;csv&#39;</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-test_render_json_object_responds_to_str_still_produce_json">
+            
+              <b>test_render_json_object_responds_to_str_still_produce_json</b>()
+            
+            <a href="../classes/RespondWithControllerTest.html#method-i-test_render_json_object_responds_to_str_still_produce_json" name="method-i-test_render_json_object_responds_to_str_still_produce_json" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-test_render_json_object_responds_to_str_still_produce_json_source')" id="l_method-i-test_render_json_object_responds_to_str_still_produce_json_source">show</a>
+                
+                  | <a href="https://github.com/rails/rails/blob/8642c2aadc94b6763290711384c265289b02faaa/actionpack/test/controller/mime/respond_with_test.rb#L541" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-test_render_json_object_responds_to_str_still_produce_json_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File actionpack/test/controller/mime/respond_with_test.rb, line 541</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">test_render_json_object_responds_to_str_still_produce_json</span>
+  <span class="ruby-ivar">@controller</span> = <span class="ruby-constant">RenderJsonRespondWithController</span>.<span class="ruby-identifier">new</span>
+  <span class="ruby-ivar">@request</span>.<span class="ruby-identifier">accept</span> = <span class="ruby-string">&quot;application/json&quot;</span>
+  <span class="ruby-identifier">get</span> <span class="ruby-value">:index</span>, <span class="ruby-value">:format</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">:json</span>
+  <span class="ruby-identifier">assert_match</span>(<span class="ruby-regexp">/&quot;message&quot;:&quot;boom&quot;/</span>, <span class="ruby-ivar">@response</span>.<span class="ruby-identifier">body</span>)
+  <span class="ruby-identifier">assert_match</span>(<span class="ruby-regexp">/&quot;error&quot;:&quot;RenderJsonTestException&quot;/</span>, <span class="ruby-ivar">@response</span>.<span class="ruby-identifier">body</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-test_respond_as_responder_entry_point">
+            
+              <b>test_respond_as_responder_entry_point</b>()
+            
+            <a href="../classes/RespondWithControllerTest.html#method-i-test_respond_as_responder_entry_point" name="method-i-test_respond_as_responder_entry_point" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-test_respond_as_responder_entry_point_source')" id="l_method-i-test_respond_as_responder_entry_point_source">show</a>
+                
+                  | <a href="https://github.com/rails/rails/blob/8642c2aadc94b6763290711384c265289b02faaa/actionpack/test/controller/mime/respond_with_test.rb#L508" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-test_respond_as_responder_entry_point_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File actionpack/test/controller/mime/respond_with_test.rb, line 508</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">test_respond_as_responder_entry_point</span>
+  <span class="ruby-ivar">@request</span>.<span class="ruby-identifier">accept</span> = <span class="ruby-string">&quot;text/html&quot;</span>
+  <span class="ruby-identifier">get</span> <span class="ruby-value">:using_responder_with_respond</span>
+  <span class="ruby-identifier">assert_equal</span> <span class="ruby-string">&quot;respond html&quot;</span>, <span class="ruby-ivar">@response</span>.<span class="ruby-identifier">body</span>
+
+  <span class="ruby-ivar">@request</span>.<span class="ruby-identifier">accept</span> = <span class="ruby-string">&quot;application/xml&quot;</span>
+  <span class="ruby-identifier">get</span> <span class="ruby-value">:using_responder_with_respond</span>
+  <span class="ruby-identifier">assert_equal</span> <span class="ruby-string">&quot;respond xml&quot;</span>, <span class="ruby-ivar">@response</span>.<span class="ruby-identifier">body</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-test_respond_with_shouldnt_modify_original_hash">
+            
+              <b>test_respond_with_shouldnt_modify_original_hash</b>()
+            
+            <a href="../classes/RespondWithControllerTest.html#method-i-test_respond_with_shouldnt_modify_original_hash" name="method-i-test_respond_with_shouldnt_modify_original_hash" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-test_respond_with_shouldnt_modify_original_hash_source')" id="l_method-i-test_respond_with_shouldnt_modify_original_hash_source">show</a>
+                
+                  | <a href="https://github.com/rails/rails/blob/8642c2aadc94b6763290711384c265289b02faaa/actionpack/test/controller/mime/respond_with_test.rb#L158" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-test_respond_with_shouldnt_modify_original_hash_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File actionpack/test/controller/mime/respond_with_test.rb, line 158</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">test_respond_with_shouldnt_modify_original_hash</span>
+  <span class="ruby-identifier">get</span> <span class="ruby-value">:respond_with_additional_params</span>
+  <span class="ruby-identifier">assert_equal</span> <span class="ruby-constant">RespondWithController</span>.<span class="ruby-identifier">params</span>, <span class="ruby-identifier">assigns</span>(<span class="ruby-value">:params</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-test_uses_renderer_if_an_api_behavior">
+            
+              <b>test_uses_renderer_if_an_api_behavior</b>()
+            
+            <a href="../classes/RespondWithControllerTest.html#method-i-test_uses_renderer_if_an_api_behavior" name="method-i-test_uses_renderer_if_an_api_behavior" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-test_uses_renderer_if_an_api_behavior_source')" id="l_method-i-test_uses_renderer_if_an_api_behavior_source">show</a>
+                
+                  | <a href="https://github.com/rails/rails/blob/8642c2aadc94b6763290711384c265289b02faaa/actionpack/test/controller/mime/respond_with_test.rb#L640" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-test_uses_renderer_if_an_api_behavior_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File actionpack/test/controller/mime/respond_with_test.rb, line 640</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">test_uses_renderer_if_an_api_behavior</span>
+  <span class="ruby-constant">ActionController</span><span class="ruby-operator">::</span><span class="ruby-constant">Renderers</span>.<span class="ruby-identifier">add</span> <span class="ruby-value">:csv</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">obj</span>, <span class="ruby-identifier">options</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">send_data</span> <span class="ruby-identifier">obj</span>.<span class="ruby-identifier">to_csv</span>, <span class="ruby-identifier">type</span><span class="ruby-operator">:</span> <span class="ruby-constant">Mime</span><span class="ruby-operator">::</span><span class="ruby-constant">CSV</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-ivar">@controller</span> = <span class="ruby-constant">CsvRespondWithController</span>.<span class="ruby-identifier">new</span>
+  <span class="ruby-identifier">get</span> <span class="ruby-value">:index</span>, <span class="ruby-identifier">format</span><span class="ruby-operator">:</span> <span class="ruby-string">&#39;csv&#39;</span>
+  <span class="ruby-identifier">assert_equal</span> <span class="ruby-constant">Mime</span><span class="ruby-operator">::</span><span class="ruby-constant">CSV</span>, <span class="ruby-ivar">@response</span>.<span class="ruby-identifier">content_type</span>
+  <span class="ruby-identifier">assert_equal</span> <span class="ruby-string">&quot;c,s,v&quot;</span>, <span class="ruby-ivar">@response</span>.<span class="ruby-identifier">body</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-test_using_hash_resource">
+            
+              <b>test_using_hash_resource</b>()
+            
+            <a href="../classes/RespondWithControllerTest.html#method-i-test_using_hash_resource" name="method-i-test_using_hash_resource" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-test_using_hash_resource_source')" id="l_method-i-test_using_hash_resource_source">show</a>
+                
+                  | <a href="https://github.com/rails/rails/blob/8642c2aadc94b6763290711384c265289b02faaa/actionpack/test/controller/mime/respond_with_test.rb#L189" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-test_using_hash_resource_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File actionpack/test/controller/mime/respond_with_test.rb, line 189</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">test_using_hash_resource</span>
+  <span class="ruby-ivar">@request</span>.<span class="ruby-identifier">accept</span> = <span class="ruby-string">&quot;application/xml&quot;</span>
+  <span class="ruby-identifier">get</span> <span class="ruby-value">:using_hash_resource</span>
+  <span class="ruby-identifier">assert_equal</span> <span class="ruby-string">&quot;application/xml&quot;</span>, <span class="ruby-ivar">@response</span>.<span class="ruby-identifier">content_type</span>
+  <span class="ruby-identifier">assert_equal</span> <span class="ruby-string">&quot;&lt;?xml version=\&quot;1.0\&quot; encoding=\&quot;UTF-8\&quot;?&gt;\n&lt;hash&gt;\n  &lt;name&gt;david&lt;/name&gt;\n&lt;/hash&gt;\n&quot;</span>, <span class="ruby-ivar">@response</span>.<span class="ruby-identifier">body</span>
+
+  <span class="ruby-ivar">@request</span>.<span class="ruby-identifier">accept</span> = <span class="ruby-string">&quot;application/json&quot;</span>
+  <span class="ruby-identifier">get</span> <span class="ruby-value">:using_hash_resource</span>
+  <span class="ruby-identifier">assert_equal</span> <span class="ruby-string">&quot;application/json&quot;</span>, <span class="ruby-ivar">@response</span>.<span class="ruby-identifier">content_type</span>
+  <span class="ruby-identifier">assert</span> <span class="ruby-ivar">@response</span>.<span class="ruby-identifier">body</span>.<span class="ruby-identifier">include?</span>(<span class="ruby-string">&quot;result&quot;</span>)
+  <span class="ruby-identifier">assert</span> <span class="ruby-ivar">@response</span>.<span class="ruby-identifier">body</span>.<span class="ruby-identifier">include?</span>(<span class="ruby-string">&#39;&quot;name&quot;:&quot;david&quot;&#39;</span>)
+  <span class="ruby-identifier">assert</span> <span class="ruby-ivar">@response</span>.<span class="ruby-identifier">body</span>.<span class="ruby-identifier">include?</span>(<span class="ruby-string">&#39;&quot;id&quot;:13&#39;</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-test_using_hash_resource_with_js_raises_an_error_if_template_cant_be_found">
+            
+              <b>test_using_hash_resource_with_js_raises_an_error_if_template_cant_be_found</b>()
+            
+            <a href="../classes/RespondWithControllerTest.html#method-i-test_using_hash_resource_with_js_raises_an_error_if_template_cant_be_found" name="method-i-test_using_hash_resource_with_js_raises_an_error_if_template_cant_be_found" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-test_using_hash_resource_with_js_raises_an_error_if_template_cant_be_found_source')" id="l_method-i-test_using_hash_resource_with_js_raises_an_error_if_template_cant_be_found_source">show</a>
+                
+                  | <a href="https://github.com/rails/rails/blob/8642c2aadc94b6763290711384c265289b02faaa/actionpack/test/controller/mime/respond_with_test.rb#L182" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-test_using_hash_resource_with_js_raises_an_error_if_template_cant_be_found_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File actionpack/test/controller/mime/respond_with_test.rb, line 182</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">test_using_hash_resource_with_js_raises_an_error_if_template_cant_be_found</span>
+  <span class="ruby-ivar">@request</span>.<span class="ruby-identifier">accept</span> = <span class="ruby-string">&quot;text/javascript&quot;</span>
+  <span class="ruby-identifier">assert_raise</span> <span class="ruby-constant">ActionView</span><span class="ruby-operator">::</span><span class="ruby-constant">MissingTemplate</span> <span class="ruby-keyword">do</span>
+    <span class="ruby-identifier">get</span> <span class="ruby-value">:using_hash_resource</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-test_using_hash_resource_with_post">
+            
+              <b>test_using_hash_resource_with_post</b>()
+            
+            <a href="../classes/RespondWithControllerTest.html#method-i-test_using_hash_resource_with_post" name="method-i-test_using_hash_resource_with_post" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-test_using_hash_resource_with_post_source')" id="l_method-i-test_using_hash_resource_with_post_source">show</a>
+                
+                  | <a href="https://github.com/rails/rails/blob/8642c2aadc94b6763290711384c265289b02faaa/actionpack/test/controller/mime/respond_with_test.rb#L203" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-test_using_hash_resource_with_post_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File actionpack/test/controller/mime/respond_with_test.rb, line 203</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">test_using_hash_resource_with_post</span>
+  <span class="ruby-ivar">@request</span>.<span class="ruby-identifier">accept</span> = <span class="ruby-string">&quot;application/json&quot;</span>
+  <span class="ruby-identifier">assert_raise</span> <span class="ruby-constant">ArgumentError</span>, <span class="ruby-string">&quot;Nil location provided. Can&#39;t build URI.&quot;</span> <span class="ruby-keyword">do</span>
+    <span class="ruby-identifier">post</span> <span class="ruby-value">:using_hash_resource</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-test_using_invalid_resource_with_template">
+            
+              <b>test_using_invalid_resource_with_template</b>()
+            
+            <a href="../classes/RespondWithControllerTest.html#method-i-test_using_invalid_resource_with_template" name="method-i-test_using_invalid_resource_with_template" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-test_using_invalid_resource_with_template_source')" id="l_method-i-test_using_invalid_resource_with_template_source">show</a>
+                
+                  | <a href="https://github.com/rails/rails/blob/8642c2aadc94b6763290711384c265289b02faaa/actionpack/test/controller/mime/respond_with_test.rb#L596" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-test_using_invalid_resource_with_template_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File actionpack/test/controller/mime/respond_with_test.rb, line 596</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">test_using_invalid_resource_with_template</span>
+  <span class="ruby-identifier">errors</span> = { <span class="ruby-value">:name</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">:invalid</span> }
+  <span class="ruby-constant">Customer</span>.<span class="ruby-identifier">any_instance</span>.<span class="ruby-identifier">stubs</span>(<span class="ruby-value">:errors</span>).<span class="ruby-identifier">returns</span>(<span class="ruby-identifier">errors</span>)
+
+  <span class="ruby-ivar">@request</span>.<span class="ruby-identifier">accept</span> = <span class="ruby-string">&quot;text/xml&quot;</span>
+
+  <span class="ruby-identifier">post</span> <span class="ruby-value">:using_invalid_resource_with_template</span>
+  <span class="ruby-identifier">assert_equal</span> <span class="ruby-identifier">errors</span>.<span class="ruby-identifier">to_xml</span>, <span class="ruby-ivar">@response</span>.<span class="ruby-identifier">body</span>
+  <span class="ruby-identifier">assert_equal</span> <span class="ruby-number">422</span>, <span class="ruby-ivar">@response</span>.<span class="ruby-identifier">status</span>
+  <span class="ruby-identifier">assert_equal</span> <span class="ruby-keyword">nil</span>, <span class="ruby-ivar">@response</span>.<span class="ruby-identifier">location</span>
+
+  <span class="ruby-identifier">put</span> <span class="ruby-value">:using_invalid_resource_with_template</span>
+  <span class="ruby-identifier">assert_equal</span> <span class="ruby-identifier">errors</span>.<span class="ruby-identifier">to_xml</span>, <span class="ruby-ivar">@response</span>.<span class="ruby-identifier">body</span>
+  <span class="ruby-identifier">assert_equal</span> <span class="ruby-number">422</span>, <span class="ruby-ivar">@response</span>.<span class="ruby-identifier">status</span>
+  <span class="ruby-identifier">assert_equal</span> <span class="ruby-keyword">nil</span>, <span class="ruby-ivar">@response</span>.<span class="ruby-identifier">location</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-test_using_options_with_template">
+            
+              <b>test_using_options_with_template</b>()
+            
+            <a href="../classes/RespondWithControllerTest.html#method-i-test_using_options_with_template" name="method-i-test_using_options_with_template" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-test_using_options_with_template_source')" id="l_method-i-test_using_options_with_template_source">show</a>
+                
+                  | <a href="https://github.com/rails/rails/blob/8642c2aadc94b6763290711384c265289b02faaa/actionpack/test/controller/mime/respond_with_test.rb#L613" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-test_using_options_with_template_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File actionpack/test/controller/mime/respond_with_test.rb, line 613</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">test_using_options_with_template</span>
+  <span class="ruby-ivar">@request</span>.<span class="ruby-identifier">accept</span> = <span class="ruby-string">&quot;text/xml&quot;</span>
+
+  <span class="ruby-identifier">post</span> <span class="ruby-value">:using_options_with_template</span>
+  <span class="ruby-identifier">assert_equal</span> <span class="ruby-string">&quot;&lt;customer-name&gt;david&lt;/customer-name&gt;&quot;</span>, <span class="ruby-ivar">@response</span>.<span class="ruby-identifier">body</span>
+  <span class="ruby-identifier">assert_equal</span> <span class="ruby-number">123</span>, <span class="ruby-ivar">@response</span>.<span class="ruby-identifier">status</span>
+  <span class="ruby-identifier">assert_equal</span> <span class="ruby-string">&quot;http://test.host/&quot;</span>, <span class="ruby-ivar">@response</span>.<span class="ruby-identifier">location</span>
+
+  <span class="ruby-identifier">put</span> <span class="ruby-value">:using_options_with_template</span>
+  <span class="ruby-identifier">assert_equal</span> <span class="ruby-string">&quot;&lt;customer-name&gt;david&lt;/customer-name&gt;&quot;</span>, <span class="ruby-ivar">@response</span>.<span class="ruby-identifier">body</span>
+  <span class="ruby-identifier">assert_equal</span> <span class="ruby-number">123</span>, <span class="ruby-ivar">@response</span>.<span class="ruby-identifier">status</span>
+  <span class="ruby-identifier">assert_equal</span> <span class="ruby-string">&quot;http://test.host/&quot;</span>, <span class="ruby-ivar">@response</span>.<span class="ruby-identifier">location</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-test_using_resource">
+            
+              <b>test_using_resource</b>()
+            
+            <a href="../classes/RespondWithControllerTest.html#method-i-test_using_resource" name="method-i-test_using_resource" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-test_using_resource_source')" id="l_method-i-test_using_resource_source">show</a>
+                
+                  | <a href="https://github.com/rails/rails/blob/8642c2aadc94b6763290711384c265289b02faaa/actionpack/test/controller/mime/respond_with_test.rb#L163" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-test_using_resource_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File actionpack/test/controller/mime/respond_with_test.rb, line 163</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">test_using_resource</span>
+  <span class="ruby-ivar">@request</span>.<span class="ruby-identifier">accept</span> = <span class="ruby-string">&quot;application/xml&quot;</span>
+  <span class="ruby-identifier">get</span> <span class="ruby-value">:using_resource</span>
+  <span class="ruby-identifier">assert_equal</span> <span class="ruby-string">&quot;application/xml&quot;</span>, <span class="ruby-ivar">@response</span>.<span class="ruby-identifier">content_type</span>
+  <span class="ruby-identifier">assert_equal</span> <span class="ruby-string">&quot;&lt;name&gt;david&lt;/name&gt;&quot;</span>, <span class="ruby-ivar">@response</span>.<span class="ruby-identifier">body</span>
+
+  <span class="ruby-ivar">@request</span>.<span class="ruby-identifier">accept</span> = <span class="ruby-string">&quot;application/json&quot;</span>
+  <span class="ruby-identifier">assert_raise</span> <span class="ruby-constant">ActionView</span><span class="ruby-operator">::</span><span class="ruby-constant">MissingTemplate</span> <span class="ruby-keyword">do</span>
+    <span class="ruby-identifier">get</span> <span class="ruby-value">:using_resource</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-test_using_resource_for_delete_with_html_redirects_on_failure">
+            
+              <b>test_using_resource_for_delete_with_html_redirects_on_failure</b>()
+            
+            <a href="../classes/RespondWithControllerTest.html#method-i-test_using_resource_for_delete_with_html_redirects_on_failure" name="method-i-test_using_resource_for_delete_with_html_redirects_on_failure" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-test_using_resource_for_delete_with_html_redirects_on_failure_source')" id="l_method-i-test_using_resource_for_delete_with_html_redirects_on_failure_source">show</a>
+                
+                  | <a href="https://github.com/rails/rails/blob/8642c2aadc94b6763290711384c265289b02faaa/actionpack/test/controller/mime/respond_with_test.rb#L445" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-test_using_resource_for_delete_with_html_redirects_on_failure_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File actionpack/test/controller/mime/respond_with_test.rb, line 445</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">test_using_resource_for_delete_with_html_redirects_on_failure</span>
+  <span class="ruby-identifier">with_test_route_set</span> <span class="ruby-keyword">do</span>
+    <span class="ruby-identifier">errors</span> = { <span class="ruby-value">:name</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">:invalid</span> }
+    <span class="ruby-constant">Customer</span>.<span class="ruby-identifier">any_instance</span>.<span class="ruby-identifier">stubs</span>(<span class="ruby-value">:errors</span>).<span class="ruby-identifier">returns</span>(<span class="ruby-identifier">errors</span>)
+    <span class="ruby-constant">Customer</span>.<span class="ruby-identifier">any_instance</span>.<span class="ruby-identifier">stubs</span>(<span class="ruby-value">:destroyed?</span>).<span class="ruby-identifier">returns</span>(<span class="ruby-keyword">false</span>)
+    <span class="ruby-identifier">delete</span> <span class="ruby-value">:using_resource</span>
+    <span class="ruby-identifier">assert_equal</span> <span class="ruby-string">&quot;text/html&quot;</span>, <span class="ruby-ivar">@response</span>.<span class="ruby-identifier">content_type</span>
+    <span class="ruby-identifier">assert_equal</span> <span class="ruby-number">302</span>, <span class="ruby-ivar">@response</span>.<span class="ruby-identifier">status</span>
+    <span class="ruby-identifier">assert_equal</span> <span class="ruby-string">&quot;http://www.example.com/customers&quot;</span>, <span class="ruby-ivar">@response</span>.<span class="ruby-identifier">location</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-test_using_resource_for_delete_with_html_redirects_on_success">
+            
+              <b>test_using_resource_for_delete_with_html_redirects_on_success</b>()
+            
+            <a href="../classes/RespondWithControllerTest.html#method-i-test_using_resource_for_delete_with_html_redirects_on_success" name="method-i-test_using_resource_for_delete_with_html_redirects_on_success" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-test_using_resource_for_delete_with_html_redirects_on_success_source')" id="l_method-i-test_using_resource_for_delete_with_html_redirects_on_success_source">show</a>
+                
+                  | <a href="https://github.com/rails/rails/blob/8642c2aadc94b6763290711384c265289b02faaa/actionpack/test/controller/mime/respond_with_test.rb#L416" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-test_using_resource_for_delete_with_html_redirects_on_success_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File actionpack/test/controller/mime/respond_with_test.rb, line 416</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">test_using_resource_for_delete_with_html_redirects_on_success</span>
+  <span class="ruby-identifier">with_test_route_set</span> <span class="ruby-keyword">do</span>
+    <span class="ruby-constant">Customer</span>.<span class="ruby-identifier">any_instance</span>.<span class="ruby-identifier">stubs</span>(<span class="ruby-value">:destroyed?</span>).<span class="ruby-identifier">returns</span>(<span class="ruby-keyword">true</span>)
+    <span class="ruby-identifier">delete</span> <span class="ruby-value">:using_resource</span>
+    <span class="ruby-identifier">assert_equal</span> <span class="ruby-string">&quot;text/html&quot;</span>, <span class="ruby-ivar">@response</span>.<span class="ruby-identifier">content_type</span>
+    <span class="ruby-identifier">assert_equal</span> <span class="ruby-number">302</span>, <span class="ruby-ivar">@response</span>.<span class="ruby-identifier">status</span>
+    <span class="ruby-identifier">assert_equal</span> <span class="ruby-string">&quot;http://www.example.com/customers&quot;</span>, <span class="ruby-ivar">@response</span>.<span class="ruby-identifier">location</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-test_using_resource_for_delete_with_json_yields_no_content_on_success">
+            
+              <b>test_using_resource_for_delete_with_json_yields_no_content_on_success</b>()
+            
+            <a href="../classes/RespondWithControllerTest.html#method-i-test_using_resource_for_delete_with_json_yields_no_content_on_success" name="method-i-test_using_resource_for_delete_with_json_yields_no_content_on_success" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-test_using_resource_for_delete_with_json_yields_no_content_on_success_source')" id="l_method-i-test_using_resource_for_delete_with_json_yields_no_content_on_success_source">show</a>
+                
+                  | <a href="https://github.com/rails/rails/blob/8642c2aadc94b6763290711384c265289b02faaa/actionpack/test/controller/mime/respond_with_test.rb#L435" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-test_using_resource_for_delete_with_json_yields_no_content_on_success_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File actionpack/test/controller/mime/respond_with_test.rb, line 435</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">test_using_resource_for_delete_with_json_yields_no_content_on_success</span>
+  <span class="ruby-constant">Customer</span>.<span class="ruby-identifier">any_instance</span>.<span class="ruby-identifier">stubs</span>(<span class="ruby-value">:to_json</span>).<span class="ruby-identifier">returns</span>(<span class="ruby-string">&#39;{&quot;name&quot;: &quot;David&quot;}&#39;</span>)
+  <span class="ruby-constant">Customer</span>.<span class="ruby-identifier">any_instance</span>.<span class="ruby-identifier">stubs</span>(<span class="ruby-value">:destroyed?</span>).<span class="ruby-identifier">returns</span>(<span class="ruby-keyword">true</span>)
+  <span class="ruby-ivar">@request</span>.<span class="ruby-identifier">accept</span> = <span class="ruby-string">&quot;application/json&quot;</span>
+  <span class="ruby-identifier">delete</span> <span class="ruby-value">:using_resource</span>
+  <span class="ruby-identifier">assert_equal</span> <span class="ruby-string">&quot;application/json&quot;</span>, <span class="ruby-ivar">@response</span>.<span class="ruby-identifier">content_type</span>
+  <span class="ruby-identifier">assert_equal</span> <span class="ruby-number">204</span>, <span class="ruby-ivar">@response</span>.<span class="ruby-identifier">status</span>
+  <span class="ruby-identifier">assert_equal</span> <span class="ruby-string">&quot;&quot;</span>, <span class="ruby-ivar">@response</span>.<span class="ruby-identifier">body</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-test_using_resource_for_delete_with_xml_yields_no_content_on_success">
+            
+              <b>test_using_resource_for_delete_with_xml_yields_no_content_on_success</b>()
+            
+            <a href="../classes/RespondWithControllerTest.html#method-i-test_using_resource_for_delete_with_xml_yields_no_content_on_success" name="method-i-test_using_resource_for_delete_with_xml_yields_no_content_on_success" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-test_using_resource_for_delete_with_xml_yields_no_content_on_success_source')" id="l_method-i-test_using_resource_for_delete_with_xml_yields_no_content_on_success_source">show</a>
+                
+                  | <a href="https://github.com/rails/rails/blob/8642c2aadc94b6763290711384c265289b02faaa/actionpack/test/controller/mime/respond_with_test.rb#L426" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-test_using_resource_for_delete_with_xml_yields_no_content_on_success_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File actionpack/test/controller/mime/respond_with_test.rb, line 426</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">test_using_resource_for_delete_with_xml_yields_no_content_on_success</span>
+  <span class="ruby-constant">Customer</span>.<span class="ruby-identifier">any_instance</span>.<span class="ruby-identifier">stubs</span>(<span class="ruby-value">:destroyed?</span>).<span class="ruby-identifier">returns</span>(<span class="ruby-keyword">true</span>)
+  <span class="ruby-ivar">@request</span>.<span class="ruby-identifier">accept</span> = <span class="ruby-string">&quot;application/xml&quot;</span>
+  <span class="ruby-identifier">delete</span> <span class="ruby-value">:using_resource</span>
+  <span class="ruby-identifier">assert_equal</span> <span class="ruby-string">&quot;application/xml&quot;</span>, <span class="ruby-ivar">@response</span>.<span class="ruby-identifier">content_type</span>
+  <span class="ruby-identifier">assert_equal</span> <span class="ruby-number">204</span>, <span class="ruby-ivar">@response</span>.<span class="ruby-identifier">status</span>
+  <span class="ruby-identifier">assert_equal</span> <span class="ruby-string">&quot;&quot;</span>, <span class="ruby-ivar">@response</span>.<span class="ruby-identifier">body</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-test_using_resource_for_patch_with_html_redirects_on_success">
+            
+              <b>test_using_resource_for_patch_with_html_redirects_on_success</b>()
+            
+            <a href="../classes/RespondWithControllerTest.html#method-i-test_using_resource_for_patch_with_html_redirects_on_success" name="method-i-test_using_resource_for_patch_with_html_redirects_on_success" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-test_using_resource_for_patch_with_html_redirects_on_success_source')" id="l_method-i-test_using_resource_for_patch_with_html_redirects_on_success_source">show</a>
+                
+                  | <a href="https://github.com/rails/rails/blob/8642c2aadc94b6763290711384c265289b02faaa/actionpack/test/controller/mime/respond_with_test.rb#L305" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-test_using_resource_for_patch_with_html_redirects_on_success_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File actionpack/test/controller/mime/respond_with_test.rb, line 305</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">test_using_resource_for_patch_with_html_redirects_on_success</span>
+  <span class="ruby-identifier">with_test_route_set</span> <span class="ruby-keyword">do</span>
+    <span class="ruby-identifier">patch</span> <span class="ruby-value">:using_resource</span>
+    <span class="ruby-identifier">assert_equal</span> <span class="ruby-string">&quot;text/html&quot;</span>, <span class="ruby-ivar">@response</span>.<span class="ruby-identifier">content_type</span>
+    <span class="ruby-identifier">assert_equal</span> <span class="ruby-number">302</span>, <span class="ruby-ivar">@response</span>.<span class="ruby-identifier">status</span>
+    <span class="ruby-identifier">assert_equal</span> <span class="ruby-string">&quot;http://www.example.com/customers/13&quot;</span>, <span class="ruby-ivar">@response</span>.<span class="ruby-identifier">location</span>
+    <span class="ruby-identifier">assert</span> <span class="ruby-ivar">@response</span>.<span class="ruby-identifier">redirect?</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-test_using_resource_for_patch_with_html_rerender_on_failure">
+            
+              <b>test_using_resource_for_patch_with_html_rerender_on_failure</b>()
+            
+            <a href="../classes/RespondWithControllerTest.html#method-i-test_using_resource_for_patch_with_html_rerender_on_failure" name="method-i-test_using_resource_for_patch_with_html_rerender_on_failure" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-test_using_resource_for_patch_with_html_rerender_on_failure_source')" id="l_method-i-test_using_resource_for_patch_with_html_rerender_on_failure_source">show</a>
+                
+                  | <a href="https://github.com/rails/rails/blob/8642c2aadc94b6763290711384c265289b02faaa/actionpack/test/controller/mime/respond_with_test.rb#L315" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-test_using_resource_for_patch_with_html_rerender_on_failure_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File actionpack/test/controller/mime/respond_with_test.rb, line 315</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">test_using_resource_for_patch_with_html_rerender_on_failure</span>
+  <span class="ruby-identifier">with_test_route_set</span> <span class="ruby-keyword">do</span>
+    <span class="ruby-identifier">errors</span> = { <span class="ruby-value">:name</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">:invalid</span> }
+    <span class="ruby-constant">Customer</span>.<span class="ruby-identifier">any_instance</span>.<span class="ruby-identifier">stubs</span>(<span class="ruby-value">:errors</span>).<span class="ruby-identifier">returns</span>(<span class="ruby-identifier">errors</span>)
+    <span class="ruby-identifier">patch</span> <span class="ruby-value">:using_resource</span>
+    <span class="ruby-identifier">assert_equal</span> <span class="ruby-string">&quot;text/html&quot;</span>, <span class="ruby-ivar">@response</span>.<span class="ruby-identifier">content_type</span>
+    <span class="ruby-identifier">assert_equal</span> <span class="ruby-number">200</span>, <span class="ruby-ivar">@response</span>.<span class="ruby-identifier">status</span>
+    <span class="ruby-identifier">assert_equal</span> <span class="ruby-string">&quot;Edit world!\n&quot;</span>, <span class="ruby-ivar">@response</span>.<span class="ruby-identifier">body</span>
+    <span class="ruby-identifier">assert_nil</span> <span class="ruby-ivar">@response</span>.<span class="ruby-identifier">location</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-test_using_resource_for_patch_with_html_rerender_on_failure_even_on_method_override">
+            
+              <b>test_using_resource_for_patch_with_html_rerender_on_failure_even_on_method_override</b>()
+            
+            <a href="../classes/RespondWithControllerTest.html#method-i-test_using_resource_for_patch_with_html_rerender_on_failure_even_on_method_override" name="method-i-test_using_resource_for_patch_with_html_rerender_on_failure_even_on_method_override" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-test_using_resource_for_patch_with_html_rerender_on_failure_even_on_method_override_source')" id="l_method-i-test_using_resource_for_patch_with_html_rerender_on_failure_even_on_method_override_source">show</a>
+                
+                  | <a href="https://github.com/rails/rails/blob/8642c2aadc94b6763290711384c265289b02faaa/actionpack/test/controller/mime/respond_with_test.rb#L327" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-test_using_resource_for_patch_with_html_rerender_on_failure_even_on_method_override_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File actionpack/test/controller/mime/respond_with_test.rb, line 327</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">test_using_resource_for_patch_with_html_rerender_on_failure_even_on_method_override</span>
+  <span class="ruby-identifier">with_test_route_set</span> <span class="ruby-keyword">do</span>
+    <span class="ruby-identifier">errors</span> = { <span class="ruby-value">:name</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">:invalid</span> }
+    <span class="ruby-constant">Customer</span>.<span class="ruby-identifier">any_instance</span>.<span class="ruby-identifier">stubs</span>(<span class="ruby-value">:errors</span>).<span class="ruby-identifier">returns</span>(<span class="ruby-identifier">errors</span>)
+    <span class="ruby-ivar">@request</span>.<span class="ruby-identifier">env</span>[<span class="ruby-string">&quot;rack.methodoverride.original_method&quot;</span>] = <span class="ruby-string">&quot;POST&quot;</span>
+    <span class="ruby-identifier">patch</span> <span class="ruby-value">:using_resource</span>
+    <span class="ruby-identifier">assert_equal</span> <span class="ruby-string">&quot;text/html&quot;</span>, <span class="ruby-ivar">@response</span>.<span class="ruby-identifier">content_type</span>
+    <span class="ruby-identifier">assert_equal</span> <span class="ruby-number">200</span>, <span class="ruby-ivar">@response</span>.<span class="ruby-identifier">status</span>
+    <span class="ruby-identifier">assert_equal</span> <span class="ruby-string">&quot;Edit world!\n&quot;</span>, <span class="ruby-ivar">@response</span>.<span class="ruby-identifier">body</span>
+    <span class="ruby-identifier">assert_nil</span> <span class="ruby-ivar">@response</span>.<span class="ruby-identifier">location</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-test_using_resource_for_post_with_html_redirects_on_success">
+            
+              <b>test_using_resource_for_post_with_html_redirects_on_success</b>()
+            
+            <a href="../classes/RespondWithControllerTest.html#method-i-test_using_resource_for_post_with_html_redirects_on_success" name="method-i-test_using_resource_for_post_with_html_redirects_on_success" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-test_using_resource_for_post_with_html_redirects_on_success_source')" id="l_method-i-test_using_resource_for_post_with_html_redirects_on_success_source">show</a>
+                
+                  | <a href="https://github.com/rails/rails/blob/8642c2aadc94b6763290711384c265289b02faaa/actionpack/test/controller/mime/respond_with_test.rb#L245" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-test_using_resource_for_post_with_html_redirects_on_success_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File actionpack/test/controller/mime/respond_with_test.rb, line 245</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">test_using_resource_for_post_with_html_redirects_on_success</span>
+  <span class="ruby-identifier">with_test_route_set</span> <span class="ruby-keyword">do</span>
+    <span class="ruby-identifier">post</span> <span class="ruby-value">:using_resource</span>
+    <span class="ruby-identifier">assert_equal</span> <span class="ruby-string">&quot;text/html&quot;</span>, <span class="ruby-ivar">@response</span>.<span class="ruby-identifier">content_type</span>
+    <span class="ruby-identifier">assert_equal</span> <span class="ruby-number">302</span>, <span class="ruby-ivar">@response</span>.<span class="ruby-identifier">status</span>
+    <span class="ruby-identifier">assert_equal</span> <span class="ruby-string">&quot;http://www.example.com/customers/13&quot;</span>, <span class="ruby-ivar">@response</span>.<span class="ruby-identifier">location</span>
+    <span class="ruby-identifier">assert</span> <span class="ruby-ivar">@response</span>.<span class="ruby-identifier">redirect?</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-test_using_resource_for_post_with_html_rerender_on_failure">
+            
+              <b>test_using_resource_for_post_with_html_rerender_on_failure</b>()
+            
+            <a href="../classes/RespondWithControllerTest.html#method-i-test_using_resource_for_post_with_html_rerender_on_failure" name="method-i-test_using_resource_for_post_with_html_rerender_on_failure" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-test_using_resource_for_post_with_html_rerender_on_failure_source')" id="l_method-i-test_using_resource_for_post_with_html_rerender_on_failure_source">show</a>
+                
+                  | <a href="https://github.com/rails/rails/blob/8642c2aadc94b6763290711384c265289b02faaa/actionpack/test/controller/mime/respond_with_test.rb#L255" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-test_using_resource_for_post_with_html_rerender_on_failure_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File actionpack/test/controller/mime/respond_with_test.rb, line 255</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">test_using_resource_for_post_with_html_rerender_on_failure</span>
+  <span class="ruby-identifier">with_test_route_set</span> <span class="ruby-keyword">do</span>
+    <span class="ruby-identifier">errors</span> = { <span class="ruby-value">:name</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">:invalid</span> }
+    <span class="ruby-constant">Customer</span>.<span class="ruby-identifier">any_instance</span>.<span class="ruby-identifier">stubs</span>(<span class="ruby-value">:errors</span>).<span class="ruby-identifier">returns</span>(<span class="ruby-identifier">errors</span>)
+    <span class="ruby-identifier">post</span> <span class="ruby-value">:using_resource</span>
+    <span class="ruby-identifier">assert_equal</span> <span class="ruby-string">&quot;text/html&quot;</span>, <span class="ruby-ivar">@response</span>.<span class="ruby-identifier">content_type</span>
+    <span class="ruby-identifier">assert_equal</span> <span class="ruby-number">200</span>, <span class="ruby-ivar">@response</span>.<span class="ruby-identifier">status</span>
+    <span class="ruby-identifier">assert_equal</span> <span class="ruby-string">&quot;New world!\n&quot;</span>, <span class="ruby-ivar">@response</span>.<span class="ruby-identifier">body</span>
+    <span class="ruby-identifier">assert_nil</span> <span class="ruby-ivar">@response</span>.<span class="ruby-identifier">location</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-test_using_resource_for_post_with_json_yields_unprocessable_entity_on_failure">
+            
+              <b>test_using_resource_for_post_with_json_yields_unprocessable_entity_on_failure</b>()
+            
+            <a href="../classes/RespondWithControllerTest.html#method-i-test_using_resource_for_post_with_json_yields_unprocessable_entity_on_failure" name="method-i-test_using_resource_for_post_with_json_yields_unprocessable_entity_on_failure" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-test_using_resource_for_post_with_json_yields_unprocessable_entity_on_failure_source')" id="l_method-i-test_using_resource_for_post_with_json_yields_unprocessable_entity_on_failure_source">show</a>
+                
+                  | <a href="https://github.com/rails/rails/blob/8642c2aadc94b6763290711384c265289b02faaa/actionpack/test/controller/mime/respond_with_test.rb#L291" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-test_using_resource_for_post_with_json_yields_unprocessable_entity_on_failure_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File actionpack/test/controller/mime/respond_with_test.rb, line 291</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">test_using_resource_for_post_with_json_yields_unprocessable_entity_on_failure</span>
+  <span class="ruby-identifier">with_test_route_set</span> <span class="ruby-keyword">do</span>
+    <span class="ruby-ivar">@request</span>.<span class="ruby-identifier">accept</span> = <span class="ruby-string">&quot;application/json&quot;</span>
+    <span class="ruby-identifier">errors</span> = { <span class="ruby-value">:name</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">:invalid</span> }
+    <span class="ruby-constant">Customer</span>.<span class="ruby-identifier">any_instance</span>.<span class="ruby-identifier">stubs</span>(<span class="ruby-value">:errors</span>).<span class="ruby-identifier">returns</span>(<span class="ruby-identifier">errors</span>)
+    <span class="ruby-identifier">post</span> <span class="ruby-value">:using_resource</span>
+    <span class="ruby-identifier">assert_equal</span> <span class="ruby-string">&quot;application/json&quot;</span>, <span class="ruby-ivar">@response</span>.<span class="ruby-identifier">content_type</span>
+    <span class="ruby-identifier">assert_equal</span> <span class="ruby-number">422</span>, <span class="ruby-ivar">@response</span>.<span class="ruby-identifier">status</span>
+    <span class="ruby-identifier">errors</span> = {<span class="ruby-value">:errors</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">errors</span>}
+    <span class="ruby-identifier">assert_equal</span> <span class="ruby-identifier">errors</span>.<span class="ruby-identifier">to_json</span>, <span class="ruby-ivar">@response</span>.<span class="ruby-identifier">body</span>
+    <span class="ruby-identifier">assert_nil</span> <span class="ruby-ivar">@response</span>.<span class="ruby-identifier">location</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-test_using_resource_for_post_with_xml_yields_created_on_success">
+            
+              <b>test_using_resource_for_post_with_xml_yields_created_on_success</b>()
+            
+            <a href="../classes/RespondWithControllerTest.html#method-i-test_using_resource_for_post_with_xml_yields_created_on_success" name="method-i-test_using_resource_for_post_with_xml_yields_created_on_success" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-test_using_resource_for_post_with_xml_yields_created_on_success_source')" id="l_method-i-test_using_resource_for_post_with_xml_yields_created_on_success_source">show</a>
+                
+                  | <a href="https://github.com/rails/rails/blob/8642c2aadc94b6763290711384c265289b02faaa/actionpack/test/controller/mime/respond_with_test.rb#L267" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-test_using_resource_for_post_with_xml_yields_created_on_success_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File actionpack/test/controller/mime/respond_with_test.rb, line 267</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">test_using_resource_for_post_with_xml_yields_created_on_success</span>
+  <span class="ruby-identifier">with_test_route_set</span> <span class="ruby-keyword">do</span>
+    <span class="ruby-ivar">@request</span>.<span class="ruby-identifier">accept</span> = <span class="ruby-string">&quot;application/xml&quot;</span>
+    <span class="ruby-identifier">post</span> <span class="ruby-value">:using_resource</span>
+    <span class="ruby-identifier">assert_equal</span> <span class="ruby-string">&quot;application/xml&quot;</span>, <span class="ruby-ivar">@response</span>.<span class="ruby-identifier">content_type</span>
+    <span class="ruby-identifier">assert_equal</span> <span class="ruby-number">201</span>, <span class="ruby-ivar">@response</span>.<span class="ruby-identifier">status</span>
+    <span class="ruby-identifier">assert_equal</span> <span class="ruby-string">&quot;&lt;name&gt;david&lt;/name&gt;&quot;</span>, <span class="ruby-ivar">@response</span>.<span class="ruby-identifier">body</span>
+    <span class="ruby-identifier">assert_equal</span> <span class="ruby-string">&quot;http://www.example.com/customers/13&quot;</span>, <span class="ruby-ivar">@response</span>.<span class="ruby-identifier">location</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-test_using_resource_for_post_with_xml_yields_unprocessable_entity_on_failure">
+            
+              <b>test_using_resource_for_post_with_xml_yields_unprocessable_entity_on_failure</b>()
+            
+            <a href="../classes/RespondWithControllerTest.html#method-i-test_using_resource_for_post_with_xml_yields_unprocessable_entity_on_failure" name="method-i-test_using_resource_for_post_with_xml_yields_unprocessable_entity_on_failure" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-test_using_resource_for_post_with_xml_yields_unprocessable_entity_on_failure_source')" id="l_method-i-test_using_resource_for_post_with_xml_yields_unprocessable_entity_on_failure_source">show</a>
+                
+                  | <a href="https://github.com/rails/rails/blob/8642c2aadc94b6763290711384c265289b02faaa/actionpack/test/controller/mime/respond_with_test.rb#L278" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-test_using_resource_for_post_with_xml_yields_unprocessable_entity_on_failure_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File actionpack/test/controller/mime/respond_with_test.rb, line 278</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">test_using_resource_for_post_with_xml_yields_unprocessable_entity_on_failure</span>
+  <span class="ruby-identifier">with_test_route_set</span> <span class="ruby-keyword">do</span>
+    <span class="ruby-ivar">@request</span>.<span class="ruby-identifier">accept</span> = <span class="ruby-string">&quot;application/xml&quot;</span>
+    <span class="ruby-identifier">errors</span> = { <span class="ruby-value">:name</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">:invalid</span> }
+    <span class="ruby-constant">Customer</span>.<span class="ruby-identifier">any_instance</span>.<span class="ruby-identifier">stubs</span>(<span class="ruby-value">:errors</span>).<span class="ruby-identifier">returns</span>(<span class="ruby-identifier">errors</span>)
+    <span class="ruby-identifier">post</span> <span class="ruby-value">:using_resource</span>
+    <span class="ruby-identifier">assert_equal</span> <span class="ruby-string">&quot;application/xml&quot;</span>, <span class="ruby-ivar">@response</span>.<span class="ruby-identifier">content_type</span>
+    <span class="ruby-identifier">assert_equal</span> <span class="ruby-number">422</span>, <span class="ruby-ivar">@response</span>.<span class="ruby-identifier">status</span>
+    <span class="ruby-identifier">assert_equal</span> <span class="ruby-identifier">errors</span>.<span class="ruby-identifier">to_xml</span>, <span class="ruby-ivar">@response</span>.<span class="ruby-identifier">body</span>
+    <span class="ruby-identifier">assert_nil</span> <span class="ruby-ivar">@response</span>.<span class="ruby-identifier">location</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-test_using_resource_for_put_with_html_redirects_on_success">
+            
+              <b>test_using_resource_for_put_with_html_redirects_on_success</b>()
+            
+            <a href="../classes/RespondWithControllerTest.html#method-i-test_using_resource_for_put_with_html_redirects_on_success" name="method-i-test_using_resource_for_put_with_html_redirects_on_success" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-test_using_resource_for_put_with_html_redirects_on_success_source')" id="l_method-i-test_using_resource_for_put_with_html_redirects_on_success_source">show</a>
+                
+                  | <a href="https://github.com/rails/rails/blob/8642c2aadc94b6763290711384c265289b02faaa/actionpack/test/controller/mime/respond_with_test.rb#L340" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-test_using_resource_for_put_with_html_redirects_on_success_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File actionpack/test/controller/mime/respond_with_test.rb, line 340</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">test_using_resource_for_put_with_html_redirects_on_success</span>
+  <span class="ruby-identifier">with_test_route_set</span> <span class="ruby-keyword">do</span>
+    <span class="ruby-identifier">put</span> <span class="ruby-value">:using_resource</span>
+    <span class="ruby-identifier">assert_equal</span> <span class="ruby-string">&quot;text/html&quot;</span>, <span class="ruby-ivar">@response</span>.<span class="ruby-identifier">content_type</span>
+    <span class="ruby-identifier">assert_equal</span> <span class="ruby-number">302</span>, <span class="ruby-ivar">@response</span>.<span class="ruby-identifier">status</span>
+    <span class="ruby-identifier">assert_equal</span> <span class="ruby-string">&quot;http://www.example.com/customers/13&quot;</span>, <span class="ruby-ivar">@response</span>.<span class="ruby-identifier">location</span>
+    <span class="ruby-identifier">assert</span> <span class="ruby-ivar">@response</span>.<span class="ruby-identifier">redirect?</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-test_using_resource_for_put_with_html_rerender_on_failure">
+            
+              <b>test_using_resource_for_put_with_html_rerender_on_failure</b>()
+            
+            <a href="../classes/RespondWithControllerTest.html#method-i-test_using_resource_for_put_with_html_rerender_on_failure" name="method-i-test_using_resource_for_put_with_html_rerender_on_failure" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-test_using_resource_for_put_with_html_rerender_on_failure_source')" id="l_method-i-test_using_resource_for_put_with_html_rerender_on_failure_source">show</a>
+                
+                  | <a href="https://github.com/rails/rails/blob/8642c2aadc94b6763290711384c265289b02faaa/actionpack/test/controller/mime/respond_with_test.rb#L350" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-test_using_resource_for_put_with_html_rerender_on_failure_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File actionpack/test/controller/mime/respond_with_test.rb, line 350</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">test_using_resource_for_put_with_html_rerender_on_failure</span>
+  <span class="ruby-identifier">with_test_route_set</span> <span class="ruby-keyword">do</span>
+    <span class="ruby-identifier">errors</span> = { <span class="ruby-value">:name</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">:invalid</span> }
+    <span class="ruby-constant">Customer</span>.<span class="ruby-identifier">any_instance</span>.<span class="ruby-identifier">stubs</span>(<span class="ruby-value">:errors</span>).<span class="ruby-identifier">returns</span>(<span class="ruby-identifier">errors</span>)
+    <span class="ruby-identifier">put</span> <span class="ruby-value">:using_resource</span>
+
+    <span class="ruby-identifier">assert_equal</span> <span class="ruby-string">&quot;text/html&quot;</span>, <span class="ruby-ivar">@response</span>.<span class="ruby-identifier">content_type</span>
+    <span class="ruby-identifier">assert_equal</span> <span class="ruby-number">200</span>, <span class="ruby-ivar">@response</span>.<span class="ruby-identifier">status</span>
+    <span class="ruby-identifier">assert_equal</span> <span class="ruby-string">&quot;Edit world!\n&quot;</span>, <span class="ruby-ivar">@response</span>.<span class="ruby-identifier">body</span>
+    <span class="ruby-identifier">assert_nil</span> <span class="ruby-ivar">@response</span>.<span class="ruby-identifier">location</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-test_using_resource_for_put_with_html_rerender_on_failure_even_on_method_override">
+            
+              <b>test_using_resource_for_put_with_html_rerender_on_failure_even_on_method_override</b>()
+            
+            <a href="../classes/RespondWithControllerTest.html#method-i-test_using_resource_for_put_with_html_rerender_on_failure_even_on_method_override" name="method-i-test_using_resource_for_put_with_html_rerender_on_failure_even_on_method_override" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-test_using_resource_for_put_with_html_rerender_on_failure_even_on_method_override_source')" id="l_method-i-test_using_resource_for_put_with_html_rerender_on_failure_even_on_method_override_source">show</a>
+                
+                  | <a href="https://github.com/rails/rails/blob/8642c2aadc94b6763290711384c265289b02faaa/actionpack/test/controller/mime/respond_with_test.rb#L363" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-test_using_resource_for_put_with_html_rerender_on_failure_even_on_method_override_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File actionpack/test/controller/mime/respond_with_test.rb, line 363</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">test_using_resource_for_put_with_html_rerender_on_failure_even_on_method_override</span>
+  <span class="ruby-identifier">with_test_route_set</span> <span class="ruby-keyword">do</span>
+    <span class="ruby-identifier">errors</span> = { <span class="ruby-value">:name</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">:invalid</span> }
+    <span class="ruby-constant">Customer</span>.<span class="ruby-identifier">any_instance</span>.<span class="ruby-identifier">stubs</span>(<span class="ruby-value">:errors</span>).<span class="ruby-identifier">returns</span>(<span class="ruby-identifier">errors</span>)
+    <span class="ruby-ivar">@request</span>.<span class="ruby-identifier">env</span>[<span class="ruby-string">&quot;rack.methodoverride.original_method&quot;</span>] = <span class="ruby-string">&quot;POST&quot;</span>
+    <span class="ruby-identifier">put</span> <span class="ruby-value">:using_resource</span>
+    <span class="ruby-identifier">assert_equal</span> <span class="ruby-string">&quot;text/html&quot;</span>, <span class="ruby-ivar">@response</span>.<span class="ruby-identifier">content_type</span>
+    <span class="ruby-identifier">assert_equal</span> <span class="ruby-number">200</span>, <span class="ruby-ivar">@response</span>.<span class="ruby-identifier">status</span>
+    <span class="ruby-identifier">assert_equal</span> <span class="ruby-string">&quot;Edit world!\n&quot;</span>, <span class="ruby-ivar">@response</span>.<span class="ruby-identifier">body</span>
+    <span class="ruby-identifier">assert_nil</span> <span class="ruby-ivar">@response</span>.<span class="ruby-identifier">location</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-test_using_resource_for_put_with_json_yields_no_content_on_success">
+            
+              <b>test_using_resource_for_put_with_json_yields_no_content_on_success</b>()
+            
+            <a href="../classes/RespondWithControllerTest.html#method-i-test_using_resource_for_put_with_json_yields_no_content_on_success" name="method-i-test_using_resource_for_put_with_json_yields_no_content_on_success" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-test_using_resource_for_put_with_json_yields_no_content_on_success_source')" id="l_method-i-test_using_resource_for_put_with_json_yields_no_content_on_success_source">show</a>
+                
+                  | <a href="https://github.com/rails/rails/blob/8642c2aadc94b6763290711384c265289b02faaa/actionpack/test/controller/mime/respond_with_test.rb#L384" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-test_using_resource_for_put_with_json_yields_no_content_on_success_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File actionpack/test/controller/mime/respond_with_test.rb, line 384</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">test_using_resource_for_put_with_json_yields_no_content_on_success</span>
+  <span class="ruby-constant">Customer</span>.<span class="ruby-identifier">any_instance</span>.<span class="ruby-identifier">stubs</span>(<span class="ruby-value">:to_json</span>).<span class="ruby-identifier">returns</span>(<span class="ruby-string">&#39;{&quot;name&quot;: &quot;David&quot;}&#39;</span>)
+  <span class="ruby-ivar">@request</span>.<span class="ruby-identifier">accept</span> = <span class="ruby-string">&quot;application/json&quot;</span>
+  <span class="ruby-identifier">put</span> <span class="ruby-value">:using_resource</span>
+  <span class="ruby-identifier">assert_equal</span> <span class="ruby-string">&quot;application/json&quot;</span>, <span class="ruby-ivar">@response</span>.<span class="ruby-identifier">content_type</span>
+  <span class="ruby-identifier">assert_equal</span> <span class="ruby-number">204</span>, <span class="ruby-ivar">@response</span>.<span class="ruby-identifier">status</span>
+  <span class="ruby-identifier">assert_equal</span> <span class="ruby-string">&quot;&quot;</span>, <span class="ruby-ivar">@response</span>.<span class="ruby-identifier">body</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-test_using_resource_for_put_with_json_yields_unprocessable_entity_on_failure">
+            
+              <b>test_using_resource_for_put_with_json_yields_unprocessable_entity_on_failure</b>()
+            
+            <a href="../classes/RespondWithControllerTest.html#method-i-test_using_resource_for_put_with_json_yields_unprocessable_entity_on_failure" name="method-i-test_using_resource_for_put_with_json_yields_unprocessable_entity_on_failure" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-test_using_resource_for_put_with_json_yields_unprocessable_entity_on_failure_source')" id="l_method-i-test_using_resource_for_put_with_json_yields_unprocessable_entity_on_failure_source">show</a>
+                
+                  | <a href="https://github.com/rails/rails/blob/8642c2aadc94b6763290711384c265289b02faaa/actionpack/test/controller/mime/respond_with_test.rb#L404" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-test_using_resource_for_put_with_json_yields_unprocessable_entity_on_failure_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File actionpack/test/controller/mime/respond_with_test.rb, line 404</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">test_using_resource_for_put_with_json_yields_unprocessable_entity_on_failure</span>
+  <span class="ruby-ivar">@request</span>.<span class="ruby-identifier">accept</span> = <span class="ruby-string">&quot;application/json&quot;</span>
+  <span class="ruby-identifier">errors</span> = { <span class="ruby-value">:name</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">:invalid</span> }
+  <span class="ruby-constant">Customer</span>.<span class="ruby-identifier">any_instance</span>.<span class="ruby-identifier">stubs</span>(<span class="ruby-value">:errors</span>).<span class="ruby-identifier">returns</span>(<span class="ruby-identifier">errors</span>)
+  <span class="ruby-identifier">put</span> <span class="ruby-value">:using_resource</span>
+  <span class="ruby-identifier">assert_equal</span> <span class="ruby-string">&quot;application/json&quot;</span>, <span class="ruby-ivar">@response</span>.<span class="ruby-identifier">content_type</span>
+  <span class="ruby-identifier">assert_equal</span> <span class="ruby-number">422</span>, <span class="ruby-ivar">@response</span>.<span class="ruby-identifier">status</span>
+  <span class="ruby-identifier">errors</span> = {<span class="ruby-value">:errors</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">errors</span>}
+  <span class="ruby-identifier">assert_equal</span> <span class="ruby-identifier">errors</span>.<span class="ruby-identifier">to_json</span>, <span class="ruby-ivar">@response</span>.<span class="ruby-identifier">body</span>
+  <span class="ruby-identifier">assert_nil</span> <span class="ruby-ivar">@response</span>.<span class="ruby-identifier">location</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-test_using_resource_for_put_with_xml_yields_no_content_on_success">
+            
+              <b>test_using_resource_for_put_with_xml_yields_no_content_on_success</b>()
+            
+            <a href="../classes/RespondWithControllerTest.html#method-i-test_using_resource_for_put_with_xml_yields_no_content_on_success" name="method-i-test_using_resource_for_put_with_xml_yields_no_content_on_success" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-test_using_resource_for_put_with_xml_yields_no_content_on_success_source')" id="l_method-i-test_using_resource_for_put_with_xml_yields_no_content_on_success_source">show</a>
+                
+                  | <a href="https://github.com/rails/rails/blob/8642c2aadc94b6763290711384c265289b02faaa/actionpack/test/controller/mime/respond_with_test.rb#L376" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-test_using_resource_for_put_with_xml_yields_no_content_on_success_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File actionpack/test/controller/mime/respond_with_test.rb, line 376</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">test_using_resource_for_put_with_xml_yields_no_content_on_success</span>
+  <span class="ruby-ivar">@request</span>.<span class="ruby-identifier">accept</span> = <span class="ruby-string">&quot;application/xml&quot;</span>
+  <span class="ruby-identifier">put</span> <span class="ruby-value">:using_resource</span>
+  <span class="ruby-identifier">assert_equal</span> <span class="ruby-string">&quot;application/xml&quot;</span>, <span class="ruby-ivar">@response</span>.<span class="ruby-identifier">content_type</span>
+  <span class="ruby-identifier">assert_equal</span> <span class="ruby-number">204</span>, <span class="ruby-ivar">@response</span>.<span class="ruby-identifier">status</span>
+  <span class="ruby-identifier">assert_equal</span> <span class="ruby-string">&quot;&quot;</span>, <span class="ruby-ivar">@response</span>.<span class="ruby-identifier">body</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-test_using_resource_for_put_with_xml_yields_unprocessable_entity_on_failure">
+            
+              <b>test_using_resource_for_put_with_xml_yields_unprocessable_entity_on_failure</b>()
+            
+            <a href="../classes/RespondWithControllerTest.html#method-i-test_using_resource_for_put_with_xml_yields_unprocessable_entity_on_failure" name="method-i-test_using_resource_for_put_with_xml_yields_unprocessable_entity_on_failure" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-test_using_resource_for_put_with_xml_yields_unprocessable_entity_on_failure_source')" id="l_method-i-test_using_resource_for_put_with_xml_yields_unprocessable_entity_on_failure_source">show</a>
+                
+                  | <a href="https://github.com/rails/rails/blob/8642c2aadc94b6763290711384c265289b02faaa/actionpack/test/controller/mime/respond_with_test.rb#L393" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-test_using_resource_for_put_with_xml_yields_unprocessable_entity_on_failure_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File actionpack/test/controller/mime/respond_with_test.rb, line 393</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">test_using_resource_for_put_with_xml_yields_unprocessable_entity_on_failure</span>
+  <span class="ruby-ivar">@request</span>.<span class="ruby-identifier">accept</span> = <span class="ruby-string">&quot;application/xml&quot;</span>
+  <span class="ruby-identifier">errors</span> = { <span class="ruby-value">:name</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">:invalid</span> }
+  <span class="ruby-constant">Customer</span>.<span class="ruby-identifier">any_instance</span>.<span class="ruby-identifier">stubs</span>(<span class="ruby-value">:errors</span>).<span class="ruby-identifier">returns</span>(<span class="ruby-identifier">errors</span>)
+  <span class="ruby-identifier">put</span> <span class="ruby-value">:using_resource</span>
+  <span class="ruby-identifier">assert_equal</span> <span class="ruby-string">&quot;application/xml&quot;</span>, <span class="ruby-ivar">@response</span>.<span class="ruby-identifier">content_type</span>
+  <span class="ruby-identifier">assert_equal</span> <span class="ruby-number">422</span>, <span class="ruby-ivar">@response</span>.<span class="ruby-identifier">status</span>
+  <span class="ruby-identifier">assert_equal</span> <span class="ruby-identifier">errors</span>.<span class="ruby-identifier">to_xml</span>, <span class="ruby-ivar">@response</span>.<span class="ruby-identifier">body</span>
+  <span class="ruby-identifier">assert_nil</span> <span class="ruby-ivar">@response</span>.<span class="ruby-identifier">location</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-test_using_resource_with_action">
+            
+              <b>test_using_resource_with_action</b>()
+            
+            <a href="../classes/RespondWithControllerTest.html#method-i-test_using_resource_with_action" name="method-i-test_using_resource_with_action" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-test_using_resource_with_action_source')" id="l_method-i-test_using_resource_with_action_source">show</a>
+                
+                  | <a href="https://github.com/rails/rails/blob/8642c2aadc94b6763290711384c265289b02faaa/actionpack/test/controller/mime/respond_with_test.rb#L494" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-test_using_resource_with_action_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File actionpack/test/controller/mime/respond_with_test.rb, line 494</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">test_using_resource_with_action</span>
+  <span class="ruby-ivar">@controller</span>.<span class="ruby-identifier">instance_eval</span> <span class="ruby-keyword">do</span>
+    <span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">render</span>(<span class="ruby-identifier">params</span>={})
+      <span class="ruby-keyword">self</span>.<span class="ruby-identifier">response_body</span> = <span class="ruby-node">&quot;#{params[:action]} - #{formats}&quot;</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-identifier">errors</span> = { <span class="ruby-value">:name</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">:invalid</span> }
+  <span class="ruby-constant">Customer</span>.<span class="ruby-identifier">any_instance</span>.<span class="ruby-identifier">stubs</span>(<span class="ruby-value">:errors</span>).<span class="ruby-identifier">returns</span>(<span class="ruby-identifier">errors</span>)
+
+  <span class="ruby-identifier">post</span> <span class="ruby-value">:using_resource_with_action</span>
+  <span class="ruby-identifier">assert_equal</span> <span class="ruby-node">&quot;foo - #{[:html].to_s}&quot;</span>, <span class="ruby-ivar">@controller</span>.<span class="ruby-identifier">response</span>.<span class="ruby-identifier">body</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-test_using_resource_with_block">
+            
+              <b>test_using_resource_with_block</b>()
+            
+            <a href="../classes/RespondWithControllerTest.html#method-i-test_using_resource_with_block" name="method-i-test_using_resource_with_block" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-test_using_resource_with_block_source')" id="l_method-i-test_using_resource_with_block_source">show</a>
+                
+                  | <a href="https://github.com/rails/rails/blob/8642c2aadc94b6763290711384c265289b02faaa/actionpack/test/controller/mime/respond_with_test.rb#L210" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-test_using_resource_with_block_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File actionpack/test/controller/mime/respond_with_test.rb, line 210</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">test_using_resource_with_block</span>
+  <span class="ruby-ivar">@request</span>.<span class="ruby-identifier">accept</span> = <span class="ruby-string">&quot;*/*&quot;</span>
+  <span class="ruby-identifier">get</span> <span class="ruby-value">:using_resource_with_block</span>
+  <span class="ruby-identifier">assert_equal</span> <span class="ruby-string">&quot;text/html&quot;</span>, <span class="ruby-ivar">@response</span>.<span class="ruby-identifier">content_type</span>
+  <span class="ruby-identifier">assert_equal</span> <span class="ruby-string">&#39;Hello world!&#39;</span>, <span class="ruby-ivar">@response</span>.<span class="ruby-identifier">body</span>
+
+  <span class="ruby-ivar">@request</span>.<span class="ruby-identifier">accept</span> = <span class="ruby-string">&quot;text/csv&quot;</span>
+  <span class="ruby-identifier">get</span> <span class="ruby-value">:using_resource_with_block</span>
+  <span class="ruby-identifier">assert_equal</span> <span class="ruby-string">&quot;text/csv&quot;</span>, <span class="ruby-ivar">@response</span>.<span class="ruby-identifier">content_type</span>
+  <span class="ruby-identifier">assert_equal</span> <span class="ruby-string">&quot;CSV&quot;</span>, <span class="ruby-ivar">@response</span>.<span class="ruby-identifier">body</span>
+
+  <span class="ruby-ivar">@request</span>.<span class="ruby-identifier">accept</span> = <span class="ruby-string">&quot;application/xml&quot;</span>
+  <span class="ruby-identifier">get</span> <span class="ruby-value">:using_resource</span>
+  <span class="ruby-identifier">assert_equal</span> <span class="ruby-string">&quot;application/xml&quot;</span>, <span class="ruby-ivar">@response</span>.<span class="ruby-identifier">content_type</span>
+  <span class="ruby-identifier">assert_equal</span> <span class="ruby-string">&quot;&lt;name&gt;david&lt;/name&gt;&quot;</span>, <span class="ruby-ivar">@response</span>.<span class="ruby-identifier">body</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-test_using_resource_with_collection">
+            
+              <b>test_using_resource_with_collection</b>()
+            
+            <a href="../classes/RespondWithControllerTest.html#method-i-test_using_resource_with_collection" name="method-i-test_using_resource_with_collection" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-test_using_resource_with_collection_source')" id="l_method-i-test_using_resource_with_collection_source">show</a>
+                
+                  | <a href="https://github.com/rails/rails/blob/8642c2aadc94b6763290711384c265289b02faaa/actionpack/test/controller/mime/respond_with_test.rb#L485" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-test_using_resource_with_collection_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File actionpack/test/controller/mime/respond_with_test.rb, line 485</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">test_using_resource_with_collection</span>
+  <span class="ruby-ivar">@request</span>.<span class="ruby-identifier">accept</span> = <span class="ruby-string">&quot;application/xml&quot;</span>
+  <span class="ruby-identifier">get</span> <span class="ruby-value">:using_resource_with_collection</span>
+  <span class="ruby-identifier">assert_equal</span> <span class="ruby-string">&quot;application/xml&quot;</span>, <span class="ruby-ivar">@response</span>.<span class="ruby-identifier">content_type</span>
+  <span class="ruby-identifier">assert_equal</span> <span class="ruby-number">200</span>, <span class="ruby-ivar">@response</span>.<span class="ruby-identifier">status</span>
+  <span class="ruby-identifier">assert_match</span>(<span class="ruby-regexp">/&lt;name&gt;david&lt;\/name&gt;/</span>, <span class="ruby-ivar">@response</span>.<span class="ruby-identifier">body</span>)
+  <span class="ruby-identifier">assert_match</span>(<span class="ruby-regexp">/&lt;name&gt;jamis&lt;\/name&gt;/</span>, <span class="ruby-ivar">@response</span>.<span class="ruby-identifier">body</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-test_using_resource_with_js_simply_tries_to_render_the_template">
+            
+              <b>test_using_resource_with_js_simply_tries_to_render_the_template</b>()
+            
+            <a href="../classes/RespondWithControllerTest.html#method-i-test_using_resource_with_js_simply_tries_to_render_the_template" name="method-i-test_using_resource_with_js_simply_tries_to_render_the_template" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-test_using_resource_with_js_simply_tries_to_render_the_template_source')" id="l_method-i-test_using_resource_with_js_simply_tries_to_render_the_template_source">show</a>
+                
+                  | <a href="https://github.com/rails/rails/blob/8642c2aadc94b6763290711384c265289b02faaa/actionpack/test/controller/mime/respond_with_test.rb#L175" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-test_using_resource_with_js_simply_tries_to_render_the_template_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File actionpack/test/controller/mime/respond_with_test.rb, line 175</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">test_using_resource_with_js_simply_tries_to_render_the_template</span>
+  <span class="ruby-ivar">@request</span>.<span class="ruby-identifier">accept</span> = <span class="ruby-string">&quot;text/javascript&quot;</span>
+  <span class="ruby-identifier">get</span> <span class="ruby-value">:using_resource</span>
+  <span class="ruby-identifier">assert_equal</span> <span class="ruby-string">&quot;text/javascript&quot;</span>, <span class="ruby-ivar">@response</span>.<span class="ruby-identifier">content_type</span>
+  <span class="ruby-identifier">assert_equal</span> <span class="ruby-string">&quot;alert(\&quot;Hi\&quot;);&quot;</span>, <span class="ruby-ivar">@response</span>.<span class="ruby-identifier">body</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-test_using_resource_with_overwrite_block">
+            
+              <b>test_using_resource_with_overwrite_block</b>()
+            
+            <a href="../classes/RespondWithControllerTest.html#method-i-test_using_resource_with_overwrite_block" name="method-i-test_using_resource_with_overwrite_block" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-test_using_resource_with_overwrite_block_source')" id="l_method-i-test_using_resource_with_overwrite_block_source">show</a>
+                
+                  | <a href="https://github.com/rails/rails/blob/8642c2aadc94b6763290711384c265289b02faaa/actionpack/test/controller/mime/respond_with_test.rb#L227" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-test_using_resource_with_overwrite_block_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File actionpack/test/controller/mime/respond_with_test.rb, line 227</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">test_using_resource_with_overwrite_block</span>
+  <span class="ruby-identifier">get</span> <span class="ruby-value">:using_resource_with_overwrite_block</span>
+  <span class="ruby-identifier">assert_equal</span> <span class="ruby-string">&quot;text/html&quot;</span>, <span class="ruby-ivar">@response</span>.<span class="ruby-identifier">content_type</span>
+  <span class="ruby-identifier">assert_equal</span> <span class="ruby-string">&quot;HTML&quot;</span>, <span class="ruby-ivar">@response</span>.<span class="ruby-identifier">body</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-test_using_resource_with_parent_for_get">
+            
+              <b>test_using_resource_with_parent_for_get</b>()
+            
+            <a href="../classes/RespondWithControllerTest.html#method-i-test_using_resource_with_parent_for_get" name="method-i-test_using_resource_with_parent_for_get" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-test_using_resource_with_parent_for_get_source')" id="l_method-i-test_using_resource_with_parent_for_get_source">show</a>
+                
+                  | <a href="https://github.com/rails/rails/blob/8642c2aadc94b6763290711384c265289b02faaa/actionpack/test/controller/mime/respond_with_test.rb#L457" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-test_using_resource_with_parent_for_get_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File actionpack/test/controller/mime/respond_with_test.rb, line 457</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">test_using_resource_with_parent_for_get</span>
+  <span class="ruby-ivar">@request</span>.<span class="ruby-identifier">accept</span> = <span class="ruby-string">&quot;application/xml&quot;</span>
+  <span class="ruby-identifier">get</span> <span class="ruby-value">:using_resource_with_parent</span>
+  <span class="ruby-identifier">assert_equal</span> <span class="ruby-string">&quot;application/xml&quot;</span>, <span class="ruby-ivar">@response</span>.<span class="ruby-identifier">content_type</span>
+  <span class="ruby-identifier">assert_equal</span> <span class="ruby-number">200</span>, <span class="ruby-ivar">@response</span>.<span class="ruby-identifier">status</span>
+  <span class="ruby-identifier">assert_equal</span> <span class="ruby-string">&quot;&lt;name&gt;david&lt;/name&gt;&quot;</span>, <span class="ruby-ivar">@response</span>.<span class="ruby-identifier">body</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-test_using_resource_with_parent_for_post">
+            
+              <b>test_using_resource_with_parent_for_post</b>()
+            
+            <a href="../classes/RespondWithControllerTest.html#method-i-test_using_resource_with_parent_for_post" name="method-i-test_using_resource_with_parent_for_post" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-test_using_resource_with_parent_for_post_source')" id="l_method-i-test_using_resource_with_parent_for_post_source">show</a>
+                
+                  | <a href="https://github.com/rails/rails/blob/8642c2aadc94b6763290711384c265289b02faaa/actionpack/test/controller/mime/respond_with_test.rb#L465" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-test_using_resource_with_parent_for_post_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File actionpack/test/controller/mime/respond_with_test.rb, line 465</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">test_using_resource_with_parent_for_post</span>
+  <span class="ruby-identifier">with_test_route_set</span> <span class="ruby-keyword">do</span>
+    <span class="ruby-ivar">@request</span>.<span class="ruby-identifier">accept</span> = <span class="ruby-string">&quot;application/xml&quot;</span>
+
+    <span class="ruby-identifier">post</span> <span class="ruby-value">:using_resource_with_parent</span>
+    <span class="ruby-identifier">assert_equal</span> <span class="ruby-string">&quot;application/xml&quot;</span>, <span class="ruby-ivar">@response</span>.<span class="ruby-identifier">content_type</span>
+    <span class="ruby-identifier">assert_equal</span> <span class="ruby-number">201</span>, <span class="ruby-ivar">@response</span>.<span class="ruby-identifier">status</span>
+    <span class="ruby-identifier">assert_equal</span> <span class="ruby-string">&quot;&lt;name&gt;david&lt;/name&gt;&quot;</span>, <span class="ruby-ivar">@response</span>.<span class="ruby-identifier">body</span>
+    <span class="ruby-identifier">assert_equal</span> <span class="ruby-string">&quot;http://www.example.com/quiz_stores/11/customers/13&quot;</span>, <span class="ruby-ivar">@response</span>.<span class="ruby-identifier">location</span>
+
+    <span class="ruby-identifier">errors</span> = { <span class="ruby-value">:name</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">:invalid</span> }
+    <span class="ruby-constant">Customer</span>.<span class="ruby-identifier">any_instance</span>.<span class="ruby-identifier">stubs</span>(<span class="ruby-value">:errors</span>).<span class="ruby-identifier">returns</span>(<span class="ruby-identifier">errors</span>)
+    <span class="ruby-identifier">post</span> <span class="ruby-value">:using_resource</span>
+    <span class="ruby-identifier">assert_equal</span> <span class="ruby-string">&quot;application/xml&quot;</span>, <span class="ruby-ivar">@response</span>.<span class="ruby-identifier">content_type</span>
+    <span class="ruby-identifier">assert_equal</span> <span class="ruby-number">422</span>, <span class="ruby-ivar">@response</span>.<span class="ruby-identifier">status</span>
+    <span class="ruby-identifier">assert_equal</span> <span class="ruby-identifier">errors</span>.<span class="ruby-identifier">to_xml</span>, <span class="ruby-ivar">@response</span>.<span class="ruby-identifier">body</span>
+    <span class="ruby-identifier">assert_nil</span> <span class="ruby-ivar">@response</span>.<span class="ruby-identifier">location</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-test_using_resource_with_responder">
+            
+              <b>test_using_resource_with_responder</b>()
+            
+            <a href="../classes/RespondWithControllerTest.html#method-i-test_using_resource_with_responder" name="method-i-test_using_resource_with_responder" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-test_using_resource_with_responder_source')" id="l_method-i-test_using_resource_with_responder_source">show</a>
+                
+                  | <a href="https://github.com/rails/rails/blob/8642c2aadc94b6763290711384c265289b02faaa/actionpack/test/controller/mime/respond_with_test.rb#L627" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-test_using_resource_with_responder_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File actionpack/test/controller/mime/respond_with_test.rb, line 627</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">test_using_resource_with_responder</span>
+  <span class="ruby-identifier">get</span> <span class="ruby-value">:using_resource_with_responder</span>
+  <span class="ruby-identifier">assert_equal</span> <span class="ruby-string">&quot;Resource name is david&quot;</span>, <span class="ruby-ivar">@response</span>.<span class="ruby-identifier">body</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-test_using_resource_with_set_responder">
+            
+              <b>test_using_resource_with_set_responder</b>()
+            
+            <a href="../classes/RespondWithControllerTest.html#method-i-test_using_resource_with_set_responder" name="method-i-test_using_resource_with_set_responder" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-test_using_resource_with_set_responder_source')" id="l_method-i-test_using_resource_with_set_responder_source">show</a>
+                
+                  | <a href="https://github.com/rails/rails/blob/8642c2aadc94b6763290711384c265289b02faaa/actionpack/test/controller/mime/respond_with_test.rb#L632" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-test_using_resource_with_set_responder_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File actionpack/test/controller/mime/respond_with_test.rb, line 632</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">test_using_resource_with_set_responder</span>
+  <span class="ruby-constant">RespondWithController</span>.<span class="ruby-identifier">responder</span> = <span class="ruby-identifier">proc</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">c</span>, <span class="ruby-identifier">r</span>, <span class="ruby-identifier">o</span><span class="ruby-operator">|</span> <span class="ruby-identifier">c</span>.<span class="ruby-identifier">render</span> <span class="ruby-value">:text</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-node">&quot;Resource name is #{r.first.name}&quot;</span> }
+  <span class="ruby-identifier">get</span> <span class="ruby-value">:using_resource</span>
+  <span class="ruby-identifier">assert_equal</span> <span class="ruby-string">&quot;Resource name is david&quot;</span>, <span class="ruby-ivar">@response</span>.<span class="ruby-identifier">body</span>
+<span class="ruby-keyword">ensure</span>
+  <span class="ruby-constant">RespondWithController</span>.<span class="ruby-identifier">responder</span> = <span class="ruby-constant">ActionController</span><span class="ruby-operator">::</span><span class="ruby-constant">Responder</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-test_using_resource_with_status_and_location">
+            
+              <b>test_using_resource_with_status_and_location</b>()
+            
+            <a href="../classes/RespondWithControllerTest.html#method-i-test_using_resource_with_status_and_location" name="method-i-test_using_resource_with_status_and_location" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-test_using_resource_with_status_and_location_source')" id="l_method-i-test_using_resource_with_status_and_location_source">show</a>
+                
+                  | <a href="https://github.com/rails/rails/blob/8642c2aadc94b6763290711384c265289b02faaa/actionpack/test/controller/mime/respond_with_test.rb#L568" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-test_using_resource_with_status_and_location_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File actionpack/test/controller/mime/respond_with_test.rb, line 568</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">test_using_resource_with_status_and_location</span>
+  <span class="ruby-ivar">@request</span>.<span class="ruby-identifier">accept</span> = <span class="ruby-string">&quot;text/html&quot;</span>
+  <span class="ruby-identifier">post</span> <span class="ruby-value">:using_resource_with_status_and_location</span>
+  <span class="ruby-identifier">assert</span> <span class="ruby-ivar">@response</span>.<span class="ruby-identifier">redirect?</span>
+  <span class="ruby-identifier">assert_equal</span> <span class="ruby-string">&quot;http://test.host/&quot;</span>, <span class="ruby-ivar">@response</span>.<span class="ruby-identifier">location</span>
+
+  <span class="ruby-ivar">@request</span>.<span class="ruby-identifier">accept</span> = <span class="ruby-string">&quot;application/xml&quot;</span>
+  <span class="ruby-identifier">get</span> <span class="ruby-value">:using_resource_with_status_and_location</span>
+  <span class="ruby-identifier">assert_equal</span> <span class="ruby-number">201</span>, <span class="ruby-ivar">@response</span>.<span class="ruby-identifier">status</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-test_using_resource_with_status_and_location_with_invalid_resource">
+            
+              <b>test_using_resource_with_status_and_location_with_invalid_resource</b>()
+            
+            <a href="../classes/RespondWithControllerTest.html#method-i-test_using_resource_with_status_and_location_with_invalid_resource" name="method-i-test_using_resource_with_status_and_location_with_invalid_resource" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-test_using_resource_with_status_and_location_with_invalid_resource_source')" id="l_method-i-test_using_resource_with_status_and_location_with_invalid_resource_source">show</a>
+                
+                  | <a href="https://github.com/rails/rails/blob/8642c2aadc94b6763290711384c265289b02faaa/actionpack/test/controller/mime/respond_with_test.rb#L579" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-test_using_resource_with_status_and_location_with_invalid_resource_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File actionpack/test/controller/mime/respond_with_test.rb, line 579</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">test_using_resource_with_status_and_location_with_invalid_resource</span>
+  <span class="ruby-identifier">errors</span> = { <span class="ruby-value">:name</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">:invalid</span> }
+  <span class="ruby-constant">Customer</span>.<span class="ruby-identifier">any_instance</span>.<span class="ruby-identifier">stubs</span>(<span class="ruby-value">:errors</span>).<span class="ruby-identifier">returns</span>(<span class="ruby-identifier">errors</span>)
+
+  <span class="ruby-ivar">@request</span>.<span class="ruby-identifier">accept</span> = <span class="ruby-string">&quot;text/xml&quot;</span>
+
+  <span class="ruby-identifier">post</span> <span class="ruby-value">:using_resource_with_status_and_location</span>
+  <span class="ruby-identifier">assert_equal</span> <span class="ruby-identifier">errors</span>.<span class="ruby-identifier">to_xml</span>, <span class="ruby-ivar">@response</span>.<span class="ruby-identifier">body</span>
+  <span class="ruby-identifier">assert_equal</span> <span class="ruby-number">422</span>, <span class="ruby-ivar">@response</span>.<span class="ruby-identifier">status</span>
+  <span class="ruby-identifier">assert_equal</span> <span class="ruby-keyword">nil</span>, <span class="ruby-ivar">@response</span>.<span class="ruby-identifier">location</span>
+
+  <span class="ruby-identifier">put</span> <span class="ruby-value">:using_resource_with_status_and_location</span>
+  <span class="ruby-identifier">assert_equal</span> <span class="ruby-identifier">errors</span>.<span class="ruby-identifier">to_xml</span>, <span class="ruby-ivar">@response</span>.<span class="ruby-identifier">body</span>
+  <span class="ruby-identifier">assert_equal</span> <span class="ruby-number">422</span>, <span class="ruby-ivar">@response</span>.<span class="ruby-identifier">status</span>
+  <span class="ruby-identifier">assert_equal</span> <span class="ruby-keyword">nil</span>, <span class="ruby-ivar">@response</span>.<span class="ruby-identifier">location</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                    </div>
+
+    </div>
+  </body>
+</html>    

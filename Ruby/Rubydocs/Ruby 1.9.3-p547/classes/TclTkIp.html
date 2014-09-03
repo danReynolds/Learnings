@@ -1,0 +1,3753 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>TclTkIp</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="../css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/main.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/github.css" type="text/css" media="screen" />
+<script src="../js/jquery-1.3.2.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/jquery-effect.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+
+<body>     
+    <div class="banner">
+        
+        <h1>
+            <span class="type">Class</span> 
+            TclTkIp 
+            
+                <span class="parent">&lt; 
+                    
+                    <a href="Object.html">Object</a>
+                    
+                </span>
+            
+        </h1>
+        <ul class="files">
+            
+            <li><a href="../files/ext/tk/lib/multi-tk_rb.html">ext/tk/lib/multi-tk.rb</a></li>
+            
+            <li><a href="../files/ext/tk/lib/tk_rb.html">ext/tk/lib/tk.rb</a></li>
+            
+            <li><a href="../files/ext/tk/sample/demos-en/tkencoding_rb.html">ext/tk/sample/demos-en/tkencoding.rb</a></li>
+            
+            <li><a href="../files/ext/tk/tcltklib_c.html">ext/tk/tcltklib.c</a></li>
+            
+        </ul>
+    </div>
+    <div id="bodyContent">
+        <div id="content">
+  
+    <div class="description">
+      
+<p>add <a href="ThreadGroup.html">ThreadGroup</a> check to <a
+href="TclTkIp.html#method-i-new">#new</a></p>
+
+<p>tkencoding.rb written by ttate@jaist.ac.jp</p>
+
+    </div>
+  
+
+
+  
+
+
+  
+  
+
+
+  
+
+
+  
+    <!-- Method ref -->
+    <div class="sectiontitle">Methods</div>
+    <dl class="methods">
+      
+        <dt>#</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-__eval">__eval</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-__eval__">__eval__</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-__initialize__">__initialize__</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-__invoke">__invoke</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-__invoke__">__invoke__</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-c-__new__">__new__</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-_cancel_eval">_cancel_eval</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-_cancel_eval_unwind">_cancel_eval_unwind</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-_conv_listelement">_conv_listelement</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-_create_console">_create_console</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-_eval">_eval</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-_eval_without_enc">_eval_without_enc</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-_fromUTF8">_fromUTF8</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-_get_global_var">_get_global_var</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-_get_global_var2">_get_global_var2</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-_get_variable">_get_variable</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-_get_variable2">_get_variable2</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-_immediate_invoke">_immediate_invoke</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-_invoke">_invoke</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-_invoke_without_enc">_invoke_without_enc</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-_ip_id_">_ip_id_</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-_make_menu_embeddable">_make_menu_embeddable</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-_merge_tklist">_merge_tklist</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-_return_value">_return_value</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-_set_global_var">_set_global_var</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-_set_global_var2">_set_global_var2</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-_set_variable">_set_variable</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-_set_variable2">_set_variable2</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-_split_tklist">_split_tklist</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-_thread_tkwait">_thread_tkwait</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-_thread_vwait">_thread_vwait</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-_toUTF8">_toUTF8</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-_unset_global_var">_unset_global_var</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-_unset_global_var2">_unset_global_var2</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-_unset_variable">_unset_variable</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-_unset_variable2">_unset_variable2</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>A</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-allow_ruby_exit-3D">allow_ruby_exit=</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-allow_ruby_exit-3F">allow_ruby_exit?</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>C</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-create_dummy_encoding_for_tk">create_dummy_encoding_for_tk</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-create_slave">create_slave</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>D</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-delete">delete</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-deleted-3F">deleted?</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-do_one_event">do_one_event</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>E</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-encoding_table">encoding_table</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>G</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-get_eventloop_tick">get_eventloop_tick</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-get_eventloop_weight">get_eventloop_weight</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-get_no_event_wait">get_no_event_wait</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>H</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-has_mainwindow-3F">has_mainwindow?</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>I</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-invalid_namespace-3F">invalid_namespace?</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>M</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-mainloop">mainloop</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-mainloop_abort_on_exception">mainloop_abort_on_exception</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-mainloop_abort_on_exception-3D">mainloop_abort_on_exception=</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-mainloop_watchdog">mainloop_watchdog</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-make_safe">make_safe</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>N</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-new">new</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-c-new">new</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-c-new">new</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>R</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-restart">restart</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>S</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-safe-3F">safe?</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-set_eventloop_tick">set_eventloop_tick</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-set_eventloop_weight">set_eventloop_weight</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-set_max_block_time">set_max_block_time</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-set_no_event_wait">set_no_event_wait</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-slave_of-3F">slave_of?</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+    </dl>
+  
+
+  
+
+
+
+  
+
+    
+
+    
+
+    
+
+
+    
+
+
+    <!-- Methods -->
+    
+      <div class="sectiontitle">Class Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-c-__new__">
+            
+              <b>__new__</b>(p1 = v1, p2 = v2)
+            
+            <a href="../classes/TclTkIp.html#method-c-__new__" name="method-c-__new__" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+            <div class="aka">
+              Alias for: <a href="TclTkIp.html#method-c-new">new</a>
+            </div>
+          
+          
+          
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-new">
+            
+              <b>new</b>(p1 = v1, p2 = v2)
+            
+            <a href="../classes/TclTkIp.html#method-c-new" name="method-c-new" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>initialize interpreter</p>
+            </div>
+          
+          
+          
+            <div class="aka">
+              Also aliased as: <a href="TclTkIp.html#method-c-__new__">__new__</a>
+            </div>
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-new_source')" id="l_method-c-new_source">show</a>
+                
+              </p>
+              <div id="method-c-new_source" class="dyn-source">
+                <pre>static VALUE
+ip_init(argc, argv, self)
+    int   argc;
+    VALUE *argv;
+    VALUE self;
+{
+    struct tcltkip *ptr;        /* tcltkip data struct */
+    VALUE argv0, opts;
+    int cnt;
+    int st;
+    int with_tk = 1;
+    Tk_Window mainWin = (Tk_Window)NULL;
+
+    /* security check */
+    if (rb_safe_level() &gt;= 4) {
+        rb_raise(rb_eSecurityError,
+                 &quot;Cannot create a TclTkIp object at level %d&quot;,
+                 rb_safe_level());
+    }
+
+    /* create object */
+    Data_Get_Struct(self, struct tcltkip, ptr);
+    ptr = ALLOC(struct tcltkip);
+    /* ptr = (struct tcltkip *)ckalloc(sizeof(struct tcltkip)); */
+    DATA_PTR(self) = ptr;
+#ifdef RUBY_USE_NATIVE_THREAD
+    ptr-&gt;tk_thread_id = 0;
+#endif
+    ptr-&gt;ref_count = 0;
+    ptr-&gt;allow_ruby_exit = 1;
+    ptr-&gt;return_value = 0;
+
+    /* from Tk_Main() */
+    DUMP1(&quot;Tcl_CreateInterp&quot;);
+    ptr-&gt;ip = ruby_tcl_create_ip_and_stubs_init(&amp;st);
+    if (ptr-&gt;ip == NULL) {
+        switch(st) {
+        case TCLTK_STUBS_OK:
+            break;
+        case NO_TCL_DLL:
+            rb_raise(rb_eLoadError, &quot;tcltklib: fail to open tcl_dll&quot;);
+        case NO_FindExecutable:
+            rb_raise(rb_eLoadError, &quot;tcltklib: can&#39;t find Tcl_FindExecutable&quot;);
+        case NO_CreateInterp:
+            rb_raise(rb_eLoadError, &quot;tcltklib: can&#39;t find Tcl_CreateInterp()&quot;);
+        case NO_DeleteInterp:
+            rb_raise(rb_eLoadError, &quot;tcltklib: can&#39;t find Tcl_DeleteInterp()&quot;);
+        case FAIL_CreateInterp:
+            rb_raise(rb_eRuntimeError, &quot;tcltklib: fail to create a new IP&quot;);
+        case FAIL_Tcl_InitStubs:
+            rb_raise(rb_eRuntimeError, &quot;tcltklib: fail to Tcl_InitStubs()&quot;);
+        default:
+            rb_raise(rb_eRuntimeError, &quot;tcltklib: unknown error(%d) on ruby_tcl_create_ip_and_stubs_init&quot;, st);
+        }
+    }
+
+#if TCL_MAJOR_VERSION &gt;= 8
+#if TCL_NAMESPACE_DEBUG
+    DUMP1(&quot;get current namespace&quot;);
+    if ((ptr-&gt;default_ns = Tcl_GetCurrentNamespace(ptr-&gt;ip))
+        == (Tcl_Namespace*)NULL) {
+      rb_raise(rb_eRuntimeError, &quot;a new Tk interpreter has a NULL namespace&quot;);
+    }
+#endif
+#endif
+
+    rbtk_preserve_ip(ptr);
+    DUMP2(&quot;IP ref_count = %d&quot;, ptr-&gt;ref_count);
+    current_interp = ptr-&gt;ip;
+
+    ptr-&gt;has_orig_exit
+        = Tcl_GetCommandInfo(ptr-&gt;ip, &quot;exit&quot;, &amp;(ptr-&gt;orig_exit_info));
+
+#if defined CREATE_RUBYTK_KIT || defined CREATE_RUBYKIT
+    call_tclkit_init_script(current_interp);
+
+# if 10 * TCL_MAJOR_VERSION + TCL_MINOR_VERSION &gt; 84
+    {
+      Tcl_DString encodingName;
+      Tcl_GetEncodingNameFromEnvironment(&amp;encodingName);
+      if (strcmp(Tcl_DStringValue(&amp;encodingName), Tcl_GetEncodingName(NULL))) {
+        /* fails, so we set a variable and do it in the boot.tcl script */
+        Tcl_SetSystemEncoding(NULL, Tcl_DStringValue(&amp;encodingName));
+      }
+      Tcl_SetVar(current_interp, &quot;tclkit_system_encoding&quot;, Tcl_DStringValue(&amp;encodingName), 0);
+      Tcl_DStringFree(&amp;encodingName);
+    }
+# endif
+#endif
+
+    /* set variables */
+    Tcl_Eval(ptr-&gt;ip, &quot;set argc 0; set argv {}; set argv0 tcltklib.so&quot;);
+
+    cnt = rb_scan_args(argc, argv, &quot;02&quot;, &amp;argv0, &amp;opts);
+    switch(cnt) {
+    case 2:
+        /* options */
+        if (NIL_P(opts) || opts == Qfalse) {
+            /* without Tk */
+            with_tk = 0;
+        } else {
+            /* Tcl_SetVar(ptr-&gt;ip, &quot;argv&quot;, StringValuePtr(opts), 0); */
+            Tcl_SetVar(ptr-&gt;ip, &quot;argv&quot;, StringValuePtr(opts), TCL_GLOBAL_ONLY);
+            Tcl_Eval(ptr-&gt;ip, &quot;set argc [llength $argv]&quot;);
+        }
+    case 1:
+        /* argv0 */
+        if (!NIL_P(argv0)) {
+            if (strncmp(StringValuePtr(argv0), &quot;-e&quot;, 3) == 0
+                || strncmp(StringValuePtr(argv0), &quot;-&quot;, 2) == 0) {
+                Tcl_SetVar(ptr-&gt;ip, &quot;argv0&quot;, &quot;ruby&quot;, TCL_GLOBAL_ONLY);
+            } else {
+                /* Tcl_SetVar(ptr-&gt;ip, &quot;argv0&quot;, StringValuePtr(argv0), 0); */
+                Tcl_SetVar(ptr-&gt;ip, &quot;argv0&quot;, StringValuePtr(argv0),
+                           TCL_GLOBAL_ONLY);
+            }
+        }
+    case 0:
+        /* no args */
+        ;
+    }
+
+    /* from Tcl_AppInit() */
+    DUMP1(&quot;Tcl_Init&quot;);
+#if (defined CREATE_RUBYTK_KIT || defined CREATE_RUBYKIT) &amp;&amp; (!defined KIT_LITE) &amp;&amp; (10 * TCL_MAJOR_VERSION + TCL_MINOR_VERSION == 85)
+    /*************************************************************************/
+    /*  FIX ME (2010/06/28)                                                  */
+    /*    Don&#39;t use ::chan command for Mk4tcl + tclvfs-1.4 on Tcl8.5.        */
+    /*    It fails to access VFS files because of vfs::zstream.              */
+    /*    So, force to use ::rechan by temporaly hiding ::chan.              */
+    /*************************************************************************/
+    Tcl_Eval(ptr-&gt;ip, &quot;catch {rename ::chan ::_tmp_chan}&quot;);
+    if (Tcl_Init(ptr-&gt;ip) == TCL_ERROR) {
+        rb_raise(rb_eRuntimeError, &quot;%s&quot;, Tcl_GetStringResult(ptr-&gt;ip));
+    }
+    Tcl_Eval(ptr-&gt;ip, &quot;catch {rename ::_tmp_chan ::chan}&quot;);
+#else
+    if (Tcl_Init(ptr-&gt;ip) == TCL_ERROR) {
+        rb_raise(rb_eRuntimeError, &quot;%s&quot;, Tcl_GetStringResult(ptr-&gt;ip));
+    }
+#endif
+
+    st = ruby_tcl_stubs_init();
+    /* from Tcl_AppInit() */
+    if (with_tk) {
+        DUMP1(&quot;Tk_Init&quot;);
+        st = ruby_tk_stubs_init(ptr-&gt;ip);
+        switch(st) {
+        case TCLTK_STUBS_OK:
+            break;
+        case NO_Tk_Init:
+            rb_raise(rb_eLoadError, &quot;tcltklib: can&#39;t find Tk_Init()&quot;);
+        case FAIL_Tk_Init:
+            rb_raise(rb_eRuntimeError, &quot;tcltklib: fail to Tk_Init(). %s&quot;,
+                     Tcl_GetStringResult(ptr-&gt;ip));
+        case FAIL_Tk_InitStubs:
+            rb_raise(rb_eRuntimeError, &quot;tcltklib: fail to Tk_InitStubs(). %s&quot;,
+                     Tcl_GetStringResult(ptr-&gt;ip));
+        default:
+            rb_raise(rb_eRuntimeError, &quot;tcltklib: unknown error(%d) on ruby_tk_stubs_init&quot;, st);
+        }
+
+        DUMP1(&quot;Tcl_StaticPackage(\&quot;Tk\&quot;)&quot;);
+#if TCL_MAJOR_VERSION &gt;= 8
+        Tcl_StaticPackage(ptr-&gt;ip, &quot;Tk&quot;, Tk_Init, Tk_SafeInit);
+#else /* TCL_MAJOR_VERSION &lt; 8 */
+        Tcl_StaticPackage(ptr-&gt;ip, &quot;Tk&quot;, Tk_Init,
+                          (Tcl_PackageInitProc *) NULL);
+#endif
+
+#ifdef RUBY_USE_NATIVE_THREAD
+        /* set Tk thread ID */
+        ptr-&gt;tk_thread_id = Tcl_GetCurrentThread();
+#endif
+        /* get main window */
+        mainWin = Tk_MainWindow(ptr-&gt;ip);
+        Tk_Preserve((ClientData)mainWin);
+    }
+
+    /* add ruby command to the interpreter */
+#if TCL_MAJOR_VERSION &gt;= 8
+    DUMP1(&quot;Tcl_CreateObjCommand(\&quot;ruby\&quot;)&quot;);
+    Tcl_CreateObjCommand(ptr-&gt;ip, &quot;ruby&quot;, ip_ruby_eval, (ClientData)NULL,
+                         (Tcl_CmdDeleteProc *)NULL);
+    DUMP1(&quot;Tcl_CreateObjCommand(\&quot;ruby_eval\&quot;)&quot;);
+    Tcl_CreateObjCommand(ptr-&gt;ip, &quot;ruby_eval&quot;, ip_ruby_eval, (ClientData)NULL,
+                         (Tcl_CmdDeleteProc *)NULL);
+    DUMP1(&quot;Tcl_CreateObjCommand(\&quot;ruby_cmd\&quot;)&quot;);
+    Tcl_CreateObjCommand(ptr-&gt;ip, &quot;ruby_cmd&quot;, ip_ruby_cmd, (ClientData)NULL,
+                         (Tcl_CmdDeleteProc *)NULL);
+#else /* TCL_MAJOR_VERSION &lt; 8 */
+    DUMP1(&quot;Tcl_CreateCommand(\&quot;ruby\&quot;)&quot;);
+    Tcl_CreateCommand(ptr-&gt;ip, &quot;ruby&quot;, ip_ruby_eval, (ClientData)NULL,
+                      (Tcl_CmdDeleteProc *)NULL);
+    DUMP1(&quot;Tcl_CreateCommand(\&quot;ruby_eval\&quot;)&quot;);
+    Tcl_CreateCommand(ptr-&gt;ip, &quot;ruby_eval&quot;, ip_ruby_eval, (ClientData)NULL,
+                      (Tcl_CmdDeleteProc *)NULL);
+    DUMP1(&quot;Tcl_CreateCommand(\&quot;ruby_cmd\&quot;)&quot;);
+    Tcl_CreateCommand(ptr-&gt;ip, &quot;ruby_cmd&quot;, ip_ruby_cmd, (ClientData)NULL,
+                      (Tcl_CmdDeleteProc *)NULL);
+#endif
+
+    /* add &#39;interp_exit&#39;, &#39;ruby_exit&#39; and replace &#39;exit&#39; command */
+#if TCL_MAJOR_VERSION &gt;= 8
+    DUMP1(&quot;Tcl_CreateObjCommand(\&quot;interp_exit\&quot;)&quot;);
+    Tcl_CreateObjCommand(ptr-&gt;ip, &quot;interp_exit&quot;, ip_InterpExitObjCmd,
+                         (ClientData)mainWin, (Tcl_CmdDeleteProc *)NULL);
+    DUMP1(&quot;Tcl_CreateObjCommand(\&quot;ruby_exit\&quot;)&quot;);
+    Tcl_CreateObjCommand(ptr-&gt;ip, &quot;ruby_exit&quot;, ip_RubyExitObjCmd,
+                         (ClientData)mainWin, (Tcl_CmdDeleteProc *)NULL);
+    DUMP1(&quot;Tcl_CreateObjCommand(\&quot;exit\&quot;) --&gt; \&quot;ruby_exit\&quot;&quot;);
+    Tcl_CreateObjCommand(ptr-&gt;ip, &quot;exit&quot;, ip_RubyExitObjCmd,
+                         (ClientData)mainWin, (Tcl_CmdDeleteProc *)NULL);
+#else /* TCL_MAJOR_VERSION &lt; 8 */
+    DUMP1(&quot;Tcl_CreateCommand(\&quot;interp_exit\&quot;)&quot;);
+    Tcl_CreateCommand(ptr-&gt;ip, &quot;interp_exit&quot;, ip_InterpExitCommand,
+                      (ClientData)mainWin, (Tcl_CmdDeleteProc *)NULL);
+    DUMP1(&quot;Tcl_CreateCommand(\&quot;ruby_exit\&quot;)&quot;);
+    Tcl_CreateCommand(ptr-&gt;ip, &quot;ruby_exit&quot;, ip_RubyExitCommand,
+                      (ClientData)mainWin, (Tcl_CmdDeleteProc *)NULL);
+    DUMP1(&quot;Tcl_CreateCommand(\&quot;exit\&quot;) --&gt; \&quot;ruby_exit\&quot;&quot;);
+    Tcl_CreateCommand(ptr-&gt;ip, &quot;exit&quot;, ip_RubyExitCommand,
+                      (ClientData)mainWin, (Tcl_CmdDeleteProc *)NULL);
+#endif
+
+    /* replace vwait and tkwait */
+    ip_replace_wait_commands(ptr-&gt;ip, mainWin);
+
+    /* wrap namespace command */
+    ip_wrap_namespace_command(ptr-&gt;ip);
+
+    /* define command to replace commands which depend on slave&#39;s MainWindow */
+#if TCL_MAJOR_VERSION &gt;= 8
+    Tcl_CreateObjCommand(ptr-&gt;ip, &quot;__replace_slave_tk_commands__&quot;,
+                         ip_rb_replaceSlaveTkCmdsObjCmd,
+                         (ClientData)NULL, (Tcl_CmdDeleteProc *)NULL);
+#else /* TCL_MAJOR_VERSION &lt; 8 */
+    Tcl_CreateCommand(ptr-&gt;ip, &quot;__replace_slave_tk_commands__&quot;,
+                      ip_rb_replaceSlaveTkCmdsCommand,
+                      (ClientData)NULL, (Tcl_CmdDeleteProc *)NULL);
+#endif
+
+    /* set finalizer */
+    Tcl_CallWhenDeleted(ptr-&gt;ip, ip_CallWhenDeleted, (ClientData)mainWin);
+
+    if (mainWin != (Tk_Window)NULL) {
+        Tk_Release((ClientData)mainWin);
+    }
+
+    return self;
+}</pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-new">
+            
+              <b>new</b>(*args)
+            
+            <a href="../classes/TclTkIp.html#method-c-new" name="method-c-new" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+            <div class="aka">
+              Also aliased as: <a href="TclTkIp.html#method-i-__initialize__">__initialize__</a>
+            </div>
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-new_source')" id="l_method-c-new_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/542190ce584fe2f0923227e591bfe2b8880dad42/ext/tk/lib/tk.rb#L30" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-new_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tk.rb, line 30</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">initialize</span>(<span class="ruby-operator">*</span><span class="ruby-identifier">args</span>)
+  <span class="ruby-identifier">__initialize__</span>(<span class="ruby-operator">*</span><span class="ruby-identifier">args</span>)
+
+  <span class="ruby-ivar">@force_default_encoding</span> <span class="ruby-operator">||=</span> <span class="ruby-constant">TkUtil</span>.<span class="ruby-identifier">untrust</span>([<span class="ruby-keyword">false</span>])
+  <span class="ruby-ivar">@encoding</span> <span class="ruby-operator">||=</span> <span class="ruby-constant">TkUtil</span>.<span class="ruby-identifier">untrust</span>([<span class="ruby-keyword">nil</span>])
+  <span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">@encoding</span>.<span class="ruby-identifier">to_s</span>; <span class="ruby-keyword">self</span>.<span class="ruby-identifier">join</span>(<span class="ruby-keyword">nil</span>); <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                  
+      <div class="sectiontitle">Instance Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-i-__eval">
+            
+              <b>__eval</b>(cmd)
+            
+            <a href="../classes/TclTkIp.html#method-i-__eval" name="method-i-__eval" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+            <div class="aka">
+              Alias for: <a href="TclTkIp.html#method-i-_eval">_eval</a>
+            </div>
+          
+          
+          
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-__eval__">
+            
+              <b>__eval__</b>(cmd)
+            
+            <a href="../classes/TclTkIp.html#method-i-__eval__" name="method-i-__eval__" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+            <div class="aka">
+              Alias for: <a href="TclTkIp.html#method-i-_eval">_eval</a>
+            </div>
+          
+          
+          
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-__initialize__">
+            
+              <b>__initialize__</b>(*args)
+            
+            <a href="../classes/TclTkIp.html#method-i-__initialize__" name="method-i-__initialize__" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+            <div class="aka">
+              Alias for: <a href="TclTkIp.html#method-c-new">new</a>
+            </div>
+          
+          
+          
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-__invoke">
+            
+              <b>__invoke</b>(*cmds)
+            
+            <a href="../classes/TclTkIp.html#method-i-__invoke" name="method-i-__invoke" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+            <div class="aka">
+              Alias for: <a href="TclTkIp.html#method-i-_invoke">_invoke</a>
+            </div>
+          
+          
+          
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-__invoke__">
+            
+              <b>__invoke__</b>(*cmds)
+            
+            <a href="../classes/TclTkIp.html#method-i-__invoke__" name="method-i-__invoke__" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+            <div class="aka">
+              Alias for: <a href="TclTkIp.html#method-i-_invoke">_invoke</a>
+            </div>
+          
+          
+          
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-_cancel_eval">
+            
+              <b>_cancel_eval</b>(p1 = v1)
+            
+            <a href="../classes/TclTkIp.html#method-i-_cancel_eval" name="method-i-_cancel_eval" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-_cancel_eval_source')" id="l_method-i-_cancel_eval_source">show</a>
+                
+              </p>
+              <div id="method-i-_cancel_eval_source" class="dyn-source">
+                <pre>static VALUE
+ip_cancel_eval(argc, argv, self)
+    int   argc;
+    VALUE *argv;
+    VALUE self;
+{
+    VALUE retval;
+
+    if (rb_scan_args(argc, argv, &quot;01&quot;, &amp;retval) == 0) {
+        retval = Qnil;
+    }
+    if (ip_cancel_eval_core(get_ip(self)-&gt;ip, retval, 0) == TCL_OK) {
+      return Qtrue;
+    } else {
+      return Qfalse;
+    }
+}</pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-_cancel_eval_unwind">
+            
+              <b>_cancel_eval_unwind</b>(p1 = v1)
+            
+            <a href="../classes/TclTkIp.html#method-i-_cancel_eval_unwind" name="method-i-_cancel_eval_unwind" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-_cancel_eval_unwind_source')" id="l_method-i-_cancel_eval_unwind_source">show</a>
+                
+              </p>
+              <div id="method-i-_cancel_eval_unwind_source" class="dyn-source">
+                <pre>static VALUE
+ip_cancel_eval_unwind(argc, argv, self)
+    int   argc;
+    VALUE *argv;
+    VALUE self;
+{
+    int flag = 0;
+    VALUE retval;
+
+    if (rb_scan_args(argc, argv, &quot;01&quot;, &amp;retval) == 0) {
+        retval = Qnil;
+    }
+
+    flag |= TCL_CANCEL_UNWIND;
+    if (ip_cancel_eval_core(get_ip(self)-&gt;ip, retval, flag) == TCL_OK) {
+      return Qtrue;
+    } else {
+      return Qfalse;
+    }
+}</pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-_conv_listelement">
+            
+              <b>_conv_listelement</b>(p1)
+            
+            <a href="../classes/TclTkIp.html#method-i-_conv_listelement" name="method-i-_conv_listelement" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-_conv_listelement_source')" id="l_method-i-_conv_listelement_source">show</a>
+                
+              </p>
+              <div id="method-i-_conv_listelement_source" class="dyn-source">
+                <pre>static VALUE
+lib_conv_listelement(self, src)
+    VALUE self;
+    VALUE src;
+{
+    int   len, scan_flag;
+    volatile VALUE dst;
+    int   taint_flag = OBJ_TAINTED(src);
+    int thr_crit_bup;
+
+    tcl_stubs_check();
+
+    thr_crit_bup = rb_thread_critical;
+    rb_thread_critical = Qtrue;
+
+    StringValue(src);
+
+#if TCL_MAJOR_VERSION &gt;= 8
+    len = Tcl_ScanCountedElement(RSTRING_PTR(src), RSTRING_LEN(src),
+                                 &amp;scan_flag);
+    dst = rb_str_new(0, len + 1);
+    len = Tcl_ConvertCountedElement(RSTRING_PTR(src), RSTRING_LEN(src),
+                                    RSTRING_PTR(dst), scan_flag);
+#else /* TCL_MAJOR_VERSION &lt; 8 */
+    len = Tcl_ScanElement(RSTRING_PTR(src), &amp;scan_flag);
+    dst = rb_str_new(0, len + 1);
+    len = Tcl_ConvertElement(RSTRING_PTR(src), RSTRING_PTR(dst), scan_flag);
+#endif
+
+    rb_str_resize(dst, len);
+    if (taint_flag) RbTk_OBJ_UNTRUST(dst);
+
+    rb_thread_critical = thr_crit_bup;
+
+    return dst;
+}</pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-_create_console">
+            
+              <b>_create_console</b>()
+            
+            <a href="../classes/TclTkIp.html#method-i-_create_console" name="method-i-_create_console" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-_create_console_source')" id="l_method-i-_create_console_source">show</a>
+                
+              </p>
+              <div id="method-i-_create_console_source" class="dyn-source">
+                <pre>static VALUE
+ip_create_console(self)
+    VALUE self;
+{
+    struct tcltkip *ptr = get_ip(self);
+
+    /* ip is deleted? */
+    if (deleted_ip(ptr)) {
+        rb_raise(rb_eRuntimeError, &quot;interpreter is deleted&quot;);
+    }
+
+    return tk_funcall(ip_create_console_core, 0, (VALUE*)NULL, self);
+}</pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-_eval">
+            
+              <b>_eval</b>(cmd)
+            
+            <a href="../classes/TclTkIp.html#method-i-_eval" name="method-i-_eval" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+            <div class="aka">
+              Also aliased as: <a href="TclTkIp.html#method-i-_eval_without_enc">_eval_without_enc</a>, <a href="TclTkIp.html#method-i-__eval__">__eval__</a>, <a href="TclTkIp.html#method-i-__eval">__eval</a>
+            </div>
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-_eval_source')" id="l_method-i-_eval_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/75362fbd47cedf4b4906a361a6c54bc4ad8ea5ec/ext/tk/sample/demos-en/tkencoding.rb#L13" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-_eval_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/sample/demos-en/tkencoding.rb, line 13</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">_eval</span>(<span class="ruby-identifier">cmd</span>)
+  <span class="ruby-keyword">if</span>( <span class="ruby-ivar">@encoding</span> )
+    <span class="ruby-identifier">_fromUTF8</span>(<span class="ruby-identifier">__eval</span>(<span class="ruby-identifier">_toUTF8</span>(<span class="ruby-identifier">cmd</span>,<span class="ruby-ivar">@encoding</span>)),<span class="ruby-ivar">@encoding</span>)
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">__eval</span>(<span class="ruby-identifier">cmd</span>)
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-_eval_without_enc">
+            
+              <b>_eval_without_enc</b>(cmd)
+            
+            <a href="../classes/TclTkIp.html#method-i-_eval_without_enc" name="method-i-_eval_without_enc" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>backup original (without encoding) _eval and _invoke</p>
+            </div>
+          
+          
+          
+
+          
+            <div class="aka">
+              Alias for: <a href="TclTkIp.html#method-i-_eval">_eval</a>
+            </div>
+          
+          
+          
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-_fromUTF8">
+            
+              <b>_fromUTF8</b>(p1, p2 = v2)
+            
+            <a href="../classes/TclTkIp.html#method-i-_fromUTF8" name="method-i-_fromUTF8" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-_fromUTF8_source')" id="l_method-i-_fromUTF8_source">show</a>
+                
+              </p>
+              <div id="method-i-_fromUTF8_source" class="dyn-source">
+                <pre>static VALUE
+ip_fromUTF8(argc, argv, self)
+    int   argc;
+    VALUE *argv;
+    VALUE self;
+{
+    VALUE str, encodename;
+
+    if (rb_scan_args(argc, argv, &quot;11&quot;, &amp;str, &amp;encodename) == 1) {
+        encodename = Qnil;
+    }
+    return lib_fromUTF8_core(self, str, encodename);
+}</pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-_get_global_var">
+            
+              <b>_get_global_var</b>(p1)
+            
+            <a href="../classes/TclTkIp.html#method-i-_get_global_var" name="method-i-_get_global_var" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-_get_global_var_source')" id="l_method-i-_get_global_var_source">show</a>
+                
+              </p>
+              <div id="method-i-_get_global_var_source" class="dyn-source">
+                <pre>static VALUE
+ip_get_global_var(self, varname)
+    VALUE self;
+    VALUE varname;
+{
+    return ip_get_variable(self, varname,
+                           INT2FIX(TCL_GLOBAL_ONLY | TCL_LEAVE_ERR_MSG));
+}</pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-_get_global_var2">
+            
+              <b>_get_global_var2</b>(p1, p2)
+            
+            <a href="../classes/TclTkIp.html#method-i-_get_global_var2" name="method-i-_get_global_var2" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-_get_global_var2_source')" id="l_method-i-_get_global_var2_source">show</a>
+                
+              </p>
+              <div id="method-i-_get_global_var2_source" class="dyn-source">
+                <pre>static VALUE
+ip_get_global_var2(self, varname, index)
+    VALUE self;
+    VALUE varname;
+    VALUE index;
+{
+    return ip_get_variable2(self, varname, index,
+                            INT2FIX(TCL_GLOBAL_ONLY | TCL_LEAVE_ERR_MSG));
+}</pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-_get_variable">
+            
+              <b>_get_variable</b>(p1, p2)
+            
+            <a href="../classes/TclTkIp.html#method-i-_get_variable" name="method-i-_get_variable" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-_get_variable_source')" id="l_method-i-_get_variable_source">show</a>
+                
+              </p>
+              <div id="method-i-_get_variable_source" class="dyn-source">
+                <pre>static VALUE
+ip_get_variable(self, varname, flag)
+    VALUE self;
+    VALUE varname;
+    VALUE flag;
+{
+    return ip_get_variable2(self, varname, Qnil, flag);
+}</pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-_get_variable2">
+            
+              <b>_get_variable2</b>(p1, p2, p3)
+            
+            <a href="../classes/TclTkIp.html#method-i-_get_variable2" name="method-i-_get_variable2" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-_get_variable2_source')" id="l_method-i-_get_variable2_source">show</a>
+                
+              </p>
+              <div id="method-i-_get_variable2_source" class="dyn-source">
+                <pre>static VALUE
+ip_get_variable2(self, varname, index, flag)
+    VALUE self;
+    VALUE varname;
+    VALUE index;
+    VALUE flag;
+{
+    VALUE argv[3];
+    VALUE retval;
+
+    StringValue(varname);
+    if (!NIL_P(index)) StringValue(index);
+
+    argv[0] = varname;
+    argv[1] = index;
+    argv[2] = flag;
+
+    retval = tk_funcall(ip_get_variable2_core, 3, argv, self);
+
+    if (NIL_P(retval)) {
+        return rb_tainted_str_new2(&quot;&quot;);
+    } else {
+        return retval;
+    }
+}</pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-_immediate_invoke">
+            
+              <b>_immediate_invoke</b>(*args)
+            
+            <a href="../classes/TclTkIp.html#method-i-_immediate_invoke" name="method-i-_immediate_invoke" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-_immediate_invoke_source')" id="l_method-i-_immediate_invoke_source">show</a>
+                
+              </p>
+              <div id="method-i-_immediate_invoke_source" class="dyn-source">
+                <pre>static VALUE
+ip_invoke_immediate(argc, argv, obj)
+    int argc;
+    VALUE *argv;
+    VALUE obj;
+{
+    /* POTENTIALY INSECURE : can create infinite loop */
+    rb_secure(4);
+    return ip_invoke_with_position(argc, argv, obj, TCL_QUEUE_HEAD);
+}</pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-_invoke">
+            
+              <b>_invoke</b>(*cmds)
+            
+            <a href="../classes/TclTkIp.html#method-i-_invoke" name="method-i-_invoke" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+            <div class="aka">
+              Also aliased as: <a href="TclTkIp.html#method-i-_invoke_without_enc">_invoke_without_enc</a>, <a href="TclTkIp.html#method-i-__invoke__">__invoke__</a>, <a href="TclTkIp.html#method-i-__invoke">__invoke</a>
+            </div>
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-_invoke_source')" id="l_method-i-_invoke_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/75362fbd47cedf4b4906a361a6c54bc4ad8ea5ec/ext/tk/sample/demos-en/tkencoding.rb#L21" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-_invoke_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/sample/demos-en/tkencoding.rb, line 21</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">_invoke</span>(<span class="ruby-operator">*</span><span class="ruby-identifier">cmds</span>)
+  <span class="ruby-keyword">if</span>( <span class="ruby-ivar">@encoding</span> )
+    <span class="ruby-identifier">cmds</span> = <span class="ruby-identifier">cmds</span>.<span class="ruby-identifier">collect</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">cmd</span><span class="ruby-operator">|</span> <span class="ruby-identifier">_toUTF8</span>(<span class="ruby-identifier">cmd</span>,<span class="ruby-ivar">@encoding</span>)}
+    <span class="ruby-identifier">_fromUTF8</span>(<span class="ruby-identifier">__invoke</span>(<span class="ruby-operator">*</span><span class="ruby-identifier">cmds</span>),<span class="ruby-ivar">@encoding</span>)
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">__invoke</span>(<span class="ruby-operator">*</span><span class="ruby-identifier">cmds</span>)
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-_invoke_without_enc">
+            
+              <b>_invoke_without_enc</b>(*cmds)
+            
+            <a href="../classes/TclTkIp.html#method-i-_invoke_without_enc" name="method-i-_invoke_without_enc" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+            <div class="aka">
+              Alias for: <a href="TclTkIp.html#method-i-_invoke">_invoke</a>
+            </div>
+          
+          
+          
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-_ip_id_">
+            
+              <b>_ip_id_</b>()
+            
+            <a href="../classes/TclTkIp.html#method-i-_ip_id_" name="method-i-_ip_id_" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-_ip_id__source')" id="l_method-i-_ip_id__source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/542190ce584fe2f0923227e591bfe2b8880dad42/ext/tk/lib/tk.rb#L22" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-_ip_id__source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tk.rb, line 22</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">_ip_id_</span>
+  <span class="ruby-comment"># for RemoteTkIp</span>
+  <span class="ruby-string">&#39;&#39;</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-_make_menu_embeddable">
+            
+              <b>_make_menu_embeddable</b>(p1)
+            
+            <a href="../classes/TclTkIp.html#method-i-_make_menu_embeddable" name="method-i-_make_menu_embeddable" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-_make_menu_embeddable_source')" id="l_method-i-_make_menu_embeddable_source">show</a>
+                
+              </p>
+              <div id="method-i-_make_menu_embeddable_source" class="dyn-source">
+                <pre>static VALUE
+ip_make_menu_embeddable(interp, menu_path)
+    VALUE interp;
+    VALUE menu_path;
+{
+    VALUE argv[1];
+
+    argv[0] = menu_path;
+    return tk_funcall(ip_make_menu_embeddable_core, 1, argv, interp);
+}</pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-_merge_tklist">
+            
+              <b>_merge_tklist</b>(*args)
+            
+            <a href="../classes/TclTkIp.html#method-i-_merge_tklist" name="method-i-_merge_tklist" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-_merge_tklist_source')" id="l_method-i-_merge_tklist_source">show</a>
+                
+              </p>
+              <div id="method-i-_merge_tklist_source" class="dyn-source">
+                <pre>static VALUE
+lib_merge_tklist(argc, argv, obj)
+    int argc;
+    VALUE *argv;
+    VALUE obj;
+{
+    int  num, len;
+    int  *flagPtr;
+    char *dst, *result;
+    volatile VALUE str;
+    int taint_flag = 0;
+    int thr_crit_bup;
+    VALUE old_gc;
+
+    if (argc == 0) return rb_str_new2(&quot;&quot;);
+
+    tcl_stubs_check();
+
+    thr_crit_bup = rb_thread_critical;
+    rb_thread_critical = Qtrue;
+    old_gc = rb_gc_disable();
+
+    /* based on Tcl/Tk&#39;s Tcl_Merge() */
+    /* flagPtr = ALLOC_N(int, argc); */
+    flagPtr = (int *)ckalloc(sizeof(int) * argc);
+#if 0 /* use Tcl_Preserve/Release */
+    Tcl_Preserve((ClientData)flagPtr); /* XXXXXXXXXX */
+#endif
+
+    /* pass 1 */
+    len = 1;
+    for(num = 0; num &lt; argc; num++) {
+        if (OBJ_TAINTED(argv[num])) taint_flag = 1;
+        dst = StringValuePtr(argv[num]);
+#if TCL_MAJOR_VERSION &gt;= 8
+        len += Tcl_ScanCountedElement(dst, RSTRING_LEN(argv[num]),
+                                      &amp;flagPtr[num]) + 1;
+#else /* TCL_MAJOR_VERSION &lt; 8 */
+        len += Tcl_ScanElement(dst, &amp;flagPtr[num]) + 1;
+#endif
+    }
+
+    /* pass 2 */
+    /* result = (char *)Tcl_Alloc(len); */
+    result = (char *)ckalloc(len);
+#if 0 /* use Tcl_Preserve/Release */
+    Tcl_Preserve((ClientData)result);
+#endif
+    dst = result;
+    for(num = 0; num &lt; argc; num++) {
+#if TCL_MAJOR_VERSION &gt;= 8
+        len = Tcl_ConvertCountedElement(RSTRING_PTR(argv[num]),
+                                        RSTRING_LEN(argv[num]),
+                                        dst, flagPtr[num]);
+#else /* TCL_MAJOR_VERSION &lt; 8 */
+        len = Tcl_ConvertElement(RSTRING_PTR(argv[num]), dst, flagPtr[num]);
+#endif
+        dst += len;
+        *dst = &#39; &#39;;
+        dst++;
+    }
+    if (dst == result) {
+        *dst = 0;
+    } else {
+        dst[-1] = 0;
+    }
+
+#if 0 /* use Tcl_EventuallyFree */
+    Tcl_EventuallyFree((ClientData)flagPtr, TCL_DYNAMIC); /* XXXXXXXX */
+#else
+#if 0 /* use Tcl_Preserve/Release */
+    Tcl_Release((ClientData)flagPtr);
+#else
+    /* free(flagPtr); */
+    ckfree((char*)flagPtr);
+#endif
+#endif
+
+    /* create object */
+    str = rb_str_new(result, dst - result - 1);
+    if (taint_flag) RbTk_OBJ_UNTRUST(str);
+#if 0 /* use Tcl_EventuallyFree */
+    Tcl_EventuallyFree((ClientData)result, TCL_DYNAMIC); /* XXXXXXXX */
+#else
+#if 0 /* use Tcl_Preserve/Release */
+    Tcl_Release((ClientData)result); /* XXXXXXXXXXX */
+#else
+    /* Tcl_Free(result); */
+    ckfree(result);
+#endif
+#endif
+
+    if (old_gc == Qfalse) rb_gc_enable();
+    rb_thread_critical = thr_crit_bup;
+
+    return str;
+}</pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-_return_value">
+            
+              <b>_return_value</b>()
+            
+            <a href="../classes/TclTkIp.html#method-i-_return_value" name="method-i-_return_value" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>get return code from Tcl_Eval()</p>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-_return_value_source')" id="l_method-i-_return_value_source">show</a>
+                
+              </p>
+              <div id="method-i-_return_value_source" class="dyn-source">
+                <pre>static VALUE
+ip_retval(self)
+    VALUE self;
+{
+    struct tcltkip *ptr;        /* tcltkip data struct */
+
+    /* get the data strcut */
+    ptr = get_ip(self);
+
+    /* ip is deleted? */
+    if (deleted_ip(ptr)) {
+        return rb_tainted_str_new2(&quot;&quot;);
+    }
+
+    return (INT2FIX(ptr-&gt;return_value));
+}</pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-_set_global_var">
+            
+              <b>_set_global_var</b>(p1, p2)
+            
+            <a href="../classes/TclTkIp.html#method-i-_set_global_var" name="method-i-_set_global_var" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-_set_global_var_source')" id="l_method-i-_set_global_var_source">show</a>
+                
+              </p>
+              <div id="method-i-_set_global_var_source" class="dyn-source">
+                <pre>static VALUE
+ip_set_global_var(self, varname, value)
+    VALUE self;
+    VALUE varname;
+    VALUE value;
+{
+    return ip_set_variable(self, varname, value,
+                           INT2FIX(TCL_GLOBAL_ONLY | TCL_LEAVE_ERR_MSG));
+}</pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-_set_global_var2">
+            
+              <b>_set_global_var2</b>(p1, p2, p3)
+            
+            <a href="../classes/TclTkIp.html#method-i-_set_global_var2" name="method-i-_set_global_var2" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-_set_global_var2_source')" id="l_method-i-_set_global_var2_source">show</a>
+                
+              </p>
+              <div id="method-i-_set_global_var2_source" class="dyn-source">
+                <pre>static VALUE
+ip_set_global_var2(self, varname, index, value)
+    VALUE self;
+    VALUE varname;
+    VALUE index;
+    VALUE value;
+{
+    return ip_set_variable2(self, varname, index, value,
+                            INT2FIX(TCL_GLOBAL_ONLY | TCL_LEAVE_ERR_MSG));
+}</pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-_set_variable">
+            
+              <b>_set_variable</b>(p1, p2, p3)
+            
+            <a href="../classes/TclTkIp.html#method-i-_set_variable" name="method-i-_set_variable" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-_set_variable_source')" id="l_method-i-_set_variable_source">show</a>
+                
+              </p>
+              <div id="method-i-_set_variable_source" class="dyn-source">
+                <pre>static VALUE
+ip_set_variable(self, varname, value, flag)
+    VALUE self;
+    VALUE varname;
+    VALUE value;
+    VALUE flag;
+{
+    return ip_set_variable2(self, varname, Qnil, value, flag);
+}</pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-_set_variable2">
+            
+              <b>_set_variable2</b>(p1, p2, p3, p4)
+            
+            <a href="../classes/TclTkIp.html#method-i-_set_variable2" name="method-i-_set_variable2" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-_set_variable2_source')" id="l_method-i-_set_variable2_source">show</a>
+                
+              </p>
+              <div id="method-i-_set_variable2_source" class="dyn-source">
+                <pre>static VALUE
+ip_set_variable2(self, varname, index, value, flag)
+    VALUE self;
+    VALUE varname;
+    VALUE index;
+    VALUE value;
+    VALUE flag;
+{
+    VALUE argv[4];
+    VALUE retval;
+
+    StringValue(varname);
+    if (!NIL_P(index)) StringValue(index);
+    StringValue(value);
+
+    argv[0] = varname;
+    argv[1] = index;
+    argv[2] = value;
+    argv[3] = flag;
+
+    retval = tk_funcall(ip_set_variable2_core, 4, argv, self);
+
+    if (NIL_P(retval)) {
+        return rb_tainted_str_new2(&quot;&quot;);
+    } else {
+        return retval;
+    }
+}</pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-_split_tklist">
+            
+              <b>_split_tklist</b>(p1)
+            
+            <a href="../classes/TclTkIp.html#method-i-_split_tklist" name="method-i-_split_tklist" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-_split_tklist_source')" id="l_method-i-_split_tklist_source">show</a>
+                
+              </p>
+              <div id="method-i-_split_tklist_source" class="dyn-source">
+                <pre>static VALUE
+ip_split_tklist(self, list_str)
+    VALUE self;
+    VALUE list_str;
+{
+    return lib_split_tklist_core(self, list_str);
+}</pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-_thread_tkwait">
+            
+              <b>_thread_tkwait</b>(p1, p2)
+            
+            <a href="../classes/TclTkIp.html#method-i-_thread_tkwait" name="method-i-_thread_tkwait" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-_thread_tkwait_source')" id="l_method-i-_thread_tkwait_source">show</a>
+                
+              </p>
+              <div id="method-i-_thread_tkwait_source" class="dyn-source">
+                <pre>static VALUE
+ip_thread_tkwait(self, mode, target)
+    VALUE self;
+    VALUE mode;
+    VALUE target;
+{
+    VALUE argv[3];
+    volatile VALUE cmd_str = rb_str_new2(&quot;thread_tkwait&quot;);
+
+    argv[0] = cmd_str;
+    argv[1] = mode;
+    argv[2] = target;
+
+    return ip_invoke_with_position(3, argv, self, TCL_QUEUE_TAIL);
+}</pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-_thread_vwait">
+            
+              <b>_thread_vwait</b>(p1)
+            
+            <a href="../classes/TclTkIp.html#method-i-_thread_vwait" name="method-i-_thread_vwait" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-_thread_vwait_source')" id="l_method-i-_thread_vwait_source">show</a>
+                
+              </p>
+              <div id="method-i-_thread_vwait_source" class="dyn-source">
+                <pre>static VALUE
+ip_thread_vwait(self, var)
+    VALUE self;
+    VALUE var;
+{
+    VALUE argv[2];
+    volatile VALUE cmd_str = rb_str_new2(&quot;thread_vwait&quot;);
+
+    argv[0] = cmd_str;
+    argv[1] = var;
+
+    return ip_invoke_with_position(2, argv, self, TCL_QUEUE_TAIL);
+}</pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-_toUTF8">
+            
+              <b>_toUTF8</b>(p1, p2 = v2)
+            
+            <a href="../classes/TclTkIp.html#method-i-_toUTF8" name="method-i-_toUTF8" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-_toUTF8_source')" id="l_method-i-_toUTF8_source">show</a>
+                
+              </p>
+              <div id="method-i-_toUTF8_source" class="dyn-source">
+                <pre>static VALUE
+ip_toUTF8(argc, argv, self)
+    int   argc;
+    VALUE *argv;
+    VALUE self;
+{
+    VALUE str, encodename;
+
+    if (rb_scan_args(argc, argv, &quot;11&quot;, &amp;str, &amp;encodename) == 1) {
+        encodename = Qnil;
+    }
+    return lib_toUTF8_core(self, str, encodename);
+}</pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-_unset_global_var">
+            
+              <b>_unset_global_var</b>(p1)
+            
+            <a href="../classes/TclTkIp.html#method-i-_unset_global_var" name="method-i-_unset_global_var" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-_unset_global_var_source')" id="l_method-i-_unset_global_var_source">show</a>
+                
+              </p>
+              <div id="method-i-_unset_global_var_source" class="dyn-source">
+                <pre>static VALUE
+ip_unset_global_var(self, varname)
+    VALUE self;
+    VALUE varname;
+{
+    return ip_unset_variable(self, varname,
+                             INT2FIX(TCL_GLOBAL_ONLY | TCL_LEAVE_ERR_MSG));
+}</pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-_unset_global_var2">
+            
+              <b>_unset_global_var2</b>(p1, p2)
+            
+            <a href="../classes/TclTkIp.html#method-i-_unset_global_var2" name="method-i-_unset_global_var2" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-_unset_global_var2_source')" id="l_method-i-_unset_global_var2_source">show</a>
+                
+              </p>
+              <div id="method-i-_unset_global_var2_source" class="dyn-source">
+                <pre>static VALUE
+ip_unset_global_var2(self, varname, index)
+    VALUE self;
+    VALUE varname;
+    VALUE index;
+{
+    return ip_unset_variable2(self, varname, index,
+                              INT2FIX(TCL_GLOBAL_ONLY | TCL_LEAVE_ERR_MSG));
+}</pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-_unset_variable">
+            
+              <b>_unset_variable</b>(p1, p2)
+            
+            <a href="../classes/TclTkIp.html#method-i-_unset_variable" name="method-i-_unset_variable" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-_unset_variable_source')" id="l_method-i-_unset_variable_source">show</a>
+                
+              </p>
+              <div id="method-i-_unset_variable_source" class="dyn-source">
+                <pre>static VALUE
+ip_unset_variable(self, varname, flag)
+    VALUE self;
+    VALUE varname;
+    VALUE flag;
+{
+    return ip_unset_variable2(self, varname, Qnil, flag);
+}</pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-_unset_variable2">
+            
+              <b>_unset_variable2</b>(p1, p2, p3)
+            
+            <a href="../classes/TclTkIp.html#method-i-_unset_variable2" name="method-i-_unset_variable2" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-_unset_variable2_source')" id="l_method-i-_unset_variable2_source">show</a>
+                
+              </p>
+              <div id="method-i-_unset_variable2_source" class="dyn-source">
+                <pre>static VALUE
+ip_unset_variable2(self, varname, index, flag)
+    VALUE self;
+    VALUE varname;
+    VALUE index;
+    VALUE flag;
+{
+    VALUE argv[3];
+    VALUE retval;
+
+    StringValue(varname);
+    if (!NIL_P(index)) StringValue(index);
+
+    argv[0] = varname;
+    argv[1] = index;
+    argv[2] = flag;
+
+    retval = tk_funcall(ip_unset_variable2_core, 3, argv, self);
+
+    if (NIL_P(retval)) {
+        return rb_tainted_str_new2(&quot;&quot;);
+    } else {
+        return retval;
+    }
+}</pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-allow_ruby_exit-3D">
+            
+              <b>allow_ruby_exit=</b>(p1)
+            
+            <a href="../classes/TclTkIp.html#method-i-allow_ruby_exit-3D" name="method-i-allow_ruby_exit-3D" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>allow_ruby_exit = mode</p>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-allow_ruby_exit-3D_source')" id="l_method-i-allow_ruby_exit-3D_source">show</a>
+                
+              </p>
+              <div id="method-i-allow_ruby_exit-3D_source" class="dyn-source">
+                <pre>static VALUE
+ip_allow_ruby_exit_set(self, val)
+    VALUE self, val;
+{
+    struct tcltkip *ptr = get_ip(self);
+    Tk_Window mainWin;
+
+    rb_secure(4);
+
+    /* ip is deleted? */
+    if (deleted_ip(ptr)) {
+        rb_raise(rb_eRuntimeError, &quot;interpreter is deleted&quot;);
+    }
+
+    if (Tcl_IsSafe(ptr-&gt;ip)) {
+        rb_raise(rb_eSecurityError,
+                 &quot;insecure operation on a safe interpreter&quot;);
+    }
+
+    /*
+     *  Because of cross-threading, the following line may fail to find
+     *  the MainWindow, even if the Tcl/Tk interpreter has one or more.
+     *  But it has no problem. Current implementation of both type of
+     *  the &quot;exit&quot; command don&#39;t need maiinWin token.
+     */
+    mainWin = (tk_stubs_init_p())? Tk_MainWindow(ptr-&gt;ip): (Tk_Window)NULL;
+
+    if (RTEST(val)) {
+        ptr-&gt;allow_ruby_exit = 1;
+#if TCL_MAJOR_VERSION &gt;= 8
+        DUMP1(&quot;Tcl_CreateObjCommand(\&quot;exit\&quot;) --&gt; \&quot;ruby_exit\&quot;&quot;);
+        Tcl_CreateObjCommand(ptr-&gt;ip, &quot;exit&quot;, ip_RubyExitObjCmd,
+                             (ClientData)mainWin, (Tcl_CmdDeleteProc *)NULL);
+#else /* TCL_MAJOR_VERSION &lt; 8 */
+        DUMP1(&quot;Tcl_CreateCommand(\&quot;exit\&quot;) --&gt; \&quot;ruby_exit\&quot;&quot;);
+        Tcl_CreateCommand(ptr-&gt;ip, &quot;exit&quot;, ip_RubyExitCommand,
+                          (ClientData)mainWin, (Tcl_CmdDeleteProc *)NULL);
+#endif
+        return Qtrue;
+
+    } else {
+        ptr-&gt;allow_ruby_exit = 0;
+#if TCL_MAJOR_VERSION &gt;= 8
+        DUMP1(&quot;Tcl_CreateObjCommand(\&quot;exit\&quot;) --&gt; \&quot;interp_exit\&quot;&quot;);
+        Tcl_CreateObjCommand(ptr-&gt;ip, &quot;exit&quot;, ip_InterpExitObjCmd,
+                             (ClientData)mainWin, (Tcl_CmdDeleteProc *)NULL);
+#else /* TCL_MAJOR_VERSION &lt; 8 */
+        DUMP1(&quot;Tcl_CreateCommand(\&quot;exit\&quot;) --&gt; \&quot;interp_exit\&quot;&quot;);
+        Tcl_CreateCommand(ptr-&gt;ip, &quot;exit&quot;, ip_InterpExitCommand,
+                          (ClientData)mainWin, (Tcl_CmdDeleteProc *)NULL);
+#endif
+        return Qfalse;
+    }
+}</pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-allow_ruby_exit-3F">
+            
+              <b>allow_ruby_exit?</b>()
+            
+            <a href="../classes/TclTkIp.html#method-i-allow_ruby_exit-3F" name="method-i-allow_ruby_exit-3F" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>allow_ruby_exit?</p>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-allow_ruby_exit-3F_source')" id="l_method-i-allow_ruby_exit-3F_source">show</a>
+                
+              </p>
+              <div id="method-i-allow_ruby_exit-3F_source" class="dyn-source">
+                <pre>static VALUE
+ip_allow_ruby_exit_p(self)
+    VALUE self;
+{
+    struct tcltkip *ptr = get_ip(self);
+
+    /* ip is deleted? */
+    if (deleted_ip(ptr)) {
+        rb_raise(rb_eRuntimeError, &quot;interpreter is deleted&quot;);
+    }
+
+    if (ptr-&gt;allow_ruby_exit) {
+        return Qtrue;
+    } else {
+        return Qfalse;
+    }
+}</pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-create_dummy_encoding_for_tk">
+            
+              <b>create_dummy_encoding_for_tk</b>(p1)
+            
+            <a href="../classes/TclTkIp.html#method-i-create_dummy_encoding_for_tk" name="method-i-create_dummy_encoding_for_tk" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-create_dummy_encoding_for_tk_source')" id="l_method-i-create_dummy_encoding_for_tk_source">show</a>
+                
+              </p>
+              <div id="method-i-create_dummy_encoding_for_tk_source" class="dyn-source">
+                <pre>static VALUE
+create_dummy_encoding_for_tk(interp, name)
+     VALUE interp;
+     VALUE name;
+{
+  return create_dummy_encoding_for_tk_core(interp, name, Qtrue);
+}</pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-create_slave">
+            
+              <b>create_slave</b>(p1, p2 = v2)
+            
+            <a href="../classes/TclTkIp.html#method-i-create_slave" name="method-i-create_slave" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-create_slave_source')" id="l_method-i-create_slave_source">show</a>
+                
+              </p>
+              <div id="method-i-create_slave_source" class="dyn-source">
+                <pre>static VALUE
+ip_create_slave(argc, argv, self)
+    int   argc;
+    VALUE *argv;
+    VALUE self;
+{
+    struct tcltkip *master = get_ip(self);
+    VALUE safemode;
+    VALUE name;
+    VALUE callargv[2];
+
+    /* ip is deleted? */
+    if (deleted_ip(master)) {
+        rb_raise(rb_eRuntimeError,
+                 &quot;deleted master cannot create a new slave interpreter&quot;);
+    }
+
+    /* argument check */
+    if (rb_scan_args(argc, argv, &quot;11&quot;, &amp;name, &amp;safemode) == 1) {
+        safemode = Qfalse;
+    }
+    if (Tcl_IsSafe(master-&gt;ip) != 1
+        &amp;&amp; (safemode == Qfalse || NIL_P(safemode))) {
+        rb_secure(4);
+    }
+
+    StringValue(name);
+    callargv[0] = name;
+    callargv[1] = safemode;
+
+    return tk_funcall(ip_create_slave_core, 2, callargv, self);
+}</pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-delete">
+            
+              <b>delete</b>()
+            
+            <a href="../classes/TclTkIp.html#method-i-delete" name="method-i-delete" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>delete interpreter</p>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-delete_source')" id="l_method-i-delete_source">show</a>
+                
+              </p>
+              <div id="method-i-delete_source" class="dyn-source">
+                <pre>static VALUE
+ip_delete(self)
+    VALUE self;
+{
+    int  thr_crit_bup;
+    struct tcltkip *ptr = get_ip(self);
+
+    /* if (ptr == (struct tcltkip *)NULL || ptr-&gt;ip == (Tcl_Interp*)NULL) { */
+    if (deleted_ip(ptr)) {
+        DUMP1(&quot;delete deleted IP&quot;);
+        return Qnil;
+    }
+
+    thr_crit_bup = rb_thread_critical;
+    rb_thread_critical = Qtrue;
+
+    DUMP1(&quot;delete interp&quot;);
+    if (!Tcl_InterpDeleted(ptr-&gt;ip)) {
+      DUMP1(&quot;call ip_finalize&quot;);
+      ip_finalize(ptr-&gt;ip);
+
+      Tcl_DeleteInterp(ptr-&gt;ip);
+      Tcl_Release(ptr-&gt;ip);
+    }
+
+    rb_thread_critical = thr_crit_bup;
+
+    return Qnil;
+}</pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-deleted-3F">
+            
+              <b>deleted?</b>()
+            
+            <a href="../classes/TclTkIp.html#method-i-deleted-3F" name="method-i-deleted-3F" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-deleted-3F_source')" id="l_method-i-deleted-3F_source">show</a>
+                
+              </p>
+              <div id="method-i-deleted-3F_source" class="dyn-source">
+                <pre>static VALUE
+ip_is_deleted_p(self)
+    VALUE self;
+{
+    struct tcltkip *ptr = get_ip(self);
+
+    if (deleted_ip(ptr)) {
+        return Qtrue;
+    } else {
+        return Qfalse;
+    }
+}</pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-do_one_event">
+            
+              <b>do_one_event</b>(*args)
+            
+            <a href="../classes/TclTkIp.html#method-i-do_one_event" name="method-i-do_one_event" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-do_one_event_source')" id="l_method-i-do_one_event_source">show</a>
+                
+              </p>
+              <div id="method-i-do_one_event_source" class="dyn-source">
+                <pre>static VALUE
+ip_do_one_event(argc, argv, self)
+    int   argc;
+    VALUE *argv;
+    VALUE self;
+{
+    return lib_do_one_event_core(argc, argv, self, 0);
+}</pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-encoding_table">
+            
+              <b>encoding_table</b>()
+            
+            <a href="../classes/TclTkIp.html#method-i-encoding_table" name="method-i-encoding_table" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-encoding_table_source')" id="l_method-i-encoding_table_source">show</a>
+                
+              </p>
+              <div id="method-i-encoding_table_source" class="dyn-source">
+                <pre>static VALUE
+ip_get_encoding_table(interp)
+     VALUE interp;
+{
+  volatile VALUE table = Qnil;
+
+  table = rb_ivar_get(interp, ID_encoding_table);
+
+  if (NIL_P(table)) {
+    /* initialize encoding_table */
+    table = create_encoding_table(interp);
+    rb_define_singleton_method(table, &quot;get_name&quot;, encoding_table_get_name, 1);
+    rb_define_singleton_method(table, &quot;get_obj&quot;,  encoding_table_get_obj,  1);
+  }
+
+  return table;
+}</pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-get_eventloop_tick">
+            
+              <b>get_eventloop_tick</b>()
+            
+            <a href="../classes/TclTkIp.html#method-i-get_eventloop_tick" name="method-i-get_eventloop_tick" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-get_eventloop_tick_source')" id="l_method-i-get_eventloop_tick_source">show</a>
+                
+              </p>
+              <div id="method-i-get_eventloop_tick_source" class="dyn-source">
+                <pre>static VALUE
+ip_get_eventloop_tick(self)
+    VALUE self;
+{
+    return get_eventloop_tick(self);
+}</pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-get_eventloop_weight">
+            
+              <b>get_eventloop_weight</b>()
+            
+            <a href="../classes/TclTkIp.html#method-i-get_eventloop_weight" name="method-i-get_eventloop_weight" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-get_eventloop_weight_source')" id="l_method-i-get_eventloop_weight_source">show</a>
+                
+              </p>
+              <div id="method-i-get_eventloop_weight_source" class="dyn-source">
+                <pre>static VALUE
+ip_get_eventloop_weight(self)
+    VALUE self;
+{
+    return get_eventloop_weight(self);
+}</pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-get_no_event_wait">
+            
+              <b>get_no_event_wait</b>()
+            
+            <a href="../classes/TclTkIp.html#method-i-get_no_event_wait" name="method-i-get_no_event_wait" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-get_no_event_wait_source')" id="l_method-i-get_no_event_wait_source">show</a>
+                
+              </p>
+              <div id="method-i-get_no_event_wait_source" class="dyn-source">
+                <pre>static VALUE
+ip_get_no_event_wait(self)
+    VALUE self;
+{
+    return get_no_event_wait(self);
+}</pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-has_mainwindow-3F">
+            
+              <b>has_mainwindow?</b>()
+            
+            <a href="../classes/TclTkIp.html#method-i-has_mainwindow-3F" name="method-i-has_mainwindow-3F" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-has_mainwindow-3F_source')" id="l_method-i-has_mainwindow-3F_source">show</a>
+                
+              </p>
+              <div id="method-i-has_mainwindow-3F_source" class="dyn-source">
+                <pre>static VALUE
+ip_has_mainwindow_p(self)
+    VALUE self;
+{
+    return tk_funcall(ip_has_mainwindow_p_core, 0, (VALUE*)NULL, self);
+}</pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-invalid_namespace-3F">
+            
+              <b>invalid_namespace?</b>()
+            
+            <a href="../classes/TclTkIp.html#method-i-invalid_namespace-3F" name="method-i-invalid_namespace-3F" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>is deleted?</p>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-invalid_namespace-3F_source')" id="l_method-i-invalid_namespace-3F_source">show</a>
+                
+              </p>
+              <div id="method-i-invalid_namespace-3F_source" class="dyn-source">
+                <pre>static VALUE
+ip_has_invalid_namespace_p(self)
+    VALUE self;
+{
+    struct tcltkip *ptr = get_ip(self);
+
+    if (ptr == (struct tcltkip *)NULL || ptr-&gt;ip == (Tcl_Interp *)NULL) {
+        /* deleted IP */
+        return Qtrue;
+    }
+
+#if TCL_NAMESPACE_DEBUG
+    if (rbtk_invalid_namespace(ptr)) {
+        return Qtrue;
+    } else {
+        return Qfalse;
+    }
+#else
+    return Qfalse;
+#endif
+}</pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-mainloop">
+            
+              <b>mainloop</b>(*args)
+            
+            <a href="../classes/TclTkIp.html#method-i-mainloop" name="method-i-mainloop" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-mainloop_source')" id="l_method-i-mainloop_source">show</a>
+                
+              </p>
+              <div id="method-i-mainloop_source" class="dyn-source">
+                <pre>static VALUE
+ip_mainloop(argc, argv, self)
+    int   argc;
+    VALUE *argv;
+    VALUE self;
+{
+    volatile VALUE ret;
+    struct tcltkip *ptr = get_ip(self);
+
+    /* ip is deleted? */
+    if (deleted_ip(ptr)) {
+        return Qnil;
+    }
+
+    if (Tcl_GetMaster(ptr-&gt;ip) != (Tcl_Interp*)NULL) {
+        /* slave IP */
+        return Qnil;
+    }
+
+    eventloop_interp = ptr-&gt;ip;
+    ret = lib_mainloop(argc, argv, self);
+    eventloop_interp = (Tcl_Interp*)NULL;
+    return ret;
+}</pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-mainloop_abort_on_exception">
+            
+              <b>mainloop_abort_on_exception</b>()
+            
+            <a href="../classes/TclTkIp.html#method-i-mainloop_abort_on_exception" name="method-i-mainloop_abort_on_exception" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-mainloop_abort_on_exception_source')" id="l_method-i-mainloop_abort_on_exception_source">show</a>
+                
+              </p>
+              <div id="method-i-mainloop_abort_on_exception_source" class="dyn-source">
+                <pre>static VALUE
+ip_evloop_abort_on_exc(self)
+    VALUE self;
+{
+    return lib_evloop_abort_on_exc(self);
+}</pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-mainloop_abort_on_exception-3D">
+            
+              <b>mainloop_abort_on_exception=</b>(p1)
+            
+            <a href="../classes/TclTkIp.html#method-i-mainloop_abort_on_exception-3D" name="method-i-mainloop_abort_on_exception-3D" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-mainloop_abort_on_exception-3D_source')" id="l_method-i-mainloop_abort_on_exception-3D_source">show</a>
+                
+              </p>
+              <div id="method-i-mainloop_abort_on_exception-3D_source" class="dyn-source">
+                <pre>static VALUE
+ip_evloop_abort_on_exc_set(self, val)
+    VALUE self, val;
+{
+    struct tcltkip *ptr = get_ip(self);
+
+    rb_secure(4);
+
+    /* ip is deleted? */
+    if (deleted_ip(ptr)) {
+        return lib_evloop_abort_on_exc(self);
+    }
+
+    if (Tcl_GetMaster(ptr-&gt;ip) != (Tcl_Interp*)NULL) {
+        /* slave IP */
+        return lib_evloop_abort_on_exc(self);
+    }
+    return lib_evloop_abort_on_exc_set(self, val);
+}</pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-mainloop_watchdog">
+            
+              <b>mainloop_watchdog</b>(*args)
+            
+            <a href="../classes/TclTkIp.html#method-i-mainloop_watchdog" name="method-i-mainloop_watchdog" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-mainloop_watchdog_source')" id="l_method-i-mainloop_watchdog_source">show</a>
+                
+              </p>
+              <div id="method-i-mainloop_watchdog_source" class="dyn-source">
+                <pre>static VALUE
+ip_mainloop_watchdog(argc, argv, self)
+    int   argc;
+    VALUE *argv;
+    VALUE self;
+{
+    struct tcltkip *ptr = get_ip(self);
+
+    /* ip is deleted? */
+    if (deleted_ip(ptr)) {
+        return Qnil;
+    }
+
+    if (Tcl_GetMaster(ptr-&gt;ip) != (Tcl_Interp*)NULL) {
+        /* slave IP */
+        return Qnil;
+    }
+    return lib_mainloop_watchdog(argc, argv, self);
+}</pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-make_safe">
+            
+              <b>make_safe</b>()
+            
+            <a href="../classes/TclTkIp.html#method-i-make_safe" name="method-i-make_safe" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-make_safe_source')" id="l_method-i-make_safe_source">show</a>
+                
+              </p>
+              <div id="method-i-make_safe_source" class="dyn-source">
+                <pre>static VALUE
+ip_make_safe(self)
+    VALUE self;
+{
+    struct tcltkip *ptr = get_ip(self);
+
+    /* ip is deleted? */
+    if (deleted_ip(ptr)) {
+        rb_raise(rb_eRuntimeError, &quot;interpreter is deleted&quot;);
+    }
+
+    return tk_funcall(ip_make_safe_core, 0, (VALUE*)NULL, self);
+}</pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-new">
+            
+              <b>new</b>(*args)
+            
+            <a href="../classes/TclTkIp.html#method-i-new" name="method-i-new" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-new_source')" id="l_method-i-new_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/3a47cf3395dd4c4fe8bdd5df13aab698f2ca314b/ext/tk/lib/multi-tk.rb#L27" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-new_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/multi-tk.rb, line 27</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">new</span>(<span class="ruby-operator">*</span><span class="ruby-identifier">args</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-constant">Thread</span>.<span class="ruby-identifier">current</span>.<span class="ruby-identifier">group</span> <span class="ruby-operator">!=</span> <span class="ruby-constant">ThreadGroup</span><span class="ruby-operator">::</span><span class="ruby-constant">Default</span>
+    <span class="ruby-identifier">raise</span> <span class="ruby-constant">SecurityError</span>, <span class="ruby-string">&#39;only ThreadGroup::Default can call TclTkIp.new&#39;</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">obj</span> = <span class="ruby-identifier">__new__</span>(<span class="ruby-operator">*</span><span class="ruby-identifier">args</span>)
+  <span class="ruby-identifier">obj</span>.<span class="ruby-identifier">instance_eval</span>{
+    <span class="ruby-ivar">@force_default_encoding</span> <span class="ruby-operator">||=</span> <span class="ruby-constant">TkUtil</span>.<span class="ruby-identifier">untrust</span>([<span class="ruby-keyword">false</span>])
+    <span class="ruby-ivar">@encoding</span> <span class="ruby-operator">||=</span> <span class="ruby-constant">TkUtil</span>.<span class="ruby-identifier">untrust</span>([<span class="ruby-keyword">nil</span>])
+    <span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">@encoding</span>.<span class="ruby-identifier">to_s</span>; <span class="ruby-keyword">self</span>.<span class="ruby-identifier">join</span>(<span class="ruby-keyword">nil</span>); <span class="ruby-keyword">end</span>
+  }
+  <span class="ruby-identifier">obj</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-restart">
+            
+              <b>restart</b>()
+            
+            <a href="../classes/TclTkIp.html#method-i-restart" name="method-i-restart" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-restart_source')" id="l_method-i-restart_source">show</a>
+                
+              </p>
+              <div id="method-i-restart_source" class="dyn-source">
+                <pre>static VALUE
+ip_restart(self)
+    VALUE self;
+{
+    struct tcltkip *ptr = get_ip(self);
+
+    rb_secure(4);
+
+    tcl_stubs_check();
+
+    /* ip is deleted? */
+    if (deleted_ip(ptr)) {
+        rb_raise(rb_eRuntimeError, &quot;interpreter is deleted&quot;);
+    }
+
+    if (Tcl_GetMaster(ptr-&gt;ip) != (Tcl_Interp*)NULL) {
+        /* slave IP */
+        return Qnil;
+    }
+    return lib_restart(self);
+}</pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-safe-3F">
+            
+              <b>safe?</b>()
+            
+            <a href="../classes/TclTkIp.html#method-i-safe-3F" name="method-i-safe-3F" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>is safe?</p>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-safe-3F_source')" id="l_method-i-safe-3F_source">show</a>
+                
+              </p>
+              <div id="method-i-safe-3F_source" class="dyn-source">
+                <pre>static VALUE
+ip_is_safe_p(self)
+    VALUE self;
+{
+    struct tcltkip *ptr = get_ip(self);
+
+    /* ip is deleted? */
+    if (deleted_ip(ptr)) {
+        rb_raise(rb_eRuntimeError, &quot;interpreter is deleted&quot;);
+    }
+
+    if (Tcl_IsSafe(ptr-&gt;ip)) {
+        return Qtrue;
+    } else {
+        return Qfalse;
+    }
+}</pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-set_eventloop_tick">
+            
+              <b>set_eventloop_tick</b>(p1)
+            
+            <a href="../classes/TclTkIp.html#method-i-set_eventloop_tick" name="method-i-set_eventloop_tick" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-set_eventloop_tick_source')" id="l_method-i-set_eventloop_tick_source">show</a>
+                
+              </p>
+              <div id="method-i-set_eventloop_tick_source" class="dyn-source">
+                <pre>static VALUE
+ip_set_eventloop_tick(self, tick)
+    VALUE self;
+    VALUE tick;
+{
+    struct tcltkip *ptr = get_ip(self);
+
+    /* ip is deleted? */
+    if (deleted_ip(ptr)) {
+        return get_eventloop_tick(self);
+    }
+
+    if (Tcl_GetMaster(ptr-&gt;ip) != (Tcl_Interp*)NULL) {
+        /* slave IP */
+        return get_eventloop_tick(self);
+    }
+    return set_eventloop_tick(self, tick);
+}</pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-set_eventloop_weight">
+            
+              <b>set_eventloop_weight</b>(p1, p2)
+            
+            <a href="../classes/TclTkIp.html#method-i-set_eventloop_weight" name="method-i-set_eventloop_weight" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-set_eventloop_weight_source')" id="l_method-i-set_eventloop_weight_source">show</a>
+                
+              </p>
+              <div id="method-i-set_eventloop_weight_source" class="dyn-source">
+                <pre>static VALUE
+ip_set_eventloop_weight(self, loop_max, no_event)
+    VALUE self;
+    VALUE loop_max;
+    VALUE no_event;
+{
+    struct tcltkip *ptr = get_ip(self);
+
+    /* ip is deleted? */
+    if (deleted_ip(ptr)) {
+        return get_eventloop_weight(self);
+    }
+
+    if (Tcl_GetMaster(ptr-&gt;ip) != (Tcl_Interp*)NULL) {
+        /* slave IP */
+        return get_eventloop_weight(self);
+    }
+    return set_eventloop_weight(self, loop_max, no_event);
+}</pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-set_max_block_time">
+            
+              <b>set_max_block_time</b>(p1)
+            
+            <a href="../classes/TclTkIp.html#method-i-set_max_block_time" name="method-i-set_max_block_time" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-set_max_block_time_source')" id="l_method-i-set_max_block_time_source">show</a>
+                
+              </p>
+              <div id="method-i-set_max_block_time_source" class="dyn-source">
+                <pre>static VALUE
+set_max_block_time(self, time)
+    VALUE self;
+    VALUE time;
+{
+    struct Tcl_Time tcl_time;
+    VALUE divmod;
+
+    switch(TYPE(time)) {
+    case T_FIXNUM:
+    case T_BIGNUM:
+        /* time is micro-second value */
+        divmod = rb_funcall(time, rb_intern(&quot;divmod&quot;), 1, LONG2NUM(1000000));
+        tcl_time.sec  = NUM2LONG(RARRAY_PTR(divmod)[0]);
+        tcl_time.usec = NUM2LONG(RARRAY_PTR(divmod)[1]);
+        break;
+
+    case T_FLOAT:
+        /* time is second value */
+        divmod = rb_funcall(time, rb_intern(&quot;divmod&quot;), 1, INT2FIX(1));
+        tcl_time.sec  = NUM2LONG(RARRAY_PTR(divmod)[0]);
+        tcl_time.usec = (long)(NUM2DBL(RARRAY_PTR(divmod)[1]) * 1000000);
+
+    default:
+        {
+            VALUE tmp = rb_funcall(time, ID_inspect, 0, 0);
+            rb_raise(rb_eArgError, &quot;invalid value for time: &#39;%s&#39;&quot;,
+                     StringValuePtr(tmp));
+        }
+    }
+
+    Tcl_SetMaxBlockTime(&amp;tcl_time);
+
+    return Qnil;
+}</pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-set_no_event_wait">
+            
+              <b>set_no_event_wait</b>(p1)
+            
+            <a href="../classes/TclTkIp.html#method-i-set_no_event_wait" name="method-i-set_no_event_wait" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-set_no_event_wait_source')" id="l_method-i-set_no_event_wait_source">show</a>
+                
+              </p>
+              <div id="method-i-set_no_event_wait_source" class="dyn-source">
+                <pre>static VALUE
+ip_set_no_event_wait(self, wait)
+    VALUE self;
+    VALUE wait;
+{
+    struct tcltkip *ptr = get_ip(self);
+
+    /* ip is deleted? */
+    if (deleted_ip(ptr)) {
+        return get_no_event_wait(self);
+    }
+
+    if (Tcl_GetMaster(ptr-&gt;ip) != (Tcl_Interp*)NULL) {
+        /* slave IP */
+        return get_no_event_wait(self);
+    }
+    return set_no_event_wait(self, wait);
+}</pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-slave_of-3F">
+            
+              <b>slave_of?</b>(p1)
+            
+            <a href="../classes/TclTkIp.html#method-i-slave_of-3F" name="method-i-slave_of-3F" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>self is slave of master?</p>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-slave_of-3F_source')" id="l_method-i-slave_of-3F_source">show</a>
+                
+              </p>
+              <div id="method-i-slave_of-3F_source" class="dyn-source">
+                <pre>static VALUE
+ip_is_slave_of_p(self, master)
+    VALUE self, master;
+{
+    if (!rb_obj_is_kind_of(master, tcltkip_class)) {
+        rb_raise(rb_eArgError, &quot;expected TclTkIp object&quot;);
+    }
+
+    if (Tcl_GetMaster(get_ip(self)-&gt;ip) == get_ip(master)-&gt;ip) {
+      return Qtrue;
+    } else {
+      return Qfalse;
+    }
+}</pre>
+              </div>
+            </div>
+            
+          </div>
+                    </div>
+
+    </div>
+  </body>
+</html>    

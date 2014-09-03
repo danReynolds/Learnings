@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>yaml.rb</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="../../css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../../css/main.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../../css/github.css" type="text/css" media="screen" />
+<script src="../../js/jquery-1.3.2.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../js/jquery-effect.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../js/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+
+<body>     
+    <div class="banner">
+        
+        <h1>
+            yaml.rb
+        </h1>
+        <ul class="files">
+            <li>lib/yaml.rb</li>
+            <li>Last modified: 2014-05-16 18:32:34 +0000</li>
+        </ul>
+    </div>
+
+    <div id="bodyContent">
+        <div id="content">
+  
+    <div class="description">
+      
+<p>YAML Ain&#39;t Markup Language</p>
+
+<p>This module provides a Ruby interface for data serialization in YAML
+format.</p>
+
+<p>You can choose from one of two YAML engines that ship with Ruby 1.9. By
+default <a href="../../classes/Psych.html">Psych</a> is used but the old
+unmaintained <a href="../../classes/Syck.html">Syck</a> may chosen.</p>
+
+<h2 id="label-Usage">Usage</h2>
+
+<p>Working with YAML can be very simple, for example:</p>
+
+<pre><code>require &#39;yaml&#39; # STEP ONE, REQUIRE YAML!
+# Parse a YAML string
+YAML.load(&quot;--- foo&quot;) #=&gt; &quot;foo&quot;
+
+# Emit some YAML
+YAML.dump(&quot;foo&quot;)     # =&gt; &quot;--- foo\n...\n&quot;
+{ :a =&gt; &#39;b&#39;}.to_yaml  # =&gt; &quot;---\n:a: b\n&quot;
+</code></pre>
+
+<h2 id="label-Security">Security</h2>
+
+<p>Do not use YAML to load untrusted data. Doing so is unsafe and could allow
+malicious input to execute arbitrary code inside your application. Please
+see doc/security.rdoc for more information.</p>
+
+<h2 id="label-Syck"><a href="../../classes/Syck.html">Syck</a></h2>
+
+<p><a href="../../classes/Syck.html">Syck</a> was the original for YAML
+implementation in Ruby&#39;s standard library developed by why the lucky
+stiff.</p>
+
+<p>If you prefer, you can still use <a href="../../classes/Syck.html">Syck</a>
+by changing the YAML::ENGINE like so:</p>
+
+<pre><code>YAML::ENGINE.yamler = &#39;syck&#39;
+# switch back to the default Psych
+YAML::ENGINE.yamler = &#39;psych&#39;</code></pre>
+
+<p>In older Ruby versions, ie. &lt;= 1.9, <a
+href="../../classes/Syck.html">Syck</a> is still provided, however it was
+completely removed with the release of Ruby 2.0.0.</p>
+
+<h2 id="label-More+info">More info</h2>
+
+<p>For more advanced details on the implementation see <a
+href="../../classes/Psych.html">Psych</a>, and also check out <a
+href="http://yaml.org">yaml.org</a> for spec details and other helpful
+information.</p>
+
+    </div>
+  
+
+
+  
+    <!-- File only: requires -->
+    <div class="sectiontitle">Required Files</div>
+    <ul>
+      
+        <li>psych</li>
+      
+        <li>syck</li>
+      
+    </ul>
+  
+
+
+  
+  
+
+
+  
+    <!-- Namespace -->
+    <div class="sectiontitle">Namespace</div>
+    <ul>
+      
+        <li>
+          <span class="type">MODULE</span>
+          <a href="../../classes/Psych.html">Psych</a>
+        </li>
+      
+        <li>
+          <span class="type">MODULE</span>
+          <a href="../../classes/Syck.html">Syck</a>
+        </li>
+      
+        <li>
+          <span class="type">MODULE</span>
+          <a href="../../classes/YAML.html">YAML</a>
+        </li>
+      
+    </ul>
+  
+
+
+  
+
+  
+
+
+
+  
+
+    
+
+    
+
+    
+
+
+    
+
+
+    <!-- Methods -->
+              </div>
+
+    </div>
+  </body>
+</html>

@@ -1,0 +1,576 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>Tk::Tcllib::History</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="../../../css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../../../css/main.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../../../css/github.css" type="text/css" media="screen" />
+<script src="../../../js/jquery-1.3.2.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../../js/jquery-effect.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../../js/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+
+<body>     
+    <div class="banner">
+        
+        <h1>
+            <span class="type">Module</span> 
+            Tk::Tcllib::History 
+            
+        </h1>
+        <ul class="files">
+            
+            <li><a href="../../../files/ext/tk/lib/tkextlib/tcllib/history_rb.html">ext/tk/lib/tkextlib/tcllib/history.rb</a></li>
+            
+        </ul>
+    </div>
+    <div id="bodyContent">
+        <div id="content">
+  
+
+
+  
+
+
+  
+  
+
+
+  
+
+
+  
+    <!-- Method ref -->
+    <div class="sectiontitle">Methods</div>
+    <dl class="methods">
+      
+        <dt>H</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-history_add">history_add</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-history_clear">history_clear</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-history_configinfo">history_configinfo</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-history_configure">history_configure</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-history_get">history_get</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-history_remove">history_remove</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>I</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-init">init</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>P</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-package_name">package_name</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-c-package_version">package_version</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>R</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-remove">remove</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+    </dl>
+  
+
+  
+
+
+
+  
+
+    
+
+    
+
+    
+      <!-- Section constants -->
+      <div class="sectiontitle">Constants</div>
+      <table border='0' cellpadding='5'>
+        
+          <tr valign='top'>
+            <td class="attr-name">PACKAGE_NAME</td>
+            <td>=</td>
+            <td class="attr-value">&#39;history&#39;.freeze</td>
+          </tr>
+          
+            <tr valign='top'>
+              <td>&nbsp;</td>
+              <td colspan="2" class="attr-desc"></td>
+            </tr>
+          
+        
+      </table>
+    
+
+
+    
+
+
+    <!-- Methods -->
+    
+      <div class="sectiontitle">Class Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-c-init">
+            
+              <b>init</b>(entry, length=None)
+            
+            <a href="../../../classes/Tk/Tcllib/History.html#method-c-init" name="method-c-init" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-init_source')" id="l_method-c-init_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/3dd3b2136b0050c669d0881ae804b1fae8ea6567/ext/tk/lib/tkextlib/tcllib/history.rb#L36" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-init_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/tcllib/history.rb, line 36</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">init</span>(<span class="ruby-identifier">entry</span>, <span class="ruby-identifier">length</span>=<span class="ruby-constant">None</span>)
+  <span class="ruby-identifier">tk_call_without_enc</span>(<span class="ruby-string">&#39;::history::init&#39;</span>, <span class="ruby-identifier">entry</span>.<span class="ruby-identifier">path</span>, <span class="ruby-identifier">length</span>)
+  <span class="ruby-identifier">entry</span>.<span class="ruby-identifier">extend</span>(<span class="ruby-keyword">self</span>)  <span class="ruby-comment"># add methods to treat history to the entry widget</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-package_name">
+            
+              <b>package_name</b>()
+            
+            <a href="../../../classes/Tk/Tcllib/History.html#method-c-package_name" name="method-c-package_name" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-package_name_source')" id="l_method-c-package_name_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/3dd3b2136b0050c669d0881ae804b1fae8ea6567/ext/tk/lib/tkextlib/tcllib/history.rb#L19" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-package_name_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/tcllib/history.rb, line 19</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">package_name</span>
+  <span class="ruby-constant">PACKAGE_NAME</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-package_version">
+            
+              <b>package_version</b>()
+            
+            <a href="../../../classes/Tk/Tcllib/History.html#method-c-package_version" name="method-c-package_version" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-package_version_source')" id="l_method-c-package_version_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/3dd3b2136b0050c669d0881ae804b1fae8ea6567/ext/tk/lib/tkextlib/tcllib/history.rb#L23" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-package_version_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/tcllib/history.rb, line 23</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">package_version</span>
+  <span class="ruby-keyword">begin</span>
+    <span class="ruby-constant">TkPackage</span>.<span class="ruby-identifier">require</span>(<span class="ruby-string">&#39;history&#39;</span>)
+  <span class="ruby-keyword">rescue</span>
+    <span class="ruby-string">&#39;&#39;</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-remove">
+            
+              <b>remove</b>(entry)
+            
+            <a href="../../../classes/Tk/Tcllib/History.html#method-c-remove" name="method-c-remove" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-remove_source')" id="l_method-c-remove_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/3dd3b2136b0050c669d0881ae804b1fae8ea6567/ext/tk/lib/tkextlib/tcllib/history.rb#L41" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-remove_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/tcllib/history.rb, line 41</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">remove</span>(<span class="ruby-identifier">entry</span>)
+  <span class="ruby-identifier">tk_call_without_enc</span>(<span class="ruby-string">&#39;::history::remove&#39;</span>, <span class="ruby-identifier">entry</span>.<span class="ruby-identifier">path</span>)
+  <span class="ruby-identifier">entry</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                  
+      <div class="sectiontitle">Instance Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-i-history_add">
+            
+              <b>history_add</b>(text)
+            
+            <a href="../../../classes/Tk/Tcllib/History.html#method-i-history_add" name="method-i-history_add" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-history_add_source')" id="l_method-i-history_add_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/3dd3b2136b0050c669d0881ae804b1fae8ea6567/ext/tk/lib/tkextlib/tcllib/history.rb#L51" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-history_add_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/tcllib/history.rb, line 51</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">history_add</span>(<span class="ruby-identifier">text</span>)
+  <span class="ruby-identifier">tk_call</span>(<span class="ruby-string">&#39;::history::add&#39;</span>, <span class="ruby-ivar">@path</span>, <span class="ruby-identifier">text</span>)
+  <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-history_clear">
+            
+              <b>history_clear</b>()
+            
+            <a href="../../../classes/Tk/Tcllib/History.html#method-i-history_clear" name="method-i-history_clear" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-history_clear_source')" id="l_method-i-history_clear_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/3dd3b2136b0050c669d0881ae804b1fae8ea6567/ext/tk/lib/tkextlib/tcllib/history.rb#L60" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-history_clear_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/tcllib/history.rb, line 60</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">history_clear</span>
+  <span class="ruby-identifier">tk_call_without_enc</span>(<span class="ruby-string">&#39;::history::clear&#39;</span>, <span class="ruby-ivar">@path</span>)
+  <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-history_configinfo">
+            
+              <b>history_configinfo</b>(opt)
+            
+            <a href="../../../classes/Tk/Tcllib/History.html#method-i-history_configinfo" name="method-i-history_configinfo" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-history_configinfo_source')" id="l_method-i-history_configinfo_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/3dd3b2136b0050c669d0881ae804b1fae8ea6567/ext/tk/lib/tkextlib/tcllib/history.rb#L70" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-history_configinfo_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/tcllib/history.rb, line 70</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">history_configinfo</span>(<span class="ruby-identifier">opt</span>)
+  <span class="ruby-identifier">tk_call</span>(<span class="ruby-string">&#39;::history::configure&#39;</span>, <span class="ruby-ivar">@path</span>, <span class="ruby-identifier">opt</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-history_configure">
+            
+              <b>history_configure</b>(opt, value)
+            
+            <a href="../../../classes/Tk/Tcllib/History.html#method-i-history_configure" name="method-i-history_configure" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-history_configure_source')" id="l_method-i-history_configure_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/3dd3b2136b0050c669d0881ae804b1fae8ea6567/ext/tk/lib/tkextlib/tcllib/history.rb#L65" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-history_configure_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/tcllib/history.rb, line 65</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">history_configure</span>(<span class="ruby-identifier">opt</span>, <span class="ruby-identifier">value</span>)
+  <span class="ruby-identifier">tk_call</span>(<span class="ruby-string">&#39;::history::configure&#39;</span>, <span class="ruby-ivar">@path</span>, <span class="ruby-identifier">opt</span>, <span class="ruby-identifier">value</span>)
+  <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-history_get">
+            
+              <b>history_get</b>()
+            
+            <a href="../../../classes/Tk/Tcllib/History.html#method-i-history_get" name="method-i-history_get" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-history_get_source')" id="l_method-i-history_get_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/3dd3b2136b0050c669d0881ae804b1fae8ea6567/ext/tk/lib/tkextlib/tcllib/history.rb#L56" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-history_get_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/tcllib/history.rb, line 56</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">history_get</span>
+  <span class="ruby-identifier">simplelist</span>(<span class="ruby-identifier">tk_call_without_enc</span>(<span class="ruby-string">&#39;::history::get&#39;</span>, <span class="ruby-ivar">@path</span>))
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-history_remove">
+            
+              <b>history_remove</b>()
+            
+            <a href="../../../classes/Tk/Tcllib/History.html#method-i-history_remove" name="method-i-history_remove" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-history_remove_source')" id="l_method-i-history_remove_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/3dd3b2136b0050c669d0881ae804b1fae8ea6567/ext/tk/lib/tkextlib/tcllib/history.rb#L46" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-history_remove_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/tcllib/history.rb, line 46</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">history_remove</span>
+  <span class="ruby-identifier">tk_call_without_enc</span>(<span class="ruby-string">&#39;::history::remove&#39;</span>, <span class="ruby-ivar">@path</span>)
+  <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                    </div>
+
+    </div>
+  </body>
+</html>    

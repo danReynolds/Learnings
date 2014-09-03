@@ -1,0 +1,453 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>TkPack</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="../css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/main.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/github.css" type="text/css" media="screen" />
+<script src="../js/jquery-1.3.2.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/jquery-effect.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+
+<body>     
+    <div class="banner">
+        
+        <h1>
+            <span class="type">Module</span> 
+            TkPack 
+            
+        </h1>
+        <ul class="files">
+            
+            <li><a href="../files/ext/tk/lib/tk/pack_rb.html">ext/tk/lib/tk/pack.rb</a></li>
+            
+        </ul>
+    </div>
+    <div id="bodyContent">
+        <div id="content">
+  
+
+
+  
+
+
+  
+  
+
+
+  
+
+
+  
+    <!-- Method ref -->
+    <div class="sectiontitle">Methods</div>
+    <dl class="methods">
+      
+        <dt>C</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-configure">configure</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>F</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-forget">forget</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>I</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-info">info</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>P</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-pack">pack</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-c-propagate">propagate</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>S</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-slaves">slaves</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+    </dl>
+  
+
+  
+    <!-- Includes -->
+    <div class="sectiontitle">Included Modules</div>
+    <ul>
+      
+        <li>
+          
+            <a href="Tk.html">
+              Tk
+            </a>
+          
+        </li>
+      
+    </ul>
+  
+
+
+
+  
+
+    
+
+    
+
+    
+      <!-- Section constants -->
+      <div class="sectiontitle">Constants</div>
+      <table border='0' cellpadding='5'>
+        
+          <tr valign='top'>
+            <td class="attr-name">TkCommandNames</td>
+            <td>=</td>
+            <td class="attr-value">[&#39;pack&#39;.freeze].freeze</td>
+          </tr>
+          
+            <tr valign='top'>
+              <td>&nbsp;</td>
+              <td colspan="2" class="attr-desc"></td>
+            </tr>
+          
+        
+      </table>
+    
+
+
+    
+
+
+    <!-- Methods -->
+    
+      <div class="sectiontitle">Class Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-c-configure">
+            
+              <b>configure</b>(*args)
+            
+            <a href="../classes/TkPack.html#method-c-configure" name="method-c-configure" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>def configure(win, *args)</p>
+
+<pre><code>if args[-1].kind_of?(Hash)
+  opts = args.pop
+else
+  opts = {}
+end
+params = []
+# params.push((win.kind_of?(TkObject))? win.epath: win)
+params.push(_epath(win))
+args.each{|win|
+  # params.push((win.kind_of?(TkObject))? win.epath: win)
+  params.push(_epath(win))
+}
+opts.each{|k, v|
+  params.push(&quot;-#{k}&quot;)
+  # params.push((v.kind_of?(TkObject))? v.epath: v)
+  params.push(_epath(v))
+}
+tk_call_without_enc(&quot;pack&quot;, &#39;configure&#39;, *params)
+</code></pre>
+
+<p>end</p>
+            </div>
+          
+          
+          
+            <div class="aka">
+              Also aliased as: <a href="TkPack.html#method-i-pack">pack</a>
+            </div>
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-configure_source')" id="l_method-c-configure_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/e6697a6405f1330ef071220396b8afef1cd1079a/ext/tk/lib/tk/pack.rb#L34" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-configure_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tk/pack.rb, line 34</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">configure</span>(<span class="ruby-operator">*</span><span class="ruby-identifier">args</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">args</span>[<span class="ruby-number">-1</span>].<span class="ruby-identifier">kind_of?</span>(<span class="ruby-constant">Hash</span>)
+    <span class="ruby-identifier">opts</span> = <span class="ruby-identifier">args</span>.<span class="ruby-identifier">pop</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">opts</span> = {}
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">fail</span> <span class="ruby-constant">ArgumentError</span>, <span class="ruby-string">&#39;no widget is given&#39;</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">args</span>.<span class="ruby-identifier">empty?</span>
+  <span class="ruby-identifier">params</span> = []
+  <span class="ruby-identifier">args</span>.<span class="ruby-identifier">flatten</span>(<span class="ruby-number">1</span>).<span class="ruby-identifier">each</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">win</span><span class="ruby-operator">|</span> <span class="ruby-identifier">params</span>.<span class="ruby-identifier">push</span>(<span class="ruby-identifier">_epath</span>(<span class="ruby-identifier">win</span>))}
+  <span class="ruby-identifier">opts</span>.<span class="ruby-identifier">each</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">k</span>, <span class="ruby-identifier">v</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">params</span>.<span class="ruby-identifier">push</span>(<span class="ruby-node">&quot;-#{k}&quot;</span>)
+    <span class="ruby-identifier">params</span>.<span class="ruby-identifier">push</span>(<span class="ruby-identifier">_epath</span>(<span class="ruby-identifier">v</span>))  <span class="ruby-comment"># have to use &#39;epath&#39; (hash_kv() is unavailable)</span>
+  }
+  <span class="ruby-identifier">tk_call_without_enc</span>(<span class="ruby-string">&quot;pack&quot;</span>, <span class="ruby-string">&#39;configure&#39;</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">params</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-forget">
+            
+              <b>forget</b>(*args)
+            
+            <a href="../classes/TkPack.html#method-c-forget" name="method-c-forget" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-forget_source')" id="l_method-c-forget_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/e6697a6405f1330ef071220396b8afef1cd1079a/ext/tk/lib/tk/pack.rb#L51" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-forget_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tk/pack.rb, line 51</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">forget</span>(<span class="ruby-operator">*</span><span class="ruby-identifier">args</span>)
+  <span class="ruby-keyword">return</span> <span class="ruby-string">&#39;&#39;</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">args</span>.<span class="ruby-identifier">size</span> <span class="ruby-operator">==</span> <span class="ruby-number">0</span>
+  <span class="ruby-identifier">wins</span> = <span class="ruby-identifier">args</span>.<span class="ruby-identifier">collect</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">win</span><span class="ruby-operator">|</span>
+    <span class="ruby-comment"># (win.kind_of?(TkObject))? win.epath: win</span>
+    <span class="ruby-identifier">_epath</span>(<span class="ruby-identifier">win</span>)
+  }
+  <span class="ruby-identifier">tk_call_without_enc</span>(<span class="ruby-string">&#39;pack&#39;</span>, <span class="ruby-string">&#39;forget&#39;</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">wins</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-info">
+            
+              <b>info</b>(slave)
+            
+            <a href="../classes/TkPack.html#method-c-info" name="method-c-info" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-info_source')" id="l_method-c-info_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/e6697a6405f1330ef071220396b8afef1cd1079a/ext/tk/lib/tk/pack.rb#L60" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-info_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tk/pack.rb, line 60</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">info</span>(<span class="ruby-identifier">slave</span>)
+  <span class="ruby-comment"># slave = slave.epath if slave.kind_of?(TkObject)</span>
+  <span class="ruby-identifier">slave</span> = <span class="ruby-identifier">_epath</span>(<span class="ruby-identifier">slave</span>)
+  <span class="ruby-identifier">ilist</span> = <span class="ruby-identifier">list</span>(<span class="ruby-identifier">tk_call_without_enc</span>(<span class="ruby-string">&#39;pack&#39;</span>, <span class="ruby-string">&#39;info&#39;</span>, <span class="ruby-identifier">slave</span>))
+  <span class="ruby-identifier">info</span> = {}
+  <span class="ruby-keyword">while</span> <span class="ruby-identifier">key</span> = <span class="ruby-identifier">ilist</span>.<span class="ruby-identifier">shift</span>
+    <span class="ruby-identifier">info</span>[<span class="ruby-identifier">key</span>[<span class="ruby-number">1</span><span class="ruby-operator">..</span><span class="ruby-number">-1</span>]] = <span class="ruby-identifier">ilist</span>.<span class="ruby-identifier">shift</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-identifier">info</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-pack">
+            
+              <b>pack</b>(*args)
+            
+            <a href="../classes/TkPack.html#method-c-pack" name="method-c-pack" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+            <div class="aka">
+              Alias for: <a href="TkPack.html#method-i-configure">configure</a>
+            </div>
+          
+          
+          
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-propagate">
+            
+              <b>propagate</b>(master, mode=None)
+            
+            <a href="../classes/TkPack.html#method-c-propagate" name="method-c-propagate" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-propagate_source')" id="l_method-c-propagate_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/e6697a6405f1330ef071220396b8afef1cd1079a/ext/tk/lib/tk/pack.rb#L71" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-propagate_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tk/pack.rb, line 71</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">propagate</span>(<span class="ruby-identifier">master</span>, <span class="ruby-identifier">mode</span>=<span class="ruby-constant">None</span>)
+  <span class="ruby-comment"># master = master.epath if master.kind_of?(TkObject)</span>
+  <span class="ruby-identifier">master</span> = <span class="ruby-identifier">_epath</span>(<span class="ruby-identifier">master</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">mode</span> <span class="ruby-operator">==</span> <span class="ruby-constant">None</span>
+    <span class="ruby-identifier">bool</span>(<span class="ruby-identifier">tk_call_without_enc</span>(<span class="ruby-string">&#39;pack&#39;</span>, <span class="ruby-string">&#39;propagate&#39;</span>, <span class="ruby-identifier">master</span>))
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">tk_call_without_enc</span>(<span class="ruby-string">&#39;pack&#39;</span>, <span class="ruby-string">&#39;propagate&#39;</span>, <span class="ruby-identifier">master</span>, <span class="ruby-identifier">mode</span>)
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-slaves">
+            
+              <b>slaves</b>(master)
+            
+            <a href="../classes/TkPack.html#method-c-slaves" name="method-c-slaves" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-slaves_source')" id="l_method-c-slaves_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/e6697a6405f1330ef071220396b8afef1cd1079a/ext/tk/lib/tk/pack.rb#L81" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-slaves_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tk/pack.rb, line 81</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">slaves</span>(<span class="ruby-identifier">master</span>)
+  <span class="ruby-comment"># master = master.epath if master.kind_of?(TkObject)</span>
+  <span class="ruby-identifier">master</span> = <span class="ruby-identifier">_epath</span>(<span class="ruby-identifier">master</span>)
+  <span class="ruby-identifier">list</span>(<span class="ruby-identifier">tk_call_without_enc</span>(<span class="ruby-string">&#39;pack&#39;</span>, <span class="ruby-string">&#39;slaves&#39;</span>, <span class="ruby-identifier">master</span>))
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                        </div>
+
+    </div>
+  </body>
+</html>    

@@ -1,0 +1,717 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>DemoTree</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="../css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/main.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/github.css" type="text/css" media="screen" />
+<script src="../js/jquery-1.3.2.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/jquery-effect.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+
+<body>     
+    <div class="banner">
+        
+        <h1>
+            <span class="type">Module</span> 
+            DemoTree 
+            
+        </h1>
+        <ul class="files">
+            
+            <li><a href="../files/ext/tk/sample/tkextlib/bwidget/tree_rb.html">ext/tk/sample/tkextlib/bwidget/tree.rb</a></li>
+            
+        </ul>
+    </div>
+    <div id="bodyContent">
+        <div id="content">
+  
+
+
+  
+
+
+  
+  
+
+
+  
+
+
+  
+    <!-- Method ref -->
+    <div class="sectiontitle">Methods</div>
+    <dl class="methods">
+      
+        <dt>C</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-create">create</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>E</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-edit">edit</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-c-expand">expand</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>G</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-getdir">getdir</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>I</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-init">init</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>M</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-moddir">moddir</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>S</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-select">select</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-c-select_node">select_node</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+    </dl>
+  
+
+  
+
+
+
+  
+
+    
+
+    
+
+    
+
+
+    
+
+
+    <!-- Methods -->
+    
+      <div class="sectiontitle">Class Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-c-create">
+            
+              <b>create</b>(nb)
+            
+            <a href="../classes/DemoTree.html#method-c-create" name="method-c-create" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-create_source')" id="l_method-c-create_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/287a34ae0dfc23e4158f67cb7783d239f202c368/ext/tk/sample/tkextlib/bwidget/tree.rb#L13" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-create_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/sample/tkextlib/bwidget/tree.rb, line 13</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">create</span>(<span class="ruby-identifier">nb</span>)
+  <span class="ruby-identifier">frame</span> = <span class="ruby-identifier">nb</span>.<span class="ruby-identifier">insert</span>(<span class="ruby-string">&#39;end&#39;</span>, <span class="ruby-string">&#39;demoTree&#39;</span>, <span class="ruby-value">:text=</span><span class="ruby-operator">&gt;</span><span class="ruby-string">&#39;Tree&#39;</span>)
+  <span class="ruby-identifier">pw</span> = <span class="ruby-constant">Tk</span><span class="ruby-operator">::</span><span class="ruby-constant">BWidget</span><span class="ruby-operator">::</span><span class="ruby-constant">PanedWindow</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">frame</span>, <span class="ruby-value">:side=</span><span class="ruby-operator">&gt;</span><span class="ruby-value">:top</span>)
+
+  <span class="ruby-identifier">pane</span> = <span class="ruby-identifier">pw</span>.<span class="ruby-identifier">add</span>(<span class="ruby-value">:weight=</span><span class="ruby-operator">&gt;</span><span class="ruby-number">1</span>)
+  <span class="ruby-identifier">title</span> = <span class="ruby-constant">Tk</span><span class="ruby-operator">::</span><span class="ruby-constant">BWidget</span><span class="ruby-operator">::</span><span class="ruby-constant">TitleFrame</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">pane</span>, <span class="ruby-value">:text=</span><span class="ruby-operator">&gt;</span><span class="ruby-string">&#39;Directory tree&#39;</span>)
+  <span class="ruby-identifier">sw</span> = <span class="ruby-constant">Tk</span><span class="ruby-operator">::</span><span class="ruby-constant">BWidget</span><span class="ruby-operator">::</span><span class="ruby-constant">ScrolledWindow</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">title</span>.<span class="ruby-identifier">get_frame</span>,
+                                       <span class="ruby-value">:relief=</span><span class="ruby-operator">&gt;</span><span class="ruby-value">:sunken</span>, <span class="ruby-value">:borderwidth=</span><span class="ruby-operator">&gt;</span><span class="ruby-number">2</span>)
+  <span class="ruby-identifier">tree</span> = <span class="ruby-constant">Tk</span><span class="ruby-operator">::</span><span class="ruby-constant">BWidget</span><span class="ruby-operator">::</span><span class="ruby-constant">Tree</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">sw</span>, <span class="ruby-value">:relief=</span><span class="ruby-operator">&gt;</span><span class="ruby-value">:flat</span>, <span class="ruby-value">:borderwidth=</span><span class="ruby-operator">&gt;</span><span class="ruby-number">0</span>,
+                               <span class="ruby-value">:width=</span><span class="ruby-operator">&gt;</span><span class="ruby-number">15</span>, <span class="ruby-value">:highlightthickness=</span><span class="ruby-operator">&gt;</span><span class="ruby-number">0</span>,
+                               <span class="ruby-value">:redraw=</span><span class="ruby-operator">&gt;</span><span class="ruby-keyword">false</span>, <span class="ruby-value">:dropenabled=</span><span class="ruby-operator">&gt;</span><span class="ruby-keyword">true</span>,
+                               <span class="ruby-value">:dragenabled=</span><span class="ruby-operator">&gt;</span><span class="ruby-keyword">true</span>, <span class="ruby-value">:dragevent=</span><span class="ruby-operator">&gt;</span><span class="ruby-number">3</span>,
+                               <span class="ruby-value">:droptypes=</span><span class="ruby-operator">&gt;</span>[
+                                 <span class="ruby-string">&#39;TREE_NODE&#39;</span>, [
+                                   <span class="ruby-value">:copy</span>, [],
+                                   <span class="ruby-value">:move</span>, [],
+                                   <span class="ruby-value">:link</span>, []
+                                 ],
+                                 <span class="ruby-string">&#39;LISTBOX_ITEM&#39;</span>, [
+                                   <span class="ruby-value">:copy</span>, [],
+                                   <span class="ruby-value">:move</span>, [],
+                                   <span class="ruby-value">:link</span>, []
+                                 ]
+                               ],
+                               <span class="ruby-value">:opencmd=</span><span class="ruby-operator">&gt;</span><span class="ruby-identifier">proc</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">node</span><span class="ruby-operator">|</span>
+                                 <span class="ruby-identifier">moddir</span>(<span class="ruby-number">1</span>, <span class="ruby-identifier">tree</span>, <span class="ruby-identifier">node</span>)
+                               },
+                               <span class="ruby-value">:closecmd=</span><span class="ruby-operator">&gt;</span><span class="ruby-identifier">proc</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">node</span><span class="ruby-operator">|</span>
+                                 <span class="ruby-identifier">moddir</span>(<span class="ruby-number">0</span>, <span class="ruby-identifier">tree</span>, <span class="ruby-identifier">node</span>)
+                               })
+  <span class="ruby-identifier">sw</span>.<span class="ruby-identifier">set_widget</span>(<span class="ruby-identifier">tree</span>)
+
+  <span class="ruby-identifier">sw</span>.<span class="ruby-identifier">pack</span>(<span class="ruby-value">:side=</span><span class="ruby-operator">&gt;</span><span class="ruby-value">:top</span>, <span class="ruby-value">:expand=</span><span class="ruby-operator">&gt;</span><span class="ruby-keyword">true</span>, <span class="ruby-value">:fill=</span><span class="ruby-operator">&gt;</span><span class="ruby-value">:both</span>)
+  <span class="ruby-identifier">title</span>.<span class="ruby-identifier">pack</span>(<span class="ruby-value">:fill=</span><span class="ruby-operator">&gt;</span><span class="ruby-value">:both</span>, <span class="ruby-value">:expand=</span><span class="ruby-operator">&gt;</span><span class="ruby-keyword">true</span>)
+
+  <span class="ruby-identifier">pane</span> = <span class="ruby-identifier">pw</span>.<span class="ruby-identifier">add</span>(<span class="ruby-value">:weight=</span><span class="ruby-operator">&gt;</span><span class="ruby-number">2</span>)
+  <span class="ruby-identifier">lf</span> = <span class="ruby-constant">Tk</span><span class="ruby-operator">::</span><span class="ruby-constant">BWidget</span><span class="ruby-operator">::</span><span class="ruby-constant">TitleFrame</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">pane</span>, <span class="ruby-value">:text=</span><span class="ruby-operator">&gt;</span><span class="ruby-string">&#39;Content&#39;</span>)
+  <span class="ruby-identifier">sw</span> = <span class="ruby-constant">Tk</span><span class="ruby-operator">::</span><span class="ruby-constant">BWidget</span><span class="ruby-operator">::</span><span class="ruby-constant">ScrolledWindow</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">lf</span>.<span class="ruby-identifier">get_frame</span>,
+                                       <span class="ruby-value">:scrollbar=</span><span class="ruby-operator">&gt;</span><span class="ruby-value">:horizontal</span>,
+                                       <span class="ruby-value">:auto=</span><span class="ruby-operator">&gt;</span><span class="ruby-value">:none</span>, <span class="ruby-value">:relief=</span><span class="ruby-operator">&gt;</span><span class="ruby-value">:sunken</span>,
+                                       <span class="ruby-value">:borderwidth=</span><span class="ruby-operator">&gt;</span><span class="ruby-number">2</span>)
+
+  <span class="ruby-identifier">list</span> = <span class="ruby-constant">Tk</span><span class="ruby-operator">::</span><span class="ruby-constant">BWidget</span><span class="ruby-operator">::</span><span class="ruby-constant">ListBox</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">sw</span>, <span class="ruby-value">:relief=</span><span class="ruby-operator">&gt;</span><span class="ruby-value">:flat</span>, <span class="ruby-value">:borderwidth=</span><span class="ruby-operator">&gt;</span><span class="ruby-number">0</span>,
+                                  <span class="ruby-value">:highlightthickness=</span><span class="ruby-operator">&gt;</span><span class="ruby-number">0</span>, <span class="ruby-value">:width=</span><span class="ruby-operator">&gt;</span><span class="ruby-number">20</span>,
+                                  <span class="ruby-value">:multicolumn=</span><span class="ruby-operator">&gt;</span><span class="ruby-keyword">true</span>, <span class="ruby-value">:redraw=</span><span class="ruby-operator">&gt;</span><span class="ruby-keyword">false</span>,
+                                  <span class="ruby-value">:dragevent=</span><span class="ruby-operator">&gt;</span><span class="ruby-number">3</span>, <span class="ruby-value">:dropenabled=</span><span class="ruby-operator">&gt;</span><span class="ruby-keyword">true</span>,
+                                  <span class="ruby-value">:dragenabled=</span><span class="ruby-operator">&gt;</span><span class="ruby-keyword">true</span>,
+                               <span class="ruby-value">:droptypes=</span><span class="ruby-operator">&gt;</span>[
+                                    <span class="ruby-string">&#39;TREE_NODE&#39;</span>, [
+                                      <span class="ruby-value">:copy</span>, [],
+                                      <span class="ruby-value">:move</span>, [],
+                                      <span class="ruby-value">:link</span>, []
+                                    ],
+                                    <span class="ruby-string">&#39;LISTBOX_ITEM&#39;</span>, [
+                                      <span class="ruby-value">:copy</span>, [],
+                                      <span class="ruby-value">:move</span>, [],
+                                      <span class="ruby-value">:link</span>, []
+                                    ]
+                                  ])
+  <span class="ruby-identifier">sw</span>.<span class="ruby-identifier">set_widget</span>(<span class="ruby-identifier">list</span>)
+
+  <span class="ruby-constant">Tk</span>.<span class="ruby-identifier">pack</span>(<span class="ruby-identifier">sw</span>, <span class="ruby-identifier">lf</span>, <span class="ruby-value">:fill=</span><span class="ruby-operator">&gt;</span><span class="ruby-value">:both</span>, <span class="ruby-value">:expand=</span><span class="ruby-operator">&gt;</span><span class="ruby-keyword">true</span>)
+
+  <span class="ruby-identifier">pw</span>.<span class="ruby-identifier">pack</span>(<span class="ruby-value">:fill=</span><span class="ruby-operator">&gt;</span><span class="ruby-value">:both</span>, <span class="ruby-value">:expand=</span><span class="ruby-operator">&gt;</span><span class="ruby-keyword">true</span>)
+
+  <span class="ruby-identifier">tree</span>.<span class="ruby-identifier">textbind</span>(<span class="ruby-string">&#39;ButtonPress-1&#39;</span>,
+                <span class="ruby-identifier">proc</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">node</span>, <span class="ruby-identifier">ev</span><span class="ruby-operator">|</span> <span class="ruby-identifier">select</span>(<span class="ruby-string">&#39;tree&#39;</span>, <span class="ruby-number">1</span>, <span class="ruby-identifier">tree</span>, <span class="ruby-identifier">list</span>, <span class="ruby-identifier">node</span>)})
+  <span class="ruby-identifier">tree</span>.<span class="ruby-identifier">textbind</span>(<span class="ruby-string">&#39;Double-ButtonPress-1&#39;</span>,
+                <span class="ruby-identifier">proc</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">node</span>, <span class="ruby-identifier">ev</span><span class="ruby-operator">|</span> <span class="ruby-identifier">select</span>(<span class="ruby-string">&#39;tree&#39;</span>, <span class="ruby-number">2</span>, <span class="ruby-identifier">tree</span>, <span class="ruby-identifier">list</span>, <span class="ruby-identifier">node</span>)})
+
+  <span class="ruby-identifier">list</span>.<span class="ruby-identifier">textbind</span>(<span class="ruby-string">&#39;ButtonPress-1&#39;</span>,
+                <span class="ruby-identifier">proc</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">node</span>, <span class="ruby-identifier">ev</span><span class="ruby-operator">|</span> <span class="ruby-identifier">select</span>(<span class="ruby-string">&#39;list&#39;</span>, <span class="ruby-number">1</span>, <span class="ruby-identifier">tree</span>, <span class="ruby-identifier">list</span>, <span class="ruby-identifier">node</span>)})
+  <span class="ruby-identifier">list</span>.<span class="ruby-identifier">textbind</span>(<span class="ruby-string">&#39;Double-ButtonPress-1&#39;</span>,
+                <span class="ruby-identifier">proc</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">node</span>, <span class="ruby-identifier">ev</span><span class="ruby-operator">|</span> <span class="ruby-identifier">select</span>(<span class="ruby-string">&#39;list&#39;</span>, <span class="ruby-number">2</span>, <span class="ruby-identifier">tree</span>, <span class="ruby-identifier">list</span>, <span class="ruby-identifier">node</span>)})
+
+  <span class="ruby-identifier">list</span>.<span class="ruby-identifier">imagebind</span>(<span class="ruby-string">&#39;Double-ButtonPress-1&#39;</span>,
+                 <span class="ruby-identifier">proc</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">node</span>, <span class="ruby-identifier">ev</span><span class="ruby-operator">|</span> <span class="ruby-identifier">select</span>(<span class="ruby-string">&#39;list&#39;</span>, <span class="ruby-number">2</span>, <span class="ruby-identifier">tree</span>, <span class="ruby-identifier">list</span>, <span class="ruby-identifier">node</span>)})
+
+  <span class="ruby-identifier">nb</span>.<span class="ruby-identifier">itemconfigure</span>(<span class="ruby-string">&#39;demoTree&#39;</span>,
+                   <span class="ruby-value">:createcmd=</span><span class="ruby-operator">&gt;</span><span class="ruby-identifier">proc</span>{<span class="ruby-operator">|</span><span class="ruby-operator">*</span><span class="ruby-identifier">args</span><span class="ruby-operator">|</span> <span class="ruby-identifier">init</span>(<span class="ruby-identifier">tree</span>, <span class="ruby-identifier">list</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">args</span>)},
+                   <span class="ruby-value">:raisecmd=</span><span class="ruby-operator">&gt;</span><span class="ruby-identifier">proc</span>{
+                     <span class="ruby-constant">Tk</span>.<span class="ruby-identifier">root</span>.<span class="ruby-identifier">geometry</span> <span class="ruby-operator">=~</span>
+                       <span class="ruby-regexp">/\d+x\d+([+-]{1,2}\d+)([+-]{1,2}\d+)/</span>
+                     <span class="ruby-identifier">global_w</span> = (<span class="ruby-node">$1</span> <span class="ruby-operator">||</span> <span class="ruby-number">0</span>).<span class="ruby-identifier">to_i</span>
+                     <span class="ruby-identifier">global_h</span> = (<span class="ruby-node">$2</span> <span class="ruby-operator">||</span> <span class="ruby-number">0</span>).<span class="ruby-identifier">to_i</span>
+                     <span class="ruby-keyword">if</span> <span class="ruby-identifier">@@top</span>
+                       <span class="ruby-constant">Tk</span><span class="ruby-operator">::</span><span class="ruby-constant">BWidget</span>.<span class="ruby-identifier">place</span>(<span class="ruby-identifier">@@top</span>, <span class="ruby-number">0</span>, <span class="ruby-number">0</span>, <span class="ruby-value">:at</span>,
+                          <span class="ruby-identifier">global_w</span> <span class="ruby-operator">-</span> <span class="ruby-constant">Tk</span>.<span class="ruby-identifier">root</span>.<span class="ruby-identifier">winfo_screenwidth</span>, <span class="ruby-identifier">global_h</span>)
+                       <span class="ruby-identifier">@@top</span>.<span class="ruby-identifier">deiconify</span>
+                       <span class="ruby-constant">Tk</span>.<span class="ruby-identifier">root</span>.<span class="ruby-identifier">bind</span>(<span class="ruby-string">&#39;Unmap&#39;</span>, <span class="ruby-identifier">proc</span>{<span class="ruby-identifier">@@top</span>.<span class="ruby-identifier">withdraw</span>})
+                       <span class="ruby-constant">Tk</span>.<span class="ruby-identifier">root</span>.<span class="ruby-identifier">bind</span>(<span class="ruby-string">&#39;Map&#39;</span>,   <span class="ruby-identifier">proc</span>{<span class="ruby-identifier">@@top</span>.<span class="ruby-identifier">deiconify</span>})
+                       <span class="ruby-constant">Tk</span>.<span class="ruby-identifier">root</span>.<span class="ruby-identifier">bind</span>(<span class="ruby-string">&#39;Configure&#39;</span>, <span class="ruby-identifier">proc</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">w</span><span class="ruby-operator">|</span>
+                              <span class="ruby-keyword">if</span> <span class="ruby-identifier">w</span> <span class="ruby-operator">==</span> <span class="ruby-constant">Tk</span>.<span class="ruby-identifier">root</span>
+                                <span class="ruby-constant">Tk</span>.<span class="ruby-identifier">root</span>.<span class="ruby-identifier">geometry</span> <span class="ruby-operator">=~</span>
+                                  <span class="ruby-regexp">/\d+x\d+([+-]{1,2}\d+)([+-]{1,2}\d+)/</span>
+                                <span class="ruby-identifier">global_w</span> = (<span class="ruby-node">$1</span> <span class="ruby-operator">||</span> <span class="ruby-number">0</span>).<span class="ruby-identifier">to_i</span>
+                                <span class="ruby-identifier">global_h</span> = (<span class="ruby-node">$2</span> <span class="ruby-operator">||</span> <span class="ruby-number">0</span>).<span class="ruby-identifier">to_i</span>
+                                <span class="ruby-constant">Tk</span><span class="ruby-operator">::</span><span class="ruby-constant">BWidget</span>.<span class="ruby-identifier">place</span>(<span class="ruby-identifier">@@top</span>, <span class="ruby-number">0</span>, <span class="ruby-number">0</span>, <span class="ruby-value">:at</span>,
+                                     <span class="ruby-identifier">global_w</span> <span class="ruby-operator">-</span> <span class="ruby-constant">Tk</span>.<span class="ruby-identifier">root</span>.<span class="ruby-identifier">winfo_screenwidth</span>,
+                                     <span class="ruby-identifier">global_h</span>)
+                              <span class="ruby-keyword">end</span>
+                       }, <span class="ruby-string">&#39;%W&#39;</span>)
+                     <span class="ruby-keyword">end</span>
+                   },
+                   <span class="ruby-value">:leavecmd=</span><span class="ruby-operator">&gt;</span><span class="ruby-identifier">proc</span>{
+                     <span class="ruby-identifier">@@top</span>.<span class="ruby-identifier">withdraw</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">@@top</span>
+                     <span class="ruby-constant">Tk</span>.<span class="ruby-identifier">root</span>.<span class="ruby-identifier">bind_remove</span>(<span class="ruby-string">&#39;Unmap&#39;</span>)
+                     <span class="ruby-constant">Tk</span>.<span class="ruby-identifier">root</span>.<span class="ruby-identifier">bind_remove</span>(<span class="ruby-string">&#39;Map&#39;</span>)
+                     <span class="ruby-constant">Tk</span>.<span class="ruby-identifier">root</span>.<span class="ruby-identifier">bind_remove</span>(<span class="ruby-string">&#39;Configure&#39;</span>)
+                     <span class="ruby-keyword">true</span>
+                   })
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-edit">
+            
+              <b>edit</b>(where, tree, list, node)
+            
+            <a href="../classes/DemoTree.html#method-c-edit" name="method-c-edit" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-edit_source')" id="l_method-c-edit_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/287a34ae0dfc23e4158f67cb7783d239f202c368/ext/tk/sample/tkextlib/bwidget/tree.rb#L244" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-edit_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/sample/tkextlib/bwidget/tree.rb, line 244</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">edit</span>(<span class="ruby-identifier">where</span>, <span class="ruby-identifier">tree</span>, <span class="ruby-identifier">list</span>, <span class="ruby-identifier">node</span>)
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">@@dblclick</span>
+
+  <span class="ruby-keyword">if</span> (<span class="ruby-identifier">where</span> <span class="ruby-operator">==</span> <span class="ruby-string">&#39;tree&#39;</span> <span class="ruby-operator">&amp;&amp;</span>
+      <span class="ruby-identifier">tree</span>.<span class="ruby-identifier">selection_get</span>.<span class="ruby-identifier">find</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">x</span><span class="ruby-operator">|</span>
+        <span class="ruby-constant">TkUtil</span>.<span class="ruby-identifier">_get_eval_string</span>(<span class="ruby-identifier">x</span>) <span class="ruby-operator">==</span> <span class="ruby-constant">TkUtil</span>.<span class="ruby-identifier">_get_eval_string</span>(<span class="ruby-identifier">node</span>)
+      })
+    <span class="ruby-identifier">res</span> = <span class="ruby-identifier">tree</span>.<span class="ruby-identifier">edit</span>(<span class="ruby-identifier">node</span>, <span class="ruby-identifier">tree</span>.<span class="ruby-identifier">itemcget</span>(<span class="ruby-identifier">node</span>, <span class="ruby-value">:text</span>))
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">res</span> <span class="ruby-operator">!=</span> <span class="ruby-string">&#39;&#39;</span>
+      <span class="ruby-identifier">tree</span>.<span class="ruby-identifier">itemconfigure</span>(<span class="ruby-identifier">node</span>, <span class="ruby-value">:text=</span><span class="ruby-operator">&gt;</span><span class="ruby-identifier">res</span>)
+      <span class="ruby-keyword">if</span> <span class="ruby-identifier">list</span>.<span class="ruby-identifier">exist?</span>(<span class="ruby-identifier">node</span>)
+        <span class="ruby-identifier">list</span>.<span class="ruby-identifier">itemconfigure</span>(<span class="ruby-identifier">node</span>, <span class="ruby-value">:text=</span><span class="ruby-operator">&gt;</span><span class="ruby-identifier">res</span>)
+      <span class="ruby-keyword">end</span>
+      <span class="ruby-identifier">tree</span>.<span class="ruby-identifier">selection_set</span>(<span class="ruby-identifier">node</span>)
+    <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">return</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-keyword">if</span> (<span class="ruby-identifier">where</span> <span class="ruby-operator">==</span> <span class="ruby-string">&#39;list&#39;</span>)
+    <span class="ruby-identifier">res</span> = <span class="ruby-identifier">list</span>.<span class="ruby-identifier">edit</span>(<span class="ruby-identifier">node</span>, <span class="ruby-identifier">list</span>.<span class="ruby-identifier">igemcget</span>(<span class="ruby-identifier">node</span>, <span class="ruby-value">:text</span>))
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">res</span> <span class="ruby-operator">!=</span> <span class="ruby-string">&#39;&#39;</span>
+      <span class="ruby-identifier">list</span>.<span class="ruby-identifier">itemconfigure</span>(<span class="ruby-identifier">node</span>, <span class="ruby-value">:text=</span><span class="ruby-operator">&gt;</span><span class="ruby-identifier">res</span>)
+      <span class="ruby-keyword">if</span> <span class="ruby-identifier">tree</span>.<span class="ruby-identifier">exist?</span>(<span class="ruby-identifier">node</span>)
+        <span class="ruby-identifier">tree</span>.<span class="ruby-identifier">itemconfigure</span>(<span class="ruby-identifier">node</span>, <span class="ruby-value">:text=</span><span class="ruby-operator">&gt;</span><span class="ruby-identifier">res</span>)
+      <span class="ruby-keyword">else</span>
+        <span class="ruby-identifier">cursel</span> = <span class="ruby-identifier">tree</span>.<span class="ruby-identifier">selection_get</span>[<span class="ruby-number">0</span>]
+        <span class="ruby-identifier">index</span>  = <span class="ruby-identifier">list</span>.<span class="ruby-identifier">index</span>(<span class="ruby-identifier">node</span>) <span class="ruby-operator">-</span> <span class="ruby-identifier">tree</span>.<span class="ruby-identifier">nodes</span>(<span class="ruby-identifier">cursel</span>).<span class="ruby-identifier">size</span>
+        <span class="ruby-identifier">data</span>   = <span class="ruby-constant">TkComm</span>.<span class="ruby-identifier">simplelist</span>(<span class="ruby-identifier">tree</span>.<span class="ruby-identifier">itemcget</span>(<span class="ruby-identifier">cursel</span>, <span class="ruby-value">:data</span>))
+        <span class="ruby-identifier">data</span>[<span class="ruby-identifier">index</span>] = <span class="ruby-identifier">res</span>
+        <span class="ruby-identifier">tree</span>.<span class="ruby-identifier">itemconfigure</span>(<span class="ruby-identifier">cursel</span>, <span class="ruby-value">:date=</span><span class="ruby-operator">&gt;</span><span class="ruby-identifier">data</span>)
+      <span class="ruby-keyword">end</span>
+      <span class="ruby-identifier">list</span>.<span class="ruby-identifier">selection_set</span>(<span class="ruby-identifier">node</span>)
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-expand">
+            
+              <b>expand</b>(tree, but)
+            
+            <a href="../classes/DemoTree.html#method-c-expand" name="method-c-expand" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-expand_source')" id="l_method-c-expand_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/287a34ae0dfc23e4158f67cb7783d239f202c368/ext/tk/sample/tkextlib/bwidget/tree.rb#L280" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-expand_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/sample/tkextlib/bwidget/tree.rb, line 280</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">expand</span>(<span class="ruby-identifier">tree</span>, <span class="ruby-identifier">but</span>)
+  <span class="ruby-keyword">unless</span> (<span class="ruby-identifier">cur</span> = <span class="ruby-identifier">tree</span>.<span class="ruby-identifier">selection_get</span>).<span class="ruby-identifier">empty?</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-constant">TkComm</span>.<span class="ruby-identifier">bool</span>(<span class="ruby-identifier">but</span>)
+      <span class="ruby-identifier">tree</span>.<span class="ruby-identifier">opentree</span>(<span class="ruby-identifier">cur</span>)
+    <span class="ruby-keyword">else</span>
+      <span class="ruby-identifier">tree</span>.<span class="ruby-identifier">closetree</span>(<span class="ruby-identifier">cur</span>)
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-getdir">
+            
+              <b>getdir</b>(tree, node, path)
+            
+            <a href="../classes/DemoTree.html#method-c-getdir" name="method-c-getdir" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-getdir_source')" id="l_method-c-getdir_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/287a34ae0dfc23e4158f67cb7783d239f202c368/ext/tk/sample/tkextlib/bwidget/tree.rb#L155" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-getdir_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/sample/tkextlib/bwidget/tree.rb, line 155</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">getdir</span>(<span class="ruby-identifier">tree</span>, <span class="ruby-identifier">node</span>, <span class="ruby-identifier">path</span>)
+  <span class="ruby-identifier">lentries</span> = <span class="ruby-constant">Dir</span>.<span class="ruby-identifier">glob</span>(<span class="ruby-constant">File</span>.<span class="ruby-identifier">join</span>(<span class="ruby-identifier">path</span>, <span class="ruby-string">&#39;*&#39;</span>)).<span class="ruby-identifier">sort</span>
+  <span class="ruby-identifier">lfiles</span> = []
+  <span class="ruby-identifier">lentries</span>.<span class="ruby-identifier">each</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">f</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">basename</span> = <span class="ruby-constant">File</span>.<span class="ruby-identifier">basename</span>(<span class="ruby-identifier">f</span>)
+    <span class="ruby-keyword">if</span> <span class="ruby-constant">File</span>.<span class="ruby-identifier">directory?</span>(<span class="ruby-identifier">f</span>)
+      <span class="ruby-constant">Tk</span><span class="ruby-operator">::</span><span class="ruby-constant">BWidget</span><span class="ruby-operator">::</span><span class="ruby-constant">Tree</span><span class="ruby-operator">::</span><span class="ruby-constant">Node</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">tree</span>, <span class="ruby-identifier">node</span>,
+                                  <span class="ruby-value">:index=</span><span class="ruby-operator">&gt;</span><span class="ruby-string">&#39;end&#39;</span>, <span class="ruby-value">:text=</span><span class="ruby-operator">&gt;</span><span class="ruby-identifier">basename</span>,
+                                  <span class="ruby-value">:image=</span><span class="ruby-operator">&gt;</span><span class="ruby-constant">Tk</span><span class="ruby-operator">::</span><span class="ruby-constant">BWidget</span><span class="ruby-operator">::</span><span class="ruby-constant">Bitmap</span>.<span class="ruby-identifier">new</span>(<span class="ruby-string">&#39;folder&#39;</span>),
+                                  <span class="ruby-value">:drawcross=</span><span class="ruby-operator">&gt;</span><span class="ruby-value">:allways</span>, <span class="ruby-value">:data=</span><span class="ruby-operator">&gt;</span><span class="ruby-identifier">f</span>)
+      <span class="ruby-identifier">@@count</span> <span class="ruby-operator">+=</span> <span class="ruby-number">1</span>
+    <span class="ruby-keyword">else</span>
+      <span class="ruby-identifier">lfiles</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">basename</span>
+    <span class="ruby-keyword">end</span>
+  }
+  <span class="ruby-identifier">tree</span>.<span class="ruby-identifier">itemconfigure</span>(<span class="ruby-identifier">node</span>, <span class="ruby-value">:drawcross=</span><span class="ruby-operator">&gt;</span><span class="ruby-value">:auto</span>, <span class="ruby-value">:data=</span><span class="ruby-operator">&gt;</span><span class="ruby-identifier">lfiles</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-init">
+            
+              <b>init</b>(tree, list, *args)
+            
+            <a href="../classes/DemoTree.html#method-c-init" name="method-c-init" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-init_source')" id="l_method-c-init_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/287a34ae0dfc23e4158f67cb7783d239f202c368/ext/tk/sample/tkextlib/bwidget/tree.rb#L126" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-init_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/sample/tkextlib/bwidget/tree.rb, line 126</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">init</span>(<span class="ruby-identifier">tree</span>, <span class="ruby-identifier">list</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">args</span>)
+  <span class="ruby-identifier">@@count</span> = <span class="ruby-number">0</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-constant">Tk</span><span class="ruby-operator">::</span><span class="ruby-constant">PLATFORM</span>[<span class="ruby-string">&#39;platform&#39;</span>] <span class="ruby-operator">==</span> <span class="ruby-string">&#39;unix&#39;</span>
+    <span class="ruby-identifier">rootdir</span> = <span class="ruby-constant">File</span>.<span class="ruby-identifier">expand_path</span>(<span class="ruby-string">&#39;~&#39;</span>)
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">rootdir</span> = <span class="ruby-string">&#39;c:&#39;</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-identifier">tree</span>.<span class="ruby-identifier">insert</span>(<span class="ruby-string">&#39;end&#39;</span>, <span class="ruby-string">&#39;root&#39;</span>, <span class="ruby-string">&#39;home&#39;</span>,
+              <span class="ruby-value">:text=</span><span class="ruby-operator">&gt;</span><span class="ruby-identifier">rootdir</span>, <span class="ruby-value">:data=</span><span class="ruby-operator">&gt;</span><span class="ruby-identifier">rootdir</span>, <span class="ruby-value">:open=</span><span class="ruby-operator">&gt;</span><span class="ruby-keyword">true</span>,
+              <span class="ruby-value">:image=</span><span class="ruby-operator">&gt;</span><span class="ruby-constant">Tk</span><span class="ruby-operator">::</span><span class="ruby-constant">BWidget</span><span class="ruby-operator">::</span><span class="ruby-constant">Bitmap</span>.<span class="ruby-identifier">new</span>(<span class="ruby-string">&#39;openfold&#39;</span>))
+  <span class="ruby-identifier">getdir</span>(<span class="ruby-identifier">tree</span>, <span class="ruby-string">&#39;home&#39;</span>, <span class="ruby-identifier">rootdir</span>)
+  <span class="ruby-identifier">select</span>(<span class="ruby-string">&#39;tree&#39;</span>, <span class="ruby-number">1</span>, <span class="ruby-identifier">tree</span>, <span class="ruby-identifier">list</span>, <span class="ruby-string">&#39;home&#39;</span>)
+  <span class="ruby-identifier">tree</span>.<span class="ruby-identifier">redraw</span>(<span class="ruby-keyword">true</span>)
+  <span class="ruby-identifier">list</span>.<span class="ruby-identifier">redraw</span>(<span class="ruby-keyword">true</span>)
+
+  <span class="ruby-identifier">@@top</span> = <span class="ruby-constant">TkToplevel</span>.<span class="ruby-identifier">new</span>
+  <span class="ruby-identifier">@@top</span>.<span class="ruby-identifier">withdraw</span>
+  <span class="ruby-identifier">@@top</span>.<span class="ruby-identifier">protocol</span>(<span class="ruby-string">&#39;WM_DELETE_WINDOW&#39;</span>){
+    <span class="ruby-comment"># don&#39;t kill me</span>
+  }
+  <span class="ruby-identifier">@@top</span>.<span class="ruby-identifier">resizable</span>(<span class="ruby-keyword">false</span>, <span class="ruby-keyword">false</span>)
+  <span class="ruby-identifier">@@top</span>.<span class="ruby-identifier">title</span>(<span class="ruby-string">&#39;Drag rectangle to scroll directory tree&#39;</span>)
+  <span class="ruby-identifier">@@top</span>.<span class="ruby-identifier">transient</span>(<span class="ruby-constant">Tk</span>.<span class="ruby-identifier">root</span>)
+  <span class="ruby-constant">Tk</span><span class="ruby-operator">::</span><span class="ruby-constant">BWidget</span><span class="ruby-operator">::</span><span class="ruby-constant">ScrollView</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">@@top</span>, <span class="ruby-value">:window=</span><span class="ruby-operator">&gt;</span><span class="ruby-identifier">tree</span>, <span class="ruby-value">:fill=</span><span class="ruby-operator">&gt;</span><span class="ruby-string">&#39;white&#39;</span>,
+                              <span class="ruby-value">:width=</span><span class="ruby-operator">&gt;</span><span class="ruby-number">300</span>, <span class="ruby-value">:height=</span><span class="ruby-operator">&gt;</span><span class="ruby-number">300</span>, <span class="ruby-value">:relief=</span><span class="ruby-operator">&gt;</span><span class="ruby-value">:sunken</span>,
+                              <span class="ruby-value">:bd=</span><span class="ruby-operator">&gt;</span><span class="ruby-number">1</span>).<span class="ruby-identifier">pack</span>(<span class="ruby-value">:fill=</span><span class="ruby-operator">&gt;</span><span class="ruby-value">:both</span>, <span class="ruby-value">:expand=</span><span class="ruby-operator">&gt;</span><span class="ruby-keyword">true</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-moddir">
+            
+              <b>moddir</b>(idx, tree, node)
+            
+            <a href="../classes/DemoTree.html#method-c-moddir" name="method-c-moddir" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-moddir_source')" id="l_method-c-moddir_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/287a34ae0dfc23e4158f67cb7783d239f202c368/ext/tk/sample/tkextlib/bwidget/tree.rb#L173" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-moddir_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/sample/tkextlib/bwidget/tree.rb, line 173</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">moddir</span>(<span class="ruby-identifier">idx</span>, <span class="ruby-identifier">tree</span>, <span class="ruby-identifier">node</span>)
+  <span class="ruby-keyword">if</span> (<span class="ruby-identifier">idx</span> <span class="ruby-operator">!=</span> <span class="ruby-number">0</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">tree</span>.<span class="ruby-identifier">itemcget</span>(<span class="ruby-identifier">node</span>, <span class="ruby-value">:drawcross</span>).<span class="ruby-identifier">to_s</span> <span class="ruby-operator">==</span> <span class="ruby-string">&#39;allways&#39;</span>)
+    <span class="ruby-identifier">getdir</span>(<span class="ruby-identifier">tree</span>, <span class="ruby-identifier">node</span>, <span class="ruby-identifier">tree</span>.<span class="ruby-identifier">itemcget</span>(<span class="ruby-identifier">node</span>, <span class="ruby-value">:data</span>))
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">tree</span>.<span class="ruby-identifier">nodes</span>(<span class="ruby-identifier">node</span>).<span class="ruby-identifier">empty?</span>
+      <span class="ruby-identifier">tree</span>.<span class="ruby-identifier">itemconfigure</span>(<span class="ruby-identifier">node</span>, <span class="ruby-value">:image=</span><span class="ruby-operator">&gt;</span><span class="ruby-constant">Tk</span><span class="ruby-operator">::</span><span class="ruby-constant">BWidget</span><span class="ruby-operator">::</span><span class="ruby-constant">Bitmap</span>.<span class="ruby-identifier">new</span>(<span class="ruby-string">&#39;folder&#39;</span>))
+    <span class="ruby-keyword">else</span>
+      <span class="ruby-identifier">tree</span>.<span class="ruby-identifier">itemconfigure</span>(<span class="ruby-identifier">node</span>, <span class="ruby-value">:image=</span><span class="ruby-operator">&gt;</span><span class="ruby-constant">Tk</span><span class="ruby-operator">::</span><span class="ruby-constant">BWidget</span><span class="ruby-operator">::</span><span class="ruby-constant">Bitmap</span>.<span class="ruby-identifier">new</span>(<span class="ruby-string">&#39;openfold&#39;</span>))
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">img</span> = <span class="ruby-node">%w(folder openfold)</span>[<span class="ruby-identifier">idx</span>] <span class="ruby-operator">||</span> <span class="ruby-string">&#39;openfold&#39;</span>
+    <span class="ruby-identifier">tree</span>.<span class="ruby-identifier">itemconfigure</span>(<span class="ruby-identifier">node</span>, <span class="ruby-value">:image=</span><span class="ruby-operator">&gt;</span><span class="ruby-constant">Tk</span><span class="ruby-operator">::</span><span class="ruby-constant">BWidget</span><span class="ruby-operator">::</span><span class="ruby-constant">Bitmap</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">img</span>))
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-select">
+            
+              <b>select</b>(where, num, tree, list, node)
+            
+            <a href="../classes/DemoTree.html#method-c-select" name="method-c-select" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-select_source')" id="l_method-c-select_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/287a34ae0dfc23e4158f67cb7783d239f202c368/ext/tk/sample/tkextlib/bwidget/tree.rb#L187" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-select_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/sample/tkextlib/bwidget/tree.rb, line 187</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">select</span>(<span class="ruby-identifier">where</span>, <span class="ruby-identifier">num</span>, <span class="ruby-identifier">tree</span>, <span class="ruby-identifier">list</span>, <span class="ruby-identifier">node</span>)
+  <span class="ruby-identifier">@@dblclick</span> = <span class="ruby-keyword">true</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">num</span> <span class="ruby-operator">==</span> <span class="ruby-number">1</span>
+    <span class="ruby-keyword">if</span> (<span class="ruby-identifier">where</span> <span class="ruby-operator">==</span> <span class="ruby-string">&#39;tree&#39;</span> <span class="ruby-operator">&amp;&amp;</span>
+        <span class="ruby-identifier">tree</span>.<span class="ruby-identifier">selection_get</span>.<span class="ruby-identifier">find</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">x</span><span class="ruby-operator">|</span>
+          <span class="ruby-constant">TkUtil</span>.<span class="ruby-identifier">_get_eval_string</span>(<span class="ruby-identifier">x</span>) <span class="ruby-operator">==</span> <span class="ruby-constant">TkUtil</span>.<span class="ruby-identifier">_get_eval_string</span>(<span class="ruby-identifier">node</span>)
+        })
+      <span class="ruby-identifier">@@dblclick</span> = <span class="ruby-keyword">false</span>
+      <span class="ruby-constant">Tk</span>.<span class="ruby-identifier">after</span>(<span class="ruby-number">500</span>, <span class="ruby-identifier">proc</span>{<span class="ruby-identifier">edit</span>(<span class="ruby-string">&#39;tree&#39;</span>, <span class="ruby-identifier">tree</span>, <span class="ruby-identifier">list</span>, <span class="ruby-identifier">node</span>)})
+      <span class="ruby-keyword">return</span>
+    <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">if</span> (<span class="ruby-identifier">where</span> <span class="ruby-operator">==</span> <span class="ruby-string">&#39;list&#39;</span> <span class="ruby-operator">&amp;&amp;</span>
+        <span class="ruby-identifier">list</span>.<span class="ruby-identifier">selection_get</span>.<span class="ruby-identifier">find</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">x</span><span class="ruby-operator">|</span>
+          <span class="ruby-constant">TkUtil</span>.<span class="ruby-identifier">_get_eval_string</span>(<span class="ruby-identifier">x</span>) <span class="ruby-operator">==</span> <span class="ruby-constant">TkUtil</span>.<span class="ruby-identifier">_get_eval_string</span>(<span class="ruby-identifier">node</span>)
+        })
+      <span class="ruby-identifier">@@dblclick</span> = <span class="ruby-keyword">false</span>
+      <span class="ruby-constant">Tk</span>.<span class="ruby-identifier">after</span>(<span class="ruby-number">500</span>, <span class="ruby-identifier">proc</span>{<span class="ruby-identifier">edit</span>(<span class="ruby-string">&#39;list&#39;</span>, <span class="ruby-identifier">tree</span>, <span class="ruby-identifier">list</span>, <span class="ruby-identifier">node</span>)})
+      <span class="ruby-keyword">return</span>
+    <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">where</span> <span class="ruby-operator">==</span> <span class="ruby-string">&#39;tree&#39;</span>
+      <span class="ruby-identifier">select_node</span>(<span class="ruby-identifier">tree</span>, <span class="ruby-identifier">list</span>, <span class="ruby-identifier">node</span>)
+    <span class="ruby-keyword">else</span>
+      <span class="ruby-identifier">list</span>.<span class="ruby-identifier">selection_set</span>(<span class="ruby-identifier">node</span>)
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">elsif</span> (<span class="ruby-identifier">where</span> <span class="ruby-operator">==</span> <span class="ruby-string">&#39;list&#39;</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">tree</span>.<span class="ruby-identifier">exist?</span>(<span class="ruby-identifier">node</span>))
+    <span class="ruby-identifier">parent</span> = <span class="ruby-identifier">tree</span>.<span class="ruby-identifier">parent</span>(<span class="ruby-identifier">node</span>)
+    <span class="ruby-keyword">while</span> <span class="ruby-constant">TkUtil</span>.<span class="ruby-identifier">_get_eval_string</span>(<span class="ruby-identifier">parent</span>) <span class="ruby-operator">!=</span> <span class="ruby-string">&#39;root&#39;</span>
+      <span class="ruby-identifier">tree</span>.<span class="ruby-identifier">itemconfigure</span>(<span class="ruby-identifier">parent</span>, <span class="ruby-value">:open=</span><span class="ruby-operator">&gt;</span><span class="ruby-keyword">true</span>)
+      <span class="ruby-identifier">parent</span> = <span class="ruby-identifier">tree</span>.<span class="ruby-identifier">parent</span>(<span class="ruby-identifier">parent</span>)
+    <span class="ruby-keyword">end</span>
+    <span class="ruby-identifier">select_node</span>(<span class="ruby-identifier">tree</span>, <span class="ruby-identifier">list</span>, <span class="ruby-identifier">node</span>)
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-select_node">
+            
+              <b>select_node</b>(tree, list, node)
+            
+            <a href="../classes/DemoTree.html#method-c-select_node" name="method-c-select_node" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-select_node_source')" id="l_method-c-select_node_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/287a34ae0dfc23e4158f67cb7783d239f202c368/ext/tk/sample/tkextlib/bwidget/tree.rb#L221" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-select_node_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/sample/tkextlib/bwidget/tree.rb, line 221</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">select_node</span>(<span class="ruby-identifier">tree</span>, <span class="ruby-identifier">list</span>, <span class="ruby-identifier">node</span>)
+  <span class="ruby-identifier">tree</span>.<span class="ruby-identifier">selection_set</span>(<span class="ruby-identifier">node</span>)
+  <span class="ruby-constant">Tk</span>.<span class="ruby-identifier">update</span>
+  <span class="ruby-identifier">list</span>.<span class="ruby-identifier">delete</span>(<span class="ruby-operator">*</span>(<span class="ruby-identifier">list</span>.<span class="ruby-identifier">items</span>(<span class="ruby-number">0</span>, <span class="ruby-string">&#39;end&#39;</span>)))
+
+  <span class="ruby-identifier">dir</span> = <span class="ruby-identifier">tree</span>.<span class="ruby-identifier">itemcget</span>(<span class="ruby-identifier">node</span>, <span class="ruby-value">:data</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">tree</span>.<span class="ruby-identifier">itemcget</span>(<span class="ruby-identifier">node</span>, <span class="ruby-value">:drawcross</span>).<span class="ruby-identifier">to_s</span> <span class="ruby-operator">==</span> <span class="ruby-string">&#39;allways&#39;</span>
+    <span class="ruby-identifier">getdir</span>(<span class="ruby-identifier">tree</span>, <span class="ruby-identifier">node</span>, <span class="ruby-identifier">dir</span>)
+    <span class="ruby-identifier">dir</span> = <span class="ruby-identifier">tree</span>.<span class="ruby-identifier">itemcget</span>(<span class="ruby-identifier">node</span>, <span class="ruby-value">:data</span>)
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-identifier">tree</span>.<span class="ruby-identifier">nodes</span>(<span class="ruby-identifier">node</span>).<span class="ruby-identifier">each</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">subnode</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">list</span>.<span class="ruby-identifier">insert</span>(<span class="ruby-string">&#39;end&#39;</span>, <span class="ruby-identifier">subnode</span>,
+                <span class="ruby-value">:text=</span><span class="ruby-operator">&gt;</span><span class="ruby-identifier">tree</span>.<span class="ruby-identifier">itemcget</span>(<span class="ruby-identifier">subnode</span>, <span class="ruby-value">:text</span>),
+                <span class="ruby-value">:image=</span><span class="ruby-operator">&gt;</span><span class="ruby-constant">Tk</span><span class="ruby-operator">::</span><span class="ruby-constant">BWidget</span><span class="ruby-operator">::</span><span class="ruby-constant">Bitmap</span>.<span class="ruby-identifier">new</span>(<span class="ruby-string">&#39;folder&#39;</span>))
+  }
+
+  <span class="ruby-constant">TkComm</span>.<span class="ruby-identifier">simplelist</span>(<span class="ruby-identifier">dir</span>).<span class="ruby-identifier">each</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">f</span><span class="ruby-operator">|</span>
+    <span class="ruby-constant">Tk</span><span class="ruby-operator">::</span><span class="ruby-constant">BWidget</span><span class="ruby-operator">::</span><span class="ruby-constant">ListBox</span><span class="ruby-operator">::</span><span class="ruby-constant">Item</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">list</span>, <span class="ruby-string">&#39;end&#39;</span>, <span class="ruby-value">:text=</span><span class="ruby-operator">&gt;</span><span class="ruby-identifier">f</span>,
+                                   <span class="ruby-value">:image=</span><span class="ruby-operator">&gt;</span><span class="ruby-constant">Tk</span><span class="ruby-operator">::</span><span class="ruby-constant">BWidget</span><span class="ruby-operator">::</span><span class="ruby-constant">Bitmap</span>.<span class="ruby-identifier">new</span>(<span class="ruby-string">&#39;file&#39;</span>))
+  }
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                        </div>
+
+    </div>
+  </body>
+</html>    

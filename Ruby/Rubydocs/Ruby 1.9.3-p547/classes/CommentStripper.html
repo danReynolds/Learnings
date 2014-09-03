@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>CommentStripper</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="../css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/main.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/github.css" type="text/css" media="screen" />
+<script src="../js/jquery-1.3.2.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/jquery-effect.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+
+<body>     
+    <div class="banner">
+        
+        <h1>
+            <span class="type">Class</span> 
+            CommentStripper 
+            
+                <span class="parent">&lt; 
+                    
+                    <a href="Ripper/Filter.html">Ripper::Filter</a>
+                    
+                </span>
+            
+        </h1>
+        <ul class="files">
+            
+            <li><a href="../files/sample/ripper/strip-comment_rb.html">sample/ripper/strip-comment.rb</a></li>
+            
+        </ul>
+    </div>
+    <div id="bodyContent">
+        <div id="content">
+  
+
+
+  
+
+
+  
+  
+
+
+  
+
+
+  
+    <!-- Method ref -->
+    <div class="sectiontitle">Methods</div>
+    <dl class="methods">
+      
+        <dt>O</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-on_comment">on_comment</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-on_default">on_default</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>S</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-strip">strip</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+    </dl>
+  
+
+  
+
+
+
+  
+
+    
+
+    
+
+    
+
+
+    
+
+
+    <!-- Methods -->
+    
+      <div class="sectiontitle">Class Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-c-strip">
+            
+              <b>strip</b>(src)
+            
+            <a href="../classes/CommentStripper.html#method-c-strip" name="method-c-strip" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-strip_source')" id="l_method-c-strip_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/2c179216717d75837de7a6ff092fd773670f4d11/sample/ripper/strip-comment.rb#L6" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-strip_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File sample/ripper/strip-comment.rb, line 6</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">CommentStripper</span>.<span class="ruby-identifier">strip</span>(<span class="ruby-identifier">src</span>)
+  <span class="ruby-identifier">new</span>(<span class="ruby-identifier">src</span>).<span class="ruby-identifier">parse</span>(<span class="ruby-keyword">nil</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                  
+      <div class="sectiontitle">Instance Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-i-on_comment">
+            
+              <b>on_comment</b>(token, data)
+            
+            <a href="../classes/CommentStripper.html#method-i-on_comment" name="method-i-on_comment" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-on_comment_source')" id="l_method-i-on_comment_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/2c179216717d75837de7a6ff092fd773670f4d11/sample/ripper/strip-comment.rb#L14" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-on_comment_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File sample/ripper/strip-comment.rb, line 14</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">on_comment</span>(<span class="ruby-identifier">token</span>, <span class="ruby-identifier">data</span>)
+  <span class="ruby-identifier">puts</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-on_default">
+            
+              <b>on_default</b>(event, token, data)
+            
+            <a href="../classes/CommentStripper.html#method-i-on_default" name="method-i-on_default" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-on_default_source')" id="l_method-i-on_default_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/2c179216717d75837de7a6ff092fd773670f4d11/sample/ripper/strip-comment.rb#L10" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-on_default_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File sample/ripper/strip-comment.rb, line 10</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">on_default</span>(<span class="ruby-identifier">event</span>, <span class="ruby-identifier">token</span>, <span class="ruby-identifier">data</span>)
+  <span class="ruby-identifier">print</span> <span class="ruby-identifier">token</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                    </div>
+
+    </div>
+  </body>
+</html>    

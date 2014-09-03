@@ -1,0 +1,686 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>TkKinput</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="../css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/main.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/github.css" type="text/css" media="screen" />
+<script src="../js/jquery-1.3.2.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/jquery-effect.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+
+<body>     
+    <div class="banner">
+        
+        <h1>
+            <span class="type">Module</span> 
+            TkKinput 
+            
+        </h1>
+        <ul class="files">
+            
+            <li><a href="../files/ext/tk/lib/tk/kinput_rb.html">ext/tk/lib/tk/kinput.rb</a></li>
+            
+        </ul>
+    </div>
+    <div id="bodyContent">
+        <div id="content">
+  
+
+
+  
+
+
+  
+  
+
+
+  
+
+
+  
+    <!-- Method ref -->
+    <div class="sectiontitle">Methods</div>
+    <dl class="methods">
+      
+        <dt>A</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-attribute_config">attribute_config</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-c-attribute_info">attribute_info</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>I</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-input_end">input_end</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-c-input_start">input_start</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>K</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-kanji_input_end">kanji_input_end</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-kanji_input_start">kanji_input_start</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-kinput_attribute_config">kinput_attribute_config</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-kinput_attribute_info">kinput_attribute_info</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-kinput_send_spot">kinput_send_spot</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-kinput_start">kinput_start</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>S</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-send_spot">send_spot</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-c-start">start</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+    </dl>
+  
+
+  
+    <!-- Includes -->
+    <div class="sectiontitle">Included Modules</div>
+    <ul>
+      
+        <li>
+          
+            <a href="Tk.html">
+              Tk
+            </a>
+          
+        </li>
+      
+    </ul>
+  
+
+
+
+  
+
+    
+
+    
+
+    
+      <!-- Section constants -->
+      <div class="sectiontitle">Constants</div>
+      <table border='0' cellpadding='5'>
+        
+          <tr valign='top'>
+            <td class="attr-name">TkCommandNames</td>
+            <td>=</td>
+            <td class="attr-value">[
+&#39;kinput_start&#39;.freeze,
+&#39;kinput_send_spot&#39;.freeze,
+&#39;kanjiInput&#39;.freeze
+].freeze</td>
+          </tr>
+          
+            <tr valign='top'>
+              <td>&nbsp;</td>
+              <td colspan="2" class="attr-desc"></td>
+            </tr>
+          
+        
+      </table>
+    
+
+
+    
+
+
+    <!-- Methods -->
+    
+      <div class="sectiontitle">Class Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-c-attribute_config">
+            
+              <b>attribute_config</b>(win, slot, value=None)
+            
+            <a href="../classes/TkKinput.html#method-c-attribute_config" name="method-c-attribute_config" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-attribute_config_source')" id="l_method-c-attribute_config_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/287a34ae0dfc23e4158f67cb7783d239f202c368/ext/tk/lib/tk/kinput.rb#L37" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-attribute_config_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tk/kinput.rb, line 37</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">TkKinput</span>.<span class="ruby-identifier">attribute_config</span>(<span class="ruby-identifier">win</span>, <span class="ruby-identifier">slot</span>, <span class="ruby-identifier">value</span>=<span class="ruby-constant">None</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">slot</span>.<span class="ruby-identifier">kind_of?</span> <span class="ruby-constant">Hash</span>
+    <span class="ruby-identifier">tk_call</span>(<span class="ruby-string">&#39;kanjiInput&#39;</span>, <span class="ruby-string">&#39;attribute&#39;</span>, <span class="ruby-identifier">win</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">hash_kv</span>(<span class="ruby-identifier">slot</span>))
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">tk_call</span>(<span class="ruby-string">&#39;kanjiInput&#39;</span>, <span class="ruby-string">&#39;attribute&#39;</span>, <span class="ruby-identifier">win</span>, <span class="ruby-node">&quot;-#{slot}&quot;</span>, <span class="ruby-identifier">value</span>)
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-attribute_info">
+            
+              <b>attribute_info</b>(win, slot=nil)
+            
+            <a href="../classes/TkKinput.html#method-c-attribute_info" name="method-c-attribute_info" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-attribute_info_source')" id="l_method-c-attribute_info_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/287a34ae0dfc23e4158f67cb7783d239f202c368/ext/tk/lib/tk/kinput.rb#L48" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-attribute_info_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tk/kinput.rb, line 48</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">TkKinput</span>.<span class="ruby-identifier">attribute_info</span>(<span class="ruby-identifier">win</span>, <span class="ruby-identifier">slot</span>=<span class="ruby-keyword">nil</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">slot</span>
+    <span class="ruby-identifier">conf</span> = <span class="ruby-identifier">tk_split_list</span>(<span class="ruby-identifier">tk_call</span>(<span class="ruby-string">&#39;kanjiInput&#39;</span>, <span class="ruby-string">&#39;attribute&#39;</span>,
+                                 <span class="ruby-identifier">win</span>, <span class="ruby-node">&quot;-#{slot}&quot;</span>))
+    <span class="ruby-identifier">conf</span>[<span class="ruby-number">0</span>] = <span class="ruby-identifier">conf</span>[<span class="ruby-number">0</span>][<span class="ruby-number">1</span><span class="ruby-operator">..</span><span class="ruby-number">-1</span>]
+    <span class="ruby-identifier">conf</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">tk_split_list</span>(<span class="ruby-identifier">tk_call</span>(<span class="ruby-string">&#39;kanjiInput&#39;</span>, <span class="ruby-string">&#39;attribute&#39;</span>, <span class="ruby-identifier">win</span>)).<span class="ruby-identifier">collect</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">conf</span><span class="ruby-operator">|</span>
+      <span class="ruby-identifier">conf</span>[<span class="ruby-number">0</span>] = <span class="ruby-identifier">conf</span>[<span class="ruby-number">0</span>][<span class="ruby-number">1</span><span class="ruby-operator">..</span><span class="ruby-number">-1</span>]
+      <span class="ruby-identifier">conf</span>
+    }
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-input_end">
+            
+              <b>input_end</b>(win)
+            
+            <a href="../classes/TkKinput.html#method-c-input_end" name="method-c-input_end" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-input_end_source')" id="l_method-c-input_end_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/287a34ae0dfc23e4158f67cb7783d239f202c368/ext/tk/lib/tk/kinput.rb#L65" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-input_end_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tk/kinput.rb, line 65</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">TkKinput</span>.<span class="ruby-identifier">input_end</span>(<span class="ruby-identifier">win</span>)
+  <span class="ruby-identifier">tk_call</span>(<span class="ruby-string">&#39;kanjiInput&#39;</span>, <span class="ruby-string">&#39;end&#39;</span>, <span class="ruby-identifier">win</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-input_start">
+            
+              <b>input_start</b>(win, keys=nil)
+            
+            <a href="../classes/TkKinput.html#method-c-input_start" name="method-c-input_start" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-input_start_source')" id="l_method-c-input_start_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/287a34ae0dfc23e4158f67cb7783d239f202c368/ext/tk/lib/tk/kinput.rb#L30" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-input_start_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tk/kinput.rb, line 30</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">TkKinput</span>.<span class="ruby-identifier">input_start</span>(<span class="ruby-identifier">win</span>, <span class="ruby-identifier">keys</span>=<span class="ruby-keyword">nil</span>)
+  <span class="ruby-identifier">tk_call</span>(<span class="ruby-string">&#39;kanjiInput&#39;</span>, <span class="ruby-string">&#39;start&#39;</span>, <span class="ruby-identifier">win</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">hash_kv</span>(<span class="ruby-identifier">keys</span>))
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-send_spot">
+            
+              <b>send_spot</b>(win)
+            
+            <a href="../classes/TkKinput.html#method-c-send_spot" name="method-c-send_spot" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-send_spot_source')" id="l_method-c-send_spot_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/287a34ae0dfc23e4158f67cb7783d239f202c368/ext/tk/lib/tk/kinput.rb#L23" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-send_spot_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tk/kinput.rb, line 23</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">TkKinput</span>.<span class="ruby-identifier">send_spot</span>(<span class="ruby-identifier">win</span>)
+  <span class="ruby-identifier">tk_call</span>(<span class="ruby-string">&#39;kinput_send_spot&#39;</span>, <span class="ruby-identifier">win</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-start">
+            
+              <b>start</b>(win, style=None)
+            
+            <a href="../classes/TkKinput.html#method-c-start" name="method-c-start" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-start_source')" id="l_method-c-start_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/287a34ae0dfc23e4158f67cb7783d239f202c368/ext/tk/lib/tk/kinput.rb#L16" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-start_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tk/kinput.rb, line 16</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">TkKinput</span>.<span class="ruby-identifier">start</span>(<span class="ruby-identifier">win</span>, <span class="ruby-identifier">style</span>=<span class="ruby-constant">None</span>)
+  <span class="ruby-identifier">tk_call</span>(<span class="ruby-string">&#39;kinput_start&#39;</span>, <span class="ruby-identifier">win</span>, <span class="ruby-identifier">style</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                  
+      <div class="sectiontitle">Instance Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-i-kanji_input_end">
+            
+              <b>kanji_input_end</b>()
+            
+            <a href="../classes/TkKinput.html#method-i-kanji_input_end" name="method-i-kanji_input_end" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-kanji_input_end_source')" id="l_method-i-kanji_input_end_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/287a34ae0dfc23e4158f67cb7783d239f202c368/ext/tk/lib/tk/kinput.rb#L68" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-kanji_input_end_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tk/kinput.rb, line 68</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">kanji_input_end</span>
+  <span class="ruby-constant">TkKinput</span>.<span class="ruby-identifier">input_end</span>(<span class="ruby-keyword">self</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-kanji_input_start">
+            
+              <b>kanji_input_start</b>(keys=nil)
+            
+            <a href="../classes/TkKinput.html#method-i-kanji_input_start" name="method-i-kanji_input_start" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-kanji_input_start_source')" id="l_method-i-kanji_input_start_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/287a34ae0dfc23e4158f67cb7783d239f202c368/ext/tk/lib/tk/kinput.rb#L33" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-kanji_input_start_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tk/kinput.rb, line 33</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">kanji_input_start</span>(<span class="ruby-identifier">keys</span>=<span class="ruby-keyword">nil</span>)
+  <span class="ruby-constant">TkKinput</span>.<span class="ruby-identifier">input_start</span>(<span class="ruby-keyword">self</span>, <span class="ruby-identifier">keys</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-kinput_attribute_config">
+            
+              <b>kinput_attribute_config</b>(slot, value=None)
+            
+            <a href="../classes/TkKinput.html#method-i-kinput_attribute_config" name="method-i-kinput_attribute_config" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-kinput_attribute_config_source')" id="l_method-i-kinput_attribute_config_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/287a34ae0dfc23e4158f67cb7783d239f202c368/ext/tk/lib/tk/kinput.rb#L44" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-kinput_attribute_config_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tk/kinput.rb, line 44</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">kinput_attribute_config</span>(<span class="ruby-identifier">slot</span>, <span class="ruby-identifier">value</span>=<span class="ruby-constant">None</span>)
+  <span class="ruby-constant">TkKinput</span>.<span class="ruby-identifier">attribute_config</span>(<span class="ruby-keyword">self</span>, <span class="ruby-identifier">slot</span>, <span class="ruby-identifier">value</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-kinput_attribute_info">
+            
+              <b>kinput_attribute_info</b>(slot=nil)
+            
+            <a href="../classes/TkKinput.html#method-i-kinput_attribute_info" name="method-i-kinput_attribute_info" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-kinput_attribute_info_source')" id="l_method-i-kinput_attribute_info_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/287a34ae0dfc23e4158f67cb7783d239f202c368/ext/tk/lib/tk/kinput.rb#L61" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-kinput_attribute_info_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tk/kinput.rb, line 61</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">kinput_attribute_info</span>(<span class="ruby-identifier">slot</span>=<span class="ruby-keyword">nil</span>)
+  <span class="ruby-constant">TkKinput</span>.<span class="ruby-identifier">attribute_info</span>(<span class="ruby-keyword">self</span>, <span class="ruby-identifier">slot</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-kinput_send_spot">
+            
+              <b>kinput_send_spot</b>()
+            
+            <a href="../classes/TkKinput.html#method-i-kinput_send_spot" name="method-i-kinput_send_spot" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-kinput_send_spot_source')" id="l_method-i-kinput_send_spot_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/287a34ae0dfc23e4158f67cb7783d239f202c368/ext/tk/lib/tk/kinput.rb#L26" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-kinput_send_spot_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tk/kinput.rb, line 26</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">kinput_send_spot</span>
+  <span class="ruby-constant">TkKinput</span>.<span class="ruby-identifier">send_spot</span>(<span class="ruby-keyword">self</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-kinput_start">
+            
+              <b>kinput_start</b>(style=None)
+            
+            <a href="../classes/TkKinput.html#method-i-kinput_start" name="method-i-kinput_start" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-kinput_start_source')" id="l_method-i-kinput_start_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/287a34ae0dfc23e4158f67cb7783d239f202c368/ext/tk/lib/tk/kinput.rb#L19" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-kinput_start_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tk/kinput.rb, line 19</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">kinput_start</span>(<span class="ruby-identifier">style</span>=<span class="ruby-constant">None</span>)
+  <span class="ruby-constant">TkKinput</span>.<span class="ruby-identifier">start</span>(<span class="ruby-keyword">self</span>, <span class="ruby-identifier">style</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                    </div>
+
+    </div>
+  </body>
+</html>    

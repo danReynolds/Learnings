@@ -1,0 +1,2180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>SchemaDumperTest</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="../css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/main.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/github.css" type="text/css" media="screen" />
+<script src="../js/jquery-1.3.2.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/jquery-effect.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+
+<body>     
+    <div class="banner">
+        
+        <h1>
+            <span class="type">Class</span> 
+            SchemaDumperTest 
+            
+                <span class="parent">&lt; 
+                    
+                    ActiveRecord::TestCase
+                    
+                </span>
+            
+        </h1>
+        <ul class="files">
+            
+            <li><a href="../files/activerecord/test/cases/schema_dumper_test_rb.html">activerecord/test/cases/schema_dumper_test.rb</a></li>
+            
+        </ul>
+    </div>
+    <div id="bodyContent">
+        <div id="content">
+  
+
+
+  
+
+
+  
+  
+
+
+  
+    <!-- Namespace -->
+    <div class="sectiontitle">Namespace</div>
+    <ul>
+      
+        <li>
+          <span class="type">CLASS</span>
+          <a href="SchemaDumperTest/CreateDogMigration.html">SchemaDumperTest::CreateDogMigration</a>
+        </li>
+      
+    </ul>
+  
+
+
+  
+    <!-- Method ref -->
+    <div class="sectiontitle">Methods</div>
+    <dl class="methods">
+      
+        <dt>A</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-assert_line_up">assert_line_up</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>C</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-column_definition_lines">column_definition_lines</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>S</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-setup">setup</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-standard_dump">standard_dump</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>T</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-test_arguments_line_up">test_arguments_line_up</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-test_dump_schema_information_outputs_lexically_ordered_versions">test_dump_schema_information_outputs_lexically_ordered_versions</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-test_magic_comment">test_magic_comment</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-test_no_dump_errors">test_no_dump_errors</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-test_schema_dump">test_schema_dump</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-test_schema_dump_excludes_sqlite_sequence">test_schema_dump_excludes_sqlite_sequence</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-test_schema_dump_illegal_ignored_table_value">test_schema_dump_illegal_ignored_table_value</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-test_schema_dump_includes_arrays_shorthand_definition">test_schema_dump_includes_arrays_shorthand_definition</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-test_schema_dump_includes_bigint_default">test_schema_dump_includes_bigint_default</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-test_schema_dump_includes_camelcase_table_name">test_schema_dump_includes_camelcase_table_name</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-test_schema_dump_includes_cidr_shorthand_definition">test_schema_dump_includes_cidr_shorthand_definition</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-test_schema_dump_includes_decimal_options">test_schema_dump_includes_decimal_options</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-test_schema_dump_includes_extensions">test_schema_dump_includes_extensions</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-test_schema_dump_includes_hstores_shorthand_definition">test_schema_dump_includes_hstores_shorthand_definition</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-test_schema_dump_includes_inet_shorthand_definition">test_schema_dump_includes_inet_shorthand_definition</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-test_schema_dump_includes_json_shorthand_definition">test_schema_dump_includes_json_shorthand_definition</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-test_schema_dump_includes_length_for_mysql_binary_fields">test_schema_dump_includes_length_for_mysql_binary_fields</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-test_schema_dump_includes_length_for_mysql_blob_and_text_fields">test_schema_dump_includes_length_for_mysql_blob_and_text_fields</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-test_schema_dump_includes_limit_constraint_for_integer_columns">test_schema_dump_includes_limit_constraint_for_integer_columns</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-test_schema_dump_includes_ltrees_shorthand_definition">test_schema_dump_includes_ltrees_shorthand_definition</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-test_schema_dump_includes_macaddr_shorthand_definition">test_schema_dump_includes_macaddr_shorthand_definition</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-test_schema_dump_includes_not_null_columns">test_schema_dump_includes_not_null_columns</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-test_schema_dump_includes_tsvector_shorthand_definition">test_schema_dump_includes_tsvector_shorthand_definition</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-test_schema_dump_includes_uuid_shorthand_definition">test_schema_dump_includes_uuid_shorthand_definition</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-test_schema_dump_includes_xml_shorthand_definition">test_schema_dump_includes_xml_shorthand_definition</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-test_schema_dump_keeps_id_column_when_id_is_false_and_id_column_added">test_schema_dump_keeps_id_column_when_id_is_false_and_id_column_added</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-test_schema_dump_keeps_id_false_when_id_is_false_and_unique_not_null_column_added">test_schema_dump_keeps_id_false_when_id_is_false_and_unique_not_null_column_added</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-test_schema_dump_keeps_large_precision_integer_columns_as_decimal">test_schema_dump_keeps_large_precision_integer_columns_as_decimal</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-test_schema_dump_should_honor_nonstandard_primary_keys">test_schema_dump_should_honor_nonstandard_primary_keys</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-test_schema_dump_should_not_add_default_value_for_mysql_text_field">test_schema_dump_should_not_add_default_value_for_mysql_text_field</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-test_schema_dump_should_use_false_as_default">test_schema_dump_should_use_false_as_default</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-test_schema_dump_with_regexp_ignored_table">test_schema_dump_with_regexp_ignored_table</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-test_schema_dump_with_string_ignored_table">test_schema_dump_with_string_ignored_table</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-test_schema_dump_with_table_name_prefix_and_suffix">test_schema_dump_with_table_name_prefix_and_suffix</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-test_schema_dumps_index_columns_in_right_order">test_schema_dumps_index_columns_in_right_order</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-test_schema_dumps_index_type">test_schema_dumps_index_type</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-test_schema_dumps_partial_indices">test_schema_dumps_partial_indices</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-test_types_line_up">test_types_line_up</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+    </dl>
+  
+
+  
+
+
+
+  
+
+    
+
+    
+
+    
+
+
+    
+
+
+    <!-- Methods -->
+        
+      <div class="sectiontitle">Instance Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-i-assert_line_up">
+            
+              <b>assert_line_up</b>(lines, pattern, required = false)
+            
+            <a href="../classes/SchemaDumperTest.html#method-i-assert_line_up" name="method-i-assert_line_up" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-assert_line_up_source')" id="l_method-i-assert_line_up_source">show</a>
+                
+                  | <a href="https://github.com/rails/rails/blob/547ed456337dda54799d9c5f316dcbce43cfce9d/activerecord/test/cases/schema_dumper_test.rb#L48" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-assert_line_up_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File activerecord/test/cases/schema_dumper_test.rb, line 48</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">assert_line_up</span>(<span class="ruby-identifier">lines</span>, <span class="ruby-identifier">pattern</span>, <span class="ruby-identifier">required</span> = <span class="ruby-keyword">false</span>)
+  <span class="ruby-keyword">return</span> <span class="ruby-identifier">assert</span>(<span class="ruby-keyword">true</span>) <span class="ruby-keyword">if</span> <span class="ruby-identifier">lines</span>.<span class="ruby-identifier">empty?</span>
+  <span class="ruby-identifier">matches</span> = <span class="ruby-identifier">lines</span>.<span class="ruby-identifier">map</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">line</span><span class="ruby-operator">|</span> <span class="ruby-identifier">line</span>.<span class="ruby-identifier">match</span>(<span class="ruby-identifier">pattern</span>) }
+  <span class="ruby-identifier">assert</span> <span class="ruby-identifier">matches</span>.<span class="ruby-identifier">all?</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">required</span>
+  <span class="ruby-identifier">matches</span>.<span class="ruby-identifier">compact!</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-identifier">assert</span>(<span class="ruby-keyword">true</span>) <span class="ruby-keyword">if</span> <span class="ruby-identifier">matches</span>.<span class="ruby-identifier">empty?</span>
+  <span class="ruby-identifier">assert_equal</span> <span class="ruby-number">1</span>, <span class="ruby-identifier">matches</span>.<span class="ruby-identifier">map</span>{ <span class="ruby-operator">|</span><span class="ruby-identifier">match</span><span class="ruby-operator">|</span> <span class="ruby-identifier">match</span>.<span class="ruby-identifier">offset</span>(<span class="ruby-number">0</span>).<span class="ruby-identifier">first</span> }.<span class="ruby-identifier">uniq</span>.<span class="ruby-identifier">length</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-column_definition_lines">
+            
+              <b>column_definition_lines</b>(output = standard_dump)
+            
+            <a href="../classes/SchemaDumperTest.html#method-i-column_definition_lines" name="method-i-column_definition_lines" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-column_definition_lines_source')" id="l_method-i-column_definition_lines_source">show</a>
+                
+                  | <a href="https://github.com/rails/rails/blob/547ed456337dda54799d9c5f316dcbce43cfce9d/activerecord/test/cases/schema_dumper_test.rb#L57" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-column_definition_lines_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File activerecord/test/cases/schema_dumper_test.rb, line 57</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">column_definition_lines</span>(<span class="ruby-identifier">output</span> = <span class="ruby-identifier">standard_dump</span>)
+  <span class="ruby-identifier">output</span>.<span class="ruby-identifier">scan</span>(<span class="ruby-regexp">/^( *)create_table.*?\n(.*?)^\1end/m</span>).<span class="ruby-identifier">map</span>{ <span class="ruby-operator">|</span><span class="ruby-identifier">m</span><span class="ruby-operator">|</span> <span class="ruby-identifier">m</span>.<span class="ruby-identifier">last</span>.<span class="ruby-identifier">split</span>(<span class="ruby-regexp">/\n/</span>) }
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-setup">
+            
+              <b>setup</b>()
+            
+            <a href="../classes/SchemaDumperTest.html#method-i-setup" name="method-i-setup" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-setup_source')" id="l_method-i-setup_source">show</a>
+                
+                  | <a href="https://github.com/rails/rails/blob/547ed456337dda54799d9c5f316dcbce43cfce9d/activerecord/test/cases/schema_dumper_test.rb#L4" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-setup_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File activerecord/test/cases/schema_dumper_test.rb, line 4</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">setup</span>
+  <span class="ruby-keyword">super</span>
+  <span class="ruby-constant">ActiveRecord</span><span class="ruby-operator">::</span><span class="ruby-constant">SchemaMigration</span>.<span class="ruby-identifier">create_table</span>
+  <span class="ruby-ivar">@stream</span> = <span class="ruby-constant">StringIO</span>.<span class="ruby-identifier">new</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-standard_dump">
+            
+              <b>standard_dump</b>()
+            
+            <a href="../classes/SchemaDumperTest.html#method-i-standard_dump" name="method-i-standard_dump" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-standard_dump_source')" id="l_method-i-standard_dump_source">show</a>
+                
+                  | <a href="https://github.com/rails/rails/blob/547ed456337dda54799d9c5f316dcbce43cfce9d/activerecord/test/cases/schema_dumper_test.rb#L10" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-standard_dump_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File activerecord/test/cases/schema_dumper_test.rb, line 10</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">standard_dump</span>
+  <span class="ruby-ivar">@stream</span> = <span class="ruby-constant">StringIO</span>.<span class="ruby-identifier">new</span>
+  <span class="ruby-constant">ActiveRecord</span><span class="ruby-operator">::</span><span class="ruby-constant">SchemaDumper</span>.<span class="ruby-identifier">ignore_tables</span> = []
+  <span class="ruby-constant">ActiveRecord</span><span class="ruby-operator">::</span><span class="ruby-constant">SchemaDumper</span>.<span class="ruby-identifier">dump</span>(<span class="ruby-constant">ActiveRecord</span><span class="ruby-operator">::</span><span class="ruby-constant">Base</span>.<span class="ruby-identifier">connection</span>, <span class="ruby-ivar">@stream</span>)
+  <span class="ruby-ivar">@stream</span>.<span class="ruby-identifier">string</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-test_arguments_line_up">
+            
+              <b>test_arguments_line_up</b>()
+            
+            <a href="../classes/SchemaDumperTest.html#method-i-test_arguments_line_up" name="method-i-test_arguments_line_up" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-test_arguments_line_up_source')" id="l_method-i-test_arguments_line_up_source">show</a>
+                
+                  | <a href="https://github.com/rails/rails/blob/547ed456337dda54799d9c5f316dcbce43cfce9d/activerecord/test/cases/schema_dumper_test.rb#L75" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-test_arguments_line_up_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File activerecord/test/cases/schema_dumper_test.rb, line 75</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">test_arguments_line_up</span>
+  <span class="ruby-identifier">column_definition_lines</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">column_set</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">assert_line_up</span>(<span class="ruby-identifier">column_set</span>, <span class="ruby-regexp">/default: /</span>)
+    <span class="ruby-identifier">assert_line_up</span>(<span class="ruby-identifier">column_set</span>, <span class="ruby-regexp">/limit: /</span>)
+    <span class="ruby-identifier">assert_line_up</span>(<span class="ruby-identifier">column_set</span>, <span class="ruby-regexp">/null: /</span>)
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-test_dump_schema_information_outputs_lexically_ordered_versions">
+            
+              <b>test_dump_schema_information_outputs_lexically_ordered_versions</b>()
+            
+            <a href="../classes/SchemaDumperTest.html#method-i-test_dump_schema_information_outputs_lexically_ordered_versions" name="method-i-test_dump_schema_information_outputs_lexically_ordered_versions" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-test_dump_schema_information_outputs_lexically_ordered_versions_source')" id="l_method-i-test_dump_schema_information_outputs_lexically_ordered_versions_source">show</a>
+                
+                  | <a href="https://github.com/rails/rails/blob/547ed456337dda54799d9c5f316dcbce43cfce9d/activerecord/test/cases/schema_dumper_test.rb#L17" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-test_dump_schema_information_outputs_lexically_ordered_versions_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File activerecord/test/cases/schema_dumper_test.rb, line 17</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">test_dump_schema_information_outputs_lexically_ordered_versions</span>
+  <span class="ruby-identifier">versions</span> = <span class="ruby-node">%w{ 20100101010101 20100201010101 20100301010101 }</span>
+  <span class="ruby-identifier">versions</span>.<span class="ruby-identifier">reverse</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">v</span><span class="ruby-operator">|</span>
+    <span class="ruby-constant">ActiveRecord</span><span class="ruby-operator">::</span><span class="ruby-constant">SchemaMigration</span>.<span class="ruby-identifier">create!</span>(<span class="ruby-value">:version</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">v</span>)
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-identifier">schema_info</span> = <span class="ruby-constant">ActiveRecord</span><span class="ruby-operator">::</span><span class="ruby-constant">Base</span>.<span class="ruby-identifier">connection</span>.<span class="ruby-identifier">dump_schema_information</span>
+  <span class="ruby-identifier">assert_match</span>(<span class="ruby-regexp">/20100201010101.*20100301010101/m</span>, <span class="ruby-identifier">schema_info</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-test_magic_comment">
+            
+              <b>test_magic_comment</b>()
+            
+            <a href="../classes/SchemaDumperTest.html#method-i-test_magic_comment" name="method-i-test_magic_comment" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-test_magic_comment_source')" id="l_method-i-test_magic_comment_source">show</a>
+                
+                  | <a href="https://github.com/rails/rails/blob/547ed456337dda54799d9c5f316dcbce43cfce9d/activerecord/test/cases/schema_dumper_test.rb#L27" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-test_magic_comment_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File activerecord/test/cases/schema_dumper_test.rb, line 27</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">test_magic_comment</span>
+  <span class="ruby-identifier">assert_match</span> <span class="ruby-node">&quot;# encoding: #{@stream.external_encoding.name}&quot;</span>, <span class="ruby-identifier">standard_dump</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-test_no_dump_errors">
+            
+              <b>test_no_dump_errors</b>()
+            
+            <a href="../classes/SchemaDumperTest.html#method-i-test_no_dump_errors" name="method-i-test_no_dump_errors" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-test_no_dump_errors_source')" id="l_method-i-test_no_dump_errors_source">show</a>
+                
+                  | <a href="https://github.com/rails/rails/blob/547ed456337dda54799d9c5f316dcbce43cfce9d/activerecord/test/cases/schema_dumper_test.rb#L83" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-test_no_dump_errors_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File activerecord/test/cases/schema_dumper_test.rb, line 83</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">test_no_dump_errors</span>
+  <span class="ruby-identifier">output</span> = <span class="ruby-identifier">standard_dump</span>
+  <span class="ruby-identifier">assert_no_match</span> <span class="ruby-node">%r{\# Could not dump table}</span>, <span class="ruby-identifier">output</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-test_schema_dump">
+            
+              <b>test_schema_dump</b>()
+            
+            <a href="../classes/SchemaDumperTest.html#method-i-test_schema_dump" name="method-i-test_schema_dump" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-test_schema_dump_source')" id="l_method-i-test_schema_dump_source">show</a>
+                
+                  | <a href="https://github.com/rails/rails/blob/547ed456337dda54799d9c5f316dcbce43cfce9d/activerecord/test/cases/schema_dumper_test.rb#L31" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-test_schema_dump_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File activerecord/test/cases/schema_dumper_test.rb, line 31</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">test_schema_dump</span>
+  <span class="ruby-identifier">output</span> = <span class="ruby-identifier">standard_dump</span>
+  <span class="ruby-identifier">assert_match</span> <span class="ruby-regexp">%r{create_table &quot;accounts&quot;}</span>, <span class="ruby-identifier">output</span>
+  <span class="ruby-identifier">assert_match</span> <span class="ruby-regexp">%r{create_table &quot;authors&quot;}</span>, <span class="ruby-identifier">output</span>
+  <span class="ruby-identifier">assert_no_match</span> <span class="ruby-regexp">%r{create_table &quot;schema_migrations&quot;}</span>, <span class="ruby-identifier">output</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-test_schema_dump_excludes_sqlite_sequence">
+            
+              <b>test_schema_dump_excludes_sqlite_sequence</b>()
+            
+            <a href="../classes/SchemaDumperTest.html#method-i-test_schema_dump_excludes_sqlite_sequence" name="method-i-test_schema_dump_excludes_sqlite_sequence" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-test_schema_dump_excludes_sqlite_sequence_source')" id="l_method-i-test_schema_dump_excludes_sqlite_sequence_source">show</a>
+                
+                  | <a href="https://github.com/rails/rails/blob/547ed456337dda54799d9c5f316dcbce43cfce9d/activerecord/test/cases/schema_dumper_test.rb#L38" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-test_schema_dump_excludes_sqlite_sequence_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File activerecord/test/cases/schema_dumper_test.rb, line 38</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">test_schema_dump_excludes_sqlite_sequence</span>
+  <span class="ruby-identifier">output</span> = <span class="ruby-identifier">standard_dump</span>
+  <span class="ruby-identifier">assert_no_match</span> <span class="ruby-regexp">%r{create_table &quot;sqlite_sequence&quot;}</span>, <span class="ruby-identifier">output</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-test_schema_dump_illegal_ignored_table_value">
+            
+              <b>test_schema_dump_illegal_ignored_table_value</b>()
+            
+            <a href="../classes/SchemaDumperTest.html#method-i-test_schema_dump_illegal_ignored_table_value" name="method-i-test_schema_dump_illegal_ignored_table_value" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-test_schema_dump_illegal_ignored_table_value_source')" id="l_method-i-test_schema_dump_illegal_ignored_table_value_source">show</a>
+                
+                  | <a href="https://github.com/rails/rails/blob/547ed456337dda54799d9c5f316dcbce43cfce9d/activerecord/test/cases/schema_dumper_test.rb#L170" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-test_schema_dump_illegal_ignored_table_value_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File activerecord/test/cases/schema_dumper_test.rb, line 170</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">test_schema_dump_illegal_ignored_table_value</span>
+  <span class="ruby-identifier">stream</span> = <span class="ruby-constant">StringIO</span>.<span class="ruby-identifier">new</span>
+  <span class="ruby-constant">ActiveRecord</span><span class="ruby-operator">::</span><span class="ruby-constant">SchemaDumper</span>.<span class="ruby-identifier">ignore_tables</span> = [<span class="ruby-number">5</span>]
+  <span class="ruby-identifier">assert_raise</span>(<span class="ruby-constant">StandardError</span>) <span class="ruby-keyword">do</span>
+    <span class="ruby-constant">ActiveRecord</span><span class="ruby-operator">::</span><span class="ruby-constant">SchemaDumper</span>.<span class="ruby-identifier">dump</span>(<span class="ruby-constant">ActiveRecord</span><span class="ruby-operator">::</span><span class="ruby-constant">Base</span>.<span class="ruby-identifier">connection</span>, <span class="ruby-identifier">stream</span>)
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-test_schema_dump_includes_arrays_shorthand_definition">
+            
+              <b>test_schema_dump_includes_arrays_shorthand_definition</b>()
+            
+            <a href="../classes/SchemaDumperTest.html#method-i-test_schema_dump_includes_arrays_shorthand_definition" name="method-i-test_schema_dump_includes_arrays_shorthand_definition" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-test_schema_dump_includes_arrays_shorthand_definition_source')" id="l_method-i-test_schema_dump_includes_arrays_shorthand_definition_source">show</a>
+                
+                  | <a href="https://github.com/rails/rails/blob/547ed456337dda54799d9c5f316dcbce43cfce9d/activerecord/test/cases/schema_dumper_test.rb#L329" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-test_schema_dump_includes_arrays_shorthand_definition_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File activerecord/test/cases/schema_dumper_test.rb, line 329</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">test_schema_dump_includes_arrays_shorthand_definition</span>
+  <span class="ruby-identifier">output</span> = <span class="ruby-identifier">standard_dump</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-regexp">%r{create_table &quot;postgresql_arrays&quot;}</span> <span class="ruby-operator">=~</span> <span class="ruby-identifier">output</span>
+    <span class="ruby-identifier">assert_match</span> <span class="ruby-regexp">%r[t.text\s+&quot;nicknames&quot;,\s+array: true]</span>, <span class="ruby-identifier">output</span>
+    <span class="ruby-identifier">assert_match</span> <span class="ruby-regexp">%r[t.integer\s+&quot;commission_by_quarter&quot;,\s+array: true]</span>, <span class="ruby-identifier">output</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-test_schema_dump_includes_bigint_default">
+            
+              <b>test_schema_dump_includes_bigint_default</b>()
+            
+            <a href="../classes/SchemaDumperTest.html#method-i-test_schema_dump_includes_bigint_default" name="method-i-test_schema_dump_includes_bigint_default" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-test_schema_dump_includes_bigint_default_source')" id="l_method-i-test_schema_dump_includes_bigint_default_source">show</a>
+                
+                  | <a href="https://github.com/rails/rails/blob/547ed456337dda54799d9c5f316dcbce43cfce9d/activerecord/test/cases/schema_dumper_test.rb#L252" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-test_schema_dump_includes_bigint_default_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File activerecord/test/cases/schema_dumper_test.rb, line 252</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">test_schema_dump_includes_bigint_default</span>
+  <span class="ruby-identifier">output</span> = <span class="ruby-identifier">standard_dump</span>
+  <span class="ruby-identifier">assert_match</span> <span class="ruby-regexp">%r{t.integer\s+&quot;bigint_default&quot;,\s+limit: 8,\s+default: 0}</span>, <span class="ruby-identifier">output</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-test_schema_dump_includes_camelcase_table_name">
+            
+              <b>test_schema_dump_includes_camelcase_table_name</b>()
+            
+            <a href="../classes/SchemaDumperTest.html#method-i-test_schema_dump_includes_camelcase_table_name" name="method-i-test_schema_dump_includes_camelcase_table_name" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-test_schema_dump_includes_camelcase_table_name_source')" id="l_method-i-test_schema_dump_includes_camelcase_table_name_source">show</a>
+                
+                  | <a href="https://github.com/rails/rails/blob/547ed456337dda54799d9c5f316dcbce43cfce9d/activerecord/test/cases/schema_dumper_test.rb#L43" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-test_schema_dump_includes_camelcase_table_name_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File activerecord/test/cases/schema_dumper_test.rb, line 43</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">test_schema_dump_includes_camelcase_table_name</span>
+  <span class="ruby-identifier">output</span> = <span class="ruby-identifier">standard_dump</span>
+  <span class="ruby-identifier">assert_match</span> <span class="ruby-regexp">%r{create_table &quot;CamelCase&quot;}</span>, <span class="ruby-identifier">output</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-test_schema_dump_includes_cidr_shorthand_definition">
+            
+              <b>test_schema_dump_includes_cidr_shorthand_definition</b>()
+            
+            <a href="../classes/SchemaDumperTest.html#method-i-test_schema_dump_includes_cidr_shorthand_definition" name="method-i-test_schema_dump_includes_cidr_shorthand_definition" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-test_schema_dump_includes_cidr_shorthand_definition_source')" id="l_method-i-test_schema_dump_includes_cidr_shorthand_definition_source">show</a>
+                
+                  | <a href="https://github.com/rails/rails/blob/547ed456337dda54799d9c5f316dcbce43cfce9d/activerecord/test/cases/schema_dumper_test.rb#L294" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-test_schema_dump_includes_cidr_shorthand_definition_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File activerecord/test/cases/schema_dumper_test.rb, line 294</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">test_schema_dump_includes_cidr_shorthand_definition</span>
+  <span class="ruby-identifier">output</span> = <span class="ruby-identifier">standard_dump</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-regexp">%r{create_table &quot;postgresql_network_addresses&quot;}</span> <span class="ruby-operator">=~</span> <span class="ruby-identifier">output</span>
+    <span class="ruby-identifier">assert_match</span> <span class="ruby-regexp">%r{t.cidr\s+&quot;cidr_address&quot;,\s+default: &quot;192.168.1.0/24&quot;}</span>, <span class="ruby-identifier">output</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-test_schema_dump_includes_decimal_options">
+            
+              <b>test_schema_dump_includes_decimal_options</b>()
+            
+            <a href="../classes/SchemaDumperTest.html#method-i-test_schema_dump_includes_decimal_options" name="method-i-test_schema_dump_includes_decimal_options" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-test_schema_dump_includes_decimal_options_source')" id="l_method-i-test_schema_dump_includes_decimal_options_source">show</a>
+                
+                  | <a href="https://github.com/rails/rails/blob/547ed456337dda54799d9c5f316dcbce43cfce9d/activerecord/test/cases/schema_dumper_test.rb#L243" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-test_schema_dump_includes_decimal_options_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File activerecord/test/cases/schema_dumper_test.rb, line 243</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">test_schema_dump_includes_decimal_options</span>
+  <span class="ruby-identifier">stream</span> = <span class="ruby-constant">StringIO</span>.<span class="ruby-identifier">new</span>
+  <span class="ruby-constant">ActiveRecord</span><span class="ruby-operator">::</span><span class="ruby-constant">SchemaDumper</span>.<span class="ruby-identifier">ignore_tables</span> = [<span class="ruby-regexp">/^[^n]/</span>]
+  <span class="ruby-constant">ActiveRecord</span><span class="ruby-operator">::</span><span class="ruby-constant">SchemaDumper</span>.<span class="ruby-identifier">dump</span>(<span class="ruby-constant">ActiveRecord</span><span class="ruby-operator">::</span><span class="ruby-constant">Base</span>.<span class="ruby-identifier">connection</span>, <span class="ruby-identifier">stream</span>)
+  <span class="ruby-identifier">output</span> = <span class="ruby-identifier">stream</span>.<span class="ruby-identifier">string</span>
+  <span class="ruby-identifier">assert_match</span> <span class="ruby-regexp">%r{precision: 3,[[:space:]]+scale: 2,[[:space:]]+default: 2.78}</span>, <span class="ruby-identifier">output</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-test_schema_dump_includes_extensions">
+            
+              <b>test_schema_dump_includes_extensions</b>()
+            
+            <a href="../classes/SchemaDumperTest.html#method-i-test_schema_dump_includes_extensions" name="method-i-test_schema_dump_includes_extensions" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-test_schema_dump_includes_extensions_source')" id="l_method-i-test_schema_dump_includes_extensions_source">show</a>
+                
+                  | <a href="https://github.com/rails/rails/blob/547ed456337dda54799d9c5f316dcbce43cfce9d/activerecord/test/cases/schema_dumper_test.rb#L258" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-test_schema_dump_includes_extensions_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File activerecord/test/cases/schema_dumper_test.rb, line 258</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">test_schema_dump_includes_extensions</span>
+  <span class="ruby-identifier">connection</span> = <span class="ruby-constant">ActiveRecord</span><span class="ruby-operator">::</span><span class="ruby-constant">Base</span>.<span class="ruby-identifier">connection</span>
+
+  <span class="ruby-identifier">connection</span>.<span class="ruby-identifier">stubs</span>(<span class="ruby-value">:extensions</span>).<span class="ruby-identifier">returns</span>([<span class="ruby-string">&#39;hstore&#39;</span>])
+  <span class="ruby-identifier">output</span> = <span class="ruby-identifier">standard_dump</span>
+  <span class="ruby-identifier">assert_match</span> <span class="ruby-node">&quot;# These are extensions that must be enabled&quot;</span>, <span class="ruby-identifier">output</span>
+  <span class="ruby-identifier">assert_match</span> <span class="ruby-regexp">%r{enable_extension &quot;hstore&quot;}</span>, <span class="ruby-identifier">output</span>
+
+  <span class="ruby-identifier">connection</span>.<span class="ruby-identifier">stubs</span>(<span class="ruby-value">:extensions</span>).<span class="ruby-identifier">returns</span>([])
+  <span class="ruby-identifier">output</span> = <span class="ruby-identifier">standard_dump</span>
+  <span class="ruby-identifier">assert_no_match</span> <span class="ruby-node">&quot;# These are extensions that must be enabled&quot;</span>, <span class="ruby-identifier">output</span>
+  <span class="ruby-identifier">assert_no_match</span> <span class="ruby-regexp">%r{enable_extension}</span>, <span class="ruby-identifier">output</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-test_schema_dump_includes_hstores_shorthand_definition">
+            
+              <b>test_schema_dump_includes_hstores_shorthand_definition</b>()
+            
+            <a href="../classes/SchemaDumperTest.html#method-i-test_schema_dump_includes_hstores_shorthand_definition" name="method-i-test_schema_dump_includes_hstores_shorthand_definition" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-test_schema_dump_includes_hstores_shorthand_definition_source')" id="l_method-i-test_schema_dump_includes_hstores_shorthand_definition_source">show</a>
+                
+                  | <a href="https://github.com/rails/rails/blob/547ed456337dda54799d9c5f316dcbce43cfce9d/activerecord/test/cases/schema_dumper_test.rb#L315" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-test_schema_dump_includes_hstores_shorthand_definition_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File activerecord/test/cases/schema_dumper_test.rb, line 315</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">test_schema_dump_includes_hstores_shorthand_definition</span>
+  <span class="ruby-identifier">output</span> = <span class="ruby-identifier">standard_dump</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-regexp">%r{create_table &quot;postgresql_hstores&quot;}</span> <span class="ruby-operator">=~</span> <span class="ruby-identifier">output</span>
+    <span class="ruby-identifier">assert_match</span> <span class="ruby-regexp">%r[t.hstore &quot;hash_store&quot;, default: {}]</span>, <span class="ruby-identifier">output</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-test_schema_dump_includes_inet_shorthand_definition">
+            
+              <b>test_schema_dump_includes_inet_shorthand_definition</b>()
+            
+            <a href="../classes/SchemaDumperTest.html#method-i-test_schema_dump_includes_inet_shorthand_definition" name="method-i-test_schema_dump_includes_inet_shorthand_definition" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-test_schema_dump_includes_inet_shorthand_definition_source')" id="l_method-i-test_schema_dump_includes_inet_shorthand_definition_source">show</a>
+                
+                  | <a href="https://github.com/rails/rails/blob/547ed456337dda54799d9c5f316dcbce43cfce9d/activerecord/test/cases/schema_dumper_test.rb#L287" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-test_schema_dump_includes_inet_shorthand_definition_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File activerecord/test/cases/schema_dumper_test.rb, line 287</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">test_schema_dump_includes_inet_shorthand_definition</span>
+  <span class="ruby-identifier">output</span> = <span class="ruby-identifier">standard_dump</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-regexp">%r{create_table &quot;postgresql_network_addresses&quot;}</span> <span class="ruby-operator">=~</span> <span class="ruby-identifier">output</span>
+    <span class="ruby-identifier">assert_match</span> <span class="ruby-regexp">%r{t.inet\s+&quot;inet_address&quot;,\s+default: &quot;192.168.1.1&quot;}</span>, <span class="ruby-identifier">output</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-test_schema_dump_includes_json_shorthand_definition">
+            
+              <b>test_schema_dump_includes_json_shorthand_definition</b>()
+            
+            <a href="../classes/SchemaDumperTest.html#method-i-test_schema_dump_includes_json_shorthand_definition" name="method-i-test_schema_dump_includes_json_shorthand_definition" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-test_schema_dump_includes_json_shorthand_definition_source')" id="l_method-i-test_schema_dump_includes_json_shorthand_definition_source">show</a>
+                
+                  | <a href="https://github.com/rails/rails/blob/547ed456337dda54799d9c5f316dcbce43cfce9d/activerecord/test/cases/schema_dumper_test.rb#L280" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-test_schema_dump_includes_json_shorthand_definition_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File activerecord/test/cases/schema_dumper_test.rb, line 280</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">test_schema_dump_includes_json_shorthand_definition</span>
+  <span class="ruby-identifier">output</span> = <span class="ruby-identifier">standard_dump</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-regexp">%r{create_table &quot;postgresql_json_data_type&quot;}</span> <span class="ruby-operator">=~</span> <span class="ruby-identifier">output</span>
+    <span class="ruby-identifier">assert_match</span> <span class="ruby-regexp">%rt.json &quot;json_data&quot;, default: {}|</span>, <span class="ruby-identifier">output</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-test_schema_dump_includes_length_for_mysql_binary_fields">
+            
+              <b>test_schema_dump_includes_length_for_mysql_binary_fields</b>()
+            
+            <a href="../classes/SchemaDumperTest.html#method-i-test_schema_dump_includes_length_for_mysql_binary_fields" name="method-i-test_schema_dump_includes_length_for_mysql_binary_fields" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-test_schema_dump_includes_length_for_mysql_binary_fields_source')" id="l_method-i-test_schema_dump_includes_length_for_mysql_binary_fields_source">show</a>
+                
+                  | <a href="https://github.com/rails/rails/blob/547ed456337dda54799d9c5f316dcbce43cfce9d/activerecord/test/cases/schema_dumper_test.rb#L218" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-test_schema_dump_includes_length_for_mysql_binary_fields_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File activerecord/test/cases/schema_dumper_test.rb, line 218</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">test_schema_dump_includes_length_for_mysql_binary_fields</span>
+  <span class="ruby-identifier">output</span> = <span class="ruby-identifier">standard_dump</span>
+  <span class="ruby-identifier">assert_match</span> <span class="ruby-regexp">%r{t.binary\s+&quot;var_binary&quot;,\s+limit: 255$}</span>, <span class="ruby-identifier">output</span>
+  <span class="ruby-identifier">assert_match</span> <span class="ruby-regexp">%r{t.binary\s+&quot;var_binary_large&quot;,\s+limit: 4095$}</span>, <span class="ruby-identifier">output</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-test_schema_dump_includes_length_for_mysql_blob_and_text_fields">
+            
+              <b>test_schema_dump_includes_length_for_mysql_blob_and_text_fields</b>()
+            
+            <a href="../classes/SchemaDumperTest.html#method-i-test_schema_dump_includes_length_for_mysql_blob_and_text_fields" name="method-i-test_schema_dump_includes_length_for_mysql_blob_and_text_fields" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-test_schema_dump_includes_length_for_mysql_blob_and_text_fields_source')" id="l_method-i-test_schema_dump_includes_length_for_mysql_blob_and_text_fields_source">show</a>
+                
+                  | <a href="https://github.com/rails/rails/blob/547ed456337dda54799d9c5f316dcbce43cfce9d/activerecord/test/cases/schema_dumper_test.rb#L224" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-test_schema_dump_includes_length_for_mysql_blob_and_text_fields_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File activerecord/test/cases/schema_dumper_test.rb, line 224</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">test_schema_dump_includes_length_for_mysql_blob_and_text_fields</span>
+  <span class="ruby-identifier">output</span> = <span class="ruby-identifier">standard_dump</span>
+  <span class="ruby-identifier">assert_match</span> <span class="ruby-regexp">%r{t.binary\s+&quot;tiny_blob&quot;,\s+limit: 255$}</span>, <span class="ruby-identifier">output</span>
+  <span class="ruby-identifier">assert_match</span> <span class="ruby-regexp">%r{t.binary\s+&quot;normal_blob&quot;$}</span>, <span class="ruby-identifier">output</span>
+  <span class="ruby-identifier">assert_match</span> <span class="ruby-regexp">%r{t.binary\s+&quot;medium_blob&quot;,\s+limit: 16777215$}</span>, <span class="ruby-identifier">output</span>
+  <span class="ruby-identifier">assert_match</span> <span class="ruby-regexp">%r{t.binary\s+&quot;long_blob&quot;,\s+limit: 2147483647$}</span>, <span class="ruby-identifier">output</span>
+  <span class="ruby-identifier">assert_match</span> <span class="ruby-regexp">%r{t.text\s+&quot;tiny_text&quot;,\s+limit: 255$}</span>, <span class="ruby-identifier">output</span>
+  <span class="ruby-identifier">assert_match</span> <span class="ruby-regexp">%r{t.text\s+&quot;normal_text&quot;$}</span>, <span class="ruby-identifier">output</span>
+  <span class="ruby-identifier">assert_match</span> <span class="ruby-regexp">%r{t.text\s+&quot;medium_text&quot;,\s+limit: 16777215$}</span>, <span class="ruby-identifier">output</span>
+  <span class="ruby-identifier">assert_match</span> <span class="ruby-regexp">%r{t.text\s+&quot;long_text&quot;,\s+limit: 2147483647$}</span>, <span class="ruby-identifier">output</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-test_schema_dump_includes_limit_constraint_for_integer_columns">
+            
+              <b>test_schema_dump_includes_limit_constraint_for_integer_columns</b>()
+            
+            <a href="../classes/SchemaDumperTest.html#method-i-test_schema_dump_includes_limit_constraint_for_integer_columns" name="method-i-test_schema_dump_includes_limit_constraint_for_integer_columns" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-test_schema_dump_includes_limit_constraint_for_integer_columns_source')" id="l_method-i-test_schema_dump_includes_limit_constraint_for_integer_columns_source">show</a>
+                
+                  | <a href="https://github.com/rails/rails/blob/547ed456337dda54799d9c5f316dcbce43cfce9d/activerecord/test/cases/schema_dumper_test.rb#L97" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-test_schema_dump_includes_limit_constraint_for_integer_columns_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File activerecord/test/cases/schema_dumper_test.rb, line 97</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">test_schema_dump_includes_limit_constraint_for_integer_columns</span>
+  <span class="ruby-identifier">stream</span> = <span class="ruby-constant">StringIO</span>.<span class="ruby-identifier">new</span>
+
+  <span class="ruby-constant">ActiveRecord</span><span class="ruby-operator">::</span><span class="ruby-constant">SchemaDumper</span>.<span class="ruby-identifier">ignore_tables</span> = [<span class="ruby-regexp">/^(?!integer_limits)/</span>]
+  <span class="ruby-constant">ActiveRecord</span><span class="ruby-operator">::</span><span class="ruby-constant">SchemaDumper</span>.<span class="ruby-identifier">dump</span>(<span class="ruby-constant">ActiveRecord</span><span class="ruby-operator">::</span><span class="ruby-constant">Base</span>.<span class="ruby-identifier">connection</span>, <span class="ruby-identifier">stream</span>)
+  <span class="ruby-identifier">output</span> = <span class="ruby-identifier">stream</span>.<span class="ruby-identifier">string</span>
+
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">current_adapter?</span>(<span class="ruby-value">:PostgreSQLAdapter</span>)
+    <span class="ruby-identifier">assert_match</span> <span class="ruby-regexp">%r{c_int_1.*limit: 2}</span>, <span class="ruby-identifier">output</span>
+    <span class="ruby-identifier">assert_match</span> <span class="ruby-regexp">%r{c_int_2.*limit: 2}</span>, <span class="ruby-identifier">output</span>
+
+    <span class="ruby-comment"># int 3 is 4 bytes in postgresql</span>
+    <span class="ruby-identifier">assert_match</span> <span class="ruby-regexp">%r{c_int_3.*}</span>, <span class="ruby-identifier">output</span>
+    <span class="ruby-identifier">assert_no_match</span> <span class="ruby-regexp">%r{c_int_3.*limit:}</span>, <span class="ruby-identifier">output</span>
+
+    <span class="ruby-identifier">assert_match</span> <span class="ruby-regexp">%r{c_int_4.*}</span>, <span class="ruby-identifier">output</span>
+    <span class="ruby-identifier">assert_no_match</span> <span class="ruby-regexp">%r{c_int_4.*limit:}</span>, <span class="ruby-identifier">output</span>
+  <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">current_adapter?</span>(<span class="ruby-value">:MysqlAdapter</span>, <span class="ruby-value">:Mysql2Adapter</span>)
+    <span class="ruby-identifier">assert_match</span> <span class="ruby-regexp">%r{c_int_1.*limit: 1}</span>, <span class="ruby-identifier">output</span>
+    <span class="ruby-identifier">assert_match</span> <span class="ruby-regexp">%r{c_int_2.*limit: 2}</span>, <span class="ruby-identifier">output</span>
+    <span class="ruby-identifier">assert_match</span> <span class="ruby-regexp">%r{c_int_3.*limit: 3}</span>, <span class="ruby-identifier">output</span>
+
+    <span class="ruby-identifier">assert_match</span> <span class="ruby-regexp">%r{c_int_4.*}</span>, <span class="ruby-identifier">output</span>
+    <span class="ruby-identifier">assert_no_match</span> <span class="ruby-regexp">%r{c_int_4.*:limit}</span>, <span class="ruby-identifier">output</span>
+  <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">current_adapter?</span>(<span class="ruby-value">:SQLite3Adapter</span>)
+    <span class="ruby-identifier">assert_match</span> <span class="ruby-regexp">%r{c_int_1.*limit: 1}</span>, <span class="ruby-identifier">output</span>
+    <span class="ruby-identifier">assert_match</span> <span class="ruby-regexp">%r{c_int_2.*limit: 2}</span>, <span class="ruby-identifier">output</span>
+    <span class="ruby-identifier">assert_match</span> <span class="ruby-regexp">%r{c_int_3.*limit: 3}</span>, <span class="ruby-identifier">output</span>
+    <span class="ruby-identifier">assert_match</span> <span class="ruby-regexp">%r{c_int_4.*limit: 4}</span>, <span class="ruby-identifier">output</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">assert_match</span> <span class="ruby-regexp">%r{c_int_without_limit.*}</span>, <span class="ruby-identifier">output</span>
+  <span class="ruby-identifier">assert_no_match</span> <span class="ruby-regexp">%r{c_int_without_limit.*limit:}</span>, <span class="ruby-identifier">output</span>
+
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">current_adapter?</span>(<span class="ruby-value">:SQLite3Adapter</span>)
+    <span class="ruby-identifier">assert_match</span> <span class="ruby-regexp">%r{c_int_5.*limit: 5}</span>, <span class="ruby-identifier">output</span>
+    <span class="ruby-identifier">assert_match</span> <span class="ruby-regexp">%r{c_int_6.*limit: 6}</span>, <span class="ruby-identifier">output</span>
+    <span class="ruby-identifier">assert_match</span> <span class="ruby-regexp">%r{c_int_7.*limit: 7}</span>, <span class="ruby-identifier">output</span>
+    <span class="ruby-identifier">assert_match</span> <span class="ruby-regexp">%r{c_int_8.*limit: 8}</span>, <span class="ruby-identifier">output</span>
+  <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">current_adapter?</span>(<span class="ruby-value">:OracleAdapter</span>)
+    <span class="ruby-identifier">assert_match</span> <span class="ruby-regexp">%r{c_int_5.*limit: 5}</span>, <span class="ruby-identifier">output</span>
+    <span class="ruby-identifier">assert_match</span> <span class="ruby-regexp">%r{c_int_6.*limit: 6}</span>, <span class="ruby-identifier">output</span>
+    <span class="ruby-identifier">assert_match</span> <span class="ruby-regexp">%r{c_int_7.*limit: 7}</span>, <span class="ruby-identifier">output</span>
+    <span class="ruby-identifier">assert_match</span> <span class="ruby-regexp">%r{c_int_8.*limit: 8}</span>, <span class="ruby-identifier">output</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">assert_match</span> <span class="ruby-regexp">%r{c_int_5.*limit: 8}</span>, <span class="ruby-identifier">output</span>
+    <span class="ruby-identifier">assert_match</span> <span class="ruby-regexp">%r{c_int_6.*limit: 8}</span>, <span class="ruby-identifier">output</span>
+    <span class="ruby-identifier">assert_match</span> <span class="ruby-regexp">%r{c_int_7.*limit: 8}</span>, <span class="ruby-identifier">output</span>
+    <span class="ruby-identifier">assert_match</span> <span class="ruby-regexp">%r{c_int_8.*limit: 8}</span>, <span class="ruby-identifier">output</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-test_schema_dump_includes_ltrees_shorthand_definition">
+            
+              <b>test_schema_dump_includes_ltrees_shorthand_definition</b>()
+            
+            <a href="../classes/SchemaDumperTest.html#method-i-test_schema_dump_includes_ltrees_shorthand_definition" name="method-i-test_schema_dump_includes_ltrees_shorthand_definition" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-test_schema_dump_includes_ltrees_shorthand_definition_source')" id="l_method-i-test_schema_dump_includes_ltrees_shorthand_definition_source">show</a>
+                
+                  | <a href="https://github.com/rails/rails/blob/547ed456337dda54799d9c5f316dcbce43cfce9d/activerecord/test/cases/schema_dumper_test.rb#L322" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-test_schema_dump_includes_ltrees_shorthand_definition_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File activerecord/test/cases/schema_dumper_test.rb, line 322</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">test_schema_dump_includes_ltrees_shorthand_definition</span>
+  <span class="ruby-identifier">output</span> = <span class="ruby-identifier">standard_dump</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-regexp">%r{create_table &quot;postgresql_ltrees&quot;}</span> <span class="ruby-operator">=~</span> <span class="ruby-identifier">output</span>
+    <span class="ruby-identifier">assert_match</span> <span class="ruby-regexp">%r[t.ltree &quot;path&quot;]</span>, <span class="ruby-identifier">output</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-test_schema_dump_includes_macaddr_shorthand_definition">
+            
+              <b>test_schema_dump_includes_macaddr_shorthand_definition</b>()
+            
+            <a href="../classes/SchemaDumperTest.html#method-i-test_schema_dump_includes_macaddr_shorthand_definition" name="method-i-test_schema_dump_includes_macaddr_shorthand_definition" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-test_schema_dump_includes_macaddr_shorthand_definition_source')" id="l_method-i-test_schema_dump_includes_macaddr_shorthand_definition_source">show</a>
+                
+                  | <a href="https://github.com/rails/rails/blob/547ed456337dda54799d9c5f316dcbce43cfce9d/activerecord/test/cases/schema_dumper_test.rb#L301" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-test_schema_dump_includes_macaddr_shorthand_definition_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File activerecord/test/cases/schema_dumper_test.rb, line 301</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">test_schema_dump_includes_macaddr_shorthand_definition</span>
+  <span class="ruby-identifier">output</span> = <span class="ruby-identifier">standard_dump</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-regexp">%r{create_table &quot;postgresql_network_addresses&quot;}</span> <span class="ruby-operator">=~</span> <span class="ruby-identifier">output</span>
+    <span class="ruby-identifier">assert_match</span> <span class="ruby-regexp">%r{t.macaddr\s+&quot;mac_address&quot;,\s+default: &quot;ff:ff:ff:ff:ff:ff&quot;}</span>, <span class="ruby-identifier">output</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-test_schema_dump_includes_not_null_columns">
+            
+              <b>test_schema_dump_includes_not_null_columns</b>()
+            
+            <a href="../classes/SchemaDumperTest.html#method-i-test_schema_dump_includes_not_null_columns" name="method-i-test_schema_dump_includes_not_null_columns" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-test_schema_dump_includes_not_null_columns_source')" id="l_method-i-test_schema_dump_includes_not_null_columns_source">show</a>
+                
+                  | <a href="https://github.com/rails/rails/blob/547ed456337dda54799d9c5f316dcbce43cfce9d/activerecord/test/cases/schema_dumper_test.rb#L88" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-test_schema_dump_includes_not_null_columns_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File activerecord/test/cases/schema_dumper_test.rb, line 88</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">test_schema_dump_includes_not_null_columns</span>
+  <span class="ruby-identifier">stream</span> = <span class="ruby-constant">StringIO</span>.<span class="ruby-identifier">new</span>
+
+  <span class="ruby-constant">ActiveRecord</span><span class="ruby-operator">::</span><span class="ruby-constant">SchemaDumper</span>.<span class="ruby-identifier">ignore_tables</span> = [<span class="ruby-regexp">/^[^r]/</span>]
+  <span class="ruby-constant">ActiveRecord</span><span class="ruby-operator">::</span><span class="ruby-constant">SchemaDumper</span>.<span class="ruby-identifier">dump</span>(<span class="ruby-constant">ActiveRecord</span><span class="ruby-operator">::</span><span class="ruby-constant">Base</span>.<span class="ruby-identifier">connection</span>, <span class="ruby-identifier">stream</span>)
+  <span class="ruby-identifier">output</span> = <span class="ruby-identifier">stream</span>.<span class="ruby-identifier">string</span>
+  <span class="ruby-identifier">assert_match</span> <span class="ruby-regexp">%r{null: false}</span>, <span class="ruby-identifier">output</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-test_schema_dump_includes_tsvector_shorthand_definition">
+            
+              <b>test_schema_dump_includes_tsvector_shorthand_definition</b>()
+            
+            <a href="../classes/SchemaDumperTest.html#method-i-test_schema_dump_includes_tsvector_shorthand_definition" name="method-i-test_schema_dump_includes_tsvector_shorthand_definition" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-test_schema_dump_includes_tsvector_shorthand_definition_source')" id="l_method-i-test_schema_dump_includes_tsvector_shorthand_definition_source">show</a>
+                
+                  | <a href="https://github.com/rails/rails/blob/547ed456337dda54799d9c5f316dcbce43cfce9d/activerecord/test/cases/schema_dumper_test.rb#L337" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-test_schema_dump_includes_tsvector_shorthand_definition_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File activerecord/test/cases/schema_dumper_test.rb, line 337</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">test_schema_dump_includes_tsvector_shorthand_definition</span>
+  <span class="ruby-identifier">output</span> = <span class="ruby-identifier">standard_dump</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-regexp">%r{create_table &quot;postgresql_tsvectors&quot;}</span> <span class="ruby-operator">=~</span> <span class="ruby-identifier">output</span>
+    <span class="ruby-identifier">assert_match</span> <span class="ruby-regexp">%r{t.tsvector &quot;text_vector&quot;}</span>, <span class="ruby-identifier">output</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-test_schema_dump_includes_uuid_shorthand_definition">
+            
+              <b>test_schema_dump_includes_uuid_shorthand_definition</b>()
+            
+            <a href="../classes/SchemaDumperTest.html#method-i-test_schema_dump_includes_uuid_shorthand_definition" name="method-i-test_schema_dump_includes_uuid_shorthand_definition" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-test_schema_dump_includes_uuid_shorthand_definition_source')" id="l_method-i-test_schema_dump_includes_uuid_shorthand_definition_source">show</a>
+                
+                  | <a href="https://github.com/rails/rails/blob/547ed456337dda54799d9c5f316dcbce43cfce9d/activerecord/test/cases/schema_dumper_test.rb#L308" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-test_schema_dump_includes_uuid_shorthand_definition_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File activerecord/test/cases/schema_dumper_test.rb, line 308</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">test_schema_dump_includes_uuid_shorthand_definition</span>
+  <span class="ruby-identifier">output</span> = <span class="ruby-identifier">standard_dump</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-regexp">%r{create_table &quot;postgresql_uuids&quot;}</span> <span class="ruby-operator">=~</span> <span class="ruby-identifier">output</span>
+    <span class="ruby-identifier">assert_match</span> <span class="ruby-regexp">%r{t.uuid &quot;guid&quot;}</span>, <span class="ruby-identifier">output</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-test_schema_dump_includes_xml_shorthand_definition">
+            
+              <b>test_schema_dump_includes_xml_shorthand_definition</b>()
+            
+            <a href="../classes/SchemaDumperTest.html#method-i-test_schema_dump_includes_xml_shorthand_definition" name="method-i-test_schema_dump_includes_xml_shorthand_definition" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-test_schema_dump_includes_xml_shorthand_definition_source')" id="l_method-i-test_schema_dump_includes_xml_shorthand_definition_source">show</a>
+                
+                  | <a href="https://github.com/rails/rails/blob/547ed456337dda54799d9c5f316dcbce43cfce9d/activerecord/test/cases/schema_dumper_test.rb#L273" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-test_schema_dump_includes_xml_shorthand_definition_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File activerecord/test/cases/schema_dumper_test.rb, line 273</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">test_schema_dump_includes_xml_shorthand_definition</span>
+  <span class="ruby-identifier">output</span> = <span class="ruby-identifier">standard_dump</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-regexp">%r{create_table &quot;postgresql_xml_data_type&quot;}</span> <span class="ruby-operator">=~</span> <span class="ruby-identifier">output</span>
+    <span class="ruby-identifier">assert_match</span> <span class="ruby-regexp">%r{t.xml &quot;data&quot;}</span>, <span class="ruby-identifier">output</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-test_schema_dump_keeps_id_column_when_id_is_false_and_id_column_added">
+            
+              <b>test_schema_dump_keeps_id_column_when_id_is_false_and_id_column_added</b>()
+            
+            <a href="../classes/SchemaDumperTest.html#method-i-test_schema_dump_keeps_id_column_when_id_is_false_and_id_column_added" name="method-i-test_schema_dump_keeps_id_column_when_id_is_false_and_id_column_added" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-test_schema_dump_keeps_id_column_when_id_is_false_and_id_column_added_source')" id="l_method-i-test_schema_dump_keeps_id_column_when_id_is_false_and_id_column_added_source">show</a>
+                
+                  | <a href="https://github.com/rails/rails/blob/547ed456337dda54799d9c5f316dcbce43cfce9d/activerecord/test/cases/schema_dumper_test.rb#L355" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-test_schema_dump_keeps_id_column_when_id_is_false_and_id_column_added_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File activerecord/test/cases/schema_dumper_test.rb, line 355</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">test_schema_dump_keeps_id_column_when_id_is_false_and_id_column_added</span>
+  <span class="ruby-identifier">output</span> = <span class="ruby-identifier">standard_dump</span>
+  <span class="ruby-identifier">match</span> = <span class="ruby-identifier">output</span>.<span class="ruby-identifier">match</span>(<span class="ruby-regexp">%r{create_table &quot;goofy_string_id&quot;(.*)do.*\n(.*)\n}</span>)
+  <span class="ruby-identifier">assert_not_nil</span>(<span class="ruby-identifier">match</span>, <span class="ruby-string">&quot;goofy_string_id table not found&quot;</span>)
+  <span class="ruby-identifier">assert_match</span> <span class="ruby-regexp">%r(id: false)</span>, <span class="ruby-identifier">match</span>[<span class="ruby-number">1</span>], <span class="ruby-string">&quot;no table id not preserved&quot;</span>
+  <span class="ruby-identifier">assert_match</span> <span class="ruby-regexp">%r{t.string[[:space:]]+&quot;id&quot;,[[:space:]]+null: false$}</span>, <span class="ruby-identifier">match</span>[<span class="ruby-number">2</span>], <span class="ruby-string">&quot;non-primary key id column not preserved&quot;</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-test_schema_dump_keeps_id_false_when_id_is_false_and_unique_not_null_column_added">
+            
+              <b>test_schema_dump_keeps_id_false_when_id_is_false_and_unique_not_null_column_added</b>()
+            
+            <a href="../classes/SchemaDumperTest.html#method-i-test_schema_dump_keeps_id_false_when_id_is_false_and_unique_not_null_column_added" name="method-i-test_schema_dump_keeps_id_false_when_id_is_false_and_unique_not_null_column_added" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-test_schema_dump_keeps_id_false_when_id_is_false_and_unique_not_null_column_added_source')" id="l_method-i-test_schema_dump_keeps_id_false_when_id_is_false_and_unique_not_null_column_added_source">show</a>
+                
+                  | <a href="https://github.com/rails/rails/blob/547ed456337dda54799d9c5f316dcbce43cfce9d/activerecord/test/cases/schema_dumper_test.rb#L363" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-test_schema_dump_keeps_id_false_when_id_is_false_and_unique_not_null_column_added_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File activerecord/test/cases/schema_dumper_test.rb, line 363</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">test_schema_dump_keeps_id_false_when_id_is_false_and_unique_not_null_column_added</span>
+  <span class="ruby-identifier">output</span> = <span class="ruby-identifier">standard_dump</span>
+  <span class="ruby-identifier">assert_match</span> <span class="ruby-regexp">%r{create_table &quot;subscribers&quot;, id: false}</span>, <span class="ruby-identifier">output</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-test_schema_dump_keeps_large_precision_integer_columns_as_decimal">
+            
+              <b>test_schema_dump_keeps_large_precision_integer_columns_as_decimal</b>()
+            
+            <a href="../classes/SchemaDumperTest.html#method-i-test_schema_dump_keeps_large_precision_integer_columns_as_decimal" name="method-i-test_schema_dump_keeps_large_precision_integer_columns_as_decimal" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-test_schema_dump_keeps_large_precision_integer_columns_as_decimal_source')" id="l_method-i-test_schema_dump_keeps_large_precision_integer_columns_as_decimal_source">show</a>
+                
+                  | <a href="https://github.com/rails/rails/blob/547ed456337dda54799d9c5f316dcbce43cfce9d/activerecord/test/cases/schema_dumper_test.rb#L345" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-test_schema_dump_keeps_large_precision_integer_columns_as_decimal_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File activerecord/test/cases/schema_dumper_test.rb, line 345</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">test_schema_dump_keeps_large_precision_integer_columns_as_decimal</span>
+  <span class="ruby-identifier">output</span> = <span class="ruby-identifier">standard_dump</span>
+  <span class="ruby-comment"># Oracle supports precision up to 38 and it identifies decimals with scale 0 as integers</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">current_adapter?</span>(<span class="ruby-value">:OracleAdapter</span>)
+    <span class="ruby-identifier">assert_match</span> <span class="ruby-regexp">%r{t.integer\s+&quot;atoms_in_universe&quot;,\s+precision: 38,\s+scale: 0}</span>, <span class="ruby-identifier">output</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">assert_match</span> <span class="ruby-regexp">%r{t.decimal\s+&quot;atoms_in_universe&quot;,\s+precision: 55,\s+scale: 0}</span>, <span class="ruby-identifier">output</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-test_schema_dump_should_honor_nonstandard_primary_keys">
+            
+              <b>test_schema_dump_should_honor_nonstandard_primary_keys</b>()
+            
+            <a href="../classes/SchemaDumperTest.html#method-i-test_schema_dump_should_honor_nonstandard_primary_keys" name="method-i-test_schema_dump_should_honor_nonstandard_primary_keys" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-test_schema_dump_should_honor_nonstandard_primary_keys_source')" id="l_method-i-test_schema_dump_should_honor_nonstandard_primary_keys_source">show</a>
+                
+                  | <a href="https://github.com/rails/rails/blob/547ed456337dda54799d9c5f316dcbce43cfce9d/activerecord/test/cases/schema_dumper_test.rb#L200" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-test_schema_dump_should_honor_nonstandard_primary_keys_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File activerecord/test/cases/schema_dumper_test.rb, line 200</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">test_schema_dump_should_honor_nonstandard_primary_keys</span>
+  <span class="ruby-identifier">output</span> = <span class="ruby-identifier">standard_dump</span>
+  <span class="ruby-identifier">match</span> = <span class="ruby-identifier">output</span>.<span class="ruby-identifier">match</span>(<span class="ruby-regexp">%r{create_table &quot;movies&quot;(.*)do}</span>)
+  <span class="ruby-identifier">assert_not_nil</span>(<span class="ruby-identifier">match</span>, <span class="ruby-string">&quot;nonstandardpk table not found&quot;</span>)
+  <span class="ruby-identifier">assert_match</span> <span class="ruby-regexp">%r(primary_key: &quot;movieid&quot;)</span>, <span class="ruby-identifier">match</span>[<span class="ruby-number">1</span>], <span class="ruby-string">&quot;non-standard primary key not preserved&quot;</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-test_schema_dump_should_not_add_default_value_for_mysql_text_field">
+            
+              <b>test_schema_dump_should_not_add_default_value_for_mysql_text_field</b>()
+            
+            <a href="../classes/SchemaDumperTest.html#method-i-test_schema_dump_should_not_add_default_value_for_mysql_text_field" name="method-i-test_schema_dump_should_not_add_default_value_for_mysql_text_field" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-test_schema_dump_should_not_add_default_value_for_mysql_text_field_source')" id="l_method-i-test_schema_dump_should_not_add_default_value_for_mysql_text_field_source">show</a>
+                
+                  | <a href="https://github.com/rails/rails/blob/547ed456337dda54799d9c5f316dcbce43cfce9d/activerecord/test/cases/schema_dumper_test.rb#L213" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-test_schema_dump_should_not_add_default_value_for_mysql_text_field_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File activerecord/test/cases/schema_dumper_test.rb, line 213</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">test_schema_dump_should_not_add_default_value_for_mysql_text_field</span>
+  <span class="ruby-identifier">output</span> = <span class="ruby-identifier">standard_dump</span>
+  <span class="ruby-identifier">assert_match</span> <span class="ruby-regexp">%r{t.text\s+&quot;body&quot;,\s+null: false$}</span>, <span class="ruby-identifier">output</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-test_schema_dump_should_use_false_as_default">
+            
+              <b>test_schema_dump_should_use_false_as_default</b>()
+            
+            <a href="../classes/SchemaDumperTest.html#method-i-test_schema_dump_should_use_false_as_default" name="method-i-test_schema_dump_should_use_false_as_default" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-test_schema_dump_should_use_false_as_default_source')" id="l_method-i-test_schema_dump_should_use_false_as_default_source">show</a>
+                
+                  | <a href="https://github.com/rails/rails/blob/547ed456337dda54799d9c5f316dcbce43cfce9d/activerecord/test/cases/schema_dumper_test.rb#L207" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-test_schema_dump_should_use_false_as_default_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File activerecord/test/cases/schema_dumper_test.rb, line 207</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">test_schema_dump_should_use_false_as_default</span>
+  <span class="ruby-identifier">output</span> = <span class="ruby-identifier">standard_dump</span>
+  <span class="ruby-identifier">assert_match</span> <span class="ruby-regexp">%r{t\.boolean\s+&quot;has_fun&quot;,.+default: false}</span>, <span class="ruby-identifier">output</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-test_schema_dump_with_regexp_ignored_table">
+            
+              <b>test_schema_dump_with_regexp_ignored_table</b>()
+            
+            <a href="../classes/SchemaDumperTest.html#method-i-test_schema_dump_with_regexp_ignored_table" name="method-i-test_schema_dump_with_regexp_ignored_table" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-test_schema_dump_with_regexp_ignored_table_source')" id="l_method-i-test_schema_dump_with_regexp_ignored_table_source">show</a>
+                
+                  | <a href="https://github.com/rails/rails/blob/547ed456337dda54799d9c5f316dcbce43cfce9d/activerecord/test/cases/schema_dumper_test.rb#L159" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-test_schema_dump_with_regexp_ignored_table_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File activerecord/test/cases/schema_dumper_test.rb, line 159</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">test_schema_dump_with_regexp_ignored_table</span>
+  <span class="ruby-identifier">stream</span> = <span class="ruby-constant">StringIO</span>.<span class="ruby-identifier">new</span>
+
+  <span class="ruby-constant">ActiveRecord</span><span class="ruby-operator">::</span><span class="ruby-constant">SchemaDumper</span>.<span class="ruby-identifier">ignore_tables</span> = [<span class="ruby-regexp">/^account/</span>]
+  <span class="ruby-constant">ActiveRecord</span><span class="ruby-operator">::</span><span class="ruby-constant">SchemaDumper</span>.<span class="ruby-identifier">dump</span>(<span class="ruby-constant">ActiveRecord</span><span class="ruby-operator">::</span><span class="ruby-constant">Base</span>.<span class="ruby-identifier">connection</span>, <span class="ruby-identifier">stream</span>)
+  <span class="ruby-identifier">output</span> = <span class="ruby-identifier">stream</span>.<span class="ruby-identifier">string</span>
+  <span class="ruby-identifier">assert_no_match</span> <span class="ruby-regexp">%r{create_table &quot;accounts&quot;}</span>, <span class="ruby-identifier">output</span>
+  <span class="ruby-identifier">assert_match</span> <span class="ruby-regexp">%r{create_table &quot;authors&quot;}</span>, <span class="ruby-identifier">output</span>
+  <span class="ruby-identifier">assert_no_match</span> <span class="ruby-regexp">%r{create_table &quot;schema_migrations&quot;}</span>, <span class="ruby-identifier">output</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-test_schema_dump_with_string_ignored_table">
+            
+              <b>test_schema_dump_with_string_ignored_table</b>()
+            
+            <a href="../classes/SchemaDumperTest.html#method-i-test_schema_dump_with_string_ignored_table" name="method-i-test_schema_dump_with_string_ignored_table" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-test_schema_dump_with_string_ignored_table_source')" id="l_method-i-test_schema_dump_with_string_ignored_table_source">show</a>
+                
+                  | <a href="https://github.com/rails/rails/blob/547ed456337dda54799d9c5f316dcbce43cfce9d/activerecord/test/cases/schema_dumper_test.rb#L148" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-test_schema_dump_with_string_ignored_table_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File activerecord/test/cases/schema_dumper_test.rb, line 148</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">test_schema_dump_with_string_ignored_table</span>
+  <span class="ruby-identifier">stream</span> = <span class="ruby-constant">StringIO</span>.<span class="ruby-identifier">new</span>
+
+  <span class="ruby-constant">ActiveRecord</span><span class="ruby-operator">::</span><span class="ruby-constant">SchemaDumper</span>.<span class="ruby-identifier">ignore_tables</span> = [<span class="ruby-string">&#39;accounts&#39;</span>]
+  <span class="ruby-constant">ActiveRecord</span><span class="ruby-operator">::</span><span class="ruby-constant">SchemaDumper</span>.<span class="ruby-identifier">dump</span>(<span class="ruby-constant">ActiveRecord</span><span class="ruby-operator">::</span><span class="ruby-constant">Base</span>.<span class="ruby-identifier">connection</span>, <span class="ruby-identifier">stream</span>)
+  <span class="ruby-identifier">output</span> = <span class="ruby-identifier">stream</span>.<span class="ruby-identifier">string</span>
+  <span class="ruby-identifier">assert_no_match</span> <span class="ruby-regexp">%r{create_table &quot;accounts&quot;}</span>, <span class="ruby-identifier">output</span>
+  <span class="ruby-identifier">assert_match</span> <span class="ruby-regexp">%r{create_table &quot;authors&quot;}</span>, <span class="ruby-identifier">output</span>
+  <span class="ruby-identifier">assert_no_match</span> <span class="ruby-regexp">%r{create_table &quot;schema_migrations&quot;}</span>, <span class="ruby-identifier">output</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-test_schema_dump_with_table_name_prefix_and_suffix">
+            
+              <b>test_schema_dump_with_table_name_prefix_and_suffix</b>()
+            
+            <a href="../classes/SchemaDumperTest.html#method-i-test_schema_dump_with_table_name_prefix_and_suffix" name="method-i-test_schema_dump_with_table_name_prefix_and_suffix" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-test_schema_dump_with_table_name_prefix_and_suffix_source')" id="l_method-i-test_schema_dump_with_table_name_prefix_and_suffix_source">show</a>
+                
+                  | <a href="https://github.com/rails/rails/blob/547ed456337dda54799d9c5f316dcbce43cfce9d/activerecord/test/cases/schema_dumper_test.rb#L380" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-test_schema_dump_with_table_name_prefix_and_suffix_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File activerecord/test/cases/schema_dumper_test.rb, line 380</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">test_schema_dump_with_table_name_prefix_and_suffix</span>
+  <span class="ruby-identifier">original</span>, <span class="ruby-identifier">$stdout</span> = <span class="ruby-identifier">$stdout</span>, <span class="ruby-constant">StringIO</span>.<span class="ruby-identifier">new</span>
+  <span class="ruby-constant">ActiveRecord</span><span class="ruby-operator">::</span><span class="ruby-constant">Base</span>.<span class="ruby-identifier">table_name_prefix</span> = <span class="ruby-string">&#39;foo_&#39;</span>
+  <span class="ruby-constant">ActiveRecord</span><span class="ruby-operator">::</span><span class="ruby-constant">Base</span>.<span class="ruby-identifier">table_name_suffix</span> = <span class="ruby-string">&#39;_bar&#39;</span>
+
+  <span class="ruby-identifier">migration</span> = <span class="ruby-constant">CreateDogMigration</span>.<span class="ruby-identifier">new</span>
+  <span class="ruby-identifier">migration</span>.<span class="ruby-identifier">migrate</span>(<span class="ruby-value">:up</span>)
+
+  <span class="ruby-identifier">output</span> = <span class="ruby-identifier">standard_dump</span>
+  <span class="ruby-identifier">assert_no_match</span> <span class="ruby-regexp">%r{create_table &quot;foo_.+_bar&quot;}</span>, <span class="ruby-identifier">output</span>
+  <span class="ruby-identifier">assert_no_match</span> <span class="ruby-regexp">%r{create_index &quot;foo_.+_bar&quot;}</span>, <span class="ruby-identifier">output</span>
+  <span class="ruby-identifier">assert_no_match</span> <span class="ruby-regexp">%r{create_table &quot;schema_migrations&quot;}</span>, <span class="ruby-identifier">output</span>
+<span class="ruby-keyword">ensure</span>
+  <span class="ruby-identifier">migration</span>.<span class="ruby-identifier">migrate</span>(<span class="ruby-value">:down</span>)
+
+  <span class="ruby-constant">ActiveRecord</span><span class="ruby-operator">::</span><span class="ruby-constant">Base</span>.<span class="ruby-identifier">table_name_suffix</span> = <span class="ruby-constant">ActiveRecord</span><span class="ruby-operator">::</span><span class="ruby-constant">Base</span>.<span class="ruby-identifier">table_name_prefix</span> = <span class="ruby-string">&#39;&#39;</span>
+  <span class="ruby-identifier">$stdout</span> = <span class="ruby-identifier">original</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-test_schema_dumps_index_columns_in_right_order">
+            
+              <b>test_schema_dumps_index_columns_in_right_order</b>()
+            
+            <a href="../classes/SchemaDumperTest.html#method-i-test_schema_dumps_index_columns_in_right_order" name="method-i-test_schema_dumps_index_columns_in_right_order" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-test_schema_dumps_index_columns_in_right_order_source')" id="l_method-i-test_schema_dumps_index_columns_in_right_order_source">show</a>
+                
+                  | <a href="https://github.com/rails/rails/blob/547ed456337dda54799d9c5f316dcbce43cfce9d/activerecord/test/cases/schema_dumper_test.rb#L178" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-test_schema_dumps_index_columns_in_right_order_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File activerecord/test/cases/schema_dumper_test.rb, line 178</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">test_schema_dumps_index_columns_in_right_order</span>
+  <span class="ruby-identifier">index_definition</span> = <span class="ruby-identifier">standard_dump</span>.<span class="ruby-identifier">split</span>(<span class="ruby-regexp">/\n/</span>).<span class="ruby-identifier">grep</span>(<span class="ruby-regexp">/add_index.*companies/</span>).<span class="ruby-identifier">first</span>.<span class="ruby-identifier">strip</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">current_adapter?</span>(<span class="ruby-value">:MysqlAdapter</span>) <span class="ruby-operator">||</span> <span class="ruby-identifier">current_adapter?</span>(<span class="ruby-value">:Mysql2Adapter</span>) <span class="ruby-operator">||</span> <span class="ruby-identifier">current_adapter?</span>(<span class="ruby-value">:PostgreSQLAdapter</span>)
+    <span class="ruby-identifier">assert_equal</span> <span class="ruby-string">&#39;add_index &quot;companies&quot;, [&quot;firm_id&quot;, &quot;type&quot;, &quot;rating&quot;], name: &quot;company_index&quot;, using: :btree&#39;</span>, <span class="ruby-identifier">index_definition</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">assert_equal</span> <span class="ruby-string">&#39;add_index &quot;companies&quot;, [&quot;firm_id&quot;, &quot;type&quot;, &quot;rating&quot;], name: &quot;company_index&quot;&#39;</span>, <span class="ruby-identifier">index_definition</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-test_schema_dumps_index_type">
+            
+              <b>test_schema_dumps_index_type</b>()
+            
+            <a href="../classes/SchemaDumperTest.html#method-i-test_schema_dumps_index_type" name="method-i-test_schema_dumps_index_type" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-test_schema_dumps_index_type_source')" id="l_method-i-test_schema_dumps_index_type_source">show</a>
+                
+                  | <a href="https://github.com/rails/rails/blob/547ed456337dda54799d9c5f316dcbce43cfce9d/activerecord/test/cases/schema_dumper_test.rb#L236" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-test_schema_dumps_index_type_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File activerecord/test/cases/schema_dumper_test.rb, line 236</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">test_schema_dumps_index_type</span>
+  <span class="ruby-identifier">output</span> = <span class="ruby-identifier">standard_dump</span>
+  <span class="ruby-identifier">assert_match</span> <span class="ruby-regexp">%r{add_index &quot;key_tests&quot;, \[&quot;awesome&quot;\], name: &quot;index_key_tests_on_awesome&quot;, type: :fulltext}</span>, <span class="ruby-identifier">output</span>
+  <span class="ruby-identifier">assert_match</span> <span class="ruby-regexp">%r{add_index &quot;key_tests&quot;, \[&quot;pizza&quot;\], name: &quot;index_key_tests_on_pizza&quot;, using: :btree}</span>, <span class="ruby-identifier">output</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-test_schema_dumps_partial_indices">
+            
+              <b>test_schema_dumps_partial_indices</b>()
+            
+            <a href="../classes/SchemaDumperTest.html#method-i-test_schema_dumps_partial_indices" name="method-i-test_schema_dumps_partial_indices" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-test_schema_dumps_partial_indices_source')" id="l_method-i-test_schema_dumps_partial_indices_source">show</a>
+                
+                  | <a href="https://github.com/rails/rails/blob/547ed456337dda54799d9c5f316dcbce43cfce9d/activerecord/test/cases/schema_dumper_test.rb#L187" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-test_schema_dumps_partial_indices_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File activerecord/test/cases/schema_dumper_test.rb, line 187</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">test_schema_dumps_partial_indices</span>
+  <span class="ruby-identifier">index_definition</span> = <span class="ruby-identifier">standard_dump</span>.<span class="ruby-identifier">split</span>(<span class="ruby-regexp">/\n/</span>).<span class="ruby-identifier">grep</span>(<span class="ruby-regexp">/add_index.*company_partial_index/</span>).<span class="ruby-identifier">first</span>.<span class="ruby-identifier">strip</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">current_adapter?</span>(<span class="ruby-value">:PostgreSQLAdapter</span>)
+    <span class="ruby-identifier">assert_equal</span> <span class="ruby-string">&#39;add_index &quot;companies&quot;, [&quot;firm_id&quot;, &quot;type&quot;], name: &quot;company_partial_index&quot;, where: &quot;(rating &gt; 10)&quot;, using: :btree&#39;</span>, <span class="ruby-identifier">index_definition</span>
+  <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">current_adapter?</span>(<span class="ruby-value">:MysqlAdapter</span>) <span class="ruby-operator">||</span> <span class="ruby-identifier">current_adapter?</span>(<span class="ruby-value">:Mysql2Adapter</span>)
+    <span class="ruby-identifier">assert_equal</span> <span class="ruby-string">&#39;add_index &quot;companies&quot;, [&quot;firm_id&quot;, &quot;type&quot;], name: &quot;company_partial_index&quot;, using: :btree&#39;</span>, <span class="ruby-identifier">index_definition</span>
+  <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">current_adapter?</span>(<span class="ruby-value">:SQLite3Adapter</span>) <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-constant">ActiveRecord</span><span class="ruby-operator">::</span><span class="ruby-constant">Base</span>.<span class="ruby-identifier">connection</span>.<span class="ruby-identifier">supports_partial_index?</span>
+    <span class="ruby-identifier">assert_equal</span> <span class="ruby-string">&#39;add_index &quot;companies&quot;, [&quot;firm_id&quot;, &quot;type&quot;], name: &quot;company_partial_index&quot;, where: &quot;rating &gt; 10&quot;&#39;</span>, <span class="ruby-identifier">index_definition</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">assert_equal</span> <span class="ruby-string">&#39;add_index &quot;companies&quot;, [&quot;firm_id&quot;, &quot;type&quot;], name: &quot;company_partial_index&quot;&#39;</span>, <span class="ruby-identifier">index_definition</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-test_types_line_up">
+            
+              <b>test_types_line_up</b>()
+            
+            <a href="../classes/SchemaDumperTest.html#method-i-test_types_line_up" name="method-i-test_types_line_up" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-test_types_line_up_source')" id="l_method-i-test_types_line_up_source">show</a>
+                
+                  | <a href="https://github.com/rails/rails/blob/547ed456337dda54799d9c5f316dcbce43cfce9d/activerecord/test/cases/schema_dumper_test.rb#L61" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-test_types_line_up_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File activerecord/test/cases/schema_dumper_test.rb, line 61</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">test_types_line_up</span>
+  <span class="ruby-identifier">column_definition_lines</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">column_set</span><span class="ruby-operator">|</span>
+    <span class="ruby-keyword">next</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">column_set</span>.<span class="ruby-identifier">empty?</span>
+
+    <span class="ruby-identifier">lengths</span> = <span class="ruby-identifier">column_set</span>.<span class="ruby-identifier">map</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">column</span><span class="ruby-operator">|</span>
+      <span class="ruby-keyword">if</span> <span class="ruby-identifier">match</span> = <span class="ruby-identifier">column</span>.<span class="ruby-identifier">match</span>(<span class="ruby-regexp">/t\.(?:integer|decimal|float|datetime|timestamp|time|date|text|binary|string|boolean)\s+&quot;/</span>)
+        <span class="ruby-identifier">match</span>[<span class="ruby-number">0</span>].<span class="ruby-identifier">length</span>
+      <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">end</span>
+
+    <span class="ruby-identifier">assert_equal</span> <span class="ruby-number">1</span>, <span class="ruby-identifier">lengths</span>.<span class="ruby-identifier">uniq</span>.<span class="ruby-identifier">length</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                    </div>
+
+    </div>
+  </body>
+</html>    

@@ -1,0 +1,435 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>Function</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="../css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/main.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/github.css" type="text/css" media="screen" />
+<script src="../js/jquery-1.3.2.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/jquery-effect.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+
+<body>     
+    <div class="banner">
+        
+        <h1>
+            <span class="type">Class</span> 
+            Function 
+            
+                <span class="parent">&lt; 
+                    
+                    <a href="Object.html">Object</a>
+                    
+                </span>
+            
+        </h1>
+        <ul class="files">
+            
+            <li><a href="../files/ext/bigdecimal/sample/nlsolve_rb.html">ext/bigdecimal/sample/nlsolve.rb</a></li>
+            
+        </ul>
+    </div>
+    <div id="bodyContent">
+        <div id="content">
+  
+
+
+  
+
+
+  
+  
+
+
+  
+
+
+  
+    <!-- Method ref -->
+    <div class="sectiontitle">Methods</div>
+    <dl class="methods">
+      
+        <dt>E</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-eps">eps</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>N</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-new">new</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>O</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-one">one</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>T</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-ten">ten</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-two">two</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>V</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-values">values</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>Z</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-zero">zero</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+    </dl>
+  
+
+  
+
+
+
+  
+
+    
+
+    
+
+    
+
+
+    
+
+
+    <!-- Methods -->
+    
+      <div class="sectiontitle">Class Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-c-new">
+            
+              <b>new</b>()
+            
+            <a href="../classes/Function.html#method-c-new" name="method-c-new" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-new_source')" id="l_method-c-new_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/c1ed63a4c4044fcf1c59fc3788bab233371f1e76/ext/bigdecimal/sample/nlsolve.rb#L13" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-new_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/bigdecimal/sample/nlsolve.rb, line 13</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">initialize</span>()
+  <span class="ruby-ivar">@zero</span> = <span class="ruby-constant">BigDecimal</span><span class="ruby-operator">::</span><span class="ruby-identifier">new</span>(<span class="ruby-string">&quot;0.0&quot;</span>)
+  <span class="ruby-ivar">@one</span>  = <span class="ruby-constant">BigDecimal</span><span class="ruby-operator">::</span><span class="ruby-identifier">new</span>(<span class="ruby-string">&quot;1.0&quot;</span>)
+  <span class="ruby-ivar">@two</span>  = <span class="ruby-constant">BigDecimal</span><span class="ruby-operator">::</span><span class="ruby-identifier">new</span>(<span class="ruby-string">&quot;2.0&quot;</span>)
+  <span class="ruby-ivar">@ten</span>  = <span class="ruby-constant">BigDecimal</span><span class="ruby-operator">::</span><span class="ruby-identifier">new</span>(<span class="ruby-string">&quot;10.0&quot;</span>)
+  <span class="ruby-ivar">@eps</span>  = <span class="ruby-constant">BigDecimal</span><span class="ruby-operator">::</span><span class="ruby-identifier">new</span>(<span class="ruby-string">&quot;1.0e-16&quot;</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                  
+      <div class="sectiontitle">Instance Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-i-eps">
+            
+              <b>eps</b>()
+            
+            <a href="../classes/Function.html#method-i-eps" name="method-i-eps" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-eps_source')" id="l_method-i-eps_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/c1ed63a4c4044fcf1c59fc3788bab233371f1e76/ext/bigdecimal/sample/nlsolve.rb#L24" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-eps_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/bigdecimal/sample/nlsolve.rb, line 24</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">eps</span> ;<span class="ruby-ivar">@eps</span> ;<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-one">
+            
+              <b>one</b>()
+            
+            <a href="../classes/Function.html#method-i-one" name="method-i-one" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-one_source')" id="l_method-i-one_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/c1ed63a4c4044fcf1c59fc3788bab233371f1e76/ext/bigdecimal/sample/nlsolve.rb#L21" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-one_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/bigdecimal/sample/nlsolve.rb, line 21</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">one</span> ;<span class="ruby-ivar">@one</span> ;<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-ten">
+            
+              <b>ten</b>()
+            
+            <a href="../classes/Function.html#method-i-ten" name="method-i-ten" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-ten_source')" id="l_method-i-ten_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/c1ed63a4c4044fcf1c59fc3788bab233371f1e76/ext/bigdecimal/sample/nlsolve.rb#L23" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-ten_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/bigdecimal/sample/nlsolve.rb, line 23</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">ten</span> ;<span class="ruby-ivar">@ten</span> ;<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-two">
+            
+              <b>two</b>()
+            
+            <a href="../classes/Function.html#method-i-two" name="method-i-two" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-two_source')" id="l_method-i-two_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/c1ed63a4c4044fcf1c59fc3788bab233371f1e76/ext/bigdecimal/sample/nlsolve.rb#L22" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-two_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/bigdecimal/sample/nlsolve.rb, line 22</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">two</span> ;<span class="ruby-ivar">@two</span> ;<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-values">
+            
+              <b>values</b>(x)
+            
+            <a href="../classes/Function.html#method-i-values" name="method-i-values" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-values_source')" id="l_method-i-values_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/c1ed63a4c4044fcf1c59fc3788bab233371f1e76/ext/bigdecimal/sample/nlsolve.rb#L25" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-values_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/bigdecimal/sample/nlsolve.rb, line 25</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">values</span>(<span class="ruby-identifier">x</span>) <span class="ruby-comment"># &lt;= defines functions solved</span>
+  <span class="ruby-identifier">f</span> = []
+  <span class="ruby-identifier">f1</span> = <span class="ruby-identifier">x</span>[<span class="ruby-number">0</span>]<span class="ruby-operator">*</span><span class="ruby-identifier">x</span>[<span class="ruby-number">0</span>] <span class="ruby-operator">+</span> <span class="ruby-identifier">x</span>[<span class="ruby-number">1</span>]<span class="ruby-operator">*</span><span class="ruby-identifier">x</span>[<span class="ruby-number">1</span>] <span class="ruby-operator">-</span> <span class="ruby-ivar">@two</span> <span class="ruby-comment"># f1 = x**2 + y**2 - 2 =&gt; 0</span>
+  <span class="ruby-identifier">f2</span> = <span class="ruby-identifier">x</span>[<span class="ruby-number">0</span>] <span class="ruby-operator">-</span> <span class="ruby-identifier">x</span>[<span class="ruby-number">1</span>]                  <span class="ruby-comment"># f2 = x    - y        =&gt; 0</span>
+  <span class="ruby-identifier">f</span> <span class="ruby-operator">&lt;&lt;=</span> <span class="ruby-identifier">f1</span>
+  <span class="ruby-identifier">f</span> <span class="ruby-operator">&lt;&lt;=</span> <span class="ruby-identifier">f2</span>
+  <span class="ruby-identifier">f</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-zero">
+            
+              <b>zero</b>()
+            
+            <a href="../classes/Function.html#method-i-zero" name="method-i-zero" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-zero_source')" id="l_method-i-zero_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/c1ed63a4c4044fcf1c59fc3788bab233371f1e76/ext/bigdecimal/sample/nlsolve.rb#L20" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-zero_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/bigdecimal/sample/nlsolve.rb, line 20</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">zero</span>;<span class="ruby-ivar">@zero</span>;<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                    </div>
+
+    </div>
+  </body>
+</html>    

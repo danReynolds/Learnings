@@ -1,0 +1,3051 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>TkTextIO</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="../css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/main.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/github.css" type="text/css" media="screen" />
+<script src="../js/jquery-1.3.2.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/jquery-effect.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+
+<body>     
+    <div class="banner">
+        
+        <h1>
+            <span class="type">Class</span> 
+            TkTextIO 
+            
+                <span class="parent">&lt; 
+                    
+                    TkText
+                    
+                </span>
+            
+        </h1>
+        <ul class="files">
+            
+            <li><a href="../files/ext/tk/sample/tktextio_rb.html">ext/tk/sample/tktextio.rb</a></li>
+            
+        </ul>
+    </div>
+    <div id="bodyContent">
+        <div id="content">
+  
+
+
+  
+
+
+  
+  
+
+
+  
+
+
+  
+    <!-- Method ref -->
+    <div class="sectiontitle">Methods</div>
+    <dl class="methods">
+      
+        <dt>#</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-3C-3C">&lt;&lt;</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>B</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-binmode">binmode</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>C</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-clone">clone</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-close">close</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-close_read">close_read</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-close_write">close_write</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-closed-3F">closed?</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>D</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-destroy">destroy</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-dup">dup</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>E</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-each">each</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-each_byte">each_byte</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-each_char">each_char</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-each_line">each_line</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-eof">eof</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-eof-3F">eof?</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>F</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-fcntl">fcntl</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-fileno">fileno</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-flush">flush</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-fsync">fsync</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>G</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-getc">getc</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-gets">gets</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>I</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-index_pos">index_pos</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-index_pos-3D">index_pos=</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-ioctrl">ioctrl</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-isatty">isatty</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>L</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-lineno">lineno</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-lineno-3D">lineno=</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>O</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-overwrite-3D">overwrite=</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-overwrite-3F">overwrite?</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>P</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-pid">pid</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-pos">pos</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-pos-3D">pos=</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-pos_gravity">pos_gravity</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-pos_gravity-3D">pos_gravity=</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-print">print</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-printf">printf</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-putc">putc</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-puts">puts</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>R</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-read">read</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-readchar">readchar</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-readline">readline</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-readlines">readlines</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-readpartial">readpartial</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-reopen">reopen</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-rewind">rewind</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>S</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-seek">seek</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-show_mode">show_mode</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-show_mode-3D">show_mode=</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-stat">stat</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-sync">sync</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-sync-3D">sync=</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-sysread">sysread</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-sysseek">sysseek</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-syswrite">syswrite</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>T</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-tell">tell</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-tell_index">tell_index</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-to_io">to_io</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-trancate">trancate</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-tty-3F">tty?</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>U</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-ungetc">ungetc</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>W</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-write">write</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+    </dl>
+  
+
+  
+
+
+
+  
+
+    
+
+    
+
+    
+      <!-- Section constants -->
+      <div class="sectiontitle">Constants</div>
+      <table border='0' cellpadding='5'>
+        
+          <tr valign='top'>
+            <td class="attr-name">OPT_DEFAULTS</td>
+            <td>=</td>
+            <td class="attr-value">{
+&#39;mode&#39;       =&gt; nil,
+&#39;overwrite&#39;  =&gt; false,
+&#39;text&#39;       =&gt; nil,
+&#39;show&#39;       =&gt; :pos,
+&#39;wrap&#39;       =&gt; &#39;char&#39;,
+&#39;sync&#39;       =&gt; true,
+&#39;prompt&#39;     =&gt; nil,
+&#39;prompt_cmd&#39; =&gt; nil,
+&#39;hist_size&#39;  =&gt; 1000,
+}</td>
+          </tr>
+          
+            <tr valign='top'>
+              <td>&nbsp;</td>
+              <td colspan="2" class="attr-desc"></td>
+            </tr>
+          
+        
+      </table>
+    
+
+
+    
+
+
+    <!-- Methods -->
+        
+      <div class="sectiontitle">Instance Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-i-3C-3C">
+            
+              <b>&lt;&lt;</b>(obj)
+            
+            <a href="../classes/TkTextIO.html#method-i-3C-3C" name="method-i-3C-3C" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-3C-3C_source')" id="l_method-i-3C-3C_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/287a34ae0dfc23e4158f67cb7783d239f202c368/ext/tk/sample/tktextio.rb#L397" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-3C-3C_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/sample/tktextio.rb, line 397</span>
+<span class="ruby-keyword">def</span> <span class="ruby-operator">&lt;&lt;</span>(<span class="ruby-keyword ruby-title">obj</span>)
+  <span class="ruby-identifier">_write</span>(<span class="ruby-identifier">obj</span>)
+  <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-binmode">
+            
+              <b>binmode</b>()
+            
+            <a href="../classes/TkTextIO.html#method-i-binmode" name="method-i-binmode" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-binmode_source')" id="l_method-i-binmode_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/287a34ae0dfc23e4158f67cb7783d239f202c368/ext/tk/sample/tktextio.rb#L402" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-binmode_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/sample/tktextio.rb, line 402</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">binmode</span>
+  <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-clone">
+            
+              <b>clone</b>()
+            
+            <a href="../classes/TkTextIO.html#method-i-clone" name="method-i-clone" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-clone_source')" id="l_method-i-clone_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/287a34ae0dfc23e4158f67cb7783d239f202c368/ext/tk/sample/tktextio.rb#L406" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-clone_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/sample/tktextio.rb, line 406</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">clone</span>
+  <span class="ruby-identifier">fail</span> <span class="ruby-constant">NotImplementedError</span>, <span class="ruby-string">&#39;cannot clone TkTextIO&#39;</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-close">
+            
+              <b>close</b>()
+            
+            <a href="../classes/TkTextIO.html#method-i-close" name="method-i-close" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-close_source')" id="l_method-i-close_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/287a34ae0dfc23e4158f67cb7783d239f202c368/ext/tk/sample/tktextio.rb#L413" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-close_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/sample/tktextio.rb, line 413</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">close</span>
+  <span class="ruby-identifier">close_read</span>
+  <span class="ruby-identifier">close_write</span>
+  <span class="ruby-keyword">nil</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-close_read">
+            
+              <b>close_read</b>()
+            
+            <a href="../classes/TkTextIO.html#method-i-close_read" name="method-i-close_read" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-close_read_source')" id="l_method-i-close_read_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/287a34ae0dfc23e4158f67cb7783d239f202c368/ext/tk/sample/tktextio.rb#L418" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-close_read_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/sample/tktextio.rb, line 418</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">close_read</span>
+  <span class="ruby-ivar">@open</span>[<span class="ruby-value">:r</span>] = <span class="ruby-keyword">false</span> <span class="ruby-keyword">if</span> <span class="ruby-ivar">@open</span>[<span class="ruby-value">:r</span>]
+  <span class="ruby-keyword">nil</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-close_write">
+            
+              <b>close_write</b>()
+            
+            <a href="../classes/TkTextIO.html#method-i-close_write" name="method-i-close_write" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-close_write_source')" id="l_method-i-close_write_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/287a34ae0dfc23e4158f67cb7783d239f202c368/ext/tk/sample/tktextio.rb#L422" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-close_write_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/sample/tktextio.rb, line 422</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">close_write</span>
+  <span class="ruby-ivar">@open</span>[<span class="ruby-value">:w</span>] = <span class="ruby-keyword">false</span> <span class="ruby-keyword">if</span> <span class="ruby-ivar">@opne</span>[<span class="ruby-value">:w</span>]
+  <span class="ruby-keyword">nil</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-closed-3F">
+            
+              <b>closed?</b>(dir=nil)
+            
+            <a href="../classes/TkTextIO.html#method-i-closed-3F" name="method-i-closed-3F" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-closed-3F_source')" id="l_method-i-closed-3F_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/287a34ae0dfc23e4158f67cb7783d239f202c368/ext/tk/sample/tktextio.rb#L427" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-closed-3F_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/sample/tktextio.rb, line 427</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">closed?</span>(<span class="ruby-identifier">dir</span>=<span class="ruby-keyword">nil</span>)
+  <span class="ruby-keyword">case</span> <span class="ruby-identifier">dir</span>
+  <span class="ruby-keyword">when</span> <span class="ruby-value">:r</span>, <span class="ruby-string">&#39;r&#39;</span>
+    <span class="ruby-operator">!</span><span class="ruby-ivar">@open</span>[<span class="ruby-value">:r</span>]
+  <span class="ruby-keyword">when</span> <span class="ruby-value">:w</span>, <span class="ruby-string">&#39;w&#39;</span>
+    <span class="ruby-operator">!</span><span class="ruby-ivar">@open</span>[<span class="ruby-value">:w</span>]
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-operator">!</span><span class="ruby-ivar">@open</span>[<span class="ruby-value">:r</span>] <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-operator">!</span><span class="ruby-ivar">@open</span>[<span class="ruby-value">:w</span>]
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-destroy">
+            
+              <b>destroy</b>()
+            
+            <a href="../classes/TkTextIO.html#method-i-destroy" name="method-i-destroy" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-destroy_source')" id="l_method-i-destroy_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/287a34ae0dfc23e4158f67cb7783d239f202c368/ext/tk/sample/tktextio.rb#L75" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-destroy_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/sample/tktextio.rb, line 75</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">destroy</span>
+  <span class="ruby-ivar">@flusher</span>.<span class="ruby-identifier">kill</span> <span class="ruby-keyword">rescue</span> <span class="ruby-keyword">nil</span>
+
+  <span class="ruby-ivar">@idle_flush</span>.<span class="ruby-identifier">stop</span> <span class="ruby-keyword">rescue</span> <span class="ruby-keyword">nil</span>
+  <span class="ruby-ivar">@timer_flush</span>.<span class="ruby-identifier">stop</span> <span class="ruby-keyword">rescue</span> <span class="ruby-keyword">nil</span>
+
+  <span class="ruby-ivar">@receiver</span>.<span class="ruby-identifier">kill</span> <span class="ruby-keyword">rescue</span> <span class="ruby-keyword">nil</span>
+
+  <span class="ruby-keyword">super</span>()
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-dup">
+            
+              <b>dup</b>()
+            
+            <a href="../classes/TkTextIO.html#method-i-dup" name="method-i-dup" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-dup_source')" id="l_method-i-dup_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/287a34ae0dfc23e4158f67cb7783d239f202c368/ext/tk/sample/tktextio.rb#L409" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-dup_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/sample/tktextio.rb, line 409</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">dup</span>
+  <span class="ruby-identifier">fail</span> <span class="ruby-constant">NotImplementedError</span>, <span class="ruby-string">&#39;cannot duplicate TkTextIO&#39;</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-each">
+            
+              <b>each</b>(rs = $/)
+            
+            <a href="../classes/TkTextIO.html#method-i-each" name="method-i-each" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+            <div class="aka">
+              Alias for: <a href="TkTextIO.html#method-i-each_line">each_line</a>
+            </div>
+          
+          
+          
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-each_byte">
+            
+              <b>each_byte</b>()
+            
+            <a href="../classes/TkTextIO.html#method-i-each_byte" name="method-i-each_byte" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+            <div class="aka">
+              Alias for: <a href="TkTextIO.html#method-i-each_char">each_char</a>
+            </div>
+          
+          
+          
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-each_char">
+            
+              <b>each_char</b>()
+            
+            <a href="../classes/TkTextIO.html#method-i-each_char" name="method-i-each_char" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+            <div class="aka">
+              Also aliased as: <a href="TkTextIO.html#method-i-each_byte">each_byte</a>
+            </div>
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-each_char_source')" id="l_method-i-each_char_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/287a34ae0dfc23e4158f67cb7783d239f202c368/ext/tk/sample/tktextio.rb#L457" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-each_char_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/sample/tktextio.rb, line 457</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">each_char</span>
+  <span class="ruby-identifier">_check_readable</span>
+  <span class="ruby-keyword">while</span>(<span class="ruby-identifier">c</span> = <span class="ruby-keyword">self</span>.<span class="ruby-identifier">getc</span>)
+    <span class="ruby-keyword">yield</span>(<span class="ruby-identifier">c</span>)
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-each_line">
+            
+              <b>each_line</b>(rs = $/)
+            
+            <a href="../classes/TkTextIO.html#method-i-each_line" name="method-i-each_line" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+            <div class="aka">
+              Also aliased as: <a href="TkTextIO.html#method-i-each">each</a>
+            </div>
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-each_line_source')" id="l_method-i-each_line_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/287a34ae0dfc23e4158f67cb7783d239f202c368/ext/tk/sample/tktextio.rb#L448" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-each_line_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/sample/tktextio.rb, line 448</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">each_line</span>(<span class="ruby-identifier">rs</span> = <span class="ruby-identifier">$/</span>)
+  <span class="ruby-identifier">_check_readable</span>
+  <span class="ruby-keyword">while</span>(<span class="ruby-identifier">s</span> = <span class="ruby-keyword">self</span>.<span class="ruby-identifier">gets</span>(<span class="ruby-identifier">rs</span>))
+    <span class="ruby-keyword">yield</span>(<span class="ruby-identifier">s</span>)
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-eof">
+            
+              <b>eof</b>()
+            
+            <a href="../classes/TkTextIO.html#method-i-eof" name="method-i-eof" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+            <div class="aka">
+              Alias for: <a href="TkTextIO.html#method-i-eof-3F">eof?</a>
+            </div>
+          
+          
+          
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-eof-3F">
+            
+              <b>eof?</b>()
+            
+            <a href="../classes/TkTextIO.html#method-i-eof-3F" name="method-i-eof-3F" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+            <div class="aka">
+              Also aliased as: <a href="TkTextIO.html#method-i-eof">eof</a>
+            </div>
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-eof-3F_source')" id="l_method-i-eof-3F_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/287a34ae0dfc23e4158f67cb7783d239f202c368/ext/tk/sample/tktextio.rb#L466" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-eof-3F_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/sample/tktextio.rb, line 466</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">eof?</span>
+  <span class="ruby-identifier">compare</span>(<span class="ruby-ivar">@txtpos</span>, <span class="ruby-string">&#39;==&#39;</span>, <span class="ruby-string">&#39;end - 1 char&#39;</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-fcntl">
+            
+              <b>fcntl</b>(*args)
+            
+            <a href="../classes/TkTextIO.html#method-i-fcntl" name="method-i-fcntl" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-fcntl_source')" id="l_method-i-fcntl_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/287a34ae0dfc23e4158f67cb7783d239f202c368/ext/tk/sample/tktextio.rb#L471" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-fcntl_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/sample/tktextio.rb, line 471</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">fcntl</span>(<span class="ruby-operator">*</span><span class="ruby-identifier">args</span>)
+  <span class="ruby-identifier">fail</span> <span class="ruby-constant">NotImplementedError</span>, <span class="ruby-node">&quot;fcntl is not implemented on #{self.class}&quot;</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-fileno">
+            
+              <b>fileno</b>()
+            
+            <a href="../classes/TkTextIO.html#method-i-fileno" name="method-i-fileno" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-fileno_source')" id="l_method-i-fileno_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/287a34ae0dfc23e4158f67cb7783d239f202c368/ext/tk/sample/tktextio.rb#L479" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-fileno_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/sample/tktextio.rb, line 479</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">fileno</span>
+  <span class="ruby-keyword">nil</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-flush">
+            
+              <b>flush</b>()
+            
+            <a href="../classes/TkTextIO.html#method-i-flush" name="method-i-flush" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-flush_source')" id="l_method-i-flush_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/287a34ae0dfc23e4158f67cb7783d239f202c368/ext/tk/sample/tktextio.rb#L483" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-flush_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/sample/tktextio.rb, line 483</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">flush</span>
+  <span class="ruby-constant">Thread</span>.<span class="ruby-identifier">pass</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-ivar">@open</span>[<span class="ruby-value">:w</span>] <span class="ruby-operator">||</span> <span class="ruby-operator">!</span> <span class="ruby-ivar">@write_buffer</span>.<span class="ruby-identifier">empty?</span>
+    <span class="ruby-ivar">@write_buf_mutex</span>.<span class="ruby-identifier">synchronize</span> {
+      <span class="ruby-identifier">_sync_write_buf</span>(<span class="ruby-ivar">@write_buffer</span>)
+      <span class="ruby-ivar">@write_buffer</span>[<span class="ruby-number">0</span><span class="ruby-operator">..</span><span class="ruby-number">-1</span>] = <span class="ruby-string">&#39;&#39;</span>
+    }
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-fsync">
+            
+              <b>fsync</b>()
+            
+            <a href="../classes/TkTextIO.html#method-i-fsync" name="method-i-fsync" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-fsync_source')" id="l_method-i-fsync_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/287a34ae0dfc23e4158f67cb7783d239f202c368/ext/tk/sample/tktextio.rb#L475" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-fsync_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/sample/tktextio.rb, line 475</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">fsync</span>
+  <span class="ruby-number">0</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-getc">
+            
+              <b>getc</b>()
+            
+            <a href="../classes/TkTextIO.html#method-i-getc" name="method-i-getc" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-getc_source')" id="l_method-i-getc_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/287a34ae0dfc23e4158f67cb7783d239f202c368/ext/tk/sample/tktextio.rb#L494" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-getc_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/sample/tktextio.rb, line 494</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">getc</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-identifier">_block_read</span>(<span class="ruby-number">1</span>) <span class="ruby-keyword">if</span> <span class="ruby-ivar">@console_mode</span>
+
+  <span class="ruby-identifier">_check_readable</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">nil</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">eof?</span>
+  <span class="ruby-identifier">c</span> = <span class="ruby-identifier">get</span>(<span class="ruby-ivar">@txtpos</span>)
+  <span class="ruby-ivar">@txtpos</span>.<span class="ruby-identifier">set</span>(<span class="ruby-ivar">@txtpos</span> <span class="ruby-operator">+</span> <span class="ruby-string">&#39;1 char&#39;</span>)
+  <span class="ruby-identifier">_see_pos</span>
+  <span class="ruby-identifier">c</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-gets">
+            
+              <b>gets</b>(rs = $/)
+            
+            <a href="../classes/TkTextIO.html#method-i-gets" name="method-i-gets" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-gets_source')" id="l_method-i-gets_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/287a34ae0dfc23e4158f67cb7783d239f202c368/ext/tk/sample/tktextio.rb#L505" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-gets_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/sample/tktextio.rb, line 505</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">gets</span>(<span class="ruby-identifier">rs</span> = <span class="ruby-identifier">$/</span>)
+  <span class="ruby-keyword">return</span> <span class="ruby-identifier">_block_read</span>(<span class="ruby-identifier">rs</span>) <span class="ruby-keyword">if</span> <span class="ruby-ivar">@console_mode</span>
+
+  <span class="ruby-identifier">_check_readable</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">nil</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">eof?</span>
+  <span class="ruby-identifier">_readline</span>(<span class="ruby-identifier">rs</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-index_pos">
+            
+              <b>index_pos</b>()
+            
+            <a href="../classes/TkTextIO.html#method-i-index_pos" name="method-i-index_pos" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+            <div class="aka">
+              Also aliased as: <a href="TkTextIO.html#method-i-tell_index">tell_index</a>
+            </div>
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-index_pos_source')" id="l_method-i-index_pos_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/287a34ae0dfc23e4158f67cb7783d239f202c368/ext/tk/sample/tktextio.rb#L545" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-index_pos_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/sample/tktextio.rb, line 545</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">index_pos</span>
+  <span class="ruby-identifier">index</span>(<span class="ruby-ivar">@txtpos</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-index_pos-3D">
+            
+              <b>index_pos=</b>(idx)
+            
+            <a href="../classes/TkTextIO.html#method-i-index_pos-3D" name="method-i-index_pos-3D" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-index_pos-3D_source')" id="l_method-i-index_pos-3D_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/287a34ae0dfc23e4158f67cb7783d239f202c368/ext/tk/sample/tktextio.rb#L550" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-index_pos-3D_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/sample/tktextio.rb, line 550</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">index_pos=</span>(<span class="ruby-identifier">idx</span>)
+  <span class="ruby-ivar">@txtpos</span>.<span class="ruby-identifier">set</span>(<span class="ruby-identifier">idx</span>)
+  <span class="ruby-ivar">@txtpos</span>.<span class="ruby-identifier">set</span>(<span class="ruby-string">&#39;end - 1 char&#39;</span>) <span class="ruby-keyword">if</span> <span class="ruby-identifier">compare</span>(<span class="ruby-ivar">@txtpos</span>, <span class="ruby-string">&#39;&gt;=&#39;</span>, <span class="ruby-value">:end</span>)
+  <span class="ruby-identifier">_see_pos</span>
+  <span class="ruby-identifier">idx</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-ioctrl">
+            
+              <b>ioctrl</b>(*args)
+            
+            <a href="../classes/TkTextIO.html#method-i-ioctrl" name="method-i-ioctrl" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-ioctrl_source')" id="l_method-i-ioctrl_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/287a34ae0dfc23e4158f67cb7783d239f202c368/ext/tk/sample/tktextio.rb#L513" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-ioctrl_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/sample/tktextio.rb, line 513</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">ioctrl</span>(<span class="ruby-operator">*</span><span class="ruby-identifier">args</span>)
+  <span class="ruby-identifier">fail</span> <span class="ruby-constant">NotImplementedError</span>, <span class="ruby-string">&#39;iocntl is not implemented on TkTextIO&#39;</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-isatty">
+            
+              <b>isatty</b>()
+            
+            <a href="../classes/TkTextIO.html#method-i-isatty" name="method-i-isatty" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-isatty_source')" id="l_method-i-isatty_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/287a34ae0dfc23e4158f67cb7783d239f202c368/ext/tk/sample/tktextio.rb#L517" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-isatty_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/sample/tktextio.rb, line 517</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">isatty</span>
+  <span class="ruby-keyword">false</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-lineno">
+            
+              <b>lineno</b>()
+            
+            <a href="../classes/TkTextIO.html#method-i-lineno" name="method-i-lineno" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-lineno_source')" id="l_method-i-lineno_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/287a34ae0dfc23e4158f67cb7783d239f202c368/ext/tk/sample/tktextio.rb#L524" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-lineno_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/sample/tktextio.rb, line 524</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">lineno</span>
+  <span class="ruby-ivar">@lineno</span> <span class="ruby-operator">+</span> <span class="ruby-ivar">@line_offset</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-lineno-3D">
+            
+              <b>lineno=</b>(num)
+            
+            <a href="../classes/TkTextIO.html#method-i-lineno-3D" name="method-i-lineno-3D" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-lineno-3D_source')" id="l_method-i-lineno-3D_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/287a34ae0dfc23e4158f67cb7783d239f202c368/ext/tk/sample/tktextio.rb#L528" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-lineno-3D_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/sample/tktextio.rb, line 528</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">lineno=</span>(<span class="ruby-identifier">num</span>)
+  <span class="ruby-ivar">@line_offset</span> = <span class="ruby-identifier">num</span> <span class="ruby-operator">-</span> <span class="ruby-ivar">@lineno</span>
+  <span class="ruby-identifier">num</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-overwrite-3D">
+            
+              <b>overwrite=</b>(ovwt)
+            
+            <a href="../classes/TkTextIO.html#method-i-overwrite-3D" name="method-i-overwrite-3D" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-overwrite-3D_source')" id="l_method-i-overwrite-3D_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/287a34ae0dfc23e4158f67cb7783d239f202c368/ext/tk/sample/tktextio.rb#L537" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-overwrite-3D_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/sample/tktextio.rb, line 537</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">overwrite=</span>(<span class="ruby-identifier">ovwt</span>)
+  <span class="ruby-ivar">@overwrite</span> = (<span class="ruby-identifier">ovwt</span>)<span class="ruby-operator">?</span> <span class="ruby-keyword">true</span><span class="ruby-operator">:</span> <span class="ruby-keyword">false</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-overwrite-3F">
+            
+              <b>overwrite?</b>()
+            
+            <a href="../classes/TkTextIO.html#method-i-overwrite-3F" name="method-i-overwrite-3F" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-overwrite-3F_source')" id="l_method-i-overwrite-3F_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/287a34ae0dfc23e4158f67cb7783d239f202c368/ext/tk/sample/tktextio.rb#L533" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-overwrite-3F_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/sample/tktextio.rb, line 533</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">overwrite?</span>
+  <span class="ruby-ivar">@overwrite</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-pid">
+            
+              <b>pid</b>()
+            
+            <a href="../classes/TkTextIO.html#method-i-pid" name="method-i-pid" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-pid_source')" id="l_method-i-pid_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/287a34ae0dfc23e4158f67cb7783d239f202c368/ext/tk/sample/tktextio.rb#L541" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-pid_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/sample/tktextio.rb, line 541</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">pid</span>
+  <span class="ruby-keyword">nil</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-pos">
+            
+              <b>pos</b>()
+            
+            <a href="../classes/TkTextIO.html#method-i-pos" name="method-i-pos" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+            <div class="aka">
+              Also aliased as: <a href="TkTextIO.html#method-i-tell">tell</a>
+            </div>
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-pos_source')" id="l_method-i-pos_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/287a34ae0dfc23e4158f67cb7783d239f202c368/ext/tk/sample/tktextio.rb#L557" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-pos_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/sample/tktextio.rb, line 557</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">pos</span>
+  <span class="ruby-identifier">s</span> = <span class="ruby-identifier">get</span>(<span class="ruby-string">&#39;1.0&#39;</span>, <span class="ruby-ivar">@txtpos</span>)
+  <span class="ruby-identifier">number</span>(<span class="ruby-identifier">tk_call</span>(<span class="ruby-string">&#39;string&#39;</span>, <span class="ruby-string">&#39;length&#39;</span>, <span class="ruby-identifier">s</span>))
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-pos-3D">
+            
+              <b>pos=</b>(idx)
+            
+            <a href="../classes/TkTextIO.html#method-i-pos-3D" name="method-i-pos-3D" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-pos-3D_source')" id="l_method-i-pos-3D_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/287a34ae0dfc23e4158f67cb7783d239f202c368/ext/tk/sample/tktextio.rb#L563" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-pos-3D_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/sample/tktextio.rb, line 563</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">pos=</span>(<span class="ruby-identifier">idx</span>)
+  <span class="ruby-identifier">seek</span>(<span class="ruby-identifier">idx</span>, <span class="ruby-constant">IO</span><span class="ruby-operator">::</span><span class="ruby-constant">SEEK_SET</span>)
+  <span class="ruby-identifier">idx</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-pos_gravity">
+            
+              <b>pos_gravity</b>()
+            
+            <a href="../classes/TkTextIO.html#method-i-pos_gravity" name="method-i-pos_gravity" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-pos_gravity_source')" id="l_method-i-pos_gravity_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/287a34ae0dfc23e4158f67cb7783d239f202c368/ext/tk/sample/tktextio.rb#L568" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-pos_gravity_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/sample/tktextio.rb, line 568</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">pos_gravity</span>
+  <span class="ruby-ivar">@txtpos</span>.<span class="ruby-identifier">gravity</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-pos_gravity-3D">
+            
+              <b>pos_gravity=</b>(side)
+            
+            <a href="../classes/TkTextIO.html#method-i-pos_gravity-3D" name="method-i-pos_gravity-3D" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-pos_gravity-3D_source')" id="l_method-i-pos_gravity-3D_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/287a34ae0dfc23e4158f67cb7783d239f202c368/ext/tk/sample/tktextio.rb#L572" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-pos_gravity-3D_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/sample/tktextio.rb, line 572</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">pos_gravity=</span>(<span class="ruby-identifier">side</span>)
+  <span class="ruby-ivar">@txtpos</span>.<span class="ruby-identifier">gravity</span> = <span class="ruby-identifier">side</span>
+  <span class="ruby-identifier">side</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-print">
+            
+              <b>print</b>(arg=$_, *args)
+            
+            <a href="../classes/TkTextIO.html#method-i-print" name="method-i-print" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-print_source')" id="l_method-i-print_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/287a34ae0dfc23e4158f67cb7783d239f202c368/ext/tk/sample/tktextio.rb#L577" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-print_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/sample/tktextio.rb, line 577</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">print</span>(<span class="ruby-identifier">arg</span>=<span class="ruby-identifier">$_</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">args</span>)
+  <span class="ruby-identifier">_check_writable</span>
+  <span class="ruby-identifier">args</span>.<span class="ruby-identifier">unshift</span>(<span class="ruby-identifier">arg</span>)
+  <span class="ruby-identifier">args</span>.<span class="ruby-identifier">map!</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">val</span><span class="ruby-operator">|</span> (<span class="ruby-identifier">val</span> <span class="ruby-operator">==</span> <span class="ruby-keyword">nil</span>)<span class="ruby-operator">?</span> <span class="ruby-string">&#39;nil&#39;</span><span class="ruby-operator">:</span> <span class="ruby-identifier">val</span>.<span class="ruby-identifier">to_s</span> }
+  <span class="ruby-identifier">str</span> = <span class="ruby-identifier">args</span>.<span class="ruby-identifier">join</span>(<span class="ruby-identifier">$,</span>)
+  <span class="ruby-identifier">str</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">$\</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">$\</span>
+  <span class="ruby-identifier">_write</span>(<span class="ruby-identifier">str</span>)
+  <span class="ruby-keyword">nil</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-printf">
+            
+              <b>printf</b>(*args)
+            
+            <a href="../classes/TkTextIO.html#method-i-printf" name="method-i-printf" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-printf_source')" id="l_method-i-printf_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/287a34ae0dfc23e4158f67cb7783d239f202c368/ext/tk/sample/tktextio.rb#L586" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-printf_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/sample/tktextio.rb, line 586</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">printf</span>(<span class="ruby-operator">*</span><span class="ruby-identifier">args</span>)
+  <span class="ruby-identifier">_check_writable</span>
+  <span class="ruby-identifier">_write</span>(<span class="ruby-identifier">sprintf</span>(<span class="ruby-operator">*</span><span class="ruby-identifier">args</span>))
+  <span class="ruby-keyword">nil</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-putc">
+            
+              <b>putc</b>(c)
+            
+            <a href="../classes/TkTextIO.html#method-i-putc" name="method-i-putc" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-putc_source')" id="l_method-i-putc_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/287a34ae0dfc23e4158f67cb7783d239f202c368/ext/tk/sample/tktextio.rb#L592" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-putc_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/sample/tktextio.rb, line 592</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">putc</span>(<span class="ruby-identifier">c</span>)
+  <span class="ruby-identifier">_check_writable</span>
+  <span class="ruby-identifier">c</span> = <span class="ruby-identifier">c</span>.<span class="ruby-identifier">chr</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">c</span>.<span class="ruby-identifier">kind_of?</span>(<span class="ruby-constant">Fixnum</span>)
+  <span class="ruby-identifier">_write</span>(<span class="ruby-identifier">c</span>)
+  <span class="ruby-identifier">c</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-puts">
+            
+              <b>puts</b>(*args)
+            
+            <a href="../classes/TkTextIO.html#method-i-puts" name="method-i-puts" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-puts_source')" id="l_method-i-puts_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/287a34ae0dfc23e4158f67cb7783d239f202c368/ext/tk/sample/tktextio.rb#L599" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-puts_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/sample/tktextio.rb, line 599</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">puts</span>(<span class="ruby-operator">*</span><span class="ruby-identifier">args</span>)
+  <span class="ruby-identifier">_check_writable</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">args</span>.<span class="ruby-identifier">empty?</span>
+    <span class="ruby-identifier">_write</span>(<span class="ruby-string">&quot;\n&quot;</span>)
+    <span class="ruby-keyword">return</span> <span class="ruby-keyword">nil</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">args</span>.<span class="ruby-identifier">each</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">arg</span><span class="ruby-operator">|</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">arg</span> <span class="ruby-operator">==</span> <span class="ruby-keyword">nil</span>
+      <span class="ruby-identifier">_write</span>(<span class="ruby-string">&quot;nil\n&quot;</span>)
+    <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">arg</span>.<span class="ruby-identifier">kind_of?</span>(<span class="ruby-constant">Array</span>)
+      <span class="ruby-identifier">puts</span>(<span class="ruby-operator">*</span><span class="ruby-identifier">arg</span>)
+    <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">arg</span>.<span class="ruby-identifier">kind_of?</span>(<span class="ruby-constant">String</span>)
+      <span class="ruby-identifier">_write</span>(<span class="ruby-identifier">arg</span>.<span class="ruby-identifier">chomp</span>)
+      <span class="ruby-identifier">_write</span>(<span class="ruby-string">&quot;\n&quot;</span>)
+    <span class="ruby-keyword">else</span>
+      <span class="ruby-keyword">begin</span>
+        <span class="ruby-identifier">arg</span> = <span class="ruby-identifier">arg</span>.<span class="ruby-identifier">to_ary</span>
+        <span class="ruby-identifier">puts</span>(<span class="ruby-operator">*</span><span class="ruby-identifier">arg</span>)
+      <span class="ruby-keyword">rescue</span>
+        <span class="ruby-identifier">puts</span>(<span class="ruby-identifier">arg</span>.<span class="ruby-identifier">to_s</span>)
+      <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">end</span>
+  }
+  <span class="ruby-keyword">nil</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-read">
+            
+              <b>read</b>(len=nil, buf=nil)
+            
+            <a href="../classes/TkTextIO.html#method-i-read" name="method-i-read" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-read_source')" id="l_method-i-read_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/287a34ae0dfc23e4158f67cb7783d239f202c368/ext/tk/sample/tktextio.rb#L635" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-read_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/sample/tktextio.rb, line 635</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">read</span>(<span class="ruby-identifier">len</span>=<span class="ruby-keyword">nil</span>, <span class="ruby-identifier">buf</span>=<span class="ruby-keyword">nil</span>)
+  <span class="ruby-keyword">return</span> <span class="ruby-identifier">_block_read</span>(<span class="ruby-identifier">len</span>, <span class="ruby-identifier">buf</span>) <span class="ruby-keyword">if</span> <span class="ruby-ivar">@console_mode</span>
+
+  <span class="ruby-identifier">_check_readable</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">len</span>
+    <span class="ruby-keyword">return</span> <span class="ruby-string">&quot;&quot;</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">len</span> <span class="ruby-operator">==</span> <span class="ruby-number">0</span>
+    <span class="ruby-keyword">return</span> <span class="ruby-keyword">nil</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">eof?</span>
+    <span class="ruby-identifier">s</span> = <span class="ruby-identifier">_read</span>(<span class="ruby-identifier">len</span>)
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">s</span> = <span class="ruby-identifier">get</span>(<span class="ruby-ivar">@txtpos</span>, <span class="ruby-string">&#39;end - 1 char&#39;</span>)
+    <span class="ruby-ivar">@txtpos</span>.<span class="ruby-identifier">set</span>(<span class="ruby-string">&#39;end - 1 char&#39;</span>)
+    <span class="ruby-identifier">_see_pos</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">buf</span>.<span class="ruby-identifier">replace</span>(<span class="ruby-identifier">s</span>) <span class="ruby-keyword">if</span> <span class="ruby-identifier">buf</span>.<span class="ruby-identifier">kind_of?</span>(<span class="ruby-constant">String</span>)
+  <span class="ruby-identifier">s</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-readchar">
+            
+              <b>readchar</b>()
+            
+            <a href="../classes/TkTextIO.html#method-i-readchar" name="method-i-readchar" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-readchar_source')" id="l_method-i-readchar_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/287a34ae0dfc23e4158f67cb7783d239f202c368/ext/tk/sample/tktextio.rb#L652" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-readchar_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/sample/tktextio.rb, line 652</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">readchar</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-identifier">_block_read</span>(<span class="ruby-number">1</span>) <span class="ruby-keyword">if</span> <span class="ruby-ivar">@console_mode</span>
+
+  <span class="ruby-identifier">_check_readable</span>
+  <span class="ruby-identifier">fail</span> <span class="ruby-constant">EOFError</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">eof?</span>
+  <span class="ruby-identifier">c</span> = <span class="ruby-identifier">get</span>(<span class="ruby-ivar">@txtpos</span>)
+  <span class="ruby-ivar">@txtpos</span>.<span class="ruby-identifier">set</span>(<span class="ruby-ivar">@txtpos</span> <span class="ruby-operator">+</span> <span class="ruby-string">&#39;1 char&#39;</span>)
+  <span class="ruby-identifier">_see_pos</span>
+  <span class="ruby-identifier">c</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-readline">
+            
+              <b>readline</b>(rs = $/)
+            
+            <a href="../classes/TkTextIO.html#method-i-readline" name="method-i-readline" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-readline_source')" id="l_method-i-readline_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/287a34ae0dfc23e4158f67cb7783d239f202c368/ext/tk/sample/tktextio.rb#L698" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-readline_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/sample/tktextio.rb, line 698</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">readline</span>(<span class="ruby-identifier">rs</span> = <span class="ruby-identifier">$/</span>)
+  <span class="ruby-keyword">return</span> <span class="ruby-identifier">_block_readline</span>(<span class="ruby-identifier">rs</span>) <span class="ruby-keyword">if</span> <span class="ruby-ivar">@console_mode</span>
+
+  <span class="ruby-identifier">_check_readable</span>
+  <span class="ruby-identifier">fail</span> <span class="ruby-constant">EOFError</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">eof?</span>
+  <span class="ruby-identifier">_readline</span>(<span class="ruby-identifier">rs</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-readlines">
+            
+              <b>readlines</b>(rs = $/)
+            
+            <a href="../classes/TkTextIO.html#method-i-readlines" name="method-i-readlines" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-readlines_source')" id="l_method-i-readlines_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/287a34ae0dfc23e4158f67cb7783d239f202c368/ext/tk/sample/tktextio.rb#L706" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-readlines_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/sample/tktextio.rb, line 706</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">readlines</span>(<span class="ruby-identifier">rs</span> = <span class="ruby-identifier">$/</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-ivar">@console_mode</span>
+    <span class="ruby-identifier">lines</span> = []
+    <span class="ruby-keyword">while</span> (<span class="ruby-identifier">line</span> = <span class="ruby-identifier">_block_readline</span>(<span class="ruby-identifier">rs</span>))
+      <span class="ruby-identifier">lines</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">line</span>
+    <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">return</span> <span class="ruby-identifier">lines</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-identifier">_check_readable</span>
+  <span class="ruby-identifier">lines</span> = []
+  <span class="ruby-keyword">until</span>(<span class="ruby-identifier">eof?</span>)
+    <span class="ruby-identifier">lines</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">_readline</span>(<span class="ruby-identifier">rs</span>)
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">$_</span> = <span class="ruby-keyword">nil</span>
+  <span class="ruby-identifier">lines</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-readpartial">
+            
+              <b>readpartial</b>(maxlen, buf=nil)
+            
+            <a href="../classes/TkTextIO.html#method-i-readpartial" name="method-i-readpartial" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-readpartial_source')" id="l_method-i-readpartial_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/287a34ae0dfc23e4158f67cb7783d239f202c368/ext/tk/sample/tktextio.rb#L724" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-readpartial_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/sample/tktextio.rb, line 724</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">readpartial</span>(<span class="ruby-identifier">maxlen</span>, <span class="ruby-identifier">buf</span>=<span class="ruby-keyword">nil</span>)
+  <span class="ruby-comment">#return @console_buffer.readpartial(maxlen, buf) if @console_mode</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-identifier">_block_read</span>(<span class="ruby-identifier">maxlen</span>, <span class="ruby-identifier">buf</span>, <span class="ruby-keyword">nil</span>) <span class="ruby-keyword">if</span> <span class="ruby-ivar">@console_mode</span>
+
+  <span class="ruby-identifier">_check_readable</span>
+  <span class="ruby-identifier">fail</span> <span class="ruby-constant">EOFError</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">eof?</span>
+  <span class="ruby-identifier">s</span> = <span class="ruby-identifier">_read</span>(<span class="ruby-identifier">maxlen</span>)
+  <span class="ruby-identifier">buf</span>.<span class="ruby-identifier">replace</span>(<span class="ruby-identifier">s</span>) <span class="ruby-keyword">if</span> <span class="ruby-identifier">buf</span>.<span class="ruby-identifier">kind_of?</span>(<span class="ruby-constant">String</span>)
+  <span class="ruby-identifier">s</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-reopen">
+            
+              <b>reopen</b>(*args)
+            
+            <a href="../classes/TkTextIO.html#method-i-reopen" name="method-i-reopen" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-reopen_source')" id="l_method-i-reopen_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/287a34ae0dfc23e4158f67cb7783d239f202c368/ext/tk/sample/tktextio.rb#L735" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-reopen_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/sample/tktextio.rb, line 735</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">reopen</span>(<span class="ruby-operator">*</span><span class="ruby-identifier">args</span>)
+  <span class="ruby-identifier">fail</span> <span class="ruby-constant">NotImplementedError</span>, <span class="ruby-string">&#39;reopen is not implemented on TkTextIO&#39;</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-rewind">
+            
+              <b>rewind</b>()
+            
+            <a href="../classes/TkTextIO.html#method-i-rewind" name="method-i-rewind" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-rewind_source')" id="l_method-i-rewind_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/287a34ae0dfc23e4158f67cb7783d239f202c368/ext/tk/sample/tktextio.rb#L739" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-rewind_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/sample/tktextio.rb, line 739</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">rewind</span>
+  <span class="ruby-ivar">@txtpos</span>.<span class="ruby-identifier">set</span>(<span class="ruby-string">&#39;1.0&#39;</span>)
+  <span class="ruby-identifier">_see_pos</span>
+  <span class="ruby-ivar">@lineno</span> = <span class="ruby-number">0</span>
+  <span class="ruby-ivar">@line_offset</span> = <span class="ruby-number">0</span>
+  <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-seek">
+            
+              <b>seek</b>(offset, whence=IO::SEEK_SET)
+            
+            <a href="../classes/TkTextIO.html#method-i-seek" name="method-i-seek" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+            <div class="aka">
+              Also aliased as: <a href="TkTextIO.html#method-i-sysseek">sysseek</a>
+            </div>
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-seek_source')" id="l_method-i-seek_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/287a34ae0dfc23e4158f67cb7783d239f202c368/ext/tk/sample/tktextio.rb#L747" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-seek_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/sample/tktextio.rb, line 747</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">seek</span>(<span class="ruby-identifier">offset</span>, <span class="ruby-identifier">whence</span>=<span class="ruby-constant">IO</span><span class="ruby-operator">::</span><span class="ruby-constant">SEEK_SET</span>)
+  <span class="ruby-keyword">case</span> <span class="ruby-identifier">whence</span>
+  <span class="ruby-keyword">when</span> <span class="ruby-constant">IO</span><span class="ruby-operator">::</span><span class="ruby-constant">SEEK_SET</span>
+    <span class="ruby-identifier">offset</span> = <span class="ruby-node">&quot;1.0 + #{offset} char&quot;</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">offset</span>.<span class="ruby-identifier">kind_of?</span>(<span class="ruby-constant">Numeric</span>)
+    <span class="ruby-ivar">@txtpos</span>.<span class="ruby-identifier">set</span>(<span class="ruby-identifier">offset</span>)
+
+  <span class="ruby-keyword">when</span> <span class="ruby-constant">IO</span><span class="ruby-operator">::</span><span class="ruby-constant">SEEK_CUR</span>
+    <span class="ruby-identifier">offset</span> = <span class="ruby-node">&quot;#{offset} char&quot;</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">offset</span>.<span class="ruby-identifier">kind_of?</span>(<span class="ruby-constant">Numeric</span>)
+    <span class="ruby-ivar">@txtpos</span>.<span class="ruby-identifier">set</span>(<span class="ruby-ivar">@txtpos</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">offset</span>)
+
+  <span class="ruby-keyword">when</span> <span class="ruby-constant">IO</span><span class="ruby-operator">::</span><span class="ruby-constant">SEEK_END</span>
+    <span class="ruby-identifier">offset</span> = <span class="ruby-node">&quot;#{offset} char&quot;</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">offset</span>.<span class="ruby-identifier">kind_of?</span>(<span class="ruby-constant">Numeric</span>)
+    <span class="ruby-ivar">@txtpos</span>.<span class="ruby-identifier">set</span>(<span class="ruby-node">&quot;end - 1 char + #{offset}&quot;</span>)
+
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">fail</span> <span class="ruby-constant">Errno</span><span class="ruby-operator">::</span><span class="ruby-constant">EINVAL</span>, <span class="ruby-string">&#39;invalid whence argument&#39;</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-ivar">@txtpos</span>.<span class="ruby-identifier">set</span>(<span class="ruby-string">&#39;end - 1 char&#39;</span>) <span class="ruby-keyword">if</span> <span class="ruby-identifier">compare</span>(<span class="ruby-ivar">@txtpos</span>, <span class="ruby-string">&#39;&gt;=&#39;</span>, <span class="ruby-value">:end</span>)
+  <span class="ruby-identifier">_see_pos</span>
+
+  <span class="ruby-number">0</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-show_mode">
+            
+              <b>show_mode</b>()
+            
+            <a href="../classes/TkTextIO.html#method-i-show_mode" name="method-i-show_mode" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-show_mode_source')" id="l_method-i-show_mode_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/287a34ae0dfc23e4158f67cb7783d239f202c368/ext/tk/sample/tktextio.rb#L777" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-show_mode_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/sample/tktextio.rb, line 777</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">show_mode</span>
+  (<span class="ruby-ivar">@show</span> <span class="ruby-operator">==</span> <span class="ruby-ivar">@txtpos</span>)<span class="ruby-operator">?</span> <span class="ruby-value">:pos</span> <span class="ruby-operator">:</span> <span class="ruby-ivar">@show</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-show_mode-3D">
+            
+              <b>show_mode=</b>(mode)
+            
+            <a href="../classes/TkTextIO.html#method-i-show_mode-3D" name="method-i-show_mode-3D" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-show_mode-3D_source')" id="l_method-i-show_mode-3D_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/287a34ae0dfc23e4158f67cb7783d239f202c368/ext/tk/sample/tktextio.rb#L781" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-show_mode-3D_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/sample/tktextio.rb, line 781</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">show_mode=</span>(<span class="ruby-identifier">mode</span>)
+  <span class="ruby-comment"># define show mode  when file position is changed.</span>
+  <span class="ruby-comment">#  mode == :pos or &quot;pos&quot; or true :: see current file position.</span>
+  <span class="ruby-comment">#  mode == :insert or &quot;insert&quot;   :: see insert cursor position.</span>
+  <span class="ruby-comment">#  mode == nil or false          :: do nothing</span>
+  <span class="ruby-comment">#  else see &#39;mode&#39; position (&#39;mode&#39; should be text index or mark)</span>
+  <span class="ruby-keyword">case</span> <span class="ruby-identifier">mode</span>
+  <span class="ruby-keyword">when</span> <span class="ruby-value">:pos</span>, <span class="ruby-string">&#39;pos&#39;</span>, <span class="ruby-keyword">true</span>
+    <span class="ruby-ivar">@show</span> = <span class="ruby-ivar">@txtpos</span>
+  <span class="ruby-keyword">when</span> <span class="ruby-value">:insert</span>, <span class="ruby-string">&#39;insert&#39;</span>
+    <span class="ruby-ivar">@show</span> = <span class="ruby-value">:insert</span>
+  <span class="ruby-keyword">when</span> <span class="ruby-keyword">nil</span>, <span class="ruby-keyword">false</span>
+    <span class="ruby-ivar">@show</span> = <span class="ruby-keyword">false</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-keyword">begin</span>
+      <span class="ruby-identifier">index</span>(<span class="ruby-identifier">mode</span>)
+    <span class="ruby-keyword">rescue</span>
+      <span class="ruby-identifier">fail</span> <span class="ruby-constant">ArgumentError</span>, <span class="ruby-string">&#39;invalid show-position&#39;</span>
+    <span class="ruby-keyword">end</span>
+    <span class="ruby-ivar">@show</span> = <span class="ruby-identifier">mode</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-identifier">_see_pos</span>
+
+  <span class="ruby-identifier">mode</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-stat">
+            
+              <b>stat</b>()
+            
+            <a href="../classes/TkTextIO.html#method-i-stat" name="method-i-stat" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-stat_source')" id="l_method-i-stat_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/287a34ae0dfc23e4158f67cb7783d239f202c368/ext/tk/sample/tktextio.rb#L808" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-stat_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/sample/tktextio.rb, line 808</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">stat</span>
+  <span class="ruby-identifier">fail</span> <span class="ruby-constant">NotImplementedError</span>, <span class="ruby-string">&#39;stat is not implemented on TkTextIO&#39;</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-sync">
+            
+              <b>sync</b>()
+            
+            <a href="../classes/TkTextIO.html#method-i-sync" name="method-i-sync" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-sync_source')" id="l_method-i-sync_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/287a34ae0dfc23e4158f67cb7783d239f202c368/ext/tk/sample/tktextio.rb#L812" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-sync_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/sample/tktextio.rb, line 812</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">sync</span>
+  <span class="ruby-ivar">@sync</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-sync-3D">
+            
+              <b>sync=</b>(mode)
+            
+            <a href="../classes/TkTextIO.html#method-i-sync-3D" name="method-i-sync-3D" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-sync-3D_source')" id="l_method-i-sync-3D_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/287a34ae0dfc23e4158f67cb7783d239f202c368/ext/tk/sample/tktextio.rb#L816" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-sync-3D_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/sample/tktextio.rb, line 816</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">sync=</span>(<span class="ruby-identifier">mode</span>)
+  <span class="ruby-ivar">@sync</span> = <span class="ruby-identifier">mode</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-sysread">
+            
+              <b>sysread</b>(len, buf=nil)
+            
+            <a href="../classes/TkTextIO.html#method-i-sysread" name="method-i-sysread" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-sysread_source')" id="l_method-i-sysread_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/287a34ae0dfc23e4158f67cb7783d239f202c368/ext/tk/sample/tktextio.rb#L820" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-sysread_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/sample/tktextio.rb, line 820</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">sysread</span>(<span class="ruby-identifier">len</span>, <span class="ruby-identifier">buf</span>=<span class="ruby-keyword">nil</span>)
+  <span class="ruby-keyword">return</span> <span class="ruby-identifier">_block_read</span>(<span class="ruby-identifier">len</span>, <span class="ruby-identifier">buf</span>) <span class="ruby-keyword">if</span> <span class="ruby-ivar">@console_mode</span>
+
+  <span class="ruby-identifier">_check_readable</span>
+  <span class="ruby-identifier">fail</span> <span class="ruby-constant">EOFError</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">eof?</span>
+  <span class="ruby-identifier">s</span> = <span class="ruby-identifier">_read</span>(<span class="ruby-identifier">len</span>)
+  <span class="ruby-identifier">buf</span>.<span class="ruby-identifier">replace</span>(<span class="ruby-identifier">s</span>) <span class="ruby-keyword">if</span> <span class="ruby-identifier">buf</span>.<span class="ruby-identifier">kind_of?</span>(<span class="ruby-constant">String</span>)
+  <span class="ruby-identifier">s</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-sysseek">
+            
+              <b>sysseek</b>(offset, whence=IO::SEEK_SET)
+            
+            <a href="../classes/TkTextIO.html#method-i-sysseek" name="method-i-sysseek" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+            <div class="aka">
+              Alias for: <a href="TkTextIO.html#method-i-seek">seek</a>
+            </div>
+          
+          
+          
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-syswrite">
+            
+              <b>syswrite</b>(obj)
+            
+            <a href="../classes/TkTextIO.html#method-i-syswrite" name="method-i-syswrite" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-syswrite_source')" id="l_method-i-syswrite_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/287a34ae0dfc23e4158f67cb7783d239f202c368/ext/tk/sample/tktextio.rb#L830" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-syswrite_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/sample/tktextio.rb, line 830</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">syswrite</span>(<span class="ruby-identifier">obj</span>)
+  <span class="ruby-identifier">_write</span>(<span class="ruby-identifier">obj</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-tell">
+            
+              <b>tell</b>()
+            
+            <a href="../classes/TkTextIO.html#method-i-tell" name="method-i-tell" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+            <div class="aka">
+              Alias for: <a href="TkTextIO.html#method-i-pos">pos</a>
+            </div>
+          
+          
+          
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-tell_index">
+            
+              <b>tell_index</b>()
+            
+            <a href="../classes/TkTextIO.html#method-i-tell_index" name="method-i-tell_index" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+            <div class="aka">
+              Alias for: <a href="TkTextIO.html#method-i-index_pos">index_pos</a>
+            </div>
+          
+          
+          
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-to_io">
+            
+              <b>to_io</b>()
+            
+            <a href="../classes/TkTextIO.html#method-i-to_io" name="method-i-to_io" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-to_io_source')" id="l_method-i-to_io_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/287a34ae0dfc23e4158f67cb7783d239f202c368/ext/tk/sample/tktextio.rb#L834" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-to_io_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/sample/tktextio.rb, line 834</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">to_io</span>
+  <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-trancate">
+            
+              <b>trancate</b>(len)
+            
+            <a href="../classes/TkTextIO.html#method-i-trancate" name="method-i-trancate" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-trancate_source')" id="l_method-i-trancate_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/287a34ae0dfc23e4158f67cb7783d239f202c368/ext/tk/sample/tktextio.rb#L838" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-trancate_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/sample/tktextio.rb, line 838</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">trancate</span>(<span class="ruby-identifier">len</span>)
+  <span class="ruby-identifier">delete</span>(<span class="ruby-node">&quot;1.0 + #{len} char&quot;</span>, <span class="ruby-value">:end</span>)
+  <span class="ruby-number">0</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-tty-3F">
+            
+              <b>tty?</b>()
+            
+            <a href="../classes/TkTextIO.html#method-i-tty-3F" name="method-i-tty-3F" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-tty-3F_source')" id="l_method-i-tty-3F_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/287a34ae0dfc23e4158f67cb7783d239f202c368/ext/tk/sample/tktextio.rb#L520" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-tty-3F_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/sample/tktextio.rb, line 520</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">tty?</span>
+  <span class="ruby-keyword">false</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-ungetc">
+            
+              <b>ungetc</b>(c)
+            
+            <a href="../classes/TkTextIO.html#method-i-ungetc" name="method-i-ungetc" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-ungetc_source')" id="l_method-i-ungetc_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/287a34ae0dfc23e4158f67cb7783d239f202c368/ext/tk/sample/tktextio.rb#L843" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-ungetc_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/sample/tktextio.rb, line 843</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">ungetc</span>(<span class="ruby-identifier">c</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-ivar">@console_mode</span>
+    <span class="ruby-ivar">@read_buf_mutex</span>.<span class="ruby-identifier">synchronize</span> {
+      <span class="ruby-ivar">@read_buffer</span>[<span class="ruby-number">0</span>,<span class="ruby-number">0</span>] = <span class="ruby-identifier">c</span>.<span class="ruby-identifier">chr</span>
+    }
+    <span class="ruby-keyword">return</span> <span class="ruby-keyword">nil</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-identifier">_check_readable</span>
+  <span class="ruby-identifier">c</span> = <span class="ruby-identifier">c</span>.<span class="ruby-identifier">chr</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">c</span>.<span class="ruby-identifier">kind_of?</span>(<span class="ruby-constant">Fixnum</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">compare</span>(<span class="ruby-ivar">@txtpos</span>, <span class="ruby-string">&#39;&gt;&#39;</span>, <span class="ruby-string">&#39;1.0&#39;</span>)
+    <span class="ruby-ivar">@txtpos</span>.<span class="ruby-identifier">set</span>(<span class="ruby-ivar">@txtpos</span> <span class="ruby-operator">-</span> <span class="ruby-string">&#39;1 char&#39;</span>)
+    <span class="ruby-identifier">delete</span>(<span class="ruby-ivar">@txtpos</span>)
+    <span class="ruby-identifier">insert</span>(<span class="ruby-ivar">@txtpos</span>, <span class="ruby-identifier">tk_call</span>(<span class="ruby-string">&#39;string&#39;</span>, <span class="ruby-string">&#39;range&#39;</span>, <span class="ruby-identifier">c</span>, <span class="ruby-number">0</span>, <span class="ruby-number">1</span>))
+    <span class="ruby-ivar">@txtpos</span>.<span class="ruby-identifier">set</span>(<span class="ruby-ivar">@txtpos</span> <span class="ruby-operator">-</span> <span class="ruby-string">&#39;1 char&#39;</span>) <span class="ruby-keyword">if</span> <span class="ruby-ivar">@txtpos</span>.<span class="ruby-identifier">gravity</span> <span class="ruby-operator">==</span> <span class="ruby-string">&#39;right&#39;</span>
+    <span class="ruby-identifier">_see_pos</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">fail</span> <span class="ruby-constant">IOError</span>, <span class="ruby-string">&#39;cannot ungetc at head of stream&#39;</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">nil</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-write">
+            
+              <b>write</b>(obj)
+            
+            <a href="../classes/TkTextIO.html#method-i-write" name="method-i-write" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <h1 id="method-i-write-label-end">end</h1>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-write_source')" id="l_method-i-write_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/287a34ae0dfc23e4158f67cb7783d239f202c368/ext/tk/sample/tktextio.rb#L911" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-write_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/sample/tktextio.rb, line 911</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">write</span>(<span class="ruby-identifier">obj</span>)
+  <span class="ruby-identifier">_check_writable</span>
+  <span class="ruby-identifier">_write</span>(<span class="ruby-identifier">obj</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                    </div>
+
+    </div>
+  </body>
+</html>    

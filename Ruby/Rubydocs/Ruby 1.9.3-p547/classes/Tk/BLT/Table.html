@@ -1,0 +1,1759 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>Tk::BLT::Table</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="../../../css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../../../css/main.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../../../css/github.css" type="text/css" media="screen" />
+<script src="../../../js/jquery-1.3.2.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../../js/jquery-effect.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../../js/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+
+<body>     
+    <div class="banner">
+        
+        <h1>
+            <span class="type">Module</span> 
+            Tk::BLT::Table 
+            
+        </h1>
+        <ul class="files">
+            
+            <li><a href="../../../files/ext/tk/lib/tkextlib/blt/table_rb.html">ext/tk/lib/tkextlib/blt/table.rb</a></li>
+            
+        </ul>
+    </div>
+    <div id="bodyContent">
+        <div id="content">
+  
+
+
+  
+
+
+  
+  
+
+
+  
+    <!-- Namespace -->
+    <div class="sectiontitle">Namespace</div>
+    <ul>
+      
+        <li>
+          <span class="type">MODULE</span>
+          <a href="Table/TableContainer.html">Tk::BLT::Table::TableContainer</a>
+        </li>
+      
+    </ul>
+  
+
+
+  
+    <!-- Method ref -->
+    <div class="sectiontitle">Methods</div>
+    <dl class="methods">
+      
+        <dt>A</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-add">add</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-arrange">arrange</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>C</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-cget">cget</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-cget_strict">cget_strict</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-cget_tkstring">cget_tkstring</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-configinfo">configinfo</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-configure">configure</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-containers">containers</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-containers_pattern">containers_pattern</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-containers_slave">containers_slave</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-create_container">create_container</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-current_configinfo">current_configinfo</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-current_itemconfiginfo">current_itemconfiginfo</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>D</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-delete">delete</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>E</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-extents">extents</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>F</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-forget">forget</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>I</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-info">info</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-insert">insert</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-insert_after">insert_after</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-insert_before">insert_before</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-itemcget">itemcget</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-itemcget_strict">itemcget_strict</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-itemcget_tkstring">itemcget_tkstring</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-itemconfiginfo">itemconfiginfo</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-itemconfigure">itemconfigure</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-iteminfo">iteminfo</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>J</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-join">join</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>L</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-locate">locate</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>S</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-save">save</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-search">search</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-split">split</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>T</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-tagid">tagid</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-tagid2obj">tagid2obj</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+    </dl>
+  
+
+  
+    <!-- Includes -->
+    <div class="sectiontitle">Included Modules</div>
+    <ul>
+      
+        <li>
+          
+            <a href="../../Tk.html">
+              Tk
+            </a>
+          
+        </li>
+      
+    </ul>
+  
+
+
+
+  
+
+    
+
+    
+
+    
+      <!-- Section constants -->
+      <div class="sectiontitle">Constants</div>
+      <table border='0' cellpadding='5'>
+        
+          <tr valign='top'>
+            <td class="attr-name">TkCommandNames</td>
+            <td>=</td>
+            <td class="attr-value">[&#39;::blt::table&#39;.freeze].freeze</td>
+          </tr>
+          
+            <tr valign='top'>
+              <td>&nbsp;</td>
+              <td colspan="2" class="attr-desc"></td>
+            </tr>
+          
+        
+      </table>
+    
+
+
+    
+
+
+    <!-- Methods -->
+        
+      <div class="sectiontitle">Instance Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-i-add">
+            
+              <b>add</b>(container, *args)
+            
+            <a href="../../../classes/Tk/BLT/Table.html#method-i-add" name="method-i-add" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-add_source')" id="l_method-i-add_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/blt/table.rb#L330" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-add_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/blt/table.rb, line 330</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">add</span>(<span class="ruby-identifier">container</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">args</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">args</span>.<span class="ruby-identifier">empty?</span>
+    <span class="ruby-identifier">tk_call</span>(<span class="ruby-string">&#39;::blt::table&#39;</span>, <span class="ruby-identifier">container</span>)
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">args</span> = <span class="ruby-identifier">args</span>.<span class="ruby-identifier">collect</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">arg</span><span class="ruby-operator">|</span>
+      <span class="ruby-keyword">if</span> <span class="ruby-identifier">arg</span>.<span class="ruby-identifier">kind_of?</span>(<span class="ruby-constant">TkWindow</span>)
+        <span class="ruby-identifier">_epath</span>(<span class="ruby-identifier">arg</span>)
+      <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">arg</span>.<span class="ruby-identifier">kind_of?</span>(<span class="ruby-constant">Array</span>)  <span class="ruby-comment"># index</span>
+        <span class="ruby-identifier">arg</span>.<span class="ruby-identifier">join</span>(<span class="ruby-string">&#39;,&#39;</span>)
+      <span class="ruby-keyword">else</span>
+        <span class="ruby-identifier">arg</span>
+      <span class="ruby-keyword">end</span>
+    }
+    <span class="ruby-identifier">tk_call</span>(<span class="ruby-string">&#39;::blt::table&#39;</span>, <span class="ruby-identifier">container</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">args</span>)
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">container</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-arrange">
+            
+              <b>arrange</b>(container)
+            
+            <a href="../../../classes/Tk/BLT/Table.html#method-i-arrange" name="method-i-arrange" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-arrange_source')" id="l_method-i-arrange_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/blt/table.rb#L348" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-arrange_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/blt/table.rb, line 348</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">arrange</span>(<span class="ruby-identifier">container</span>)
+  <span class="ruby-identifier">tk_call</span>(<span class="ruby-string">&#39;::blt::table&#39;</span>, <span class="ruby-string">&#39;arrange&#39;</span>, <span class="ruby-identifier">container</span>)
+  <span class="ruby-identifier">container</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-cget">
+            
+              <b>cget</b>(container, option)
+            
+            <a href="../../../classes/Tk/BLT/Table.html#method-i-cget" name="method-i-cget" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-cget_source')" id="l_method-i-cget_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/blt/table.rb#L193" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-cget_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/blt/table.rb, line 193</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">cget</span>(<span class="ruby-identifier">container</span>, <span class="ruby-identifier">option</span>)
+  <span class="ruby-identifier">__itemcget</span>([<span class="ruby-identifier">container</span>], <span class="ruby-identifier">option</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-cget_strict">
+            
+              <b>cget_strict</b>(container, option)
+            
+            <a href="../../../classes/Tk/BLT/Table.html#method-i-cget_strict" name="method-i-cget_strict" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-cget_strict_source')" id="l_method-i-cget_strict_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/blt/table.rb#L196" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-cget_strict_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/blt/table.rb, line 196</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">cget_strict</span>(<span class="ruby-identifier">container</span>, <span class="ruby-identifier">option</span>)
+  <span class="ruby-identifier">__itemcget_strict</span>([<span class="ruby-identifier">container</span>], <span class="ruby-identifier">option</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-cget_tkstring">
+            
+              <b>cget_tkstring</b>(container, option)
+            
+            <a href="../../../classes/Tk/BLT/Table.html#method-i-cget_tkstring" name="method-i-cget_tkstring" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-cget_tkstring_source')" id="l_method-i-cget_tkstring_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/blt/table.rb#L190" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-cget_tkstring_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/blt/table.rb, line 190</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">cget_tkstring</span>(<span class="ruby-identifier">container</span>, <span class="ruby-identifier">option</span>)
+  <span class="ruby-identifier">__itemcget_tkstring</span>([<span class="ruby-identifier">container</span>], <span class="ruby-identifier">option</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-configinfo">
+            
+              <b>configinfo</b>(container, *args)
+            
+            <a href="../../../classes/Tk/BLT/Table.html#method-i-configinfo" name="method-i-configinfo" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-configinfo_source')" id="l_method-i-configinfo_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/blt/table.rb#L204" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-configinfo_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/blt/table.rb, line 204</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">configinfo</span>(<span class="ruby-identifier">container</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">args</span>)
+  <span class="ruby-identifier">__itemconfiginfo</span>([<span class="ruby-identifier">container</span>], <span class="ruby-operator">*</span><span class="ruby-identifier">args</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-configure">
+            
+              <b>configure</b>(container, *args)
+            
+            <a href="../../../classes/Tk/BLT/Table.html#method-i-configure" name="method-i-configure" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-configure_source')" id="l_method-i-configure_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/blt/table.rb#L200" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-configure_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/blt/table.rb, line 200</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">configure</span>(<span class="ruby-identifier">container</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">args</span>)
+  <span class="ruby-identifier">__itemconfigure</span>([<span class="ruby-identifier">container</span>], <span class="ruby-operator">*</span><span class="ruby-identifier">args</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-containers">
+            
+              <b>containers</b>(arg={})
+            
+            <a href="../../../classes/Tk/BLT/Table.html#method-i-containers" name="method-i-containers" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-containers_source')" id="l_method-i-containers_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/blt/table.rb#L389" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-containers_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/blt/table.rb, line 389</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">containers</span>(<span class="ruby-identifier">arg</span>={})
+  <span class="ruby-identifier">list</span>(<span class="ruby-identifier">tk_call</span>(<span class="ruby-string">&#39;::blt::table&#39;</span>, <span class="ruby-string">&#39;containers&#39;</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">hash_kv</span>(<span class="ruby-identifier">arg</span>)))
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-containers_pattern">
+            
+              <b>containers_pattern</b>(pat)
+            
+            <a href="../../../classes/Tk/BLT/Table.html#method-i-containers_pattern" name="method-i-containers_pattern" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-containers_pattern_source')" id="l_method-i-containers_pattern_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/blt/table.rb#L393" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-containers_pattern_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/blt/table.rb, line 393</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">containers_pattern</span>(<span class="ruby-identifier">pat</span>)
+  <span class="ruby-identifier">list</span>(<span class="ruby-identifier">tk_call</span>(<span class="ruby-string">&#39;::blt::table&#39;</span>, <span class="ruby-string">&#39;containers&#39;</span>, <span class="ruby-string">&#39;-pattern&#39;</span>, <span class="ruby-identifier">pat</span>))
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-containers_slave">
+            
+              <b>containers_slave</b>(win)
+            
+            <a href="../../../classes/Tk/BLT/Table.html#method-i-containers_slave" name="method-i-containers_slave" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-containers_slave_source')" id="l_method-i-containers_slave_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/blt/table.rb#L397" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-containers_slave_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/blt/table.rb, line 397</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">containers_slave</span>(<span class="ruby-identifier">win</span>)
+  <span class="ruby-identifier">list</span>(<span class="ruby-identifier">tk_call</span>(<span class="ruby-string">&#39;::blt::table&#39;</span>, <span class="ruby-string">&#39;containers&#39;</span>, <span class="ruby-string">&#39;-slave&#39;</span>, <span class="ruby-identifier">win</span>))
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-create_container">
+            
+              <b>create_container</b>(container)
+            
+            <a href="../../../classes/Tk/BLT/Table.html#method-i-create_container" name="method-i-create_container" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-create_container_source')" id="l_method-i-create_container_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/blt/table.rb#L318" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-create_container_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/blt/table.rb, line 318</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">create_container</span>(<span class="ruby-identifier">container</span>)
+  <span class="ruby-identifier">tk_call</span>(<span class="ruby-string">&#39;::blt::table&#39;</span>, <span class="ruby-identifier">container</span>)
+  <span class="ruby-keyword">begin</span>
+    <span class="ruby-keyword">class</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-keyword ruby-title">container</span>
+      <span class="ruby-identifier">include</span> <span class="ruby-constant">Tk</span><span class="ruby-operator">::</span><span class="ruby-constant">BLT</span><span class="ruby-operator">::</span><span class="ruby-constant">Table</span><span class="ruby-operator">::</span><span class="ruby-constant">TableContainer</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">rescue</span>
+    <span class="ruby-identifier">warn</span>(<span class="ruby-string">&#39;fail to include TableContainer methods (frozen object?)&#39;</span>)
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">container</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-current_configinfo">
+            
+              <b>current_configinfo</b>(container, *args)
+            
+            <a href="../../../classes/Tk/BLT/Table.html#method-i-current_configinfo" name="method-i-current_configinfo" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-current_configinfo_source')" id="l_method-i-current_configinfo_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/blt/table.rb#L208" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-current_configinfo_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/blt/table.rb, line 208</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">current_configinfo</span>(<span class="ruby-identifier">container</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">args</span>)
+  <span class="ruby-identifier">__current_itemconfiginfo</span>([<span class="ruby-identifier">container</span>], <span class="ruby-operator">*</span><span class="ruby-identifier">args</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-current_itemconfiginfo">
+            
+              <b>current_itemconfiginfo</b>(container, *args)
+            
+            <a href="../../../classes/Tk/BLT/Table.html#method-i-current_itemconfiginfo" name="method-i-current_itemconfiginfo" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-current_itemconfiginfo_source')" id="l_method-i-current_itemconfiginfo_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/blt/table.rb#L264" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-current_itemconfiginfo_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/blt/table.rb, line 264</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">current_itemconfiginfo</span>(<span class="ruby-identifier">container</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">args</span>)
+  <span class="ruby-identifier">slot</span> = <span class="ruby-identifier">args</span>[<span class="ruby-number">-1</span>]
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">slot</span>.<span class="ruby-identifier">kind_of?</span>(<span class="ruby-constant">String</span>) <span class="ruby-operator">||</span> <span class="ruby-identifier">slot</span>.<span class="ruby-identifier">kind_of?</span>(<span class="ruby-constant">Symbol</span>)
+    <span class="ruby-identifier">slot</span> = <span class="ruby-identifier">slot</span>.<span class="ruby-identifier">to_s</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">slot</span>[<span class="ruby-number">0</span>] <span class="ruby-operator">==</span> <span class="ruby-value">?.</span> <span class="ruby-operator">||</span> <span class="ruby-identifier">slot</span> <span class="ruby-operator">=~</span> <span class="ruby-regexp">/^\d+,\d+$/</span> <span class="ruby-operator">||</span> <span class="ruby-identifier">slot</span> <span class="ruby-operator">=~</span> <span class="ruby-regexp">/^(c|C|r|R)(\*|\d+)/</span>
+      <span class="ruby-comment">#   widget     ||    row,col          ||    Ci or Ri</span>
+      <span class="ruby-identifier">slot</span> = <span class="ruby-keyword">nil</span>
+    <span class="ruby-keyword">else</span>
+      <span class="ruby-comment"># option</span>
+      <span class="ruby-identifier">slot</span> = <span class="ruby-identifier">args</span>.<span class="ruby-identifier">pop</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">slot</span> = <span class="ruby-keyword">nil</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-identifier">fail</span> <span class="ruby-constant">ArgumentError</span>, <span class="ruby-string">&#39;no item is given&#39;</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">args</span>.<span class="ruby-identifier">empty?</span>
+
+  <span class="ruby-identifier">id</span> = [<span class="ruby-identifier">container</span>]
+  <span class="ruby-identifier">args</span>.<span class="ruby-identifier">each</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">item</span><span class="ruby-operator">|</span> <span class="ruby-identifier">id</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">tagid</span>(<span class="ruby-identifier">item</span>)}
+  <span class="ruby-identifier">__current_itemconfiginfo</span>(<span class="ruby-identifier">id</span>, <span class="ruby-identifier">slot</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-delete">
+            
+              <b>delete</b>(container, *args)
+            
+            <a href="../../../classes/Tk/BLT/Table.html#method-i-delete" name="method-i-delete" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-delete_source')" id="l_method-i-delete_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/blt/table.rb#L353" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-delete_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/blt/table.rb, line 353</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">delete</span>(<span class="ruby-identifier">container</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">args</span>)
+  <span class="ruby-identifier">tk_call</span>(<span class="ruby-string">&#39;::blt::table&#39;</span>, <span class="ruby-string">&#39;delete&#39;</span>, <span class="ruby-identifier">container</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">args</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-extents">
+            
+              <b>extents</b>(container, item)
+            
+            <a href="../../../classes/Tk/BLT/Table.html#method-i-extents" name="method-i-extents" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-extents_source')" id="l_method-i-extents_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/blt/table.rb#L357" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-extents_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/blt/table.rb, line 357</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">extents</span>(<span class="ruby-identifier">container</span>, <span class="ruby-identifier">item</span>)
+  <span class="ruby-identifier">ret</span> = []
+  <span class="ruby-identifier">inf</span> = <span class="ruby-identifier">list</span>(<span class="ruby-identifier">tk_call</span>(<span class="ruby-string">&#39;::blt::table&#39;</span>, <span class="ruby-string">&#39;extents&#39;</span>, <span class="ruby-identifier">container</span>, <span class="ruby-identifier">item</span>))
+  <span class="ruby-identifier">ret</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">inf</span>.<span class="ruby-identifier">slice!</span>(<span class="ruby-number">0</span><span class="ruby-operator">..</span><span class="ruby-number">4</span>) <span class="ruby-keyword">until</span> <span class="ruby-identifier">inf</span>.<span class="ruby-identifier">empty?</span>
+  <span class="ruby-identifier">ret</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-forget">
+            
+              <b>forget</b>(*wins)
+            
+            <a href="../../../classes/Tk/BLT/Table.html#method-i-forget" name="method-i-forget" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-forget_source')" id="l_method-i-forget_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/blt/table.rb#L364" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-forget_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/blt/table.rb, line 364</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">forget</span>(<span class="ruby-operator">*</span><span class="ruby-identifier">wins</span>)
+  <span class="ruby-identifier">wins</span> = <span class="ruby-identifier">wins</span>.<span class="ruby-identifier">collect</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">win</span><span class="ruby-operator">|</span> <span class="ruby-identifier">_epath</span>(<span class="ruby-identifier">win</span>)}
+  <span class="ruby-identifier">tk_call</span>(<span class="ruby-string">&#39;::blt::table&#39;</span>, <span class="ruby-string">&#39;forget&#39;</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">wins</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-info">
+            
+              <b>info</b>(container)
+            
+            <a href="../../../classes/Tk/BLT/Table.html#method-i-info" name="method-i-info" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-info_source')" id="l_method-i-info_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/blt/table.rb#L286" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-info_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/blt/table.rb, line 286</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">info</span>(<span class="ruby-identifier">container</span>)
+  <span class="ruby-identifier">ret</span> = {}
+  <span class="ruby-identifier">inf</span> = <span class="ruby-identifier">list</span>(<span class="ruby-identifier">tk_call</span>(<span class="ruby-string">&#39;::blt::table&#39;</span>, <span class="ruby-string">&#39;info&#39;</span>, <span class="ruby-identifier">container</span>))
+  <span class="ruby-keyword">until</span> <span class="ruby-identifier">inf</span>.<span class="ruby-identifier">empty?</span>
+    <span class="ruby-identifier">opt</span> = <span class="ruby-identifier">inf</span>.<span class="ruby-identifier">slice!</span>(<span class="ruby-number">0</span><span class="ruby-operator">..</span><span class="ruby-number">1</span>)
+    <span class="ruby-identifier">ret</span>[<span class="ruby-identifier">opt</span>[<span class="ruby-number">1</span><span class="ruby-operator">..</span><span class="ruby-number">-1</span>]] = <span class="ruby-identifier">opt</span>[<span class="ruby-number">1</span>]
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">ret</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-insert">
+            
+              <b>insert</b>(container, *args)
+            
+            <a href="../../../classes/Tk/BLT/Table.html#method-i-insert" name="method-i-insert" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-insert_source')" id="l_method-i-insert_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/blt/table.rb#L369" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-insert_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/blt/table.rb, line 369</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">insert</span>(<span class="ruby-identifier">container</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">args</span>)
+  <span class="ruby-identifier">tk_call</span>(<span class="ruby-string">&#39;::blt::table&#39;</span>, <span class="ruby-string">&#39;insert&#39;</span>, <span class="ruby-identifier">container</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">args</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-insert_after">
+            
+              <b>insert_after</b>(container, *args)
+            
+            <a href="../../../classes/Tk/BLT/Table.html#method-i-insert_after" name="method-i-insert_after" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-insert_after_source')" id="l_method-i-insert_after_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/blt/table.rb#L377" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-insert_after_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/blt/table.rb, line 377</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">insert_after</span>(<span class="ruby-identifier">container</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">args</span>)
+  <span class="ruby-identifier">tk_call</span>(<span class="ruby-string">&#39;::blt::table&#39;</span>, <span class="ruby-string">&#39;insert&#39;</span>, <span class="ruby-identifier">container</span>, <span class="ruby-string">&#39;-after&#39;</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">args</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-insert_before">
+            
+              <b>insert_before</b>(container, *args)
+            
+            <a href="../../../classes/Tk/BLT/Table.html#method-i-insert_before" name="method-i-insert_before" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-insert_before_source')" id="l_method-i-insert_before_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/blt/table.rb#L373" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-insert_before_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/blt/table.rb, line 373</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">insert_before</span>(<span class="ruby-identifier">container</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">args</span>)
+  <span class="ruby-identifier">tk_call</span>(<span class="ruby-string">&#39;::blt::table&#39;</span>, <span class="ruby-string">&#39;insert&#39;</span>, <span class="ruby-identifier">container</span>, <span class="ruby-string">&#39;-before&#39;</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">args</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-itemcget">
+            
+              <b>itemcget</b>(container, item, option)
+            
+            <a href="../../../classes/Tk/BLT/Table.html#method-i-itemcget" name="method-i-itemcget" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-itemcget_source')" id="l_method-i-itemcget_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/blt/table.rb#L215" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-itemcget_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/blt/table.rb, line 215</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">itemcget</span>(<span class="ruby-identifier">container</span>, <span class="ruby-identifier">item</span>, <span class="ruby-identifier">option</span>)
+  <span class="ruby-identifier">__itemcget</span>([<span class="ruby-identifier">container</span>, <span class="ruby-identifier">tagid</span>(<span class="ruby-identifier">item</span>)], <span class="ruby-identifier">option</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-itemcget_strict">
+            
+              <b>itemcget_strict</b>(container, item, option)
+            
+            <a href="../../../classes/Tk/BLT/Table.html#method-i-itemcget_strict" name="method-i-itemcget_strict" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-itemcget_strict_source')" id="l_method-i-itemcget_strict_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/blt/table.rb#L218" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-itemcget_strict_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/blt/table.rb, line 218</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">itemcget_strict</span>(<span class="ruby-identifier">container</span>, <span class="ruby-identifier">item</span>, <span class="ruby-identifier">option</span>)
+  <span class="ruby-identifier">__itemcget_strict</span>([<span class="ruby-identifier">container</span>, <span class="ruby-identifier">tagid</span>(<span class="ruby-identifier">item</span>)], <span class="ruby-identifier">option</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-itemcget_tkstring">
+            
+              <b>itemcget_tkstring</b>(container, item, option)
+            
+            <a href="../../../classes/Tk/BLT/Table.html#method-i-itemcget_tkstring" name="method-i-itemcget_tkstring" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-itemcget_tkstring_source')" id="l_method-i-itemcget_tkstring_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/blt/table.rb#L212" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-itemcget_tkstring_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/blt/table.rb, line 212</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">itemcget_tkstring</span>(<span class="ruby-identifier">container</span>, <span class="ruby-identifier">item</span>, <span class="ruby-identifier">option</span>)
+  <span class="ruby-identifier">__itemcget_tkstring</span>([<span class="ruby-identifier">container</span>, <span class="ruby-identifier">tagid</span>(<span class="ruby-identifier">item</span>)], <span class="ruby-identifier">option</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-itemconfiginfo">
+            
+              <b>itemconfiginfo</b>(container, *args)
+            
+            <a href="../../../classes/Tk/BLT/Table.html#method-i-itemconfiginfo" name="method-i-itemconfiginfo" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-itemconfiginfo_source')" id="l_method-i-itemconfiginfo_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/blt/table.rb#L242" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-itemconfiginfo_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/blt/table.rb, line 242</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">itemconfiginfo</span>(<span class="ruby-identifier">container</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">args</span>)
+  <span class="ruby-identifier">slot</span> = <span class="ruby-identifier">args</span>[<span class="ruby-number">-1</span>]
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">slot</span>.<span class="ruby-identifier">kind_of?</span>(<span class="ruby-constant">String</span>) <span class="ruby-operator">||</span> <span class="ruby-identifier">slot</span>.<span class="ruby-identifier">kind_of?</span>(<span class="ruby-constant">Symbol</span>)
+    <span class="ruby-identifier">slot</span> = <span class="ruby-identifier">slot</span>.<span class="ruby-identifier">to_s</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">slot</span>[<span class="ruby-number">0</span>] <span class="ruby-operator">==</span> <span class="ruby-value">?.</span> <span class="ruby-operator">||</span> <span class="ruby-identifier">slot</span> <span class="ruby-operator">=~</span> <span class="ruby-regexp">/^\d+,\d+$/</span> <span class="ruby-operator">||</span> <span class="ruby-identifier">slot</span> <span class="ruby-operator">=~</span> <span class="ruby-regexp">/^(c|C|r|R)(\*|\d+)/</span>
+      <span class="ruby-comment">#   widget     ||    row,col          ||    Ci or Ri</span>
+      <span class="ruby-identifier">slot</span> = <span class="ruby-keyword">nil</span>
+    <span class="ruby-keyword">else</span>
+      <span class="ruby-comment"># option</span>
+      <span class="ruby-identifier">slot</span> = <span class="ruby-identifier">args</span>.<span class="ruby-identifier">pop</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">slot</span> = <span class="ruby-keyword">nil</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-identifier">fail</span> <span class="ruby-constant">ArgumentError</span>, <span class="ruby-string">&#39;no item is given&#39;</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">args</span>.<span class="ruby-identifier">empty?</span>
+
+  <span class="ruby-identifier">id</span> = [<span class="ruby-identifier">container</span>]
+  <span class="ruby-identifier">args</span>.<span class="ruby-identifier">each</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">item</span><span class="ruby-operator">|</span> <span class="ruby-identifier">id</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">tagid</span>(<span class="ruby-identifier">item</span>)}
+  <span class="ruby-identifier">__itemconfiginfo</span>(<span class="ruby-identifier">id</span>, <span class="ruby-identifier">slot</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-itemconfigure">
+            
+              <b>itemconfigure</b>(container, *args)
+            
+            <a href="../../../classes/Tk/BLT/Table.html#method-i-itemconfigure" name="method-i-itemconfigure" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-itemconfigure_source')" id="l_method-i-itemconfigure_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/blt/table.rb#L222" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-itemconfigure_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/blt/table.rb, line 222</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">itemconfigure</span>(<span class="ruby-identifier">container</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">args</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">args</span>[<span class="ruby-number">-1</span>].<span class="ruby-identifier">kind_of?</span>(<span class="ruby-constant">Hash</span>)
+    <span class="ruby-comment"># container, item, item, ... , hash_optkeys</span>
+    <span class="ruby-identifier">keys</span> = <span class="ruby-identifier">args</span>.<span class="ruby-identifier">pop</span>
+    <span class="ruby-identifier">fail</span> <span class="ruby-constant">ArgumentError</span>, <span class="ruby-string">&#39;no item is given&#39;</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">args</span>.<span class="ruby-identifier">empty?</span>
+    <span class="ruby-identifier">id</span> = [<span class="ruby-identifier">container</span>]
+    <span class="ruby-identifier">args</span>.<span class="ruby-identifier">each</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">item</span><span class="ruby-operator">|</span> <span class="ruby-identifier">id</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">tagid</span>(<span class="ruby-identifier">item</span>)}
+    <span class="ruby-identifier">__itemconfigure</span>(<span class="ruby-identifier">id</span>, <span class="ruby-identifier">keys</span>)
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-comment"># container, item, item, ... , option, value</span>
+    <span class="ruby-identifier">val</span> = <span class="ruby-identifier">args</span>.<span class="ruby-identifier">pop</span>
+    <span class="ruby-identifier">opt</span> = <span class="ruby-identifier">args</span>.<span class="ruby-identifier">pop</span>
+    <span class="ruby-identifier">fail</span> <span class="ruby-constant">ArgumentError</span>, <span class="ruby-string">&#39;no item is given&#39;</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">args</span>.<span class="ruby-identifier">empty?</span>
+    <span class="ruby-identifier">id</span> = [<span class="ruby-identifier">container</span>]
+    <span class="ruby-identifier">args</span>.<span class="ruby-identifier">each</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">item</span><span class="ruby-operator">|</span> <span class="ruby-identifier">id</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">tagid</span>(<span class="ruby-identifier">item</span>)}
+    <span class="ruby-identifier">__itemconfigure</span>(<span class="ruby-identifier">id</span>, <span class="ruby-identifier">opt</span>, <span class="ruby-identifier">val</span>)
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">container</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-iteminfo">
+            
+              <b>iteminfo</b>(container, item)
+            
+            <a href="../../../classes/Tk/BLT/Table.html#method-i-iteminfo" name="method-i-iteminfo" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-iteminfo_source')" id="l_method-i-iteminfo_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/blt/table.rb#L296" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-iteminfo_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/blt/table.rb, line 296</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">iteminfo</span>(<span class="ruby-identifier">container</span>, <span class="ruby-identifier">item</span>)
+  <span class="ruby-identifier">inf</span> = <span class="ruby-identifier">list</span>(<span class="ruby-identifier">tk_call</span>(<span class="ruby-string">&#39;::blt::table&#39;</span>, <span class="ruby-string">&#39;info&#39;</span>, <span class="ruby-identifier">container</span>, <span class="ruby-identifier">tagid</span>(<span class="ruby-identifier">item</span>)).<span class="ruby-identifier">chomp</span>)
+
+  <span class="ruby-identifier">ret</span> = []
+  <span class="ruby-keyword">until</span> <span class="ruby-identifier">inf</span>.<span class="ruby-identifier">empty?</span> <span class="ruby-operator">||</span> (<span class="ruby-identifier">inf</span>[<span class="ruby-number">0</span>].<span class="ruby-identifier">kind_of?</span>(<span class="ruby-constant">String</span>) <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">inf</span>[<span class="ruby-number">0</span>] <span class="ruby-operator">=~</span> <span class="ruby-regexp">/^-/</span>)
+    <span class="ruby-identifier">ret</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">inf</span>.<span class="ruby-identifier">shift</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">inf</span>.<span class="ruby-identifier">length</span> <span class="ruby-operator">&gt;</span> <span class="ruby-number">1</span>
+    <span class="ruby-identifier">keys</span> = {}
+    <span class="ruby-keyword">while</span> <span class="ruby-identifier">inf</span>.<span class="ruby-identifier">length</span> <span class="ruby-operator">&gt;</span> <span class="ruby-number">1</span>
+      <span class="ruby-identifier">opt</span> = <span class="ruby-identifier">inf</span>.<span class="ruby-identifier">slice!</span>(<span class="ruby-number">0</span><span class="ruby-operator">..</span><span class="ruby-number">1</span>)
+      <span class="ruby-identifier">keys</span>[<span class="ruby-identifier">opt</span>[<span class="ruby-number">0</span>][<span class="ruby-number">1</span><span class="ruby-operator">..</span><span class="ruby-number">-1</span>]] = <span class="ruby-identifier">opt</span>[<span class="ruby-number">1</span>]
+    <span class="ruby-keyword">end</span>
+    <span class="ruby-identifier">ret</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">keys</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-identifier">ret</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-join">
+            
+              <b>join</b>(container, first, last)
+            
+            <a href="../../../classes/Tk/BLT/Table.html#method-i-join" name="method-i-join" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-join_source')" id="l_method-i-join_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/blt/table.rb#L381" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-join_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/blt/table.rb, line 381</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">join</span>(<span class="ruby-identifier">container</span>, <span class="ruby-identifier">first</span>, <span class="ruby-identifier">last</span>)
+  <span class="ruby-identifier">tk_call</span>(<span class="ruby-string">&#39;::blt::table&#39;</span>, <span class="ruby-string">&#39;join&#39;</span>, <span class="ruby-identifier">container</span>, <span class="ruby-identifier">first</span>, <span class="ruby-identifier">last</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-locate">
+            
+              <b>locate</b>(container, x, y)
+            
+            <a href="../../../classes/Tk/BLT/Table.html#method-i-locate" name="method-i-locate" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-locate_source')" id="l_method-i-locate_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/blt/table.rb#L385" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-locate_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/blt/table.rb, line 385</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">locate</span>(<span class="ruby-identifier">container</span>, <span class="ruby-identifier">x</span>, <span class="ruby-identifier">y</span>)
+  <span class="ruby-identifier">tk_call</span>(<span class="ruby-string">&#39;::blt::table&#39;</span>, <span class="ruby-string">&#39;locate&#39;</span>, <span class="ruby-identifier">container</span>, <span class="ruby-identifier">x</span>, <span class="ruby-identifier">y</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-save">
+            
+              <b>save</b>(container)
+            
+            <a href="../../../classes/Tk/BLT/Table.html#method-i-save" name="method-i-save" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-save_source')" id="l_method-i-save_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/blt/table.rb#L401" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-save_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/blt/table.rb, line 401</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">save</span>(<span class="ruby-identifier">container</span>)
+  <span class="ruby-identifier">tk_call</span>(<span class="ruby-string">&#39;::blt::table&#39;</span>, <span class="ruby-string">&#39;save&#39;</span>, <span class="ruby-identifier">container</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-search">
+            
+              <b>search</b>(container, keys={})
+            
+            <a href="../../../classes/Tk/BLT/Table.html#method-i-search" name="method-i-search" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-search_source')" id="l_method-i-search_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/blt/table.rb#L405" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-search_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/blt/table.rb, line 405</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">search</span>(<span class="ruby-identifier">container</span>, <span class="ruby-identifier">keys</span>={})
+  <span class="ruby-identifier">list</span>(<span class="ruby-identifier">tk_call</span>(<span class="ruby-string">&#39;::blt::table&#39;</span>, <span class="ruby-string">&#39;containers&#39;</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">hash_kv</span>(<span class="ruby-identifier">keys</span>)))
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-split">
+            
+              <b>split</b>(container, *args)
+            
+            <a href="../../../classes/Tk/BLT/Table.html#method-i-split" name="method-i-split" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-split_source')" id="l_method-i-split_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/blt/table.rb#L409" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-split_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/blt/table.rb, line 409</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">split</span>(<span class="ruby-identifier">container</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">args</span>)
+  <span class="ruby-identifier">tk_call</span>(<span class="ruby-string">&#39;::blt::table&#39;</span>, <span class="ruby-string">&#39;split&#39;</span>, <span class="ruby-identifier">container</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">args</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-tagid">
+            
+              <b>tagid</b>(tag)
+            
+            <a href="../../../classes/Tk/BLT/Table.html#method-i-tagid" name="method-i-tagid" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-tagid_source')" id="l_method-i-tagid_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/blt/table.rb#L165" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-tagid_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/blt/table.rb, line 165</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">tagid</span>(<span class="ruby-identifier">tag</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">tag</span>.<span class="ruby-identifier">kind_of?</span>(<span class="ruby-constant">Array</span>)
+    <span class="ruby-keyword">case</span> <span class="ruby-identifier">tag</span>[<span class="ruby-number">0</span>]
+    <span class="ruby-keyword">when</span> <span class="ruby-constant">Integer</span>
+      <span class="ruby-comment"># [row, col]</span>
+      <span class="ruby-identifier">tag</span>.<span class="ruby-identifier">join</span>(<span class="ruby-string">&#39;,&#39;</span>)
+    <span class="ruby-keyword">when</span> <span class="ruby-value">:c</span>, <span class="ruby-value">:C</span>, <span class="ruby-string">&#39;c&#39;</span>, <span class="ruby-string">&#39;C&#39;</span>, <span class="ruby-value">:r</span>, <span class="ruby-value">:R</span>, <span class="ruby-string">&#39;r&#39;</span>, <span class="ruby-string">&#39;R&#39;</span>
+      <span class="ruby-comment"># c0 or r1 or C*, and so on</span>
+      <span class="ruby-identifier">tag</span>.<span class="ruby-identifier">collect</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">elem</span><span class="ruby-operator">|</span> <span class="ruby-identifier">elem</span>.<span class="ruby-identifier">to_s</span>}.<span class="ruby-identifier">join</span>(<span class="ruby-string">&#39;&#39;</span>)
+    <span class="ruby-keyword">else</span>
+      <span class="ruby-identifier">tag</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">tag</span>.<span class="ruby-identifier">kind_of?</span>(<span class="ruby-constant">TkWindow</span>)
+    <span class="ruby-identifier">_epath</span>(<span class="ruby-identifier">tag</span>)
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">tag</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-tagid2obj">
+            
+              <b>tagid2obj</b>(tagid)
+            
+            <a href="../../../classes/Tk/BLT/Table.html#method-i-tagid2obj" name="method-i-tagid2obj" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-tagid2obj_source')" id="l_method-i-tagid2obj_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/blt/table.rb#L184" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-tagid2obj_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/blt/table.rb, line 184</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">tagid2obj</span>(<span class="ruby-identifier">tagid</span>)
+  <span class="ruby-identifier">tagid</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                    </div>
+
+    </div>
+  </body>
+</html>    

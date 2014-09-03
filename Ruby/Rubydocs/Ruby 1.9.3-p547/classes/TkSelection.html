@@ -1,0 +1,743 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>TkSelection</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="../css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/main.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/github.css" type="text/css" media="screen" />
+<script src="../js/jquery-1.3.2.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/jquery-effect.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+
+<body>     
+    <div class="banner">
+        
+        <h1>
+            <span class="type">Module</span> 
+            TkSelection 
+            
+        </h1>
+        <ul class="files">
+            
+            <li><a href="../files/ext/tk/lib/tk/selection_rb.html">ext/tk/lib/tk/selection.rb</a></li>
+            
+        </ul>
+    </div>
+    <div id="bodyContent">
+        <div id="content">
+  
+
+
+  
+
+
+  
+  
+
+
+  
+
+
+  
+    <!-- Method ref -->
+    <div class="sectiontitle">Methods</div>
+    <dl class="methods">
+      
+        <dt>C</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-clear">clear</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-clear">clear</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-c-clear_on_display">clear_on_display</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>G</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-get">get</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-get">get</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-c-get_on_display">get_on_display</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-get_owner">get_owner</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-c-get_owner">get_owner</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-c-get_owner_on_display">get_owner_on_display</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>H</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-handle">handle</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-c-handle">handle</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>S</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-set_owner">set_owner</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-set_owner">set_owner</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+    </dl>
+  
+
+  
+    <!-- Includes -->
+    <div class="sectiontitle">Included Modules</div>
+    <ul>
+      
+        <li>
+          
+            <a href="Tk.html">
+              Tk
+            </a>
+          
+        </li>
+      
+    </ul>
+  
+
+
+
+  
+
+    
+
+    
+
+    
+      <!-- Section constants -->
+      <div class="sectiontitle">Constants</div>
+      <table border='0' cellpadding='5'>
+        
+          <tr valign='top'>
+            <td class="attr-name">TkCommandNames</td>
+            <td>=</td>
+            <td class="attr-value">[&#39;selection&#39;.freeze].freeze</td>
+          </tr>
+          
+            <tr valign='top'>
+              <td>&nbsp;</td>
+              <td colspan="2" class="attr-desc"></td>
+            </tr>
+          
+        
+      </table>
+    
+
+
+    
+
+
+    <!-- Methods -->
+    
+      <div class="sectiontitle">Class Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-c-clear">
+            
+              <b>clear</b>(sel=nil)
+            
+            <a href="../classes/TkSelection.html#method-c-clear" name="method-c-clear" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-clear_source')" id="l_method-c-clear_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/287a34ae0dfc23e4158f67cb7783d239f202c368/ext/tk/lib/tk/selection.rb#L12" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-clear_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tk/selection.rb, line 12</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">clear</span>(<span class="ruby-identifier">sel</span>=<span class="ruby-keyword">nil</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">sel</span>
+    <span class="ruby-identifier">tk_call_without_enc</span>(<span class="ruby-string">&#39;selection&#39;</span>, <span class="ruby-string">&#39;clear&#39;</span>, <span class="ruby-string">&#39;-selection&#39;</span>, <span class="ruby-identifier">sel</span>)
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">tk_call_without_enc</span>(<span class="ruby-string">&#39;selection&#39;</span>, <span class="ruby-string">&#39;clear&#39;</span>)
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-clear_on_display">
+            
+              <b>clear_on_display</b>(win, sel=nil)
+            
+            <a href="../classes/TkSelection.html#method-c-clear_on_display" name="method-c-clear_on_display" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-clear_on_display_source')" id="l_method-c-clear_on_display_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/287a34ae0dfc23e4158f67cb7783d239f202c368/ext/tk/lib/tk/selection.rb#L19" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-clear_on_display_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tk/selection.rb, line 19</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">clear_on_display</span>(<span class="ruby-identifier">win</span>, <span class="ruby-identifier">sel</span>=<span class="ruby-keyword">nil</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">sel</span>
+    <span class="ruby-identifier">tk_call_without_enc</span>(<span class="ruby-string">&#39;selection&#39;</span>, <span class="ruby-string">&#39;clear&#39;</span>,
+                        <span class="ruby-string">&#39;-displayof&#39;</span>, <span class="ruby-identifier">win</span>, <span class="ruby-string">&#39;-selection&#39;</span>, <span class="ruby-identifier">sel</span>)
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">tk_call_without_enc</span>(<span class="ruby-string">&#39;selection&#39;</span>, <span class="ruby-string">&#39;clear&#39;</span>, <span class="ruby-string">&#39;-displayof&#39;</span>, <span class="ruby-identifier">win</span>)
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-get">
+            
+              <b>get</b>(keys=nil)
+            
+            <a href="../classes/TkSelection.html#method-c-get" name="method-c-get" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-get_source')" id="l_method-c-get_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/287a34ae0dfc23e4158f67cb7783d239f202c368/ext/tk/lib/tk/selection.rb#L32" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-get_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tk/selection.rb, line 32</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">get</span>(<span class="ruby-identifier">keys</span>=<span class="ruby-keyword">nil</span>)
+  <span class="ruby-comment">#tk_call(&#39;selection&#39;, &#39;get&#39;, *hash_kv(keys))</span>
+  <span class="ruby-identifier">_fromUTF8</span>(<span class="ruby-identifier">tk_call_without_enc</span>(<span class="ruby-string">&#39;selection&#39;</span>, <span class="ruby-string">&#39;get&#39;</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">hash_kv</span>(<span class="ruby-identifier">keys</span>)))
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-get_on_display">
+            
+              <b>get_on_display</b>(win, keys=nil)
+            
+            <a href="../classes/TkSelection.html#method-c-get_on_display" name="method-c-get_on_display" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-get_on_display_source')" id="l_method-c-get_on_display_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/287a34ae0dfc23e4158f67cb7783d239f202c368/ext/tk/lib/tk/selection.rb#L36" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-get_on_display_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tk/selection.rb, line 36</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">get_on_display</span>(<span class="ruby-identifier">win</span>, <span class="ruby-identifier">keys</span>=<span class="ruby-keyword">nil</span>)
+  <span class="ruby-comment">#tk_call(&#39;selection&#39;, &#39;get&#39;, &#39;-displayof&#39;, win, *hash_kv(keys))</span>
+  <span class="ruby-identifier">_fromUTF8</span>(<span class="ruby-identifier">tk_call_without_enc</span>(<span class="ruby-string">&#39;selection&#39;</span>, <span class="ruby-string">&#39;get&#39;</span>, <span class="ruby-string">&#39;-displayof&#39;</span>,
+                                <span class="ruby-identifier">win</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">hash_kv</span>(<span class="ruby-identifier">keys</span>)))
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-get_owner">
+            
+              <b>get_owner</b>(sel=nil)
+            
+            <a href="../classes/TkSelection.html#method-c-get_owner" name="method-c-get_owner" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-get_owner_source')" id="l_method-c-get_owner_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/287a34ae0dfc23e4158f67cb7783d239f202c368/ext/tk/lib/tk/selection.rb#L59" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-get_owner_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tk/selection.rb, line 59</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">get_owner</span>(<span class="ruby-identifier">sel</span>=<span class="ruby-keyword">nil</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">sel</span>
+    <span class="ruby-identifier">window</span>(<span class="ruby-identifier">tk_call_without_enc</span>(<span class="ruby-string">&#39;selection&#39;</span>, <span class="ruby-string">&#39;own&#39;</span>, <span class="ruby-string">&#39;-selection&#39;</span>, <span class="ruby-identifier">sel</span>))
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">window</span>(<span class="ruby-identifier">tk_call_without_enc</span>(<span class="ruby-string">&#39;selection&#39;</span>, <span class="ruby-string">&#39;own&#39;</span>))
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-get_owner_on_display">
+            
+              <b>get_owner_on_display</b>(win, sel=nil)
+            
+            <a href="../classes/TkSelection.html#method-c-get_owner_on_display" name="method-c-get_owner_on_display" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-get_owner_on_display_source')" id="l_method-c-get_owner_on_display_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/287a34ae0dfc23e4158f67cb7783d239f202c368/ext/tk/lib/tk/selection.rb#L66" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-get_owner_on_display_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tk/selection.rb, line 66</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">get_owner_on_display</span>(<span class="ruby-identifier">win</span>, <span class="ruby-identifier">sel</span>=<span class="ruby-keyword">nil</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">sel</span>
+    <span class="ruby-identifier">window</span>(<span class="ruby-identifier">tk_call_without_enc</span>(<span class="ruby-string">&#39;selection&#39;</span>, <span class="ruby-string">&#39;own&#39;</span>,
+                               <span class="ruby-string">&#39;-displayof&#39;</span>, <span class="ruby-identifier">win</span>, <span class="ruby-string">&#39;-selection&#39;</span>, <span class="ruby-identifier">sel</span>))
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">window</span>(<span class="ruby-identifier">tk_call_without_enc</span>(<span class="ruby-string">&#39;selection&#39;</span>, <span class="ruby-string">&#39;own&#39;</span>, <span class="ruby-string">&#39;-displayof&#39;</span>, <span class="ruby-identifier">win</span>))
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-handle">
+            
+              <b>handle</b>(win, func=Proc.new, keys=nil, &amp;b)
+            
+            <a href="../classes/TkSelection.html#method-c-handle" name="method-c-handle" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-handle_source')" id="l_method-c-handle_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/287a34ae0dfc23e4158f67cb7783d239f202c368/ext/tk/lib/tk/selection.rb#L45" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-handle_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tk/selection.rb, line 45</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">handle</span>(<span class="ruby-identifier">win</span>, <span class="ruby-identifier">func</span>=<span class="ruby-constant">Proc</span>.<span class="ruby-identifier">new</span>, <span class="ruby-identifier">keys</span>=<span class="ruby-keyword">nil</span>, <span class="ruby-operator">&amp;</span><span class="ruby-identifier">b</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">func</span>.<span class="ruby-identifier">kind_of?</span>(<span class="ruby-constant">Hash</span>) <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">keys</span> <span class="ruby-operator">==</span> <span class="ruby-keyword">nil</span>
+    <span class="ruby-identifier">keys</span> = <span class="ruby-identifier">func</span>
+    <span class="ruby-identifier">func</span> = <span class="ruby-constant">Proc</span>.<span class="ruby-identifier">new</span>(<span class="ruby-operator">&amp;</span><span class="ruby-identifier">b</span>)
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">args</span> = [<span class="ruby-string">&#39;selection&#39;</span>, <span class="ruby-string">&#39;handle&#39;</span>]
+  <span class="ruby-identifier">args</span>.<span class="ruby-identifier">concat</span>(<span class="ruby-identifier">hash_kv</span>(<span class="ruby-identifier">keys</span>))
+  <span class="ruby-identifier">args</span>.<span class="ruby-identifier">concat</span>([<span class="ruby-identifier">win</span>, <span class="ruby-identifier">func</span>])
+  <span class="ruby-identifier">tk_call_without_enc</span>(<span class="ruby-operator">*</span><span class="ruby-identifier">args</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-set_owner">
+            
+              <b>set_owner</b>(win, keys=nil)
+            
+            <a href="../classes/TkSelection.html#method-c-set_owner" name="method-c-set_owner" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-set_owner_source')" id="l_method-c-set_owner_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/287a34ae0dfc23e4158f67cb7783d239f202c368/ext/tk/lib/tk/selection.rb#L79" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-set_owner_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tk/selection.rb, line 79</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">set_owner</span>(<span class="ruby-identifier">win</span>, <span class="ruby-identifier">keys</span>=<span class="ruby-keyword">nil</span>)
+  <span class="ruby-identifier">tk_call_without_enc</span>(<span class="ruby-string">&#39;selection&#39;</span>, <span class="ruby-string">&#39;own&#39;</span>, <span class="ruby-operator">*</span>(<span class="ruby-identifier">hash_kv</span>(<span class="ruby-identifier">keys</span>) <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">win</span>))
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                  
+      <div class="sectiontitle">Instance Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-i-clear">
+            
+              <b>clear</b>(sel=nil)
+            
+            <a href="../classes/TkSelection.html#method-i-clear" name="method-i-clear" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-clear_source')" id="l_method-i-clear_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/287a34ae0dfc23e4158f67cb7783d239f202c368/ext/tk/lib/tk/selection.rb#L27" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-clear_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tk/selection.rb, line 27</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">clear</span>(<span class="ruby-identifier">sel</span>=<span class="ruby-keyword">nil</span>)
+  <span class="ruby-constant">TkSelection</span>.<span class="ruby-identifier">clear_on_display</span>(<span class="ruby-keyword">self</span>, <span class="ruby-identifier">sel</span>)
+  <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-get">
+            
+              <b>get</b>(keys=nil)
+            
+            <a href="../classes/TkSelection.html#method-i-get" name="method-i-get" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-get_source')" id="l_method-i-get_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/287a34ae0dfc23e4158f67cb7783d239f202c368/ext/tk/lib/tk/selection.rb#L41" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-get_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tk/selection.rb, line 41</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">get</span>(<span class="ruby-identifier">keys</span>=<span class="ruby-keyword">nil</span>)
+  <span class="ruby-constant">TkSelection</span>.<span class="ruby-identifier">get_on_display</span>(<span class="ruby-keyword">self</span>, <span class="ruby-identifier">sel</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-get_owner">
+            
+              <b>get_owner</b>(sel=nil)
+            
+            <a href="../classes/TkSelection.html#method-i-get_owner" name="method-i-get_owner" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-get_owner_source')" id="l_method-i-get_owner_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/287a34ae0dfc23e4158f67cb7783d239f202c368/ext/tk/lib/tk/selection.rb#L74" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-get_owner_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tk/selection.rb, line 74</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">get_owner</span>(<span class="ruby-identifier">sel</span>=<span class="ruby-keyword">nil</span>)
+  <span class="ruby-constant">TkSelection</span>.<span class="ruby-identifier">get_owner_on_display</span>(<span class="ruby-keyword">self</span>, <span class="ruby-identifier">sel</span>)
+  <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-handle">
+            
+              <b>handle</b>(func=Proc.new, keys=nil, &amp;b)
+            
+            <a href="../classes/TkSelection.html#method-i-handle" name="method-i-handle" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-handle_source')" id="l_method-i-handle_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/287a34ae0dfc23e4158f67cb7783d239f202c368/ext/tk/lib/tk/selection.rb#L55" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-handle_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tk/selection.rb, line 55</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">handle</span>(<span class="ruby-identifier">func</span>=<span class="ruby-constant">Proc</span>.<span class="ruby-identifier">new</span>, <span class="ruby-identifier">keys</span>=<span class="ruby-keyword">nil</span>, <span class="ruby-operator">&amp;</span><span class="ruby-identifier">b</span>)
+  <span class="ruby-constant">TkSelection</span>.<span class="ruby-identifier">handle</span>(<span class="ruby-keyword">self</span>, <span class="ruby-identifier">func</span>, <span class="ruby-identifier">keys</span>, <span class="ruby-operator">&amp;</span><span class="ruby-identifier">b</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-set_owner">
+            
+              <b>set_owner</b>(keys=nil)
+            
+            <a href="../classes/TkSelection.html#method-i-set_owner" name="method-i-set_owner" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-set_owner_source')" id="l_method-i-set_owner_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/287a34ae0dfc23e4158f67cb7783d239f202c368/ext/tk/lib/tk/selection.rb#L82" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-set_owner_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tk/selection.rb, line 82</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">set_owner</span>(<span class="ruby-identifier">keys</span>=<span class="ruby-keyword">nil</span>)
+  <span class="ruby-constant">TkSelection</span>.<span class="ruby-identifier">set_owner</span>(<span class="ruby-keyword">self</span>, <span class="ruby-identifier">keys</span>)
+  <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                    </div>
+
+    </div>
+  </body>
+</html>    

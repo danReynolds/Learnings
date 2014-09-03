@@ -1,0 +1,2351 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>TimestampTest</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="../css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/main.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/github.css" type="text/css" media="screen" />
+<script src="../js/jquery-1.3.2.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/jquery-effect.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+
+<body>     
+    <div class="banner">
+        
+        <h1>
+            <span class="type">Class</span> 
+            TimestampTest 
+            
+                <span class="parent">&lt; 
+                    
+                    ActiveRecord::TestCase
+                    
+                </span>
+            
+        </h1>
+        <ul class="files">
+            
+            <li><a href="../files/activerecord/test/cases/adapters/postgresql/timestamp_test_rb.html">activerecord/test/cases/adapters/postgresql/timestamp_test.rb</a></li>
+            
+            <li><a href="../files/activerecord/test/cases/timestamp_test_rb.html">activerecord/test/cases/timestamp_test.rb</a></li>
+            
+        </ul>
+    </div>
+    <div id="bodyContent">
+        <div id="content">
+  
+
+
+  
+
+
+  
+  
+
+
+  
+
+
+  
+    <!-- Method ref -->
+    <div class="sectiontitle">Methods</div>
+    <dl class="methods">
+      
+        <dt>N</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-name">name</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>S</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-setup">setup</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>T</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-test_all_timestamp_attributes">test_all_timestamp_attributes</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-test_all_timestamp_attributes_in_model">test_all_timestamp_attributes_in_model</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-test_bc_timestamp">test_bc_timestamp</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-test_changing_parent_of_a_record_touches_both_new_and_old_parent_record">test_changing_parent_of_a_record_touches_both_new_and_old_parent_record</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-test_changing_parent_of_a_record_touches_both_new_and_old_polymorphic_parent_record_changes_with_other_class">test_changing_parent_of_a_record_touches_both_new_and_old_polymorphic_parent_record_changes_with_other_class</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-test_changing_parent_of_a_record_touches_both_new_and_old_polymorphic_parent_record_changes_within_same_class">test_changing_parent_of_a_record_touches_both_new_and_old_polymorphic_parent_record_changes_within_same_class</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-test_clearing_association_touches_the_old_record">test_clearing_association_touches_the_old_record</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-test_default_datetime_precision">test_default_datetime_precision</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-test_destroying_a_record_with_a_belongs_to_that_specifies_touching_the_parent_should_update_the_parent_updated_at">test_destroying_a_record_with_a_belongs_to_that_specifies_touching_the_parent_should_update_the_parent_updated_at</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-test_global_no_touching">test_global_no_touching</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-test_group_by_date">test_group_by_date</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-test_invalid_timestamp_precision_raises_error">test_invalid_timestamp_precision_raises_error</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-test_load_infinity_and_beyond">test_load_infinity_and_beyond</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-test_no_touching_threadsafe">test_no_touching_threadsafe</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-test_no_touching_with_callbacks">test_no_touching_with_callbacks</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-test_passing_precision_to_timestamp_does_not_set_limit">test_passing_precision_to_timestamp_does_not_set_limit</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-test_postgres_agrees_with_activerecord_about_precision">test_postgres_agrees_with_activerecord_about_precision</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-test_save_infinity_and_beyond">test_save_infinity_and_beyond</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-test_saving_a_changed_record_updates_its_timestamp">test_saving_a_changed_record_updates_its_timestamp</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-test_saving_a_new_record_belonging_to_invalid_parent_with_touch_should_not_raise_exception">test_saving_a_new_record_belonging_to_invalid_parent_with_touch_should_not_raise_exception</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-test_saving_a_record_with_a_belongs_to_that_specifies_touching_a_specific_attribute_the_parent_should_update_that_attribute">test_saving_a_record_with_a_belongs_to_that_specifies_touching_a_specific_attribute_the_parent_should_update_that_attribute</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-test_saving_a_record_with_a_belongs_to_that_specifies_touching_the_parent_should_update_the_parent_updated_at">test_saving_a_record_with_a_belongs_to_that_specifies_touching_the_parent_should_update_the_parent_updated_at</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-test_saving_a_unchanged_record_doesnt_update_its_timestamp">test_saving_a_unchanged_record_doesnt_update_its_timestamp</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-test_saving_when_instance_record_timestamps_is_false_doesnt_update_its_timestamp">test_saving_when_instance_record_timestamps_is_false_doesnt_update_its_timestamp</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-test_saving_when_record_timestamps_is_false_doesnt_update_its_timestamp">test_saving_when_record_timestamps_is_false_doesnt_update_its_timestamp</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-test_timestamp_attributes_for_create">test_timestamp_attributes_for_create</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-test_timestamp_attributes_for_create_in_model">test_timestamp_attributes_for_create_in_model</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-test_timestamp_attributes_for_update">test_timestamp_attributes_for_update</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-test_timestamp_attributes_for_update_in_model">test_timestamp_attributes_for_update_in_model</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-test_timestamp_column_values_are_present_in_the_callbacks">test_timestamp_column_values_are_present_in_the_callbacks</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-test_timestamp_data_type_with_precision">test_timestamp_data_type_with_precision</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-test_timestamps_helper_with_custom_precision">test_timestamps_helper_with_custom_precision</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-test_touching_a_no_touching_object">test_touching_a_no_touching_object</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-test_touching_a_record_touches_parent_record_and_grandparent_record">test_touching_a_record_touches_parent_record_and_grandparent_record</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-test_touching_a_record_touches_polymorphic_record">test_touching_a_record_touches_polymorphic_record</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-test_touching_a_record_updates_its_timestamp">test_touching_a_record_updates_its_timestamp</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-test_touching_a_record_with_a_belongs_to_that_uses_a_counter_cache_should_update_the_parent">test_touching_a_record_with_a_belongs_to_that_uses_a_counter_cache_should_update_the_parent</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-test_touching_a_record_with_default_scope_that_excludes_it_updates_its_timestamp">test_touching_a_record_with_default_scope_that_excludes_it_updates_its_timestamp</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-test_touching_a_record_without_timestamps_is_unexceptional">test_touching_a_record_without_timestamps_is_unexceptional</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-test_touching_an_attribute_updates_it">test_touching_an_attribute_updates_it</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-test_touching_an_attribute_updates_timestamp">test_touching_an_attribute_updates_timestamp</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-test_touching_related_objects">test_touching_related_objects</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+    </dl>
+  
+
+  
+
+
+
+  
+
+    
+
+    
+
+    
+
+
+    
+
+
+    <!-- Methods -->
+    
+      <div class="sectiontitle">Class Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-c-name">
+            
+              <b>name</b>()
+            
+            <a href="../classes/TimestampTest.html#method-c-name" name="method-c-name" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-name_source')" id="l_method-c-name_source">show</a>
+                
+                  | <a href="https://github.com/rails/rails/blob/e9c8d28eeac86c5c399e696e85475e658ae6c58f/activerecord/test/cases/timestamp_test.rb#L185" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-name_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File activerecord/test/cases/timestamp_test.rb, line 185</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">name</span>; <span class="ruby-string">&#39;Owner&#39;</span>; <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                  
+      <div class="sectiontitle">Instance Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-i-setup">
+            
+              <b>setup</b>()
+            
+            <a href="../classes/TimestampTest.html#method-i-setup" name="method-i-setup" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-setup_source')" id="l_method-i-setup_source">show</a>
+                
+                  | <a href="https://github.com/rails/rails/blob/e9c8d28eeac86c5c399e696e85475e658ae6c58f/activerecord/test/cases/timestamp_test.rb#L12" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-setup_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File activerecord/test/cases/timestamp_test.rb, line 12</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">setup</span>
+  <span class="ruby-ivar">@developer</span> = <span class="ruby-constant">Developer</span>.<span class="ruby-identifier">first</span>
+  <span class="ruby-ivar">@owner</span> = <span class="ruby-constant">Owner</span>.<span class="ruby-identifier">first</span>
+  <span class="ruby-ivar">@developer</span>.<span class="ruby-identifier">update_columns</span>(<span class="ruby-identifier">updated_at</span><span class="ruby-operator">:</span> <span class="ruby-constant">Time</span>.<span class="ruby-identifier">now</span>.<span class="ruby-identifier">prev_month</span>)
+  <span class="ruby-ivar">@previously_updated_at</span> = <span class="ruby-ivar">@developer</span>.<span class="ruby-identifier">updated_at</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-test_all_timestamp_attributes">
+            
+              <b>test_all_timestamp_attributes</b>()
+            
+            <a href="../classes/TimestampTest.html#method-i-test_all_timestamp_attributes" name="method-i-test_all_timestamp_attributes" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-test_all_timestamp_attributes_source')" id="l_method-i-test_all_timestamp_attributes_source">show</a>
+                
+                  | <a href="https://github.com/rails/rails/blob/e9c8d28eeac86c5c399e696e85475e658ae6c58f/activerecord/test/cases/timestamp_test.rb#L395" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-test_all_timestamp_attributes_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File activerecord/test/cases/timestamp_test.rb, line 395</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">test_all_timestamp_attributes</span>
+  <span class="ruby-identifier">toy</span> = <span class="ruby-constant">Toy</span>.<span class="ruby-identifier">first</span>
+  <span class="ruby-identifier">assert_equal</span> [<span class="ruby-value">:created_at</span>, <span class="ruby-value">:created_on</span>, <span class="ruby-value">:updated_at</span>, <span class="ruby-value">:updated_on</span>], <span class="ruby-identifier">toy</span>.<span class="ruby-identifier">send</span>(<span class="ruby-value">:all_timestamp_attributes</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-test_all_timestamp_attributes_in_model">
+            
+              <b>test_all_timestamp_attributes_in_model</b>()
+            
+            <a href="../classes/TimestampTest.html#method-i-test_all_timestamp_attributes_in_model" name="method-i-test_all_timestamp_attributes_in_model" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-test_all_timestamp_attributes_in_model_source')" id="l_method-i-test_all_timestamp_attributes_in_model_source">show</a>
+                
+                  | <a href="https://github.com/rails/rails/blob/e9c8d28eeac86c5c399e696e85475e658ae6c58f/activerecord/test/cases/timestamp_test.rb#L410" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-test_all_timestamp_attributes_in_model_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File activerecord/test/cases/timestamp_test.rb, line 410</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">test_all_timestamp_attributes_in_model</span>
+  <span class="ruby-identifier">toy</span> = <span class="ruby-constant">Toy</span>.<span class="ruby-identifier">first</span>
+  <span class="ruby-identifier">assert_equal</span> [<span class="ruby-value">:created_at</span>, <span class="ruby-value">:updated_at</span>], <span class="ruby-identifier">toy</span>.<span class="ruby-identifier">send</span>(<span class="ruby-value">:all_timestamp_attributes_in_model</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-test_bc_timestamp">
+            
+              <b>test_bc_timestamp</b>()
+            
+            <a href="../classes/TimestampTest.html#method-i-test_bc_timestamp" name="method-i-test_bc_timestamp" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-test_bc_timestamp_source')" id="l_method-i-test_bc_timestamp_source">show</a>
+                
+                  | <a href="https://github.com/rails/rails/blob/3f90787cd25a45a621fbb7238f69ee96f26e8f74/activerecord/test/cases/adapters/postgresql/timestamp_test.rb#L79" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-test_bc_timestamp_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File activerecord/test/cases/adapters/postgresql/timestamp_test.rb, line 79</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">test_bc_timestamp</span>
+  <span class="ruby-identifier">date</span> = <span class="ruby-constant">Date</span>.<span class="ruby-identifier">new</span>(<span class="ruby-number">0</span>) <span class="ruby-operator">-</span> <span class="ruby-number">1</span>.<span class="ruby-identifier">week</span>
+  <span class="ruby-constant">Developer</span>.<span class="ruby-identifier">create!</span>(<span class="ruby-value">:name</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;aaron&quot;</span>, <span class="ruby-value">:updated_at</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">date</span>)
+  <span class="ruby-identifier">assert_equal</span> <span class="ruby-identifier">date</span>, <span class="ruby-constant">Developer</span>.<span class="ruby-identifier">find_by_name</span>(<span class="ruby-string">&quot;aaron&quot;</span>).<span class="ruby-identifier">updated_at</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-test_changing_parent_of_a_record_touches_both_new_and_old_parent_record">
+            
+              <b>test_changing_parent_of_a_record_touches_both_new_and_old_parent_record</b>()
+            
+            <a href="../classes/TimestampTest.html#method-i-test_changing_parent_of_a_record_touches_both_new_and_old_parent_record" name="method-i-test_changing_parent_of_a_record_touches_both_new_and_old_parent_record" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-test_changing_parent_of_a_record_touches_both_new_and_old_parent_record_source')" id="l_method-i-test_changing_parent_of_a_record_touches_both_new_and_old_parent_record_source">show</a>
+                
+                  | <a href="https://github.com/rails/rails/blob/e9c8d28eeac86c5c399e696e85475e658ae6c58f/activerecord/test/cases/timestamp_test.rb#L268" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-test_changing_parent_of_a_record_touches_both_new_and_old_parent_record_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File activerecord/test/cases/timestamp_test.rb, line 268</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">test_changing_parent_of_a_record_touches_both_new_and_old_parent_record</span>
+  <span class="ruby-identifier">klass</span> = <span class="ruby-constant">Class</span>.<span class="ruby-identifier">new</span>(<span class="ruby-constant">ActiveRecord</span><span class="ruby-operator">::</span><span class="ruby-constant">Base</span>) <span class="ruby-keyword">do</span>
+    <span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">name</span>; <span class="ruby-string">&#39;Toy&#39;</span>; <span class="ruby-keyword">end</span>
+    <span class="ruby-identifier">belongs_to</span> <span class="ruby-value">:pet</span>, <span class="ruby-identifier">touch</span><span class="ruby-operator">:</span> <span class="ruby-keyword">true</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-identifier">toy1</span> = <span class="ruby-identifier">klass</span>.<span class="ruby-identifier">find</span>(<span class="ruby-number">1</span>)
+  <span class="ruby-identifier">old_pet</span> = <span class="ruby-identifier">toy1</span>.<span class="ruby-identifier">pet</span>
+
+  <span class="ruby-identifier">toy2</span> = <span class="ruby-identifier">klass</span>.<span class="ruby-identifier">find</span>(<span class="ruby-number">2</span>)
+  <span class="ruby-identifier">new_pet</span> = <span class="ruby-identifier">toy2</span>.<span class="ruby-identifier">pet</span>
+  <span class="ruby-identifier">time</span> = <span class="ruby-number">3</span>.<span class="ruby-identifier">days</span>.<span class="ruby-identifier">ago</span>.<span class="ruby-identifier">at_beginning_of_hour</span>
+
+  <span class="ruby-identifier">old_pet</span>.<span class="ruby-identifier">update_columns</span>(<span class="ruby-identifier">updated_at</span><span class="ruby-operator">:</span> <span class="ruby-identifier">time</span>)
+  <span class="ruby-identifier">new_pet</span>.<span class="ruby-identifier">update_columns</span>(<span class="ruby-identifier">updated_at</span><span class="ruby-operator">:</span> <span class="ruby-identifier">time</span>)
+
+  <span class="ruby-identifier">toy1</span>.<span class="ruby-identifier">pet</span> = <span class="ruby-identifier">new_pet</span>
+  <span class="ruby-identifier">toy1</span>.<span class="ruby-identifier">save!</span>
+
+  <span class="ruby-identifier">old_pet</span>.<span class="ruby-identifier">reload</span>
+  <span class="ruby-identifier">new_pet</span>.<span class="ruby-identifier">reload</span>
+
+  <span class="ruby-identifier">assert_not_equal</span> <span class="ruby-identifier">time</span>, <span class="ruby-identifier">new_pet</span>.<span class="ruby-identifier">updated_at</span>
+  <span class="ruby-identifier">assert_not_equal</span> <span class="ruby-identifier">time</span>, <span class="ruby-identifier">old_pet</span>.<span class="ruby-identifier">updated_at</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-test_changing_parent_of_a_record_touches_both_new_and_old_polymorphic_parent_record_changes_with_other_class">
+            
+              <b>test_changing_parent_of_a_record_touches_both_new_and_old_polymorphic_parent_record_changes_with_other_class</b>()
+            
+            <a href="../classes/TimestampTest.html#method-i-test_changing_parent_of_a_record_touches_both_new_and_old_polymorphic_parent_record_changes_with_other_class" name="method-i-test_changing_parent_of_a_record_touches_both_new_and_old_polymorphic_parent_record_changes_with_other_class" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-test_changing_parent_of_a_record_touches_both_new_and_old_polymorphic_parent_record_changes_with_other_class_source')" id="l_method-i-test_changing_parent_of_a_record_touches_both_new_and_old_polymorphic_parent_record_changes_with_other_class_source">show</a>
+                
+                  | <a href="https://github.com/rails/rails/blob/e9c8d28eeac86c5c399e696e85475e658ae6c58f/activerecord/test/cases/timestamp_test.rb#L321" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-test_changing_parent_of_a_record_touches_both_new_and_old_polymorphic_parent_record_changes_with_other_class_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File activerecord/test/cases/timestamp_test.rb, line 321</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">test_changing_parent_of_a_record_touches_both_new_and_old_polymorphic_parent_record_changes_with_other_class</span>
+  <span class="ruby-identifier">car_class</span> = <span class="ruby-constant">Class</span>.<span class="ruby-identifier">new</span>(<span class="ruby-constant">ActiveRecord</span><span class="ruby-operator">::</span><span class="ruby-constant">Base</span>) <span class="ruby-keyword">do</span>
+    <span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">name</span>; <span class="ruby-string">&#39;Car&#39;</span>; <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-identifier">toy_class</span> = <span class="ruby-constant">Class</span>.<span class="ruby-identifier">new</span>(<span class="ruby-constant">ActiveRecord</span><span class="ruby-operator">::</span><span class="ruby-constant">Base</span>) <span class="ruby-keyword">do</span>
+    <span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">name</span>; <span class="ruby-string">&#39;Toy&#39;</span>; <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-identifier">wheel_class</span> = <span class="ruby-constant">Class</span>.<span class="ruby-identifier">new</span>(<span class="ruby-constant">ActiveRecord</span><span class="ruby-operator">::</span><span class="ruby-constant">Base</span>) <span class="ruby-keyword">do</span>
+    <span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">name</span>; <span class="ruby-string">&#39;Wheel&#39;</span>; <span class="ruby-keyword">end</span>
+    <span class="ruby-identifier">belongs_to</span> <span class="ruby-value">:wheelable</span>, <span class="ruby-value">:polymorphic</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword">true</span>, <span class="ruby-value">:touch</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword">true</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-identifier">car</span> = <span class="ruby-identifier">car_class</span>.<span class="ruby-identifier">find</span>(<span class="ruby-number">1</span>)
+  <span class="ruby-identifier">toy</span> = <span class="ruby-identifier">toy_class</span>.<span class="ruby-identifier">find</span>(<span class="ruby-number">3</span>)
+
+  <span class="ruby-identifier">wheel</span> = <span class="ruby-identifier">wheel_class</span>.<span class="ruby-identifier">create!</span>(<span class="ruby-identifier">wheelable</span><span class="ruby-operator">:</span> <span class="ruby-identifier">car</span>)
+
+  <span class="ruby-identifier">time</span> = <span class="ruby-number">3</span>.<span class="ruby-identifier">days</span>.<span class="ruby-identifier">ago</span>.<span class="ruby-identifier">at_beginning_of_hour</span>
+
+  <span class="ruby-identifier">car</span>.<span class="ruby-identifier">update_columns</span>(<span class="ruby-identifier">updated_at</span><span class="ruby-operator">:</span> <span class="ruby-identifier">time</span>)
+  <span class="ruby-identifier">toy</span>.<span class="ruby-identifier">update_columns</span>(<span class="ruby-identifier">updated_at</span><span class="ruby-operator">:</span> <span class="ruby-identifier">time</span>)
+
+  <span class="ruby-identifier">wheel</span>.<span class="ruby-identifier">wheelable</span> = <span class="ruby-identifier">toy</span>
+  <span class="ruby-identifier">wheel</span>.<span class="ruby-identifier">save!</span>
+
+  <span class="ruby-identifier">assert_not_equal</span> <span class="ruby-identifier">time</span>, <span class="ruby-identifier">car</span>.<span class="ruby-identifier">reload</span>.<span class="ruby-identifier">updated_at</span>
+  <span class="ruby-identifier">assert_not_equal</span> <span class="ruby-identifier">time</span>, <span class="ruby-identifier">toy</span>.<span class="ruby-identifier">reload</span>.<span class="ruby-identifier">updated_at</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-test_changing_parent_of_a_record_touches_both_new_and_old_polymorphic_parent_record_changes_within_same_class">
+            
+              <b>test_changing_parent_of_a_record_touches_both_new_and_old_polymorphic_parent_record_changes_within_same_class</b>()
+            
+            <a href="../classes/TimestampTest.html#method-i-test_changing_parent_of_a_record_touches_both_new_and_old_polymorphic_parent_record_changes_within_same_class" name="method-i-test_changing_parent_of_a_record_touches_both_new_and_old_polymorphic_parent_record_changes_within_same_class" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-test_changing_parent_of_a_record_touches_both_new_and_old_polymorphic_parent_record_changes_within_same_class_source')" id="l_method-i-test_changing_parent_of_a_record_touches_both_new_and_old_polymorphic_parent_record_changes_within_same_class_source">show</a>
+                
+                  | <a href="https://github.com/rails/rails/blob/e9c8d28eeac86c5c399e696e85475e658ae6c58f/activerecord/test/cases/timestamp_test.rb#L294" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-test_changing_parent_of_a_record_touches_both_new_and_old_polymorphic_parent_record_changes_within_same_class_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File activerecord/test/cases/timestamp_test.rb, line 294</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">test_changing_parent_of_a_record_touches_both_new_and_old_polymorphic_parent_record_changes_within_same_class</span>
+  <span class="ruby-identifier">car_class</span> = <span class="ruby-constant">Class</span>.<span class="ruby-identifier">new</span>(<span class="ruby-constant">ActiveRecord</span><span class="ruby-operator">::</span><span class="ruby-constant">Base</span>) <span class="ruby-keyword">do</span>
+    <span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">name</span>; <span class="ruby-string">&#39;Car&#39;</span>; <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-identifier">wheel_class</span> = <span class="ruby-constant">Class</span>.<span class="ruby-identifier">new</span>(<span class="ruby-constant">ActiveRecord</span><span class="ruby-operator">::</span><span class="ruby-constant">Base</span>) <span class="ruby-keyword">do</span>
+    <span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">name</span>; <span class="ruby-string">&#39;Wheel&#39;</span>; <span class="ruby-keyword">end</span>
+    <span class="ruby-identifier">belongs_to</span> <span class="ruby-value">:wheelable</span>, <span class="ruby-value">:polymorphic</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword">true</span>, <span class="ruby-value">:touch</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword">true</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-identifier">car1</span> = <span class="ruby-identifier">car_class</span>.<span class="ruby-identifier">find</span>(<span class="ruby-number">1</span>)
+  <span class="ruby-identifier">car2</span> = <span class="ruby-identifier">car_class</span>.<span class="ruby-identifier">find</span>(<span class="ruby-number">2</span>)
+
+  <span class="ruby-identifier">wheel</span> = <span class="ruby-identifier">wheel_class</span>.<span class="ruby-identifier">create!</span>(<span class="ruby-identifier">wheelable</span><span class="ruby-operator">:</span> <span class="ruby-identifier">car1</span>)
+
+  <span class="ruby-identifier">time</span> = <span class="ruby-number">3</span>.<span class="ruby-identifier">days</span>.<span class="ruby-identifier">ago</span>.<span class="ruby-identifier">at_beginning_of_hour</span>
+
+  <span class="ruby-identifier">car1</span>.<span class="ruby-identifier">update_columns</span>(<span class="ruby-identifier">updated_at</span><span class="ruby-operator">:</span> <span class="ruby-identifier">time</span>)
+  <span class="ruby-identifier">car2</span>.<span class="ruby-identifier">update_columns</span>(<span class="ruby-identifier">updated_at</span><span class="ruby-operator">:</span> <span class="ruby-identifier">time</span>)
+
+  <span class="ruby-identifier">wheel</span>.<span class="ruby-identifier">wheelable</span> = <span class="ruby-identifier">car2</span>
+  <span class="ruby-identifier">wheel</span>.<span class="ruby-identifier">save!</span>
+
+  <span class="ruby-identifier">assert_not_equal</span> <span class="ruby-identifier">time</span>, <span class="ruby-identifier">car1</span>.<span class="ruby-identifier">reload</span>.<span class="ruby-identifier">updated_at</span>
+  <span class="ruby-identifier">assert_not_equal</span> <span class="ruby-identifier">time</span>, <span class="ruby-identifier">car2</span>.<span class="ruby-identifier">reload</span>.<span class="ruby-identifier">updated_at</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-test_clearing_association_touches_the_old_record">
+            
+              <b>test_clearing_association_touches_the_old_record</b>()
+            
+            <a href="../classes/TimestampTest.html#method-i-test_clearing_association_touches_the_old_record" name="method-i-test_clearing_association_touches_the_old_record" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-test_clearing_association_touches_the_old_record_source')" id="l_method-i-test_clearing_association_touches_the_old_record_source">show</a>
+                
+                  | <a href="https://github.com/rails/rails/blob/e9c8d28eeac86c5c399e696e85475e658ae6c58f/activerecord/test/cases/timestamp_test.rb#L352" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-test_clearing_association_touches_the_old_record_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File activerecord/test/cases/timestamp_test.rb, line 352</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">test_clearing_association_touches_the_old_record</span>
+  <span class="ruby-identifier">klass</span> = <span class="ruby-constant">Class</span>.<span class="ruby-identifier">new</span>(<span class="ruby-constant">ActiveRecord</span><span class="ruby-operator">::</span><span class="ruby-constant">Base</span>) <span class="ruby-keyword">do</span>
+    <span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">name</span>; <span class="ruby-string">&#39;Toy&#39;</span>; <span class="ruby-keyword">end</span>
+    <span class="ruby-identifier">belongs_to</span> <span class="ruby-value">:pet</span>, <span class="ruby-identifier">touch</span><span class="ruby-operator">:</span> <span class="ruby-keyword">true</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-identifier">toy</span> = <span class="ruby-identifier">klass</span>.<span class="ruby-identifier">find</span>(<span class="ruby-number">1</span>)
+  <span class="ruby-identifier">pet</span> = <span class="ruby-identifier">toy</span>.<span class="ruby-identifier">pet</span>
+  <span class="ruby-identifier">time</span> = <span class="ruby-number">3</span>.<span class="ruby-identifier">days</span>.<span class="ruby-identifier">ago</span>.<span class="ruby-identifier">at_beginning_of_hour</span>
+
+  <span class="ruby-identifier">pet</span>.<span class="ruby-identifier">update_columns</span>(<span class="ruby-identifier">updated_at</span><span class="ruby-operator">:</span> <span class="ruby-identifier">time</span>)
+
+  <span class="ruby-identifier">toy</span>.<span class="ruby-identifier">pet</span> = <span class="ruby-keyword">nil</span>
+  <span class="ruby-identifier">toy</span>.<span class="ruby-identifier">save!</span>
+
+  <span class="ruby-identifier">pet</span>.<span class="ruby-identifier">reload</span>
+
+  <span class="ruby-identifier">assert_not_equal</span> <span class="ruby-identifier">time</span>, <span class="ruby-identifier">pet</span>.<span class="ruby-identifier">updated_at</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-test_default_datetime_precision">
+            
+              <b>test_default_datetime_precision</b>()
+            
+            <a href="../classes/TimestampTest.html#method-i-test_default_datetime_precision" name="method-i-test_default_datetime_precision" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-test_default_datetime_precision_source')" id="l_method-i-test_default_datetime_precision_source">show</a>
+                
+                  | <a href="https://github.com/rails/rails/blob/3f90787cd25a45a621fbb7238f69ee96f26e8f74/activerecord/test/cases/adapters/postgresql/timestamp_test.rb#L32" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-test_default_datetime_precision_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File activerecord/test/cases/adapters/postgresql/timestamp_test.rb, line 32</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">test_default_datetime_precision</span>
+  <span class="ruby-constant">ActiveRecord</span><span class="ruby-operator">::</span><span class="ruby-constant">Base</span>.<span class="ruby-identifier">connection</span>.<span class="ruby-identifier">create_table</span>(<span class="ruby-value">:foos</span>)
+  <span class="ruby-constant">ActiveRecord</span><span class="ruby-operator">::</span><span class="ruby-constant">Base</span>.<span class="ruby-identifier">connection</span>.<span class="ruby-identifier">add_column</span> <span class="ruby-value">:foos</span>, <span class="ruby-value">:created_at</span>, <span class="ruby-value">:datetime</span>
+  <span class="ruby-constant">ActiveRecord</span><span class="ruby-operator">::</span><span class="ruby-constant">Base</span>.<span class="ruby-identifier">connection</span>.<span class="ruby-identifier">add_column</span> <span class="ruby-value">:foos</span>, <span class="ruby-value">:updated_at</span>, <span class="ruby-value">:datetime</span>
+  <span class="ruby-identifier">assert_nil</span> <span class="ruby-identifier">activerecord_column_option</span>(<span class="ruby-string">&#39;foos&#39;</span>, <span class="ruby-string">&#39;created_at&#39;</span>, <span class="ruby-string">&#39;precision&#39;</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-test_destroying_a_record_with_a_belongs_to_that_specifies_touching_the_parent_should_update_the_parent_updated_at">
+            
+              <b>test_destroying_a_record_with_a_belongs_to_that_specifies_touching_the_parent_should_update_the_parent_updated_at</b>()
+            
+            <a href="../classes/TimestampTest.html#method-i-test_destroying_a_record_with_a_belongs_to_that_specifies_touching_the_parent_should_update_the_parent_updated_at" name="method-i-test_destroying_a_record_with_a_belongs_to_that_specifies_touching_the_parent_should_update_the_parent_updated_at" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-test_destroying_a_record_with_a_belongs_to_that_specifies_touching_the_parent_should_update_the_parent_updated_at_source')" id="l_method-i-test_destroying_a_record_with_a_belongs_to_that_specifies_touching_the_parent_should_update_the_parent_updated_at_source">show</a>
+                
+                  | <a href="https://github.com/rails/rails/blob/e9c8d28eeac86c5c399e696e85475e658ae6c58f/activerecord/test/cases/timestamp_test.rb#L173" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-test_destroying_a_record_with_a_belongs_to_that_specifies_touching_the_parent_should_update_the_parent_updated_at_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File activerecord/test/cases/timestamp_test.rb, line 173</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">test_destroying_a_record_with_a_belongs_to_that_specifies_touching_the_parent_should_update_the_parent_updated_at</span>
+  <span class="ruby-identifier">pet</span>   = <span class="ruby-constant">Pet</span>.<span class="ruby-identifier">first</span>
+  <span class="ruby-identifier">owner</span> = <span class="ruby-identifier">pet</span>.<span class="ruby-identifier">owner</span>
+  <span class="ruby-identifier">previously_owner_updated_at</span> = <span class="ruby-identifier">owner</span>.<span class="ruby-identifier">updated_at</span>
+
+  <span class="ruby-identifier">pet</span>.<span class="ruby-identifier">destroy</span>
+
+  <span class="ruby-identifier">assert_not_equal</span> <span class="ruby-identifier">previously_owner_updated_at</span>, <span class="ruby-identifier">pet</span>.<span class="ruby-identifier">owner</span>.<span class="ruby-identifier">updated_at</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-test_global_no_touching">
+            
+              <b>test_global_no_touching</b>()
+            
+            <a href="../classes/TimestampTest.html#method-i-test_global_no_touching" name="method-i-test_global_no_touching" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-test_global_no_touching_source')" id="l_method-i-test_global_no_touching_source">show</a>
+                
+                  | <a href="https://github.com/rails/rails/blob/e9c8d28eeac86c5c399e696e85475e658ae6c58f/activerecord/test/cases/timestamp_test.rb#L119" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-test_global_no_touching_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File activerecord/test/cases/timestamp_test.rb, line 119</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">test_global_no_touching</span>
+  <span class="ruby-constant">ActiveRecord</span><span class="ruby-operator">::</span><span class="ruby-constant">Base</span>.<span class="ruby-identifier">no_touching</span> <span class="ruby-keyword">do</span>
+    <span class="ruby-identifier">assert</span> <span class="ruby-ivar">@developer</span>.<span class="ruby-identifier">no_touching?</span>
+    <span class="ruby-identifier">assert</span> <span class="ruby-ivar">@owner</span>.<span class="ruby-identifier">no_touching?</span>
+    <span class="ruby-ivar">@developer</span>.<span class="ruby-identifier">touch</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-identifier">assert</span> <span class="ruby-operator">!</span><span class="ruby-ivar">@developer</span>.<span class="ruby-identifier">no_touching?</span>
+  <span class="ruby-identifier">assert</span> <span class="ruby-operator">!</span><span class="ruby-ivar">@owner</span>.<span class="ruby-identifier">no_touching?</span>
+  <span class="ruby-identifier">assert_equal</span> <span class="ruby-ivar">@previously_updated_at</span>, <span class="ruby-ivar">@developer</span>.<span class="ruby-identifier">updated_at</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-test_group_by_date">
+            
+              <b>test_group_by_date</b>()
+            
+            <a href="../classes/TimestampTest.html#method-i-test_group_by_date" name="method-i-test_group_by_date" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-test_group_by_date_source')" id="l_method-i-test_group_by_date_source">show</a>
+                
+                  | <a href="https://github.com/rails/rails/blob/3f90787cd25a45a621fbb7238f69ee96f26e8f74/activerecord/test/cases/adapters/postgresql/timestamp_test.rb#L8" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-test_group_by_date_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File activerecord/test/cases/adapters/postgresql/timestamp_test.rb, line 8</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">test_group_by_date</span>
+  <span class="ruby-identifier">keys</span> = <span class="ruby-constant">Topic</span>.<span class="ruby-identifier">group</span>(<span class="ruby-string">&quot;date_trunc(&#39;month&#39;, created_at)&quot;</span>).<span class="ruby-identifier">count</span>.<span class="ruby-identifier">keys</span>
+  <span class="ruby-identifier">assert_operator</span> <span class="ruby-identifier">keys</span>.<span class="ruby-identifier">length</span>, <span class="ruby-value">:&gt;</span>, <span class="ruby-number">0</span>
+  <span class="ruby-identifier">keys</span>.<span class="ruby-identifier">each</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">k</span><span class="ruby-operator">|</span> <span class="ruby-identifier">assert_kind_of</span> <span class="ruby-constant">Time</span>, <span class="ruby-identifier">k</span> }
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-test_invalid_timestamp_precision_raises_error">
+            
+              <b>test_invalid_timestamp_precision_raises_error</b>()
+            
+            <a href="../classes/TimestampTest.html#method-i-test_invalid_timestamp_precision_raises_error" name="method-i-test_invalid_timestamp_precision_raises_error" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-test_invalid_timestamp_precision_raises_error_source')" id="l_method-i-test_invalid_timestamp_precision_raises_error_source">show</a>
+                
+                  | <a href="https://github.com/rails/rails/blob/3f90787cd25a45a621fbb7238f69ee96f26e8f74/activerecord/test/cases/adapters/postgresql/timestamp_test.rb#L63" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-test_invalid_timestamp_precision_raises_error_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File activerecord/test/cases/adapters/postgresql/timestamp_test.rb, line 63</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">test_invalid_timestamp_precision_raises_error</span>
+  <span class="ruby-identifier">assert_raises</span> <span class="ruby-constant">ActiveRecord</span><span class="ruby-operator">::</span><span class="ruby-constant">ActiveRecordError</span> <span class="ruby-keyword">do</span>
+    <span class="ruby-constant">ActiveRecord</span><span class="ruby-operator">::</span><span class="ruby-constant">Base</span>.<span class="ruby-identifier">connection</span>.<span class="ruby-identifier">create_table</span>(<span class="ruby-value">:foos</span>) <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">t</span><span class="ruby-operator">|</span>
+      <span class="ruby-identifier">t</span>.<span class="ruby-identifier">timestamps</span> <span class="ruby-value">:precision</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-number">7</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-test_load_infinity_and_beyond">
+            
+              <b>test_load_infinity_and_beyond</b>()
+            
+            <a href="../classes/TimestampTest.html#method-i-test_load_infinity_and_beyond" name="method-i-test_load_infinity_and_beyond" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-test_load_infinity_and_beyond_source')" id="l_method-i-test_load_infinity_and_beyond_source">show</a>
+                
+                  | <a href="https://github.com/rails/rails/blob/3f90787cd25a45a621fbb7238f69ee96f26e8f74/activerecord/test/cases/adapters/postgresql/timestamp_test.rb#L14" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-test_load_infinity_and_beyond_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File activerecord/test/cases/adapters/postgresql/timestamp_test.rb, line 14</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">test_load_infinity_and_beyond</span>
+  <span class="ruby-identifier">d</span> = <span class="ruby-constant">Developer</span>.<span class="ruby-identifier">find_by_sql</span>(<span class="ruby-string">&quot;select &#39;infinity&#39;::timestamp as updated_at&quot;</span>)
+  <span class="ruby-identifier">assert</span> <span class="ruby-identifier">d</span>.<span class="ruby-identifier">first</span>.<span class="ruby-identifier">updated_at</span>.<span class="ruby-identifier">infinite?</span>, <span class="ruby-string">&#39;timestamp should be infinite&#39;</span>
+
+  <span class="ruby-identifier">d</span> = <span class="ruby-constant">Developer</span>.<span class="ruby-identifier">find_by_sql</span>(<span class="ruby-string">&quot;select &#39;-infinity&#39;::timestamp as updated_at&quot;</span>)
+  <span class="ruby-identifier">time</span> = <span class="ruby-identifier">d</span>.<span class="ruby-identifier">first</span>.<span class="ruby-identifier">updated_at</span>
+  <span class="ruby-identifier">assert</span> <span class="ruby-identifier">time</span>.<span class="ruby-identifier">infinite?</span>, <span class="ruby-string">&#39;timestamp should be infinite&#39;</span>
+  <span class="ruby-identifier">assert_operator</span> <span class="ruby-identifier">time</span>, <span class="ruby-value">:&lt;</span>, <span class="ruby-number">0</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-test_no_touching_threadsafe">
+            
+              <b>test_no_touching_threadsafe</b>()
+            
+            <a href="../classes/TimestampTest.html#method-i-test_no_touching_threadsafe" name="method-i-test_no_touching_threadsafe" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-test_no_touching_threadsafe_source')" id="l_method-i-test_no_touching_threadsafe_source">show</a>
+                
+                  | <a href="https://github.com/rails/rails/blob/e9c8d28eeac86c5c399e696e85475e658ae6c58f/activerecord/test/cases/timestamp_test.rb#L131" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-test_no_touching_threadsafe_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File activerecord/test/cases/timestamp_test.rb, line 131</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">test_no_touching_threadsafe</span>
+  <span class="ruby-constant">Thread</span>.<span class="ruby-identifier">new</span> <span class="ruby-keyword">do</span>
+    <span class="ruby-constant">Developer</span>.<span class="ruby-identifier">no_touching</span> <span class="ruby-keyword">do</span>
+      <span class="ruby-identifier">assert</span> <span class="ruby-ivar">@developer</span>.<span class="ruby-identifier">no_touching?</span>
+
+      <span class="ruby-identifier">sleep</span>(<span class="ruby-number">1</span>)
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-identifier">assert</span> <span class="ruby-operator">!</span><span class="ruby-ivar">@developer</span>.<span class="ruby-identifier">no_touching?</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-test_no_touching_with_callbacks">
+            
+              <b>test_no_touching_with_callbacks</b>()
+            
+            <a href="../classes/TimestampTest.html#method-i-test_no_touching_with_callbacks" name="method-i-test_no_touching_with_callbacks" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-test_no_touching_with_callbacks_source')" id="l_method-i-test_no_touching_with_callbacks_source">show</a>
+                
+                  | <a href="https://github.com/rails/rails/blob/e9c8d28eeac86c5c399e696e85475e658ae6c58f/activerecord/test/cases/timestamp_test.rb#L143" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-test_no_touching_with_callbacks_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File activerecord/test/cases/timestamp_test.rb, line 143</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">test_no_touching_with_callbacks</span>
+  <span class="ruby-identifier">klass</span> = <span class="ruby-constant">Class</span>.<span class="ruby-identifier">new</span>(<span class="ruby-constant">ActiveRecord</span><span class="ruby-operator">::</span><span class="ruby-constant">Base</span>) <span class="ruby-keyword">do</span>
+    <span class="ruby-keyword">self</span>.<span class="ruby-identifier">table_name</span> = <span class="ruby-string">&quot;developers&quot;</span>
+
+    <span class="ruby-identifier">attr_accessor</span> <span class="ruby-value">:after_touch_called</span>
+
+    <span class="ruby-identifier">after_touch</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">user</span><span class="ruby-operator">|</span>
+      <span class="ruby-identifier">user</span>.<span class="ruby-identifier">after_touch_called</span> = <span class="ruby-keyword">true</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-identifier">developer</span> = <span class="ruby-identifier">klass</span>.<span class="ruby-identifier">first</span>
+
+  <span class="ruby-identifier">klass</span>.<span class="ruby-identifier">no_touching</span> <span class="ruby-keyword">do</span>
+    <span class="ruby-identifier">developer</span>.<span class="ruby-identifier">touch</span>
+    <span class="ruby-identifier">assert_not</span> <span class="ruby-identifier">developer</span>.<span class="ruby-identifier">after_touch_called</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-test_passing_precision_to_timestamp_does_not_set_limit">
+            
+              <b>test_passing_precision_to_timestamp_does_not_set_limit</b>()
+            
+            <a href="../classes/TimestampTest.html#method-i-test_passing_precision_to_timestamp_does_not_set_limit" name="method-i-test_passing_precision_to_timestamp_does_not_set_limit" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-test_passing_precision_to_timestamp_does_not_set_limit_source')" id="l_method-i-test_passing_precision_to_timestamp_does_not_set_limit_source">show</a>
+                
+                  | <a href="https://github.com/rails/rails/blob/3f90787cd25a45a621fbb7238f69ee96f26e8f74/activerecord/test/cases/adapters/postgresql/timestamp_test.rb#L55" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-test_passing_precision_to_timestamp_does_not_set_limit_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File activerecord/test/cases/adapters/postgresql/timestamp_test.rb, line 55</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">test_passing_precision_to_timestamp_does_not_set_limit</span>
+  <span class="ruby-constant">ActiveRecord</span><span class="ruby-operator">::</span><span class="ruby-constant">Base</span>.<span class="ruby-identifier">connection</span>.<span class="ruby-identifier">create_table</span>(<span class="ruby-value">:foos</span>) <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">t</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">t</span>.<span class="ruby-identifier">timestamps</span> <span class="ruby-value">:precision</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-number">4</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">assert_nil</span> <span class="ruby-identifier">activerecord_column_option</span>(<span class="ruby-string">&quot;foos&quot;</span>, <span class="ruby-string">&quot;created_at&quot;</span>, <span class="ruby-string">&quot;limit&quot;</span>)
+  <span class="ruby-identifier">assert_nil</span> <span class="ruby-identifier">activerecord_column_option</span>(<span class="ruby-string">&quot;foos&quot;</span>, <span class="ruby-string">&quot;updated_at&quot;</span>, <span class="ruby-string">&quot;limit&quot;</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-test_postgres_agrees_with_activerecord_about_precision">
+            
+              <b>test_postgres_agrees_with_activerecord_about_precision</b>()
+            
+            <a href="../classes/TimestampTest.html#method-i-test_postgres_agrees_with_activerecord_about_precision" name="method-i-test_postgres_agrees_with_activerecord_about_precision" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-test_postgres_agrees_with_activerecord_about_precision_source')" id="l_method-i-test_postgres_agrees_with_activerecord_about_precision_source">show</a>
+                
+                  | <a href="https://github.com/rails/rails/blob/3f90787cd25a45a621fbb7238f69ee96f26e8f74/activerecord/test/cases/adapters/postgresql/timestamp_test.rb#L71" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-test_postgres_agrees_with_activerecord_about_precision_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File activerecord/test/cases/adapters/postgresql/timestamp_test.rb, line 71</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">test_postgres_agrees_with_activerecord_about_precision</span>
+  <span class="ruby-constant">ActiveRecord</span><span class="ruby-operator">::</span><span class="ruby-constant">Base</span>.<span class="ruby-identifier">connection</span>.<span class="ruby-identifier">create_table</span>(<span class="ruby-value">:foos</span>) <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">t</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">t</span>.<span class="ruby-identifier">timestamps</span> <span class="ruby-value">:precision</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-number">4</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">assert_equal</span> <span class="ruby-string">&#39;4&#39;</span>, <span class="ruby-identifier">pg_datetime_precision</span>(<span class="ruby-string">&#39;foos&#39;</span>, <span class="ruby-string">&#39;created_at&#39;</span>)
+  <span class="ruby-identifier">assert_equal</span> <span class="ruby-string">&#39;4&#39;</span>, <span class="ruby-identifier">pg_datetime_precision</span>(<span class="ruby-string">&#39;foos&#39;</span>, <span class="ruby-string">&#39;updated_at&#39;</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-test_save_infinity_and_beyond">
+            
+              <b>test_save_infinity_and_beyond</b>()
+            
+            <a href="../classes/TimestampTest.html#method-i-test_save_infinity_and_beyond" name="method-i-test_save_infinity_and_beyond" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-test_save_infinity_and_beyond_source')" id="l_method-i-test_save_infinity_and_beyond_source">show</a>
+                
+                  | <a href="https://github.com/rails/rails/blob/3f90787cd25a45a621fbb7238f69ee96f26e8f74/activerecord/test/cases/adapters/postgresql/timestamp_test.rb#L24" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-test_save_infinity_and_beyond_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File activerecord/test/cases/adapters/postgresql/timestamp_test.rb, line 24</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">test_save_infinity_and_beyond</span>
+  <span class="ruby-identifier">d</span> = <span class="ruby-constant">Developer</span>.<span class="ruby-identifier">create!</span>(<span class="ruby-value">:name</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&#39;aaron&#39;</span>, <span class="ruby-value">:updated_at</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-number">1.0</span> <span class="ruby-operator">/</span> <span class="ruby-number">0.0</span>)
+  <span class="ruby-identifier">assert_equal</span>(<span class="ruby-number">1.0</span> <span class="ruby-operator">/</span> <span class="ruby-number">0.0</span>, <span class="ruby-identifier">d</span>.<span class="ruby-identifier">updated_at</span>)
+
+  <span class="ruby-identifier">d</span> = <span class="ruby-constant">Developer</span>.<span class="ruby-identifier">create!</span>(<span class="ruby-value">:name</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&#39;aaron&#39;</span>, <span class="ruby-value">:updated_at</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-number">-1.0</span> <span class="ruby-operator">/</span> <span class="ruby-number">0.0</span>)
+  <span class="ruby-identifier">assert_equal</span>(<span class="ruby-number">-1.0</span> <span class="ruby-operator">/</span> <span class="ruby-number">0.0</span>, <span class="ruby-identifier">d</span>.<span class="ruby-identifier">updated_at</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-test_saving_a_changed_record_updates_its_timestamp">
+            
+              <b>test_saving_a_changed_record_updates_its_timestamp</b>()
+            
+            <a href="../classes/TimestampTest.html#method-i-test_saving_a_changed_record_updates_its_timestamp" name="method-i-test_saving_a_changed_record_updates_its_timestamp" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-test_saving_a_changed_record_updates_its_timestamp_source')" id="l_method-i-test_saving_a_changed_record_updates_its_timestamp_source">show</a>
+                
+                  | <a href="https://github.com/rails/rails/blob/e9c8d28eeac86c5c399e696e85475e658ae6c58f/activerecord/test/cases/timestamp_test.rb#L19" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-test_saving_a_changed_record_updates_its_timestamp_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File activerecord/test/cases/timestamp_test.rb, line 19</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">test_saving_a_changed_record_updates_its_timestamp</span>
+  <span class="ruby-ivar">@developer</span>.<span class="ruby-identifier">name</span> = <span class="ruby-string">&quot;Jack Bauer&quot;</span>
+  <span class="ruby-ivar">@developer</span>.<span class="ruby-identifier">save!</span>
+
+  <span class="ruby-identifier">assert_not_equal</span> <span class="ruby-ivar">@previously_updated_at</span>, <span class="ruby-ivar">@developer</span>.<span class="ruby-identifier">updated_at</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-test_saving_a_new_record_belonging_to_invalid_parent_with_touch_should_not_raise_exception">
+            
+              <b>test_saving_a_new_record_belonging_to_invalid_parent_with_touch_should_not_raise_exception</b>()
+            
+            <a href="../classes/TimestampTest.html#method-i-test_saving_a_new_record_belonging_to_invalid_parent_with_touch_should_not_raise_exception" name="method-i-test_saving_a_new_record_belonging_to_invalid_parent_with_touch_should_not_raise_exception" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-test_saving_a_new_record_belonging_to_invalid_parent_with_touch_should_not_raise_exception_source')" id="l_method-i-test_saving_a_new_record_belonging_to_invalid_parent_with_touch_should_not_raise_exception_source">show</a>
+                
+                  | <a href="https://github.com/rails/rails/blob/e9c8d28eeac86c5c399e696e85475e658ae6c58f/activerecord/test/cases/timestamp_test.rb#L183" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-test_saving_a_new_record_belonging_to_invalid_parent_with_touch_should_not_raise_exception_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File activerecord/test/cases/timestamp_test.rb, line 183</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">test_saving_a_new_record_belonging_to_invalid_parent_with_touch_should_not_raise_exception</span>
+  <span class="ruby-identifier">klass</span> = <span class="ruby-constant">Class</span>.<span class="ruby-identifier">new</span>(<span class="ruby-constant">Owner</span>) <span class="ruby-keyword">do</span>
+    <span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">name</span>; <span class="ruby-string">&#39;Owner&#39;</span>; <span class="ruby-keyword">end</span>
+    <span class="ruby-identifier">validate</span> { <span class="ruby-identifier">errors</span>.<span class="ruby-identifier">add</span>(<span class="ruby-value">:base</span>, <span class="ruby-value">:invalid</span>) }
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-identifier">pet</span> = <span class="ruby-constant">Pet</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">owner</span><span class="ruby-operator">:</span> <span class="ruby-identifier">klass</span>.<span class="ruby-identifier">new</span>)
+  <span class="ruby-identifier">pet</span>.<span class="ruby-identifier">save!</span>
+
+  <span class="ruby-identifier">assert</span> <span class="ruby-identifier">pet</span>.<span class="ruby-identifier">owner</span>.<span class="ruby-identifier">new_record?</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-test_saving_a_record_with_a_belongs_to_that_specifies_touching_a_specific_attribute_the_parent_should_update_that_attribute">
+            
+              <b>test_saving_a_record_with_a_belongs_to_that_specifies_touching_a_specific_attribute_the_parent_should_update_that_attribute</b>()
+            
+            <a href="../classes/TimestampTest.html#method-i-test_saving_a_record_with_a_belongs_to_that_specifies_touching_a_specific_attribute_the_parent_should_update_that_attribute" name="method-i-test_saving_a_record_with_a_belongs_to_that_specifies_touching_a_specific_attribute_the_parent_should_update_that_attribute" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-test_saving_a_record_with_a_belongs_to_that_specifies_touching_a_specific_attribute_the_parent_should_update_that_attribute_source')" id="l_method-i-test_saving_a_record_with_a_belongs_to_that_specifies_touching_a_specific_attribute_the_parent_should_update_that_attribute_source">show</a>
+                
+                  | <a href="https://github.com/rails/rails/blob/e9c8d28eeac86c5c399e696e85475e658ae6c58f/activerecord/test/cases/timestamp_test.rb#L195" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-test_saving_a_record_with_a_belongs_to_that_specifies_touching_a_specific_attribute_the_parent_should_update_that_attribute_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File activerecord/test/cases/timestamp_test.rb, line 195</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">test_saving_a_record_with_a_belongs_to_that_specifies_touching_a_specific_attribute_the_parent_should_update_that_attribute</span>
+  <span class="ruby-identifier">klass</span> = <span class="ruby-constant">Class</span>.<span class="ruby-identifier">new</span>(<span class="ruby-constant">ActiveRecord</span><span class="ruby-operator">::</span><span class="ruby-constant">Base</span>) <span class="ruby-keyword">do</span>
+    <span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">name</span>; <span class="ruby-string">&#39;Pet&#39;</span>; <span class="ruby-keyword">end</span>
+    <span class="ruby-identifier">belongs_to</span> <span class="ruby-value">:owner</span>, <span class="ruby-value">:touch</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">:happy_at</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-identifier">pet</span>   = <span class="ruby-identifier">klass</span>.<span class="ruby-identifier">first</span>
+  <span class="ruby-identifier">owner</span> = <span class="ruby-identifier">pet</span>.<span class="ruby-identifier">owner</span>
+  <span class="ruby-identifier">previously_owner_happy_at</span> = <span class="ruby-identifier">owner</span>.<span class="ruby-identifier">happy_at</span>
+
+  <span class="ruby-identifier">pet</span>.<span class="ruby-identifier">name</span> = <span class="ruby-string">&quot;Fluffy the Third&quot;</span>
+  <span class="ruby-identifier">pet</span>.<span class="ruby-identifier">save</span>
+
+  <span class="ruby-identifier">assert_not_equal</span> <span class="ruby-identifier">previously_owner_happy_at</span>, <span class="ruby-identifier">pet</span>.<span class="ruby-identifier">owner</span>.<span class="ruby-identifier">happy_at</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-test_saving_a_record_with_a_belongs_to_that_specifies_touching_the_parent_should_update_the_parent_updated_at">
+            
+              <b>test_saving_a_record_with_a_belongs_to_that_specifies_touching_the_parent_should_update_the_parent_updated_at</b>()
+            
+            <a href="../classes/TimestampTest.html#method-i-test_saving_a_record_with_a_belongs_to_that_specifies_touching_the_parent_should_update_the_parent_updated_at" name="method-i-test_saving_a_record_with_a_belongs_to_that_specifies_touching_the_parent_should_update_the_parent_updated_at" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-test_saving_a_record_with_a_belongs_to_that_specifies_touching_the_parent_should_update_the_parent_updated_at_source')" id="l_method-i-test_saving_a_record_with_a_belongs_to_that_specifies_touching_the_parent_should_update_the_parent_updated_at_source">show</a>
+                
+                  | <a href="https://github.com/rails/rails/blob/e9c8d28eeac86c5c399e696e85475e658ae6c58f/activerecord/test/cases/timestamp_test.rb#L162" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-test_saving_a_record_with_a_belongs_to_that_specifies_touching_the_parent_should_update_the_parent_updated_at_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File activerecord/test/cases/timestamp_test.rb, line 162</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">test_saving_a_record_with_a_belongs_to_that_specifies_touching_the_parent_should_update_the_parent_updated_at</span>
+  <span class="ruby-identifier">pet</span>   = <span class="ruby-constant">Pet</span>.<span class="ruby-identifier">first</span>
+  <span class="ruby-identifier">owner</span> = <span class="ruby-identifier">pet</span>.<span class="ruby-identifier">owner</span>
+  <span class="ruby-identifier">previously_owner_updated_at</span> = <span class="ruby-identifier">owner</span>.<span class="ruby-identifier">updated_at</span>
+
+  <span class="ruby-identifier">pet</span>.<span class="ruby-identifier">name</span> = <span class="ruby-string">&quot;Fluffy the Third&quot;</span>
+  <span class="ruby-identifier">pet</span>.<span class="ruby-identifier">save</span>
+
+  <span class="ruby-identifier">assert_not_equal</span> <span class="ruby-identifier">previously_owner_updated_at</span>, <span class="ruby-identifier">pet</span>.<span class="ruby-identifier">owner</span>.<span class="ruby-identifier">updated_at</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-test_saving_a_unchanged_record_doesnt_update_its_timestamp">
+            
+              <b>test_saving_a_unchanged_record_doesnt_update_its_timestamp</b>()
+            
+            <a href="../classes/TimestampTest.html#method-i-test_saving_a_unchanged_record_doesnt_update_its_timestamp" name="method-i-test_saving_a_unchanged_record_doesnt_update_its_timestamp" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-test_saving_a_unchanged_record_doesnt_update_its_timestamp_source')" id="l_method-i-test_saving_a_unchanged_record_doesnt_update_its_timestamp_source">show</a>
+                
+                  | <a href="https://github.com/rails/rails/blob/e9c8d28eeac86c5c399e696e85475e658ae6c58f/activerecord/test/cases/timestamp_test.rb#L26" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-test_saving_a_unchanged_record_doesnt_update_its_timestamp_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File activerecord/test/cases/timestamp_test.rb, line 26</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">test_saving_a_unchanged_record_doesnt_update_its_timestamp</span>
+  <span class="ruby-ivar">@developer</span>.<span class="ruby-identifier">save!</span>
+
+  <span class="ruby-identifier">assert_equal</span> <span class="ruby-ivar">@previously_updated_at</span>, <span class="ruby-ivar">@developer</span>.<span class="ruby-identifier">updated_at</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-test_saving_when_instance_record_timestamps_is_false_doesnt_update_its_timestamp">
+            
+              <b>test_saving_when_instance_record_timestamps_is_false_doesnt_update_its_timestamp</b>()
+            
+            <a href="../classes/TimestampTest.html#method-i-test_saving_when_instance_record_timestamps_is_false_doesnt_update_its_timestamp" name="method-i-test_saving_when_instance_record_timestamps_is_false_doesnt_update_its_timestamp" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-test_saving_when_instance_record_timestamps_is_false_doesnt_update_its_timestamp_source')" id="l_method-i-test_saving_when_instance_record_timestamps_is_false_doesnt_update_its_timestamp_source">show</a>
+                
+                  | <a href="https://github.com/rails/rails/blob/e9c8d28eeac86c5c399e696e85475e658ae6c58f/activerecord/test/cases/timestamp_test.rb#L64" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-test_saving_when_instance_record_timestamps_is_false_doesnt_update_its_timestamp_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File activerecord/test/cases/timestamp_test.rb, line 64</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">test_saving_when_instance_record_timestamps_is_false_doesnt_update_its_timestamp</span>
+  <span class="ruby-ivar">@developer</span>.<span class="ruby-identifier">record_timestamps</span> = <span class="ruby-keyword">false</span>
+  <span class="ruby-identifier">assert</span> <span class="ruby-constant">Developer</span>.<span class="ruby-identifier">record_timestamps</span>
+
+  <span class="ruby-ivar">@developer</span>.<span class="ruby-identifier">name</span> = <span class="ruby-string">&quot;John Smith&quot;</span>
+  <span class="ruby-ivar">@developer</span>.<span class="ruby-identifier">save!</span>
+
+  <span class="ruby-identifier">assert_equal</span> <span class="ruby-ivar">@previously_updated_at</span>, <span class="ruby-ivar">@developer</span>.<span class="ruby-identifier">updated_at</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-test_saving_when_record_timestamps_is_false_doesnt_update_its_timestamp">
+            
+              <b>test_saving_when_record_timestamps_is_false_doesnt_update_its_timestamp</b>()
+            
+            <a href="../classes/TimestampTest.html#method-i-test_saving_when_record_timestamps_is_false_doesnt_update_its_timestamp" name="method-i-test_saving_when_record_timestamps_is_false_doesnt_update_its_timestamp" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-test_saving_when_record_timestamps_is_false_doesnt_update_its_timestamp_source')" id="l_method-i-test_saving_when_record_timestamps_is_false_doesnt_update_its_timestamp_source">show</a>
+                
+                  | <a href="https://github.com/rails/rails/blob/e9c8d28eeac86c5c399e696e85475e658ae6c58f/activerecord/test/cases/timestamp_test.rb#L54" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-test_saving_when_record_timestamps_is_false_doesnt_update_its_timestamp_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File activerecord/test/cases/timestamp_test.rb, line 54</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">test_saving_when_record_timestamps_is_false_doesnt_update_its_timestamp</span>
+  <span class="ruby-constant">Developer</span>.<span class="ruby-identifier">record_timestamps</span> = <span class="ruby-keyword">false</span>
+  <span class="ruby-ivar">@developer</span>.<span class="ruby-identifier">name</span> = <span class="ruby-string">&quot;John Smith&quot;</span>
+  <span class="ruby-ivar">@developer</span>.<span class="ruby-identifier">save!</span>
+
+  <span class="ruby-identifier">assert_equal</span> <span class="ruby-ivar">@previously_updated_at</span>, <span class="ruby-ivar">@developer</span>.<span class="ruby-identifier">updated_at</span>
+<span class="ruby-keyword">ensure</span>
+  <span class="ruby-constant">Developer</span>.<span class="ruby-identifier">record_timestamps</span> = <span class="ruby-keyword">true</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-test_timestamp_attributes_for_create">
+            
+              <b>test_timestamp_attributes_for_create</b>()
+            
+            <a href="../classes/TimestampTest.html#method-i-test_timestamp_attributes_for_create" name="method-i-test_timestamp_attributes_for_create" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-test_timestamp_attributes_for_create_source')" id="l_method-i-test_timestamp_attributes_for_create_source">show</a>
+                
+                  | <a href="https://github.com/rails/rails/blob/e9c8d28eeac86c5c399e696e85475e658ae6c58f/activerecord/test/cases/timestamp_test.rb#L385" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-test_timestamp_attributes_for_create_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File activerecord/test/cases/timestamp_test.rb, line 385</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">test_timestamp_attributes_for_create</span>
+  <span class="ruby-identifier">toy</span> = <span class="ruby-constant">Toy</span>.<span class="ruby-identifier">first</span>
+  <span class="ruby-identifier">assert_equal</span> [<span class="ruby-value">:created_at</span>, <span class="ruby-value">:created_on</span>], <span class="ruby-identifier">toy</span>.<span class="ruby-identifier">send</span>(<span class="ruby-value">:timestamp_attributes_for_create</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-test_timestamp_attributes_for_create_in_model">
+            
+              <b>test_timestamp_attributes_for_create_in_model</b>()
+            
+            <a href="../classes/TimestampTest.html#method-i-test_timestamp_attributes_for_create_in_model" name="method-i-test_timestamp_attributes_for_create_in_model" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-test_timestamp_attributes_for_create_in_model_source')" id="l_method-i-test_timestamp_attributes_for_create_in_model_source">show</a>
+                
+                  | <a href="https://github.com/rails/rails/blob/e9c8d28eeac86c5c399e696e85475e658ae6c58f/activerecord/test/cases/timestamp_test.rb#L400" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-test_timestamp_attributes_for_create_in_model_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File activerecord/test/cases/timestamp_test.rb, line 400</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">test_timestamp_attributes_for_create_in_model</span>
+  <span class="ruby-identifier">toy</span> = <span class="ruby-constant">Toy</span>.<span class="ruby-identifier">first</span>
+  <span class="ruby-identifier">assert_equal</span> [<span class="ruby-value">:created_at</span>], <span class="ruby-identifier">toy</span>.<span class="ruby-identifier">send</span>(<span class="ruby-value">:timestamp_attributes_for_create_in_model</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-test_timestamp_attributes_for_update">
+            
+              <b>test_timestamp_attributes_for_update</b>()
+            
+            <a href="../classes/TimestampTest.html#method-i-test_timestamp_attributes_for_update" name="method-i-test_timestamp_attributes_for_update" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-test_timestamp_attributes_for_update_source')" id="l_method-i-test_timestamp_attributes_for_update_source">show</a>
+                
+                  | <a href="https://github.com/rails/rails/blob/e9c8d28eeac86c5c399e696e85475e658ae6c58f/activerecord/test/cases/timestamp_test.rb#L390" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-test_timestamp_attributes_for_update_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File activerecord/test/cases/timestamp_test.rb, line 390</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">test_timestamp_attributes_for_update</span>
+  <span class="ruby-identifier">toy</span> = <span class="ruby-constant">Toy</span>.<span class="ruby-identifier">first</span>
+  <span class="ruby-identifier">assert_equal</span> [<span class="ruby-value">:updated_at</span>, <span class="ruby-value">:updated_on</span>], <span class="ruby-identifier">toy</span>.<span class="ruby-identifier">send</span>(<span class="ruby-value">:timestamp_attributes_for_update</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-test_timestamp_attributes_for_update_in_model">
+            
+              <b>test_timestamp_attributes_for_update_in_model</b>()
+            
+            <a href="../classes/TimestampTest.html#method-i-test_timestamp_attributes_for_update_in_model" name="method-i-test_timestamp_attributes_for_update_in_model" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-test_timestamp_attributes_for_update_in_model_source')" id="l_method-i-test_timestamp_attributes_for_update_in_model_source">show</a>
+                
+                  | <a href="https://github.com/rails/rails/blob/e9c8d28eeac86c5c399e696e85475e658ae6c58f/activerecord/test/cases/timestamp_test.rb#L405" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-test_timestamp_attributes_for_update_in_model_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File activerecord/test/cases/timestamp_test.rb, line 405</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">test_timestamp_attributes_for_update_in_model</span>
+  <span class="ruby-identifier">toy</span> = <span class="ruby-constant">Toy</span>.<span class="ruby-identifier">first</span>
+  <span class="ruby-identifier">assert_equal</span> [<span class="ruby-value">:updated_at</span>], <span class="ruby-identifier">toy</span>.<span class="ruby-identifier">send</span>(<span class="ruby-value">:timestamp_attributes_for_update_in_model</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-test_timestamp_column_values_are_present_in_the_callbacks">
+            
+              <b>test_timestamp_column_values_are_present_in_the_callbacks</b>()
+            
+            <a href="../classes/TimestampTest.html#method-i-test_timestamp_column_values_are_present_in_the_callbacks" name="method-i-test_timestamp_column_values_are_present_in_the_callbacks" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-test_timestamp_column_values_are_present_in_the_callbacks_source')" id="l_method-i-test_timestamp_column_values_are_present_in_the_callbacks_source">show</a>
+                
+                  | <a href="https://github.com/rails/rails/blob/e9c8d28eeac86c5c399e696e85475e658ae6c58f/activerecord/test/cases/timestamp_test.rb#L372" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-test_timestamp_column_values_are_present_in_the_callbacks_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File activerecord/test/cases/timestamp_test.rb, line 372</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">test_timestamp_column_values_are_present_in_the_callbacks</span>
+  <span class="ruby-identifier">klass</span> = <span class="ruby-constant">Class</span>.<span class="ruby-identifier">new</span>(<span class="ruby-constant">ActiveRecord</span><span class="ruby-operator">::</span><span class="ruby-constant">Base</span>) <span class="ruby-keyword">do</span>
+    <span class="ruby-keyword">self</span>.<span class="ruby-identifier">table_name</span> = <span class="ruby-string">&#39;people&#39;</span>
+
+    <span class="ruby-identifier">before_create</span> <span class="ruby-keyword">do</span>
+      <span class="ruby-keyword">self</span>.<span class="ruby-identifier">born_at</span> = <span class="ruby-keyword">self</span>.<span class="ruby-identifier">created_at</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-identifier">person</span> = <span class="ruby-identifier">klass</span>.<span class="ruby-identifier">create</span> <span class="ruby-identifier">first_name</span><span class="ruby-operator">:</span> <span class="ruby-string">&#39;David&#39;</span>
+  <span class="ruby-identifier">assert_not_equal</span> <span class="ruby-identifier">person</span>.<span class="ruby-identifier">born_at</span>, <span class="ruby-keyword">nil</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-test_timestamp_data_type_with_precision">
+            
+              <b>test_timestamp_data_type_with_precision</b>()
+            
+            <a href="../classes/TimestampTest.html#method-i-test_timestamp_data_type_with_precision" name="method-i-test_timestamp_data_type_with_precision" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-test_timestamp_data_type_with_precision_source')" id="l_method-i-test_timestamp_data_type_with_precision_source">show</a>
+                
+                  | <a href="https://github.com/rails/rails/blob/3f90787cd25a45a621fbb7238f69ee96f26e8f74/activerecord/test/cases/adapters/postgresql/timestamp_test.rb#L39" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-test_timestamp_data_type_with_precision_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File activerecord/test/cases/adapters/postgresql/timestamp_test.rb, line 39</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">test_timestamp_data_type_with_precision</span>
+  <span class="ruby-constant">ActiveRecord</span><span class="ruby-operator">::</span><span class="ruby-constant">Base</span>.<span class="ruby-identifier">connection</span>.<span class="ruby-identifier">create_table</span>(<span class="ruby-value">:foos</span>)
+  <span class="ruby-constant">ActiveRecord</span><span class="ruby-operator">::</span><span class="ruby-constant">Base</span>.<span class="ruby-identifier">connection</span>.<span class="ruby-identifier">add_column</span> <span class="ruby-value">:foos</span>, <span class="ruby-value">:created_at</span>, <span class="ruby-value">:datetime</span>, <span class="ruby-value">:precision</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-number">0</span>
+  <span class="ruby-constant">ActiveRecord</span><span class="ruby-operator">::</span><span class="ruby-constant">Base</span>.<span class="ruby-identifier">connection</span>.<span class="ruby-identifier">add_column</span> <span class="ruby-value">:foos</span>, <span class="ruby-value">:updated_at</span>, <span class="ruby-value">:datetime</span>, <span class="ruby-value">:precision</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-number">5</span>
+  <span class="ruby-identifier">assert_equal</span> <span class="ruby-number">0</span>, <span class="ruby-identifier">activerecord_column_option</span>(<span class="ruby-string">&#39;foos&#39;</span>, <span class="ruby-string">&#39;created_at&#39;</span>, <span class="ruby-string">&#39;precision&#39;</span>)
+  <span class="ruby-identifier">assert_equal</span> <span class="ruby-number">5</span>, <span class="ruby-identifier">activerecord_column_option</span>(<span class="ruby-string">&#39;foos&#39;</span>, <span class="ruby-string">&#39;updated_at&#39;</span>, <span class="ruby-string">&#39;precision&#39;</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-test_timestamps_helper_with_custom_precision">
+            
+              <b>test_timestamps_helper_with_custom_precision</b>()
+            
+            <a href="../classes/TimestampTest.html#method-i-test_timestamps_helper_with_custom_precision" name="method-i-test_timestamps_helper_with_custom_precision" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-test_timestamps_helper_with_custom_precision_source')" id="l_method-i-test_timestamps_helper_with_custom_precision_source">show</a>
+                
+                  | <a href="https://github.com/rails/rails/blob/3f90787cd25a45a621fbb7238f69ee96f26e8f74/activerecord/test/cases/adapters/postgresql/timestamp_test.rb#L47" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-test_timestamps_helper_with_custom_precision_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File activerecord/test/cases/adapters/postgresql/timestamp_test.rb, line 47</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">test_timestamps_helper_with_custom_precision</span>
+  <span class="ruby-constant">ActiveRecord</span><span class="ruby-operator">::</span><span class="ruby-constant">Base</span>.<span class="ruby-identifier">connection</span>.<span class="ruby-identifier">create_table</span>(<span class="ruby-value">:foos</span>) <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">t</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">t</span>.<span class="ruby-identifier">timestamps</span> <span class="ruby-value">:precision</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-number">4</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">assert_equal</span> <span class="ruby-number">4</span>, <span class="ruby-identifier">activerecord_column_option</span>(<span class="ruby-string">&#39;foos&#39;</span>, <span class="ruby-string">&#39;created_at&#39;</span>, <span class="ruby-string">&#39;precision&#39;</span>)
+  <span class="ruby-identifier">assert_equal</span> <span class="ruby-number">4</span>, <span class="ruby-identifier">activerecord_column_option</span>(<span class="ruby-string">&#39;foos&#39;</span>, <span class="ruby-string">&#39;updated_at&#39;</span>, <span class="ruby-string">&#39;precision&#39;</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-test_touching_a_no_touching_object">
+            
+              <b>test_touching_a_no_touching_object</b>()
+            
+            <a href="../classes/TimestampTest.html#method-i-test_touching_a_no_touching_object" name="method-i-test_touching_a_no_touching_object" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-test_touching_a_no_touching_object_source')" id="l_method-i-test_touching_a_no_touching_object_source">show</a>
+                
+                  | <a href="https://github.com/rails/rails/blob/e9c8d28eeac86c5c399e696e85475e658ae6c58f/activerecord/test/cases/timestamp_test.rb#L96" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-test_touching_a_no_touching_object_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File activerecord/test/cases/timestamp_test.rb, line 96</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">test_touching_a_no_touching_object</span>
+  <span class="ruby-constant">Developer</span>.<span class="ruby-identifier">no_touching</span> <span class="ruby-keyword">do</span>
+    <span class="ruby-identifier">assert</span> <span class="ruby-ivar">@developer</span>.<span class="ruby-identifier">no_touching?</span>
+    <span class="ruby-identifier">assert</span> <span class="ruby-operator">!</span><span class="ruby-ivar">@owner</span>.<span class="ruby-identifier">no_touching?</span>
+    <span class="ruby-ivar">@developer</span>.<span class="ruby-identifier">touch</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-identifier">assert</span> <span class="ruby-operator">!</span><span class="ruby-ivar">@developer</span>.<span class="ruby-identifier">no_touching?</span>
+  <span class="ruby-identifier">assert</span> <span class="ruby-operator">!</span><span class="ruby-ivar">@owner</span>.<span class="ruby-identifier">no_touching?</span>
+  <span class="ruby-identifier">assert_equal</span> <span class="ruby-ivar">@previously_updated_at</span>, <span class="ruby-ivar">@developer</span>.<span class="ruby-identifier">updated_at</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-test_touching_a_record_touches_parent_record_and_grandparent_record">
+            
+              <b>test_touching_a_record_touches_parent_record_and_grandparent_record</b>()
+            
+            <a href="../classes/TimestampTest.html#method-i-test_touching_a_record_touches_parent_record_and_grandparent_record" name="method-i-test_touching_a_record_touches_parent_record_and_grandparent_record" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-test_touching_a_record_touches_parent_record_and_grandparent_record_source')" id="l_method-i-test_touching_a_record_touches_parent_record_and_grandparent_record_source">show</a>
+                
+                  | <a href="https://github.com/rails/rails/blob/e9c8d28eeac86c5c399e696e85475e658ae6c58f/activerecord/test/cases/timestamp_test.rb#L228" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-test_touching_a_record_touches_parent_record_and_grandparent_record_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File activerecord/test/cases/timestamp_test.rb, line 228</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">test_touching_a_record_touches_parent_record_and_grandparent_record</span>
+  <span class="ruby-identifier">klass</span> = <span class="ruby-constant">Class</span>.<span class="ruby-identifier">new</span>(<span class="ruby-constant">ActiveRecord</span><span class="ruby-operator">::</span><span class="ruby-constant">Base</span>) <span class="ruby-keyword">do</span>
+    <span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">name</span>; <span class="ruby-string">&#39;Toy&#39;</span>; <span class="ruby-keyword">end</span>
+    <span class="ruby-identifier">belongs_to</span> <span class="ruby-value">:pet</span>, <span class="ruby-value">:touch</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword">true</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-identifier">toy</span> = <span class="ruby-identifier">klass</span>.<span class="ruby-identifier">first</span>
+  <span class="ruby-identifier">pet</span> = <span class="ruby-identifier">toy</span>.<span class="ruby-identifier">pet</span>
+  <span class="ruby-identifier">owner</span> = <span class="ruby-identifier">pet</span>.<span class="ruby-identifier">owner</span>
+  <span class="ruby-identifier">time</span> = <span class="ruby-number">3</span>.<span class="ruby-identifier">days</span>.<span class="ruby-identifier">ago</span>
+
+  <span class="ruby-identifier">owner</span>.<span class="ruby-identifier">update_columns</span>(<span class="ruby-identifier">updated_at</span><span class="ruby-operator">:</span> <span class="ruby-identifier">time</span>)
+  <span class="ruby-identifier">toy</span>.<span class="ruby-identifier">touch</span>
+  <span class="ruby-identifier">owner</span>.<span class="ruby-identifier">reload</span>
+
+  <span class="ruby-identifier">assert_not_equal</span> <span class="ruby-identifier">time</span>, <span class="ruby-identifier">owner</span>.<span class="ruby-identifier">updated_at</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-test_touching_a_record_touches_polymorphic_record">
+            
+              <b>test_touching_a_record_touches_polymorphic_record</b>()
+            
+            <a href="../classes/TimestampTest.html#method-i-test_touching_a_record_touches_polymorphic_record" name="method-i-test_touching_a_record_touches_polymorphic_record" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-test_touching_a_record_touches_polymorphic_record_source')" id="l_method-i-test_touching_a_record_touches_polymorphic_record_source">show</a>
+                
+                  | <a href="https://github.com/rails/rails/blob/e9c8d28eeac86c5c399e696e85475e658ae6c58f/activerecord/test/cases/timestamp_test.rb#L246" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-test_touching_a_record_touches_polymorphic_record_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File activerecord/test/cases/timestamp_test.rb, line 246</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">test_touching_a_record_touches_polymorphic_record</span>
+  <span class="ruby-identifier">klass</span> = <span class="ruby-constant">Class</span>.<span class="ruby-identifier">new</span>(<span class="ruby-constant">ActiveRecord</span><span class="ruby-operator">::</span><span class="ruby-constant">Base</span>) <span class="ruby-keyword">do</span>
+    <span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">name</span>; <span class="ruby-string">&#39;Toy&#39;</span>; <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-identifier">wheel_klass</span> = <span class="ruby-constant">Class</span>.<span class="ruby-identifier">new</span>(<span class="ruby-constant">ActiveRecord</span><span class="ruby-operator">::</span><span class="ruby-constant">Base</span>) <span class="ruby-keyword">do</span>
+    <span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">name</span>; <span class="ruby-string">&#39;Wheel&#39;</span>; <span class="ruby-keyword">end</span>
+    <span class="ruby-identifier">belongs_to</span> <span class="ruby-value">:wheelable</span>, <span class="ruby-value">:polymorphic</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword">true</span>, <span class="ruby-value">:touch</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword">true</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-identifier">toy</span> = <span class="ruby-identifier">klass</span>.<span class="ruby-identifier">first</span>
+  <span class="ruby-identifier">time</span> = <span class="ruby-number">3</span>.<span class="ruby-identifier">days</span>.<span class="ruby-identifier">ago</span>
+  <span class="ruby-identifier">toy</span>.<span class="ruby-identifier">update_columns</span>(<span class="ruby-identifier">updated_at</span><span class="ruby-operator">:</span> <span class="ruby-identifier">time</span>)
+
+  <span class="ruby-identifier">wheel</span> = <span class="ruby-identifier">wheel_klass</span>.<span class="ruby-identifier">new</span>
+  <span class="ruby-identifier">wheel</span>.<span class="ruby-identifier">wheelable</span> = <span class="ruby-identifier">toy</span>
+  <span class="ruby-identifier">wheel</span>.<span class="ruby-identifier">save</span>
+  <span class="ruby-identifier">wheel</span>.<span class="ruby-identifier">touch</span>
+
+  <span class="ruby-identifier">assert_not_equal</span> <span class="ruby-identifier">time</span>, <span class="ruby-identifier">toy</span>.<span class="ruby-identifier">updated_at</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-test_touching_a_record_updates_its_timestamp">
+            
+              <b>test_touching_a_record_updates_its_timestamp</b>()
+            
+            <a href="../classes/TimestampTest.html#method-i-test_touching_a_record_updates_its_timestamp" name="method-i-test_touching_a_record_updates_its_timestamp" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-test_touching_a_record_updates_its_timestamp_source')" id="l_method-i-test_touching_a_record_updates_its_timestamp_source">show</a>
+                
+                  | <a href="https://github.com/rails/rails/blob/e9c8d28eeac86c5c399e696e85475e658ae6c58f/activerecord/test/cases/timestamp_test.rb#L32" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-test_touching_a_record_updates_its_timestamp_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File activerecord/test/cases/timestamp_test.rb, line 32</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">test_touching_a_record_updates_its_timestamp</span>
+  <span class="ruby-identifier">previous_salary</span> = <span class="ruby-ivar">@developer</span>.<span class="ruby-identifier">salary</span>
+  <span class="ruby-ivar">@developer</span>.<span class="ruby-identifier">salary</span> = <span class="ruby-identifier">previous_salary</span> <span class="ruby-operator">+</span> <span class="ruby-number">10000</span>
+  <span class="ruby-ivar">@developer</span>.<span class="ruby-identifier">touch</span>
+
+  <span class="ruby-identifier">assert_not_equal</span> <span class="ruby-ivar">@previously_updated_at</span>, <span class="ruby-ivar">@developer</span>.<span class="ruby-identifier">updated_at</span>
+  <span class="ruby-identifier">assert_equal</span> <span class="ruby-identifier">previous_salary</span> <span class="ruby-operator">+</span> <span class="ruby-number">10000</span>, <span class="ruby-ivar">@developer</span>.<span class="ruby-identifier">salary</span>
+  <span class="ruby-identifier">assert</span> <span class="ruby-ivar">@developer</span>.<span class="ruby-identifier">salary_changed?</span>, <span class="ruby-string">&#39;developer salary should have changed&#39;</span>
+  <span class="ruby-identifier">assert</span> <span class="ruby-ivar">@developer</span>.<span class="ruby-identifier">changed?</span>, <span class="ruby-string">&#39;developer should be marked as changed&#39;</span>
+  <span class="ruby-ivar">@developer</span>.<span class="ruby-identifier">reload</span>
+  <span class="ruby-identifier">assert_equal</span> <span class="ruby-identifier">previous_salary</span>, <span class="ruby-ivar">@developer</span>.<span class="ruby-identifier">salary</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-test_touching_a_record_with_a_belongs_to_that_uses_a_counter_cache_should_update_the_parent">
+            
+              <b>test_touching_a_record_with_a_belongs_to_that_uses_a_counter_cache_should_update_the_parent</b>()
+            
+            <a href="../classes/TimestampTest.html#method-i-test_touching_a_record_with_a_belongs_to_that_uses_a_counter_cache_should_update_the_parent" name="method-i-test_touching_a_record_with_a_belongs_to_that_uses_a_counter_cache_should_update_the_parent" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-test_touching_a_record_with_a_belongs_to_that_uses_a_counter_cache_should_update_the_parent_source')" id="l_method-i-test_touching_a_record_with_a_belongs_to_that_uses_a_counter_cache_should_update_the_parent_source">show</a>
+                
+                  | <a href="https://github.com/rails/rails/blob/e9c8d28eeac86c5c399e696e85475e658ae6c58f/activerecord/test/cases/timestamp_test.rb#L211" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-test_touching_a_record_with_a_belongs_to_that_uses_a_counter_cache_should_update_the_parent_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File activerecord/test/cases/timestamp_test.rb, line 211</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">test_touching_a_record_with_a_belongs_to_that_uses_a_counter_cache_should_update_the_parent</span>
+  <span class="ruby-identifier">klass</span> = <span class="ruby-constant">Class</span>.<span class="ruby-identifier">new</span>(<span class="ruby-constant">ActiveRecord</span><span class="ruby-operator">::</span><span class="ruby-constant">Base</span>) <span class="ruby-keyword">do</span>
+    <span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">name</span>; <span class="ruby-string">&#39;Pet&#39;</span>; <span class="ruby-keyword">end</span>
+    <span class="ruby-identifier">belongs_to</span> <span class="ruby-value">:owner</span>, <span class="ruby-value">:counter_cache</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">:use_count</span>, <span class="ruby-value">:touch</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword">true</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-identifier">pet</span> = <span class="ruby-identifier">klass</span>.<span class="ruby-identifier">first</span>
+  <span class="ruby-identifier">owner</span> = <span class="ruby-identifier">pet</span>.<span class="ruby-identifier">owner</span>
+  <span class="ruby-identifier">owner</span>.<span class="ruby-identifier">update_columns</span>(<span class="ruby-identifier">happy_at</span><span class="ruby-operator">:</span> <span class="ruby-number">3</span>.<span class="ruby-identifier">days</span>.<span class="ruby-identifier">ago</span>)
+  <span class="ruby-identifier">previously_owner_updated_at</span> = <span class="ruby-identifier">owner</span>.<span class="ruby-identifier">updated_at</span>
+
+  <span class="ruby-identifier">pet</span>.<span class="ruby-identifier">name</span> = <span class="ruby-string">&quot;I&#39;m a parrot&quot;</span>
+  <span class="ruby-identifier">pet</span>.<span class="ruby-identifier">save</span>
+
+  <span class="ruby-identifier">assert_not_equal</span> <span class="ruby-identifier">previously_owner_updated_at</span>, <span class="ruby-identifier">pet</span>.<span class="ruby-identifier">owner</span>.<span class="ruby-identifier">updated_at</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-test_touching_a_record_with_default_scope_that_excludes_it_updates_its_timestamp">
+            
+              <b>test_touching_a_record_with_default_scope_that_excludes_it_updates_its_timestamp</b>()
+            
+            <a href="../classes/TimestampTest.html#method-i-test_touching_a_record_with_default_scope_that_excludes_it_updates_its_timestamp" name="method-i-test_touching_a_record_with_default_scope_that_excludes_it_updates_its_timestamp" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-test_touching_a_record_with_default_scope_that_excludes_it_updates_its_timestamp_source')" id="l_method-i-test_touching_a_record_with_default_scope_that_excludes_it_updates_its_timestamp_source">show</a>
+                
+                  | <a href="https://github.com/rails/rails/blob/e9c8d28eeac86c5c399e696e85475e658ae6c58f/activerecord/test/cases/timestamp_test.rb#L45" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-test_touching_a_record_with_default_scope_that_excludes_it_updates_its_timestamp_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File activerecord/test/cases/timestamp_test.rb, line 45</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">test_touching_a_record_with_default_scope_that_excludes_it_updates_its_timestamp</span>
+  <span class="ruby-identifier">developer</span> = <span class="ruby-ivar">@developer</span>.<span class="ruby-identifier">becomes</span>(<span class="ruby-constant">DeveloperCalledJamis</span>)
+
+  <span class="ruby-identifier">developer</span>.<span class="ruby-identifier">touch</span>
+  <span class="ruby-identifier">assert_not_equal</span> <span class="ruby-ivar">@previously_updated_at</span>, <span class="ruby-identifier">developer</span>.<span class="ruby-identifier">updated_at</span>
+  <span class="ruby-identifier">developer</span>.<span class="ruby-identifier">reload</span>
+  <span class="ruby-identifier">assert_not_equal</span> <span class="ruby-ivar">@previously_updated_at</span>, <span class="ruby-identifier">developer</span>.<span class="ruby-identifier">updated_at</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-test_touching_a_record_without_timestamps_is_unexceptional">
+            
+              <b>test_touching_a_record_without_timestamps_is_unexceptional</b>()
+            
+            <a href="../classes/TimestampTest.html#method-i-test_touching_a_record_without_timestamps_is_unexceptional" name="method-i-test_touching_a_record_without_timestamps_is_unexceptional" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-test_touching_a_record_without_timestamps_is_unexceptional_source')" id="l_method-i-test_touching_a_record_without_timestamps_is_unexceptional_source">show</a>
+                
+                  | <a href="https://github.com/rails/rails/blob/e9c8d28eeac86c5c399e696e85475e658ae6c58f/activerecord/test/cases/timestamp_test.rb#L92" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-test_touching_a_record_without_timestamps_is_unexceptional_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File activerecord/test/cases/timestamp_test.rb, line 92</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">test_touching_a_record_without_timestamps_is_unexceptional</span>
+  <span class="ruby-identifier">assert_nothing_raised</span> { <span class="ruby-constant">Car</span>.<span class="ruby-identifier">first</span>.<span class="ruby-identifier">touch</span> }
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-test_touching_an_attribute_updates_it">
+            
+              <b>test_touching_an_attribute_updates_it</b>()
+            
+            <a href="../classes/TimestampTest.html#method-i-test_touching_an_attribute_updates_it" name="method-i-test_touching_an_attribute_updates_it" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-test_touching_an_attribute_updates_it_source')" id="l_method-i-test_touching_an_attribute_updates_it_source">show</a>
+                
+                  | <a href="https://github.com/rails/rails/blob/e9c8d28eeac86c5c399e696e85475e658ae6c58f/activerecord/test/cases/timestamp_test.rb#L84" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-test_touching_an_attribute_updates_it_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File activerecord/test/cases/timestamp_test.rb, line 84</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">test_touching_an_attribute_updates_it</span>
+  <span class="ruby-identifier">task</span> = <span class="ruby-constant">Task</span>.<span class="ruby-identifier">first</span>
+  <span class="ruby-identifier">previous_value</span> = <span class="ruby-identifier">task</span>.<span class="ruby-identifier">ending</span>
+  <span class="ruby-identifier">task</span>.<span class="ruby-identifier">touch</span>(<span class="ruby-value">:ending</span>)
+  <span class="ruby-identifier">assert_not_equal</span> <span class="ruby-identifier">previous_value</span>, <span class="ruby-identifier">task</span>.<span class="ruby-identifier">ending</span>
+  <span class="ruby-identifier">assert_in_delta</span> <span class="ruby-constant">Time</span>.<span class="ruby-identifier">now</span>, <span class="ruby-identifier">task</span>.<span class="ruby-identifier">ending</span>, <span class="ruby-number">1</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-test_touching_an_attribute_updates_timestamp">
+            
+              <b>test_touching_an_attribute_updates_timestamp</b>()
+            
+            <a href="../classes/TimestampTest.html#method-i-test_touching_an_attribute_updates_timestamp" name="method-i-test_touching_an_attribute_updates_timestamp" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-test_touching_an_attribute_updates_timestamp_source')" id="l_method-i-test_touching_an_attribute_updates_timestamp_source">show</a>
+                
+                  | <a href="https://github.com/rails/rails/blob/e9c8d28eeac86c5c399e696e85475e658ae6c58f/activerecord/test/cases/timestamp_test.rb#L74" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-test_touching_an_attribute_updates_timestamp_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File activerecord/test/cases/timestamp_test.rb, line 74</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">test_touching_an_attribute_updates_timestamp</span>
+  <span class="ruby-identifier">previously_created_at</span> = <span class="ruby-ivar">@developer</span>.<span class="ruby-identifier">created_at</span>
+  <span class="ruby-ivar">@developer</span>.<span class="ruby-identifier">touch</span>(<span class="ruby-value">:created_at</span>)
+
+  <span class="ruby-identifier">assert</span> <span class="ruby-operator">!</span><span class="ruby-ivar">@developer</span>.<span class="ruby-identifier">created_at_changed?</span> , <span class="ruby-string">&#39;created_at should not be changed&#39;</span>
+  <span class="ruby-identifier">assert</span> <span class="ruby-operator">!</span><span class="ruby-ivar">@developer</span>.<span class="ruby-identifier">changed?</span>, <span class="ruby-string">&#39;record should not be changed&#39;</span>
+  <span class="ruby-identifier">assert_not_equal</span> <span class="ruby-identifier">previously_created_at</span>, <span class="ruby-ivar">@developer</span>.<span class="ruby-identifier">created_at</span>
+  <span class="ruby-identifier">assert_not_equal</span> <span class="ruby-ivar">@previously_updated_at</span>, <span class="ruby-ivar">@developer</span>.<span class="ruby-identifier">updated_at</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-test_touching_related_objects">
+            
+              <b>test_touching_related_objects</b>()
+            
+            <a href="../classes/TimestampTest.html#method-i-test_touching_related_objects" name="method-i-test_touching_related_objects" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-test_touching_related_objects_source')" id="l_method-i-test_touching_related_objects_source">show</a>
+                
+                  | <a href="https://github.com/rails/rails/blob/e9c8d28eeac86c5c399e696e85475e658ae6c58f/activerecord/test/cases/timestamp_test.rb#L108" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-test_touching_related_objects_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File activerecord/test/cases/timestamp_test.rb, line 108</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">test_touching_related_objects</span>
+  <span class="ruby-ivar">@owner</span> = <span class="ruby-constant">Owner</span>.<span class="ruby-identifier">first</span>
+  <span class="ruby-ivar">@previously_updated_at</span> = <span class="ruby-ivar">@owner</span>.<span class="ruby-identifier">updated_at</span>
+
+  <span class="ruby-constant">Owner</span>.<span class="ruby-identifier">no_touching</span> <span class="ruby-keyword">do</span>
+    <span class="ruby-ivar">@owner</span>.<span class="ruby-identifier">pets</span>.<span class="ruby-identifier">first</span>.<span class="ruby-identifier">touch</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-identifier">assert_equal</span> <span class="ruby-ivar">@previously_updated_at</span>, <span class="ruby-ivar">@owner</span>.<span class="ruby-identifier">updated_at</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                    </div>
+
+    </div>
+  </body>
+</html>    

@@ -1,0 +1,858 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>TkPackage</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="../css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/main.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/github.css" type="text/css" media="screen" />
+<script src="../js/jquery-1.3.2.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/jquery-effect.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+
+<body>     
+    <div class="banner">
+        
+        <h1>
+            <span class="type">Module</span> 
+            TkPackage 
+            
+        </h1>
+        <ul class="files">
+            
+            <li><a href="../files/ext/tk/lib/tk/package_rb.html">ext/tk/lib/tk/package.rb</a></li>
+            
+        </ul>
+    </div>
+    <div id="bodyContent">
+        <div id="content">
+  
+
+
+  
+
+
+  
+  
+
+
+  
+
+
+  
+    <!-- Method ref -->
+    <div class="sectiontitle">Methods</div>
+    <dl class="methods">
+      
+        <dt>A</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-add_path">add_path</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>F</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-forget">forget</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>I</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-if_needed">if_needed</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>N</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-names">names</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>P</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-prefer">prefer</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-present">present</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-present_exact">present_exact</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-provide">provide</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>R</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-require">require</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-require_exact">require_exact</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>U</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-unknown_proc">unknown_proc</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>V</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-vcompare">vcompare</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-versions">versions</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-vsatisfies">vsatisfies</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+    </dl>
+  
+
+  
+    <!-- Includes -->
+    <div class="sectiontitle">Included Modules</div>
+    <ul>
+      
+        <li>
+          
+            <a href="TkCore.html">
+              TkCore
+            </a>
+          
+        </li>
+      
+    </ul>
+  
+
+
+
+  
+
+    
+
+    
+
+    
+      <!-- Section constants -->
+      <div class="sectiontitle">Constants</div>
+      <table border='0' cellpadding='5'>
+        
+          <tr valign='top'>
+            <td class="attr-name">TkCommandNames</td>
+            <td>=</td>
+            <td class="attr-value">[&#39;package&#39;.freeze].freeze</td>
+          </tr>
+          
+            <tr valign='top'>
+              <td>&nbsp;</td>
+              <td colspan="2" class="attr-desc"></td>
+            </tr>
+          
+        
+      </table>
+    
+
+
+    
+
+
+    <!-- Methods -->
+        
+      <div class="sectiontitle">Instance Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-i-add_path">
+            
+              <b>add_path</b>(path)
+            
+            <a href="../classes/TkPackage.html#method-i-add_path" name="method-i-add_path" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-add_path_source')" id="l_method-i-add_path_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/59a07a0690ea964aa1f6d2f250a9ef176cac49ab/ext/tk/lib/tk/package.rb#L12" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-add_path_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tk/package.rb, line 12</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">add_path</span>(<span class="ruby-identifier">path</span>)
+  <span class="ruby-constant">Tk</span><span class="ruby-operator">::</span><span class="ruby-constant">AUTO_PATH</span>.<span class="ruby-identifier">value</span> = <span class="ruby-constant">Tk</span><span class="ruby-operator">::</span><span class="ruby-constant">AUTO_PATH</span>.<span class="ruby-identifier">to_a</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">path</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-forget">
+            
+              <b>forget</b>(package)
+            
+            <a href="../classes/TkPackage.html#method-i-forget" name="method-i-forget" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-forget_source')" id="l_method-i-forget_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/59a07a0690ea964aa1f6d2f250a9ef176cac49ab/ext/tk/lib/tk/package.rb#L16" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-forget_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tk/package.rb, line 16</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">forget</span>(<span class="ruby-identifier">package</span>)
+  <span class="ruby-identifier">tk_call</span>(<span class="ruby-string">&#39;package&#39;</span>, <span class="ruby-string">&#39;forget&#39;</span>, <span class="ruby-identifier">package</span>)
+  <span class="ruby-keyword">nil</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-if_needed">
+            
+              <b>if_needed</b>(pkg, ver, *arg, &amp;b)
+            
+            <a href="../classes/TkPackage.html#method-i-if_needed" name="method-i-if_needed" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-if_needed_source')" id="l_method-i-if_needed_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/59a07a0690ea964aa1f6d2f250a9ef176cac49ab/ext/tk/lib/tk/package.rb#L21" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-if_needed_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tk/package.rb, line 21</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">if_needed</span>(<span class="ruby-identifier">pkg</span>, <span class="ruby-identifier">ver</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">arg</span>, <span class="ruby-operator">&amp;</span><span class="ruby-identifier">b</span>)
+  <span class="ruby-identifier">size</span> = <span class="ruby-identifier">arg</span>.<span class="ruby-identifier">size</span>
+
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">size</span><span class="ruby-operator">==</span><span class="ruby-number">0</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-operator">!</span><span class="ruby-identifier">b</span>
+    <span class="ruby-comment"># proc info</span>
+    <span class="ruby-identifier">procedure</span>(<span class="ruby-identifier">tk_call</span>(<span class="ruby-string">&#39;package&#39;</span>, <span class="ruby-string">&#39;ifneeded&#39;</span>, <span class="ruby-identifier">pkg</span>, <span class="ruby-identifier">ver</span>))
+
+  <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">size</span><span class="ruby-operator">==</span><span class="ruby-number">0</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">b</span>
+    <span class="ruby-comment"># set proc</span>
+    <span class="ruby-identifier">cmd</span> = <span class="ruby-identifier">proc</span>(<span class="ruby-operator">&amp;</span><span class="ruby-identifier">b</span>)
+    <span class="ruby-identifier">tk_call</span>(<span class="ruby-string">&#39;package&#39;</span>, <span class="ruby-string">&#39;ifneeded&#39;</span>, <span class="ruby-identifier">pkg</span>, <span class="ruby-identifier">ver</span>, <span class="ruby-identifier">cmd</span>)
+    <span class="ruby-identifier">cmd</span>
+
+  <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">size</span><span class="ruby-operator">==</span><span class="ruby-number">1</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-operator">!</span><span class="ruby-identifier">b</span>
+    <span class="ruby-comment"># set proc</span>
+    <span class="ruby-identifier">cmd</span> = <span class="ruby-identifier">arg</span>[<span class="ruby-number">0</span>]
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">cmd</span>
+      <span class="ruby-identifier">tk_call</span>(<span class="ruby-string">&#39;package&#39;</span>, <span class="ruby-string">&#39;ifneeded&#39;</span>, <span class="ruby-identifier">pkg</span>, <span class="ruby-identifier">ver</span>, <span class="ruby-identifier">cmd</span>)
+      <span class="ruby-identifier">cmd</span>
+    <span class="ruby-keyword">else</span>
+      <span class="ruby-comment"># remove proc</span>
+      <span class="ruby-identifier">tk_call</span>(<span class="ruby-string">&#39;package&#39;</span>, <span class="ruby-string">&#39;ifneeded&#39;</span>, <span class="ruby-identifier">pkg</span>, <span class="ruby-identifier">ver</span>, <span class="ruby-string">&#39;&#39;</span>)
+      <span class="ruby-keyword">nil</span>
+    <span class="ruby-keyword">end</span>
+
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">fail</span> <span class="ruby-constant">ArgumentError</span>, <span class="ruby-string">&#39;too many arguments&#39;</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-names">
+            
+              <b>names</b>()
+            
+            <a href="../classes/TkPackage.html#method-i-names" name="method-i-names" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-names_source')" id="l_method-i-names_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/59a07a0690ea964aa1f6d2f250a9ef176cac49ab/ext/tk/lib/tk/package.rb#L51" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-names_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tk/package.rb, line 51</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">names</span>
+  <span class="ruby-identifier">tk_split_simplelist</span>(<span class="ruby-identifier">tk_call</span>(<span class="ruby-string">&#39;package&#39;</span>, <span class="ruby-string">&#39;names&#39;</span>))
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-prefer">
+            
+              <b>prefer</b>(setting = None)
+            
+            <a href="../classes/TkPackage.html#method-i-prefer" name="method-i-prefer" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-prefer_source')" id="l_method-i-prefer_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/59a07a0690ea964aa1f6d2f250a9ef176cac49ab/ext/tk/lib/tk/package.rb#L140" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-prefer_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tk/package.rb, line 140</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">prefer</span>(<span class="ruby-identifier">setting</span> = <span class="ruby-constant">None</span>)
+  <span class="ruby-identifier">tk_call</span>(<span class="ruby-string">&#39;package&#39;</span>, <span class="ruby-string">&#39;prefer&#39;</span>, <span class="ruby-identifier">setting</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-present">
+            
+              <b>present</b>(package, version=None)
+            
+            <a href="../classes/TkPackage.html#method-i-present" name="method-i-present" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-present_source')" id="l_method-i-present_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/59a07a0690ea964aa1f6d2f250a9ef176cac49ab/ext/tk/lib/tk/package.rb#L66" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-present_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tk/package.rb, line 66</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">present</span>(<span class="ruby-identifier">package</span>, <span class="ruby-identifier">version</span>=<span class="ruby-constant">None</span>)
+  <span class="ruby-keyword">begin</span>
+    <span class="ruby-identifier">tk_call</span>(<span class="ruby-string">&#39;package&#39;</span>, <span class="ruby-string">&#39;present&#39;</span>, <span class="ruby-identifier">package</span>, <span class="ruby-identifier">version</span>)
+  <span class="ruby-keyword">rescue</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">e</span>
+    <span class="ruby-identifier">fail</span> <span class="ruby-identifier">e</span>.<span class="ruby-identifier">class</span>, <span class="ruby-string">&#39;TkPackage &#39;</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">e</span>.<span class="ruby-identifier">message</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-present_exact">
+            
+              <b>present_exact</b>(package, version)
+            
+            <a href="../classes/TkPackage.html#method-i-present_exact" name="method-i-present_exact" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-present_exact_source')" id="l_method-i-present_exact_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/59a07a0690ea964aa1f6d2f250a9ef176cac49ab/ext/tk/lib/tk/package.rb#L74" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-present_exact_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tk/package.rb, line 74</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">present_exact</span>(<span class="ruby-identifier">package</span>, <span class="ruby-identifier">version</span>)
+  <span class="ruby-keyword">begin</span>
+    <span class="ruby-identifier">tk_call</span>(<span class="ruby-string">&#39;package&#39;</span>, <span class="ruby-string">&#39;present&#39;</span>, <span class="ruby-string">&#39;-exact&#39;</span>, <span class="ruby-identifier">package</span>, <span class="ruby-identifier">version</span>)
+  <span class="ruby-keyword">rescue</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">e</span>
+    <span class="ruby-identifier">fail</span> <span class="ruby-identifier">e</span>.<span class="ruby-identifier">class</span>, <span class="ruby-string">&#39;TkPackage &#39;</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">e</span>.<span class="ruby-identifier">message</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-provide">
+            
+              <b>provide</b>(package, version=nil)
+            
+            <a href="../classes/TkPackage.html#method-i-provide" name="method-i-provide" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-provide_source')" id="l_method-i-provide_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/59a07a0690ea964aa1f6d2f250a9ef176cac49ab/ext/tk/lib/tk/package.rb#L55" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-provide_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tk/package.rb, line 55</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">provide</span>(<span class="ruby-identifier">package</span>, <span class="ruby-identifier">version</span>=<span class="ruby-keyword">nil</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">version</span>
+    <span class="ruby-identifier">tk_call</span>(<span class="ruby-string">&#39;package&#39;</span>, <span class="ruby-string">&#39;provide&#39;</span>, <span class="ruby-identifier">package</span>, <span class="ruby-identifier">version</span>)
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">if</span> (<span class="ruby-identifier">ret</span> = <span class="ruby-identifier">tk_call</span>(<span class="ruby-string">&#39;package&#39;</span>, <span class="ruby-string">&#39;provide&#39;</span>, <span class="ruby-identifier">package</span>)) <span class="ruby-operator">==</span> <span class="ruby-string">&#39;&#39;</span>
+    <span class="ruby-keyword">nil</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">ret</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-require">
+            
+              <b>require</b>(package, version=None)
+            
+            <a href="../classes/TkPackage.html#method-i-require" name="method-i-require" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-require_source')" id="l_method-i-require_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/59a07a0690ea964aa1f6d2f250a9ef176cac49ab/ext/tk/lib/tk/package.rb#L82" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-require_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tk/package.rb, line 82</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">require</span>(<span class="ruby-identifier">package</span>, <span class="ruby-identifier">version</span>=<span class="ruby-constant">None</span>)
+  <span class="ruby-keyword">begin</span>
+    <span class="ruby-identifier">tk_call</span>(<span class="ruby-string">&#39;package&#39;</span>, <span class="ruby-string">&#39;require&#39;</span>, <span class="ruby-identifier">package</span>, <span class="ruby-identifier">version</span>)
+  <span class="ruby-keyword">rescue</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">e</span>
+    <span class="ruby-identifier">fail</span> <span class="ruby-identifier">e</span>.<span class="ruby-identifier">class</span>, <span class="ruby-string">&#39;TkPackage &#39;</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">e</span>.<span class="ruby-identifier">message</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-require_exact">
+            
+              <b>require_exact</b>(package, version)
+            
+            <a href="../classes/TkPackage.html#method-i-require_exact" name="method-i-require_exact" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-require_exact_source')" id="l_method-i-require_exact_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/59a07a0690ea964aa1f6d2f250a9ef176cac49ab/ext/tk/lib/tk/package.rb#L90" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-require_exact_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tk/package.rb, line 90</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">require_exact</span>(<span class="ruby-identifier">package</span>, <span class="ruby-identifier">version</span>)
+  <span class="ruby-keyword">begin</span>
+    <span class="ruby-identifier">tk_call</span>(<span class="ruby-string">&#39;package&#39;</span>, <span class="ruby-string">&#39;require&#39;</span>, <span class="ruby-string">&#39;-exact&#39;</span>, <span class="ruby-identifier">package</span>, <span class="ruby-identifier">version</span>)
+  <span class="ruby-keyword">rescue</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">e</span>
+    <span class="ruby-identifier">fail</span> <span class="ruby-identifier">e</span>.<span class="ruby-identifier">class</span>, <span class="ruby-string">&#39;TkPackage &#39;</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">e</span>.<span class="ruby-identifier">message</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-unknown_proc">
+            
+              <b>unknown_proc</b>(*arg, &amp;b)
+            
+            <a href="../classes/TkPackage.html#method-i-unknown_proc" name="method-i-unknown_proc" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-unknown_proc_source')" id="l_method-i-unknown_proc_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/59a07a0690ea964aa1f6d2f250a9ef176cac49ab/ext/tk/lib/tk/package.rb#L98" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-unknown_proc_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tk/package.rb, line 98</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">unknown_proc</span>(<span class="ruby-operator">*</span><span class="ruby-identifier">arg</span>, <span class="ruby-operator">&amp;</span><span class="ruby-identifier">b</span>)
+  <span class="ruby-identifier">size</span> = <span class="ruby-identifier">arg</span>.<span class="ruby-identifier">size</span>
+
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">size</span><span class="ruby-operator">==</span><span class="ruby-number">0</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-operator">!</span><span class="ruby-identifier">b</span>
+    <span class="ruby-comment"># proc info</span>
+    <span class="ruby-identifier">procedure</span>(<span class="ruby-identifier">tk_call</span>(<span class="ruby-string">&#39;package&#39;</span>, <span class="ruby-string">&#39;unknown&#39;</span>))
+
+  <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">size</span><span class="ruby-operator">==</span><span class="ruby-number">0</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">b</span>
+    <span class="ruby-comment"># set proc</span>
+    <span class="ruby-identifier">cmd</span> = <span class="ruby-identifier">proc</span>(<span class="ruby-operator">&amp;</span><span class="ruby-identifier">b</span>)
+    <span class="ruby-identifier">tk_call</span>(<span class="ruby-string">&#39;package&#39;</span>, <span class="ruby-string">&#39;unknown&#39;</span>, <span class="ruby-identifier">cmd</span>)
+    <span class="ruby-identifier">cmd</span>
+
+  <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">size</span><span class="ruby-operator">==</span><span class="ruby-number">1</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-operator">!</span><span class="ruby-identifier">b</span>
+    <span class="ruby-comment"># set proc</span>
+    <span class="ruby-identifier">cmd</span> = <span class="ruby-identifier">arg</span>[<span class="ruby-number">0</span>]
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">cmd</span>
+      <span class="ruby-identifier">tk_call</span>(<span class="ruby-string">&#39;package&#39;</span>, <span class="ruby-string">&#39;unknown&#39;</span>, <span class="ruby-identifier">cmd</span>)
+      <span class="ruby-identifier">cmd</span>
+    <span class="ruby-keyword">else</span>
+      <span class="ruby-comment"># remove proc</span>
+      <span class="ruby-identifier">tk_call</span>(<span class="ruby-string">&#39;package&#39;</span>, <span class="ruby-string">&#39;unknown&#39;</span>, <span class="ruby-string">&#39;&#39;</span>)
+      <span class="ruby-keyword">nil</span>
+    <span class="ruby-keyword">end</span>
+
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">fail</span> <span class="ruby-constant">ArgumentError</span>, <span class="ruby-string">&#39;too many arguments&#39;</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-vcompare">
+            
+              <b>vcompare</b>(version1, version2)
+            
+            <a href="../classes/TkPackage.html#method-i-vcompare" name="method-i-vcompare" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-vcompare_source')" id="l_method-i-vcompare_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/59a07a0690ea964aa1f6d2f250a9ef176cac49ab/ext/tk/lib/tk/package.rb#L132" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-vcompare_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tk/package.rb, line 132</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">vcompare</span>(<span class="ruby-identifier">version1</span>, <span class="ruby-identifier">version2</span>)
+  <span class="ruby-identifier">number</span>(<span class="ruby-identifier">tk_call</span>(<span class="ruby-string">&#39;package&#39;</span>, <span class="ruby-string">&#39;vcompare&#39;</span>, <span class="ruby-identifier">version1</span>, <span class="ruby-identifier">version2</span>))
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-versions">
+            
+              <b>versions</b>(package)
+            
+            <a href="../classes/TkPackage.html#method-i-versions" name="method-i-versions" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-versions_source')" id="l_method-i-versions_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/59a07a0690ea964aa1f6d2f250a9ef176cac49ab/ext/tk/lib/tk/package.rb#L128" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-versions_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tk/package.rb, line 128</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">versions</span>(<span class="ruby-identifier">package</span>)
+  <span class="ruby-identifier">tk_split_simplelist</span>(<span class="ruby-identifier">tk_call</span>(<span class="ruby-string">&#39;package&#39;</span>, <span class="ruby-string">&#39;versions&#39;</span>, <span class="ruby-identifier">package</span>))
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-vsatisfies">
+            
+              <b>vsatisfies</b>(version1, version2)
+            
+            <a href="../classes/TkPackage.html#method-i-vsatisfies" name="method-i-vsatisfies" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-vsatisfies_source')" id="l_method-i-vsatisfies_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/59a07a0690ea964aa1f6d2f250a9ef176cac49ab/ext/tk/lib/tk/package.rb#L136" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-vsatisfies_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tk/package.rb, line 136</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">vsatisfies</span>(<span class="ruby-identifier">version1</span>, <span class="ruby-identifier">version2</span>)
+  <span class="ruby-identifier">bool</span>(<span class="ruby-identifier">tk_call</span>(<span class="ruby-string">&#39;package&#39;</span>, <span class="ruby-string">&#39;vsatisfies&#39;</span>, <span class="ruby-identifier">version1</span>, <span class="ruby-identifier">version2</span>))
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                    </div>
+
+    </div>
+  </body>
+</html>    

@@ -1,0 +1,2009 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>PostgresqlHstoreTest</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="../css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/main.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/github.css" type="text/css" media="screen" />
+<script src="../js/jquery-1.3.2.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/jquery-effect.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+
+<body>     
+    <div class="banner">
+        
+        <h1>
+            <span class="type">Class</span> 
+            PostgresqlHstoreTest 
+            
+                <span class="parent">&lt; 
+                    
+                    ActiveRecord::TestCase
+                    
+                </span>
+            
+        </h1>
+        <ul class="files">
+            
+            <li><a href="../files/activerecord/test/cases/adapters/postgresql/hstore_test_rb.html">activerecord/test/cases/adapters/postgresql/hstore_test.rb</a></li>
+            
+        </ul>
+    </div>
+    <div id="bodyContent">
+        <div id="content">
+  
+
+
+  
+
+
+  
+  
+
+
+  
+    <!-- Namespace -->
+    <div class="sectiontitle">Namespace</div>
+    <ul>
+      
+        <li>
+          <span class="type">CLASS</span>
+          <a href="PostgresqlHstoreTest/Hstore.html">PostgresqlHstoreTest::Hstore</a>
+        </li>
+      
+    </ul>
+  
+
+
+  
+    <!-- Method ref -->
+    <div class="sectiontitle">Methods</div>
+    <dl class="methods">
+      
+        <dt>C</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-change">change</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>S</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-setup">setup</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>T</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-teardown">teardown</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-test_array_cycle">test_array_cycle</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-test_array_strings_with_array_delimiters">test_array_strings_with_array_delimiters</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-test_array_strings_with_commas">test_array_strings_with_commas</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-test_array_strings_with_null_strings">test_array_strings_with_null_strings</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-test_array_strings_with_quotes">test_array_strings_with_quotes</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-test_arrow">test_arrow</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-test_backslash">test_backslash</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-test_cast_value_on_write">test_cast_value_on_write</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-test_change_table_supports_hstore">test_change_table_supports_hstore</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-test_column">test_column</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-test_comma">test_comma</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-test_contains_nils">test_contains_nils</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-test_create">test_create</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-test_disable_enable_hstore">test_disable_enable_hstore</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-test_gen1">test_gen1</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-test_gen2">test_gen2</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-test_gen3">test_gen3</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-test_gen4">test_gen4</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-test_hstore_included_in_extensions">test_hstore_included_in_extensions</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-test_hstore_migration">test_hstore_migration</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-test_multiline">test_multiline</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-test_nil">test_nil</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-test_parse1">test_parse1</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-test_parse2">test_parse2</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-test_parse3">test_parse3</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-test_parse4">test_parse4</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-test_parse5">test_parse5</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-test_parse6">test_parse6</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-test_parse7">test_parse7</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-test_quotes">test_quotes</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-test_quoting_special_characters">test_quoting_special_characters</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-test_rewrite">test_rewrite</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-test_select">test_select</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-test_select_multikey">test_select_multikey</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-test_type_cast_hstore">test_type_cast_hstore</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-test_update_all">test_update_all</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-test_whitespace">test_whitespace</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-test_with_store_accessors">test_with_store_accessors</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+    </dl>
+  
+
+  
+
+
+
+  
+
+    
+
+    
+
+    
+
+
+    
+
+
+    <!-- Methods -->
+        
+      <div class="sectiontitle">Instance Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-i-change">
+            
+              <b>change</b>()
+            
+            <a href="../classes/PostgresqlHstoreTest.html#method-i-change" name="method-i-change" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-change_source')" id="l_method-i-change_source">show</a>
+                
+                  | <a href="https://github.com/rails/rails/blob/da3fec2ea3a6a13635500a667c105280c5357c14/activerecord/test/cases/adapters/postgresql/hstore_test.rb#L75" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-change_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File activerecord/test/cases/adapters/postgresql/hstore_test.rb, line 75</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">change</span>
+  <span class="ruby-identifier">change_table</span>(<span class="ruby-string">&quot;hstores&quot;</span>) <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">t</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">t</span>.<span class="ruby-identifier">hstore</span> <span class="ruby-value">:keys</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-setup">
+            
+              <b>setup</b>()
+            
+            <a href="../classes/PostgresqlHstoreTest.html#method-i-setup" name="method-i-setup" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-setup_source')" id="l_method-i-setup_source">show</a>
+                
+                  | <a href="https://github.com/rails/rails/blob/da3fec2ea3a6a13635500a667c105280c5357c14/activerecord/test/cases/adapters/postgresql/hstore_test.rb#L13" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-setup_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File activerecord/test/cases/adapters/postgresql/hstore_test.rb, line 13</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">setup</span>
+  <span class="ruby-ivar">@connection</span> = <span class="ruby-constant">ActiveRecord</span><span class="ruby-operator">::</span><span class="ruby-constant">Base</span>.<span class="ruby-identifier">connection</span>
+
+  <span class="ruby-keyword">unless</span> <span class="ruby-ivar">@connection</span>.<span class="ruby-identifier">extension_enabled?</span>(<span class="ruby-string">&#39;hstore&#39;</span>)
+    <span class="ruby-ivar">@connection</span>.<span class="ruby-identifier">enable_extension</span> <span class="ruby-string">&#39;hstore&#39;</span>
+    <span class="ruby-ivar">@connection</span>.<span class="ruby-identifier">commit_db_transaction</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-ivar">@connection</span>.<span class="ruby-identifier">reconnect!</span>
+
+  <span class="ruby-ivar">@connection</span>.<span class="ruby-identifier">transaction</span> <span class="ruby-keyword">do</span>
+    <span class="ruby-ivar">@connection</span>.<span class="ruby-identifier">create_table</span>(<span class="ruby-string">&#39;hstores&#39;</span>) <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">t</span><span class="ruby-operator">|</span>
+      <span class="ruby-identifier">t</span>.<span class="ruby-identifier">hstore</span> <span class="ruby-string">&#39;tags&#39;</span>, <span class="ruby-value">:default</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&#39;&#39;</span>
+      <span class="ruby-identifier">t</span>.<span class="ruby-identifier">hstore</span> <span class="ruby-string">&#39;payload&#39;</span>, <span class="ruby-identifier">array</span><span class="ruby-operator">:</span> <span class="ruby-keyword">true</span>
+      <span class="ruby-identifier">t</span>.<span class="ruby-identifier">hstore</span> <span class="ruby-string">&#39;settings&#39;</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-ivar">@column</span> = <span class="ruby-constant">Hstore</span>.<span class="ruby-identifier">columns</span>.<span class="ruby-identifier">find</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">c</span><span class="ruby-operator">|</span> <span class="ruby-identifier">c</span>.<span class="ruby-identifier">name</span> <span class="ruby-operator">==</span> <span class="ruby-string">&#39;tags&#39;</span> }
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-teardown">
+            
+              <b>teardown</b>()
+            
+            <a href="../classes/PostgresqlHstoreTest.html#method-i-teardown" name="method-i-teardown" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-teardown_source')" id="l_method-i-teardown_source">show</a>
+                
+                  | <a href="https://github.com/rails/rails/blob/da3fec2ea3a6a13635500a667c105280c5357c14/activerecord/test/cases/adapters/postgresql/hstore_test.rb#L33" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-teardown_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File activerecord/test/cases/adapters/postgresql/hstore_test.rb, line 33</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">teardown</span>
+  <span class="ruby-ivar">@connection</span>.<span class="ruby-identifier">execute</span> <span class="ruby-string">&#39;drop table if exists hstores&#39;</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-test_array_cycle">
+            
+              <b>test_array_cycle</b>()
+            
+            <a href="../classes/PostgresqlHstoreTest.html#method-i-test_array_cycle" name="method-i-test_array_cycle" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-test_array_cycle_source')" id="l_method-i-test_array_cycle_source">show</a>
+                
+                  | <a href="https://github.com/rails/rails/blob/da3fec2ea3a6a13635500a667c105280c5357c14/activerecord/test/cases/adapters/postgresql/hstore_test.rb#L185" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-test_array_cycle_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File activerecord/test/cases/adapters/postgresql/hstore_test.rb, line 185</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">test_array_cycle</span>
+  <span class="ruby-identifier">assert_array_cycle</span>([{<span class="ruby-string">&quot;AA&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;BB&quot;</span>, <span class="ruby-string">&quot;CC&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;DD&quot;</span>}, {<span class="ruby-string">&quot;AA&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword">nil</span>}])
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-test_array_strings_with_array_delimiters">
+            
+              <b>test_array_strings_with_array_delimiters</b>()
+            
+            <a href="../classes/PostgresqlHstoreTest.html#method-i-test_array_strings_with_array_delimiters" name="method-i-test_array_strings_with_array_delimiters" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-test_array_strings_with_array_delimiters_source')" id="l_method-i-test_array_strings_with_array_delimiters_source">show</a>
+                
+                  | <a href="https://github.com/rails/rails/blob/da3fec2ea3a6a13635500a667c105280c5357c14/activerecord/test/cases/adapters/postgresql/hstore_test.rb#L197" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-test_array_strings_with_array_delimiters_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File activerecord/test/cases/adapters/postgresql/hstore_test.rb, line 197</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">test_array_strings_with_array_delimiters</span>
+  <span class="ruby-identifier">assert_array_cycle</span>([<span class="ruby-string">&#39;{&#39;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&#39;}&#39;</span>])
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-test_array_strings_with_commas">
+            
+              <b>test_array_strings_with_commas</b>()
+            
+            <a href="../classes/PostgresqlHstoreTest.html#method-i-test_array_strings_with_commas" name="method-i-test_array_strings_with_commas" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-test_array_strings_with_commas_source')" id="l_method-i-test_array_strings_with_commas_source">show</a>
+                
+                  | <a href="https://github.com/rails/rails/blob/da3fec2ea3a6a13635500a667c105280c5357c14/activerecord/test/cases/adapters/postgresql/hstore_test.rb#L193" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-test_array_strings_with_commas_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File activerecord/test/cases/adapters/postgresql/hstore_test.rb, line 193</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">test_array_strings_with_commas</span>
+  <span class="ruby-identifier">assert_array_cycle</span>([{<span class="ruby-string">&#39;this,has&#39;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&#39;many,values&#39;</span>}])
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-test_array_strings_with_null_strings">
+            
+              <b>test_array_strings_with_null_strings</b>()
+            
+            <a href="../classes/PostgresqlHstoreTest.html#method-i-test_array_strings_with_null_strings" name="method-i-test_array_strings_with_null_strings" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-test_array_strings_with_null_strings_source')" id="l_method-i-test_array_strings_with_null_strings_source">show</a>
+                
+                  | <a href="https://github.com/rails/rails/blob/da3fec2ea3a6a13635500a667c105280c5357c14/activerecord/test/cases/adapters/postgresql/hstore_test.rb#L201" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-test_array_strings_with_null_strings_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File activerecord/test/cases/adapters/postgresql/hstore_test.rb, line 201</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">test_array_strings_with_null_strings</span>
+  <span class="ruby-identifier">assert_array_cycle</span>([{<span class="ruby-string">&#39;NULL&#39;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&#39;NULL&#39;</span>}])
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-test_array_strings_with_quotes">
+            
+              <b>test_array_strings_with_quotes</b>()
+            
+            <a href="../classes/PostgresqlHstoreTest.html#method-i-test_array_strings_with_quotes" name="method-i-test_array_strings_with_quotes" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-test_array_strings_with_quotes_source')" id="l_method-i-test_array_strings_with_quotes_source">show</a>
+                
+                  | <a href="https://github.com/rails/rails/blob/da3fec2ea3a6a13635500a667c105280c5357c14/activerecord/test/cases/adapters/postgresql/hstore_test.rb#L189" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-test_array_strings_with_quotes_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File activerecord/test/cases/adapters/postgresql/hstore_test.rb, line 189</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">test_array_strings_with_quotes</span>
+  <span class="ruby-identifier">assert_array_cycle</span>([{<span class="ruby-string">&#39;this has&#39;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&#39;some &quot;s that need to be escaped&quot;&#39;</span>}])
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-test_arrow">
+            
+              <b>test_arrow</b>()
+            
+            <a href="../classes/PostgresqlHstoreTest.html#method-i-test_arrow" name="method-i-test_arrow" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-test_arrow_source')" id="l_method-i-test_arrow_source">show</a>
+                
+                  | <a href="https://github.com/rails/rails/blob/da3fec2ea3a6a13635500a667c105280c5357c14/activerecord/test/cases/adapters/postgresql/hstore_test.rb#L239" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-test_arrow_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File activerecord/test/cases/adapters/postgresql/hstore_test.rb, line 239</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">test_arrow</span>
+  <span class="ruby-identifier">assert_cycle</span>(<span class="ruby-string">&#39;a=&gt;b&#39;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&#39;bar&#39;</span>, <span class="ruby-string">&#39;1&quot;foo&#39;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&#39;2&#39;</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-test_backslash">
+            
+              <b>test_backslash</b>()
+            
+            <a href="../classes/PostgresqlHstoreTest.html#method-i-test_backslash" name="method-i-test_backslash" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-test_backslash_source')" id="l_method-i-test_backslash_source">show</a>
+                
+                  | <a href="https://github.com/rails/rails/blob/da3fec2ea3a6a13635500a667c105280c5357c14/activerecord/test/cases/adapters/postgresql/hstore_test.rb#L231" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-test_backslash_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File activerecord/test/cases/adapters/postgresql/hstore_test.rb, line 231</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">test_backslash</span>
+  <span class="ruby-identifier">assert_cycle</span>(<span class="ruby-string">&#39;a\b&#39;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&#39;b\ar&#39;</span>, <span class="ruby-string">&#39;1&quot;foo&#39;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&#39;2&#39;</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-test_cast_value_on_write">
+            
+              <b>test_cast_value_on_write</b>()
+            
+            <a href="../classes/PostgresqlHstoreTest.html#method-i-test_cast_value_on_write" name="method-i-test_cast_value_on_write" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-test_cast_value_on_write_source')" id="l_method-i-test_cast_value_on_write_source">show</a>
+                
+                  | <a href="https://github.com/rails/rails/blob/da3fec2ea3a6a13635500a667c105280c5357c14/activerecord/test/cases/adapters/postgresql/hstore_test.rb#L90" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-test_cast_value_on_write_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File activerecord/test/cases/adapters/postgresql/hstore_test.rb, line 90</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">test_cast_value_on_write</span>
+  <span class="ruby-identifier">x</span> = <span class="ruby-constant">Hstore</span>.<span class="ruby-identifier">new</span> <span class="ruby-identifier">tags</span><span class="ruby-operator">:</span> {<span class="ruby-string">&quot;bool&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword">true</span>, <span class="ruby-string">&quot;number&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-number">5</span>}
+  <span class="ruby-identifier">assert_equal</span>({<span class="ruby-string">&quot;bool&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;true&quot;</span>, <span class="ruby-string">&quot;number&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;5&quot;</span>}, <span class="ruby-identifier">x</span>.<span class="ruby-identifier">tags</span>)
+  <span class="ruby-identifier">x</span>.<span class="ruby-identifier">save</span>
+  <span class="ruby-identifier">assert_equal</span>({<span class="ruby-string">&quot;bool&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;true&quot;</span>, <span class="ruby-string">&quot;number&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;5&quot;</span>}, <span class="ruby-identifier">x</span>.<span class="ruby-identifier">reload</span>.<span class="ruby-identifier">tags</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-test_change_table_supports_hstore">
+            
+              <b>test_change_table_supports_hstore</b>()
+            
+            <a href="../classes/PostgresqlHstoreTest.html#method-i-test_change_table_supports_hstore" name="method-i-test_change_table_supports_hstore" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-test_change_table_supports_hstore_source')" id="l_method-i-test_change_table_supports_hstore_source">show</a>
+                
+                  | <a href="https://github.com/rails/rails/blob/da3fec2ea3a6a13635500a667c105280c5357c14/activerecord/test/cases/adapters/postgresql/hstore_test.rb#L58" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-test_change_table_supports_hstore_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File activerecord/test/cases/adapters/postgresql/hstore_test.rb, line 58</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">test_change_table_supports_hstore</span>
+  <span class="ruby-ivar">@connection</span>.<span class="ruby-identifier">transaction</span> <span class="ruby-keyword">do</span>
+    <span class="ruby-ivar">@connection</span>.<span class="ruby-identifier">change_table</span>(<span class="ruby-string">&#39;hstores&#39;</span>) <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">t</span><span class="ruby-operator">|</span>
+      <span class="ruby-identifier">t</span>.<span class="ruby-identifier">hstore</span> <span class="ruby-string">&#39;users&#39;</span>, <span class="ruby-identifier">default</span><span class="ruby-operator">:</span> <span class="ruby-string">&#39;&#39;</span>
+    <span class="ruby-keyword">end</span>
+    <span class="ruby-constant">Hstore</span>.<span class="ruby-identifier">reset_column_information</span>
+    <span class="ruby-identifier">column</span> = <span class="ruby-constant">Hstore</span>.<span class="ruby-identifier">columns</span>.<span class="ruby-identifier">find</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">c</span><span class="ruby-operator">|</span> <span class="ruby-identifier">c</span>.<span class="ruby-identifier">name</span> <span class="ruby-operator">==</span> <span class="ruby-string">&#39;users&#39;</span> }
+    <span class="ruby-identifier">assert_equal</span> <span class="ruby-value">:hstore</span>, <span class="ruby-identifier">column</span>.<span class="ruby-identifier">type</span>
+
+    <span class="ruby-identifier">raise</span> <span class="ruby-constant">ActiveRecord</span><span class="ruby-operator">::</span><span class="ruby-constant">Rollback</span> <span class="ruby-comment"># reset the schema change</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">ensure</span>
+  <span class="ruby-constant">Hstore</span>.<span class="ruby-identifier">reset_column_information</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-test_column">
+            
+              <b>test_column</b>()
+            
+            <a href="../classes/PostgresqlHstoreTest.html#method-i-test_column" name="method-i-test_column" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-test_column_source')" id="l_method-i-test_column_source">show</a>
+                
+                  | <a href="https://github.com/rails/rails/blob/da3fec2ea3a6a13635500a667c105280c5357c14/activerecord/test/cases/adapters/postgresql/hstore_test.rb#L54" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-test_column_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File activerecord/test/cases/adapters/postgresql/hstore_test.rb, line 54</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">test_column</span>
+  <span class="ruby-identifier">assert_equal</span> <span class="ruby-value">:hstore</span>, <span class="ruby-ivar">@column</span>.<span class="ruby-identifier">type</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-test_comma">
+            
+              <b>test_comma</b>()
+            
+            <a href="../classes/PostgresqlHstoreTest.html#method-i-test_comma" name="method-i-test_comma" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-test_comma_source')" id="l_method-i-test_comma_source">show</a>
+                
+                  | <a href="https://github.com/rails/rails/blob/da3fec2ea3a6a13635500a667c105280c5357c14/activerecord/test/cases/adapters/postgresql/hstore_test.rb#L235" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-test_comma_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File activerecord/test/cases/adapters/postgresql/hstore_test.rb, line 235</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">test_comma</span>
+  <span class="ruby-identifier">assert_cycle</span>(<span class="ruby-string">&#39;a, b&#39;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&#39;bar&#39;</span>, <span class="ruby-string">&#39;1&quot;foo&#39;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&#39;2&#39;</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-test_contains_nils">
+            
+              <b>test_contains_nils</b>()
+            
+            <a href="../classes/PostgresqlHstoreTest.html#method-i-test_contains_nils" name="method-i-test_contains_nils" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-test_contains_nils_source')" id="l_method-i-test_contains_nils_source">show</a>
+                
+                  | <a href="https://github.com/rails/rails/blob/da3fec2ea3a6a13635500a667c105280c5357c14/activerecord/test/cases/adapters/postgresql/hstore_test.rb#L205" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-test_contains_nils_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File activerecord/test/cases/adapters/postgresql/hstore_test.rb, line 205</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">test_contains_nils</span>
+  <span class="ruby-identifier">assert_array_cycle</span>([{<span class="ruby-string">&#39;NULL&#39;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword">nil</span>}])
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-test_create">
+            
+              <b>test_create</b>()
+            
+            <a href="../classes/PostgresqlHstoreTest.html#method-i-test_create" name="method-i-test_create" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-test_create_source')" id="l_method-i-test_create_source">show</a>
+                
+                  | <a href="https://github.com/rails/rails/blob/da3fec2ea3a6a13635500a667c105280c5357c14/activerecord/test/cases/adapters/postgresql/hstore_test.rb#L215" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-test_create_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File activerecord/test/cases/adapters/postgresql/hstore_test.rb, line 215</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">test_create</span>
+  <span class="ruby-identifier">assert_cycle</span>(<span class="ruby-string">&#39;a&#39;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&#39;b&#39;</span>, <span class="ruby-string">&#39;1&#39;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&#39;2&#39;</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-test_disable_enable_hstore">
+            
+              <b>test_disable_enable_hstore</b>()
+            
+            <a href="../classes/PostgresqlHstoreTest.html#method-i-test_disable_enable_hstore" name="method-i-test_disable_enable_hstore" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-test_disable_enable_hstore_source')" id="l_method-i-test_disable_enable_hstore_source">show</a>
+                
+                  | <a href="https://github.com/rails/rails/blob/da3fec2ea3a6a13635500a667c105280c5357c14/activerecord/test/cases/adapters/postgresql/hstore_test.rb#L43" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-test_disable_enable_hstore_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File activerecord/test/cases/adapters/postgresql/hstore_test.rb, line 43</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">test_disable_enable_hstore</span>
+  <span class="ruby-identifier">assert</span> <span class="ruby-ivar">@connection</span>.<span class="ruby-identifier">extension_enabled?</span>(<span class="ruby-string">&#39;hstore&#39;</span>)
+  <span class="ruby-ivar">@connection</span>.<span class="ruby-identifier">disable_extension</span> <span class="ruby-string">&#39;hstore&#39;</span>
+  <span class="ruby-identifier">assert_not</span> <span class="ruby-ivar">@connection</span>.<span class="ruby-identifier">extension_enabled?</span>(<span class="ruby-string">&#39;hstore&#39;</span>)
+  <span class="ruby-ivar">@connection</span>.<span class="ruby-identifier">enable_extension</span> <span class="ruby-string">&#39;hstore&#39;</span>
+  <span class="ruby-identifier">assert</span> <span class="ruby-ivar">@connection</span>.<span class="ruby-identifier">extension_enabled?</span>(<span class="ruby-string">&#39;hstore&#39;</span>)
+<span class="ruby-keyword">ensure</span>
+  <span class="ruby-comment"># Restore column(s) dropped by `drop extension hstore cascade;`</span>
+  <span class="ruby-identifier">load_schema</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-test_gen1">
+            
+              <b>test_gen1</b>()
+            
+            <a href="../classes/PostgresqlHstoreTest.html#method-i-test_gen1" name="method-i-test_gen1" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-test_gen1_source')" id="l_method-i-test_gen1_source">show</a>
+                
+                  | <a href="https://github.com/rails/rails/blob/da3fec2ea3a6a13635500a667c105280c5357c14/activerecord/test/cases/adapters/postgresql/hstore_test.rb#L128" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-test_gen1_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File activerecord/test/cases/adapters/postgresql/hstore_test.rb, line 128</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">test_gen1</span>
+  <span class="ruby-identifier">assert_equal</span>(<span class="ruby-string">%q(&quot; &quot;=&gt;&quot;&quot;)</span>, <span class="ruby-ivar">@column</span>.<span class="ruby-identifier">class</span>.<span class="ruby-identifier">hstore_to_string</span>({<span class="ruby-string">&#39; &#39;</span>=<span class="ruby-operator">&gt;</span><span class="ruby-string">&#39;&#39;</span>}))
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-test_gen2">
+            
+              <b>test_gen2</b>()
+            
+            <a href="../classes/PostgresqlHstoreTest.html#method-i-test_gen2" name="method-i-test_gen2" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-test_gen2_source')" id="l_method-i-test_gen2_source">show</a>
+                
+                  | <a href="https://github.com/rails/rails/blob/da3fec2ea3a6a13635500a667c105280c5357c14/activerecord/test/cases/adapters/postgresql/hstore_test.rb#L132" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-test_gen2_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File activerecord/test/cases/adapters/postgresql/hstore_test.rb, line 132</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">test_gen2</span>
+  <span class="ruby-identifier">assert_equal</span>(<span class="ruby-string">%q(&quot;,&quot;=&gt;&quot;&quot;)</span>, <span class="ruby-ivar">@column</span>.<span class="ruby-identifier">class</span>.<span class="ruby-identifier">hstore_to_string</span>({<span class="ruby-string">&#39;,&#39;</span>=<span class="ruby-operator">&gt;</span><span class="ruby-string">&#39;&#39;</span>}))
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-test_gen3">
+            
+              <b>test_gen3</b>()
+            
+            <a href="../classes/PostgresqlHstoreTest.html#method-i-test_gen3" name="method-i-test_gen3" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-test_gen3_source')" id="l_method-i-test_gen3_source">show</a>
+                
+                  | <a href="https://github.com/rails/rails/blob/da3fec2ea3a6a13635500a667c105280c5357c14/activerecord/test/cases/adapters/postgresql/hstore_test.rb#L136" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-test_gen3_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File activerecord/test/cases/adapters/postgresql/hstore_test.rb, line 136</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">test_gen3</span>
+  <span class="ruby-identifier">assert_equal</span>(<span class="ruby-string">%q(&quot;=&quot;=&gt;&quot;&quot;)</span>, <span class="ruby-ivar">@column</span>.<span class="ruby-identifier">class</span>.<span class="ruby-identifier">hstore_to_string</span>({<span class="ruby-string">&#39;=&#39;</span>=<span class="ruby-operator">&gt;</span><span class="ruby-string">&#39;&#39;</span>}))
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-test_gen4">
+            
+              <b>test_gen4</b>()
+            
+            <a href="../classes/PostgresqlHstoreTest.html#method-i-test_gen4" name="method-i-test_gen4" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-test_gen4_source')" id="l_method-i-test_gen4_source">show</a>
+                
+                  | <a href="https://github.com/rails/rails/blob/da3fec2ea3a6a13635500a667c105280c5357c14/activerecord/test/cases/adapters/postgresql/hstore_test.rb#L140" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-test_gen4_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File activerecord/test/cases/adapters/postgresql/hstore_test.rb, line 140</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">test_gen4</span>
+  <span class="ruby-identifier">assert_equal</span>(<span class="ruby-string">%q(&quot;&gt;&quot;=&gt;&quot;&quot;)</span>, <span class="ruby-ivar">@column</span>.<span class="ruby-identifier">class</span>.<span class="ruby-identifier">hstore_to_string</span>({<span class="ruby-string">&#39;&gt;&#39;</span>=<span class="ruby-operator">&gt;</span><span class="ruby-string">&#39;&#39;</span>}))
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-test_hstore_included_in_extensions">
+            
+              <b>test_hstore_included_in_extensions</b>()
+            
+            <a href="../classes/PostgresqlHstoreTest.html#method-i-test_hstore_included_in_extensions" name="method-i-test_hstore_included_in_extensions" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-test_hstore_included_in_extensions_source')" id="l_method-i-test_hstore_included_in_extensions_source">show</a>
+                
+                  | <a href="https://github.com/rails/rails/blob/da3fec2ea3a6a13635500a667c105280c5357c14/activerecord/test/cases/adapters/postgresql/hstore_test.rb#L38" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-test_hstore_included_in_extensions_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File activerecord/test/cases/adapters/postgresql/hstore_test.rb, line 38</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">test_hstore_included_in_extensions</span>
+  <span class="ruby-identifier">assert</span> <span class="ruby-ivar">@connection</span>.<span class="ruby-identifier">respond_to?</span>(<span class="ruby-value">:extensions</span>), <span class="ruby-string">&quot;connection should have a list of extensions&quot;</span>
+  <span class="ruby-identifier">assert</span> <span class="ruby-ivar">@connection</span>.<span class="ruby-identifier">extensions</span>.<span class="ruby-identifier">include?</span>(<span class="ruby-string">&#39;hstore&#39;</span>), <span class="ruby-string">&quot;extension list should include hstore&quot;</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-test_hstore_migration">
+            
+              <b>test_hstore_migration</b>()
+            
+            <a href="../classes/PostgresqlHstoreTest.html#method-i-test_hstore_migration" name="method-i-test_hstore_migration" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-test_hstore_migration_source')" id="l_method-i-test_hstore_migration_source">show</a>
+                
+                  | <a href="https://github.com/rails/rails/blob/da3fec2ea3a6a13635500a667c105280c5357c14/activerecord/test/cases/adapters/postgresql/hstore_test.rb#L73" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-test_hstore_migration_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File activerecord/test/cases/adapters/postgresql/hstore_test.rb, line 73</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">test_hstore_migration</span>
+  <span class="ruby-identifier">hstore_migration</span> = <span class="ruby-constant">Class</span>.<span class="ruby-identifier">new</span>(<span class="ruby-constant">ActiveRecord</span><span class="ruby-operator">::</span><span class="ruby-constant">Migration</span>) <span class="ruby-keyword">do</span>
+    <span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">change</span>
+      <span class="ruby-identifier">change_table</span>(<span class="ruby-string">&quot;hstores&quot;</span>) <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">t</span><span class="ruby-operator">|</span>
+        <span class="ruby-identifier">t</span>.<span class="ruby-identifier">hstore</span> <span class="ruby-value">:keys</span>
+      <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-identifier">hstore_migration</span>.<span class="ruby-identifier">new</span>.<span class="ruby-identifier">suppress_messages</span> <span class="ruby-keyword">do</span>
+    <span class="ruby-identifier">hstore_migration</span>.<span class="ruby-identifier">migrate</span>(<span class="ruby-value">:up</span>)
+    <span class="ruby-identifier">assert_includes</span> <span class="ruby-ivar">@connection</span>.<span class="ruby-identifier">columns</span>(<span class="ruby-value">:hstores</span>).<span class="ruby-identifier">map</span>(<span class="ruby-operator">&amp;</span><span class="ruby-value">:name</span>), <span class="ruby-string">&quot;keys&quot;</span>
+    <span class="ruby-identifier">hstore_migration</span>.<span class="ruby-identifier">migrate</span>(<span class="ruby-value">:down</span>)
+    <span class="ruby-identifier">assert_not_includes</span> <span class="ruby-ivar">@connection</span>.<span class="ruby-identifier">columns</span>(<span class="ruby-value">:hstores</span>).<span class="ruby-identifier">map</span>(<span class="ruby-operator">&amp;</span><span class="ruby-value">:name</span>), <span class="ruby-string">&quot;keys&quot;</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-test_multiline">
+            
+              <b>test_multiline</b>()
+            
+            <a href="../classes/PostgresqlHstoreTest.html#method-i-test_multiline" name="method-i-test_multiline" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-test_multiline_source')" id="l_method-i-test_multiline_source">show</a>
+                
+                  | <a href="https://github.com/rails/rails/blob/da3fec2ea3a6a13635500a667c105280c5357c14/activerecord/test/cases/adapters/postgresql/hstore_test.rb#L247" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-test_multiline_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File activerecord/test/cases/adapters/postgresql/hstore_test.rb, line 247</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">test_multiline</span>
+  <span class="ruby-identifier">assert_cycle</span>(<span class="ruby-string">&quot;a\nb&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;c\nd&quot;</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-test_nil">
+            
+              <b>test_nil</b>()
+            
+            <a href="../classes/PostgresqlHstoreTest.html#method-i-test_nil" name="method-i-test_nil" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-test_nil_source')" id="l_method-i-test_nil_source">show</a>
+                
+                  | <a href="https://github.com/rails/rails/blob/da3fec2ea3a6a13635500a667c105280c5357c14/activerecord/test/cases/adapters/postgresql/hstore_test.rb#L219" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-test_nil_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File activerecord/test/cases/adapters/postgresql/hstore_test.rb, line 219</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">test_nil</span>
+  <span class="ruby-identifier">assert_cycle</span>(<span class="ruby-string">&#39;a&#39;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword">nil</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-test_parse1">
+            
+              <b>test_parse1</b>()
+            
+            <a href="../classes/PostgresqlHstoreTest.html#method-i-test_parse1" name="method-i-test_parse1" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-test_parse1_source')" id="l_method-i-test_parse1_source">show</a>
+                
+                  | <a href="https://github.com/rails/rails/blob/da3fec2ea3a6a13635500a667c105280c5357c14/activerecord/test/cases/adapters/postgresql/hstore_test.rb#L144" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-test_parse1_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File activerecord/test/cases/adapters/postgresql/hstore_test.rb, line 144</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">test_parse1</span>
+  <span class="ruby-identifier">assert_equal</span>({<span class="ruby-string">&#39;a&#39;</span>=<span class="ruby-operator">&gt;</span><span class="ruby-keyword">nil</span>,<span class="ruby-string">&#39;b&#39;</span>=<span class="ruby-operator">&gt;</span><span class="ruby-keyword">nil</span>,<span class="ruby-string">&#39;c&#39;</span>=<span class="ruby-operator">&gt;</span><span class="ruby-string">&#39;NuLl&#39;</span>,<span class="ruby-string">&#39;null&#39;</span>=<span class="ruby-operator">&gt;</span><span class="ruby-string">&#39;c&#39;</span>}, <span class="ruby-ivar">@column</span>.<span class="ruby-identifier">type_cast</span>(<span class="ruby-string">&#39;a=&gt;null,b=&gt;NuLl,c=&gt;&quot;NuLl&quot;,null=&gt;c&#39;</span>))
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-test_parse2">
+            
+              <b>test_parse2</b>()
+            
+            <a href="../classes/PostgresqlHstoreTest.html#method-i-test_parse2" name="method-i-test_parse2" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-test_parse2_source')" id="l_method-i-test_parse2_source">show</a>
+                
+                  | <a href="https://github.com/rails/rails/blob/da3fec2ea3a6a13635500a667c105280c5357c14/activerecord/test/cases/adapters/postgresql/hstore_test.rb#L148" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-test_parse2_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File activerecord/test/cases/adapters/postgresql/hstore_test.rb, line 148</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">test_parse2</span>
+  <span class="ruby-identifier">assert_equal</span>({<span class="ruby-string">&quot; &quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot; &quot;</span>},  <span class="ruby-ivar">@column</span>.<span class="ruby-identifier">type_cast</span>(<span class="ruby-string">&quot;\\ =&gt;\\ &quot;</span>))
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-test_parse3">
+            
+              <b>test_parse3</b>()
+            
+            <a href="../classes/PostgresqlHstoreTest.html#method-i-test_parse3" name="method-i-test_parse3" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-test_parse3_source')" id="l_method-i-test_parse3_source">show</a>
+                
+                  | <a href="https://github.com/rails/rails/blob/da3fec2ea3a6a13635500a667c105280c5357c14/activerecord/test/cases/adapters/postgresql/hstore_test.rb#L152" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-test_parse3_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File activerecord/test/cases/adapters/postgresql/hstore_test.rb, line 152</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">test_parse3</span>
+  <span class="ruby-identifier">assert_equal</span>({<span class="ruby-string">&quot;=&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;&gt;&quot;</span>},  <span class="ruby-ivar">@column</span>.<span class="ruby-identifier">type_cast</span>(<span class="ruby-string">&quot;==&gt;&gt;&quot;</span>))
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-test_parse4">
+            
+              <b>test_parse4</b>()
+            
+            <a href="../classes/PostgresqlHstoreTest.html#method-i-test_parse4" name="method-i-test_parse4" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-test_parse4_source')" id="l_method-i-test_parse4_source">show</a>
+                
+                  | <a href="https://github.com/rails/rails/blob/da3fec2ea3a6a13635500a667c105280c5357c14/activerecord/test/cases/adapters/postgresql/hstore_test.rb#L156" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-test_parse4_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File activerecord/test/cases/adapters/postgresql/hstore_test.rb, line 156</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">test_parse4</span>
+  <span class="ruby-identifier">assert_equal</span>({<span class="ruby-string">&quot;=a&quot;</span>=<span class="ruby-operator">&gt;</span><span class="ruby-string">&quot;q=w&quot;</span>},   <span class="ruby-ivar">@column</span>.<span class="ruby-identifier">type_cast</span>(<span class="ruby-string">&#39;\=a=&gt;q=w&#39;</span>))
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-test_parse5">
+            
+              <b>test_parse5</b>()
+            
+            <a href="../classes/PostgresqlHstoreTest.html#method-i-test_parse5" name="method-i-test_parse5" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-test_parse5_source')" id="l_method-i-test_parse5_source">show</a>
+                
+                  | <a href="https://github.com/rails/rails/blob/da3fec2ea3a6a13635500a667c105280c5357c14/activerecord/test/cases/adapters/postgresql/hstore_test.rb#L160" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-test_parse5_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File activerecord/test/cases/adapters/postgresql/hstore_test.rb, line 160</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">test_parse5</span>
+  <span class="ruby-identifier">assert_equal</span>({<span class="ruby-string">&quot;=a&quot;</span>=<span class="ruby-operator">&gt;</span><span class="ruby-string">&quot;q=w&quot;</span>},   <span class="ruby-ivar">@column</span>.<span class="ruby-identifier">type_cast</span>(<span class="ruby-string">&#39;&quot;=a&quot;=&gt;q\=w&#39;</span>))
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-test_parse6">
+            
+              <b>test_parse6</b>()
+            
+            <a href="../classes/PostgresqlHstoreTest.html#method-i-test_parse6" name="method-i-test_parse6" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-test_parse6_source')" id="l_method-i-test_parse6_source">show</a>
+                
+                  | <a href="https://github.com/rails/rails/blob/da3fec2ea3a6a13635500a667c105280c5357c14/activerecord/test/cases/adapters/postgresql/hstore_test.rb#L164" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-test_parse6_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File activerecord/test/cases/adapters/postgresql/hstore_test.rb, line 164</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">test_parse6</span>
+  <span class="ruby-identifier">assert_equal</span>({<span class="ruby-string">&quot;\&quot;a&quot;</span>=<span class="ruby-operator">&gt;</span><span class="ruby-string">&quot;q&gt;w&quot;</span>},  <span class="ruby-ivar">@column</span>.<span class="ruby-identifier">type_cast</span>(<span class="ruby-string">&#39;&quot;\&quot;a&quot;=&gt;q&gt;w&#39;</span>))
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-test_parse7">
+            
+              <b>test_parse7</b>()
+            
+            <a href="../classes/PostgresqlHstoreTest.html#method-i-test_parse7" name="method-i-test_parse7" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-test_parse7_source')" id="l_method-i-test_parse7_source">show</a>
+                
+                  | <a href="https://github.com/rails/rails/blob/da3fec2ea3a6a13635500a667c105280c5357c14/activerecord/test/cases/adapters/postgresql/hstore_test.rb#L168" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-test_parse7_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File activerecord/test/cases/adapters/postgresql/hstore_test.rb, line 168</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">test_parse7</span>
+  <span class="ruby-identifier">assert_equal</span>({<span class="ruby-string">&quot;\&quot;a&quot;</span>=<span class="ruby-operator">&gt;</span><span class="ruby-string">&quot;q\&quot;w&quot;</span>}, <span class="ruby-ivar">@column</span>.<span class="ruby-identifier">type_cast</span>(<span class="ruby-string">&#39;\&quot;a=&gt;q&quot;w&#39;</span>))
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-test_quotes">
+            
+              <b>test_quotes</b>()
+            
+            <a href="../classes/PostgresqlHstoreTest.html#method-i-test_quotes" name="method-i-test_quotes" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-test_quotes_source')" id="l_method-i-test_quotes_source">show</a>
+                
+                  | <a href="https://github.com/rails/rails/blob/da3fec2ea3a6a13635500a667c105280c5357c14/activerecord/test/cases/adapters/postgresql/hstore_test.rb#L223" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-test_quotes_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File activerecord/test/cases/adapters/postgresql/hstore_test.rb, line 223</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">test_quotes</span>
+  <span class="ruby-identifier">assert_cycle</span>(<span class="ruby-string">&#39;a&#39;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&#39;b&quot;ar&#39;</span>, <span class="ruby-string">&#39;1&quot;foo&#39;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&#39;2&#39;</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-test_quoting_special_characters">
+            
+              <b>test_quoting_special_characters</b>()
+            
+            <a href="../classes/PostgresqlHstoreTest.html#method-i-test_quoting_special_characters" name="method-i-test_quoting_special_characters" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-test_quoting_special_characters_source')" id="l_method-i-test_quoting_special_characters_source">show</a>
+                
+                  | <a href="https://github.com/rails/rails/blob/da3fec2ea3a6a13635500a667c105280c5357c14/activerecord/test/cases/adapters/postgresql/hstore_test.rb#L243" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-test_quoting_special_characters_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File activerecord/test/cases/adapters/postgresql/hstore_test.rb, line 243</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">test_quoting_special_characters</span>
+  <span class="ruby-identifier">assert_cycle</span>(<span class="ruby-string">&#39;ca&#39;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&#39;cà&#39;</span>, <span class="ruby-string">&#39;ac&#39;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&#39;àc&#39;</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-test_rewrite">
+            
+              <b>test_rewrite</b>()
+            
+            <a href="../classes/PostgresqlHstoreTest.html#method-i-test_rewrite" name="method-i-test_rewrite" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-test_rewrite_source')" id="l_method-i-test_rewrite_source">show</a>
+                
+                  | <a href="https://github.com/rails/rails/blob/da3fec2ea3a6a13635500a667c105280c5357c14/activerecord/test/cases/adapters/postgresql/hstore_test.rb#L172" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-test_rewrite_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File activerecord/test/cases/adapters/postgresql/hstore_test.rb, line 172</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">test_rewrite</span>
+  <span class="ruby-ivar">@connection</span>.<span class="ruby-identifier">execute</span> <span class="ruby-string">&quot;insert into hstores (tags) VALUES (&#39;1=&gt;2&#39;)&quot;</span>
+  <span class="ruby-identifier">x</span> = <span class="ruby-constant">Hstore</span>.<span class="ruby-identifier">first</span>
+  <span class="ruby-identifier">x</span>.<span class="ruby-identifier">tags</span> = { <span class="ruby-string">&#39;&quot;a\&#39;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&#39;b&#39;</span> }
+  <span class="ruby-identifier">assert</span> <span class="ruby-identifier">x</span>.<span class="ruby-identifier">save!</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-test_select">
+            
+              <b>test_select</b>()
+            
+            <a href="../classes/PostgresqlHstoreTest.html#method-i-test_select" name="method-i-test_select" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-test_select_source')" id="l_method-i-test_select_source">show</a>
+                
+                  | <a href="https://github.com/rails/rails/blob/da3fec2ea3a6a13635500a667c105280c5357c14/activerecord/test/cases/adapters/postgresql/hstore_test.rb#L179" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-test_select_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File activerecord/test/cases/adapters/postgresql/hstore_test.rb, line 179</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">test_select</span>
+  <span class="ruby-ivar">@connection</span>.<span class="ruby-identifier">execute</span> <span class="ruby-string">&quot;insert into hstores (tags) VALUES (&#39;1=&gt;2&#39;)&quot;</span>
+  <span class="ruby-identifier">x</span> = <span class="ruby-constant">Hstore</span>.<span class="ruby-identifier">first</span>
+  <span class="ruby-identifier">assert_equal</span>({<span class="ruby-string">&#39;1&#39;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&#39;2&#39;</span>}, <span class="ruby-identifier">x</span>.<span class="ruby-identifier">tags</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-test_select_multikey">
+            
+              <b>test_select_multikey</b>()
+            
+            <a href="../classes/PostgresqlHstoreTest.html#method-i-test_select_multikey" name="method-i-test_select_multikey" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-test_select_multikey_source')" id="l_method-i-test_select_multikey_source">show</a>
+                
+                  | <a href="https://github.com/rails/rails/blob/da3fec2ea3a6a13635500a667c105280c5357c14/activerecord/test/cases/adapters/postgresql/hstore_test.rb#L209" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-test_select_multikey_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File activerecord/test/cases/adapters/postgresql/hstore_test.rb, line 209</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">test_select_multikey</span>
+  <span class="ruby-ivar">@connection</span>.<span class="ruby-identifier">execute</span> <span class="ruby-string">&quot;insert into hstores (tags) VALUES (&#39;1=&gt;2,2=&gt;3&#39;)&quot;</span>
+  <span class="ruby-identifier">x</span> = <span class="ruby-constant">Hstore</span>.<span class="ruby-identifier">first</span>
+  <span class="ruby-identifier">assert_equal</span>({<span class="ruby-string">&#39;1&#39;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&#39;2&#39;</span>, <span class="ruby-string">&#39;2&#39;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&#39;3&#39;</span>}, <span class="ruby-identifier">x</span>.<span class="ruby-identifier">tags</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-test_type_cast_hstore">
+            
+              <b>test_type_cast_hstore</b>()
+            
+            <a href="../classes/PostgresqlHstoreTest.html#method-i-test_type_cast_hstore" name="method-i-test_type_cast_hstore" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-test_type_cast_hstore_source')" id="l_method-i-test_type_cast_hstore_source">show</a>
+                
+                  | <a href="https://github.com/rails/rails/blob/da3fec2ea3a6a13635500a667c105280c5357c14/activerecord/test/cases/adapters/postgresql/hstore_test.rb#L97" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-test_type_cast_hstore_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File activerecord/test/cases/adapters/postgresql/hstore_test.rb, line 97</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">test_type_cast_hstore</span>
+  <span class="ruby-identifier">assert</span> <span class="ruby-ivar">@column</span>
+
+  <span class="ruby-identifier">data</span> = <span class="ruby-string">&quot;\&quot;1\&quot;=&gt;\&quot;2\&quot;&quot;</span>
+  <span class="ruby-identifier">hash</span> = <span class="ruby-ivar">@column</span>.<span class="ruby-identifier">class</span>.<span class="ruby-identifier">string_to_hstore</span> <span class="ruby-identifier">data</span>
+  <span class="ruby-identifier">assert_equal</span>({<span class="ruby-string">&#39;1&#39;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&#39;2&#39;</span>}, <span class="ruby-identifier">hash</span>)
+  <span class="ruby-identifier">assert_equal</span>({<span class="ruby-string">&#39;1&#39;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&#39;2&#39;</span>}, <span class="ruby-ivar">@column</span>.<span class="ruby-identifier">type_cast</span>(<span class="ruby-identifier">data</span>))
+
+  <span class="ruby-identifier">assert_equal</span>({}, <span class="ruby-ivar">@column</span>.<span class="ruby-identifier">type_cast</span>(<span class="ruby-string">&quot;&quot;</span>))
+  <span class="ruby-identifier">assert_equal</span>({<span class="ruby-string">&#39;key&#39;</span>=<span class="ruby-operator">&gt;</span><span class="ruby-keyword">nil</span>}, <span class="ruby-ivar">@column</span>.<span class="ruby-identifier">type_cast</span>(<span class="ruby-string">&#39;key =&gt; NULL&#39;</span>))
+  <span class="ruby-identifier">assert_equal</span>({<span class="ruby-string">&#39;c&#39;</span>=<span class="ruby-operator">&gt;</span><span class="ruby-string">&#39;}&#39;</span>,<span class="ruby-string">&#39;&quot;a&quot;&#39;</span>=<span class="ruby-operator">&gt;</span><span class="ruby-string">&#39;b &quot;a b&#39;</span>}, <span class="ruby-ivar">@column</span>.<span class="ruby-identifier">type_cast</span>(<span class="ruby-string">%q(c=&gt;&quot;}&quot;, &quot;\&quot;a\&quot;&quot;=&gt;&quot;b \&quot;a b&quot;)</span>))
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-test_update_all">
+            
+              <b>test_update_all</b>()
+            
+            <a href="../classes/PostgresqlHstoreTest.html#method-i-test_update_all" name="method-i-test_update_all" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-test_update_all_source')" id="l_method-i-test_update_all_source">show</a>
+                
+                  | <a href="https://github.com/rails/rails/blob/da3fec2ea3a6a13635500a667c105280c5357c14/activerecord/test/cases/adapters/postgresql/hstore_test.rb#L251" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-test_update_all_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File activerecord/test/cases/adapters/postgresql/hstore_test.rb, line 251</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">test_update_all</span>
+  <span class="ruby-identifier">hstore</span> = <span class="ruby-constant">Hstore</span>.<span class="ruby-identifier">create!</span> <span class="ruby-identifier">tags</span><span class="ruby-operator">:</span> { <span class="ruby-string">&quot;one&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;two&quot;</span> }
+
+  <span class="ruby-constant">Hstore</span>.<span class="ruby-identifier">update_all</span> <span class="ruby-identifier">tags</span><span class="ruby-operator">:</span> { <span class="ruby-string">&quot;three&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;four&quot;</span> }
+  <span class="ruby-identifier">assert_equal</span>({ <span class="ruby-string">&quot;three&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;four&quot;</span> }, <span class="ruby-identifier">hstore</span>.<span class="ruby-identifier">reload</span>.<span class="ruby-identifier">tags</span>)
+
+  <span class="ruby-constant">Hstore</span>.<span class="ruby-identifier">update_all</span> <span class="ruby-identifier">tags</span><span class="ruby-operator">:</span> { }
+  <span class="ruby-identifier">assert_equal</span>({ }, <span class="ruby-identifier">hstore</span>.<span class="ruby-identifier">reload</span>.<span class="ruby-identifier">tags</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-test_whitespace">
+            
+              <b>test_whitespace</b>()
+            
+            <a href="../classes/PostgresqlHstoreTest.html#method-i-test_whitespace" name="method-i-test_whitespace" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-test_whitespace_source')" id="l_method-i-test_whitespace_source">show</a>
+                
+                  | <a href="https://github.com/rails/rails/blob/da3fec2ea3a6a13635500a667c105280c5357c14/activerecord/test/cases/adapters/postgresql/hstore_test.rb#L227" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-test_whitespace_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File activerecord/test/cases/adapters/postgresql/hstore_test.rb, line 227</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">test_whitespace</span>
+  <span class="ruby-identifier">assert_cycle</span>(<span class="ruby-string">&#39;a b&#39;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&#39;b ar&#39;</span>, <span class="ruby-string">&#39;1&quot;foo&#39;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&#39;2&#39;</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-test_with_store_accessors">
+            
+              <b>test_with_store_accessors</b>()
+            
+            <a href="../classes/PostgresqlHstoreTest.html#method-i-test_with_store_accessors" name="method-i-test_with_store_accessors" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-test_with_store_accessors_source')" id="l_method-i-test_with_store_accessors_source">show</a>
+                
+                  | <a href="https://github.com/rails/rails/blob/da3fec2ea3a6a13635500a667c105280c5357c14/activerecord/test/cases/adapters/postgresql/hstore_test.rb#L110" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-test_with_store_accessors_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File activerecord/test/cases/adapters/postgresql/hstore_test.rb, line 110</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">test_with_store_accessors</span>
+  <span class="ruby-identifier">x</span> = <span class="ruby-constant">Hstore</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">language</span><span class="ruby-operator">:</span> <span class="ruby-string">&quot;fr&quot;</span>, <span class="ruby-identifier">timezone</span><span class="ruby-operator">:</span> <span class="ruby-string">&quot;GMT&quot;</span>)
+  <span class="ruby-identifier">assert_equal</span> <span class="ruby-string">&quot;fr&quot;</span>, <span class="ruby-identifier">x</span>.<span class="ruby-identifier">language</span>
+  <span class="ruby-identifier">assert_equal</span> <span class="ruby-string">&quot;GMT&quot;</span>, <span class="ruby-identifier">x</span>.<span class="ruby-identifier">timezone</span>
+
+  <span class="ruby-identifier">x</span>.<span class="ruby-identifier">save!</span>
+  <span class="ruby-identifier">x</span> = <span class="ruby-constant">Hstore</span>.<span class="ruby-identifier">first</span>
+  <span class="ruby-identifier">assert_equal</span> <span class="ruby-string">&quot;fr&quot;</span>, <span class="ruby-identifier">x</span>.<span class="ruby-identifier">language</span>
+  <span class="ruby-identifier">assert_equal</span> <span class="ruby-string">&quot;GMT&quot;</span>, <span class="ruby-identifier">x</span>.<span class="ruby-identifier">timezone</span>
+
+  <span class="ruby-identifier">x</span>.<span class="ruby-identifier">language</span> = <span class="ruby-string">&quot;de&quot;</span>
+  <span class="ruby-identifier">x</span>.<span class="ruby-identifier">save!</span>
+
+  <span class="ruby-identifier">x</span> = <span class="ruby-constant">Hstore</span>.<span class="ruby-identifier">first</span>
+  <span class="ruby-identifier">assert_equal</span> <span class="ruby-string">&quot;de&quot;</span>, <span class="ruby-identifier">x</span>.<span class="ruby-identifier">language</span>
+  <span class="ruby-identifier">assert_equal</span> <span class="ruby-string">&quot;GMT&quot;</span>, <span class="ruby-identifier">x</span>.<span class="ruby-identifier">timezone</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                    </div>
+
+    </div>
+  </body>
+</html>    

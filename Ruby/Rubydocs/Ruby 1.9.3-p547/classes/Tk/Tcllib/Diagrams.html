@@ -1,0 +1,1681 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>Tk::Tcllib::Diagrams</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="../../../css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../../../css/main.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../../../css/github.css" type="text/css" media="screen" />
+<script src="../../../js/jquery-1.3.2.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../../js/jquery-effect.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../../js/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+
+<body>     
+    <div class="banner">
+        
+        <h1>
+            <span class="type">Module</span> 
+            Tk::Tcllib::Diagrams 
+            
+        </h1>
+        <ul class="files">
+            
+            <li><a href="../../../files/ext/tk/lib/tkextlib/tcllib/diagrams_rb.html">ext/tk/lib/tkextlib/tcllib/diagrams.rb</a></li>
+            
+        </ul>
+    </div>
+    <div id="bodyContent">
+        <div id="content">
+  
+
+
+  
+
+
+  
+  
+
+
+  
+
+
+  
+    <!-- Method ref -->
+    <div class="sectiontitle">Methods</div>
+    <dl class="methods">
+      
+        <dt>A</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-arrow">arrow</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-attach">attach</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>B</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-box">box</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-boxcoords">boxcoords</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-bracket">bracket</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>C</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-circle">circle</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-color">color</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-computepos">computepos</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-currentpos">currentpos</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>D</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-diamond">diamond</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-direction">direction</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-drawin">drawin</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-drum">drum</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>F</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-fillcolor">fillcolor</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>G</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-getpos">getpos</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>L</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-line">line</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-linestyle">linestyle</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-linewidth">linewidth</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>M</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-moveobject">moveobject</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>P</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-package_name">package_name</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-c-package_version">package_version</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-plaintext">plaintext</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-popstate">popstate</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-position">position</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-pushstate">pushstate</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>S</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-saveps">saveps</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-slanted">slanted</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>T</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-textcolor">textcolor</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-textfont">textfont</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>U</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-usegap">usegap</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>X</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-xgap">xgap</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>Y</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-ygap">ygap</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+    </dl>
+  
+
+  
+    <!-- Includes -->
+    <div class="sectiontitle">Included Modules</div>
+    <ul>
+      
+        <li>
+          
+            <a href="../../TkCore.html">
+              TkCore
+            </a>
+          
+        </li>
+      
+    </ul>
+  
+
+
+
+  
+
+    
+
+    
+
+    
+      <!-- Section constants -->
+      <div class="sectiontitle">Constants</div>
+      <table border='0' cellpadding='5'>
+        
+          <tr valign='top'>
+            <td class="attr-name">PACKAGE_NAME</td>
+            <td>=</td>
+            <td class="attr-value">&#39;Diagrams&#39;.freeze</td>
+          </tr>
+          
+            <tr valign='top'>
+              <td>&nbsp;</td>
+              <td colspan="2" class="attr-desc"></td>
+            </tr>
+          
+        
+      </table>
+    
+
+
+    
+
+
+    <!-- Methods -->
+    
+      <div class="sectiontitle">Class Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-c-package_name">
+            
+              <b>package_name</b>()
+            
+            <a href="../../../classes/Tk/Tcllib/Diagrams.html#method-c-package_name" name="method-c-package_name" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-package_name_source')" id="l_method-c-package_name_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/tcllib/diagrams.rb#L18" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-package_name_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/tcllib/diagrams.rb, line 18</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">package_name</span>
+  <span class="ruby-constant">PACKAGE_NAME</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-package_version">
+            
+              <b>package_version</b>()
+            
+            <a href="../../../classes/Tk/Tcllib/Diagrams.html#method-c-package_version" name="method-c-package_version" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-package_version_source')" id="l_method-c-package_version_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/tcllib/diagrams.rb#L22" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-package_version_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/tcllib/diagrams.rb, line 22</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">package_version</span>
+  <span class="ruby-keyword">begin</span>
+    <span class="ruby-constant">TkPackage</span>.<span class="ruby-identifier">require</span>(<span class="ruby-string">&#39;Diagrams&#39;</span>)
+  <span class="ruby-keyword">rescue</span>
+    <span class="ruby-string">&#39;&#39;</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                  
+      <div class="sectiontitle">Instance Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-i-arrow">
+            
+              <b>arrow</b>(text=nil, length=nil, head=nil)
+            
+            <a href="../../../classes/Tk/Tcllib/Diagrams.html#method-i-arrow" name="method-i-arrow" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-arrow_source')" id="l_method-i-arrow_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/tcllib/diagrams.rb#L130" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-arrow_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/tcllib/diagrams.rb, line 130</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">arrow</span>(<span class="ruby-identifier">text</span>=<span class="ruby-keyword">nil</span>, <span class="ruby-identifier">length</span>=<span class="ruby-keyword">nil</span>, <span class="ruby-identifier">head</span>=<span class="ruby-keyword">nil</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">length</span> <span class="ruby-operator">||</span> <span class="ruby-identifier">head</span>
+    <span class="ruby-identifier">text</span>   = <span class="ruby-string">&#39;&#39;</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">text</span>
+    <span class="ruby-identifier">length</span> = <span class="ruby-string">&#39;&#39;</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">length</span>
+    <span class="ruby-identifier">list</span>(<span class="ruby-identifier">tk_call</span>(<span class="ruby-string">&#39;::Diagrams::arrow&#39;</span>, <span class="ruby-identifier">text</span>, <span class="ruby-identifier">length</span>, <span class="ruby-identifier">head</span>))
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">text</span>
+      <span class="ruby-identifier">list</span>(<span class="ruby-identifier">tk_call</span>(<span class="ruby-string">&#39;::Diagrams::arrow&#39;</span>, <span class="ruby-identifier">text</span>))
+    <span class="ruby-keyword">else</span>
+      <span class="ruby-identifier">list</span>(<span class="ruby-identifier">tk_call</span>(<span class="ruby-string">&#39;::Diagrams::arrow&#39;</span>))
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-attach">
+            
+              <b>attach</b>(anchor=None)
+            
+            <a href="../../../classes/Tk/Tcllib/Diagrams.html#method-i-attach" name="method-i-attach" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-attach_source')" id="l_method-i-attach_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/tcllib/diagrams.rb#L160" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-attach_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/tcllib/diagrams.rb, line 160</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">attach</span>(<span class="ruby-identifier">anchor</span>=<span class="ruby-constant">None</span>)
+  <span class="ruby-identifier">tk_call</span>(<span class="ruby-string">&#39;::Diagrams::attach&#39;</span>, <span class="ruby-identifier">anchor</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-box">
+            
+              <b>box</b>(text, width=nil, height=nil)
+            
+            <a href="../../../classes/Tk/Tcllib/Diagrams.html#method-i-box" name="method-i-box" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-box_source')" id="l_method-i-box_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/tcllib/diagrams.rb#L68" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-box_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/tcllib/diagrams.rb, line 68</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">box</span>(<span class="ruby-identifier">text</span>, <span class="ruby-identifier">width</span>=<span class="ruby-keyword">nil</span>, <span class="ruby-identifier">height</span>=<span class="ruby-keyword">nil</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">width</span> <span class="ruby-operator">||</span> <span class="ruby-identifier">height</span>
+    <span class="ruby-identifier">width</span>  = <span class="ruby-string">&#39;&#39;</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">width</span>
+    <span class="ruby-identifier">height</span> = <span class="ruby-string">&#39;&#39;</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">height</span>
+    <span class="ruby-identifier">list</span>(<span class="ruby-identifier">tk_call</span>(<span class="ruby-string">&#39;::Diagrams::box&#39;</span>, <span class="ruby-identifier">text</span>, <span class="ruby-identifier">width</span>, <span class="ruby-identifier">height</span>))
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">list</span>(<span class="ruby-identifier">tk_call</span>(<span class="ruby-string">&#39;::Diagrams::box&#39;</span>, <span class="ruby-identifier">text</span>))
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-boxcoords">
+            
+              <b>boxcoords</b>(x1, y1, x2, y2)
+            
+            <a href="../../../classes/Tk/Tcllib/Diagrams.html#method-i-boxcoords" name="method-i-boxcoords" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-boxcoords_source')" id="l_method-i-boxcoords_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/tcllib/diagrams.rb#L216" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-boxcoords_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/tcllib/diagrams.rb, line 216</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">boxcoords</span>(<span class="ruby-identifier">x1</span>, <span class="ruby-identifier">y1</span>, <span class="ruby-identifier">x2</span>, <span class="ruby-identifier">y2</span>)
+  <span class="ruby-identifier">list</span>(<span class="ruby-identifier">tk_call</span>(<span class="ruby-string">&#39;::Diagrams::boxcoords&#39;</span>, <span class="ruby-identifier">x1</span>, <span class="ruby-identifier">y1</span>, <span class="ruby-identifier">x2</span>, <span class="ruby-identifier">y2</span>))
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-bracket">
+            
+              <b>bracket</b>(dir, dist, from_pos, to_pos)
+            
+            <a href="../../../classes/Tk/Tcllib/Diagrams.html#method-i-bracket" name="method-i-bracket" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-bracket_source')" id="l_method-i-bracket_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/tcllib/diagrams.rb#L156" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-bracket_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/tcllib/diagrams.rb, line 156</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">bracket</span>(<span class="ruby-identifier">dir</span>, <span class="ruby-identifier">dist</span>, <span class="ruby-identifier">from_pos</span>, <span class="ruby-identifier">to_pos</span>)
+  <span class="ruby-identifier">list</span>(<span class="ruby-identifier">tk_call</span>(<span class="ruby-string">&#39;::Diagrams::bracket&#39;</span>, <span class="ruby-identifier">dir</span>, <span class="ruby-identifier">dist</span>, <span class="ruby-identifier">from_pos</span>, <span class="ruby-identifier">to_pos</span>))
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-circle">
+            
+              <b>circle</b>(text, radius=nil)
+            
+            <a href="../../../classes/Tk/Tcllib/Diagrams.html#method-i-circle" name="method-i-circle" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-circle_source')" id="l_method-i-circle_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/tcllib/diagrams.rb#L88" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-circle_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/tcllib/diagrams.rb, line 88</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">circle</span>(<span class="ruby-identifier">text</span>, <span class="ruby-identifier">radius</span>=<span class="ruby-keyword">nil</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">radius</span>
+    <span class="ruby-identifier">list</span>(<span class="ruby-identifier">tk_call</span>(<span class="ruby-string">&#39;::Diagrams::circle&#39;</span>, <span class="ruby-identifier">text</span>, <span class="ruby-identifier">radius</span>))
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">list</span>(<span class="ruby-identifier">tk_call</span>(<span class="ruby-string">&#39;::Diagrams::circle&#39;</span>, <span class="ruby-identifier">text</span>))
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-color">
+            
+              <b>color</b>(name=None)
+            
+            <a href="../../../classes/Tk/Tcllib/Diagrams.html#method-i-color" name="method-i-color" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-color_source')" id="l_method-i-color_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/tcllib/diagrams.rb#L164" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-color_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/tcllib/diagrams.rb, line 164</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">color</span>(<span class="ruby-identifier">name</span>=<span class="ruby-constant">None</span>)
+  <span class="ruby-identifier">tk_call</span>(<span class="ruby-string">&#39;::Diagrams::color&#39;</span>, <span class="ruby-identifier">name</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-computepos">
+            
+              <b>computepos</b>()
+            
+            <a href="../../../classes/Tk/Tcllib/Diagrams.html#method-i-computepos" name="method-i-computepos" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-computepos_source')" id="l_method-i-computepos_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/tcllib/diagrams.rb#L211" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-computepos_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/tcllib/diagrams.rb, line 211</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">computepos</span>
+  <span class="ruby-identifier">list</span>(<span class="ruby-identifier">tk_call</span>(<span class="ruby-string">&#39;::Diagrams::computepos&#39;</span>))
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-currentpos">
+            
+              <b>currentpos</b>(pos)
+            
+            <a href="../../../classes/Tk/Tcllib/Diagrams.html#method-i-currentpos" name="method-i-currentpos" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-currentpos_source')" id="l_method-i-currentpos_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/tcllib/diagrams.rb#L52" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-currentpos_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/tcllib/diagrams.rb, line 52</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">currentpos</span>(<span class="ruby-identifier">pos</span>)
+  <span class="ruby-identifier">list</span>(<span class="ruby-identifier">tk_call</span>(<span class="ruby-string">&#39;::Diagrams::currentpos&#39;</span>, <span class="ruby-identifier">pos</span>))
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-diamond">
+            
+              <b>diamond</b>(text, width=nil, height=nil)
+            
+            <a href="../../../classes/Tk/Tcllib/Diagrams.html#method-i-diamond" name="method-i-diamond" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-diamond_source')" id="l_method-i-diamond_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/tcllib/diagrams.rb#L110" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-diamond_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/tcllib/diagrams.rb, line 110</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">diamond</span>(<span class="ruby-identifier">text</span>, <span class="ruby-identifier">width</span>=<span class="ruby-keyword">nil</span>, <span class="ruby-identifier">height</span>=<span class="ruby-keyword">nil</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">width</span> <span class="ruby-operator">||</span> <span class="ruby-identifier">height</span>
+    <span class="ruby-identifier">width</span>  = <span class="ruby-string">&#39;&#39;</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">width</span>
+    <span class="ruby-identifier">height</span> = <span class="ruby-string">&#39;&#39;</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">height</span>
+    <span class="ruby-identifier">list</span>(<span class="ruby-identifier">tk_call</span>(<span class="ruby-string">&#39;::Diagrams::diamond&#39;</span>, <span class="ruby-identifier">text</span>, <span class="ruby-identifier">width</span>, <span class="ruby-identifier">height</span>))
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">list</span>(<span class="ruby-identifier">tk_call</span>(<span class="ruby-string">&#39;::Diagrams::diamond&#39;</span>, <span class="ruby-identifier">text</span>))
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-direction">
+            
+              <b>direction</b>(dir)
+            
+            <a href="../../../classes/Tk/Tcllib/Diagrams.html#method-i-direction" name="method-i-direction" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-direction_source')" id="l_method-i-direction_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/tcllib/diagrams.rb#L47" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-direction_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/tcllib/diagrams.rb, line 47</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">direction</span>(<span class="ruby-identifier">dir</span>)
+  <span class="ruby-identifier">tk_call</span>(<span class="ruby-string">&#39;::Diagrams::direction&#39;</span>, <span class="ruby-identifier">dir</span>)
+  <span class="ruby-identifier">dir</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-drawin">
+            
+              <b>drawin</b>(canvas)
+            
+            <a href="../../../classes/Tk/Tcllib/Diagrams.html#method-i-drawin" name="method-i-drawin" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-drawin_source')" id="l_method-i-drawin_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/tcllib/diagrams.rb#L35" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-drawin_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/tcllib/diagrams.rb, line 35</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">drawin</span>(<span class="ruby-identifier">canvas</span>)
+  <span class="ruby-identifier">tk_call</span>(<span class="ruby-string">&#39;::Diagrams::drawin&#39;</span>, <span class="ruby-identifier">canvas</span>)
+  <span class="ruby-identifier">canvas</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-drum">
+            
+              <b>drum</b>(text, width=nil, height=nil)
+            
+            <a href="../../../classes/Tk/Tcllib/Diagrams.html#method-i-drum" name="method-i-drum" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-drum_source')" id="l_method-i-drum_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/tcllib/diagrams.rb#L120" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-drum_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/tcllib/diagrams.rb, line 120</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">drum</span>(<span class="ruby-identifier">text</span>, <span class="ruby-identifier">width</span>=<span class="ruby-keyword">nil</span>, <span class="ruby-identifier">height</span>=<span class="ruby-keyword">nil</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">width</span> <span class="ruby-operator">||</span> <span class="ruby-identifier">height</span>
+    <span class="ruby-identifier">width</span>  = <span class="ruby-string">&#39;&#39;</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">width</span>
+    <span class="ruby-identifier">height</span> = <span class="ruby-string">&#39;&#39;</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">height</span>
+    <span class="ruby-identifier">list</span>(<span class="ruby-identifier">tk_call</span>(<span class="ruby-string">&#39;::Diagrams::drum&#39;</span>, <span class="ruby-identifier">text</span>, <span class="ruby-identifier">width</span>, <span class="ruby-identifier">height</span>))
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">list</span>(<span class="ruby-identifier">tk_call</span>(<span class="ruby-string">&#39;::Diagrams::drum&#39;</span>, <span class="ruby-identifier">text</span>))
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-fillcolor">
+            
+              <b>fillcolor</b>(name=None)
+            
+            <a href="../../../classes/Tk/Tcllib/Diagrams.html#method-i-fillcolor" name="method-i-fillcolor" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-fillcolor_source')" id="l_method-i-fillcolor_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/tcllib/diagrams.rb#L168" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-fillcolor_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/tcllib/diagrams.rb, line 168</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">fillcolor</span>(<span class="ruby-identifier">name</span>=<span class="ruby-constant">None</span>)
+  <span class="ruby-identifier">tk_call</span>(<span class="ruby-string">&#39;::Diagrams::fillcolor&#39;</span>, <span class="ruby-identifier">name</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-getpos">
+            
+              <b>getpos</b>(anchor, obj)
+            
+            <a href="../../../classes/Tk/Tcllib/Diagrams.html#method-i-getpos" name="method-i-getpos" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-getpos_source')" id="l_method-i-getpos_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/tcllib/diagrams.rb#L59" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-getpos_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/tcllib/diagrams.rb, line 59</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">getpos</span>(<span class="ruby-identifier">anchor</span>, <span class="ruby-identifier">obj</span>)
+  <span class="ruby-identifier">list</span>(<span class="ruby-identifier">tk_call</span>(<span class="ruby-string">&#39;::Diagrams::getpos&#39;</span>, <span class="ruby-identifier">anchor</span>, <span class="ruby-identifier">obj</span>))
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-line">
+            
+              <b>line</b>(*args)
+            
+            <a href="../../../classes/Tk/Tcllib/Diagrams.html#method-i-line" name="method-i-line" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-line_source')" id="l_method-i-line_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/tcllib/diagrams.rb#L144" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-line_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/tcllib/diagrams.rb, line 144</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">line</span>(<span class="ruby-operator">*</span><span class="ruby-identifier">args</span>)
+  <span class="ruby-identifier">ary</span> = []
+  <span class="ruby-identifier">args</span>.<span class="ruby-identifier">each</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">arg</span><span class="ruby-operator">|</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">arg</span>.<span class="ruby-identifier">kind_of?</span>(<span class="ruby-constant">Array</span>) <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">arg</span>.<span class="ruby-identifier">length</span> <span class="ruby-operator">==</span> <span class="ruby-number">2</span>  <span class="ruby-comment"># [length, angle]</span>
+      <span class="ruby-identifier">ary</span>.<span class="ruby-identifier">concat</span> <span class="ruby-identifier">arg</span>
+    <span class="ruby-keyword">else</span> <span class="ruby-comment"># [&quot;POSITION&quot;, x, y] or length or angle</span>
+      <span class="ruby-identifier">ary</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">arg</span>
+    <span class="ruby-keyword">end</span>
+  }
+  <span class="ruby-identifier">list</span>(<span class="ruby-identifier">tk_call</span>(<span class="ruby-string">&#39;::Diagrams::line&#39;</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">ary</span>))
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-linestyle">
+            
+              <b>linestyle</b>(style=None)
+            
+            <a href="../../../classes/Tk/Tcllib/Diagrams.html#method-i-linestyle" name="method-i-linestyle" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-linestyle_source')" id="l_method-i-linestyle_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/tcllib/diagrams.rb#L197" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-linestyle_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/tcllib/diagrams.rb, line 197</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">linestyle</span>(<span class="ruby-identifier">style</span>=<span class="ruby-constant">None</span>)
+  <span class="ruby-identifier">tk_call</span>(<span class="ruby-string">&#39;::Diagrams::linestyle&#39;</span>, <span class="ruby-identifier">style</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-linewidth">
+            
+              <b>linewidth</b>(pixels=None)
+            
+            <a href="../../../classes/Tk/Tcllib/Diagrams.html#method-i-linewidth" name="method-i-linewidth" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-linewidth_source')" id="l_method-i-linewidth_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/tcllib/diagrams.rb#L193" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-linewidth_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/tcllib/diagrams.rb, line 193</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">linewidth</span>(<span class="ruby-identifier">pixels</span>=<span class="ruby-constant">None</span>)
+  <span class="ruby-identifier">number</span>(<span class="ruby-identifier">tk_call</span>(<span class="ruby-string">&#39;::Diagrams::linewidth&#39;</span>, <span class="ruby-identifier">pixels</span>))
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-moveobject">
+            
+              <b>moveobject</b>(obj)
+            
+            <a href="../../../classes/Tk/Tcllib/Diagrams.html#method-i-moveobject" name="method-i-moveobject" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-moveobject_source')" id="l_method-i-moveobject_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/tcllib/diagrams.rb#L220" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-moveobject_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/tcllib/diagrams.rb, line 220</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">moveobject</span>(<span class="ruby-identifier">obj</span>)
+  <span class="ruby-identifier">list</span>(<span class="ruby-identifier">tk_call</span>(<span class="ruby-string">&#39;::Diagrams::moveobject&#39;</span>, <span class="ruby-identifier">obj</span>))
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-plaintext">
+            
+              <b>plaintext</b>(text, width=nil, height=nil)
+            
+            <a href="../../../classes/Tk/Tcllib/Diagrams.html#method-i-plaintext" name="method-i-plaintext" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-plaintext_source')" id="l_method-i-plaintext_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/tcllib/diagrams.rb#L78" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-plaintext_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/tcllib/diagrams.rb, line 78</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">plaintext</span>(<span class="ruby-identifier">text</span>, <span class="ruby-identifier">width</span>=<span class="ruby-keyword">nil</span>, <span class="ruby-identifier">height</span>=<span class="ruby-keyword">nil</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">width</span> <span class="ruby-operator">||</span> <span class="ruby-identifier">height</span>
+    <span class="ruby-identifier">width</span>  = <span class="ruby-string">&#39;&#39;</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">width</span>
+    <span class="ruby-identifier">height</span> = <span class="ruby-string">&#39;&#39;</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">height</span>
+    <span class="ruby-identifier">list</span>(<span class="ruby-identifier">tk_call</span>(<span class="ruby-string">&#39;::Diagrams::plaintext&#39;</span>, <span class="ruby-identifier">text</span>, <span class="ruby-identifier">width</span>, <span class="ruby-identifier">height</span>))
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">list</span>(<span class="ruby-identifier">tk_call</span>(<span class="ruby-string">&#39;::Diagrams::plaintext&#39;</span>, <span class="ruby-identifier">text</span>))
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-popstate">
+            
+              <b>popstate</b>()
+            
+            <a href="../../../classes/Tk/Tcllib/Diagrams.html#method-i-popstate" name="method-i-popstate" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-popstate_source')" id="l_method-i-popstate_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/tcllib/diagrams.rb#L206" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-popstate_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/tcllib/diagrams.rb, line 206</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">popstate</span>
+  <span class="ruby-identifier">tk_call</span>(<span class="ruby-string">&#39;::Diagrams::popstate&#39;</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-position">
+            
+              <b>position</b>(x, y)
+            
+            <a href="../../../classes/Tk/Tcllib/Diagrams.html#method-i-position" name="method-i-position" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-position_source')" id="l_method-i-position_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/tcllib/diagrams.rb#L64" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-position_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/tcllib/diagrams.rb, line 64</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">position</span>(<span class="ruby-identifier">x</span>, <span class="ruby-identifier">y</span>)
+  <span class="ruby-identifier">list</span>(<span class="ruby-identifier">tk_call</span>(<span class="ruby-string">&#39;::Diagrams::position&#39;</span>, <span class="ruby-identifier">x</span>, <span class="ruby-identifier">y</span>))
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-pushstate">
+            
+              <b>pushstate</b>()
+            
+            <a href="../../../classes/Tk/Tcllib/Diagrams.html#method-i-pushstate" name="method-i-pushstate" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-pushstate_source')" id="l_method-i-pushstate_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/tcllib/diagrams.rb#L201" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-pushstate_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/tcllib/diagrams.rb, line 201</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">pushstate</span>
+  <span class="ruby-identifier">tk_call</span>(<span class="ruby-string">&#39;::Diagrams::pushstate&#39;</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-saveps">
+            
+              <b>saveps</b>(filename)
+            
+            <a href="../../../classes/Tk/Tcllib/Diagrams.html#method-i-saveps" name="method-i-saveps" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-saveps_source')" id="l_method-i-saveps_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/tcllib/diagrams.rb#L41" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-saveps_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/tcllib/diagrams.rb, line 41</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">saveps</span>(<span class="ruby-identifier">filename</span>)
+  <span class="ruby-identifier">tk_call</span>(<span class="ruby-string">&#39;::Diagrams::saveps&#39;</span>, <span class="ruby-identifier">filename</span>)
+  <span class="ruby-identifier">filename</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-slanted">
+            
+              <b>slanted</b>(text, width=nil, height=nil, angle=nil)
+            
+            <a href="../../../classes/Tk/Tcllib/Diagrams.html#method-i-slanted" name="method-i-slanted" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-slanted_source')" id="l_method-i-slanted_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/tcllib/diagrams.rb#L96" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-slanted_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/tcllib/diagrams.rb, line 96</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">slanted</span>(<span class="ruby-identifier">text</span>, <span class="ruby-identifier">width</span>=<span class="ruby-keyword">nil</span>, <span class="ruby-identifier">height</span>=<span class="ruby-keyword">nil</span>, <span class="ruby-identifier">angle</span>=<span class="ruby-keyword">nil</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">width</span> <span class="ruby-operator">||</span> <span class="ruby-identifier">height</span> <span class="ruby-operator">||</span> <span class="ruby-identifier">angle</span>
+    <span class="ruby-identifier">width</span>  = <span class="ruby-string">&#39;&#39;</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">width</span>
+    <span class="ruby-identifier">height</span> = <span class="ruby-string">&#39;&#39;</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">height</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">angle</span>
+      <span class="ruby-identifier">list</span>(<span class="ruby-identifier">tk_call</span>(<span class="ruby-string">&#39;::Diagrams::slanted&#39;</span>, <span class="ruby-identifier">text</span>, <span class="ruby-identifier">width</span>, <span class="ruby-identifier">height</span>, <span class="ruby-identifier">angle</span>))
+    <span class="ruby-keyword">else</span>
+      <span class="ruby-identifier">list</span>(<span class="ruby-identifier">tk_call</span>(<span class="ruby-string">&#39;::Diagrams::slanted&#39;</span>, <span class="ruby-identifier">text</span>, <span class="ruby-identifier">width</span>, <span class="ruby-identifier">height</span>))
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">list</span>(<span class="ruby-identifier">tk_call</span>(<span class="ruby-string">&#39;::Diagrams::slanted&#39;</span>, <span class="ruby-identifier">text</span>))
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-textcolor">
+            
+              <b>textcolor</b>(name=None)
+            
+            <a href="../../../classes/Tk/Tcllib/Diagrams.html#method-i-textcolor" name="method-i-textcolor" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-textcolor_source')" id="l_method-i-textcolor_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/tcllib/diagrams.rb#L172" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-textcolor_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/tcllib/diagrams.rb, line 172</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">textcolor</span>(<span class="ruby-identifier">name</span>=<span class="ruby-constant">None</span>)
+  <span class="ruby-identifier">tk_call</span>(<span class="ruby-string">&#39;::Diagrams::textcolor&#39;</span>, <span class="ruby-identifier">name</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-textfont">
+            
+              <b>textfont</b>(fnt=None)
+            
+            <a href="../../../classes/Tk/Tcllib/Diagrams.html#method-i-textfont" name="method-i-textfont" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-textfont_source')" id="l_method-i-textfont_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/tcllib/diagrams.rb#L189" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-textfont_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/tcllib/diagrams.rb, line 189</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">textfont</span>(<span class="ruby-identifier">fnt</span>=<span class="ruby-constant">None</span>)
+  <span class="ruby-identifier">tk_call</span>(<span class="ruby-string">&#39;::Diagrams::textfont&#39;</span>, <span class="ruby-identifier">fnt</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-usegap">
+            
+              <b>usegap</b>(mode=None)
+            
+            <a href="../../../classes/Tk/Tcllib/Diagrams.html#method-i-usegap" name="method-i-usegap" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-usegap_source')" id="l_method-i-usegap_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/tcllib/diagrams.rb#L176" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-usegap_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/tcllib/diagrams.rb, line 176</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">usegap</span>(<span class="ruby-identifier">mode</span>=<span class="ruby-constant">None</span>)
+  <span class="ruby-identifier">bool</span>(<span class="ruby-identifier">tk_call</span>(<span class="ruby-string">&#39;::Diagrams::usegap&#39;</span>, <span class="ruby-identifier">mode</span>))
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-xgap">
+            
+              <b>xgap</b>(val=None)
+            
+            <a href="../../../classes/Tk/Tcllib/Diagrams.html#method-i-xgap" name="method-i-xgap" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-xgap_source')" id="l_method-i-xgap_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/tcllib/diagrams.rb#L181" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-xgap_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/tcllib/diagrams.rb, line 181</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">xgap</span>(<span class="ruby-identifier">val</span>=<span class="ruby-constant">None</span>)
+  <span class="ruby-identifier">number</span>(<span class="ruby-identifier">tk_call</span>(<span class="ruby-string">&#39;::Diagrams::xgap&#39;</span>, <span class="ruby-identifier">val</span>))
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-ygap">
+            
+              <b>ygap</b>(val=None)
+            
+            <a href="../../../classes/Tk/Tcllib/Diagrams.html#method-i-ygap" name="method-i-ygap" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-ygap_source')" id="l_method-i-ygap_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/tcllib/diagrams.rb#L185" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-ygap_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/tcllib/diagrams.rb, line 185</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">ygap</span>(<span class="ruby-identifier">val</span>=<span class="ruby-constant">None</span>)
+  <span class="ruby-identifier">number</span>(<span class="ruby-identifier">tk_call</span>(<span class="ruby-string">&#39;::Diagrams::ygap&#39;</span>, <span class="ruby-identifier">val</span>))
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                    </div>
+
+    </div>
+  </body>
+</html>    

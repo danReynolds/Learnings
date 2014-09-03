@@ -1,0 +1,480 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>FileViewer</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="../css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/main.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/github.css" type="text/css" media="screen" />
+<script src="../js/jquery-1.3.2.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/jquery-effect.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+
+<body>     
+    <div class="banner">
+        
+        <h1>
+            <span class="type">Class</span> 
+            FileViewer 
+            
+                <span class="parent">&lt; 
+                    
+                    <a href="Object.html">Object</a>
+                    
+                </span>
+            
+        </h1>
+        <ul class="files">
+            
+            <li><a href="../files/ext/curses/view2_rb.html">ext/curses/view2.rb</a></li>
+            
+        </ul>
+    </div>
+    <div id="bodyContent">
+        <div id="content">
+  
+    <div class="description">
+      
+<p>A curses based file viewer</p>
+
+    </div>
+  
+
+
+  
+
+
+  
+  
+
+
+  
+
+
+  
+    <!-- Method ref -->
+    <div class="sectiontitle">Methods</div>
+    <dl class="methods">
+      
+        <dt>I</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-init_curses">init_curses</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-interact">interact</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>L</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-load_file">load_file</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>N</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-new">new</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>S</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-scroll_down">scroll_down</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-scroll_up">scroll_up</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+    </dl>
+  
+
+  
+
+
+
+  
+
+    
+
+    
+
+    
+
+
+    
+
+
+    <!-- Methods -->
+    
+      <div class="sectiontitle">Class Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-c-new">
+            
+              <b>new</b>(filename)
+            
+            <a href="../classes/FileViewer.html#method-c-new" name="method-c-new" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Create a new fileviewer, and view the file.</p>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-new_source')" id="l_method-c-new_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/5fe1f62633fb71f6e2450acc77605d1102a24e6e/ext/curses/view2.rb#L10" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-new_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/curses/view2.rb, line 10</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">initialize</span>(<span class="ruby-identifier">filename</span>)
+  <span class="ruby-ivar">@data_lines</span> = []
+  <span class="ruby-ivar">@screen</span> = <span class="ruby-keyword">nil</span>
+  <span class="ruby-ivar">@top</span> = <span class="ruby-keyword">nil</span>
+  <span class="ruby-identifier">init_curses</span>
+  <span class="ruby-identifier">load_file</span>(<span class="ruby-identifier">filename</span>)
+  <span class="ruby-identifier">interact</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                  
+      <div class="sectiontitle">Instance Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-i-init_curses">
+            
+              <b>init_curses</b>()
+            
+            <a href="../classes/FileViewer.html#method-i-init_curses" name="method-i-init_curses" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Perform the curses setup</p>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-init_curses_source')" id="l_method-i-init_curses_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/5fe1f62633fb71f6e2450acc77605d1102a24e6e/ext/curses/view2.rb#L20" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-init_curses_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/curses/view2.rb, line 20</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">init_curses</span>
+  <span class="ruby-comment"># signal(SIGINT, finish)</span>
+
+  <span class="ruby-constant">Curses</span>.<span class="ruby-identifier">init_screen</span>
+  <span class="ruby-constant">Curses</span>.<span class="ruby-identifier">nonl</span>
+  <span class="ruby-constant">Curses</span>.<span class="ruby-identifier">cbreak</span>
+  <span class="ruby-constant">Curses</span>.<span class="ruby-identifier">noecho</span>
+
+  <span class="ruby-ivar">@screen</span> = <span class="ruby-constant">Curses</span>.<span class="ruby-identifier">stdscr</span>
+
+  <span class="ruby-ivar">@screen</span>.<span class="ruby-identifier">scrollok</span>(<span class="ruby-keyword">true</span>)
+  <span class="ruby-comment">#$screen.keypad(true)</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-interact">
+            
+              <b>interact</b>()
+            
+            <a href="../classes/FileViewer.html#method-i-interact" name="method-i-interact" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Allow the user to interact with the display. This uses EMACS-like
+keybindings, and also vi-like keybindings as well, except that left and
+right move to the beginning and end of the file, respectively.</p>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-interact_source')" id="l_method-i-interact_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/5fe1f62633fb71f6e2450acc77605d1102a24e6e/ext/curses/view2.rb#L92" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-interact_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/curses/view2.rb, line 92</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">interact</span>
+  <span class="ruby-keyword">while</span> <span class="ruby-keyword">true</span>
+    <span class="ruby-identifier">result</span> = <span class="ruby-keyword">true</span>
+    <span class="ruby-identifier">c</span> = <span class="ruby-constant">Curses</span>.<span class="ruby-identifier">getch</span>
+    <span class="ruby-keyword">case</span> <span class="ruby-identifier">c</span>
+    <span class="ruby-keyword">when</span> <span class="ruby-constant">Curses</span><span class="ruby-operator">::</span><span class="ruby-constant">KEY_DOWN</span>, <span class="ruby-constant">Curses</span><span class="ruby-operator">::</span><span class="ruby-constant">KEY_CTRL_N</span>, <span class="ruby-value">?j</span>
+      <span class="ruby-identifier">result</span> = <span class="ruby-identifier">scroll_down</span>
+    <span class="ruby-keyword">when</span> <span class="ruby-constant">Curses</span><span class="ruby-operator">::</span><span class="ruby-constant">KEY_UP</span>, <span class="ruby-constant">Curses</span><span class="ruby-operator">::</span><span class="ruby-constant">KEY_CTRL_P</span>, <span class="ruby-value">?k</span>
+      <span class="ruby-identifier">result</span> = <span class="ruby-identifier">scroll_up</span>
+    <span class="ruby-keyword">when</span> <span class="ruby-constant">Curses</span><span class="ruby-operator">::</span><span class="ruby-constant">KEY_NPAGE</span>, <span class="ruby-value">?\</span><span class="ruby-identifier">s</span>  <span class="ruby-comment"># white space</span>
+      <span class="ruby-keyword">for</span> <span class="ruby-identifier">i</span> <span class="ruby-keyword">in</span> <span class="ruby-number">0</span><span class="ruby-operator">..</span>(<span class="ruby-ivar">@screen</span>.<span class="ruby-identifier">maxy</span> <span class="ruby-operator">-</span> <span class="ruby-number">2</span>)
+        <span class="ruby-keyword">if</span>( <span class="ruby-operator">!</span> <span class="ruby-identifier">scroll_down</span> )
+          <span class="ruby-keyword">if</span>( <span class="ruby-identifier">i</span> <span class="ruby-operator">==</span> <span class="ruby-number">0</span> )
+            <span class="ruby-identifier">result</span> = <span class="ruby-keyword">false</span>
+          <span class="ruby-keyword">end</span>
+          <span class="ruby-keyword">break</span>
+        <span class="ruby-keyword">end</span>
+      <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">when</span> <span class="ruby-constant">Curses</span><span class="ruby-operator">::</span><span class="ruby-constant">KEY_PPAGE</span>
+      <span class="ruby-keyword">for</span> <span class="ruby-identifier">i</span> <span class="ruby-keyword">in</span> <span class="ruby-number">0</span><span class="ruby-operator">..</span>(<span class="ruby-ivar">@screen</span>.<span class="ruby-identifier">maxy</span> <span class="ruby-operator">-</span> <span class="ruby-number">2</span>)
+        <span class="ruby-keyword">if</span>( <span class="ruby-operator">!</span> <span class="ruby-identifier">scroll_up</span> )
+          <span class="ruby-keyword">if</span>( <span class="ruby-identifier">i</span> <span class="ruby-operator">==</span> <span class="ruby-number">0</span> )
+            <span class="ruby-identifier">result</span> = <span class="ruby-keyword">false</span>
+          <span class="ruby-keyword">end</span>
+          <span class="ruby-keyword">break</span>
+        <span class="ruby-keyword">end</span>
+      <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">when</span> <span class="ruby-constant">Curses</span><span class="ruby-operator">::</span><span class="ruby-constant">KEY_LEFT</span>, <span class="ruby-constant">Curses</span><span class="ruby-operator">::</span><span class="ruby-constant">KEY_CTRL_T</span>, <span class="ruby-value">?h</span>
+      <span class="ruby-keyword">while</span>( <span class="ruby-identifier">scroll_up</span> )
+      <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">when</span> <span class="ruby-constant">Curses</span><span class="ruby-operator">::</span><span class="ruby-constant">KEY_RIGHT</span>, <span class="ruby-constant">Curses</span><span class="ruby-operator">::</span><span class="ruby-constant">KEY_CTRL_B</span>, <span class="ruby-value">?l</span>
+      <span class="ruby-keyword">while</span>( <span class="ruby-identifier">scroll_down</span> )
+      <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">when</span> <span class="ruby-value">?q</span>
+      <span class="ruby-keyword">break</span>
+    <span class="ruby-keyword">else</span>
+      <span class="ruby-ivar">@screen</span>.<span class="ruby-identifier">setpos</span>(<span class="ruby-number">0</span>,<span class="ruby-number">0</span>)
+      <span class="ruby-ivar">@screen</span>.<span class="ruby-identifier">addstr</span>(<span class="ruby-node">&quot;[unknown key `#{Curses.keyname(c)}&#39;=#{c}] &quot;</span>)
+    <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">if</span>( <span class="ruby-operator">!</span><span class="ruby-identifier">result</span> )
+      <span class="ruby-constant">Curses</span>.<span class="ruby-identifier">beep</span>
+    <span class="ruby-keyword">end</span>
+    <span class="ruby-ivar">@screen</span>.<span class="ruby-identifier">setpos</span>(<span class="ruby-number">0</span>,<span class="ruby-number">0</span>)
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-constant">Curses</span>.<span class="ruby-identifier">close_screen</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-load_file">
+            
+              <b>load_file</b>(filename)
+            
+            <a href="../classes/FileViewer.html#method-i-load_file" name="method-i-load_file" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Load the file into memory, and put the first part on the curses display.</p>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-load_file_source')" id="l_method-i-load_file_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/5fe1f62633fb71f6e2450acc77605d1102a24e6e/ext/curses/view2.rb#L36" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-load_file_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/curses/view2.rb, line 36</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">load_file</span>(<span class="ruby-identifier">filename</span>)
+  <span class="ruby-identifier">fp</span> = <span class="ruby-identifier">open</span>(<span class="ruby-identifier">filename</span>, <span class="ruby-string">&quot;r&quot;</span>) <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">fp</span><span class="ruby-operator">|</span>
+  <span class="ruby-comment"># slurp the file</span>
+  <span class="ruby-identifier">fp</span>.<span class="ruby-identifier">each_line</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">l</span><span class="ruby-operator">|</span>
+    <span class="ruby-ivar">@data_lines</span>.<span class="ruby-identifier">push</span>(<span class="ruby-identifier">l</span>.<span class="ruby-identifier">chop</span>)
+  }
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-ivar">@top</span> = <span class="ruby-number">0</span>
+  <span class="ruby-ivar">@data_lines</span>[<span class="ruby-number">0</span><span class="ruby-operator">..</span><span class="ruby-ivar">@screen</span>.<span class="ruby-identifier">maxy</span><span class="ruby-operator">-</span><span class="ruby-number">1</span>].<span class="ruby-identifier">each_with_index</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">line</span>, <span class="ruby-identifier">idx</span><span class="ruby-operator">|</span>
+    <span class="ruby-ivar">@screen</span>.<span class="ruby-identifier">setpos</span>(<span class="ruby-identifier">idx</span>, <span class="ruby-number">0</span>)
+    <span class="ruby-ivar">@screen</span>.<span class="ruby-identifier">addstr</span>(<span class="ruby-identifier">line</span>)
+  }
+  <span class="ruby-ivar">@screen</span>.<span class="ruby-identifier">setpos</span>(<span class="ruby-number">0</span>,<span class="ruby-number">0</span>)
+  <span class="ruby-ivar">@screen</span>.<span class="ruby-identifier">refresh</span>
+<span class="ruby-keyword">rescue</span>
+  <span class="ruby-identifier">raise</span> <span class="ruby-node">&quot;cannot open file &#39;#{filename}&#39; for reading&quot;</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-scroll_down">
+            
+              <b>scroll_down</b>()
+            
+            <a href="../classes/FileViewer.html#method-i-scroll_down" name="method-i-scroll_down" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Scroll the display down by one line</p>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-scroll_down_source')" id="l_method-i-scroll_down_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/5fe1f62633fb71f6e2450acc77605d1102a24e6e/ext/curses/view2.rb#L72" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-scroll_down_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/curses/view2.rb, line 72</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">scroll_down</span>
+  <span class="ruby-keyword">if</span>( <span class="ruby-ivar">@top</span> <span class="ruby-operator">+</span> <span class="ruby-ivar">@screen</span>.<span class="ruby-identifier">maxy</span> <span class="ruby-operator">&lt;</span> <span class="ruby-ivar">@data_lines</span>.<span class="ruby-identifier">length</span> )
+    <span class="ruby-ivar">@screen</span>.<span class="ruby-identifier">scrl</span>(<span class="ruby-number">1</span>)
+    <span class="ruby-ivar">@top</span> <span class="ruby-operator">+=</span> <span class="ruby-number">1</span>
+    <span class="ruby-identifier">str</span> = <span class="ruby-ivar">@data_lines</span>[<span class="ruby-ivar">@top</span> <span class="ruby-operator">+</span> <span class="ruby-ivar">@screen</span>.<span class="ruby-identifier">maxy</span> <span class="ruby-operator">-</span> <span class="ruby-number">1</span>]
+    <span class="ruby-keyword">if</span>( <span class="ruby-identifier">str</span> )
+      <span class="ruby-ivar">@screen</span>.<span class="ruby-identifier">setpos</span>(<span class="ruby-ivar">@screen</span>.<span class="ruby-identifier">maxy</span> <span class="ruby-operator">-</span> <span class="ruby-number">1</span>, <span class="ruby-number">0</span>)
+      <span class="ruby-ivar">@screen</span>.<span class="ruby-identifier">addstr</span>(<span class="ruby-identifier">str</span>)
+    <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">return</span> <span class="ruby-keyword">true</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-keyword">return</span> <span class="ruby-keyword">false</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-scroll_up">
+            
+              <b>scroll_up</b>()
+            
+            <a href="../classes/FileViewer.html#method-i-scroll_up" name="method-i-scroll_up" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Scroll the display up by one line</p>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-scroll_up_source')" id="l_method-i-scroll_up_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/5fe1f62633fb71f6e2450acc77605d1102a24e6e/ext/curses/view2.rb#L56" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-scroll_up_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/curses/view2.rb, line 56</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">scroll_up</span>
+  <span class="ruby-keyword">if</span>( <span class="ruby-ivar">@top</span> <span class="ruby-operator">&gt;</span> <span class="ruby-number">0</span> )
+    <span class="ruby-ivar">@screen</span>.<span class="ruby-identifier">scrl</span>(<span class="ruby-number">-1</span>)
+    <span class="ruby-ivar">@top</span> <span class="ruby-operator">-=</span> <span class="ruby-number">1</span>
+    <span class="ruby-identifier">str</span> = <span class="ruby-ivar">@data_lines</span>[<span class="ruby-ivar">@top</span>]
+    <span class="ruby-keyword">if</span>( <span class="ruby-identifier">str</span> )
+      <span class="ruby-ivar">@screen</span>.<span class="ruby-identifier">setpos</span>(<span class="ruby-number">0</span>, <span class="ruby-number">0</span>)
+      <span class="ruby-ivar">@screen</span>.<span class="ruby-identifier">addstr</span>(<span class="ruby-identifier">str</span>)
+    <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">return</span> <span class="ruby-keyword">true</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-keyword">return</span> <span class="ruby-keyword">false</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                    </div>
+
+    </div>
+  </body>
+</html>    

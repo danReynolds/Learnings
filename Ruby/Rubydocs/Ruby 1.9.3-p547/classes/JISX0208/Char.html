@@ -1,0 +1,666 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>JISX0208::Char</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="../../css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../../css/main.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../../css/github.css" type="text/css" media="screen" />
+<script src="../../js/jquery-1.3.2.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../js/jquery-effect.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../js/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+
+<body>     
+    <div class="banner">
+        
+        <h1>
+            <span class="type">Class</span> 
+            JISX0208::Char 
+            
+                <span class="parent">&lt; 
+                    
+                    <a href="../Object.html">Object</a>
+                    
+                </span>
+            
+        </h1>
+        <ul class="files">
+            
+            <li><a href="../../files/tool/jisx0208_rb.html">tool/jisx0208.rb</a></li>
+            
+        </ul>
+    </div>
+    <div id="bodyContent">
+        <div id="content">
+  
+
+
+  
+
+
+  
+  
+
+
+  
+
+
+  
+    <!-- Method ref -->
+    <div class="sectiontitle">Methods</div>
+    <dl class="methods">
+      
+        <dt>#</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-3D-3D">==</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>C</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-cell">cell</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>F</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-from_sjis">from_sjis</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>H</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-hi">hi</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>I</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-inspect">inspect</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>L</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-lo">lo</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>N</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-new">new</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>R</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-row">row</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>S</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-succ">succ</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>T</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-to_int">to_int</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-to_sjis">to_sjis</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+    </dl>
+  
+
+  
+
+
+
+  
+
+    
+
+    
+
+    
+
+
+    
+
+
+    <!-- Methods -->
+    
+      <div class="sectiontitle">Class Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-c-new">
+            
+              <b>new</b>(row, cell=nil)
+            
+            <a href="../../classes/JISX0208/Char.html#method-c-new" name="method-c-new" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-new_source')" id="l_method-c-new_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/62f8df2d3c95816028c006ecbe70bc51704eec4b/tool/jisx0208.rb#L20" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-new_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File tool/jisx0208.rb, line 20</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">initialize</span>(<span class="ruby-identifier">row</span>, <span class="ruby-identifier">cell</span>=<span class="ruby-keyword">nil</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">cell</span>
+    <span class="ruby-ivar">@code</span> = <span class="ruby-identifier">row_cell_to_code</span>(<span class="ruby-identifier">row</span>, <span class="ruby-identifier">cell</span>)
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-ivar">@code</span> = <span class="ruby-identifier">row</span>.<span class="ruby-identifier">to_int</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                  
+      <div class="sectiontitle">Instance Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-i-3D-3D">
+            
+              <b>==</b>(other)
+            
+            <a href="../../classes/JISX0208/Char.html#method-i-3D-3D" name="method-i-3D-3D" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-3D-3D_source')" id="l_method-i-3D-3D_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/62f8df2d3c95816028c006ecbe70bc51704eec4b/tool/jisx0208.rb#L28" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-3D-3D_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File tool/jisx0208.rb, line 28</span>
+<span class="ruby-keyword">def</span> <span class="ruby-operator">==</span>(<span class="ruby-keyword ruby-title">other</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">class</span> <span class="ruby-operator">===</span> <span class="ruby-identifier">other</span>
+    <span class="ruby-keyword">return</span> <span class="ruby-constant">Integer</span>(<span class="ruby-keyword">self</span>) <span class="ruby-operator">==</span> <span class="ruby-constant">Integer</span>(<span class="ruby-identifier">other</span>)
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">super</span>(<span class="ruby-identifier">other</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-cell">
+            
+              <b>cell</b>()
+            
+            <a href="../../classes/JISX0208/Char.html#method-i-cell" name="method-i-cell" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-cell_source')" id="l_method-i-cell_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/62f8df2d3c95816028c006ecbe70bc51704eec4b/tool/jisx0208.rb#L51" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-cell_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File tool/jisx0208.rb, line 51</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">cell</span>
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">lo</span> <span class="ruby-operator">-</span> <span class="ruby-number">0x20</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-from_sjis">
+            
+              <b>from_sjis</b>(sjis)
+            
+            <a href="../../classes/JISX0208/Char.html#method-i-from_sjis" name="method-i-from_sjis" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-from_sjis_source')" id="l_method-i-from_sjis_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/62f8df2d3c95816028c006ecbe70bc51704eec4b/tool/jisx0208.rb#L4" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-from_sjis_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File tool/jisx0208.rb, line 4</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">from_sjis</span>(<span class="ruby-identifier">sjis</span>)
+  <span class="ruby-keyword">unless</span> <span class="ruby-number">0x8140</span> <span class="ruby-operator">&lt;=</span> <span class="ruby-identifier">sjis</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">sjis</span> <span class="ruby-operator">&lt;=</span> <span class="ruby-number">0xFCFC</span>
+    <span class="ruby-identifier">raise</span> <span class="ruby-constant">ArgumentError</span>, <span class="ruby-node">&quot;out of the range of JIS X 0208: 0x#{sjis.to_s(16)}&quot;</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">sjis_hi</span>, <span class="ruby-identifier">sjis_lo</span> = <span class="ruby-identifier">sjis</span> <span class="ruby-operator">&gt;&gt;</span> <span class="ruby-number">8</span>, <span class="ruby-identifier">sjis</span> <span class="ruby-operator">&amp;</span> <span class="ruby-number">0xFF</span>
+  <span class="ruby-identifier">sjis_hi</span> = (<span class="ruby-identifier">sjis_hi</span> <span class="ruby-operator">-</span> ((<span class="ruby-identifier">sjis_hi</span> <span class="ruby-operator">&lt;=</span> <span class="ruby-number">0x9F</span>) <span class="ruby-operator">?</span> <span class="ruby-number">0x80</span> <span class="ruby-operator">:</span> <span class="ruby-number">0xC0</span>)) <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-number">1</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">sjis_lo</span> <span class="ruby-operator">&lt;=</span> <span class="ruby-number">0x9E</span>
+    <span class="ruby-identifier">sjis_hi</span> <span class="ruby-operator">-=</span> <span class="ruby-number">1</span>
+    <span class="ruby-identifier">sjis_lo</span> <span class="ruby-operator">-=</span> (<span class="ruby-identifier">sjis_lo</span> <span class="ruby-operator">&lt;=</span> <span class="ruby-number">0x7E</span>) <span class="ruby-operator">?</span> <span class="ruby-number">0x3F</span> <span class="ruby-operator">:</span> <span class="ruby-number">0x40</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">sjis_lo</span> <span class="ruby-operator">-=</span> <span class="ruby-number">0x9E</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">sjis_hi</span>, <span class="ruby-identifier">sjis_lo</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-hi">
+            
+              <b>hi</b>()
+            
+            <a href="../../classes/JISX0208/Char.html#method-i-hi" name="method-i-hi" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-hi_source')" id="l_method-i-hi_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/62f8df2d3c95816028c006ecbe70bc51704eec4b/tool/jisx0208.rb#L39" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-hi_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File tool/jisx0208.rb, line 39</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">hi</span>
+  <span class="ruby-constant">Integer</span>(<span class="ruby-keyword">self</span>) <span class="ruby-operator">&gt;&gt;</span> <span class="ruby-number">8</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-inspect">
+            
+              <b>inspect</b>()
+            
+            <a href="../../classes/JISX0208/Char.html#method-i-inspect" name="method-i-inspect" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-inspect_source')" id="l_method-i-inspect_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/62f8df2d3c95816028c006ecbe70bc51704eec4b/tool/jisx0208.rb#L71" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-inspect_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File tool/jisx0208.rb, line 71</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">inspect</span>
+  <span class="ruby-node">&quot;#&lt;JISX0208::Char:#{self.object_id.to_s(16)} sjis=#{self.to_sjis.to_s(16)} jis=#{self.to_int.to_s(16)}&gt;&quot;</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-lo">
+            
+              <b>lo</b>()
+            
+            <a href="../../classes/JISX0208/Char.html#method-i-lo" name="method-i-lo" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-lo_source')" id="l_method-i-lo_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/62f8df2d3c95816028c006ecbe70bc51704eec4b/tool/jisx0208.rb#L43" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-lo_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File tool/jisx0208.rb, line 43</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">lo</span>
+  <span class="ruby-constant">Integer</span>(<span class="ruby-keyword">self</span>) <span class="ruby-operator">&amp;</span> <span class="ruby-number">0xFF</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-row">
+            
+              <b>row</b>()
+            
+            <a href="../../classes/JISX0208/Char.html#method-i-row" name="method-i-row" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-row_source')" id="l_method-i-row_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/62f8df2d3c95816028c006ecbe70bc51704eec4b/tool/jisx0208.rb#L47" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-row_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File tool/jisx0208.rb, line 47</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">row</span>
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">hi</span> <span class="ruby-operator">-</span> <span class="ruby-number">0x20</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-succ">
+            
+              <b>succ</b>()
+            
+            <a href="../../classes/JISX0208/Char.html#method-i-succ" name="method-i-succ" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-succ_source')" id="l_method-i-succ_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/62f8df2d3c95816028c006ecbe70bc51704eec4b/tool/jisx0208.rb#L55" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-succ_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File tool/jisx0208.rb, line 55</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">succ</span>
+  <span class="ruby-identifier">succ_hi</span>, <span class="ruby-identifier">succ_lo</span> = <span class="ruby-keyword">self</span>.<span class="ruby-identifier">hi</span>, <span class="ruby-keyword">self</span>.<span class="ruby-identifier">lo</span> <span class="ruby-operator">+</span> <span class="ruby-number">1</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">succ_lo</span> <span class="ruby-operator">&gt;</span> <span class="ruby-number">0x7E</span>
+    <span class="ruby-identifier">succ_lo</span> = <span class="ruby-number">0x21</span>
+    <span class="ruby-identifier">succ_hi</span> <span class="ruby-operator">+=</span> <span class="ruby-number">1</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">class</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">succ_hi</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-number">8</span> <span class="ruby-operator">|</span> <span class="ruby-identifier">succ_lo</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-to_int">
+            
+              <b>to_int</b>()
+            
+            <a href="../../classes/JISX0208/Char.html#method-i-to_int" name="method-i-to_int" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-to_int_source')" id="l_method-i-to_int_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/62f8df2d3c95816028c006ecbe70bc51704eec4b/tool/jisx0208.rb#L35" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-to_int_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File tool/jisx0208.rb, line 35</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">to_int</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-ivar">@code</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-to_sjis">
+            
+              <b>to_sjis</b>()
+            
+            <a href="../../classes/JISX0208/Char.html#method-i-to_sjis" name="method-i-to_sjis" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-to_sjis_source')" id="l_method-i-to_sjis_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/62f8df2d3c95816028c006ecbe70bc51704eec4b/tool/jisx0208.rb#L64" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-to_sjis_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File tool/jisx0208.rb, line 64</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">to_sjis</span>
+  <span class="ruby-identifier">h</span>, <span class="ruby-identifier">l</span> = <span class="ruby-keyword">self</span>.<span class="ruby-identifier">hi</span>, <span class="ruby-keyword">self</span>.<span class="ruby-identifier">lo</span>
+  <span class="ruby-identifier">h</span> = (<span class="ruby-identifier">h</span> <span class="ruby-operator">+</span> <span class="ruby-number">1</span>) <span class="ruby-operator">/</span> <span class="ruby-number">2</span> <span class="ruby-operator">+</span> ((<span class="ruby-number">0x21</span><span class="ruby-operator">..</span><span class="ruby-number">0x5E</span>).<span class="ruby-identifier">include?</span>(<span class="ruby-identifier">h</span>) <span class="ruby-operator">?</span> <span class="ruby-number">0x70</span> <span class="ruby-operator">:</span> <span class="ruby-number">0xB0</span>)
+  <span class="ruby-identifier">l</span> <span class="ruby-operator">+=</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">hi</span>.<span class="ruby-identifier">odd?</span> <span class="ruby-operator">?</span> <span class="ruby-number">0x1F</span> <span class="ruby-operator">+</span> ((<span class="ruby-identifier">l</span> <span class="ruby-operator">&gt;=</span> <span class="ruby-number">0x60</span>) <span class="ruby-operator">?</span> <span class="ruby-number">1</span> <span class="ruby-operator">:</span> <span class="ruby-number">0</span>) <span class="ruby-operator">:</span> <span class="ruby-number">0x7E</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-identifier">h</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-number">8</span> <span class="ruby-operator">|</span> <span class="ruby-identifier">l</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                    </div>
+
+    </div>
+  </body>
+</html>    

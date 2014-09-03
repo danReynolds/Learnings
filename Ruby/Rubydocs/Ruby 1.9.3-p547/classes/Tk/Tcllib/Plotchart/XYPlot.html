@@ -1,0 +1,1100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>Tk::Tcllib::Plotchart::XYPlot</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="../../../../css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../../../../css/main.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../../../../css/github.css" type="text/css" media="screen" />
+<script src="../../../../js/jquery-1.3.2.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../../../js/jquery-effect.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../../../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../../../js/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+
+<body>     
+    <div class="banner">
+        
+        <h1>
+            <span class="type">Class</span> 
+            Tk::Tcllib::Plotchart::XYPlot 
+            
+                <span class="parent">&lt; 
+                    
+                    <a href="../../Canvas.html">Tk::Canvas</a>
+                    
+                </span>
+            
+        </h1>
+        <ul class="files">
+            
+            <li><a href="../../../../files/ext/tk/lib/tkextlib/tcllib/plotchart_rb.html">ext/tk/lib/tkextlib/tcllib/plotchart.rb</a></li>
+            
+        </ul>
+    </div>
+    <div id="bodyContent">
+        <div id="content">
+  
+
+
+  
+
+
+  
+  
+
+
+  
+
+
+  
+    <!-- Method ref -->
+    <div class="sectiontitle">Methods</div>
+    <dl class="methods">
+      
+        <dt>#</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-__destroy_hook__">__destroy_hook__</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>B</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-box_and_whiskers">box_and_whiskers</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-box_whiskers">box_whiskers</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>C</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-color_map">color_map</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-contourbox">contourbox</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-contourfill">contourfill</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-contourlines">contourlines</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>D</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-dataconfig">dataconfig</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-dot">dot</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-dotconfig">dotconfig</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>G</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-grid_cells">grid_cells</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>I</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-interval">interval</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>N</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-new">new</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>P</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-plot">plot</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>R</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-rchart">rchart</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-rescale">rescale</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>T</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-trend">trend</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>V</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-vector">vector</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-vectorconfig">vectorconfig</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+    </dl>
+  
+
+  
+    <!-- Includes -->
+    <div class="sectiontitle">Included Modules</div>
+    <ul>
+      
+        <li>
+          
+            <a href="ChartMethod.html">
+              Tk::Tcllib::Plotchart::ChartMethod
+            </a>
+          
+        </li>
+      
+    </ul>
+  
+
+
+
+  
+
+    
+
+    
+
+    
+      <!-- Section constants -->
+      <div class="sectiontitle">Constants</div>
+      <table border='0' cellpadding='5'>
+        
+          <tr valign='top'>
+            <td class="attr-name">TkCommandNames</td>
+            <td>=</td>
+            <td class="attr-value">[
+&#39;canvas&#39;.freeze,
+&#39;::Plotchart::createXYPlot&#39;.freeze
+].freeze</td>
+          </tr>
+          
+            <tr valign='top'>
+              <td>&nbsp;</td>
+              <td colspan="2" class="attr-desc"></td>
+            </tr>
+          
+        
+      </table>
+    
+
+
+    
+
+
+    <!-- Methods -->
+    
+      <div class="sectiontitle">Class Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-c-new">
+            
+              <b>new</b>(*args)
+            
+            <a href="../../../../classes/Tk/Tcllib/Plotchart/XYPlot.html#method-c-new" name="method-c-new" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-new_source')" id="l_method-c-new_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/3a47cf3395dd4c4fe8bdd5df13aab698f2ca314b/ext/tk/lib/tkextlib/tcllib/plotchart.rb#L337" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-new_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/tcllib/plotchart.rb, line 337</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">initialize</span>(<span class="ruby-operator">*</span><span class="ruby-identifier">args</span>) <span class="ruby-comment"># args := ([parent,] xaxis, yaxis [, keys])</span>
+                      <span class="ruby-comment"># xaxis := Array of [minimum, maximum, stepsize]</span>
+                      <span class="ruby-comment"># yaxis := Array of [minimum, maximum, stepsize]</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">args</span>[<span class="ruby-number">0</span>].<span class="ruby-identifier">kind_of?</span>(<span class="ruby-constant">Array</span>)
+    <span class="ruby-ivar">@xaxis</span> = <span class="ruby-identifier">args</span>.<span class="ruby-identifier">shift</span>
+    <span class="ruby-ivar">@yaxis</span> = <span class="ruby-identifier">args</span>.<span class="ruby-identifier">shift</span>
+
+    <span class="ruby-keyword">super</span>(<span class="ruby-operator">*</span><span class="ruby-identifier">args</span>) <span class="ruby-comment"># create canvas widget</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">parent</span> = <span class="ruby-identifier">args</span>.<span class="ruby-identifier">shift</span>
+
+    <span class="ruby-ivar">@xaxis</span> = <span class="ruby-identifier">args</span>.<span class="ruby-identifier">shift</span>
+    <span class="ruby-ivar">@yaxis</span> = <span class="ruby-identifier">args</span>.<span class="ruby-identifier">shift</span>
+
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">parent</span>.<span class="ruby-identifier">kind_of?</span>(<span class="ruby-constant">Tk</span><span class="ruby-operator">::</span><span class="ruby-constant">Canvas</span>)
+      <span class="ruby-ivar">@path</span> = <span class="ruby-identifier">parent</span>.<span class="ruby-identifier">path</span>
+    <span class="ruby-keyword">else</span>
+      <span class="ruby-keyword">super</span>(<span class="ruby-identifier">parent</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">args</span>) <span class="ruby-comment"># create canvas widget</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-ivar">@chart</span> = <span class="ruby-identifier">_create_chart</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                  
+      <div class="sectiontitle">Instance Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-i-__destroy_hook__">
+            
+              <b>__destroy_hook__</b>()
+            
+            <a href="../../../../classes/Tk/Tcllib/Plotchart/XYPlot.html#method-i-__destroy_hook__" name="method-i-__destroy_hook__" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-__destroy_hook___source')" id="l_method-i-__destroy_hook___source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/3a47cf3395dd4c4fe8bdd5df13aab698f2ca314b/ext/tk/lib/tkextlib/tcllib/plotchart.rb#L368" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-__destroy_hook___source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/tcllib/plotchart.rb, line 368</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">__destroy_hook__</span>
+  <span class="ruby-constant">Tk</span><span class="ruby-operator">::</span><span class="ruby-constant">Tcllib</span><span class="ruby-operator">::</span><span class="ruby-constant">Plotchart</span><span class="ruby-operator">::</span><span class="ruby-constant">PlotSeries</span><span class="ruby-operator">::</span><span class="ruby-constant">SeriesID_TBL</span>.<span class="ruby-identifier">mutex</span>.<span class="ruby-identifier">synchronize</span>{
+    <span class="ruby-constant">Tk</span><span class="ruby-operator">::</span><span class="ruby-constant">Tcllib</span><span class="ruby-operator">::</span><span class="ruby-constant">Plotchart</span><span class="ruby-operator">::</span><span class="ruby-constant">PlotSeries</span><span class="ruby-operator">::</span><span class="ruby-constant">SeriesID_TBL</span>.<span class="ruby-identifier">delete</span>(<span class="ruby-ivar">@path</span>)
+  }
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-box_and_whiskers">
+            
+              <b>box_and_whiskers</b>(series, xcrd, ycrd)
+            
+            <a href="../../../../classes/Tk/Tcllib/Plotchart/XYPlot.html#method-i-box_and_whiskers" name="method-i-box_and_whiskers" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+            <div class="aka">
+              Also aliased as: <a href="XYPlot.html#method-i-box_whiskers">box_whiskers</a>
+            </div>
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-box_and_whiskers_source')" id="l_method-i-box_and_whiskers_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/3a47cf3395dd4c4fe8bdd5df13aab698f2ca314b/ext/tk/lib/tkextlib/tcllib/plotchart.rb#L454" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-box_and_whiskers_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/tcllib/plotchart.rb, line 454</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">box_and_whiskers</span>(<span class="ruby-identifier">series</span>, <span class="ruby-identifier">xcrd</span>, <span class="ruby-identifier">ycrd</span>)
+  <span class="ruby-identifier">tk_call_without_enc</span>(<span class="ruby-ivar">@chart</span>, <span class="ruby-string">&#39;box-and-whiskers&#39;</span>,
+                      <span class="ruby-identifier">_get_eval_enc_str</span>(<span class="ruby-identifier">series</span>), <span class="ruby-identifier">xcrd</span>, <span class="ruby-identifier">ycrd</span>)
+  <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-box_whiskers">
+            
+              <b>box_whiskers</b>(series, xcrd, ycrd)
+            
+            <a href="../../../../classes/Tk/Tcllib/Plotchart/XYPlot.html#method-i-box_whiskers" name="method-i-box_whiskers" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+            <div class="aka">
+              Alias for: <a href="XYPlot.html#method-i-box_and_whiskers">box_and_whiskers</a>
+            </div>
+          
+          
+          
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-color_map">
+            
+              <b>color_map</b>(colors)
+            
+            <a href="../../../../classes/Tk/Tcllib/Plotchart/XYPlot.html#method-i-color_map" name="method-i-color_map" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-color_map_source')" id="l_method-i-color_map_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/3a47cf3395dd4c4fe8bdd5df13aab698f2ca314b/ext/tk/lib/tkextlib/tcllib/plotchart.rb#L409" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-color_map_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/tcllib/plotchart.rb, line 409</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">color_map</span>(<span class="ruby-identifier">colors</span>)
+  <span class="ruby-identifier">colors</span> = <span class="ruby-identifier">array2tk_list</span>(<span class="ruby-identifier">colors</span>) <span class="ruby-keyword">if</span> <span class="ruby-identifier">colors</span>.<span class="ruby-identifier">kind_of?</span>(<span class="ruby-constant">Array</span>)
+
+  <span class="ruby-identifier">tk_call_without_enc</span>(<span class="ruby-ivar">@chart</span>, <span class="ruby-string">&#39;colorMap&#39;</span>, <span class="ruby-identifier">colors</span>)
+  <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-contourbox">
+            
+              <b>contourbox</b>(xcrd, ycrd, vals, clss=None)
+            
+            <a href="../../../../classes/Tk/Tcllib/Plotchart/XYPlot.html#method-i-contourbox" name="method-i-contourbox" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-contourbox_source')" id="l_method-i-contourbox_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/3a47cf3395dd4c4fe8bdd5df13aab698f2ca314b/ext/tk/lib/tkextlib/tcllib/plotchart.rb#L399" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-contourbox_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/tcllib/plotchart.rb, line 399</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">contourbox</span>(<span class="ruby-identifier">xcrd</span>, <span class="ruby-identifier">ycrd</span>, <span class="ruby-identifier">vals</span>, <span class="ruby-identifier">clss</span>=<span class="ruby-constant">None</span>)
+  <span class="ruby-identifier">xcrd</span> = <span class="ruby-identifier">array2tk_list</span>(<span class="ruby-identifier">xcrd</span>) <span class="ruby-keyword">if</span> <span class="ruby-identifier">xcrd</span>.<span class="ruby-identifier">kind_of?</span>(<span class="ruby-constant">Array</span>)
+  <span class="ruby-identifier">ycrd</span> = <span class="ruby-identifier">array2tk_list</span>(<span class="ruby-identifier">ycrd</span>) <span class="ruby-keyword">if</span> <span class="ruby-identifier">ycrd</span>.<span class="ruby-identifier">kind_of?</span>(<span class="ruby-constant">Array</span>)
+  <span class="ruby-identifier">vals</span> = <span class="ruby-identifier">array2tk_list</span>(<span class="ruby-identifier">vals</span>) <span class="ruby-keyword">if</span> <span class="ruby-identifier">vals</span>.<span class="ruby-identifier">kind_of?</span>(<span class="ruby-constant">Array</span>)
+  <span class="ruby-identifier">clss</span> = <span class="ruby-identifier">array2tk_list</span>(<span class="ruby-identifier">clss</span>) <span class="ruby-keyword">if</span> <span class="ruby-identifier">clss</span>.<span class="ruby-identifier">kind_of?</span>(<span class="ruby-constant">Array</span>)
+
+  <span class="ruby-identifier">tk_call</span>(<span class="ruby-ivar">@chart</span>, <span class="ruby-string">&#39;contourbox&#39;</span>, <span class="ruby-identifier">xcrd</span>, <span class="ruby-identifier">ycrd</span>, <span class="ruby-identifier">vals</span>, <span class="ruby-identifier">clss</span>)
+  <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-contourfill">
+            
+              <b>contourfill</b>(xcrd, ycrd, vals, clss=None)
+            
+            <a href="../../../../classes/Tk/Tcllib/Plotchart/XYPlot.html#method-i-contourfill" name="method-i-contourfill" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-contourfill_source')" id="l_method-i-contourfill_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/3a47cf3395dd4c4fe8bdd5df13aab698f2ca314b/ext/tk/lib/tkextlib/tcllib/plotchart.rb#L389" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-contourfill_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/tcllib/plotchart.rb, line 389</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">contourfill</span>(<span class="ruby-identifier">xcrd</span>, <span class="ruby-identifier">ycrd</span>, <span class="ruby-identifier">vals</span>, <span class="ruby-identifier">clss</span>=<span class="ruby-constant">None</span>)
+  <span class="ruby-identifier">xcrd</span> = <span class="ruby-identifier">array2tk_list</span>(<span class="ruby-identifier">xcrd</span>) <span class="ruby-keyword">if</span> <span class="ruby-identifier">xcrd</span>.<span class="ruby-identifier">kind_of?</span>(<span class="ruby-constant">Array</span>)
+  <span class="ruby-identifier">ycrd</span> = <span class="ruby-identifier">array2tk_list</span>(<span class="ruby-identifier">ycrd</span>) <span class="ruby-keyword">if</span> <span class="ruby-identifier">ycrd</span>.<span class="ruby-identifier">kind_of?</span>(<span class="ruby-constant">Array</span>)
+  <span class="ruby-identifier">vals</span> = <span class="ruby-identifier">array2tk_list</span>(<span class="ruby-identifier">vals</span>) <span class="ruby-keyword">if</span> <span class="ruby-identifier">vals</span>.<span class="ruby-identifier">kind_of?</span>(<span class="ruby-constant">Array</span>)
+  <span class="ruby-identifier">clss</span> = <span class="ruby-identifier">array2tk_list</span>(<span class="ruby-identifier">clss</span>) <span class="ruby-keyword">if</span> <span class="ruby-identifier">clss</span>.<span class="ruby-identifier">kind_of?</span>(<span class="ruby-constant">Array</span>)
+
+  <span class="ruby-identifier">tk_call</span>(<span class="ruby-ivar">@chart</span>, <span class="ruby-string">&#39;contourfill&#39;</span>, <span class="ruby-identifier">xcrd</span>, <span class="ruby-identifier">ycrd</span>, <span class="ruby-identifier">vals</span>, <span class="ruby-identifier">clss</span>)
+  <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-contourlines">
+            
+              <b>contourlines</b>(xcrd, ycrd, vals, clss=None)
+            
+            <a href="../../../../classes/Tk/Tcllib/Plotchart/XYPlot.html#method-i-contourlines" name="method-i-contourlines" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-contourlines_source')" id="l_method-i-contourlines_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/3a47cf3395dd4c4fe8bdd5df13aab698f2ca314b/ext/tk/lib/tkextlib/tcllib/plotchart.rb#L379" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-contourlines_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/tcllib/plotchart.rb, line 379</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">contourlines</span>(<span class="ruby-identifier">xcrd</span>, <span class="ruby-identifier">ycrd</span>, <span class="ruby-identifier">vals</span>, <span class="ruby-identifier">clss</span>=<span class="ruby-constant">None</span>)
+  <span class="ruby-identifier">xcrd</span> = <span class="ruby-identifier">array2tk_list</span>(<span class="ruby-identifier">xcrd</span>) <span class="ruby-keyword">if</span> <span class="ruby-identifier">xcrd</span>.<span class="ruby-identifier">kind_of?</span>(<span class="ruby-constant">Array</span>)
+  <span class="ruby-identifier">ycrd</span> = <span class="ruby-identifier">array2tk_list</span>(<span class="ruby-identifier">ycrd</span>) <span class="ruby-keyword">if</span> <span class="ruby-identifier">ycrd</span>.<span class="ruby-identifier">kind_of?</span>(<span class="ruby-constant">Array</span>)
+  <span class="ruby-identifier">vals</span> = <span class="ruby-identifier">array2tk_list</span>(<span class="ruby-identifier">vals</span>) <span class="ruby-keyword">if</span> <span class="ruby-identifier">vals</span>.<span class="ruby-identifier">kind_of?</span>(<span class="ruby-constant">Array</span>)
+  <span class="ruby-identifier">clss</span> = <span class="ruby-identifier">array2tk_list</span>(<span class="ruby-identifier">clss</span>) <span class="ruby-keyword">if</span> <span class="ruby-identifier">clss</span>.<span class="ruby-identifier">kind_of?</span>(<span class="ruby-constant">Array</span>)
+
+  <span class="ruby-identifier">tk_call</span>(<span class="ruby-ivar">@chart</span>, <span class="ruby-string">&#39;contourlines&#39;</span>, <span class="ruby-identifier">xcrd</span>, <span class="ruby-identifier">ycrd</span>, <span class="ruby-identifier">vals</span>, <span class="ruby-identifier">clss</span>)
+  <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-dataconfig">
+            
+              <b>dataconfig</b>(series, key, value=None)
+            
+            <a href="../../../../classes/Tk/Tcllib/Plotchart/XYPlot.html#method-i-dataconfig" name="method-i-dataconfig" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-dataconfig_source')" id="l_method-i-dataconfig_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/3a47cf3395dd4c4fe8bdd5df13aab698f2ca314b/ext/tk/lib/tkextlib/tcllib/plotchart.rb#L424" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-dataconfig_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/tcllib/plotchart.rb, line 424</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">dataconfig</span>(<span class="ruby-identifier">series</span>, <span class="ruby-identifier">key</span>, <span class="ruby-identifier">value</span>=<span class="ruby-constant">None</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">key</span>.<span class="ruby-identifier">kind_of?</span>(<span class="ruby-constant">Hash</span>)
+    <span class="ruby-identifier">tk_call_without_enc</span>(<span class="ruby-ivar">@chart</span>, <span class="ruby-string">&#39;dataconfig&#39;</span>, <span class="ruby-identifier">series</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">hash_kv</span>(<span class="ruby-identifier">key</span>, <span class="ruby-keyword">true</span>))
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">tk_call</span>(<span class="ruby-ivar">@chart</span>, <span class="ruby-string">&#39;dataconfig&#39;</span>, <span class="ruby-identifier">series</span>, <span class="ruby-node">&quot;-#{key}&quot;</span>, <span class="ruby-identifier">value</span>)
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-dot">
+            
+              <b>dot</b>(series, xcrd, ycrd, value)
+            
+            <a href="../../../../classes/Tk/Tcllib/Plotchart/XYPlot.html#method-i-dot" name="method-i-dot" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-dot_source')" id="l_method-i-dot_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/3a47cf3395dd4c4fe8bdd5df13aab698f2ca314b/ext/tk/lib/tkextlib/tcllib/plotchart.rb#L487" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-dot_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/tcllib/plotchart.rb, line 487</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">dot</span>(<span class="ruby-identifier">series</span>, <span class="ruby-identifier">xcrd</span>, <span class="ruby-identifier">ycrd</span>, <span class="ruby-identifier">value</span>)
+  <span class="ruby-identifier">tk_call_without_enc</span>(<span class="ruby-ivar">@chart</span>, <span class="ruby-string">&#39;dot&#39;</span>, <span class="ruby-identifier">_get_eval_enc_str</span>(<span class="ruby-identifier">series</span>),
+                      <span class="ruby-identifier">xcrd</span>, <span class="ruby-identifier">ycrd</span>, <span class="ruby-identifier">value</span>)
+  <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-dotconfig">
+            
+              <b>dotconfig</b>(series, key, value=None)
+            
+            <a href="../../../../classes/Tk/Tcllib/Plotchart/XYPlot.html#method-i-dotconfig" name="method-i-dotconfig" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-dotconfig_source')" id="l_method-i-dotconfig_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/3a47cf3395dd4c4fe8bdd5df13aab698f2ca314b/ext/tk/lib/tkextlib/tcllib/plotchart.rb#L477" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-dotconfig_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/tcllib/plotchart.rb, line 477</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">dotconfig</span>(<span class="ruby-identifier">series</span>, <span class="ruby-identifier">key</span>, <span class="ruby-identifier">value</span>=<span class="ruby-constant">None</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">key</span>.<span class="ruby-identifier">kind_of?</span>(<span class="ruby-constant">Hash</span>)
+    <span class="ruby-identifier">tk_call_without_enc</span>(<span class="ruby-ivar">@chart</span>, <span class="ruby-string">&#39;dotconfig&#39;</span>,
+                        <span class="ruby-identifier">_get_eval_enc_str</span>(<span class="ruby-identifier">series</span>), <span class="ruby-operator">*</span><span class="ruby-identifier">hash_kv</span>(<span class="ruby-identifier">key</span>, <span class="ruby-keyword">true</span>))
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">tk_call</span>(<span class="ruby-ivar">@chart</span>, <span class="ruby-string">&#39;dotconfig&#39;</span>, <span class="ruby-identifier">series</span>, <span class="ruby-node">&quot;-#{key}&quot;</span>, <span class="ruby-identifier">value</span>)
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-grid_cells">
+            
+              <b>grid_cells</b>(xcrd, ycrd)
+            
+            <a href="../../../../classes/Tk/Tcllib/Plotchart/XYPlot.html#method-i-grid_cells" name="method-i-grid_cells" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-grid_cells_source')" id="l_method-i-grid_cells_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/3a47cf3395dd4c4fe8bdd5df13aab698f2ca314b/ext/tk/lib/tkextlib/tcllib/plotchart.rb#L416" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-grid_cells_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/tcllib/plotchart.rb, line 416</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">grid_cells</span>(<span class="ruby-identifier">xcrd</span>, <span class="ruby-identifier">ycrd</span>)
+  <span class="ruby-identifier">xcrd</span> = <span class="ruby-identifier">array2tk_list</span>(<span class="ruby-identifier">xcrd</span>) <span class="ruby-keyword">if</span> <span class="ruby-identifier">xcrd</span>.<span class="ruby-identifier">kind_of?</span>(<span class="ruby-constant">Array</span>)
+  <span class="ruby-identifier">ycrd</span> = <span class="ruby-identifier">array2tk_list</span>(<span class="ruby-identifier">ycrd</span>) <span class="ruby-keyword">if</span> <span class="ruby-identifier">ycrd</span>.<span class="ruby-identifier">kind_of?</span>(<span class="ruby-constant">Array</span>)
+
+  <span class="ruby-identifier">tk_call_without_enc</span>(<span class="ruby-ivar">@chart</span>, <span class="ruby-string">&#39;grid&#39;</span>, <span class="ruby-identifier">xcrd</span>, <span class="ruby-identifier">ycrd</span>)
+  <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-interval">
+            
+              <b>interval</b>(series, xcrd, ymin, ymax, ycenter=None)
+            
+            <a href="../../../../classes/Tk/Tcllib/Plotchart/XYPlot.html#method-i-interval" name="method-i-interval" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-interval_source')" id="l_method-i-interval_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/3a47cf3395dd4c4fe8bdd5df13aab698f2ca314b/ext/tk/lib/tkextlib/tcllib/plotchart.rb#L449" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-interval_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/tcllib/plotchart.rb, line 449</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">interval</span>(<span class="ruby-identifier">series</span>, <span class="ruby-identifier">xcrd</span>, <span class="ruby-identifier">ymin</span>, <span class="ruby-identifier">ymax</span>, <span class="ruby-identifier">ycenter</span>=<span class="ruby-constant">None</span>)
+  <span class="ruby-identifier">tk_call</span>(<span class="ruby-ivar">@chart</span>, <span class="ruby-string">&#39;interval&#39;</span>, <span class="ruby-identifier">series</span>, <span class="ruby-identifier">xcrd</span>, <span class="ruby-identifier">ymin</span>, <span class="ruby-identifier">ymax</span>, <span class="ruby-identifier">ycenter</span>)
+  <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-plot">
+            
+              <b>plot</b>(series, x, y)
+            
+            <a href="../../../../classes/Tk/Tcllib/Plotchart/XYPlot.html#method-i-plot" name="method-i-plot" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-plot_source')" id="l_method-i-plot_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/3a47cf3395dd4c4fe8bdd5df13aab698f2ca314b/ext/tk/lib/tkextlib/tcllib/plotchart.rb#L374" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-plot_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/tcllib/plotchart.rb, line 374</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">plot</span>(<span class="ruby-identifier">series</span>, <span class="ruby-identifier">x</span>, <span class="ruby-identifier">y</span>)
+  <span class="ruby-identifier">tk_call_without_enc</span>(<span class="ruby-ivar">@chart</span>, <span class="ruby-string">&#39;plot&#39;</span>, <span class="ruby-identifier">_get_eval_enc_str</span>(<span class="ruby-identifier">series</span>), <span class="ruby-identifier">x</span>, <span class="ruby-identifier">y</span>)
+  <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-rchart">
+            
+              <b>rchart</b>(series, xcrd, ycrd)
+            
+            <a href="../../../../classes/Tk/Tcllib/Plotchart/XYPlot.html#method-i-rchart" name="method-i-rchart" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-rchart_source')" id="l_method-i-rchart_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/3a47cf3395dd4c4fe8bdd5df13aab698f2ca314b/ext/tk/lib/tkextlib/tcllib/plotchart.rb#L443" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-rchart_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/tcllib/plotchart.rb, line 443</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">rchart</span>(<span class="ruby-identifier">series</span>, <span class="ruby-identifier">xcrd</span>, <span class="ruby-identifier">ycrd</span>)
+  <span class="ruby-identifier">tk_call_without_enc</span>(<span class="ruby-ivar">@chart</span>, <span class="ruby-string">&#39;rchart&#39;</span>,
+                      <span class="ruby-identifier">_get_eval_enc_str</span>(<span class="ruby-identifier">series</span>), <span class="ruby-identifier">xcrd</span>, <span class="ruby-identifier">ycrd</span>)
+  <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-rescale">
+            
+              <b>rescale</b>(xscale, yscale)
+            
+            <a href="../../../../classes/Tk/Tcllib/Plotchart/XYPlot.html#method-i-rescale" name="method-i-rescale" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-rescale_source')" id="l_method-i-rescale_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/3a47cf3395dd4c4fe8bdd5df13aab698f2ca314b/ext/tk/lib/tkextlib/tcllib/plotchart.rb#L432" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-rescale_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/tcllib/plotchart.rb, line 432</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">rescale</span>(<span class="ruby-identifier">xscale</span>, <span class="ruby-identifier">yscale</span>) <span class="ruby-comment"># xscale|yscale =&gt; [newmin, newmax, newstep]</span>
+  <span class="ruby-identifier">tk_call_without_enc</span>(<span class="ruby-ivar">@chart</span>, <span class="ruby-string">&#39;rescale&#39;</span>, <span class="ruby-identifier">xscale</span>, <span class="ruby-identifier">yscale</span>)
+  <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-trend">
+            
+              <b>trend</b>(series, xcrd, ycrd)
+            
+            <a href="../../../../classes/Tk/Tcllib/Plotchart/XYPlot.html#method-i-trend" name="method-i-trend" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-trend_source')" id="l_method-i-trend_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/3a47cf3395dd4c4fe8bdd5df13aab698f2ca314b/ext/tk/lib/tkextlib/tcllib/plotchart.rb#L437" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-trend_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/tcllib/plotchart.rb, line 437</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">trend</span>(<span class="ruby-identifier">series</span>, <span class="ruby-identifier">xcrd</span>, <span class="ruby-identifier">ycrd</span>)
+  <span class="ruby-identifier">tk_call_without_enc</span>(<span class="ruby-ivar">@chart</span>, <span class="ruby-string">&#39;trend&#39;</span>,
+                      <span class="ruby-identifier">_get_eval_enc_str</span>(<span class="ruby-identifier">series</span>), <span class="ruby-identifier">xcrd</span>, <span class="ruby-identifier">ycrd</span>)
+  <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-vector">
+            
+              <b>vector</b>(series, xcrd, ycrd, ucmp, vcmp)
+            
+            <a href="../../../../classes/Tk/Tcllib/Plotchart/XYPlot.html#method-i-vector" name="method-i-vector" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-vector_source')" id="l_method-i-vector_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/3a47cf3395dd4c4fe8bdd5df13aab698f2ca314b/ext/tk/lib/tkextlib/tcllib/plotchart.rb#L471" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-vector_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/tcllib/plotchart.rb, line 471</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">vector</span>(<span class="ruby-identifier">series</span>, <span class="ruby-identifier">xcrd</span>, <span class="ruby-identifier">ycrd</span>, <span class="ruby-identifier">ucmp</span>, <span class="ruby-identifier">vcmp</span>)
+  <span class="ruby-identifier">tk_call_without_enc</span>(<span class="ruby-ivar">@chart</span>, <span class="ruby-string">&#39;vector&#39;</span>, <span class="ruby-identifier">_get_eval_enc_str</span>(<span class="ruby-identifier">series</span>),
+                      <span class="ruby-identifier">xcrd</span>, <span class="ruby-identifier">ycrd</span>, <span class="ruby-identifier">ucmp</span>, <span class="ruby-identifier">vcmp</span>)
+  <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-vectorconfig">
+            
+              <b>vectorconfig</b>(series, key, value=None)
+            
+            <a href="../../../../classes/Tk/Tcllib/Plotchart/XYPlot.html#method-i-vectorconfig" name="method-i-vectorconfig" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-vectorconfig_source')" id="l_method-i-vectorconfig_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/3a47cf3395dd4c4fe8bdd5df13aab698f2ca314b/ext/tk/lib/tkextlib/tcllib/plotchart.rb#L461" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-vectorconfig_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/tcllib/plotchart.rb, line 461</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">vectorconfig</span>(<span class="ruby-identifier">series</span>, <span class="ruby-identifier">key</span>, <span class="ruby-identifier">value</span>=<span class="ruby-constant">None</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">key</span>.<span class="ruby-identifier">kind_of?</span>(<span class="ruby-constant">Hash</span>)
+    <span class="ruby-identifier">tk_call_without_enc</span>(<span class="ruby-ivar">@chart</span>, <span class="ruby-string">&#39;vectorconfig&#39;</span>,
+                        <span class="ruby-identifier">_get_eval_enc_str</span>(<span class="ruby-identifier">series</span>), <span class="ruby-operator">*</span><span class="ruby-identifier">hash_kv</span>(<span class="ruby-identifier">key</span>, <span class="ruby-keyword">true</span>))
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">tk_call</span>(<span class="ruby-ivar">@chart</span>, <span class="ruby-string">&#39;vectorconfig&#39;</span>, <span class="ruby-identifier">series</span>, <span class="ruby-node">&quot;-#{key}&quot;</span>, <span class="ruby-identifier">value</span>)
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                    </div>
+
+    </div>
+  </body>
+</html>    

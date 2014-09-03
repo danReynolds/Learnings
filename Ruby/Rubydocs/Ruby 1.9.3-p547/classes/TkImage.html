@@ -1,0 +1,695 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>TkImage</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="../css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/main.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/github.css" type="text/css" media="screen" />
+<script src="../js/jquery-1.3.2.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/jquery-effect.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+
+<body>     
+    <div class="banner">
+        
+        <h1>
+            <span class="type">Class</span> 
+            TkImage 
+            
+                <span class="parent">&lt; 
+                    
+                    <a href="TkObject.html">TkObject</a>
+                    
+                </span>
+            
+        </h1>
+        <ul class="files">
+            
+            <li><a href="../files/ext/tk/lib/tk/image_rb.html">ext/tk/lib/tk/image.rb</a></li>
+            
+            <li><a href="../files/ext/tk/lib/tk/textimage_rb.html">ext/tk/lib/tk/textimage.rb</a></li>
+            
+            <li><a href="../files/ext/tk/lib/tkextlib/treectrl/tktreectrl_rb.html">ext/tk/lib/tkextlib/treectrl/tktreectrl.rb</a></li>
+            
+        </ul>
+    </div>
+    <div id="bodyContent">
+        <div id="content">
+  
+
+
+  
+
+
+  
+  
+
+
+  
+
+
+  
+    <!-- Method ref -->
+    <div class="sectiontitle">Methods</div>
+    <dl class="methods">
+      
+        <dt>D</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-delete">delete</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>H</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-height">height</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>I</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-inuse">inuse</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-itemtype">itemtype</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>M</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-mutex">mutex</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>N</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-names">names</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-c-new">new</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-c-new">new</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>T</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-types">types</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>W</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-width">width</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+    </dl>
+  
+
+  
+    <!-- Includes -->
+    <div class="sectiontitle">Included Modules</div>
+    <ul>
+      
+        <li>
+          
+            <a href="Tk.html">
+              Tk
+            </a>
+          
+        </li>
+      
+    </ul>
+  
+
+
+
+  
+
+    
+
+    
+
+    
+      <!-- Section constants -->
+      <div class="sectiontitle">Constants</div>
+      <table border='0' cellpadding='5'>
+        
+          <tr valign='top'>
+            <td class="attr-name">TkCommandNames</td>
+            <td>=</td>
+            <td class="attr-value">[&#39;image&#39;.freeze].freeze</td>
+          </tr>
+          
+            <tr valign='top'>
+              <td>&nbsp;</td>
+              <td colspan="2" class="attr-desc"></td>
+            </tr>
+          
+        
+          <tr valign='top'>
+            <td class="attr-name">Tk_IMGTBL</td>
+            <td>=</td>
+            <td class="attr-value">TkCore::INTERP.create_table</td>
+          </tr>
+          
+            <tr valign='top'>
+              <td>&nbsp;</td>
+              <td colspan="2" class="attr-desc"></td>
+            </tr>
+          
+        
+          <tr valign='top'>
+            <td class="attr-name">Tk_Image_ID</td>
+            <td>=</td>
+            <td class="attr-value">[&#39;i&#39;.freeze, TkUtil.untrust(&#39;00000&#39;)]).instance_eval{
+@mutex = Mutex.new</td>
+          </tr>
+          
+            <tr valign='top'>
+              <td>&nbsp;</td>
+              <td colspan="2" class="attr-desc"></td>
+            </tr>
+          
+        
+      </table>
+    
+
+
+    
+
+
+    <!-- Methods -->
+    
+      <div class="sectiontitle">Class Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-c-names">
+            
+              <b>names</b>()
+            
+            <a href="../classes/TkImage.html#method-c-names" name="method-c-names" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-names_source')" id="l_method-c-names_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/3ca633b890706c4f5892a179389b8389b5022dc0/ext/tk/lib/tk/image.rb#L105" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-names_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tk/image.rb, line 105</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">TkImage</span>.<span class="ruby-identifier">names</span>
+  <span class="ruby-constant">Tk_IMGTBL</span>.<span class="ruby-identifier">mutex</span>.<span class="ruby-identifier">synchronize</span>{
+    <span class="ruby-constant">Tk</span>.<span class="ruby-identifier">tk_call_without_enc</span>(<span class="ruby-string">&#39;image&#39;</span>, <span class="ruby-string">&#39;names&#39;</span>).<span class="ruby-identifier">split</span>.<span class="ruby-identifier">collect!</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">id</span><span class="ruby-operator">|</span>
+      (<span class="ruby-constant">Tk_IMGTBL</span>[<span class="ruby-identifier">id</span>])<span class="ruby-operator">?</span> <span class="ruby-constant">Tk_IMGTBL</span>[<span class="ruby-identifier">id</span>] <span class="ruby-operator">:</span> <span class="ruby-identifier">id</span>
+    }
+  }
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-new">
+            
+              <b>new</b>(keys=nil)
+            
+            <a href="../classes/TkImage.html#method-c-new" name="method-c-new" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-new_source')" id="l_method-c-new_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/3ca633b890706c4f5892a179389b8389b5022dc0/ext/tk/lib/tk/image.rb#L24" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-new_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tk/image.rb, line 24</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">keys</span>=<span class="ruby-keyword">nil</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">keys</span>.<span class="ruby-identifier">kind_of?</span>(<span class="ruby-constant">Hash</span>)
+    <span class="ruby-identifier">name</span> = <span class="ruby-keyword">nil</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">keys</span>.<span class="ruby-identifier">key?</span>(<span class="ruby-value">:imagename</span>)
+      <span class="ruby-identifier">name</span> = <span class="ruby-identifier">keys</span>[<span class="ruby-value">:imagename</span>]
+    <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">keys</span>.<span class="ruby-identifier">key?</span>(<span class="ruby-string">&#39;imagename&#39;</span>)
+      <span class="ruby-identifier">name</span> = <span class="ruby-identifier">keys</span>[<span class="ruby-string">&#39;imagename&#39;</span>]
+    <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">name</span>
+      <span class="ruby-keyword">if</span> <span class="ruby-identifier">name</span>.<span class="ruby-identifier">kind_of?</span>(<span class="ruby-constant">TkImage</span>)
+        <span class="ruby-identifier">obj</span> = <span class="ruby-identifier">name</span>
+      <span class="ruby-keyword">else</span>
+        <span class="ruby-identifier">name</span> = <span class="ruby-identifier">_get_eval_string</span>(<span class="ruby-identifier">name</span>)
+        <span class="ruby-identifier">obj</span> = <span class="ruby-keyword">nil</span>
+        <span class="ruby-constant">Tk_IMGTBL</span>.<span class="ruby-identifier">mutex</span>.<span class="ruby-identifier">synchronize</span>{
+          <span class="ruby-identifier">obj</span> = <span class="ruby-constant">Tk_IMGTBL</span>[<span class="ruby-identifier">name</span>]
+        }
+      <span class="ruby-keyword">end</span>
+      <span class="ruby-keyword">if</span> <span class="ruby-identifier">obj</span>
+        <span class="ruby-keyword">if</span> <span class="ruby-operator">!</span>(<span class="ruby-identifier">keys</span>[<span class="ruby-value">:without_creating</span>] <span class="ruby-operator">||</span> <span class="ruby-identifier">keys</span>[<span class="ruby-string">&#39;without_creating&#39;</span>])
+          <span class="ruby-identifier">keys</span> = <span class="ruby-identifier">_symbolkey2str</span>(<span class="ruby-identifier">keys</span>)
+          <span class="ruby-identifier">keys</span>.<span class="ruby-identifier">delete</span>(<span class="ruby-string">&#39;imagename&#39;</span>)
+          <span class="ruby-identifier">keys</span>.<span class="ruby-identifier">delete</span>(<span class="ruby-string">&#39;without_creating&#39;</span>)
+          <span class="ruby-identifier">obj</span>.<span class="ruby-identifier">instance_eval</span>{
+            <span class="ruby-identifier">tk_call_without_enc</span>(<span class="ruby-string">&#39;image&#39;</span>, <span class="ruby-string">&#39;create&#39;</span>,
+                                <span class="ruby-ivar">@type</span>, <span class="ruby-ivar">@path</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">hash_kv</span>(<span class="ruby-identifier">keys</span>, <span class="ruby-keyword">true</span>))
+          }
+        <span class="ruby-keyword">end</span>
+        <span class="ruby-keyword">return</span> <span class="ruby-identifier">obj</span>
+      <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+  (<span class="ruby-identifier">obj</span> = <span class="ruby-keyword">self</span>.<span class="ruby-identifier">allocate</span>).<span class="ruby-identifier">instance_eval</span>{
+    <span class="ruby-constant">Tk_IMGTBL</span>.<span class="ruby-identifier">mutex</span>.<span class="ruby-identifier">synchronize</span>{
+      <span class="ruby-identifier">initialize</span>(<span class="ruby-identifier">keys</span>)
+      <span class="ruby-constant">Tk_IMGTBL</span>[<span class="ruby-ivar">@path</span>] = <span class="ruby-keyword">self</span>
+    }
+  }
+  <span class="ruby-identifier">obj</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-new">
+            
+              <b>new</b>(keys=nil)
+            
+            <a href="../classes/TkImage.html#method-c-new" name="method-c-new" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-new_source')" id="l_method-c-new_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/3ca633b890706c4f5892a179389b8389b5022dc0/ext/tk/lib/tk/image.rb#L65" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-new_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tk/image.rb, line 65</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">initialize</span>(<span class="ruby-identifier">keys</span>=<span class="ruby-keyword">nil</span>)
+  <span class="ruby-ivar">@path</span> = <span class="ruby-keyword">nil</span>
+  <span class="ruby-identifier">without_creating</span> = <span class="ruby-keyword">false</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">keys</span>.<span class="ruby-identifier">kind_of?</span>(<span class="ruby-constant">Hash</span>)
+    <span class="ruby-identifier">keys</span> = <span class="ruby-identifier">_symbolkey2str</span>(<span class="ruby-identifier">keys</span>)
+    <span class="ruby-ivar">@path</span> = <span class="ruby-identifier">keys</span>.<span class="ruby-identifier">delete</span>(<span class="ruby-string">&#39;imagename&#39;</span>)
+    <span class="ruby-identifier">without_creating</span> = <span class="ruby-identifier">keys</span>.<span class="ruby-identifier">delete</span>(<span class="ruby-string">&#39;without_creating&#39;</span>)
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">unless</span> <span class="ruby-ivar">@path</span>
+    <span class="ruby-constant">Tk_Image_ID</span>.<span class="ruby-identifier">mutex</span>.<span class="ruby-identifier">synchronize</span>{
+      <span class="ruby-ivar">@path</span> = <span class="ruby-constant">Tk_Image_ID</span>.<span class="ruby-identifier">join</span>(<span class="ruby-constant">TkCore</span><span class="ruby-operator">::</span><span class="ruby-constant">INTERP</span>.<span class="ruby-identifier">_ip_id_</span>)
+      <span class="ruby-constant">Tk_Image_ID</span>[<span class="ruby-number">1</span>].<span class="ruby-identifier">succ!</span>
+    }
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">unless</span> <span class="ruby-identifier">without_creating</span>
+    <span class="ruby-identifier">tk_call_without_enc</span>(<span class="ruby-string">&#39;image&#39;</span>, <span class="ruby-string">&#39;create&#39;</span>,
+                        <span class="ruby-ivar">@type</span>, <span class="ruby-ivar">@path</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">hash_kv</span>(<span class="ruby-identifier">keys</span>, <span class="ruby-keyword">true</span>))
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-types">
+            
+              <b>types</b>()
+            
+            <a href="../classes/TkImage.html#method-c-types" name="method-c-types" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-types_source')" id="l_method-c-types_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/3ca633b890706c4f5892a179389b8389b5022dc0/ext/tk/lib/tk/image.rb#L113" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-types_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tk/image.rb, line 113</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">TkImage</span>.<span class="ruby-identifier">types</span>
+  <span class="ruby-constant">Tk</span>.<span class="ruby-identifier">tk_call_without_enc</span>(<span class="ruby-string">&#39;image&#39;</span>, <span class="ruby-string">&#39;types&#39;</span>).<span class="ruby-identifier">split</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                  
+      <div class="sectiontitle">Instance Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-i-delete">
+            
+              <b>delete</b>()
+            
+            <a href="../classes/TkImage.html#method-i-delete" name="method-i-delete" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-delete_source')" id="l_method-i-delete_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/3ca633b890706c4f5892a179389b8389b5022dc0/ext/tk/lib/tk/image.rb#L85" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-delete_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tk/image.rb, line 85</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">delete</span>
+  <span class="ruby-constant">Tk_IMGTBL</span>.<span class="ruby-identifier">mutex</span>.<span class="ruby-identifier">synchronize</span>{
+    <span class="ruby-constant">Tk_IMGTBL</span>.<span class="ruby-identifier">delete</span>(<span class="ruby-ivar">@id</span>) <span class="ruby-keyword">if</span> <span class="ruby-ivar">@id</span>
+  }
+  <span class="ruby-identifier">tk_call_without_enc</span>(<span class="ruby-string">&#39;image&#39;</span>, <span class="ruby-string">&#39;delete&#39;</span>, <span class="ruby-ivar">@path</span>)
+  <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-height">
+            
+              <b>height</b>()
+            
+            <a href="../classes/TkImage.html#method-i-height" name="method-i-height" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-height_source')" id="l_method-i-height_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/3ca633b890706c4f5892a179389b8389b5022dc0/ext/tk/lib/tk/image.rb#L92" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-height_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tk/image.rb, line 92</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">height</span>
+  <span class="ruby-identifier">number</span>(<span class="ruby-identifier">tk_call_without_enc</span>(<span class="ruby-string">&#39;image&#39;</span>, <span class="ruby-string">&#39;height&#39;</span>, <span class="ruby-ivar">@path</span>))
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-inuse">
+            
+              <b>inuse</b>()
+            
+            <a href="../classes/TkImage.html#method-i-inuse" name="method-i-inuse" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-inuse_source')" id="l_method-i-inuse_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/3ca633b890706c4f5892a179389b8389b5022dc0/ext/tk/lib/tk/image.rb#L95" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-inuse_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tk/image.rb, line 95</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">inuse</span>
+  <span class="ruby-identifier">bool</span>(<span class="ruby-identifier">tk_call_without_enc</span>(<span class="ruby-string">&#39;image&#39;</span>, <span class="ruby-string">&#39;inuse&#39;</span>, <span class="ruby-ivar">@path</span>))
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-itemtype">
+            
+              <b>itemtype</b>()
+            
+            <a href="../classes/TkImage.html#method-i-itemtype" name="method-i-itemtype" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-itemtype_source')" id="l_method-i-itemtype_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/3ca633b890706c4f5892a179389b8389b5022dc0/ext/tk/lib/tk/image.rb#L98" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-itemtype_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tk/image.rb, line 98</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">itemtype</span>
+  <span class="ruby-identifier">tk_call_without_enc</span>(<span class="ruby-string">&#39;image&#39;</span>, <span class="ruby-string">&#39;type&#39;</span>, <span class="ruby-ivar">@path</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-mutex">
+            
+              <b>mutex</b>()
+            
+            <a href="../classes/TkImage.html#method-i-mutex" name="method-i-mutex" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-mutex_source')" id="l_method-i-mutex_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/3ca633b890706c4f5892a179389b8389b5022dc0/ext/tk/lib/tk/image.rb#L16" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-mutex_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tk/image.rb, line 16</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">mutex</span>; <span class="ruby-ivar">@mutex</span>; <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-width">
+            
+              <b>width</b>()
+            
+            <a href="../classes/TkImage.html#method-i-width" name="method-i-width" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-width_source')" id="l_method-i-width_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/3ca633b890706c4f5892a179389b8389b5022dc0/ext/tk/lib/tk/image.rb#L101" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-width_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tk/image.rb, line 101</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">width</span>
+  <span class="ruby-identifier">number</span>(<span class="ruby-identifier">tk_call_without_enc</span>(<span class="ruby-string">&#39;image&#39;</span>, <span class="ruby-string">&#39;width&#39;</span>, <span class="ruby-ivar">@path</span>))
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                    </div>
+
+    </div>
+  </body>
+</html>    

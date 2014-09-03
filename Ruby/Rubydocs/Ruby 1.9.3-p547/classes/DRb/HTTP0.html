@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>DRb::HTTP0</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="../../css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../../css/main.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../../css/github.css" type="text/css" media="screen" />
+<script src="../../js/jquery-1.3.2.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../js/jquery-effect.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../js/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+
+<body>     
+    <div class="banner">
+        
+        <h1>
+            <span class="type">Module</span> 
+            DRb::HTTP0 
+            
+        </h1>
+        <ul class="files">
+            
+            <li><a href="../../files/sample/drb/http0_rb.html">sample/drb/http0.rb</a></li>
+            
+            <li><a href="../../files/sample/drb/http0serv_rb.html">sample/drb/http0serv.rb</a></li>
+            
+        </ul>
+    </div>
+    <div id="bodyContent">
+        <div id="content">
+  
+
+
+  
+
+
+  
+  
+
+
+  
+    <!-- Namespace -->
+    <div class="sectiontitle">Namespace</div>
+    <ul>
+      
+        <li>
+          <span class="type">CLASS</span>
+          <a href="HTTP0/Callback.html">DRb::HTTP0::Callback</a>
+        </li>
+      
+        <li>
+          <span class="type">CLASS</span>
+          <a href="HTTP0/ClientSide.html">DRb::HTTP0::ClientSide</a>
+        </li>
+      
+        <li>
+          <span class="type">CLASS</span>
+          <a href="HTTP0/Server.html">DRb::HTTP0::Server</a>
+        </li>
+      
+        <li>
+          <span class="type">CLASS</span>
+          <a href="HTTP0/ServerSide.html">DRb::HTTP0::ServerSide</a>
+        </li>
+      
+        <li>
+          <span class="type">CLASS</span>
+          <a href="HTTP0/StrStream.html">DRb::HTTP0::StrStream</a>
+        </li>
+      
+    </ul>
+  
+
+
+  
+    <!-- Method ref -->
+    <div class="sectiontitle">Methods</div>
+    <dl class="methods">
+      
+        <dt>O</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-open">open</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-c-open_server">open_server</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>U</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-uri_option">uri_option</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+    </dl>
+  
+
+  
+
+
+
+  
+
+    
+
+    
+
+    
+
+
+    
+
+
+    <!-- Methods -->
+    
+      <div class="sectiontitle">Class Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-c-open">
+            
+              <b>open</b>(uri, config)
+            
+            <a href="../../classes/DRb/HTTP0.html#method-c-open" name="method-c-open" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-open_source')" id="l_method-c-open_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/3a47cf3395dd4c4fe8bdd5df13aab698f2ca314b/sample/drb/http0.rb#L30" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-open_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File sample/drb/http0.rb, line 30</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">open</span>(<span class="ruby-identifier">uri</span>, <span class="ruby-identifier">config</span>)
+  <span class="ruby-keyword">unless</span> <span class="ruby-regexp">/^http:/</span> <span class="ruby-operator">=~</span> <span class="ruby-identifier">uri</span>
+    <span class="ruby-identifier">raise</span>(<span class="ruby-constant">DRbBadScheme</span>, <span class="ruby-identifier">uri</span>) <span class="ruby-keyword">unless</span> <span class="ruby-identifier">uri</span> <span class="ruby-operator">=~</span> <span class="ruby-regexp">/^http:/</span>
+    <span class="ruby-identifier">raise</span>(<span class="ruby-constant">DRbBadURI</span>, <span class="ruby-string">&#39;can\t parse uri:&#39;</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">uri</span>)
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-constant">ClientSide</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">uri</span>, <span class="ruby-identifier">config</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-open_server">
+            
+              <b>open_server</b>(uri, config)
+            
+            <a href="../../classes/DRb/HTTP0.html#method-c-open_server" name="method-c-open_server" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-open_server_source')" id="l_method-c-open_server_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/3a47cf3395dd4c4fe8bdd5df13aab698f2ca314b/sample/drb/http0serv.rb#L9" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-open_server_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File sample/drb/http0serv.rb, line 9</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">open_server</span>(<span class="ruby-identifier">uri</span>, <span class="ruby-identifier">config</span>)
+  <span class="ruby-keyword">unless</span> <span class="ruby-regexp">/^http:/</span> <span class="ruby-operator">=~</span> <span class="ruby-identifier">uri</span>
+    <span class="ruby-identifier">raise</span>(<span class="ruby-constant">DRbBadScheme</span>, <span class="ruby-identifier">uri</span>) <span class="ruby-keyword">unless</span> <span class="ruby-identifier">uri</span> <span class="ruby-operator">=~</span> <span class="ruby-regexp">/^http:/</span>
+    <span class="ruby-identifier">raise</span>(<span class="ruby-constant">DRbBadURI</span>, <span class="ruby-string">&#39;can\t parse uri:&#39;</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">uri</span>)
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-constant">Server</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">uri</span>, <span class="ruby-identifier">config</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-uri_option">
+            
+              <b>uri_option</b>(uri, config)
+            
+            <a href="../../classes/DRb/HTTP0.html#method-c-uri_option" name="method-c-uri_option" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-uri_option_source')" id="l_method-c-uri_option_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/3a47cf3395dd4c4fe8bdd5df13aab698f2ca314b/sample/drb/http0.rb#L26" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-uri_option_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File sample/drb/http0.rb, line 26</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">uri_option</span>(<span class="ruby-identifier">uri</span>, <span class="ruby-identifier">config</span>)
+  <span class="ruby-keyword">return</span> <span class="ruby-identifier">uri</span>, <span class="ruby-keyword">nil</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                        </div>
+
+    </div>
+  </body>
+</html>    

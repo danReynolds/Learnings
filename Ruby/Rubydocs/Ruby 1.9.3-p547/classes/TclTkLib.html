@@ -1,0 +1,2493 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>TclTkLib</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="../css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/main.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/github.css" type="text/css" media="screen" />
+<script src="../js/jquery-1.3.2.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/jquery-effect.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+
+<body>     
+    <div class="banner">
+        
+        <h1>
+            <span class="type">Module</span> 
+            TclTkLib 
+            
+        </h1>
+        <ul class="files">
+            
+            <li><a href="../files/ext/tk/lib/multi-tk_rb.html">ext/tk/lib/multi-tk.rb</a></li>
+            
+            <li><a href="../files/ext/tk/lib/tk_rb.html">ext/tk/lib/tk.rb</a></li>
+            
+            <li><a href="../files/ext/tk/lib/tk/ttk_selector_rb.html">ext/tk/lib/tk/ttk_selector.rb</a></li>
+            
+            <li><a href="../files/ext/tk/tcltklib_c.html">ext/tk/tcltklib.c</a></li>
+            
+        </ul>
+    </div>
+    <div id="bodyContent">
+        <div id="content">
+  
+    <div class="description">
+      
+<p>wrap methods on <a href="TclTkLib.html">TclTkLib</a> : not permit calling
+<a href="TclTkLib.html">TclTkLib</a> module methods</p>
+
+<p>—- initialization —-</p>
+
+    </div>
+  
+
+
+  
+
+
+  
+  
+
+
+  
+    <!-- Namespace -->
+    <div class="sectiontitle">Namespace</div>
+    <ul>
+      
+        <li>
+          <span class="type">MODULE</span>
+          <a href="TclTkLib/EventFlag.html">TclTkLib::EventFlag</a>
+        </li>
+      
+        <li>
+          <span class="type">MODULE</span>
+          <a href="TclTkLib/RELEASE_TYPE.html">TclTkLib::RELEASE_TYPE</a>
+        </li>
+      
+        <li>
+          <span class="type">MODULE</span>
+          <a href="TclTkLib/VarAccessFlag.html">TclTkLib::VarAccessFlag</a>
+        </li>
+      
+    </ul>
+  
+
+
+  
+    <!-- Method ref -->
+    <div class="sectiontitle">Methods</div>
+    <dl class="methods">
+      
+        <dt>#</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-_conv_listelement">_conv_listelement</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-_conv_listelement">_conv_listelement</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-c-_fromUTF8">_fromUTF8</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-c-_merge_tklist">_merge_tklist</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-_merge_tklist">_merge_tklist</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-c-_split_tklist">_split_tklist</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-c-_subst_Tcl_backslash">_subst_Tcl_backslash</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-c-_subst_UTF_backslash">_subst_UTF_backslash</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-c-_toUTF8">_toUTF8</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>D</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-do_one_event">do_one_event</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-c-do_one_event">do_one_event</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-c-do_thread_callback">do_thread_callback</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>E</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-encoding">encoding</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-c-encoding-3D">encoding=</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-c-encoding_system">encoding_system</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-c-encoding_system-3D">encoding_system=</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>G</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-get_eventloop_tick">get_eventloop_tick</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-c-get_eventloop_tick">get_eventloop_tick</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-get_eventloop_weight">get_eventloop_weight</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-c-get_eventloop_weight">get_eventloop_weight</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-c-get_eventloop_window_mode">get_eventloop_window_mode</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-c-get_no_event_wait">get_no_event_wait</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-get_no_event_wait">get_no_event_wait</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-c-get_release_type_name">get_release_type_name</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-c-get_version">get_version</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>M</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-mainloop">mainloop</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-mainloop">mainloop</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-c-mainloop_abort_on_exception">mainloop_abort_on_exception</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-c-mainloop_abort_on_exception-3D">mainloop_abort_on_exception=</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-c-mainloop_thread-3F">mainloop_thread?</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-mainloop_watchdog">mainloop_watchdog</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-c-mainloop_watchdog">mainloop_watchdog</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>N</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-num_of_mainwindows">num_of_mainwindows</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>R</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-restart">restart</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>S</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-set_eventloop_tick">set_eventloop_tick</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-c-set_eventloop_tick">set_eventloop_tick</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-c-set_eventloop_weight">set_eventloop_weight</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-set_eventloop_weight">set_eventloop_weight</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-c-set_eventloop_window_mode">set_eventloop_window_mode</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-c-set_max_block_time">set_max_block_time</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-set_no_event_wait">set_no_event_wait</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-c-set_no_event_wait">set_no_event_wait</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+    </dl>
+  
+
+  
+
+
+
+  
+
+    
+
+    
+
+    
+      <!-- Section constants -->
+      <div class="sectiontitle">Constants</div>
+      <table border='0' cellpadding='5'>
+        
+          <tr valign='top'>
+            <td class="attr-name">COMPILE_INFO</td>
+            <td>=</td>
+            <td class="attr-value">tcltklib_compile_info()</td>
+          </tr>
+          
+            <tr valign='top'>
+              <td>&nbsp;</td>
+              <td colspan="2" class="attr-desc"><hr></td>
+            </tr>
+          
+        
+          <tr valign='top'>
+            <td class="attr-name">RELEASE_DATE</td>
+            <td>=</td>
+            <td class="attr-value">rb_obj_freeze(rb_str_new2(tcltklib_release_date))</td>
+          </tr>
+          
+            <tr valign='top'>
+              <td>&nbsp;</td>
+              <td colspan="2" class="attr-desc"></td>
+            </tr>
+          
+        
+          <tr valign='top'>
+            <td class="attr-name">FINALIZE_PROC_NAME</td>
+            <td>=</td>
+            <td class="attr-value">rb_str_new2(finalize_hook_name)</td>
+          </tr>
+          
+            <tr valign='top'>
+              <td>&nbsp;</td>
+              <td colspan="2" class="attr-desc"></td>
+            </tr>
+          
+        
+          <tr valign='top'>
+            <td class="attr-name">WINDOWING_SYSTEM</td>
+            <td>=</td>
+            <td class="attr-value">rb_obj_freeze(rb_str_new2(TK_WINDOWING_SYSTEM))</td>
+          </tr>
+          
+            <tr valign='top'>
+              <td>&nbsp;</td>
+              <td colspan="2" class="attr-desc"></td>
+            </tr>
+          
+        
+      </table>
+    
+
+
+    
+
+
+    <!-- Methods -->
+    
+      <div class="sectiontitle">Class Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-c-_conv_listelement">
+            
+              <b>_conv_listelement</b>(p1)
+            
+            <a href="../classes/TclTkLib.html#method-c-_conv_listelement" name="method-c-_conv_listelement" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-_conv_listelement_source')" id="l_method-c-_conv_listelement_source">show</a>
+                
+              </p>
+              <div id="method-c-_conv_listelement_source" class="dyn-source">
+                <pre>static VALUE
+lib_conv_listelement(self, src)
+    VALUE self;
+    VALUE src;
+{
+    int   len, scan_flag;
+    volatile VALUE dst;
+    int   taint_flag = OBJ_TAINTED(src);
+    int thr_crit_bup;
+
+    tcl_stubs_check();
+
+    thr_crit_bup = rb_thread_critical;
+    rb_thread_critical = Qtrue;
+
+    StringValue(src);
+
+#if TCL_MAJOR_VERSION &gt;= 8
+    len = Tcl_ScanCountedElement(RSTRING_PTR(src), RSTRING_LEN(src),
+                                 &amp;scan_flag);
+    dst = rb_str_new(0, len + 1);
+    len = Tcl_ConvertCountedElement(RSTRING_PTR(src), RSTRING_LEN(src),
+                                    RSTRING_PTR(dst), scan_flag);
+#else /* TCL_MAJOR_VERSION &lt; 8 */
+    len = Tcl_ScanElement(RSTRING_PTR(src), &amp;scan_flag);
+    dst = rb_str_new(0, len + 1);
+    len = Tcl_ConvertElement(RSTRING_PTR(src), RSTRING_PTR(dst), scan_flag);
+#endif
+
+    rb_str_resize(dst, len);
+    if (taint_flag) RbTk_OBJ_UNTRUST(dst);
+
+    rb_thread_critical = thr_crit_bup;
+
+    return dst;
+}</pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-_fromUTF8">
+            
+              <b>_fromUTF8</b>(p1, p2 = v2)
+            
+            <a href="../classes/TclTkLib.html#method-c-_fromUTF8" name="method-c-_fromUTF8" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-_fromUTF8_source')" id="l_method-c-_fromUTF8_source">show</a>
+                
+              </p>
+              <div id="method-c-_fromUTF8_source" class="dyn-source">
+                <pre>static VALUE
+lib_fromUTF8(argc, argv, self)
+    int   argc;
+    VALUE *argv;
+    VALUE self;
+{
+    VALUE str, encodename;
+
+    if (rb_scan_args(argc, argv, &quot;11&quot;, &amp;str, &amp;encodename) == 1) {
+        encodename = Qnil;
+    }
+    return lib_fromUTF8_core(Qnil, str, encodename);
+}</pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-_merge_tklist">
+            
+              <b>_merge_tklist</b>(*args)
+            
+            <a href="../classes/TclTkLib.html#method-c-_merge_tklist" name="method-c-_merge_tklist" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-_merge_tklist_source')" id="l_method-c-_merge_tklist_source">show</a>
+                
+              </p>
+              <div id="method-c-_merge_tklist_source" class="dyn-source">
+                <pre>static VALUE
+lib_merge_tklist(argc, argv, obj)
+    int argc;
+    VALUE *argv;
+    VALUE obj;
+{
+    int  num, len;
+    int  *flagPtr;
+    char *dst, *result;
+    volatile VALUE str;
+    int taint_flag = 0;
+    int thr_crit_bup;
+    VALUE old_gc;
+
+    if (argc == 0) return rb_str_new2(&quot;&quot;);
+
+    tcl_stubs_check();
+
+    thr_crit_bup = rb_thread_critical;
+    rb_thread_critical = Qtrue;
+    old_gc = rb_gc_disable();
+
+    /* based on Tcl/Tk&#39;s Tcl_Merge() */
+    /* flagPtr = ALLOC_N(int, argc); */
+    flagPtr = (int *)ckalloc(sizeof(int) * argc);
+#if 0 /* use Tcl_Preserve/Release */
+    Tcl_Preserve((ClientData)flagPtr); /* XXXXXXXXXX */
+#endif
+
+    /* pass 1 */
+    len = 1;
+    for(num = 0; num &lt; argc; num++) {
+        if (OBJ_TAINTED(argv[num])) taint_flag = 1;
+        dst = StringValuePtr(argv[num]);
+#if TCL_MAJOR_VERSION &gt;= 8
+        len += Tcl_ScanCountedElement(dst, RSTRING_LEN(argv[num]),
+                                      &amp;flagPtr[num]) + 1;
+#else /* TCL_MAJOR_VERSION &lt; 8 */
+        len += Tcl_ScanElement(dst, &amp;flagPtr[num]) + 1;
+#endif
+    }
+
+    /* pass 2 */
+    /* result = (char *)Tcl_Alloc(len); */
+    result = (char *)ckalloc(len);
+#if 0 /* use Tcl_Preserve/Release */
+    Tcl_Preserve((ClientData)result);
+#endif
+    dst = result;
+    for(num = 0; num &lt; argc; num++) {
+#if TCL_MAJOR_VERSION &gt;= 8
+        len = Tcl_ConvertCountedElement(RSTRING_PTR(argv[num]),
+                                        RSTRING_LEN(argv[num]),
+                                        dst, flagPtr[num]);
+#else /* TCL_MAJOR_VERSION &lt; 8 */
+        len = Tcl_ConvertElement(RSTRING_PTR(argv[num]), dst, flagPtr[num]);
+#endif
+        dst += len;
+        *dst = &#39; &#39;;
+        dst++;
+    }
+    if (dst == result) {
+        *dst = 0;
+    } else {
+        dst[-1] = 0;
+    }
+
+#if 0 /* use Tcl_EventuallyFree */
+    Tcl_EventuallyFree((ClientData)flagPtr, TCL_DYNAMIC); /* XXXXXXXX */
+#else
+#if 0 /* use Tcl_Preserve/Release */
+    Tcl_Release((ClientData)flagPtr);
+#else
+    /* free(flagPtr); */
+    ckfree((char*)flagPtr);
+#endif
+#endif
+
+    /* create object */
+    str = rb_str_new(result, dst - result - 1);
+    if (taint_flag) RbTk_OBJ_UNTRUST(str);
+#if 0 /* use Tcl_EventuallyFree */
+    Tcl_EventuallyFree((ClientData)result, TCL_DYNAMIC); /* XXXXXXXX */
+#else
+#if 0 /* use Tcl_Preserve/Release */
+    Tcl_Release((ClientData)result); /* XXXXXXXXXXX */
+#else
+    /* Tcl_Free(result); */
+    ckfree(result);
+#endif
+#endif
+
+    if (old_gc == Qfalse) rb_gc_enable();
+    rb_thread_critical = thr_crit_bup;
+
+    return str;
+}</pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-_split_tklist">
+            
+              <b>_split_tklist</b>(p1)
+            
+            <a href="../classes/TclTkLib.html#method-c-_split_tklist" name="method-c-_split_tklist" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-_split_tklist_source')" id="l_method-c-_split_tklist_source">show</a>
+                
+              </p>
+              <div id="method-c-_split_tklist_source" class="dyn-source">
+                <pre>static VALUE
+lib_split_tklist(self, list_str)
+    VALUE self;
+    VALUE list_str;
+{
+    return lib_split_tklist_core(Qnil, list_str);
+}</pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-_subst_Tcl_backslash">
+            
+              <b>_subst_Tcl_backslash</b>(p1)
+            
+            <a href="../classes/TclTkLib.html#method-c-_subst_Tcl_backslash" name="method-c-_subst_Tcl_backslash" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-_subst_Tcl_backslash_source')" id="l_method-c-_subst_Tcl_backslash_source">show</a>
+                
+              </p>
+              <div id="method-c-_subst_Tcl_backslash_source" class="dyn-source">
+                <pre>static VALUE
+lib_Tcl_backslash(self, str)
+    VALUE self;
+    VALUE str;
+{
+    return lib_UTF_backslash_core(self, str, 1);
+}</pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-_subst_UTF_backslash">
+            
+              <b>_subst_UTF_backslash</b>(p1)
+            
+            <a href="../classes/TclTkLib.html#method-c-_subst_UTF_backslash" name="method-c-_subst_UTF_backslash" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-_subst_UTF_backslash_source')" id="l_method-c-_subst_UTF_backslash_source">show</a>
+                
+              </p>
+              <div id="method-c-_subst_UTF_backslash_source" class="dyn-source">
+                <pre>static VALUE
+lib_UTF_backslash(self, str)
+    VALUE self;
+    VALUE str;
+{
+    return lib_UTF_backslash_core(self, str, 0);
+}</pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-_toUTF8">
+            
+              <b>_toUTF8</b>(p1, p2 = v2)
+            
+            <a href="../classes/TclTkLib.html#method-c-_toUTF8" name="method-c-_toUTF8" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-_toUTF8_source')" id="l_method-c-_toUTF8_source">show</a>
+                
+              </p>
+              <div id="method-c-_toUTF8_source" class="dyn-source">
+                <pre>static VALUE
+lib_toUTF8(argc, argv, self)
+    int   argc;
+    VALUE *argv;
+    VALUE self;
+{
+    VALUE str, encodename;
+
+    if (rb_scan_args(argc, argv, &quot;11&quot;, &amp;str, &amp;encodename) == 1) {
+        encodename = Qnil;
+    }
+    return lib_toUTF8_core(Qnil, str, encodename);
+}</pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-do_one_event">
+            
+              <b>do_one_event</b>(*args)
+            
+            <a href="../classes/TclTkLib.html#method-c-do_one_event" name="method-c-do_one_event" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-do_one_event_source')" id="l_method-c-do_one_event_source">show</a>
+                
+              </p>
+              <div id="method-c-do_one_event_source" class="dyn-source">
+                <pre>static VALUE
+lib_do_one_event(argc, argv, self)
+    int   argc;
+    VALUE *argv;
+    VALUE self;
+{
+    return lib_do_one_event_core(argc, argv, self, 0);
+}</pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-do_thread_callback">
+            
+              <b>do_thread_callback</b>(p1 = v1)
+            
+            <a href="../classes/TclTkLib.html#method-c-do_thread_callback" name="method-c-do_thread_callback" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-do_thread_callback_source')" id="l_method-c-do_thread_callback_source">show</a>
+                
+              </p>
+              <div id="method-c-do_thread_callback_source" class="dyn-source">
+                <pre>static VALUE
+lib_thread_callback(argc, argv, self)
+    int argc;
+    VALUE *argv;
+    VALUE self;
+{
+    struct thread_call_proc_arg *q;
+    VALUE proc, th, ret;
+    int status, foundEvent;
+
+    if (rb_scan_args(argc, argv, &quot;01&quot;, &amp;proc) == 0) {
+        proc = rb_block_proc();
+    }
+
+    q = (struct thread_call_proc_arg *)ALLOC(struct thread_call_proc_arg);
+    /* q = (struct thread_call_proc_arg *)ckalloc(sizeof(struct thread_call_proc_arg)); */
+    q-&gt;proc = proc;
+    q-&gt;done = (int*)ALLOC(int);
+    /* q-&gt;done = (int*)ckalloc(sizeof(int)); */
+    *(q-&gt;done) = 0;
+
+    /* create call-proc thread */
+    th = rb_thread_create(_thread_call_proc, (void*)q);
+
+    rb_thread_schedule();
+
+    /* start sub-eventloop */
+    foundEvent = RTEST(lib_eventloop_launcher(/* not check root-widget */0, 0,
+                                              q-&gt;done, (Tcl_Interp*)NULL));
+
+#ifdef RUBY_VM
+    if (RTEST(rb_funcall(th, ID_alive_p, 0))) {
+#else
+    if (RTEST(rb_thread_alive_p(th))) {
+#endif
+        rb_funcall(th, ID_kill, 0);
+        ret = Qnil;
+    } else {
+        ret = rb_protect(_thread_call_proc_value, th, &amp;status);
+    }
+
+    xfree(q-&gt;done);
+    xfree(q);
+    /* ckfree((char*)q-&gt;done); */
+    /* ckfree((char*)q); */
+
+    if (NIL_P(rbtk_pending_exception)) {
+        /* return rb_errinfo(); */
+        if (status) {
+            rb_exc_raise(rb_errinfo());
+        }
+    } else {
+        VALUE exc = rbtk_pending_exception;
+        rbtk_pending_exception = Qnil;
+        /* return exc; */
+        rb_exc_raise(exc);
+    }
+
+    return ret;
+}</pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-encoding">
+            
+              <b>encoding</b>()
+            
+            <a href="../classes/TclTkLib.html#method-c-encoding" name="method-c-encoding" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-encoding_source')" id="l_method-c-encoding_source">show</a>
+                
+              </p>
+              <div id="method-c-encoding_source" class="dyn-source">
+                <pre>static VALUE
+lib_get_system_encoding(self)
+    VALUE self;
+{
+#if TCL_MAJOR_VERSION &gt; 8 || (TCL_MAJOR_VERSION == 8 &amp;&amp; TCL_MINOR_VERSION &gt; 0)
+    tcl_stubs_check();
+    return rb_str_new2(Tcl_GetEncodingName((Tcl_Encoding)NULL));
+#else
+    return Qnil;
+#endif
+}</pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-encoding-3D">
+            
+              <b>encoding=</b>(p1)
+            
+            <a href="../classes/TclTkLib.html#method-c-encoding-3D" name="method-c-encoding-3D" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-encoding-3D_source')" id="l_method-c-encoding-3D_source">show</a>
+                
+              </p>
+              <div id="method-c-encoding-3D_source" class="dyn-source">
+                <pre>static VALUE
+lib_set_system_encoding(self, enc_name)
+    VALUE self;
+    VALUE enc_name;
+{
+#if TCL_MAJOR_VERSION &gt; 8 || (TCL_MAJOR_VERSION == 8 &amp;&amp; TCL_MINOR_VERSION &gt; 0)
+    tcl_stubs_check();
+
+    if (NIL_P(enc_name)) {
+        Tcl_SetSystemEncoding((Tcl_Interp *)NULL, (CONST char *)NULL);
+        return lib_get_system_encoding(self);
+    }
+
+    enc_name = rb_funcall(enc_name, ID_to_s, 0, 0);
+    if (Tcl_SetSystemEncoding((Tcl_Interp *)NULL,
+                              StringValuePtr(enc_name)) != TCL_OK) {
+        rb_raise(rb_eArgError, &quot;unknown encoding name &#39;%s&#39;&quot;,
+                 RSTRING_PTR(enc_name));
+    }
+
+    return enc_name;
+#else
+    return Qnil;
+#endif
+}</pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-encoding_system">
+            
+              <b>encoding_system</b>()
+            
+            <a href="../classes/TclTkLib.html#method-c-encoding_system" name="method-c-encoding_system" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-encoding_system_source')" id="l_method-c-encoding_system_source">show</a>
+                
+              </p>
+              <div id="method-c-encoding_system_source" class="dyn-source">
+                <pre>static VALUE
+lib_get_system_encoding(self)
+    VALUE self;
+{
+#if TCL_MAJOR_VERSION &gt; 8 || (TCL_MAJOR_VERSION == 8 &amp;&amp; TCL_MINOR_VERSION &gt; 0)
+    tcl_stubs_check();
+    return rb_str_new2(Tcl_GetEncodingName((Tcl_Encoding)NULL));
+#else
+    return Qnil;
+#endif
+}</pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-encoding_system-3D">
+            
+              <b>encoding_system=</b>(p1)
+            
+            <a href="../classes/TclTkLib.html#method-c-encoding_system-3D" name="method-c-encoding_system-3D" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-encoding_system-3D_source')" id="l_method-c-encoding_system-3D_source">show</a>
+                
+              </p>
+              <div id="method-c-encoding_system-3D_source" class="dyn-source">
+                <pre>static VALUE
+lib_set_system_encoding(self, enc_name)
+    VALUE self;
+    VALUE enc_name;
+{
+#if TCL_MAJOR_VERSION &gt; 8 || (TCL_MAJOR_VERSION == 8 &amp;&amp; TCL_MINOR_VERSION &gt; 0)
+    tcl_stubs_check();
+
+    if (NIL_P(enc_name)) {
+        Tcl_SetSystemEncoding((Tcl_Interp *)NULL, (CONST char *)NULL);
+        return lib_get_system_encoding(self);
+    }
+
+    enc_name = rb_funcall(enc_name, ID_to_s, 0, 0);
+    if (Tcl_SetSystemEncoding((Tcl_Interp *)NULL,
+                              StringValuePtr(enc_name)) != TCL_OK) {
+        rb_raise(rb_eArgError, &quot;unknown encoding name &#39;%s&#39;&quot;,
+                 RSTRING_PTR(enc_name));
+    }
+
+    return enc_name;
+#else
+    return Qnil;
+#endif
+}</pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-get_eventloop_tick">
+            
+              <b>get_eventloop_tick</b>()
+            
+            <a href="../classes/TclTkLib.html#method-c-get_eventloop_tick" name="method-c-get_eventloop_tick" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-get_eventloop_tick_source')" id="l_method-c-get_eventloop_tick_source">show</a>
+                
+              </p>
+              <div id="method-c-get_eventloop_tick_source" class="dyn-source">
+                <pre>static VALUE
+get_eventloop_tick(self)
+    VALUE self;
+{
+    return INT2NUM(timer_tick);
+}</pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-get_eventloop_weight">
+            
+              <b>get_eventloop_weight</b>()
+            
+            <a href="../classes/TclTkLib.html#method-c-get_eventloop_weight" name="method-c-get_eventloop_weight" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-get_eventloop_weight_source')" id="l_method-c-get_eventloop_weight_source">show</a>
+                
+              </p>
+              <div id="method-c-get_eventloop_weight_source" class="dyn-source">
+                <pre>static VALUE
+get_eventloop_weight(self)
+    VALUE self;
+{
+    return rb_ary_new3(2, INT2NUM(event_loop_max), INT2NUM(no_event_tick));
+}</pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-get_eventloop_window_mode">
+            
+              <b>get_eventloop_window_mode</b>()
+            
+            <a href="../classes/TclTkLib.html#method-c-get_eventloop_window_mode" name="method-c-get_eventloop_window_mode" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-get_eventloop_window_mode_source')" id="l_method-c-get_eventloop_window_mode_source">show</a>
+                
+              </p>
+              <div id="method-c-get_eventloop_window_mode_source" class="dyn-source">
+                <pre>static VALUE
+get_eventloop_window_mode(self)
+    VALUE self;
+{
+    if ( ~window_event_mode ) {
+      return Qfalse;
+    } else {
+      return Qtrue;
+    }
+}</pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-get_no_event_wait">
+            
+              <b>get_no_event_wait</b>()
+            
+            <a href="../classes/TclTkLib.html#method-c-get_no_event_wait" name="method-c-get_no_event_wait" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-get_no_event_wait_source')" id="l_method-c-get_no_event_wait_source">show</a>
+                
+              </p>
+              <div id="method-c-get_no_event_wait_source" class="dyn-source">
+                <pre>static VALUE
+get_no_event_wait(self)
+    VALUE self;
+{
+    return INT2NUM(no_event_wait);
+}</pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-get_release_type_name">
+            
+              <b>get_release_type_name</b>(*args)
+            
+            <a href="../classes/TclTkLib.html#method-c-get_release_type_name" name="method-c-get_release_type_name" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-get_release_type_name_source')" id="l_method-c-get_release_type_name_source">show</a>
+                
+              </p>
+              <div id="method-c-get_release_type_name_source" class="dyn-source">
+                <pre>static VALUE
+lib_get_reltype_name(self)
+    VALUE self;
+{
+    set_tcltk_version();
+
+    switch(tcltk_version.type) {
+    case TCL_ALPHA_RELEASE:
+      return rb_str_new2(&quot;alpha&quot;);
+    case TCL_BETA_RELEASE:
+      return rb_str_new2(&quot;beta&quot;);
+    case TCL_FINAL_RELEASE:
+      return rb_str_new2(&quot;final&quot;);
+    default:
+      rb_raise(rb_eRuntimeError, &quot;tcltklib has invalid release type number&quot;);
+    }
+}</pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-get_version">
+            
+              <b>get_version</b>(*args)
+            
+            <a href="../classes/TclTkLib.html#method-c-get_version" name="method-c-get_version" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-get_version_source')" id="l_method-c-get_version_source">show</a>
+                
+              </p>
+              <div id="method-c-get_version_source" class="dyn-source">
+                <pre>static VALUE
+lib_getversion(self)
+    VALUE self;
+{
+    set_tcltk_version();
+
+    return rb_ary_new3(4, INT2NUM(tcltk_version.major),
+                          INT2NUM(tcltk_version.minor),
+                          INT2NUM(tcltk_version.type),
+                          INT2NUM(tcltk_version.patchlevel));
+}</pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-mainloop">
+            
+              <b>mainloop</b>(p1 = v1)
+            
+            <a href="../classes/TclTkLib.html#method-c-mainloop" name="method-c-mainloop" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>execute Tk_MainLoop</p>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-mainloop_source')" id="l_method-c-mainloop_source">show</a>
+                
+              </p>
+              <div id="method-c-mainloop_source" class="dyn-source">
+                <pre>static VALUE
+lib_mainloop(argc, argv, self)
+    int   argc;
+    VALUE *argv;
+    VALUE self;
+{
+    VALUE check_rootwidget;
+
+    if (rb_scan_args(argc, argv, &quot;01&quot;, &amp;check_rootwidget) == 0) {
+        check_rootwidget = Qtrue;
+    } else if (RTEST(check_rootwidget)) {
+        check_rootwidget = Qtrue;
+    } else {
+        check_rootwidget = Qfalse;
+    }
+
+    return lib_eventloop_launcher(RTEST(check_rootwidget), 0,
+                                  (int*)NULL, (Tcl_Interp*)NULL);
+}</pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-mainloop_abort_on_exception">
+            
+              <b>mainloop_abort_on_exception</b>()
+            
+            <a href="../classes/TclTkLib.html#method-c-mainloop_abort_on_exception" name="method-c-mainloop_abort_on_exception" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-mainloop_abort_on_exception_source')" id="l_method-c-mainloop_abort_on_exception_source">show</a>
+                
+              </p>
+              <div id="method-c-mainloop_abort_on_exception_source" class="dyn-source">
+                <pre>static VALUE
+lib_evloop_abort_on_exc(self)
+    VALUE self;
+{
+    if (event_loop_abort_on_exc &gt; 0) {
+        return Qtrue;
+    } else if (event_loop_abort_on_exc == 0) {
+        return Qfalse;
+    } else {
+        return Qnil;
+    }
+}</pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-mainloop_abort_on_exception-3D">
+            
+              <b>mainloop_abort_on_exception=</b>(p1)
+            
+            <a href="../classes/TclTkLib.html#method-c-mainloop_abort_on_exception-3D" name="method-c-mainloop_abort_on_exception-3D" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-mainloop_abort_on_exception-3D_source')" id="l_method-c-mainloop_abort_on_exception-3D_source">show</a>
+                
+              </p>
+              <div id="method-c-mainloop_abort_on_exception-3D_source" class="dyn-source">
+                <pre>static VALUE
+lib_evloop_abort_on_exc_set(self, val)
+    VALUE self, val;
+{
+    rb_secure(4);
+    if (RTEST(val)) {
+        event_loop_abort_on_exc =  1;
+    } else if (NIL_P(val)) {
+        event_loop_abort_on_exc = -1;
+    } else {
+        event_loop_abort_on_exc =  0;
+    }
+    return lib_evloop_abort_on_exc(self);
+}</pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-mainloop_thread-3F">
+            
+              <b>mainloop_thread?</b>()
+            
+            <a href="../classes/TclTkLib.html#method-c-mainloop_thread-3F" name="method-c-mainloop_thread-3F" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-mainloop_thread-3F_source')" id="l_method-c-mainloop_thread-3F_source">show</a>
+                
+              </p>
+              <div id="method-c-mainloop_thread-3F_source" class="dyn-source">
+                <pre>static VALUE
+lib_evloop_thread_p(self)
+    VALUE self;
+{
+    if (NIL_P(eventloop_thread)) {
+        return Qnil;    /* no eventloop */
+    } else if (rb_thread_current() == eventloop_thread) {
+        return Qtrue;   /* is eventloop */
+    } else {
+        return Qfalse;  /* not eventloop */
+    }
+}</pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-mainloop_watchdog">
+            
+              <b>mainloop_watchdog</b>(p1 = v1)
+            
+            <a href="../classes/TclTkLib.html#method-c-mainloop_watchdog" name="method-c-mainloop_watchdog" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-mainloop_watchdog_source')" id="l_method-c-mainloop_watchdog_source">show</a>
+                
+              </p>
+              <div id="method-c-mainloop_watchdog_source" class="dyn-source">
+                <pre>static VALUE
+lib_mainloop_watchdog(argc, argv, self)
+    int   argc;
+    VALUE *argv;
+    VALUE self;
+{
+    VALUE check_rootwidget;
+
+#ifdef RUBY_VM
+    rb_raise(rb_eNotImpError,
+             &quot;eventloop_watchdog is not implemented on Ruby VM.&quot;);
+#endif
+
+    if (rb_scan_args(argc, argv, &quot;01&quot;, &amp;check_rootwidget) == 0) {
+        check_rootwidget = Qtrue;
+    } else if (RTEST(check_rootwidget)) {
+        check_rootwidget = Qtrue;
+    } else {
+        check_rootwidget = Qfalse;
+    }
+
+    return rb_ensure(lib_watchdog_core, check_rootwidget,
+                     lib_watchdog_ensure, Qnil);
+}</pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-num_of_mainwindows">
+            
+              <b>num_of_mainwindows</b>()
+            
+            <a href="../classes/TclTkLib.html#method-c-num_of_mainwindows" name="method-c-num_of_mainwindows" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-num_of_mainwindows_source')" id="l_method-c-num_of_mainwindows_source">show</a>
+                
+              </p>
+              <div id="method-c-num_of_mainwindows_source" class="dyn-source">
+                <pre>static VALUE
+lib_num_of_mainwindows(self)
+    VALUE self;
+{
+#ifdef RUBY_USE_NATIVE_THREAD  /* Ruby 1.9+ !!! */
+    return tk_funcall(lib_num_of_mainwindows_core, 0, (VALUE*)NULL, self);
+#else
+    return lib_num_of_mainwindows_core(self, 0, (VALUE*)NULL);
+#endif
+}</pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-set_eventloop_tick">
+            
+              <b>set_eventloop_tick</b>(p1)
+            
+            <a href="../classes/TclTkLib.html#method-c-set_eventloop_tick" name="method-c-set_eventloop_tick" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-set_eventloop_tick_source')" id="l_method-c-set_eventloop_tick_source">show</a>
+                
+              </p>
+              <div id="method-c-set_eventloop_tick_source" class="dyn-source">
+                <pre>static VALUE
+set_eventloop_tick(self, tick)
+    VALUE self;
+    VALUE tick;
+{
+    int ttick = NUM2INT(tick);
+    int thr_crit_bup;
+
+    rb_secure(4);
+
+    if (ttick &lt; 0) {
+        rb_raise(rb_eArgError,
+                 &quot;timer-tick parameter must be 0 or positive number&quot;);
+    }
+
+    thr_crit_bup = rb_thread_critical;
+    rb_thread_critical = Qtrue;
+
+    /* delete old timer callback */
+    Tcl_DeleteTimerHandler(timer_token);
+
+    timer_tick = req_timer_tick = ttick;
+    if (timer_tick &gt; 0) {
+        /* start timer callback */
+        timer_token = Tcl_CreateTimerHandler(timer_tick, _timer_for_tcl,
+                                             (ClientData)0);
+    } else {
+        timer_token = (Tcl_TimerToken)NULL;
+    }
+
+    rb_thread_critical = thr_crit_bup;
+
+    return tick;
+}</pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-set_eventloop_weight">
+            
+              <b>set_eventloop_weight</b>(p1, p2)
+            
+            <a href="../classes/TclTkLib.html#method-c-set_eventloop_weight" name="method-c-set_eventloop_weight" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-set_eventloop_weight_source')" id="l_method-c-set_eventloop_weight_source">show</a>
+                
+              </p>
+              <div id="method-c-set_eventloop_weight_source" class="dyn-source">
+                <pre>static VALUE
+set_eventloop_weight(self, loop_max, no_event)
+    VALUE self;
+    VALUE loop_max;
+    VALUE no_event;
+{
+    int lpmax = NUM2INT(loop_max);
+    int no_ev = NUM2INT(no_event);
+
+    rb_secure(4);
+
+    if (lpmax &lt;= 0 || no_ev &lt;= 0) {
+        rb_raise(rb_eArgError, &quot;weight parameters must be positive numbers&quot;);
+    }
+
+    event_loop_max = lpmax;
+    no_event_tick  = no_ev;
+
+    return rb_ary_new3(2, loop_max, no_event);
+}</pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-set_eventloop_window_mode">
+            
+              <b>set_eventloop_window_mode</b>(p1)
+            
+            <a href="../classes/TclTkLib.html#method-c-set_eventloop_window_mode" name="method-c-set_eventloop_window_mode" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-set_eventloop_window_mode_source')" id="l_method-c-set_eventloop_window_mode_source">show</a>
+                
+              </p>
+              <div id="method-c-set_eventloop_window_mode_source" class="dyn-source">
+                <pre>static VALUE
+set_eventloop_window_mode(self, mode)
+    VALUE self;
+    VALUE mode;
+{
+    rb_secure(4);
+
+    if (RTEST(mode)) {
+      window_event_mode = ~0;
+    } else {
+      window_event_mode = ~TCL_WINDOW_EVENTS;
+    }
+
+    return mode;
+}</pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-set_max_block_time">
+            
+              <b>set_max_block_time</b>(p1)
+            
+            <a href="../classes/TclTkLib.html#method-c-set_max_block_time" name="method-c-set_max_block_time" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-set_max_block_time_source')" id="l_method-c-set_max_block_time_source">show</a>
+                
+              </p>
+              <div id="method-c-set_max_block_time_source" class="dyn-source">
+                <pre>static VALUE
+set_max_block_time(self, time)
+    VALUE self;
+    VALUE time;
+{
+    struct Tcl_Time tcl_time;
+    VALUE divmod;
+
+    switch(TYPE(time)) {
+    case T_FIXNUM:
+    case T_BIGNUM:
+        /* time is micro-second value */
+        divmod = rb_funcall(time, rb_intern(&quot;divmod&quot;), 1, LONG2NUM(1000000));
+        tcl_time.sec  = NUM2LONG(RARRAY_PTR(divmod)[0]);
+        tcl_time.usec = NUM2LONG(RARRAY_PTR(divmod)[1]);
+        break;
+
+    case T_FLOAT:
+        /* time is second value */
+        divmod = rb_funcall(time, rb_intern(&quot;divmod&quot;), 1, INT2FIX(1));
+        tcl_time.sec  = NUM2LONG(RARRAY_PTR(divmod)[0]);
+        tcl_time.usec = (long)(NUM2DBL(RARRAY_PTR(divmod)[1]) * 1000000);
+
+    default:
+        {
+            VALUE tmp = rb_funcall(time, ID_inspect, 0, 0);
+            rb_raise(rb_eArgError, &quot;invalid value for time: &#39;%s&#39;&quot;,
+                     StringValuePtr(tmp));
+        }
+    }
+
+    Tcl_SetMaxBlockTime(&amp;tcl_time);
+
+    return Qnil;
+}</pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-set_no_event_wait">
+            
+              <b>set_no_event_wait</b>(p1)
+            
+            <a href="../classes/TclTkLib.html#method-c-set_no_event_wait" name="method-c-set_no_event_wait" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-set_no_event_wait_source')" id="l_method-c-set_no_event_wait_source">show</a>
+                
+              </p>
+              <div id="method-c-set_no_event_wait_source" class="dyn-source">
+                <pre>static VALUE
+set_no_event_wait(self, wait)
+    VALUE self;
+    VALUE wait;
+{
+    int t_wait = NUM2INT(wait);
+
+    rb_secure(4);
+
+    if (t_wait &lt;= 0) {
+        rb_raise(rb_eArgError,
+                 &quot;no_event_wait parameter must be positive number&quot;);
+    }
+
+    no_event_wait = t_wait;
+
+    return wait;
+}</pre>
+              </div>
+            </div>
+            
+          </div>
+                  
+      <div class="sectiontitle">Instance Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-i-_conv_listelement">
+            
+              <b>_conv_listelement</b>(arg)
+            
+            <a href="../classes/TclTkLib.html#method-i-_conv_listelement" name="method-i-_conv_listelement" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-_conv_listelement_source')" id="l_method-i-_conv_listelement_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/3a47cf3395dd4c4fe8bdd5df13aab698f2ca314b/ext/tk/lib/multi-tk.rb#L2735" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-_conv_listelement_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/multi-tk.rb, line 2735</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">_conv_listelement</span>(<span class="ruby-identifier">arg</span>)
+  <span class="ruby-constant">MultiTkIp</span>.<span class="ruby-identifier">_conv_listelement</span>(<span class="ruby-identifier">arg</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-_merge_tklist">
+            
+              <b>_merge_tklist</b>(*args)
+            
+            <a href="../classes/TclTkLib.html#method-i-_merge_tklist" name="method-i-_merge_tklist" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-_merge_tklist_source')" id="l_method-i-_merge_tklist_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/3a47cf3395dd4c4fe8bdd5df13aab698f2ca314b/ext/tk/lib/multi-tk.rb#L2732" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-_merge_tklist_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/multi-tk.rb, line 2732</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">_merge_tklist</span>(<span class="ruby-operator">*</span><span class="ruby-identifier">args</span>)
+  <span class="ruby-constant">MultiTkIp</span>.<span class="ruby-identifier">_merge_tklist</span>(<span class="ruby-operator">*</span><span class="ruby-identifier">args</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-do_one_event">
+            
+              <b>do_one_event</b>(flag = TclTkLib::EventFlag::ALL)
+            
+            <a href="../classes/TclTkLib.html#method-i-do_one_event" name="method-i-do_one_event" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-do_one_event_source')" id="l_method-i-do_one_event_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/3a47cf3395dd4c4fe8bdd5df13aab698f2ca314b/ext/tk/lib/multi-tk.rb#L2701" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-do_one_event_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/multi-tk.rb, line 2701</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">do_one_event</span>(<span class="ruby-identifier">flag</span> = <span class="ruby-constant">TclTkLib</span><span class="ruby-operator">::</span><span class="ruby-constant">EventFlag</span><span class="ruby-operator">::</span><span class="ruby-constant">ALL</span>)
+  <span class="ruby-constant">MultiTkIp</span>.<span class="ruby-identifier">do_one_event</span>(<span class="ruby-identifier">flag</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-get_eventloop_tick">
+            
+              <b>get_eventloop_tick</b>()
+            
+            <a href="../classes/TclTkLib.html#method-i-get_eventloop_tick" name="method-i-get_eventloop_tick" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-get_eventloop_tick_source')" id="l_method-i-get_eventloop_tick_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/3a47cf3395dd4c4fe8bdd5df13aab698f2ca314b/ext/tk/lib/multi-tk.rb#L2713" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-get_eventloop_tick_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/multi-tk.rb, line 2713</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">get_eventloop_tick</span>
+  <span class="ruby-constant">MultiTkIp</span>.<span class="ruby-identifier">get_eventloop_tick</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-get_eventloop_weight">
+            
+              <b>get_eventloop_weight</b>()
+            
+            <a href="../classes/TclTkLib.html#method-i-get_eventloop_weight" name="method-i-get_eventloop_weight" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-get_eventloop_weight_source')" id="l_method-i-get_eventloop_weight_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/3a47cf3395dd4c4fe8bdd5df13aab698f2ca314b/ext/tk/lib/multi-tk.rb#L2725" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-get_eventloop_weight_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/multi-tk.rb, line 2725</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">get_eventloop_weight</span>
+  <span class="ruby-constant">MultiTkIp</span>.<span class="ruby-identifier">get_eventloop_weight</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-get_no_event_wait">
+            
+              <b>get_no_event_wait</b>()
+            
+            <a href="../classes/TclTkLib.html#method-i-get_no_event_wait" name="method-i-get_no_event_wait" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-get_no_event_wait_source')" id="l_method-i-get_no_event_wait_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/3a47cf3395dd4c4fe8bdd5df13aab698f2ca314b/ext/tk/lib/multi-tk.rb#L2719" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-get_no_event_wait_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/multi-tk.rb, line 2719</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">get_no_event_wait</span>
+  <span class="ruby-constant">MultiTkIp</span>.<span class="ruby-identifier">get_no_event_wait</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-mainloop">
+            
+              <b>mainloop</b>(check_root = true)
+            
+            <a href="../classes/TclTkLib.html#method-i-mainloop" name="method-i-mainloop" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-mainloop_source')" id="l_method-i-mainloop_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/3a47cf3395dd4c4fe8bdd5df13aab698f2ca314b/ext/tk/lib/multi-tk.rb#L2695" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-mainloop_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/multi-tk.rb, line 2695</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">mainloop</span>(<span class="ruby-identifier">check_root</span> = <span class="ruby-keyword">true</span>)
+  <span class="ruby-constant">MultiTkIp</span>.<span class="ruby-identifier">mainloop</span>(<span class="ruby-identifier">check_root</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-mainloop_watchdog">
+            
+              <b>mainloop_watchdog</b>(check_root = true)
+            
+            <a href="../classes/TclTkLib.html#method-i-mainloop_watchdog" name="method-i-mainloop_watchdog" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-mainloop_watchdog_source')" id="l_method-i-mainloop_watchdog_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/3a47cf3395dd4c4fe8bdd5df13aab698f2ca314b/ext/tk/lib/multi-tk.rb#L2698" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-mainloop_watchdog_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/multi-tk.rb, line 2698</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">mainloop_watchdog</span>(<span class="ruby-identifier">check_root</span> = <span class="ruby-keyword">true</span>)
+  <span class="ruby-constant">MultiTkIp</span>.<span class="ruby-identifier">mainloop_watchdog</span>(<span class="ruby-identifier">check_root</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-restart">
+            
+              <b>restart</b>(*args)
+            
+            <a href="../classes/TclTkLib.html#method-i-restart" name="method-i-restart" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-restart_source')" id="l_method-i-restart_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/3a47cf3395dd4c4fe8bdd5df13aab698f2ca314b/ext/tk/lib/multi-tk.rb#L2728" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-restart_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/multi-tk.rb, line 2728</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">restart</span>(<span class="ruby-operator">*</span><span class="ruby-identifier">args</span>)
+  <span class="ruby-constant">MultiTkIp</span>.<span class="ruby-identifier">restart</span>(<span class="ruby-operator">*</span><span class="ruby-identifier">args</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-set_eventloop_tick">
+            
+              <b>set_eventloop_tick</b>(tick)
+            
+            <a href="../classes/TclTkLib.html#method-i-set_eventloop_tick" name="method-i-set_eventloop_tick" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>def <a
+href="TclTkLib.html#method-c-mainloop_abort_on_exception">::mainloop_abort_on_exception</a></p>
+
+<pre><code>MultiTkIp.mainloop_abort_on_exception</code></pre>
+
+<p>end def <a
+href="TclTkLib.html#method-c-mainloop_abort_on_exception">::mainloop_abort_on_exception</a>=(mode)</p>
+
+<pre><code>MultiTkIp.mainloop_abort_on_exception=(mode)</code></pre>
+
+<p>end</p>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-set_eventloop_tick_source')" id="l_method-i-set_eventloop_tick_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/3a47cf3395dd4c4fe8bdd5df13aab698f2ca314b/ext/tk/lib/multi-tk.rb#L2710" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-set_eventloop_tick_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/multi-tk.rb, line 2710</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">set_eventloop_tick</span>(<span class="ruby-identifier">tick</span>)
+  <span class="ruby-constant">MultiTkIp</span>.<span class="ruby-identifier">set_eventloop_tick</span>(<span class="ruby-identifier">tick</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-set_eventloop_weight">
+            
+              <b>set_eventloop_weight</b>(loop_max, no_event_tick)
+            
+            <a href="../classes/TclTkLib.html#method-i-set_eventloop_weight" name="method-i-set_eventloop_weight" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-set_eventloop_weight_source')" id="l_method-i-set_eventloop_weight_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/3a47cf3395dd4c4fe8bdd5df13aab698f2ca314b/ext/tk/lib/multi-tk.rb#L2722" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-set_eventloop_weight_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/multi-tk.rb, line 2722</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">set_eventloop_weight</span>(<span class="ruby-identifier">loop_max</span>, <span class="ruby-identifier">no_event_tick</span>)
+  <span class="ruby-constant">MultiTkIp</span>.<span class="ruby-identifier">set_eventloop_weight</span>(<span class="ruby-identifier">loop_max</span>, <span class="ruby-identifier">no_event_tick</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-set_no_event_wait">
+            
+              <b>set_no_event_wait</b>(tick)
+            
+            <a href="../classes/TclTkLib.html#method-i-set_no_event_wait" name="method-i-set_no_event_wait" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-set_no_event_wait_source')" id="l_method-i-set_no_event_wait_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/3a47cf3395dd4c4fe8bdd5df13aab698f2ca314b/ext/tk/lib/multi-tk.rb#L2716" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-set_no_event_wait_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/multi-tk.rb, line 2716</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">set_no_event_wait</span>(<span class="ruby-identifier">tick</span>)
+  <span class="ruby-constant">MultiTkIp</span>.<span class="ruby-identifier">set_no_event_wait</span>(<span class="ruby-identifier">tick</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                    </div>
+
+    </div>
+  </body>
+</html>    

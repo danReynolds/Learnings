@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>OpenSSL::Cipher::CipherError</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="../../../css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../../../css/main.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../../../css/github.css" type="text/css" media="screen" />
+<script src="../../../js/jquery-1.3.2.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../../js/jquery-effect.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../../js/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+
+<body>     
+    <div class="banner">
+        
+        <h1>
+            <span class="type">Class</span> 
+            OpenSSL::Cipher::CipherError 
+            
+                <span class="parent">&lt; 
+                    
+                    eOSSLError
+                    
+                </span>
+            
+        </h1>
+        <ul class="files">
+            
+            <li><a href="../../../files/ext/openssl/ossl_cipher_c.html">ext/openssl/ossl_cipher.c</a></li>
+            
+        </ul>
+    </div>
+    <div id="bodyContent">
+        <div id="content">
+  
+    <div class="description">
+      
+<p>Document-class: <a href="../Cipher.html">OpenSSL::Cipher</a></p>
+
+<pre><code>Provides symmetric algorithms for encryption and decryption. The
+algorithms that are available depend on the particular version
+of OpenSSL that is installed.
+
+=== Listing all supported algorithms
+
+A list of supported algorithms can be obtained by
+
+  puts OpenSSL::Cipher.ciphers
+
+=== Instantiating a Cipher
+
+There are several ways to create a Cipher instance. Generally, a
+Cipher algorithm is categorized by its name, the key length in bits
+and the cipher mode to be used. The most generic way to create a
+Cipher is the following
+
+  cipher = OpenSSL::Cipher.new(&#39;&lt;name&gt;-&lt;key length&gt;-&lt;mode&gt;&#39;)
+
+That is, a string consisting of the hyphenated concatenation of the
+individual components name, key length and mode. Either all uppercase
+or all lowercase strings may be used, for example:
+
+ cipher = OpenSSL::Cipher.new(&#39;AES-128-CBC&#39;)
+
+For each algorithm supported, there is a class defined under the
+Cipher class that goes by the name of the cipher, e.g. to obtain an
+instance of AES, you could also use
+
+  # these are equivalent
+  cipher = OpenSSL::Cipher::AES.new(128, :CBC)
+  cipher = OpenSSL::Cipher::AES.new(128, &#39;CBC&#39;)
+  cipher = OpenSSL::Cipher::AES.new(&#39;128-CBC&#39;)
+
+Finally, due to its wide-spread use, there are also extra classes
+defined for the different key sizes of AES
+
+  cipher = OpenSSL::Cipher::AES128.new(:CBC)
+  cipher = OpenSSL::Cipher::AES192.new(:CBC)
+  cipher = OpenSSL::Cipher::AES256.new(:CBC)
+
+=== Choosing either encryption or decryption mode
+
+Encryption and decryption are often very similar operations for
+symmetric algorithms, this is reflected by not having to choose
+different classes for either operation, both can be done using the
+same class. Still, after obtaining a Cipher instance, we need to
+tell the instance what it is that we intend to do with it, so we
+need to call either
+
+  cipher.encrypt
+
+or
+
+  cipher.decrypt
+
+on the Cipher instance. This should be the first call after creating
+the instance, otherwise configuration that has already been set could
+get lost in the process.
+
+=== Choosing a key
+
+Symmetric encryption requires a key that is the same for the encrypting
+and for the decrypting party and after initial key establishment should
+be kept as private information. There are a lot of ways to create
+insecure keys, the most notable is to simply take a password as the key
+without processing the password further. A simple and secure way to
+create a key for a particular Cipher is
+
+ cipher = OpenSSL::AES256.new(:CFB)
+ cipher.encrypt
+ key = cipher.random_key # also sets the generated key on the Cipher
+
+If you absolutely need to use passwords as encryption keys, you
+should use Password-Based Key Derivation Function 2 (PBKDF2) by
+generating the key with the help of the functionality provided by
+OpenSSL::PKCS5.pbkdf2_hmac_sha1 or OpenSSL::PKCS5.pbkdf2_hmac.
+
+Although there is Cipher#pkcs5_keyivgen, its use is deprecated and
+it should only be used in legacy applications because it does not use
+the newer PKCS#5 v2 algorithms.
+
+=== Choosing an IV
+
+The cipher modes CBC, CFB, OFB and CTR all need an &quot;initialization
+vector&quot;, or short, IV. ECB mode is the only mode that does not require
+an IV, but there is almost no legitimate use case for this mode
+because of the fact that it does not sufficiently hide plaintext
+patterns. Therefore
+
+&lt;b&gt;You should never use ECB mode unless you are absolutely sure that
+you absolutely need it&lt;/b&gt;
+
+Because of this, you will end up with a mode that explicitly requires
+an IV in any case. Note that for backwards compatibility reasons,
+setting an IV is not explicitly mandated by the Cipher API. If not
+set, OpenSSL itself defaults to an all-zeroes IV (&quot;\\0&quot;, not the
+character). Although the IV can be seen as public information, i.e.
+it may be transmitted in public once generated, it should still stay
+unpredictable to prevent certain kinds of attacks. Therefore, ideally
+
+&lt;b&gt;Always create a secure random IV for every encryption of your
+Cipher&lt;/b&gt;
+
+A new, random IV should be created for every encryption of data. Think
+of the IV as a nonce (number used once) - it&#39;s public but random and
+unpredictable. A secure random IV can be created as follows
+
+ cipher = ...
+ cipher.encrypt
+ key = cipher.random_key
+ iv = cipher.random_iv # also sets the generated IV on the Cipher
+
+ Although the key is generally a random value, too, it is a bad choice
+ as an IV. There are elaborate ways how an attacker can take advantage
+ of such an IV. As a general rule of thumb, exposing the key directly
+ or indirectly should be avoided at all cost and exceptions only be
+ made with good reason.
+
+=== Calling Cipher#final
+
+ECB (which should not be used) and CBC are both block-based modes.
+This means that unlike for the other streaming-based modes, they
+operate on fixed-size blocks of data, and therefore they require a
+&quot;finalization&quot; step to produce or correctly decrypt the last block of
+data by appropriately handling some form of padding. Therefore it is
+essential to add the output of OpenSSL::Cipher#final to your
+encryption/decryption buffer or you will end up with decryption errors
+or truncated data.
+
+Although this is not really necessary for streaming-mode ciphers, it is
+still recommended to apply the same pattern of adding the output of
+Cipher#final there as well - it also enables you to switch between
+modes more easily in the future.
+
+=== Encrypting and decrypting some data
+
+  data = &quot;Very, very confidential data&quot;
+
+  cipher = OpenSSL::Cipher::AES.new(128, :CBC)
+  cipher.encrypt
+  key = cipher.random_key
+  iv = cipher.random_iv
+
+  encrypted = cipher.update(data) + cipher.final
+  ...
+  decipher = OpenSSL::Cipher::AES.new(128, :CBC)
+  decipher.decrypt
+  decipher.key = key
+  decipher.iv = iv
+
+  plain = decipher.update(encrypted) + decipher.final
+
+  puts data == plain #=&gt; true
+</code></pre>
+
+    </div>
+  
+
+
+  
+
+
+  
+  
+
+
+  
+
+
+  
+
+  
+
+
+
+  
+
+    
+
+    
+
+    
+
+
+    
+
+
+    <!-- Methods -->
+              </div>
+
+    </div>
+  </body>
+</html>    

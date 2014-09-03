@@ -1,0 +1,658 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>Tk::Vu::Dial</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="../../../css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../../../css/main.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../../../css/github.css" type="text/css" media="screen" />
+<script src="../../../js/jquery-1.3.2.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../../js/jquery-effect.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../../js/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+
+<body>     
+    <div class="banner">
+        
+        <h1>
+            <span class="type">Class</span> 
+            Tk::Vu::Dial 
+            
+                <span class="parent">&lt; 
+                    
+                    <a href="../../TkWindow.html">TkWindow</a>
+                    
+                </span>
+            
+        </h1>
+        <ul class="files">
+            
+            <li><a href="../../../files/ext/tk/lib/tkextlib/vu/dial_rb.html">ext/tk/lib/tkextlib/vu/dial.rb</a></li>
+            
+        </ul>
+    </div>
+    <div id="bodyContent">
+        <div id="content">
+  
+    <div class="description">
+      
+<p>define module/class</p>
+
+    </div>
+  
+
+
+  
+
+
+  
+  
+
+
+  
+
+
+  
+    <!-- Method ref -->
+    <div class="sectiontitle">Methods</div>
+    <dl class="methods">
+      
+        <dt>C</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-constrain">constrain</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-coords">coords</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>G</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-get">get</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-get_label">get_label</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-get_tag">get_tag</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>I</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-identify">identify</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>S</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-set">set</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-set_label">set_label</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-set_label_constrain">set_label_constrain</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-set_tag">set_tag</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-set_tag_constrain">set_tag_constrain</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+    </dl>
+  
+
+  
+
+
+
+  
+
+    
+
+    
+
+    
+      <!-- Section constants -->
+      <div class="sectiontitle">Constants</div>
+      <table border='0' cellpadding='5'>
+        
+          <tr valign='top'>
+            <td class="attr-name">TkCommandNames</td>
+            <td>=</td>
+            <td class="attr-value">[&#39;::vu::dial&#39;.freeze].freeze</td>
+          </tr>
+          
+            <tr valign='top'>
+              <td>&nbsp;</td>
+              <td colspan="2" class="attr-desc"></td>
+            </tr>
+          
+        
+          <tr valign='top'>
+            <td class="attr-name">WidgetClassName</td>
+            <td>=</td>
+            <td class="attr-value">&#39;Dial&#39;.freeze</td>
+          </tr>
+          
+            <tr valign='top'>
+              <td>&nbsp;</td>
+              <td colspan="2" class="attr-desc"></td>
+            </tr>
+          
+        
+      </table>
+    
+
+
+    
+
+
+    <!-- Methods -->
+        
+      <div class="sectiontitle">Instance Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-i-constrain">
+            
+              <b>constrain</b>(val = None)
+            
+            <a href="../../../classes/Tk/Vu/Dial.html#method-i-constrain" name="method-i-constrain" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-constrain_source')" id="l_method-i-constrain_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/cb732bbbdc94d2a969f5f727d6018b9d7d3e291c/ext/tk/lib/tkextlib/vu/dial.rb#L42" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-constrain_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/vu/dial.rb, line 42</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">constrain</span>(<span class="ruby-identifier">val</span> = <span class="ruby-constant">None</span>)
+  <span class="ruby-identifier">num_or_str</span>(<span class="ruby-identifier">tk_call</span>(<span class="ruby-ivar">@path</span>, <span class="ruby-string">&#39;constrain&#39;</span>, <span class="ruby-identifier">val</span>))
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-coords">
+            
+              <b>coords</b>(val = nil)
+            
+            <a href="../../../classes/Tk/Vu/Dial.html#method-i-coords" name="method-i-coords" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-coords_source')" id="l_method-i-coords_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/cb732bbbdc94d2a969f5f727d6018b9d7d3e291c/ext/tk/lib/tkextlib/vu/dial.rb#L33" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-coords_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/vu/dial.rb, line 33</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">coords</span>(<span class="ruby-identifier">val</span> = <span class="ruby-keyword">nil</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">val</span>
+    <span class="ruby-identifier">tk_send_without_enc</span>(<span class="ruby-string">&#39;coords&#39;</span>, <span class="ruby-identifier">val</span>)
+    <span class="ruby-keyword">self</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">tk_split_list</span>(<span class="ruby-identifier">tk_send_without_enc</span>(<span class="ruby-string">&#39;coords&#39;</span>))
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-get">
+            
+              <b>get</b>(*args)
+            
+            <a href="../../../classes/Tk/Vu/Dial.html#method-i-get" name="method-i-get" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-get_source')" id="l_method-i-get_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/cb732bbbdc94d2a969f5f727d6018b9d7d3e291c/ext/tk/lib/tkextlib/vu/dial.rb#L46" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-get_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/vu/dial.rb, line 46</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">get</span>(<span class="ruby-operator">*</span><span class="ruby-identifier">args</span>)
+  <span class="ruby-identifier">num_or_str</span>(<span class="ruby-identifier">tk_call</span>(<span class="ruby-ivar">@path</span>, <span class="ruby-string">&#39;get&#39;</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">args</span>))
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-get_label">
+            
+              <b>get_label</b>(val=nil)
+            
+            <a href="../../../classes/Tk/Vu/Dial.html#method-i-get_label" name="method-i-get_label" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-get_label_source')" id="l_method-i-get_label_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/cb732bbbdc94d2a969f5f727d6018b9d7d3e291c/ext/tk/lib/tkextlib/vu/dial.rb#L54" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-get_label_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/vu/dial.rb, line 54</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">get_label</span>(<span class="ruby-identifier">val</span>=<span class="ruby-keyword">nil</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">val</span>
+    <span class="ruby-identifier">tk_call</span>(<span class="ruby-ivar">@path</span>, <span class="ruby-string">&#39;label&#39;</span>, <span class="ruby-identifier">val</span>)
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">ret</span> = []
+    <span class="ruby-identifier">lst</span> = <span class="ruby-identifier">simplelist</span>(<span class="ruby-identifier">tk_call</span>(<span class="ruby-ivar">@path</span>, <span class="ruby-string">&#39;label&#39;</span>))
+    <span class="ruby-keyword">while</span> <span class="ruby-identifier">lst</span>.<span class="ruby-identifier">size</span> <span class="ruby-operator">&gt;</span> <span class="ruby-number">0</span>
+      <span class="ruby-identifier">ret</span> <span class="ruby-operator">&lt;&lt;</span> ([<span class="ruby-identifier">num_or_str</span>(<span class="ruby-identifier">lst</span>.<span class="ruby-identifier">shift</span>)] <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">lst</span>.<span class="ruby-identifier">shift</span>)
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-get_tag">
+            
+              <b>get_tag</b>(val=nil)
+            
+            <a href="../../../classes/Tk/Vu/Dial.html#method-i-get_tag" name="method-i-get_tag" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-get_tag_source')" id="l_method-i-get_tag_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/cb732bbbdc94d2a969f5f727d6018b9d7d3e291c/ext/tk/lib/tkextlib/vu/dial.rb#L76" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-get_tag_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/vu/dial.rb, line 76</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">get_tag</span>(<span class="ruby-identifier">val</span>=<span class="ruby-keyword">nil</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">val</span>
+    <span class="ruby-identifier">tk_call</span>(<span class="ruby-ivar">@path</span>, <span class="ruby-string">&#39;tag&#39;</span>, <span class="ruby-identifier">val</span>)
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">ret</span> = []
+    <span class="ruby-identifier">lst</span> = <span class="ruby-identifier">simplelist</span>(<span class="ruby-identifier">tk_call</span>(<span class="ruby-ivar">@path</span>, <span class="ruby-string">&#39;tag&#39;</span>))
+    <span class="ruby-keyword">while</span> <span class="ruby-identifier">lst</span>.<span class="ruby-identifier">size</span> <span class="ruby-operator">&gt;</span> <span class="ruby-number">0</span>
+      <span class="ruby-identifier">ret</span> <span class="ruby-operator">&lt;&lt;</span> ([<span class="ruby-identifier">num_or_str</span>(<span class="ruby-identifier">lst</span>.<span class="ruby-identifier">shift</span>)] <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">lst</span>.<span class="ruby-identifier">shift</span>)
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-identify">
+            
+              <b>identify</b>(x, y)
+            
+            <a href="../../../classes/Tk/Vu/Dial.html#method-i-identify" name="method-i-identify" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-identify_source')" id="l_method-i-identify_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/cb732bbbdc94d2a969f5f727d6018b9d7d3e291c/ext/tk/lib/tkextlib/vu/dial.rb#L50" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-identify_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/vu/dial.rb, line 50</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">identify</span>(<span class="ruby-identifier">x</span>, <span class="ruby-identifier">y</span>)
+  <span class="ruby-identifier">tk_call</span>(<span class="ruby-ivar">@path</span>, <span class="ruby-string">&#39;identify&#39;</span>, <span class="ruby-identifier">x</span>, <span class="ruby-identifier">y</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-set">
+            
+              <b>set</b>(val = None)
+            
+            <a href="../../../classes/Tk/Vu/Dial.html#method-i-set" name="method-i-set" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-set_source')" id="l_method-i-set_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/cb732bbbdc94d2a969f5f727d6018b9d7d3e291c/ext/tk/lib/tkextlib/vu/dial.rb#L98" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-set_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/vu/dial.rb, line 98</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">set</span>(<span class="ruby-identifier">val</span> = <span class="ruby-constant">None</span>)
+  <span class="ruby-identifier">tk_call_without_enc</span>(<span class="ruby-ivar">@path</span>, <span class="ruby-string">&#39;set&#39;</span>, <span class="ruby-identifier">val</span>)
+  <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-set_label">
+            
+              <b>set_label</b>(val, str, *args)
+            
+            <a href="../../../classes/Tk/Vu/Dial.html#method-i-set_label" name="method-i-set_label" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-set_label_source')" id="l_method-i-set_label_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/cb732bbbdc94d2a969f5f727d6018b9d7d3e291c/ext/tk/lib/tkextlib/vu/dial.rb#L66" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-set_label_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/vu/dial.rb, line 66</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">set_label</span>(<span class="ruby-identifier">val</span>, <span class="ruby-identifier">str</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">args</span>)
+  <span class="ruby-identifier">tk_call</span>(<span class="ruby-ivar">@path</span>, <span class="ruby-string">&#39;label&#39;</span>, <span class="ruby-identifier">val</span>, <span class="ruby-identifier">str</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">args</span>)
+  <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-set_label_constrain">
+            
+              <b>set_label_constrain</b>(val, str, *args)
+            
+            <a href="../../../classes/Tk/Vu/Dial.html#method-i-set_label_constrain" name="method-i-set_label_constrain" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-set_label_constrain_source')" id="l_method-i-set_label_constrain_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/cb732bbbdc94d2a969f5f727d6018b9d7d3e291c/ext/tk/lib/tkextlib/vu/dial.rb#L71" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-set_label_constrain_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/vu/dial.rb, line 71</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">set_label_constrain</span>(<span class="ruby-identifier">val</span>, <span class="ruby-identifier">str</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">args</span>)
+  <span class="ruby-identifier">tk_call</span>(<span class="ruby-ivar">@path</span>, <span class="ruby-string">&#39;label&#39;</span>, <span class="ruby-string">&#39;-constrain&#39;</span>, <span class="ruby-identifier">val</span>, <span class="ruby-identifier">str</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">args</span>)
+  <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-set_tag">
+            
+              <b>set_tag</b>(val, str, *args)
+            
+            <a href="../../../classes/Tk/Vu/Dial.html#method-i-set_tag" name="method-i-set_tag" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-set_tag_source')" id="l_method-i-set_tag_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/cb732bbbdc94d2a969f5f727d6018b9d7d3e291c/ext/tk/lib/tkextlib/vu/dial.rb#L88" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-set_tag_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/vu/dial.rb, line 88</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">set_tag</span>(<span class="ruby-identifier">val</span>, <span class="ruby-identifier">str</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">args</span>)
+  <span class="ruby-identifier">tk_call</span>(<span class="ruby-ivar">@path</span>, <span class="ruby-string">&#39;tag&#39;</span>, <span class="ruby-identifier">val</span>, <span class="ruby-identifier">str</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">args</span>)
+  <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-set_tag_constrain">
+            
+              <b>set_tag_constrain</b>(val, str, *args)
+            
+            <a href="../../../classes/Tk/Vu/Dial.html#method-i-set_tag_constrain" name="method-i-set_tag_constrain" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-set_tag_constrain_source')" id="l_method-i-set_tag_constrain_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/cb732bbbdc94d2a969f5f727d6018b9d7d3e291c/ext/tk/lib/tkextlib/vu/dial.rb#L93" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-set_tag_constrain_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/vu/dial.rb, line 93</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">set_tag_constrain</span>(<span class="ruby-identifier">val</span>, <span class="ruby-identifier">str</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">args</span>)
+  <span class="ruby-identifier">tk_call</span>(<span class="ruby-ivar">@path</span>, <span class="ruby-string">&#39;tag&#39;</span>, <span class="ruby-string">&#39;-constrain&#39;</span>, <span class="ruby-identifier">val</span>, <span class="ruby-identifier">str</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">args</span>)
+  <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                    </div>
+
+    </div>
+  </body>
+</html>    

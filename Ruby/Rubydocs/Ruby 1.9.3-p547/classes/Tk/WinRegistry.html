@@ -1,0 +1,469 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>Tk::WinRegistry</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="../../css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../../css/main.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../../css/github.css" type="text/css" media="screen" />
+<script src="../../js/jquery-1.3.2.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../js/jquery-effect.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../js/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+
+<body>     
+    <div class="banner">
+        
+        <h1>
+            <span class="type">Module</span> 
+            Tk::WinRegistry 
+            
+        </h1>
+        <ul class="files">
+            
+            <li><a href="../../files/ext/tk/lib/tk/winpkg_rb.html">ext/tk/lib/tk/winpkg.rb</a></li>
+            
+        </ul>
+    </div>
+    <div id="bodyContent">
+        <div id="content">
+  
+
+
+  
+
+
+  
+  
+
+
+  
+
+
+  
+    <!-- Method ref -->
+    <div class="sectiontitle">Methods</div>
+    <dl class="methods">
+      
+        <dt>B</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-broadcast">broadcast</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>D</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-delete">delete</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>G</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-get">get</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>K</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-keys">keys</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>S</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-set">set</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>T</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-type">type</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>V</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-values">values</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+    </dl>
+  
+
+  
+
+
+
+  
+
+    
+
+    
+
+    
+      <!-- Section constants -->
+      <div class="sectiontitle">Constants</div>
+      <table border='0' cellpadding='5'>
+        
+          <tr valign='top'>
+            <td class="attr-name">TkCommandNames</td>
+            <td>=</td>
+            <td class="attr-value">[&#39;registry&#39;.freeze].freeze</td>
+          </tr>
+          
+            <tr valign='top'>
+              <td>&nbsp;</td>
+              <td colspan="2" class="attr-desc"></td>
+            </tr>
+          
+        
+      </table>
+    
+
+
+    
+
+
+    <!-- Methods -->
+    
+      <div class="sectiontitle">Class Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-c-delete">
+            
+              <b>delete</b>(keynam, valnam=None)
+            
+            <a href="../../classes/Tk/WinRegistry.html#method-c-delete" name="method-c-delete" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-delete_source')" id="l_method-c-delete_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tk/winpkg.rb#L121" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-delete_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tk/winpkg.rb, line 121</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">delete</span>(<span class="ruby-identifier">keynam</span>, <span class="ruby-identifier">valnam</span>=<span class="ruby-constant">None</span>)
+  <span class="ruby-identifier">tk_call</span>(<span class="ruby-string">&#39;registry&#39;</span>, <span class="ruby-string">&#39;delete&#39;</span>, <span class="ruby-identifier">keynam</span>, <span class="ruby-identifier">valnam</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-get">
+            
+              <b>get</b>(keynam, valnam)
+            
+            <a href="../../classes/Tk/WinRegistry.html#method-c-get" name="method-c-get" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-get_source')" id="l_method-c-get_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tk/winpkg.rb#L125" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-get_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tk/winpkg.rb, line 125</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">get</span>(<span class="ruby-identifier">keynam</span>, <span class="ruby-identifier">valnam</span>)
+  <span class="ruby-identifier">tk_call</span>(<span class="ruby-string">&#39;registry&#39;</span>, <span class="ruby-string">&#39;get&#39;</span>, <span class="ruby-identifier">keynam</span>, <span class="ruby-identifier">valnam</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-keys">
+            
+              <b>keys</b>(keynam, pattern=nil)
+            
+            <a href="../../classes/Tk/WinRegistry.html#method-c-keys" name="method-c-keys" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-keys_source')" id="l_method-c-keys_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tk/winpkg.rb#L129" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-keys_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tk/winpkg.rb, line 129</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">keys</span>(<span class="ruby-identifier">keynam</span>, <span class="ruby-identifier">pattern</span>=<span class="ruby-keyword">nil</span>)
+  <span class="ruby-identifier">lst</span> = <span class="ruby-identifier">tk_split_simplelist</span>(<span class="ruby-identifier">tk_call</span>(<span class="ruby-string">&#39;registry&#39;</span>, <span class="ruby-string">&#39;keys&#39;</span>, <span class="ruby-identifier">keynam</span>))
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">pattern</span>
+    <span class="ruby-identifier">lst</span>.<span class="ruby-identifier">find_all</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">key</span><span class="ruby-operator">|</span> <span class="ruby-identifier">key</span> <span class="ruby-operator">=~</span> <span class="ruby-identifier">pattern</span>}
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">lst</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-set">
+            
+              <b>set</b>(keynam, valnam=None, data=None, dattype=None)
+            
+            <a href="../../classes/Tk/WinRegistry.html#method-c-set" name="method-c-set" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-set_source')" id="l_method-c-set_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tk/winpkg.rb#L138" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-set_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tk/winpkg.rb, line 138</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">set</span>(<span class="ruby-identifier">keynam</span>, <span class="ruby-identifier">valnam</span>=<span class="ruby-constant">None</span>, <span class="ruby-identifier">data</span>=<span class="ruby-constant">None</span>, <span class="ruby-identifier">dattype</span>=<span class="ruby-constant">None</span>)
+  <span class="ruby-identifier">tk_call</span>(<span class="ruby-string">&#39;registry&#39;</span>, <span class="ruby-string">&#39;set&#39;</span>, <span class="ruby-identifier">keynam</span>, <span class="ruby-identifier">valnam</span>, <span class="ruby-identifier">data</span>, <span class="ruby-identifier">dattype</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-type">
+            
+              <b>type</b>(keynam, valnam)
+            
+            <a href="../../classes/Tk/WinRegistry.html#method-c-type" name="method-c-type" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-type_source')" id="l_method-c-type_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tk/winpkg.rb#L142" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-type_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tk/winpkg.rb, line 142</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">type</span>(<span class="ruby-identifier">keynam</span>, <span class="ruby-identifier">valnam</span>)
+  <span class="ruby-identifier">tk_call</span>(<span class="ruby-string">&#39;registry&#39;</span>, <span class="ruby-string">&#39;type&#39;</span>, <span class="ruby-identifier">keynam</span>, <span class="ruby-identifier">valnam</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-values">
+            
+              <b>values</b>(keynam, pattern=nil)
+            
+            <a href="../../classes/Tk/WinRegistry.html#method-c-values" name="method-c-values" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-values_source')" id="l_method-c-values_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tk/winpkg.rb#L146" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-values_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tk/winpkg.rb, line 146</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">values</span>(<span class="ruby-identifier">keynam</span>, <span class="ruby-identifier">pattern</span>=<span class="ruby-keyword">nil</span>)
+  <span class="ruby-identifier">lst</span> = <span class="ruby-identifier">tk_split_simplelist</span>(<span class="ruby-identifier">tk_call</span>(<span class="ruby-string">&#39;registry&#39;</span>, <span class="ruby-string">&#39;values&#39;</span>, <span class="ruby-identifier">keynam</span>))
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">pattern</span>
+    <span class="ruby-identifier">lst</span>.<span class="ruby-identifier">find_all</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">val</span><span class="ruby-operator">|</span> <span class="ruby-identifier">val</span> <span class="ruby-operator">=~</span> <span class="ruby-identifier">pattern</span>}
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">lst</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                  
+      <div class="sectiontitle">Instance Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-i-broadcast">
+            
+              <b>broadcast</b>(keynam, timeout=nil)
+            
+            <a href="../../classes/Tk/WinRegistry.html#method-i-broadcast" name="method-i-broadcast" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-broadcast_source')" id="l_method-i-broadcast_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tk/winpkg.rb#L113" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-broadcast_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tk/winpkg.rb, line 113</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">broadcast</span>(<span class="ruby-identifier">keynam</span>, <span class="ruby-identifier">timeout</span>=<span class="ruby-keyword">nil</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">timeout</span>
+    <span class="ruby-identifier">tk_call</span>(<span class="ruby-string">&#39;registry&#39;</span>, <span class="ruby-string">&#39;broadcast&#39;</span>, <span class="ruby-identifier">keynam</span>, <span class="ruby-string">&#39;-timeout&#39;</span>, <span class="ruby-identifier">timeout</span>)
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">tk_call</span>(<span class="ruby-string">&#39;registry&#39;</span>, <span class="ruby-string">&#39;broadcast&#39;</span>, <span class="ruby-identifier">keynam</span>)
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                    </div>
+
+    </div>
+  </body>
+</html>    

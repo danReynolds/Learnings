@@ -1,0 +1,648 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>Tk::Tcllib::Plotchart::Plot3D</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="../../../../css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../../../../css/main.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../../../../css/github.css" type="text/css" media="screen" />
+<script src="../../../../js/jquery-1.3.2.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../../../js/jquery-effect.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../../../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../../../js/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+
+<body>     
+    <div class="banner">
+        
+        <h1>
+            <span class="type">Class</span> 
+            Tk::Tcllib::Plotchart::Plot3D 
+            
+                <span class="parent">&lt; 
+                    
+                    <a href="../../Canvas.html">Tk::Canvas</a>
+                    
+                </span>
+            
+        </h1>
+        <ul class="files">
+            
+            <li><a href="../../../../files/ext/tk/lib/tkextlib/tcllib/plotchart_rb.html">ext/tk/lib/tkextlib/tcllib/plotchart.rb</a></li>
+            
+        </ul>
+    </div>
+    <div id="bodyContent">
+        <div id="content">
+  
+
+
+  
+
+
+  
+  
+
+
+  
+
+
+  
+    <!-- Method ref -->
+    <div class="sectiontitle">Methods</div>
+    <dl class="methods">
+      
+        <dt>C</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-color">color</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-colors">colors</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-colour">colour</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-colours">colours</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>G</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-grid_size">grid_size</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>N</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-new">new</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>P</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-plot_data">plot_data</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-plot_funcont">plot_funcont</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-plot_function">plot_function</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-plot_line">plot_line</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>Z</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-zconfig">zconfig</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+    </dl>
+  
+
+  
+    <!-- Includes -->
+    <div class="sectiontitle">Included Modules</div>
+    <ul>
+      
+        <li>
+          
+            <a href="ChartMethod.html">
+              Tk::Tcllib::Plotchart::ChartMethod
+            </a>
+          
+        </li>
+      
+    </ul>
+  
+
+
+
+  
+
+    
+
+    
+
+    
+      <!-- Section constants -->
+      <div class="sectiontitle">Constants</div>
+      <table border='0' cellpadding='5'>
+        
+          <tr valign='top'>
+            <td class="attr-name">TkCommandNames</td>
+            <td>=</td>
+            <td class="attr-value">[
+&#39;canvas&#39;.freeze,
+&#39;::Plotchart::create3DPlot&#39;.freeze
+].freeze</td>
+          </tr>
+          
+            <tr valign='top'>
+              <td>&nbsp;</td>
+              <td colspan="2" class="attr-desc"></td>
+            </tr>
+          
+        
+      </table>
+    
+
+
+    
+
+
+    <!-- Methods -->
+    
+      <div class="sectiontitle">Class Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-c-new">
+            
+              <b>new</b>(*args)
+            
+            <a href="../../../../classes/Tk/Tcllib/Plotchart/Plot3D.html#method-c-new" name="method-c-new" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-new_source')" id="l_method-c-new_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/3a47cf3395dd4c4fe8bdd5df13aab698f2ca314b/ext/tk/lib/tkextlib/tcllib/plotchart.rb#L675" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-new_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/tcllib/plotchart.rb, line 675</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">initialize</span>(<span class="ruby-operator">*</span><span class="ruby-identifier">args</span>) <span class="ruby-comment"># args := ([parent,] xaxis, yaxis, zaxis [, keys])</span>
+                      <span class="ruby-comment"># xaxis := Array of [minimum, maximum, stepsize]</span>
+                      <span class="ruby-comment"># yaxis := Array of [minimum, maximum, stepsize]</span>
+                      <span class="ruby-comment"># zaxis := Array of [minimum, maximum, stepsize]</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">args</span>[<span class="ruby-number">0</span>].<span class="ruby-identifier">kind_of?</span>(<span class="ruby-constant">Array</span>)
+    <span class="ruby-ivar">@xaxis</span> = <span class="ruby-identifier">args</span>.<span class="ruby-identifier">shift</span>
+    <span class="ruby-ivar">@yaxis</span> = <span class="ruby-identifier">args</span>.<span class="ruby-identifier">shift</span>
+    <span class="ruby-ivar">@zaxis</span> = <span class="ruby-identifier">args</span>.<span class="ruby-identifier">shift</span>
+
+    <span class="ruby-keyword">super</span>(<span class="ruby-operator">*</span><span class="ruby-identifier">args</span>) <span class="ruby-comment"># create canvas widget</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">parent</span> = <span class="ruby-identifier">args</span>.<span class="ruby-identifier">shift</span>
+
+    <span class="ruby-ivar">@xaxis</span> = <span class="ruby-identifier">args</span>.<span class="ruby-identifier">shift</span>
+    <span class="ruby-ivar">@yaxis</span> = <span class="ruby-identifier">args</span>.<span class="ruby-identifier">shift</span>
+    <span class="ruby-ivar">@zaxis</span> = <span class="ruby-identifier">args</span>.<span class="ruby-identifier">shift</span>
+
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">parent</span>.<span class="ruby-identifier">kind_of?</span>(<span class="ruby-constant">Tk</span><span class="ruby-operator">::</span><span class="ruby-constant">Canvas</span>)
+      <span class="ruby-ivar">@path</span> = <span class="ruby-identifier">parent</span>.<span class="ruby-identifier">path</span>
+    <span class="ruby-keyword">else</span>
+      <span class="ruby-keyword">super</span>(<span class="ruby-identifier">parent</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">args</span>) <span class="ruby-comment"># create canvas widget</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-ivar">@chart</span> = <span class="ruby-identifier">_create_chart</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                  
+      <div class="sectiontitle">Instance Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-i-color">
+            
+              <b>color</b>(fill, border)
+            
+            <a href="../../../../classes/Tk/Tcllib/Plotchart/Plot3D.html#method-i-color" name="method-i-color" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+            <div class="aka">
+              Alias for: <a href="Plot3D.html#method-i-colour">colour</a>
+            </div>
+          
+          
+          
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-colors">
+            
+              <b>colors</b>(fill, border)
+            
+            <a href="../../../../classes/Tk/Tcllib/Plotchart/Plot3D.html#method-i-colors" name="method-i-colors" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+            <div class="aka">
+              Alias for: <a href="Plot3D.html#method-i-colour">colour</a>
+            </div>
+          
+          
+          
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-colour">
+            
+              <b>colour</b>(fill, border)
+            
+            <a href="../../../../classes/Tk/Tcllib/Plotchart/Plot3D.html#method-i-colour" name="method-i-colour" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+            <div class="aka">
+              Also aliased as: <a href="Plot3D.html#method-i-colours">colours</a>, <a href="Plot3D.html#method-i-colors">colors</a>, <a href="Plot3D.html#method-i-color">color</a>
+            </div>
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-colour_source')" id="l_method-i-colour_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/3a47cf3395dd4c4fe8bdd5df13aab698f2ca314b/ext/tk/lib/tkextlib/tcllib/plotchart.rb#L756" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-colour_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/tcllib/plotchart.rb, line 756</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">colour</span>(<span class="ruby-identifier">fill</span>, <span class="ruby-identifier">border</span>)
+  <span class="ruby-comment"># configure the colours to use for polygon borders and inner area</span>
+  <span class="ruby-identifier">tk_call_without_enc</span>(<span class="ruby-ivar">@chart</span>, <span class="ruby-string">&#39;colour&#39;</span>, <span class="ruby-identifier">fill</span>, <span class="ruby-identifier">border</span>)
+  <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-colours">
+            
+              <b>colours</b>(fill, border)
+            
+            <a href="../../../../classes/Tk/Tcllib/Plotchart/Plot3D.html#method-i-colours" name="method-i-colours" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+            <div class="aka">
+              Alias for: <a href="Plot3D.html#method-i-colour">colour</a>
+            </div>
+          
+          
+          
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-grid_size">
+            
+              <b>grid_size</b>(nxcells, nycells)
+            
+            <a href="../../../../classes/Tk/Tcllib/Plotchart/Plot3D.html#method-i-grid_size" name="method-i-grid_size" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-grid_size_source')" id="l_method-i-grid_size_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/3a47cf3395dd4c4fe8bdd5df13aab698f2ca314b/ext/tk/lib/tkextlib/tcllib/plotchart.rb#L724" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-grid_size_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/tcllib/plotchart.rb, line 724</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">grid_size</span>(<span class="ruby-identifier">nxcells</span>, <span class="ruby-identifier">nycells</span>)
+  <span class="ruby-identifier">tk_call_without_enc</span>(<span class="ruby-ivar">@chart</span>, <span class="ruby-string">&#39;gridsize&#39;</span>, <span class="ruby-identifier">nxcells</span>, <span class="ruby-identifier">nycells</span>)
+  <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-plot_data">
+            
+              <b>plot_data</b>(dat)
+            
+            <a href="../../../../classes/Tk/Tcllib/Plotchart/Plot3D.html#method-i-plot_data" name="method-i-plot_data" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-plot_data_source')" id="l_method-i-plot_data_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/3a47cf3395dd4c4fe8bdd5df13aab698f2ca314b/ext/tk/lib/tkextlib/tcllib/plotchart.rb#L738" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-plot_data_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/tcllib/plotchart.rb, line 738</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">plot_data</span>(<span class="ruby-identifier">dat</span>)
+  <span class="ruby-comment"># dat has to be provided as a 2 level array.</span>
+  <span class="ruby-comment"># 1st level contains rows, drawn in y-direction,</span>
+  <span class="ruby-comment"># and each row is an array whose elements are drawn in x-direction,</span>
+  <span class="ruby-comment"># for the columns.</span>
+  <span class="ruby-identifier">tk_call_without_enc</span>(<span class="ruby-ivar">@chart</span>, <span class="ruby-string">&#39;plotdata&#39;</span>, <span class="ruby-identifier">dat</span>)
+  <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-plot_funcont">
+            
+              <b>plot_funcont</b>(conts, cmd=Proc.new)
+            
+            <a href="../../../../classes/Tk/Tcllib/Plotchart/Plot3D.html#method-i-plot_funcont" name="method-i-plot_funcont" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-plot_funcont_source')" id="l_method-i-plot_funcont_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/3a47cf3395dd4c4fe8bdd5df13aab698f2ca314b/ext/tk/lib/tkextlib/tcllib/plotchart.rb#L717" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-plot_funcont_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/tcllib/plotchart.rb, line 717</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">plot_funcont</span>(<span class="ruby-identifier">conts</span>, <span class="ruby-identifier">cmd</span>=<span class="ruby-constant">Proc</span>.<span class="ruby-identifier">new</span>)
+  <span class="ruby-identifier">conts</span> = <span class="ruby-identifier">array2tk_list</span>(<span class="ruby-identifier">conts</span>) <span class="ruby-keyword">if</span> <span class="ruby-identifier">conts</span>.<span class="ruby-identifier">kind_of?</span>(<span class="ruby-constant">Array</span>)
+  <span class="ruby-constant">Tk</span>.<span class="ruby-identifier">ip_eval</span>(<span class="ruby-node">&quot;proc #{@path}_#{@chart} {x y} {#{install_cmd(cmd)} $x $y}&quot;</span>)
+  <span class="ruby-identifier">tk_call_without_enc</span>(<span class="ruby-ivar">@chart</span>, <span class="ruby-string">&#39;plotfuncont&#39;</span>, <span class="ruby-node">&quot;#{@path}_#{@chart}&quot;</span>, <span class="ruby-identifier">conts</span>)
+  <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-plot_function">
+            
+              <b>plot_function</b>(cmd=Proc.new)
+            
+            <a href="../../../../classes/Tk/Tcllib/Plotchart/Plot3D.html#method-i-plot_function" name="method-i-plot_function" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-plot_function_source')" id="l_method-i-plot_function_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/3a47cf3395dd4c4fe8bdd5df13aab698f2ca314b/ext/tk/lib/tkextlib/tcllib/plotchart.rb#L711" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-plot_function_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/tcllib/plotchart.rb, line 711</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">plot_function</span>(<span class="ruby-identifier">cmd</span>=<span class="ruby-constant">Proc</span>.<span class="ruby-identifier">new</span>)
+  <span class="ruby-constant">Tk</span>.<span class="ruby-identifier">ip_eval</span>(<span class="ruby-node">&quot;proc #{@path}_#{@chart} {x y} {#{install_cmd(cmd)} $x $y}&quot;</span>)
+  <span class="ruby-identifier">tk_call_without_enc</span>(<span class="ruby-ivar">@chart</span>, <span class="ruby-string">&#39;plotfunc&#39;</span>, <span class="ruby-node">&quot;#{@path}_#{@chart}&quot;</span>)
+  <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-plot_line">
+            
+              <b>plot_line</b>(dat, color)
+            
+            <a href="../../../../classes/Tk/Tcllib/Plotchart/Plot3D.html#method-i-plot_line" name="method-i-plot_line" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-plot_line_source')" id="l_method-i-plot_line_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/3a47cf3395dd4c4fe8bdd5df13aab698f2ca314b/ext/tk/lib/tkextlib/tcllib/plotchart.rb#L729" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-plot_line_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/tcllib/plotchart.rb, line 729</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">plot_line</span>(<span class="ruby-identifier">dat</span>, <span class="ruby-identifier">color</span>)
+  <span class="ruby-comment"># dat has to be provided as a 2 level array.</span>
+  <span class="ruby-comment"># 1st level contains rows, drawn in y-direction,</span>
+  <span class="ruby-comment"># and each row is an array whose elements are drawn in x-direction,</span>
+  <span class="ruby-comment"># for the columns.</span>
+  <span class="ruby-identifier">tk_call_without_enc</span>(<span class="ruby-ivar">@chart</span>, <span class="ruby-string">&#39;plotline&#39;</span>, <span class="ruby-identifier">dat</span>, <span class="ruby-identifier">color</span>)
+  <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-zconfig">
+            
+              <b>zconfig</b>(key, value=None)
+            
+            <a href="../../../../classes/Tk/Tcllib/Plotchart/Plot3D.html#method-i-zconfig" name="method-i-zconfig" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-zconfig_source')" id="l_method-i-zconfig_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/3a47cf3395dd4c4fe8bdd5df13aab698f2ca314b/ext/tk/lib/tkextlib/tcllib/plotchart.rb#L747" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-zconfig_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/tcllib/plotchart.rb, line 747</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">zconfig</span>(<span class="ruby-identifier">key</span>, <span class="ruby-identifier">value</span>=<span class="ruby-constant">None</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">key</span>.<span class="ruby-identifier">kind_of?</span>(<span class="ruby-constant">Hash</span>)
+    <span class="ruby-identifier">tk_call_without_enc</span>(<span class="ruby-ivar">@chart</span>, <span class="ruby-string">&#39;zconfig&#39;</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">hash_kv</span>(<span class="ruby-identifier">key</span>, <span class="ruby-keyword">true</span>))
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">tk_call</span>(<span class="ruby-ivar">@chart</span>, <span class="ruby-string">&#39;zconfig&#39;</span>, <span class="ruby-node">&quot;-#{key}&quot;</span>, <span class="ruby-identifier">value</span>)
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                    </div>
+
+    </div>
+  </body>
+</html>    

@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>Digest</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="../css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/main.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/github.css" type="text/css" media="screen" />
+<script src="../js/jquery-1.3.2.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/jquery-effect.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+
+<body>     
+    <div class="banner">
+        
+        <h1>
+            <span class="type">Module</span> 
+            Digest 
+            
+        </h1>
+        <ul class="files">
+            
+            <li><a href="../files/ext/digest/digest_c.html">ext/digest/digest.c</a></li>
+            
+            <li><a href="../files/ext/digest/lib/digest_rb.html">ext/digest/lib/digest.rb</a></li>
+            
+            <li><a href="../files/ext/digest/lib/digest/hmac_rb.html">ext/digest/lib/digest/hmac.rb</a></li>
+            
+            <li><a href="../files/ext/digest/sha2/lib/sha2_rb.html">ext/digest/sha2/lib/sha2.rb</a></li>
+            
+            <li><a href="../files/lib/cgi/session_rb.html">lib/cgi/session.rb</a></li>
+            
+            <li><a href="../files/lib/cgi/session/pstore_rb.html">lib/cgi/session/pstore.rb</a></li>
+            
+            <li><a href="../files/lib/net/imap_rb.html">lib/net/imap.rb</a></li>
+            
+            <li><a href="../files/lib/net/pop_rb.html">lib/net/pop.rb</a></li>
+            
+            <li><a href="../files/lib/net/smtp_rb.html">lib/net/smtp.rb</a></li>
+            
+            <li><a href="../files/lib/pstore_rb.html">lib/pstore.rb</a></li>
+            
+            <li><a href="../files/lib/rubygems/package/tar_input_rb.html">lib/rubygems/package/tar_input.rb</a></li>
+            
+            <li><a href="../files/lib/rubygems/source_index_rb.html">lib/rubygems/source_index.rb</a></li>
+            
+            <li><a href="../files/lib/rubygems/validator_rb.html">lib/rubygems/validator.rb</a></li>
+            
+            <li><a href="../files/lib/webrick/httpauth/digestauth_rb.html">lib/webrick/httpauth/digestauth.rb</a></li>
+            
+            <li><a href="../files/sample/openssl/c_rehash_rb.html">sample/openssl/c_rehash.rb</a></li>
+            
+            <li><a href="../files/sample/openssl/gen_csr_rb.html">sample/openssl/gen_csr.rb</a></li>
+            
+        </ul>
+    </div>
+    <div id="bodyContent">
+        <div id="content">
+  
+    <div class="description">
+      
+<p>This module provides a framework for message digest libraries.</p>
+
+<p>You may want to look at <a href="OpenSSL/Digest.html">OpenSSL::Digest</a>
+as it supports support more algorithms.</p>
+
+<p>A cryptographic hash function is a procedure that takes data and return a
+fixed bit string : the hash value, also known as <em>digest</em>. <a
+href="Hash.html">Hash</a> functions are also called one-way functions, it
+is easy to compute a digest from a message, but it is infeasible to
+generate a message from a digest.</p>
+
+<h2 id="module-Digest-label-Example">Example</h2>
+
+<pre><code>require &#39;digest&#39;
+
+# Compute a complete digest
+sha256 = Digest::SHA256.new
+digest = sha256.digest message
+
+# Compute digest by chunks
+sha256 = Digest::SHA256.new
+sha256.update message1
+sha256 &lt;&lt; message2 # &lt;&lt; is an alias for update
+
+digest = sha256.digest
+</code></pre>
+
+<h2 id="module-Digest-label-Digest+algorithms"><a href="Digest.html">Digest</a> algorithms</h2>
+
+<p>Different digest algorithms (or hash functions) are available :</p>
+<dl class="rdoc-list note-list"><dt><a href="Digest/HMAC.html">HMAC</a>
+<dd>
+<p>See FIPS PUB 198 The Keyed-Hash Message Authentication Code (HMAC)</p>
+</dd><dt>RIPEMD-160
+<dd>
+<p>(as Digest::RMD160) see <a
+href="http://homes.esat.kuleuven.be/~bosselae/ripemd160.html">homes.esat.kuleuven.be/~bosselae/ripemd160.html</a></p>
+</dd><dt>SHA1
+<dd>
+<p>See FIPS 180 Secure <a href="Hash.html">Hash</a> Standard</p>
+</dd><dt><a href="Digest/SHA2.html">SHA2</a> family
+<dd>
+<p>See FIPS 180 Secure <a href="Hash.html">Hash</a> Standard which defines the
+following algorithms:</p>
+<ul><li>
+<p>SHA512</p>
+</li><li>
+<p>SHA384</p>
+</li><li>
+<p>SHA256</p>
+</li></ul>
+</dd></dl>
+
+<p>The latest versions of the FIPS publications can be found here: <a
+href="http://csrc.nist.gov/publications/PubsFIPS.html">csrc.nist.gov/publications/PubsFIPS.html</a></p>
+
+<p>Additionally Digest::BubbleBabble encodes a digest as a sequence of
+consonants and vowels which is more recognizable and comparable than a
+hexadecimal digest.  See <a
+href="http://en.wikipedia.org/wiki/Bubblebabble">en.wikipedia.org/wiki/Bubblebabble</a></p>
+
+    </div>
+  
+
+
+  
+
+
+  
+  
+
+
+  
+    <!-- Namespace -->
+    <div class="sectiontitle">Namespace</div>
+    <ul>
+      
+        <li>
+          <span class="type">MODULE</span>
+          <a href="Digest/Instance.html">Digest::Instance</a>
+        </li>
+      
+        <li>
+          <span class="type">CLASS</span>
+          <a href="Digest/Base.html">Digest::Base</a>
+        </li>
+      
+        <li>
+          <span class="type">CLASS</span>
+          <a href="Digest/Class.html">Digest::Class</a>
+        </li>
+      
+        <li>
+          <span class="type">CLASS</span>
+          <a href="Digest/HMAC.html">Digest::HMAC</a>
+        </li>
+      
+        <li>
+          <span class="type">CLASS</span>
+          <a href="Digest/SHA2.html">Digest::SHA2</a>
+        </li>
+      
+    </ul>
+  
+
+
+  
+    <!-- Method ref -->
+    <div class="sectiontitle">Methods</div>
+    <dl class="methods">
+      
+        <dt>H</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-hexencode">hexencode</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+    </dl>
+  
+
+  
+
+
+
+  
+
+    
+
+    
+
+    
+
+
+    
+
+
+    <!-- Methods -->
+    
+      <div class="sectiontitle">Class Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-c-hexencode">
+            
+              <b>Digest.hexencode(string) &rarr; hexencoded_string
+</b>
+            
+            <a href="../classes/Digest.html#method-c-hexencode" name="method-c-hexencode" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Generates a hex-encoded version of a given <em>string</em>.</p>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-hexencode_source')" id="l_method-c-hexencode_source">show</a>
+                
+              </p>
+              <div id="method-c-hexencode_source" class="dyn-source">
+                <pre>static VALUE
+rb_digest_s_hexencode(VALUE klass, VALUE str)
+{
+    return hexencode_str_new(str);
+}</pre>
+              </div>
+            </div>
+            
+          </div>
+                        </div>
+
+    </div>
+  </body>
+</html>    

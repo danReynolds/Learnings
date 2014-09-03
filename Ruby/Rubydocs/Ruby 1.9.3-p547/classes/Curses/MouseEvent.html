@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>Curses::MouseEvent</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="../../css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../../css/main.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../../css/github.css" type="text/css" media="screen" />
+<script src="../../js/jquery-1.3.2.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../js/jquery-effect.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../js/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+
+<body>     
+    <div class="banner">
+        
+        <h1>
+            <span class="type">Class</span> 
+            Curses::MouseEvent 
+            
+                <span class="parent">&lt; 
+                    
+                    <a href="../Object.html">Object</a>
+                    
+                </span>
+            
+        </h1>
+        <ul class="files">
+            
+            <li><a href="../../files/ext/curses/curses_c.html">ext/curses/curses.c</a></li>
+            
+        </ul>
+    </div>
+    <div id="bodyContent">
+        <div id="content">
+  
+    <div class="description">
+      
+<h2 id="class-Curses::MouseEvent-label-Description">Description</h2>
+
+<p><a href="MouseEvent.html">Curses::MouseEvent</a></p>
+
+<h2 id="class-Curses::MouseEvent-label-Example">Example</h2>
+<ul><li>
+<p>mouse.rb</p>
+
+<pre><code>#!/usr/local/bin/ruby
+
+require &quot;curses&quot;
+include Curses
+
+def show_message(*msgs)
+  message = msgs.join
+  width = message.length + 6
+  win = Window.new(5, width,
+               (lines - 5) / 2, (cols - width) / 2)
+  win.keypad = true
+  win.attron(color_pair(COLOR_RED)){
+    win.box(?|, ?-, ?+)
+  }
+  win.setpos(2, 3)
+  win.addstr(message)
+  win.refresh
+  win.getch
+  win.close
+end
+
+init_screen
+start_color
+init_pair(COLOR_BLUE,COLOR_BLUE,COLOR_WHITE)
+init_pair(COLOR_RED,COLOR_RED,COLOR_WHITE)
+crmode
+noecho
+stdscr.keypad(true)
+
+begin
+  mousemask(BUTTON1_CLICKED|BUTTON2_CLICKED|BUTTON3_CLICKED|BUTTON4_CLICKED)
+  setpos((lines - 5) / 2, (cols - 10) / 2)
+  attron(color_pair(COLOR_BLUE)|A_BOLD){
+    addstr(&quot;click&quot;)
+  }
+  refresh
+  while( true )
+    c = getch
+    case c
+    when KEY_MOUSE
+      m = getmouse
+      if( m )
+    show_message(&quot;getch = #{c.inspect}, &quot;,
+                 &quot;mouse event = #{&#39;0x%x&#39; % m.bstate}, &quot;,
+                 &quot;axis = (#{m.x},#{m.y},#{m.z})&quot;)
+      end
+      break
+    end
+  end
+  refresh
+ensure
+  close_screen
+end
+</code></pre>
+</li></ul>
+
+    </div>
+  
+
+
+  
+
+
+  
+  
+
+
+  
+
+
+  
+
+  
+
+
+
+  
+
+    
+
+    
+
+    
+
+
+    
+
+
+    <!-- Methods -->
+              </div>
+
+    </div>
+  </body>
+</html>    

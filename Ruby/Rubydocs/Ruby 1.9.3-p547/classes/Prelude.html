@@ -1,0 +1,579 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>Prelude</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="../css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/main.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/github.css" type="text/css" media="screen" />
+<script src="../js/jquery-1.3.2.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/jquery-effect.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+
+<body>     
+    <div class="banner">
+        
+        <h1>
+            <span class="type">Class</span> 
+            Prelude 
+            
+                <span class="parent">&lt; 
+                    
+                    <a href="Object.html">Object</a>
+                    
+                </span>
+            
+        </h1>
+        <ul class="files">
+            
+            <li><a href="../files/tool/compile_prelude_rb.html">tool/compile_prelude.rb</a></li>
+            
+        </ul>
+    </div>
+    <div id="bodyContent">
+        <div id="content">
+  
+
+
+  
+
+
+  
+  
+
+
+  
+
+
+  
+    <!-- Method ref -->
+    <div class="sectiontitle">Methods</div>
+    <dl class="methods">
+      
+        <dt>C</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-c_esc">c_esc</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>E</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-emit">emit</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>N</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-new">new</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>P</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-prelude_base">prelude_base</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-prelude_name">prelude_name</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>T</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-translate">translate</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+    </dl>
+  
+
+  
+
+
+
+  
+
+    
+
+    
+
+    
+      <!-- Section constants -->
+      <div class="sectiontitle">Constants</div>
+      <table border='0' cellpadding='5'>
+        
+          <tr valign='top'>
+            <td class="attr-name">SRCDIR</td>
+            <td>=</td>
+            <td class="attr-value">File.dirname(File.dirname(__FILE__))</td>
+          </tr>
+          
+            <tr valign='top'>
+              <td>&nbsp;</td>
+              <td colspan="2" class="attr-desc"></td>
+            </tr>
+          
+        
+          <tr valign='top'>
+            <td class="attr-name">C_ESC</td>
+            <td>=</td>
+            <td class="attr-value">{
+&quot;\\&quot; =&gt; &quot;\\\\&quot;,
+&#39;&quot;&#39; =&gt; &#39;\&quot;&#39;,
+&quot;\n&quot; =&gt; &#39;\n&#39;,
+}</td>
+          </tr>
+          
+            <tr valign='top'>
+              <td>&nbsp;</td>
+              <td colspan="2" class="attr-desc"></td>
+            </tr>
+          
+        
+          <tr valign='top'>
+            <td class="attr-name">C_ESC_PAT</td>
+            <td>=</td>
+            <td class="attr-value">Regexp.union(*C_ESC.keys)</td>
+          </tr>
+          
+            <tr valign='top'>
+              <td>&nbsp;</td>
+              <td colspan="2" class="attr-desc"></td>
+            </tr>
+          
+        
+      </table>
+    
+
+
+    
+
+
+    <!-- Methods -->
+    
+      <div class="sectiontitle">Class Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-c-new">
+            
+              <b>new</b>(preludes)
+            
+            <a href="../classes/Prelude.html#method-c-new" name="method-c-new" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-new_source')" id="l_method-c-new_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/e7996eb3cc1687d1f70ea8f78befddf821ad3ff0/tool/compile_prelude.rb#L33" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-new_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File tool/compile_prelude.rb, line 33</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">initialize</span>(<span class="ruby-identifier">preludes</span>)
+  <span class="ruby-ivar">@mkconf</span> = <span class="ruby-keyword">nil</span>
+  <span class="ruby-ivar">@have_sublib</span> = <span class="ruby-keyword">false</span>
+  <span class="ruby-ivar">@need_ruby_prefix</span> = <span class="ruby-keyword">false</span>
+  <span class="ruby-ivar">@preludes</span> = {}
+  <span class="ruby-ivar">@mains</span> = <span class="ruby-identifier">preludes</span>.<span class="ruby-identifier">map</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">filename</span><span class="ruby-operator">|</span> <span class="ruby-identifier">translate</span>(<span class="ruby-identifier">filename</span>)[<span class="ruby-number">0</span>]}
+  <span class="ruby-ivar">@preludes</span>.<span class="ruby-identifier">delete_if</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">_</span>, (<span class="ruby-identifier">_</span>, <span class="ruby-identifier">_</span>, <span class="ruby-identifier">lines</span>, <span class="ruby-identifier">sub</span>)<span class="ruby-operator">|</span> <span class="ruby-operator">!</span><span class="ruby-identifier">sub</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">lines</span>.<span class="ruby-identifier">empty?</span>}
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                  
+      <div class="sectiontitle">Instance Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-i-c_esc">
+            
+              <b>c_esc</b>(str)
+            
+            <a href="../classes/Prelude.html#method-i-c_esc" name="method-i-c_esc" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-c_esc_source')" id="l_method-i-c_esc_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/e7996eb3cc1687d1f70ea8f78befddf821ad3ff0/tool/compile_prelude.rb#L23" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-c_esc_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File tool/compile_prelude.rb, line 23</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">c_esc</span>(<span class="ruby-identifier">str</span>)
+  <span class="ruby-string">&#39;&quot;&#39;</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">str</span>.<span class="ruby-identifier">gsub</span>(<span class="ruby-constant">C_ESC_PAT</span>) { <span class="ruby-constant">C_ESC</span>[<span class="ruby-node">$&amp;</span>] } <span class="ruby-operator">+</span> <span class="ruby-string">&#39;&quot;&#39;</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-emit">
+            
+              <b>emit</b>(outfile)
+            
+            <a href="../classes/Prelude.html#method-i-emit" name="method-i-emit" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-emit_source')" id="l_method-i-emit_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/e7996eb3cc1687d1f70ea8f78befddf821ad3ff0/tool/compile_prelude.rb#L77" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-emit_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File tool/compile_prelude.rb, line 77</span>
+  <span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">emit</span>(<span class="ruby-identifier">outfile</span>)
+    <span class="ruby-identifier">init_name</span> = <span class="ruby-identifier">outfile</span>[<span class="ruby-regexp">/\w+(?=_prelude.c\b)/</span>] <span class="ruby-operator">||</span> <span class="ruby-string">&#39;prelude&#39;</span>
+    <span class="ruby-identifier">erb</span> = <span class="ruby-constant">ERB</span>.<span class="ruby-identifier">new</span>(<span class="ruby-string">&quot;/* -*-c-*-
+ THIS FILE WAS AUTOGENERATED BY tool/compile_prelude.rb. DO NOT EDIT.
+
+ sources: &lt;%= @preludes.map {|n,*| prelude_base(n)}.join(&#39;, &#39;) %&gt;
+*/
+#include &quot;ruby/ruby.h&quot;
+#include &quot;internal.h&quot;
+#include &quot;vm_core.h&quot;
+
+% preludes = @preludes.values.sort
+% preludes.each {|i, prelude, lines, sub|
+
+static const char prelude_name&lt;%=i%&gt;[] = &lt;%=c_esc(prelude_name(*prelude))%&gt;;
+static const char prelude_code&lt;%=i%&gt;[] =
+%   lines.each {|line|
+&lt;%=line%&gt;
+%   }
+;
+% }
+
+#define PRELUDE_COUNT &lt;%=@have_sublib ? preludes.size : 0%&gt;
+
+% if @have_sublib or @need_ruby_prefix
+struct prelude_env {
+    volatile VALUE prefix_path;
+#if PRELUDE_COUNT &gt; 0
+    char loaded[PRELUDE_COUNT];
+#endif
+};
+
+static VALUE
+prelude_prefix_path(VALUE self)
+{
+    struct prelude_env *ptr = DATA_PTR(self);
+    return ptr-&gt;prefix_path;
+}
+% end
+
+% unless preludes.empty?
+static void
+prelude_eval(VALUE code, VALUE name, VALUE line)
+{
+    rb_iseq_eval(rb_iseq_compile_with_option(code, name, Qnil, line, Qtrue));
+}
+% end
+
+% if @have_sublib
+static VALUE
+prelude_require(VALUE self, VALUE nth)
+{
+    struct prelude_env *ptr = DATA_PTR(self);
+    VALUE code, name;
+    int n = FIX2INT(nth);
+
+    if (n &gt; PRELUDE_COUNT) return Qfalse;
+    if (ptr-&gt;loaded[n]) return Qfalse;
+    ptr-&gt;loaded[n] = 1;
+    switch (n) {
+%   @preludes.each_value do |i, prelude, lines, sub|
+%     if sub
+      case &lt;%=i%&gt;:
+        code = rb_usascii_str_new(prelude_code&lt;%=i%&gt;, sizeof(prelude_code&lt;%=i%&gt;) - 1);
+        name = rb_usascii_str_new(prelude_name&lt;%=i%&gt;, sizeof(prelude_name&lt;%=i%&gt;) - 1);
+        break;
+%     end
+%   end
+      default:
+        return Qfalse;
+    }
+    prelude_eval(code, name, INT2FIX(1));
+    return Qtrue;
+}
+
+% end
+void
+Init_&lt;%=init_name%&gt;(void)
+{
+% if @have_sublib or @need_ruby_prefix
+    struct prelude_env memo;
+    ID name = rb_intern(&quot;TMP_RUBY_PREFIX&quot;);
+    VALUE prelude = Data_Wrap_Struct(rb_cData, 0, 0, &amp;memo);
+
+    memo.prefix_path = rb_const_remove(rb_cObject, name);
+    rb_const_set(rb_cObject, name, prelude);
+    rb_define_singleton_method(prelude, &quot;to_s&quot;, prelude_prefix_path, 0);
+% end
+% if @have_sublib
+    memset(memo.loaded, 0, sizeof(memo.loaded));
+    rb_define_singleton_method(prelude, &quot;require&quot;, prelude_require, 1);
+% end
+% preludes.each do |i, prelude, lines, sub|
+%   next if sub
+    prelude_eval(
+      rb_usascii_str_new(prelude_code&lt;%=i%&gt;, sizeof(prelude_code&lt;%=i%&gt;) - 1),
+      rb_usascii_str_new(prelude_name&lt;%=i%&gt;, sizeof(prelude_name&lt;%=i%&gt;) - 1),
+      INT2FIX(1));
+% end
+% if @have_sublib or @need_ruby_prefix
+    rb_gc_force_recycle(prelude);
+% end
+
+#if 0
+% preludes.length.times {|i|
+    puts(prelude_code&lt;%=i%&gt;);
+% }
+#endif
+}
+&quot;</span>, <span class="ruby-keyword">nil</span>, <span class="ruby-string">&#39;%&#39;</span>)
+    <span class="ruby-identifier">tmp</span> = <span class="ruby-identifier">erb</span>.<span class="ruby-identifier">result</span>(<span class="ruby-identifier">binding</span>)
+    <span class="ruby-identifier">open</span>(<span class="ruby-identifier">outfile</span>, <span class="ruby-string">&#39;w&#39;</span>){<span class="ruby-operator">|</span><span class="ruby-identifier">f</span><span class="ruby-operator">|</span>
+      <span class="ruby-identifier">f</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">tmp</span>
+    }
+  <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-prelude_base">
+            
+              <b>prelude_base</b>(filename)
+            
+            <a href="../classes/Prelude.html#method-i-prelude_base" name="method-i-prelude_base" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-prelude_base_source')" id="l_method-i-prelude_base_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/e7996eb3cc1687d1f70ea8f78befddf821ad3ff0/tool/compile_prelude.rb#L26" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-prelude_base_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File tool/compile_prelude.rb, line 26</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">prelude_base</span>(<span class="ruby-identifier">filename</span>)
+  <span class="ruby-identifier">filename</span>[<span class="ruby-node">/\A#{Regexp.quote(SRCDIR)}\/(.*?)(\.rb)?\z/om</span>, <span class="ruby-number">1</span>]
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-prelude_name">
+            
+              <b>prelude_name</b>(filename)
+            
+            <a href="../classes/Prelude.html#method-i-prelude_name" name="method-i-prelude_name" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-prelude_name_source')" id="l_method-i-prelude_name_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/e7996eb3cc1687d1f70ea8f78befddf821ad3ff0/tool/compile_prelude.rb#L29" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-prelude_name_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File tool/compile_prelude.rb, line 29</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">prelude_name</span>(<span class="ruby-identifier">filename</span>)
+  <span class="ruby-string">&quot;&lt;internal:&quot;</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">prelude_base</span>(<span class="ruby-identifier">filename</span>) <span class="ruby-operator">+</span> <span class="ruby-string">&quot;&gt;&quot;</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-translate">
+            
+              <b>translate</b>(filename, sub = false)
+            
+            <a href="../classes/Prelude.html#method-i-translate" name="method-i-translate" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-translate_source')" id="l_method-i-translate_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/e7996eb3cc1687d1f70ea8f78befddf821ad3ff0/tool/compile_prelude.rb#L42" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-translate_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File tool/compile_prelude.rb, line 42</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">translate</span>(<span class="ruby-identifier">filename</span>, <span class="ruby-identifier">sub</span> = <span class="ruby-keyword">false</span>)
+  <span class="ruby-identifier">idx</span> = <span class="ruby-ivar">@preludes</span>[<span class="ruby-identifier">filename</span>]
+  <span class="ruby-keyword">return</span> <span class="ruby-identifier">idx</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">idx</span>
+  <span class="ruby-identifier">lines</span> = []
+  <span class="ruby-ivar">@preludes</span>[<span class="ruby-identifier">filename</span>] = <span class="ruby-identifier">result</span> = [<span class="ruby-ivar">@preludes</span>.<span class="ruby-identifier">size</span>, <span class="ruby-identifier">filename</span>, <span class="ruby-identifier">lines</span>, <span class="ruby-identifier">sub</span>]
+  <span class="ruby-constant">File</span>.<span class="ruby-identifier">readlines</span>(<span class="ruby-identifier">filename</span>).<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">line</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">line</span>.<span class="ruby-identifier">gsub!</span>(<span class="ruby-regexp">/RbConfig::CONFIG\[&quot;(\w+)&quot;\]/</span>) {
+      <span class="ruby-identifier">key</span> = <span class="ruby-node">$1</span>
+      <span class="ruby-keyword">unless</span> <span class="ruby-ivar">@mkconf</span>
+        <span class="ruby-identifier">require</span> <span class="ruby-string">&#39;./rbconfig&#39;</span>
+        <span class="ruby-ivar">@mkconf</span> = <span class="ruby-constant">RbConfig</span><span class="ruby-operator">::</span><span class="ruby-constant">MAKEFILE_CONFIG</span>.<span class="ruby-identifier">merge</span>(<span class="ruby-string">&#39;prefix&#39;</span>=<span class="ruby-operator">&gt;</span><span class="ruby-string">&#39;#{TMP_RUBY_PREFIX}&#39;</span>)
+      <span class="ruby-keyword">end</span>
+      <span class="ruby-keyword">if</span> <span class="ruby-constant">RbConfig</span><span class="ruby-operator">::</span><span class="ruby-constant">MAKEFILE_CONFIG</span>.<span class="ruby-identifier">has_key?</span> <span class="ruby-identifier">key</span>
+        <span class="ruby-identifier">val</span> = <span class="ruby-constant">RbConfig</span>.<span class="ruby-identifier">expand</span>(<span class="ruby-node">&quot;$(#{key})&quot;</span>, <span class="ruby-ivar">@mkconf</span>)
+        <span class="ruby-ivar">@need_ruby_prefix</span> <span class="ruby-operator">||=</span> <span class="ruby-node">/\A\#\{TMP_RUBY_PREFIX\}/</span> <span class="ruby-operator">=~</span> <span class="ruby-identifier">val</span>
+        <span class="ruby-identifier">c_esc</span>(<span class="ruby-identifier">val</span>)
+      <span class="ruby-keyword">else</span>
+        <span class="ruby-string">&quot;nil&quot;</span>
+      <span class="ruby-keyword">end</span>
+    }
+    <span class="ruby-identifier">line</span>.<span class="ruby-identifier">sub!</span>(<span class="ruby-regexp">/require\s*\(?\s*([&quot;&#39;])(.*?)\1\)?/</span>) <span class="ruby-keyword">do</span>
+      <span class="ruby-identifier">orig</span>, <span class="ruby-identifier">path</span> = <span class="ruby-node">$&amp;</span>, <span class="ruby-node">$2</span>
+      <span class="ruby-identifier">path</span> = <span class="ruby-constant">File</span>.<span class="ruby-identifier">join</span>(<span class="ruby-constant">SRCDIR</span>, <span class="ruby-identifier">path</span>)
+      <span class="ruby-keyword">if</span> <span class="ruby-constant">File</span>.<span class="ruby-identifier">exist?</span>(<span class="ruby-identifier">path</span>)
+        <span class="ruby-ivar">@have_sublib</span> = <span class="ruby-keyword">true</span>
+        <span class="ruby-node">&quot;TMP_RUBY_PREFIX.require(#{translate(path, true)[0]})&quot;</span>
+      <span class="ruby-keyword">else</span>
+        <span class="ruby-identifier">orig</span>
+      <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">end</span>
+    <span class="ruby-identifier">lines</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">c_esc</span>(<span class="ruby-identifier">line</span>)
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">result</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                    </div>
+
+    </div>
+  </body>
+</html>    

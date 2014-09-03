@@ -1,0 +1,1012 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>Tk::Tcllib::Crosshair</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="../../../css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../../../css/main.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../../../css/github.css" type="text/css" media="screen" />
+<script src="../../../js/jquery-1.3.2.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../../js/jquery-effect.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../../js/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+
+<body>     
+    <div class="banner">
+        
+        <h1>
+            <span class="type">Module</span> 
+            Tk::Tcllib::Crosshair 
+            
+        </h1>
+        <ul class="files">
+            
+            <li><a href="../../../files/ext/tk/lib/tkextlib/tcllib/crosshair_rb.html">ext/tk/lib/tkextlib/tcllib/crosshair.rb</a></li>
+            
+        </ul>
+    </div>
+    <div id="bodyContent">
+        <div id="content">
+  
+
+
+  
+
+
+  
+  
+
+
+  
+
+
+  
+    <!-- Method ref -->
+    <div class="sectiontitle">Methods</div>
+    <dl class="methods">
+      
+        <dt>C</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-cget">cget</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-confuginfo">confuginfo</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-confugure">confugure</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-c-crosshair">crosshair</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-crosshair_cget">crosshair_cget</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-crosshair_configinfo">crosshair_configinfo</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-crosshair_configure">crosshair_configure</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-crosshair_current_configinfo">crosshair_current_configinfo</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-crosshair_off">crosshair_off</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-crosshair_on">crosshair_on</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-crosshair_track_off">crosshair_track_off</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-crosshair_track_on">crosshair_track_on</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-current_configinfo">current_configinfo</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>O</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-off">off</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-c-on">on</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>P</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-package_name">package_name</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-c-package_version">package_version</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>T</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-track_off">track_off</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-c-track_on">track_on</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+    </dl>
+  
+
+  
+    <!-- Includes -->
+    <div class="sectiontitle">Included Modules</div>
+    <ul>
+      
+        <li>
+          
+            <a href="../../TkCore.html">
+              TkCore
+            </a>
+          
+        </li>
+      
+        <li>
+          
+            <a href="../../TkComm.html">
+              TkComm
+            </a>
+          
+        </li>
+      
+        <li>
+          
+            <a href="../../TkCanvasItemConfig.html">
+              TkCanvasItemConfig
+            </a>
+          
+        </li>
+      
+    </ul>
+  
+
+
+
+  
+
+    
+
+    
+
+    
+      <!-- Section constants -->
+      <div class="sectiontitle">Constants</div>
+      <table border='0' cellpadding='5'>
+        
+          <tr valign='top'>
+            <td class="attr-name">PACKAGE_NAME</td>
+            <td>=</td>
+            <td class="attr-value">&#39;crosshair&#39;.freeze</td>
+          </tr>
+          
+            <tr valign='top'>
+              <td>&nbsp;</td>
+              <td colspan="2" class="attr-desc"></td>
+            </tr>
+          
+        
+          <tr valign='top'>
+            <td class="attr-name">TkCommandNames</td>
+            <td>=</td>
+            <td class="attr-value">[&#39;::crosshair::crosshair&#39;.freeze].freeze</td>
+          </tr>
+          
+            <tr valign='top'>
+              <td>&nbsp;</td>
+              <td colspan="2" class="attr-desc"></td>
+            </tr>
+          
+        
+      </table>
+    
+
+
+    
+
+
+    <!-- Methods -->
+    
+      <div class="sectiontitle">Class Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-c-crosshair">
+            
+              <b>crosshair</b>(w, keys={})
+            
+            <a href="../../../classes/Tk/Tcllib/Crosshair.html#method-c-crosshair" name="method-c-crosshair" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-crosshair_source')" id="l_method-c-crosshair_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/tcllib/crosshair.rb#L36" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-crosshair_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/tcllib/crosshair.rb, line 36</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">crosshair</span>(<span class="ruby-identifier">w</span>, <span class="ruby-identifier">keys</span>={})
+  <span class="ruby-constant">Tk</span>.<span class="ruby-identifier">tk_call</span>(<span class="ruby-string">&#39;::crosshair::crosshair&#39;</span>, <span class="ruby-identifier">w</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">hash_kv</span>(<span class="ruby-identifier">keys</span>))
+  <span class="ruby-identifier">w</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-off">
+            
+              <b>off</b>(w)
+            
+            <a href="../../../classes/Tk/Tcllib/Crosshair.html#method-c-off" name="method-c-off" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-off_source')" id="l_method-c-off_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/tcllib/crosshair.rb#L44" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-off_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/tcllib/crosshair.rb, line 44</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">off</span>(<span class="ruby-identifier">w</span>)
+  <span class="ruby-constant">Tk</span>.<span class="ruby-identifier">tk_call</span>(<span class="ruby-string">&#39;::crosshair::off&#39;</span>, <span class="ruby-identifier">w</span>)
+  <span class="ruby-identifier">w</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-on">
+            
+              <b>on</b>(w, keys={})
+            
+            <a href="../../../classes/Tk/Tcllib/Crosshair.html#method-c-on" name="method-c-on" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-on_source')" id="l_method-c-on_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/tcllib/crosshair.rb#L40" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-on_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/tcllib/crosshair.rb, line 40</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">on</span>(<span class="ruby-identifier">w</span>, <span class="ruby-identifier">keys</span>={})
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">crosshair</span>(<span class="ruby-identifier">w</span>, <span class="ruby-identifier">keys</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-package_name">
+            
+              <b>package_name</b>()
+            
+            <a href="../../../classes/Tk/Tcllib/Crosshair.html#method-c-package_name" name="method-c-package_name" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-package_name_source')" id="l_method-c-package_name_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/tcllib/crosshair.rb#L18" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-package_name_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/tcllib/crosshair.rb, line 18</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">package_name</span>
+  <span class="ruby-constant">PACKAGE_NAME</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-package_version">
+            
+              <b>package_version</b>()
+            
+            <a href="../../../classes/Tk/Tcllib/Crosshair.html#method-c-package_version" name="method-c-package_version" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-package_version_source')" id="l_method-c-package_version_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/tcllib/crosshair.rb#L22" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-package_version_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/tcllib/crosshair.rb, line 22</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">package_version</span>
+  <span class="ruby-keyword">begin</span>
+    <span class="ruby-constant">TkPackage</span>.<span class="ruby-identifier">require</span>(<span class="ruby-string">&#39;crosshair&#39;</span>)
+  <span class="ruby-keyword">rescue</span>
+    <span class="ruby-string">&#39;&#39;</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-track_off">
+            
+              <b>track_off</b>(w)
+            
+            <a href="../../../classes/Tk/Tcllib/Crosshair.html#method-c-track_off" name="method-c-track_off" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-track_off_source')" id="l_method-c-track_off_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/tcllib/crosshair.rb#L54" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-track_off_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/tcllib/crosshair.rb, line 54</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">track_off</span>(<span class="ruby-identifier">w</span>)
+  <span class="ruby-constant">Tk</span>.<span class="ruby-identifier">tk_call</span>(<span class="ruby-string">&#39;::crosshair::track_off&#39;</span>, <span class="ruby-identifier">w</span>)
+  <span class="ruby-identifier">w</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-track_on">
+            
+              <b>track_on</b>(w, &amp;b)
+            
+            <a href="../../../classes/Tk/Tcllib/Crosshair.html#method-c-track_on" name="method-c-track_on" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-track_on_source')" id="l_method-c-track_on_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/tcllib/crosshair.rb#L49" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-track_on_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/tcllib/crosshair.rb, line 49</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">track_on</span>(<span class="ruby-identifier">w</span>, <span class="ruby-operator">&amp;</span><span class="ruby-identifier">b</span>)
+  <span class="ruby-constant">Tk</span>.<span class="ruby-identifier">tk_call</span>(<span class="ruby-string">&#39;::crosshair::track_on&#39;</span>, <span class="ruby-identifier">w</span>, <span class="ruby-identifier">b</span>)
+  <span class="ruby-identifier">w</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                  
+      <div class="sectiontitle">Instance Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-i-cget">
+            
+              <b>cget</b>(w, slot)
+            
+            <a href="../../../classes/Tk/Tcllib/Crosshair.html#method-i-cget" name="method-i-cget" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-cget_source')" id="l_method-i-cget_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/tcllib/crosshair.rb#L87" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-cget_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/tcllib/crosshair.rb, line 87</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">cget</span>(<span class="ruby-identifier">w</span>, <span class="ruby-identifier">slot</span>)
+  <span class="ruby-identifier">current_itemconfiginfo</span>(<span class="ruby-identifier">w</span>, <span class="ruby-identifier">slot</span>).<span class="ruby-identifier">values</span>[<span class="ruby-number">0</span>]
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-confuginfo">
+            
+              <b>confuginfo</b>(w, slot = nil)
+            
+            <a href="../../../classes/Tk/Tcllib/Crosshair.html#method-i-confuginfo" name="method-i-confuginfo" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-confuginfo_source')" id="l_method-i-confuginfo_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/tcllib/crosshair.rb#L81" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-confuginfo_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/tcllib/crosshair.rb, line 81</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">confuginfo</span>(<span class="ruby-identifier">w</span>, <span class="ruby-identifier">slot</span> = <span class="ruby-keyword">nil</span>)
+  <span class="ruby-identifier">itemconfiginfo</span>(<span class="ruby-identifier">w</span>, <span class="ruby-identifier">slot</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-confugure">
+            
+              <b>confugure</b>(w, slot, value=None)
+            
+            <a href="../../../classes/Tk/Tcllib/Crosshair.html#method-i-confugure" name="method-i-confugure" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-confugure_source')" id="l_method-i-confugure_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/tcllib/crosshair.rb#L78" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-confugure_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/tcllib/crosshair.rb, line 78</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">confugure</span>(<span class="ruby-identifier">w</span>, <span class="ruby-identifier">slot</span>, <span class="ruby-identifier">value</span>=<span class="ruby-constant">None</span>)
+  <span class="ruby-identifier">itemconfigure</span>(<span class="ruby-identifier">w</span>, <span class="ruby-identifier">slot</span>, <span class="ruby-identifier">value</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-crosshair_cget">
+            
+              <b>crosshair_cget</b>(slot)
+            
+            <a href="../../../classes/Tk/Tcllib/Crosshair.html#method-i-crosshair_cget" name="method-i-crosshair_cget" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-crosshair_cget_source')" id="l_method-i-crosshair_cget_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/tcllib/crosshair.rb#L114" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-crosshair_cget_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/tcllib/crosshair.rb, line 114</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">crosshair_cget</span>(<span class="ruby-identifier">slot</span>)
+  <span class="ruby-constant">Tk</span><span class="ruby-operator">::</span><span class="ruby-constant">Tcllib</span><span class="ruby-operator">::</span><span class="ruby-constant">Crosshair</span>.<span class="ruby-identifier">cget</span>(<span class="ruby-keyword">self</span>, <span class="ruby-identifier">slot</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-crosshair_configinfo">
+            
+              <b>crosshair_configinfo</b>(slot = nil)
+            
+            <a href="../../../classes/Tk/Tcllib/Crosshair.html#method-i-crosshair_configinfo" name="method-i-crosshair_configinfo" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-crosshair_configinfo_source')" id="l_method-i-crosshair_configinfo_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/tcllib/crosshair.rb#L108" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-crosshair_configinfo_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/tcllib/crosshair.rb, line 108</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">crosshair_configinfo</span>(<span class="ruby-identifier">slot</span> = <span class="ruby-keyword">nil</span>)
+  <span class="ruby-constant">Tk</span><span class="ruby-operator">::</span><span class="ruby-constant">Tcllib</span><span class="ruby-operator">::</span><span class="ruby-constant">Crosshair</span>.<span class="ruby-identifier">configinfo</span>(<span class="ruby-keyword">self</span>, <span class="ruby-identifier">slot</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-crosshair_configure">
+            
+              <b>crosshair_configure</b>(*args)
+            
+            <a href="../../../classes/Tk/Tcllib/Crosshair.html#method-i-crosshair_configure" name="method-i-crosshair_configure" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-crosshair_configure_source')" id="l_method-i-crosshair_configure_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/tcllib/crosshair.rb#L105" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-crosshair_configure_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/tcllib/crosshair.rb, line 105</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">crosshair_configure</span>(<span class="ruby-operator">*</span><span class="ruby-identifier">args</span>)
+  <span class="ruby-constant">Tk</span><span class="ruby-operator">::</span><span class="ruby-constant">Tcllib</span><span class="ruby-operator">::</span><span class="ruby-constant">Crosshair</span>.<span class="ruby-identifier">configure</span>(<span class="ruby-keyword">self</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">args</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-crosshair_current_configinfo">
+            
+              <b>crosshair_current_configinfo</b>(slot = nil)
+            
+            <a href="../../../classes/Tk/Tcllib/Crosshair.html#method-i-crosshair_current_configinfo" name="method-i-crosshair_current_configinfo" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-crosshair_current_configinfo_source')" id="l_method-i-crosshair_current_configinfo_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/tcllib/crosshair.rb#L111" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-crosshair_current_configinfo_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/tcllib/crosshair.rb, line 111</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">crosshair_current_configinfo</span>(<span class="ruby-identifier">slot</span> = <span class="ruby-keyword">nil</span>)
+  <span class="ruby-constant">Tk</span><span class="ruby-operator">::</span><span class="ruby-constant">Tcllib</span><span class="ruby-operator">::</span><span class="ruby-constant">Crosshair</span>.<span class="ruby-identifier">current_configinfo</span>(<span class="ruby-keyword">self</span>, <span class="ruby-identifier">slot</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-crosshair_off">
+            
+              <b>crosshair_off</b>()
+            
+            <a href="../../../classes/Tk/Tcllib/Crosshair.html#method-i-crosshair_off" name="method-i-crosshair_off" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-crosshair_off_source')" id="l_method-i-crosshair_off_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/tcllib/crosshair.rb#L96" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-crosshair_off_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/tcllib/crosshair.rb, line 96</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">crosshair_off</span>
+  <span class="ruby-constant">Tk</span><span class="ruby-operator">::</span><span class="ruby-constant">Tcllib</span><span class="ruby-operator">::</span><span class="ruby-constant">Crosshair</span>.<span class="ruby-identifier">off</span>(<span class="ruby-keyword">self</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-crosshair_on">
+            
+              <b>crosshair_on</b>(keys={})
+            
+            <a href="../../../classes/Tk/Tcllib/Crosshair.html#method-i-crosshair_on" name="method-i-crosshair_on" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-crosshair_on_source')" id="l_method-i-crosshair_on_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/tcllib/crosshair.rb#L93" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-crosshair_on_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/tcllib/crosshair.rb, line 93</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">crosshair_on</span>(<span class="ruby-identifier">keys</span>={})
+  <span class="ruby-constant">Tk</span><span class="ruby-operator">::</span><span class="ruby-constant">Tcllib</span><span class="ruby-operator">::</span><span class="ruby-constant">Crosshair</span>.<span class="ruby-identifier">on</span>(<span class="ruby-keyword">self</span>, <span class="ruby-identifier">keys</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-crosshair_track_off">
+            
+              <b>crosshair_track_off</b>()
+            
+            <a href="../../../classes/Tk/Tcllib/Crosshair.html#method-i-crosshair_track_off" name="method-i-crosshair_track_off" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-crosshair_track_off_source')" id="l_method-i-crosshair_track_off_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/tcllib/crosshair.rb#L102" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-crosshair_track_off_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/tcllib/crosshair.rb, line 102</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">crosshair_track_off</span>
+  <span class="ruby-constant">Tk</span><span class="ruby-operator">::</span><span class="ruby-constant">Tcllib</span><span class="ruby-operator">::</span><span class="ruby-constant">Crosshair</span>.<span class="ruby-identifier">track_off</span>(<span class="ruby-keyword">self</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-crosshair_track_on">
+            
+              <b>crosshair_track_on</b>(&amp;b)
+            
+            <a href="../../../classes/Tk/Tcllib/Crosshair.html#method-i-crosshair_track_on" name="method-i-crosshair_track_on" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-crosshair_track_on_source')" id="l_method-i-crosshair_track_on_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/tcllib/crosshair.rb#L99" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-crosshair_track_on_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/tcllib/crosshair.rb, line 99</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">crosshair_track_on</span>(<span class="ruby-operator">&amp;</span><span class="ruby-identifier">b</span>)
+  <span class="ruby-constant">Tk</span><span class="ruby-operator">::</span><span class="ruby-constant">Tcllib</span><span class="ruby-operator">::</span><span class="ruby-constant">Crosshair</span>.<span class="ruby-identifier">track_on</span>(<span class="ruby-keyword">self</span>, <span class="ruby-operator">&amp;</span><span class="ruby-identifier">b</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-current_configinfo">
+            
+              <b>current_configinfo</b>(w, slot = nil)
+            
+            <a href="../../../classes/Tk/Tcllib/Crosshair.html#method-i-current_configinfo" name="method-i-current_configinfo" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-current_configinfo_source')" id="l_method-i-current_configinfo_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/tcllib/crosshair.rb#L84" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-current_configinfo_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/tcllib/crosshair.rb, line 84</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">current_configinfo</span>(<span class="ruby-identifier">w</span>, <span class="ruby-identifier">slot</span> = <span class="ruby-keyword">nil</span>)
+  <span class="ruby-identifier">current_itemconfiginfo</span>(<span class="ruby-identifier">w</span>, <span class="ruby-identifier">slot</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                    </div>
+
+    </div>
+  </body>
+</html>    

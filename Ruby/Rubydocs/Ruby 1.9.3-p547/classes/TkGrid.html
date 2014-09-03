@@ -1,0 +1,1132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>TkGrid</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="../css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/main.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/github.css" type="text/css" media="screen" />
+<script src="../js/jquery-1.3.2.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/jquery-effect.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+
+<body>     
+    <div class="banner">
+        
+        <h1>
+            <span class="type">Module</span> 
+            TkGrid 
+            
+        </h1>
+        <ul class="files">
+            
+            <li><a href="../files/ext/tk/lib/tk/grid_rb.html">ext/tk/lib/tk/grid.rb</a></li>
+            
+        </ul>
+    </div>
+    <div id="bodyContent">
+        <div id="content">
+  
+
+
+  
+
+
+  
+  
+
+
+  
+
+
+  
+    <!-- Method ref -->
+    <div class="sectiontitle">Methods</div>
+    <dl class="methods">
+      
+        <dt>A</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-add">add</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-c-anchor">anchor</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>B</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-bbox">bbox</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>C</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-column">column</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-c-columnconfiginfo">columnconfiginfo</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-c-columnconfigure">columnconfigure</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-c-configure">configure</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>F</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-forget">forget</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>G</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-grid">grid</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>I</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-info">info</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>L</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-location">location</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>P</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-propagate">propagate</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>R</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-remove">remove</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-c-row">row</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-c-rowconfiginfo">rowconfiginfo</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-c-rowconfigure">rowconfigure</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>S</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-size">size</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-c-slaves">slaves</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+    </dl>
+  
+
+  
+    <!-- Includes -->
+    <div class="sectiontitle">Included Modules</div>
+    <ul>
+      
+        <li>
+          
+            <a href="Tk.html">
+              Tk
+            </a>
+          
+        </li>
+      
+    </ul>
+  
+
+
+
+  
+
+    
+
+    
+
+    
+      <!-- Section constants -->
+      <div class="sectiontitle">Constants</div>
+      <table border='0' cellpadding='5'>
+        
+          <tr valign='top'>
+            <td class="attr-name">TkCommandNames</td>
+            <td>=</td>
+            <td class="attr-value">[&#39;grid&#39;.freeze].freeze</td>
+          </tr>
+          
+            <tr valign='top'>
+              <td>&nbsp;</td>
+              <td colspan="2" class="attr-desc"></td>
+            </tr>
+          
+        
+      </table>
+    
+
+
+    
+
+
+    <!-- Methods -->
+    
+      <div class="sectiontitle">Class Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-c-add">
+            
+              <b>add</b>(widget, *args)
+            
+            <a href="../classes/TkGrid.html#method-c-add" name="method-c-add" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-add_source')" id="l_method-c-add_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/556232734e0003ce327d22a7ea1ada57a86a10dd/ext/tk/lib/tk/grid.rb#L188" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-add_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tk/grid.rb, line 188</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">add</span>(<span class="ruby-identifier">widget</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">args</span>)
+  <span class="ruby-identifier">configure</span>(<span class="ruby-identifier">widget</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">args</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-anchor">
+            
+              <b>anchor</b>(master, anchor=None)
+            
+            <a href="../classes/TkGrid.html#method-c-anchor" name="method-c-anchor" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-anchor_source')" id="l_method-c-anchor_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/556232734e0003ce327d22a7ea1ada57a86a10dd/ext/tk/lib/tk/grid.rb#L12" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-anchor_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tk/grid.rb, line 12</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">anchor</span>(<span class="ruby-identifier">master</span>, <span class="ruby-identifier">anchor</span>=<span class="ruby-constant">None</span>)
+  <span class="ruby-comment"># master = master.epath if master.kind_of?(TkObject)</span>
+  <span class="ruby-identifier">master</span> = <span class="ruby-identifier">_epath</span>(<span class="ruby-identifier">master</span>)
+  <span class="ruby-identifier">tk_call_without_enc</span>(<span class="ruby-string">&#39;grid&#39;</span>, <span class="ruby-string">&#39;anchor&#39;</span>, <span class="ruby-identifier">master</span>, <span class="ruby-identifier">anchor</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-bbox">
+            
+              <b>bbox</b>(master, *args)
+            
+            <a href="../classes/TkGrid.html#method-c-bbox" name="method-c-bbox" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-bbox_source')" id="l_method-c-bbox_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/556232734e0003ce327d22a7ea1ada57a86a10dd/ext/tk/lib/tk/grid.rb#L18" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-bbox_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tk/grid.rb, line 18</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">bbox</span>(<span class="ruby-identifier">master</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">args</span>)
+  <span class="ruby-comment"># master = master.epath if master.kind_of?(TkObject)</span>
+  <span class="ruby-identifier">master</span> = <span class="ruby-identifier">_epath</span>(<span class="ruby-identifier">master</span>)
+  <span class="ruby-identifier">args</span>.<span class="ruby-identifier">unshift</span>(<span class="ruby-identifier">master</span>)
+  <span class="ruby-identifier">list</span>(<span class="ruby-identifier">tk_call_without_enc</span>(<span class="ruby-string">&#39;grid&#39;</span>, <span class="ruby-string">&#39;bbox&#39;</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">args</span>))
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-column">
+            
+              <b>column</b>(master, index, keys=nil)
+            
+            <a href="../classes/TkGrid.html#method-c-column" name="method-c-column" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-column_source')" id="l_method-c-column_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/556232734e0003ce327d22a7ea1ada57a86a10dd/ext/tk/lib/tk/grid.rb#L172" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-column_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tk/grid.rb, line 172</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">column</span>(<span class="ruby-identifier">master</span>, <span class="ruby-identifier">index</span>, <span class="ruby-identifier">keys</span>=<span class="ruby-keyword">nil</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">keys</span>.<span class="ruby-identifier">kind_of?</span>(<span class="ruby-constant">Hash</span>)
+    <span class="ruby-identifier">columnconfigure</span>(<span class="ruby-identifier">master</span>, <span class="ruby-identifier">index</span>, <span class="ruby-identifier">keys</span>)
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">columnconfiginfo</span>(<span class="ruby-identifier">master</span>, <span class="ruby-identifier">index</span>, <span class="ruby-identifier">keys</span>)
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-columnconfiginfo">
+            
+              <b>columnconfiginfo</b>(master, index, slot=nil)
+            
+            <a href="../classes/TkGrid.html#method-c-columnconfiginfo" name="method-c-columnconfiginfo" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-columnconfiginfo_source')" id="l_method-c-columnconfiginfo_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/556232734e0003ce327d22a7ea1ada57a86a10dd/ext/tk/lib/tk/grid.rb#L114" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-columnconfiginfo_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tk/grid.rb, line 114</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">columnconfiginfo</span>(<span class="ruby-identifier">master</span>, <span class="ruby-identifier">index</span>, <span class="ruby-identifier">slot</span>=<span class="ruby-keyword">nil</span>)
+  <span class="ruby-comment"># master = master.epath if master.kind_of?(TkObject)</span>
+  <span class="ruby-identifier">master</span> = <span class="ruby-identifier">_epath</span>(<span class="ruby-identifier">master</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">slot</span>
+    <span class="ruby-keyword">case</span> <span class="ruby-identifier">slot</span>
+    <span class="ruby-keyword">when</span> <span class="ruby-string">&#39;uniform&#39;</span>, <span class="ruby-value">:uniform</span>
+      <span class="ruby-identifier">tk_call_without_enc</span>(<span class="ruby-string">&#39;grid&#39;</span>, <span class="ruby-string">&#39;columnconfigure&#39;</span>,
+                          <span class="ruby-identifier">master</span>, <span class="ruby-identifier">index</span>, <span class="ruby-node">&quot;-#{slot}&quot;</span>)
+    <span class="ruby-keyword">else</span>
+      <span class="ruby-identifier">num_or_str</span>(<span class="ruby-identifier">tk_call_without_enc</span>(<span class="ruby-string">&#39;grid&#39;</span>, <span class="ruby-string">&#39;columnconfigure&#39;</span>,
+                                     <span class="ruby-identifier">master</span>, <span class="ruby-identifier">index</span>, <span class="ruby-node">&quot;-#{slot}&quot;</span>))
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-comment">#ilist = list(tk_call_without_enc(&#39;grid&#39;,&#39;columnconfigure&#39;,master,index))</span>
+    <span class="ruby-identifier">ilist</span> = <span class="ruby-identifier">simplelist</span>(<span class="ruby-identifier">tk_call_without_enc</span>(<span class="ruby-string">&#39;grid&#39;</span>, <span class="ruby-string">&#39;columnconfigure&#39;</span>,
+                                           <span class="ruby-identifier">master</span>, <span class="ruby-identifier">index</span>))
+    <span class="ruby-identifier">info</span> = {}
+    <span class="ruby-keyword">while</span> <span class="ruby-identifier">key</span> = <span class="ruby-identifier">ilist</span>.<span class="ruby-identifier">shift</span>
+      <span class="ruby-keyword">case</span> <span class="ruby-identifier">key</span>
+      <span class="ruby-keyword">when</span> <span class="ruby-string">&#39;uniform&#39;</span>
+        <span class="ruby-identifier">info</span>[<span class="ruby-identifier">key</span>[<span class="ruby-number">1</span><span class="ruby-operator">..</span><span class="ruby-number">-1</span>]] = <span class="ruby-identifier">ilist</span>.<span class="ruby-identifier">shift</span>
+      <span class="ruby-keyword">else</span>
+        <span class="ruby-identifier">info</span>[<span class="ruby-identifier">key</span>[<span class="ruby-number">1</span><span class="ruby-operator">..</span><span class="ruby-number">-1</span>]] = <span class="ruby-identifier">tk_tcl2ruby</span>(<span class="ruby-identifier">ilist</span>.<span class="ruby-identifier">shift</span>)
+      <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">end</span>
+    <span class="ruby-identifier">info</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-columnconfigure">
+            
+              <b>columnconfigure</b>(master, index, args)
+            
+            <a href="../classes/TkGrid.html#method-c-columnconfigure" name="method-c-columnconfigure" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-columnconfigure_source')" id="l_method-c-columnconfigure_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/556232734e0003ce327d22a7ea1ada57a86a10dd/ext/tk/lib/tk/grid.rb#L101" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-columnconfigure_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tk/grid.rb, line 101</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">columnconfigure</span>(<span class="ruby-identifier">master</span>, <span class="ruby-identifier">index</span>, <span class="ruby-identifier">args</span>)
+  <span class="ruby-comment"># master = master.epath if master.kind_of?(TkObject)</span>
+  <span class="ruby-identifier">master</span> = <span class="ruby-identifier">_epath</span>(<span class="ruby-identifier">master</span>)
+  <span class="ruby-identifier">tk_call_without_enc</span>(<span class="ruby-string">&quot;grid&quot;</span>, <span class="ruby-string">&#39;columnconfigure&#39;</span>,
+                      <span class="ruby-identifier">master</span>, <span class="ruby-identifier">index</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">hash_kv</span>(<span class="ruby-identifier">args</span>))
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-configure">
+            
+              <b>configure</b>(*args)
+            
+            <a href="../classes/TkGrid.html#method-c-configure" name="method-c-configure" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>def configure(win, *args)</p>
+
+<pre><code>if args[-1].kind_of?(Hash)
+  opts = args.pop
+else
+  opts = {}
+end
+params = []
+params.push(_epath(win))
+args.each{|win|
+  case win
+  when &#39;-&#39;, &#39;x&#39;, &#39;^&#39;  # RELATIVE PLACEMENT
+    params.push(win)
+  else
+    params.push(_epath(win))
+  end
+}
+opts.each{|k, v|
+  params.push(&quot;-#{k}&quot;)
+  params.push((v.kind_of?(TkObject))? v.epath: v)
+}
+if Tk::TCL_MAJOR_VERSION &lt; 8 ||
+    (Tk::TCL_MAJOR_VERSION == 8 &amp;&amp; Tk::TCL_MINOR_VERSION &lt;= 3)
+  if params[0] == &#39;-&#39; || params[0] == &#39;x&#39; || params[0] == &#39;^&#39;
+    tk_call_without_enc(&#39;grid&#39;, *params)
+  else
+    tk_call_without_enc(&#39;grid&#39;, &#39;configure&#39;, *params)
+  end
+else
+  tk_call_without_enc(&#39;grid&#39;, &#39;configure&#39;, *params)
+end
+</code></pre>
+
+<p>end</p>
+            </div>
+          
+          
+          
+            <div class="aka">
+              Also aliased as: <a href="TkGrid.html#method-i-grid">grid</a>
+            </div>
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-configure_source')" id="l_method-c-configure_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/556232734e0003ce327d22a7ea1ada57a86a10dd/ext/tk/lib/tk/grid.rb#L58" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-configure_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tk/grid.rb, line 58</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">configure</span>(<span class="ruby-operator">*</span><span class="ruby-identifier">args</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">args</span>[<span class="ruby-number">-1</span>].<span class="ruby-identifier">kind_of?</span>(<span class="ruby-constant">Hash</span>)
+    <span class="ruby-identifier">opts</span> = <span class="ruby-identifier">args</span>.<span class="ruby-identifier">pop</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">opts</span> = {}
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">fail</span> <span class="ruby-constant">ArgumentError</span>, <span class="ruby-string">&#39;no widget is given&#39;</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">args</span>.<span class="ruby-identifier">empty?</span>
+  <span class="ruby-identifier">params</span> = []
+  <span class="ruby-identifier">args</span>.<span class="ruby-identifier">flatten</span>(<span class="ruby-number">1</span>).<span class="ruby-identifier">each</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">win</span><span class="ruby-operator">|</span>
+    <span class="ruby-keyword">case</span> <span class="ruby-identifier">win</span>
+    <span class="ruby-keyword">when</span> <span class="ruby-string">&#39;-&#39;</span>, <span class="ruby-value">?-</span>              <span class="ruby-comment"># RELATIVE PLACEMENT (increase columnspan)</span>
+      <span class="ruby-identifier">params</span>.<span class="ruby-identifier">push</span>(<span class="ruby-string">&#39;-&#39;</span>)
+    <span class="ruby-keyword">when</span> <span class="ruby-regexp">/^-+$/</span>             <span class="ruby-comment"># RELATIVE PLACEMENT (increase columnspan)</span>
+      <span class="ruby-identifier">params</span>.<span class="ruby-identifier">concat</span>(<span class="ruby-identifier">win</span>.<span class="ruby-identifier">to_s</span>.<span class="ruby-identifier">split</span>(<span class="ruby-regexp">//</span>))
+    <span class="ruby-keyword">when</span> <span class="ruby-string">&#39;^&#39;</span>, <span class="ruby-value">?^</span>              <span class="ruby-comment"># RELATIVE PLACEMENT (increase rowspan)</span>
+      <span class="ruby-identifier">params</span>.<span class="ruby-identifier">push</span>(<span class="ruby-string">&#39;^&#39;</span>)
+    <span class="ruby-keyword">when</span> <span class="ruby-regexp">/^\^+$/</span>             <span class="ruby-comment"># RELATIVE PLACEMENT (increase rowspan)</span>
+      <span class="ruby-identifier">params</span>.<span class="ruby-identifier">concat</span>(<span class="ruby-identifier">win</span>.<span class="ruby-identifier">to_s</span>.<span class="ruby-identifier">split</span>(<span class="ruby-regexp">//</span>))
+    <span class="ruby-keyword">when</span> <span class="ruby-string">&#39;x&#39;</span>, <span class="ruby-value">:x</span>, <span class="ruby-value">?x</span>, <span class="ruby-keyword">nil</span>, <span class="ruby-string">&#39;&#39;</span> <span class="ruby-comment"># RELATIVE PLACEMENT (empty column)</span>
+      <span class="ruby-identifier">params</span>.<span class="ruby-identifier">push</span>(<span class="ruby-string">&#39;x&#39;</span>)
+    <span class="ruby-keyword">when</span> <span class="ruby-regexp">/^x+$/</span>             <span class="ruby-comment"># RELATIVE PLACEMENT (empty column)</span>
+      <span class="ruby-identifier">params</span>.<span class="ruby-identifier">concat</span>(<span class="ruby-identifier">win</span>.<span class="ruby-identifier">to_s</span>.<span class="ruby-identifier">split</span>(<span class="ruby-regexp">//</span>))
+    <span class="ruby-keyword">else</span>
+      <span class="ruby-identifier">params</span>.<span class="ruby-identifier">push</span>(<span class="ruby-identifier">_epath</span>(<span class="ruby-identifier">win</span>))
+    <span class="ruby-keyword">end</span>
+  }
+  <span class="ruby-identifier">opts</span>.<span class="ruby-identifier">each</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">k</span>, <span class="ruby-identifier">v</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">params</span>.<span class="ruby-identifier">push</span>(<span class="ruby-node">&quot;-#{k}&quot;</span>)
+    <span class="ruby-identifier">params</span>.<span class="ruby-identifier">push</span>(<span class="ruby-identifier">_epath</span>(<span class="ruby-identifier">v</span>))  <span class="ruby-comment"># have to use &#39;epath&#39; (hash_kv() is unavailable)</span>
+  }
+  <span class="ruby-keyword">if</span> <span class="ruby-constant">Tk</span><span class="ruby-operator">::</span><span class="ruby-constant">TCL_MAJOR_VERSION</span> <span class="ruby-operator">&lt;</span> <span class="ruby-number">8</span> <span class="ruby-operator">||</span>
+      (<span class="ruby-constant">Tk</span><span class="ruby-operator">::</span><span class="ruby-constant">TCL_MAJOR_VERSION</span> <span class="ruby-operator">==</span> <span class="ruby-number">8</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-constant">Tk</span><span class="ruby-operator">::</span><span class="ruby-constant">TCL_MINOR_VERSION</span> <span class="ruby-operator">&lt;=</span> <span class="ruby-number">3</span>)
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">params</span>[<span class="ruby-number">0</span>] <span class="ruby-operator">==</span> <span class="ruby-string">&#39;-&#39;</span> <span class="ruby-operator">||</span> <span class="ruby-identifier">params</span>[<span class="ruby-number">0</span>] <span class="ruby-operator">==</span> <span class="ruby-string">&#39;x&#39;</span> <span class="ruby-operator">||</span> <span class="ruby-identifier">params</span>[<span class="ruby-number">0</span>] <span class="ruby-operator">==</span> <span class="ruby-string">&#39;^&#39;</span>
+      <span class="ruby-identifier">tk_call_without_enc</span>(<span class="ruby-string">&#39;grid&#39;</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">params</span>)
+    <span class="ruby-keyword">else</span>
+      <span class="ruby-identifier">tk_call_without_enc</span>(<span class="ruby-string">&#39;grid&#39;</span>, <span class="ruby-string">&#39;configure&#39;</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">params</span>)
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">tk_call_without_enc</span>(<span class="ruby-string">&#39;grid&#39;</span>, <span class="ruby-string">&#39;configure&#39;</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">params</span>)
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-forget">
+            
+              <b>forget</b>(*args)
+            
+            <a href="../classes/TkGrid.html#method-c-forget" name="method-c-forget" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-forget_source')" id="l_method-c-forget_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/556232734e0003ce327d22a7ea1ada57a86a10dd/ext/tk/lib/tk/grid.rb#L192" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-forget_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tk/grid.rb, line 192</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">forget</span>(<span class="ruby-operator">*</span><span class="ruby-identifier">args</span>)
+  <span class="ruby-keyword">return</span> <span class="ruby-string">&#39;&#39;</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">args</span>.<span class="ruby-identifier">size</span> <span class="ruby-operator">==</span> <span class="ruby-number">0</span>
+  <span class="ruby-identifier">wins</span> = <span class="ruby-identifier">args</span>.<span class="ruby-identifier">collect</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">win</span><span class="ruby-operator">|</span>
+    <span class="ruby-comment"># (win.kind_of?(TkObject))? win.epath: win</span>
+    <span class="ruby-identifier">_epath</span>(<span class="ruby-identifier">win</span>)
+  }
+  <span class="ruby-identifier">tk_call_without_enc</span>(<span class="ruby-string">&#39;grid&#39;</span>, <span class="ruby-string">&#39;forget&#39;</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">wins</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-grid">
+            
+              <b>grid</b>(*args)
+            
+            <a href="../classes/TkGrid.html#method-c-grid" name="method-c-grid" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+            <div class="aka">
+              Alias for: <a href="TkGrid.html#method-i-configure">configure</a>
+            </div>
+          
+          
+          
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-info">
+            
+              <b>info</b>(slave)
+            
+            <a href="../classes/TkGrid.html#method-c-info" name="method-c-info" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-info_source')" id="l_method-c-info_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/556232734e0003ce327d22a7ea1ada57a86a10dd/ext/tk/lib/tk/grid.rb#L201" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-info_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tk/grid.rb, line 201</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">info</span>(<span class="ruby-identifier">slave</span>)
+  <span class="ruby-comment"># slave = slave.epath if slave.kind_of?(TkObject)</span>
+  <span class="ruby-identifier">slave</span> = <span class="ruby-identifier">_epath</span>(<span class="ruby-identifier">slave</span>)
+  <span class="ruby-comment">#ilist = list(tk_call_without_enc(&#39;grid&#39;, &#39;info&#39;, slave))</span>
+  <span class="ruby-identifier">ilist</span> = <span class="ruby-identifier">simplelist</span>(<span class="ruby-identifier">tk_call_without_enc</span>(<span class="ruby-string">&#39;grid&#39;</span>, <span class="ruby-string">&#39;info&#39;</span>, <span class="ruby-identifier">slave</span>))
+  <span class="ruby-identifier">info</span> = {}
+  <span class="ruby-keyword">while</span> <span class="ruby-identifier">key</span> = <span class="ruby-identifier">ilist</span>.<span class="ruby-identifier">shift</span>
+    <span class="ruby-comment">#info[key[1..-1]] = ilist.shift</span>
+    <span class="ruby-identifier">info</span>[<span class="ruby-identifier">key</span>[<span class="ruby-number">1</span><span class="ruby-operator">..</span><span class="ruby-number">-1</span>]] = <span class="ruby-identifier">tk_tcl2ruby</span>(<span class="ruby-identifier">ilist</span>.<span class="ruby-identifier">shift</span>)
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-identifier">info</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-location">
+            
+              <b>location</b>(master, x, y)
+            
+            <a href="../classes/TkGrid.html#method-c-location" name="method-c-location" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-location_source')" id="l_method-c-location_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/556232734e0003ce327d22a7ea1ada57a86a10dd/ext/tk/lib/tk/grid.rb#L214" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-location_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tk/grid.rb, line 214</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">location</span>(<span class="ruby-identifier">master</span>, <span class="ruby-identifier">x</span>, <span class="ruby-identifier">y</span>)
+  <span class="ruby-comment"># master = master.epath if master.kind_of?(TkObject)</span>
+  <span class="ruby-identifier">master</span> = <span class="ruby-identifier">_epath</span>(<span class="ruby-identifier">master</span>)
+  <span class="ruby-identifier">list</span>(<span class="ruby-identifier">tk_call_without_enc</span>(<span class="ruby-string">&#39;grid&#39;</span>, <span class="ruby-string">&#39;location&#39;</span>, <span class="ruby-identifier">master</span>, <span class="ruby-identifier">x</span>, <span class="ruby-identifier">y</span>))
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-propagate">
+            
+              <b>propagate</b>(master, mode=None)
+            
+            <a href="../classes/TkGrid.html#method-c-propagate" name="method-c-propagate" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-propagate_source')" id="l_method-c-propagate_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/556232734e0003ce327d22a7ea1ada57a86a10dd/ext/tk/lib/tk/grid.rb#L220" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-propagate_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tk/grid.rb, line 220</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">propagate</span>(<span class="ruby-identifier">master</span>, <span class="ruby-identifier">mode</span>=<span class="ruby-constant">None</span>)
+  <span class="ruby-comment"># master = master.epath if master.kind_of?(TkObject)</span>
+  <span class="ruby-identifier">master</span> = <span class="ruby-identifier">_epath</span>(<span class="ruby-identifier">master</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">mode</span> <span class="ruby-operator">==</span> <span class="ruby-constant">None</span>
+    <span class="ruby-identifier">bool</span>(<span class="ruby-identifier">tk_call_without_enc</span>(<span class="ruby-string">&#39;grid&#39;</span>, <span class="ruby-string">&#39;propagate&#39;</span>, <span class="ruby-identifier">master</span>))
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">tk_call_without_enc</span>(<span class="ruby-string">&#39;grid&#39;</span>, <span class="ruby-string">&#39;propagate&#39;</span>, <span class="ruby-identifier">master</span>, <span class="ruby-identifier">mode</span>)
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-remove">
+            
+              <b>remove</b>(*args)
+            
+            <a href="../classes/TkGrid.html#method-c-remove" name="method-c-remove" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-remove_source')" id="l_method-c-remove_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/556232734e0003ce327d22a7ea1ada57a86a10dd/ext/tk/lib/tk/grid.rb#L230" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-remove_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tk/grid.rb, line 230</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">remove</span>(<span class="ruby-operator">*</span><span class="ruby-identifier">args</span>)
+  <span class="ruby-keyword">return</span> <span class="ruby-string">&#39;&#39;</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">args</span>.<span class="ruby-identifier">size</span> <span class="ruby-operator">==</span> <span class="ruby-number">0</span>
+  <span class="ruby-identifier">wins</span> = <span class="ruby-identifier">args</span>.<span class="ruby-identifier">collect</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">win</span><span class="ruby-operator">|</span>
+    <span class="ruby-comment"># (win.kind_of?(TkObject))? win.epath: win</span>
+    <span class="ruby-identifier">_epath</span>(<span class="ruby-identifier">win</span>)
+  }
+  <span class="ruby-identifier">tk_call_without_enc</span>(<span class="ruby-string">&#39;grid&#39;</span>, <span class="ruby-string">&#39;remove&#39;</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">wins</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-row">
+            
+              <b>row</b>(master, index, keys=nil)
+            
+            <a href="../classes/TkGrid.html#method-c-row" name="method-c-row" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-row_source')" id="l_method-c-row_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/556232734e0003ce327d22a7ea1ada57a86a10dd/ext/tk/lib/tk/grid.rb#L180" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-row_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tk/grid.rb, line 180</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">row</span>(<span class="ruby-identifier">master</span>, <span class="ruby-identifier">index</span>, <span class="ruby-identifier">keys</span>=<span class="ruby-keyword">nil</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">keys</span>.<span class="ruby-identifier">kind_of?</span>(<span class="ruby-constant">Hash</span>)
+    <span class="ruby-identifier">rowconfigure</span>(<span class="ruby-identifier">master</span>, <span class="ruby-identifier">index</span>, <span class="ruby-identifier">keys</span>)
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">rowconfiginfo</span>(<span class="ruby-identifier">master</span>, <span class="ruby-identifier">index</span>, <span class="ruby-identifier">keys</span>)
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-rowconfiginfo">
+            
+              <b>rowconfiginfo</b>(master, index, slot=nil)
+            
+            <a href="../classes/TkGrid.html#method-c-rowconfiginfo" name="method-c-rowconfiginfo" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-rowconfiginfo_source')" id="l_method-c-rowconfiginfo_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/556232734e0003ce327d22a7ea1ada57a86a10dd/ext/tk/lib/tk/grid.rb#L143" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-rowconfiginfo_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tk/grid.rb, line 143</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">rowconfiginfo</span>(<span class="ruby-identifier">master</span>, <span class="ruby-identifier">index</span>, <span class="ruby-identifier">slot</span>=<span class="ruby-keyword">nil</span>)
+  <span class="ruby-comment"># master = master.epath if master.kind_of?(TkObject)</span>
+  <span class="ruby-identifier">master</span> = <span class="ruby-identifier">_epath</span>(<span class="ruby-identifier">master</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">slot</span>
+    <span class="ruby-keyword">case</span> <span class="ruby-identifier">slot</span>
+    <span class="ruby-keyword">when</span> <span class="ruby-string">&#39;uniform&#39;</span>, <span class="ruby-value">:uniform</span>
+      <span class="ruby-identifier">tk_call_without_enc</span>(<span class="ruby-string">&#39;grid&#39;</span>, <span class="ruby-string">&#39;rowconfigure&#39;</span>,
+                          <span class="ruby-identifier">master</span>, <span class="ruby-identifier">index</span>, <span class="ruby-node">&quot;-#{slot}&quot;</span>)
+    <span class="ruby-keyword">else</span>
+      <span class="ruby-identifier">num_or_str</span>(<span class="ruby-identifier">tk_call_without_enc</span>(<span class="ruby-string">&#39;grid&#39;</span>, <span class="ruby-string">&#39;rowconfigure&#39;</span>,
+                                     <span class="ruby-identifier">master</span>, <span class="ruby-identifier">index</span>, <span class="ruby-node">&quot;-#{slot}&quot;</span>))
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-comment">#ilist = list(tk_call_without_enc(&#39;grid&#39;, &#39;rowconfigure&#39;, master, index))</span>
+    <span class="ruby-identifier">ilist</span> = <span class="ruby-identifier">simplelist</span>(<span class="ruby-identifier">tk_call_without_enc</span>(<span class="ruby-string">&#39;grid&#39;</span>, <span class="ruby-string">&#39;rowconfigure&#39;</span>,
+                                           <span class="ruby-identifier">master</span>, <span class="ruby-identifier">index</span>))
+    <span class="ruby-identifier">info</span> = {}
+    <span class="ruby-keyword">while</span> <span class="ruby-identifier">key</span> = <span class="ruby-identifier">ilist</span>.<span class="ruby-identifier">shift</span>
+      <span class="ruby-keyword">case</span> <span class="ruby-identifier">key</span>
+      <span class="ruby-keyword">when</span> <span class="ruby-string">&#39;uniform&#39;</span>
+        <span class="ruby-identifier">info</span>[<span class="ruby-identifier">key</span>[<span class="ruby-number">1</span><span class="ruby-operator">..</span><span class="ruby-number">-1</span>]] = <span class="ruby-identifier">ilist</span>.<span class="ruby-identifier">shift</span>
+      <span class="ruby-keyword">else</span>
+        <span class="ruby-identifier">info</span>[<span class="ruby-identifier">key</span>[<span class="ruby-number">1</span><span class="ruby-operator">..</span><span class="ruby-number">-1</span>]] = <span class="ruby-identifier">tk_tcl2ruby</span>(<span class="ruby-identifier">ilist</span>.<span class="ruby-identifier">shift</span>)
+      <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">end</span>
+    <span class="ruby-identifier">info</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-rowconfigure">
+            
+              <b>rowconfigure</b>(master, index, args)
+            
+            <a href="../classes/TkGrid.html#method-c-rowconfigure" name="method-c-rowconfigure" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-rowconfigure_source')" id="l_method-c-rowconfigure_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/556232734e0003ce327d22a7ea1ada57a86a10dd/ext/tk/lib/tk/grid.rb#L108" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-rowconfigure_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tk/grid.rb, line 108</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">rowconfigure</span>(<span class="ruby-identifier">master</span>, <span class="ruby-identifier">index</span>, <span class="ruby-identifier">args</span>)
+  <span class="ruby-comment"># master = master.epath if master.kind_of?(TkObject)</span>
+  <span class="ruby-identifier">master</span> = <span class="ruby-identifier">_epath</span>(<span class="ruby-identifier">master</span>)
+  <span class="ruby-identifier">tk_call_without_enc</span>(<span class="ruby-string">&quot;grid&quot;</span>, <span class="ruby-string">&#39;rowconfigure&#39;</span>, <span class="ruby-identifier">master</span>, <span class="ruby-identifier">index</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">hash_kv</span>(<span class="ruby-identifier">args</span>))
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-size">
+            
+              <b>size</b>(master)
+            
+            <a href="../classes/TkGrid.html#method-c-size" name="method-c-size" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-size_source')" id="l_method-c-size_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/556232734e0003ce327d22a7ea1ada57a86a10dd/ext/tk/lib/tk/grid.rb#L239" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-size_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tk/grid.rb, line 239</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">size</span>(<span class="ruby-identifier">master</span>)
+  <span class="ruby-comment"># master = master.epath if master.kind_of?(TkObject)</span>
+  <span class="ruby-identifier">master</span> = <span class="ruby-identifier">_epath</span>(<span class="ruby-identifier">master</span>)
+  <span class="ruby-identifier">list</span>(<span class="ruby-identifier">tk_call_without_enc</span>(<span class="ruby-string">&#39;grid&#39;</span>, <span class="ruby-string">&#39;size&#39;</span>, <span class="ruby-identifier">master</span>))
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-slaves">
+            
+              <b>slaves</b>(master, keys=nil)
+            
+            <a href="../classes/TkGrid.html#method-c-slaves" name="method-c-slaves" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-slaves_source')" id="l_method-c-slaves_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/556232734e0003ce327d22a7ea1ada57a86a10dd/ext/tk/lib/tk/grid.rb#L245" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-slaves_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tk/grid.rb, line 245</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">slaves</span>(<span class="ruby-identifier">master</span>, <span class="ruby-identifier">keys</span>=<span class="ruby-keyword">nil</span>)
+  <span class="ruby-comment"># master = master.epath if master.kind_of?(TkObject)</span>
+  <span class="ruby-identifier">master</span> = <span class="ruby-identifier">_epath</span>(<span class="ruby-identifier">master</span>)
+  <span class="ruby-identifier">list</span>(<span class="ruby-identifier">tk_call_without_enc</span>(<span class="ruby-string">&#39;grid&#39;</span>, <span class="ruby-string">&#39;slaves&#39;</span>, <span class="ruby-identifier">master</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">hash_kv</span>(<span class="ruby-identifier">args</span>)))
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                        </div>
+
+    </div>
+  </body>
+</html>    

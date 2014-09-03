@@ -1,0 +1,2386 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>RDoc::TopLevel</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="../../css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../../css/main.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../../css/github.css" type="text/css" media="screen" />
+<script src="../../js/jquery-1.3.2.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../js/jquery-effect.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../js/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+
+<body>     
+    <div class="banner">
+        
+        <h1>
+            <span class="type">Class</span> 
+            RDoc::TopLevel 
+            
+                <span class="parent">&lt; 
+                    
+                    <a href="Context.html">RDoc::Context</a>
+                    
+                </span>
+            
+        </h1>
+        <ul class="files">
+            
+            <li><a href="../../files/lib/rdoc/generator/markup_rb.html">lib/rdoc/generator/markup.rb</a></li>
+            
+            <li><a href="../../files/lib/rdoc/top_level_rb.html">lib/rdoc/top_level.rb</a></li>
+            
+        </ul>
+    </div>
+    <div id="bodyContent">
+        <div id="content">
+  
+    <div class="description">
+      
+<p>A <a href="TopLevel.html">TopLevel</a> context is a representation of the
+contents of a single file</p>
+
+    </div>
+  
+
+
+  
+
+
+  
+  
+
+
+  
+
+
+  
+    <!-- Method ref -->
+    <div class="sectiontitle">Methods</div>
+    <dl class="methods">
+      
+        <dt>#</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-3D-3D">==</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>A</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-add_alias">add_alias</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-add_constant">add_constant</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-add_include">add_include</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-add_method">add_method</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-add_to_classes_or_modules">add_to_classes_or_modules</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-c-all_classes">all_classes</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-c-all_classes_and_modules">all_classes_and_modules</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-c-all_classes_hash">all_classes_hash</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-c-all_files">all_files</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-c-all_files_hash">all_files_hash</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-c-all_modules">all_modules</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-c-all_modules_hash">all_modules_hash</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>B</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-base_name">base_name</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>C</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-classes">classes</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-c-classes_hash">classes_hash</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-c-complete">complete</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-cvs_url">cvs_url</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>E</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-eql-3F">eql?</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>F</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-files">files</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-c-files_hash">files_hash</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-c-find_class_named">find_class_named</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-c-find_class_named_from">find_class_named_from</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-find_class_or_module">find_class_or_module</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-c-find_class_or_module">find_class_or_module</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-c-find_file_named">find_file_named</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-find_local_symbol">find_local_symbol</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-c-find_module_named">find_module_named</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-find_module_named">find_module_named</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-c-find_unique">find_unique</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-c-fix_basic_object_inheritance">fix_basic_object_inheritance</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-full_name">full_name</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>H</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-hash">hash</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-http_url">http_url</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>L</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-last_modified">last_modified</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>M</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-modules">modules</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-c-modules_hash">modules_hash</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>N</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-name">name</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-c-new">new</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-c-new">new</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>O</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-object_class">object_class</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>P</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-path">path</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>R</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-remove_nodoc">remove_nodoc</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-c-reset">reset</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>U</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-unique_classes">unique_classes</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-c-unique_classes_and_modules">unique_classes_and_modules</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-c-unique_modules">unique_modules</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+    </dl>
+  
+
+  
+
+
+
+  
+
+    
+
+    
+
+    
+
+
+    
+      <!-- Section attributes -->
+      <div class="sectiontitle">Attributes</div>
+      <table border='0' cellpadding='5'>
+        
+          <tr valign='top'>
+            <td class='attr-rw'>
+              [RW]
+            </td>
+            <td class='attr-name'>absolute_name</td>
+            <td class='attr-desc'><p>Absolute name of this file</p></td>
+          </tr>
+        
+          <tr valign='top'>
+            <td class='attr-rw'>
+              [R]
+            </td>
+            <td class='attr-name'>classes_or_modules</td>
+            <td class='attr-desc'><p>All the classes or modules that were declared in this file. These are
+assigned to either <code>#classes_hash</code> or <code>#modules_hash</code>
+once we know what they really are.</p></td>
+          </tr>
+        
+          <tr valign='top'>
+            <td class='attr-rw'>
+              [RW]
+            </td>
+            <td class='attr-name'>file_stat</td>
+            <td class='attr-desc'><p>This TopLevel&#39;s <a href="../File/Stat.html">File::Stat</a> struct</p></td>
+          </tr>
+        
+          <tr valign='top'>
+            <td class='attr-rw'>
+              [RW]
+            </td>
+            <td class='attr-name'>parser</td>
+            <td class='attr-desc'><p>The parser that processed this file</p></td>
+          </tr>
+        
+          <tr valign='top'>
+            <td class='attr-rw'>
+              [RW]
+            </td>
+            <td class='attr-name'>relative_name</td>
+            <td class='attr-desc'><p>Relative name of this file</p></td>
+          </tr>
+        
+      </table>
+    
+
+
+    <!-- Methods -->
+    
+      <div class="sectiontitle">Class Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-c-all_classes">
+            
+              <b>all_classes</b>()
+            
+            <a href="../../classes/RDoc/TopLevel.html#method-c-all_classes" name="method-c-all_classes" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Returns all classes discovered by <a href="../RDoc.html">RDoc</a></p>
+            </div>
+          
+          
+          
+            <div class="aka">
+              Also aliased as: <a href="TopLevel.html#method-c-classes">classes</a>
+            </div>
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-all_classes_source')" id="l_method-c-all_classes_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/e75e7fcc9f90d41ae14019c0f3b5d5048badbb5a/lib/rdoc/top_level.rb#L40" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-all_classes_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File lib/rdoc/top_level.rb, line 40</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">all_classes</span>
+  <span class="ruby-ivar">@all_classes_hash</span>.<span class="ruby-identifier">values</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-all_classes_and_modules">
+            
+              <b>all_classes_and_modules</b>()
+            
+            <a href="../../classes/RDoc/TopLevel.html#method-c-all_classes_and_modules" name="method-c-all_classes_and_modules" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Returns all classes and modules discovered by <a
+href="../RDoc.html">RDoc</a></p>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-all_classes_and_modules_source')" id="l_method-c-all_classes_and_modules_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/e75e7fcc9f90d41ae14019c0f3b5d5048badbb5a/lib/rdoc/top_level.rb#L47" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-all_classes_and_modules_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File lib/rdoc/top_level.rb, line 47</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">all_classes_and_modules</span>
+  <span class="ruby-ivar">@all_classes_hash</span>.<span class="ruby-identifier">values</span> <span class="ruby-operator">+</span> <span class="ruby-ivar">@all_modules_hash</span>.<span class="ruby-identifier">values</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-all_classes_hash">
+            
+              <b>all_classes_hash</b>()
+            
+            <a href="../../classes/RDoc/TopLevel.html#method-c-all_classes_hash" name="method-c-all_classes_hash" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p><a href="../Hash.html">Hash</a> of all classes known to <a
+href="../RDoc.html">RDoc</a></p>
+            </div>
+          
+          
+          
+            <div class="aka">
+              Also aliased as: <a href="TopLevel.html#method-c-classes_hash">classes_hash</a>
+            </div>
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-all_classes_hash_source')" id="l_method-c-all_classes_hash_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/e75e7fcc9f90d41ae14019c0f3b5d5048badbb5a/lib/rdoc/top_level.rb#L54" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-all_classes_hash_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File lib/rdoc/top_level.rb, line 54</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">all_classes_hash</span>
+  <span class="ruby-ivar">@all_classes_hash</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-all_files">
+            
+              <b>all_files</b>()
+            
+            <a href="../../classes/RDoc/TopLevel.html#method-c-all_files" name="method-c-all_files" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>All TopLevels known to <a href="../RDoc.html">RDoc</a></p>
+            </div>
+          
+          
+          
+            <div class="aka">
+              Also aliased as: <a href="TopLevel.html#method-c-files">files</a>
+            </div>
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-all_files_source')" id="l_method-c-all_files_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/e75e7fcc9f90d41ae14019c0f3b5d5048badbb5a/lib/rdoc/top_level.rb#L61" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-all_files_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File lib/rdoc/top_level.rb, line 61</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">all_files</span>
+  <span class="ruby-ivar">@all_files_hash</span>.<span class="ruby-identifier">values</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-all_files_hash">
+            
+              <b>all_files_hash</b>()
+            
+            <a href="../../classes/RDoc/TopLevel.html#method-c-all_files_hash" name="method-c-all_files_hash" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p><a href="../Hash.html">Hash</a> of all files known to <a
+href="../RDoc.html">RDoc</a></p>
+            </div>
+          
+          
+          
+            <div class="aka">
+              Also aliased as: <a href="TopLevel.html#method-c-files_hash">files_hash</a>
+            </div>
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-all_files_hash_source')" id="l_method-c-all_files_hash_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/e75e7fcc9f90d41ae14019c0f3b5d5048badbb5a/lib/rdoc/top_level.rb#L68" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-all_files_hash_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File lib/rdoc/top_level.rb, line 68</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">all_files_hash</span>
+  <span class="ruby-ivar">@all_files_hash</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-all_modules">
+            
+              <b>all_modules</b>()
+            
+            <a href="../../classes/RDoc/TopLevel.html#method-c-all_modules" name="method-c-all_modules" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Returns all modules discovered by <a href="../RDoc.html">RDoc</a></p>
+            </div>
+          
+          
+          
+            <div class="aka">
+              Also aliased as: <a href="TopLevel.html#method-c-modules">modules</a>
+            </div>
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-all_modules_source')" id="l_method-c-all_modules_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/e75e7fcc9f90d41ae14019c0f3b5d5048badbb5a/lib/rdoc/top_level.rb#L75" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-all_modules_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File lib/rdoc/top_level.rb, line 75</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">all_modules</span>
+  <span class="ruby-identifier">all_modules_hash</span>.<span class="ruby-identifier">values</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-all_modules_hash">
+            
+              <b>all_modules_hash</b>()
+            
+            <a href="../../classes/RDoc/TopLevel.html#method-c-all_modules_hash" name="method-c-all_modules_hash" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p><a href="../Hash.html">Hash</a> of all modules known to <a
+href="../RDoc.html">RDoc</a></p>
+            </div>
+          
+          
+          
+            <div class="aka">
+              Also aliased as: <a href="TopLevel.html#method-c-modules_hash">modules_hash</a>
+            </div>
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-all_modules_hash_source')" id="l_method-c-all_modules_hash_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/e75e7fcc9f90d41ae14019c0f3b5d5048badbb5a/lib/rdoc/top_level.rb#L82" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-all_modules_hash_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File lib/rdoc/top_level.rb, line 82</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">all_modules_hash</span>
+  <span class="ruby-ivar">@all_modules_hash</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-classes">
+            
+              <b>classes</b>()
+            
+            <a href="../../classes/RDoc/TopLevel.html#method-c-classes" name="method-c-classes" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+            <div class="aka">
+              Alias for: <a href="TopLevel.html#method-c-all_classes">all_classes</a>
+            </div>
+          
+          
+          
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-classes_hash">
+            
+              <b>classes_hash</b>()
+            
+            <a href="../../classes/RDoc/TopLevel.html#method-c-classes_hash" name="method-c-classes_hash" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+            <div class="aka">
+              Alias for: <a href="TopLevel.html#method-c-all_classes_hash">all_classes_hash</a>
+            </div>
+          
+          
+          
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-complete">
+            
+              <b>complete</b>(min_visibility)
+            
+            <a href="../../classes/RDoc/TopLevel.html#method-c-complete" name="method-c-complete" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Prepares the <a href="../RDoc.html">RDoc</a> code object tree for use by a
+generator.</p>
+
+<p>It finds unique classes/modules defined, and replaces classes/modules that
+are aliases for another one by a copy with <a
+href="ClassModule.html#attribute-i-is_alias_for">RDoc::ClassModule#is_alias_for</a>
+set.</p>
+
+<p>It updates the <a
+href="ClassModule.html#attribute-i-constant_aliases">RDoc::ClassModule#constant_aliases</a>
+attribute of “real” classes or modules.</p>
+
+<p>It also completely removes the classes and modules that should be removed
+from the documentation and the methods that have a visibility below
+<code>min_visibility</code>, which is the <code>--visibility</code> option.</p>
+
+<p>See also <a
+href="Context.html#method-i-remove_from_documentation-3F">RDoc::Context#remove_from_documentation?</a></p>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-complete_source')" id="l_method-c-complete_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/e75e7fcc9f90d41ae14019c0f3b5d5048badbb5a/lib/rdoc/top_level.rb#L102" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-complete_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File lib/rdoc/top_level.rb, line 102</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">complete</span> <span class="ruby-identifier">min_visibility</span>
+  <span class="ruby-identifier">fix_basic_object_inheritance</span>
+
+  <span class="ruby-comment"># cache included modules before they are removed from the documentation</span>
+  <span class="ruby-identifier">all_classes_and_modules</span>.<span class="ruby-identifier">each</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">cm</span><span class="ruby-operator">|</span> <span class="ruby-identifier">cm</span>.<span class="ruby-identifier">ancestors</span> }
+
+  <span class="ruby-identifier">remove_nodoc</span> <span class="ruby-ivar">@all_classes_hash</span>
+  <span class="ruby-identifier">remove_nodoc</span> <span class="ruby-ivar">@all_modules_hash</span>
+
+  <span class="ruby-ivar">@unique_classes</span> = <span class="ruby-identifier">find_unique</span> <span class="ruby-ivar">@all_classes_hash</span>
+  <span class="ruby-ivar">@unique_modules</span> = <span class="ruby-identifier">find_unique</span> <span class="ruby-ivar">@all_modules_hash</span>
+
+  <span class="ruby-identifier">unique_classes_and_modules</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">cm</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">cm</span>.<span class="ruby-identifier">complete</span> <span class="ruby-identifier">min_visibility</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-ivar">@all_files_hash</span>.<span class="ruby-identifier">each_key</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">file_name</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">tl</span> = <span class="ruby-ivar">@all_files_hash</span>[<span class="ruby-identifier">file_name</span>]
+
+    <span class="ruby-keyword">unless</span> <span class="ruby-constant">RDoc</span><span class="ruby-operator">::</span><span class="ruby-constant">Parser</span><span class="ruby-operator">::</span><span class="ruby-constant">Simple</span> <span class="ruby-operator">===</span> <span class="ruby-identifier">tl</span>.<span class="ruby-identifier">parser</span> <span class="ruby-keyword">then</span>
+      <span class="ruby-identifier">tl</span>.<span class="ruby-identifier">modules_hash</span>.<span class="ruby-identifier">clear</span>
+      <span class="ruby-identifier">tl</span>.<span class="ruby-identifier">classes_hash</span>.<span class="ruby-identifier">clear</span>
+
+      <span class="ruby-identifier">tl</span>.<span class="ruby-identifier">classes_or_modules</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">cm</span><span class="ruby-operator">|</span>
+        <span class="ruby-identifier">name</span> = <span class="ruby-identifier">cm</span>.<span class="ruby-identifier">full_name</span>
+        <span class="ruby-keyword">if</span> <span class="ruby-identifier">cm</span>.<span class="ruby-identifier">type</span> <span class="ruby-operator">==</span> <span class="ruby-string">&#39;class&#39;</span> <span class="ruby-keyword">then</span>
+          <span class="ruby-identifier">tl</span>.<span class="ruby-identifier">classes_hash</span>[<span class="ruby-identifier">name</span>] = <span class="ruby-identifier">cm</span> <span class="ruby-keyword">if</span> <span class="ruby-ivar">@all_classes_hash</span>[<span class="ruby-identifier">name</span>]
+        <span class="ruby-keyword">else</span>
+          <span class="ruby-identifier">tl</span>.<span class="ruby-identifier">modules_hash</span>[<span class="ruby-identifier">name</span>] = <span class="ruby-identifier">cm</span> <span class="ruby-keyword">if</span> <span class="ruby-ivar">@all_modules_hash</span>[<span class="ruby-identifier">name</span>]
+        <span class="ruby-keyword">end</span>
+      <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-files">
+            
+              <b>files</b>()
+            
+            <a href="../../classes/RDoc/TopLevel.html#method-c-files" name="method-c-files" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+            <div class="aka">
+              Alias for: <a href="TopLevel.html#method-c-all_files">all_files</a>
+            </div>
+          
+          
+          
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-files_hash">
+            
+              <b>files_hash</b>()
+            
+            <a href="../../classes/RDoc/TopLevel.html#method-c-files_hash" name="method-c-files_hash" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+            <div class="aka">
+              Alias for: <a href="TopLevel.html#method-c-all_files_hash">all_files_hash</a>
+            </div>
+          
+          
+          
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-find_class_named">
+            
+              <b>find_class_named</b>(name)
+            
+            <a href="../../classes/RDoc/TopLevel.html#method-c-find_class_named" name="method-c-find_class_named" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Finds the class with <code>name</code> in all discovered classes</p>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-find_class_named_source')" id="l_method-c-find_class_named_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/e75e7fcc9f90d41ae14019c0f3b5d5048badbb5a/lib/rdoc/top_level.rb#L140" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-find_class_named_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File lib/rdoc/top_level.rb, line 140</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">find_class_named</span>(<span class="ruby-identifier">name</span>)
+  <span class="ruby-ivar">@all_classes_hash</span>[<span class="ruby-identifier">name</span>]
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-find_class_named_from">
+            
+              <b>find_class_named_from</b>(name, from)
+            
+            <a href="../../classes/RDoc/TopLevel.html#method-c-find_class_named_from" name="method-c-find_class_named_from" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Finds the class with <code>name</code> starting in namespace
+<code>from</code></p>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-find_class_named_from_source')" id="l_method-c-find_class_named_from_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/e75e7fcc9f90d41ae14019c0f3b5d5048badbb5a/lib/rdoc/top_level.rb#L147" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-find_class_named_from_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File lib/rdoc/top_level.rb, line 147</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">find_class_named_from</span> <span class="ruby-identifier">name</span>, <span class="ruby-identifier">from</span>
+  <span class="ruby-identifier">from</span> = <span class="ruby-identifier">find_class_named</span> <span class="ruby-identifier">from</span> <span class="ruby-keyword">unless</span> <span class="ruby-constant">RDoc</span><span class="ruby-operator">::</span><span class="ruby-constant">Context</span> <span class="ruby-operator">===</span> <span class="ruby-identifier">from</span>
+
+  <span class="ruby-keyword">until</span> <span class="ruby-constant">RDoc</span><span class="ruby-operator">::</span><span class="ruby-constant">TopLevel</span> <span class="ruby-operator">===</span> <span class="ruby-identifier">from</span> <span class="ruby-keyword">do</span>
+    <span class="ruby-keyword">return</span> <span class="ruby-keyword">nil</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">from</span>
+
+    <span class="ruby-identifier">klass</span> = <span class="ruby-identifier">from</span>.<span class="ruby-identifier">find_class_named</span> <span class="ruby-identifier">name</span>
+    <span class="ruby-keyword">return</span> <span class="ruby-identifier">klass</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">klass</span>
+
+    <span class="ruby-identifier">from</span> = <span class="ruby-identifier">from</span>.<span class="ruby-identifier">parent</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-identifier">find_class_named</span> <span class="ruby-identifier">name</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-find_class_or_module">
+            
+              <b>find_class_or_module</b>(name)
+            
+            <a href="../../classes/RDoc/TopLevel.html#method-c-find_class_or_module" name="method-c-find_class_or_module" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Finds the class or module with <code>name</code></p>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-find_class_or_module_source')" id="l_method-c-find_class_or_module_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/e75e7fcc9f90d41ae14019c0f3b5d5048badbb5a/lib/rdoc/top_level.rb#L165" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-find_class_or_module_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File lib/rdoc/top_level.rb, line 165</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">find_class_or_module</span>(<span class="ruby-identifier">name</span>)
+  <span class="ruby-identifier">name</span> = <span class="ruby-node">$&#39;</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">name</span> <span class="ruby-operator">=~</span> <span class="ruby-regexp">/^::/</span>
+  <span class="ruby-constant">RDoc</span><span class="ruby-operator">::</span><span class="ruby-constant">TopLevel</span>.<span class="ruby-identifier">classes_hash</span>[<span class="ruby-identifier">name</span>] <span class="ruby-operator">||</span> <span class="ruby-constant">RDoc</span><span class="ruby-operator">::</span><span class="ruby-constant">TopLevel</span>.<span class="ruby-identifier">modules_hash</span>[<span class="ruby-identifier">name</span>]
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-find_file_named">
+            
+              <b>find_file_named</b>(name)
+            
+            <a href="../../classes/RDoc/TopLevel.html#method-c-find_file_named" name="method-c-find_file_named" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Finds the file with <code>name</code> in all discovered files</p>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-find_file_named_source')" id="l_method-c-find_file_named_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/e75e7fcc9f90d41ae14019c0f3b5d5048badbb5a/lib/rdoc/top_level.rb#L173" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-find_file_named_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File lib/rdoc/top_level.rb, line 173</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">find_file_named</span>(<span class="ruby-identifier">name</span>)
+  <span class="ruby-ivar">@all_files_hash</span>[<span class="ruby-identifier">name</span>]
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-find_module_named">
+            
+              <b>find_module_named</b>(name)
+            
+            <a href="../../classes/RDoc/TopLevel.html#method-c-find_module_named" name="method-c-find_module_named" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Finds the module with <code>name</code> in all discovered modules</p>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-find_module_named_source')" id="l_method-c-find_module_named_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/e75e7fcc9f90d41ae14019c0f3b5d5048badbb5a/lib/rdoc/top_level.rb#L180" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-find_module_named_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File lib/rdoc/top_level.rb, line 180</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">find_module_named</span>(<span class="ruby-identifier">name</span>)
+  <span class="ruby-identifier">modules_hash</span>[<span class="ruby-identifier">name</span>]
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-find_unique">
+            
+              <b>find_unique</b>(all_hash)
+            
+            <a href="../../classes/RDoc/TopLevel.html#method-c-find_unique" name="method-c-find_unique" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Finds unique classes/modules defined in <code>all_hash</code>, and returns
+them as an array. Performs the alias updates in <code>all_hash</code>: see
+<a href="TopLevel.html#method-c-complete">::complete</a>.</p>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-find_unique_source')" id="l_method-c-find_unique_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/e75e7fcc9f90d41ae14019c0f3b5d5048badbb5a/lib/rdoc/top_level.rb#L191" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-find_unique_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File lib/rdoc/top_level.rb, line 191</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">find_unique</span>(<span class="ruby-identifier">all_hash</span>)
+  <span class="ruby-identifier">unique</span> = []
+
+  <span class="ruby-identifier">all_hash</span>.<span class="ruby-identifier">each_pair</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">full_name</span>, <span class="ruby-identifier">cm</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">unique</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">cm</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">full_name</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">cm</span>.<span class="ruby-identifier">full_name</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-identifier">unique</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-fix_basic_object_inheritance">
+            
+              <b>fix_basic_object_inheritance</b>()
+            
+            <a href="../../classes/RDoc/TopLevel.html#method-c-fix_basic_object_inheritance" name="method-c-fix_basic_object_inheritance" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Fixes the erroneous <code>BasicObject &lt; Object</code> in 1.9.</p>
+
+<p>Because we assumed all classes without a stated superclass inherit from <a
+href="../Object.html">Object</a>, we have the above wrong inheritance.</p>
+
+<p>We fix <a href="../BasicObject.html">BasicObject</a> right away if we are
+running in a Ruby version &gt;= 1.9. If not, we may be documenting 1.9
+source while running under 1.8: we search the files of <a
+href="../BasicObject.html">BasicObject</a> for “object.c”, and fix the
+inheritance if we find it.</p>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-fix_basic_object_inheritance_source')" id="l_method-c-fix_basic_object_inheritance_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/e75e7fcc9f90d41ae14019c0f3b5d5048badbb5a/lib/rdoc/top_level.rb#L212" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-fix_basic_object_inheritance_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File lib/rdoc/top_level.rb, line 212</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">fix_basic_object_inheritance</span>
+  <span class="ruby-identifier">basic</span> = <span class="ruby-identifier">all_classes_hash</span>[<span class="ruby-string">&#39;BasicObject&#39;</span>]
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">basic</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-constant">RUBY_VERSION</span> <span class="ruby-operator">&gt;=</span> <span class="ruby-string">&#39;1.9&#39;</span>
+    <span class="ruby-identifier">basic</span>.<span class="ruby-identifier">superclass</span> = <span class="ruby-keyword">nil</span>
+  <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">basic</span>.<span class="ruby-identifier">in_files</span>.<span class="ruby-identifier">any?</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">f</span><span class="ruby-operator">|</span> <span class="ruby-constant">File</span>.<span class="ruby-identifier">basename</span>(<span class="ruby-identifier">f</span>.<span class="ruby-identifier">full_name</span>) <span class="ruby-operator">==</span> <span class="ruby-string">&#39;object.c&#39;</span> }
+    <span class="ruby-identifier">basic</span>.<span class="ruby-identifier">superclass</span> = <span class="ruby-keyword">nil</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-modules">
+            
+              <b>modules</b>()
+            
+            <a href="../../classes/RDoc/TopLevel.html#method-c-modules" name="method-c-modules" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+            <div class="aka">
+              Alias for: <a href="TopLevel.html#method-c-all_modules">all_modules</a>
+            </div>
+          
+          
+          
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-modules_hash">
+            
+              <b>modules_hash</b>()
+            
+            <a href="../../classes/RDoc/TopLevel.html#method-c-modules_hash" name="method-c-modules_hash" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+            <div class="aka">
+              Alias for: <a href="TopLevel.html#method-c-all_modules_hash">all_modules_hash</a>
+            </div>
+          
+          
+          
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-new">
+            
+              <b>new</b>(file_name)
+            
+            <a href="../../classes/RDoc/TopLevel.html#method-c-new" name="method-c-new" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Creates a new <a href="TopLevel.html">TopLevel</a> for
+<code>file_name</code></p>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-new_source')" id="l_method-c-new_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/e75e7fcc9f90d41ae14019c0f3b5d5048badbb5a/lib/rdoc/top_level.rb#L298" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-new_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File lib/rdoc/top_level.rb, line 298</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">initialize</span>(<span class="ruby-identifier">file_name</span>)
+  <span class="ruby-keyword">super</span>()
+  <span class="ruby-ivar">@name</span> = <span class="ruby-keyword">nil</span>
+  <span class="ruby-ivar">@relative_name</span> = <span class="ruby-identifier">file_name</span>
+  <span class="ruby-ivar">@absolute_name</span> = <span class="ruby-identifier">file_name</span>
+  <span class="ruby-ivar">@file_stat</span>     = <span class="ruby-constant">File</span>.<span class="ruby-identifier">stat</span>(<span class="ruby-identifier">file_name</span>) <span class="ruby-keyword">rescue</span> <span class="ruby-keyword">nil</span> <span class="ruby-comment"># HACK for testing</span>
+  <span class="ruby-ivar">@diagram</span>       = <span class="ruby-keyword">nil</span>
+  <span class="ruby-ivar">@parser</span>        = <span class="ruby-keyword">nil</span>
+
+  <span class="ruby-ivar">@classes_or_modules</span> = []
+
+  <span class="ruby-constant">RDoc</span><span class="ruby-operator">::</span><span class="ruby-constant">TopLevel</span>.<span class="ruby-identifier">files_hash</span>[<span class="ruby-identifier">file_name</span>] = <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-new">
+            
+              <b>new</b>(file_name)
+            
+            <a href="../../classes/RDoc/TopLevel.html#method-c-new" name="method-c-new" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Creates a new <a href="TopLevel.html">RDoc::TopLevel</a> with
+<code>file_name</code> only if one with the same name does not exist in
+all_files.</p>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-new_source')" id="l_method-c-new_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/e75e7fcc9f90d41ae14019c0f3b5d5048badbb5a/lib/rdoc/top_level.rb#L226" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-new_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File lib/rdoc/top_level.rb, line 226</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">new</span> <span class="ruby-identifier">file_name</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">top_level</span> = <span class="ruby-ivar">@all_files_hash</span>[<span class="ruby-identifier">file_name</span>] <span class="ruby-keyword">then</span>
+    <span class="ruby-identifier">top_level</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">top_level</span> = <span class="ruby-keyword">super</span>
+    <span class="ruby-ivar">@all_files_hash</span>[<span class="ruby-identifier">file_name</span>] = <span class="ruby-identifier">top_level</span>
+    <span class="ruby-identifier">top_level</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-remove_nodoc">
+            
+              <b>remove_nodoc</b>(all_hash)
+            
+            <a href="../../classes/RDoc/TopLevel.html#method-c-remove_nodoc" name="method-c-remove_nodoc" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Removes from <code>all_hash</code> the contexts that are nodoc or have no
+content.</p>
+
+<p>See <a
+href="Context.html#method-i-remove_from_documentation-3F">RDoc::Context#remove_from_documentation?</a></p>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-remove_nodoc_source')" id="l_method-c-remove_nodoc_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/e75e7fcc9f90d41ae14019c0f3b5d5048badbb5a/lib/rdoc/top_level.rb#L241" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-remove_nodoc_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File lib/rdoc/top_level.rb, line 241</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">remove_nodoc</span>(<span class="ruby-identifier">all_hash</span>)
+  <span class="ruby-identifier">all_hash</span>.<span class="ruby-identifier">keys</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">name</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">context</span> = <span class="ruby-identifier">all_hash</span>[<span class="ruby-identifier">name</span>]
+    <span class="ruby-identifier">all_hash</span>.<span class="ruby-identifier">delete</span>(<span class="ruby-identifier">name</span>) <span class="ruby-keyword">if</span> <span class="ruby-identifier">context</span>.<span class="ruby-identifier">remove_from_documentation?</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-reset">
+            
+              <b>reset</b>()
+            
+            <a href="../../classes/RDoc/TopLevel.html#method-c-reset" name="method-c-reset" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Empties <a href="../RDoc.html">RDoc</a> of stored class, module and file
+information</p>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-reset_source')" id="l_method-c-reset_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/e75e7fcc9f90d41ae14019c0f3b5d5048badbb5a/lib/rdoc/top_level.rb#L251" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-reset_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File lib/rdoc/top_level.rb, line 251</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">reset</span>
+  <span class="ruby-ivar">@all_classes_hash</span> = {}
+  <span class="ruby-ivar">@all_modules_hash</span> = {}
+  <span class="ruby-ivar">@all_files_hash</span>   = {}
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-unique_classes">
+            
+              <b>unique_classes</b>()
+            
+            <a href="../../classes/RDoc/TopLevel.html#method-c-unique_classes" name="method-c-unique_classes" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Returns the unique classes discovered by <a href="../RDoc.html">RDoc</a>.</p>
+
+<p><a href="TopLevel.html#method-c-complete">::complete</a> must have been
+called prior to using this method.</p>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-unique_classes_source')" id="l_method-c-unique_classes_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/e75e7fcc9f90d41ae14019c0f3b5d5048badbb5a/lib/rdoc/top_level.rb#L262" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-unique_classes_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File lib/rdoc/top_level.rb, line 262</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">unique_classes</span>
+  <span class="ruby-ivar">@unique_classes</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-unique_classes_and_modules">
+            
+              <b>unique_classes_and_modules</b>()
+            
+            <a href="../../classes/RDoc/TopLevel.html#method-c-unique_classes_and_modules" name="method-c-unique_classes_and_modules" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Returns the unique classes and modules discovered by <a
+href="../RDoc.html">RDoc</a>. <a
+href="TopLevel.html#method-c-complete">::complete</a> must have been called
+prior to using this method.</p>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-unique_classes_and_modules_source')" id="l_method-c-unique_classes_and_modules_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/e75e7fcc9f90d41ae14019c0f3b5d5048badbb5a/lib/rdoc/top_level.rb#L270" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-unique_classes_and_modules_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File lib/rdoc/top_level.rb, line 270</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">unique_classes_and_modules</span>
+  <span class="ruby-ivar">@unique_classes</span> <span class="ruby-operator">+</span> <span class="ruby-ivar">@unique_modules</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-unique_modules">
+            
+              <b>unique_modules</b>()
+            
+            <a href="../../classes/RDoc/TopLevel.html#method-c-unique_modules" name="method-c-unique_modules" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Returns the unique modules discovered by <a href="../RDoc.html">RDoc</a>.
+<a href="TopLevel.html#method-c-complete">::complete</a> must have been
+called prior to using this method.</p>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-unique_modules_source')" id="l_method-c-unique_modules_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/e75e7fcc9f90d41ae14019c0f3b5d5048badbb5a/lib/rdoc/top_level.rb#L278" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-unique_modules_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File lib/rdoc/top_level.rb, line 278</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">unique_modules</span>
+  <span class="ruby-ivar">@unique_modules</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                  
+      <div class="sectiontitle">Instance Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-i-3D-3D">
+            
+              <b>==</b>(other)
+            
+            <a href="../../classes/RDoc/TopLevel.html#method-i-3D-3D" name="method-i-3D-3D" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>An <a href="TopLevel.html">RDoc::TopLevel</a> is equal to another with the
+same <a href="TopLevel.html#attribute-i-absolute_name">#absolute_name</a></p>
+            </div>
+          
+          
+          
+            <div class="aka">
+              Also aliased as: <a href="TopLevel.html#method-i-eql-3F">eql?</a>
+            </div>
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-3D-3D_source')" id="l_method-i-3D-3D_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/e75e7fcc9f90d41ae14019c0f3b5d5048badbb5a/lib/rdoc/top_level.rb#L315" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-3D-3D_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File lib/rdoc/top_level.rb, line 315</span>
+<span class="ruby-keyword">def</span> <span class="ruby-operator">==</span> <span class="ruby-keyword ruby-title">other</span>
+  <span class="ruby-identifier">other</span>.<span class="ruby-identifier">class</span> <span class="ruby-operator">===</span> <span class="ruby-keyword">self</span> <span class="ruby-keyword">and</span> <span class="ruby-ivar">@absolute_name</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">other</span>.<span class="ruby-identifier">absolute_name</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-add_alias">
+            
+              <b>add_alias</b>(an_alias)
+            
+            <a href="../../classes/RDoc/TopLevel.html#method-i-add_alias" name="method-i-add_alias" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Adds <code>an_alias</code> to <code>Object</code> instead of
+<code>self</code>.</p>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-add_alias_source')" id="l_method-i-add_alias_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/e75e7fcc9f90d41ae14019c0f3b5d5048badbb5a/lib/rdoc/top_level.rb#L324" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-add_alias_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File lib/rdoc/top_level.rb, line 324</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">add_alias</span>(<span class="ruby-identifier">an_alias</span>)
+  <span class="ruby-identifier">object_class</span>.<span class="ruby-identifier">record_location</span> <span class="ruby-keyword">self</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-identifier">an_alias</span> <span class="ruby-keyword">unless</span> <span class="ruby-ivar">@document_self</span>
+  <span class="ruby-identifier">object_class</span>.<span class="ruby-identifier">add_alias</span> <span class="ruby-identifier">an_alias</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-add_constant">
+            
+              <b>add_constant</b>(constant)
+            
+            <a href="../../classes/RDoc/TopLevel.html#method-i-add_constant" name="method-i-add_constant" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Adds <code>constant</code> to <code>Object</code> instead of
+<code>self</code>.</p>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-add_constant_source')" id="l_method-i-add_constant_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/e75e7fcc9f90d41ae14019c0f3b5d5048badbb5a/lib/rdoc/top_level.rb#L333" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-add_constant_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File lib/rdoc/top_level.rb, line 333</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">add_constant</span>(<span class="ruby-identifier">constant</span>)
+  <span class="ruby-identifier">object_class</span>.<span class="ruby-identifier">record_location</span> <span class="ruby-keyword">self</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-identifier">constant</span> <span class="ruby-keyword">unless</span> <span class="ruby-ivar">@document_self</span>
+  <span class="ruby-identifier">object_class</span>.<span class="ruby-identifier">add_constant</span> <span class="ruby-identifier">constant</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-add_include">
+            
+              <b>add_include</b>(include)
+            
+            <a href="../../classes/RDoc/TopLevel.html#method-i-add_include" name="method-i-add_include" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Adds <code>include</code> to <code>Object</code> instead of
+<code>self</code>.</p>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-add_include_source')" id="l_method-i-add_include_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/e75e7fcc9f90d41ae14019c0f3b5d5048badbb5a/lib/rdoc/top_level.rb#L342" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-add_include_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File lib/rdoc/top_level.rb, line 342</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">add_include</span>(<span class="ruby-identifier">include</span>)
+  <span class="ruby-identifier">object_class</span>.<span class="ruby-identifier">record_location</span> <span class="ruby-keyword">self</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-identifier">include</span> <span class="ruby-keyword">unless</span> <span class="ruby-ivar">@document_self</span>
+  <span class="ruby-identifier">object_class</span>.<span class="ruby-identifier">add_include</span> <span class="ruby-identifier">include</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-add_method">
+            
+              <b>add_method</b>(method)
+            
+            <a href="../../classes/RDoc/TopLevel.html#method-i-add_method" name="method-i-add_method" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Adds <code>method</code> to <code>Object</code> instead of
+<code>self</code>.</p>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-add_method_source')" id="l_method-i-add_method_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/e75e7fcc9f90d41ae14019c0f3b5d5048badbb5a/lib/rdoc/top_level.rb#L351" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-add_method_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File lib/rdoc/top_level.rb, line 351</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">add_method</span>(<span class="ruby-identifier">method</span>)
+  <span class="ruby-identifier">object_class</span>.<span class="ruby-identifier">record_location</span> <span class="ruby-keyword">self</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-identifier">method</span> <span class="ruby-keyword">unless</span> <span class="ruby-ivar">@document_self</span>
+  <span class="ruby-identifier">object_class</span>.<span class="ruby-identifier">add_method</span> <span class="ruby-identifier">method</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-add_to_classes_or_modules">
+            
+              <b>add_to_classes_or_modules</b>(mod)
+            
+            <a href="../../classes/RDoc/TopLevel.html#method-i-add_to_classes_or_modules" name="method-i-add_to_classes_or_modules" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Adds class or module <code>mod</code>. Used in the building phase by the
+ruby parser.</p>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-add_to_classes_or_modules_source')" id="l_method-i-add_to_classes_or_modules_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/e75e7fcc9f90d41ae14019c0f3b5d5048badbb5a/lib/rdoc/top_level.rb#L361" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-add_to_classes_or_modules_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File lib/rdoc/top_level.rb, line 361</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">add_to_classes_or_modules</span> <span class="ruby-identifier">mod</span>
+  <span class="ruby-ivar">@classes_or_modules</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">mod</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-base_name">
+            
+              <b>base_name</b>()
+            
+            <a href="../../classes/RDoc/TopLevel.html#method-i-base_name" name="method-i-base_name" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Base name of this file</p>
+            </div>
+          
+          
+          
+            <div class="aka">
+              Also aliased as: <a href="TopLevel.html#method-i-name">name</a>
+            </div>
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-base_name_source')" id="l_method-i-base_name_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/e75e7fcc9f90d41ae14019c0f3b5d5048badbb5a/lib/rdoc/top_level.rb#L368" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-base_name_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File lib/rdoc/top_level.rb, line 368</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">base_name</span>
+  <span class="ruby-constant">File</span>.<span class="ruby-identifier">basename</span> <span class="ruby-ivar">@absolute_name</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-cvs_url">
+            
+              <b>cvs_url</b>()
+            
+            <a href="../../classes/RDoc/TopLevel.html#method-i-cvs_url" name="method-i-cvs_url" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Returns a URL for this source file on some web repository.  Use the -W
+command line option to set.</p>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-cvs_url_source')" id="l_method-i-cvs_url_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/b7528b5edb1f9148ea00ebb6151720e5943b3f0b/lib/rdoc/generator/markup.rb#L197" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-cvs_url_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File lib/rdoc/generator/markup.rb, line 197</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">cvs_url</span>
+  <span class="ruby-identifier">url</span> = <span class="ruby-constant">RDoc</span><span class="ruby-operator">::</span><span class="ruby-constant">RDoc</span>.<span class="ruby-identifier">current</span>.<span class="ruby-identifier">options</span>.<span class="ruby-identifier">webcvs</span>
+
+  <span class="ruby-keyword">if</span> <span class="ruby-regexp">/%s/</span> <span class="ruby-operator">=~</span> <span class="ruby-identifier">url</span> <span class="ruby-keyword">then</span>
+    <span class="ruby-identifier">url</span> <span class="ruby-operator">%</span> <span class="ruby-ivar">@absolute_name</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">url</span> <span class="ruby-operator">+</span> <span class="ruby-ivar">@absolute_name</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-eql-3F">
+            
+              <b>eql?</b>(other)
+            
+            <a href="../../classes/RDoc/TopLevel.html#method-i-eql-3F" name="method-i-eql-3F" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+            <div class="aka">
+              Alias for: <a href="TopLevel.html#method-i-3D-3D">==</a>
+            </div>
+          
+          
+          
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-find_class_or_module">
+            
+              <b>find_class_or_module</b>(name)
+            
+            <a href="../../classes/RDoc/TopLevel.html#method-i-find_class_or_module" name="method-i-find_class_or_module" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>See <a
+href="TopLevel.html#method-c-find_class_or_module">::find_class_or_module</a></p>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-find_class_or_module_source')" id="l_method-i-find_class_or_module_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/e75e7fcc9f90d41ae14019c0f3b5d5048badbb5a/lib/rdoc/top_level.rb#L380" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-find_class_or_module_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File lib/rdoc/top_level.rb, line 380</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">find_class_or_module</span> <span class="ruby-identifier">name</span>
+  <span class="ruby-constant">RDoc</span><span class="ruby-operator">::</span><span class="ruby-constant">TopLevel</span>.<span class="ruby-identifier">find_class_or_module</span> <span class="ruby-identifier">name</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-find_local_symbol">
+            
+              <b>find_local_symbol</b>(symbol)
+            
+            <a href="../../classes/RDoc/TopLevel.html#method-i-find_local_symbol" name="method-i-find_local_symbol" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Finds a class or module named <code>symbol</code></p>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-find_local_symbol_source')" id="l_method-i-find_local_symbol_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/e75e7fcc9f90d41ae14019c0f3b5d5048badbb5a/lib/rdoc/top_level.rb#L387" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-find_local_symbol_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File lib/rdoc/top_level.rb, line 387</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">find_local_symbol</span>(<span class="ruby-identifier">symbol</span>)
+  <span class="ruby-identifier">find_class_or_module</span>(<span class="ruby-identifier">symbol</span>) <span class="ruby-operator">||</span> <span class="ruby-keyword">super</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-find_module_named">
+            
+              <b>find_module_named</b>(name)
+            
+            <a href="../../classes/RDoc/TopLevel.html#method-i-find_module_named" name="method-i-find_module_named" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Finds a module or class with <code>name</code></p>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-find_module_named_source')" id="l_method-i-find_module_named_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/e75e7fcc9f90d41ae14019c0f3b5d5048badbb5a/lib/rdoc/top_level.rb#L394" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-find_module_named_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File lib/rdoc/top_level.rb, line 394</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">find_module_named</span>(<span class="ruby-identifier">name</span>)
+  <span class="ruby-identifier">find_class_or_module</span>(<span class="ruby-identifier">name</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-full_name">
+            
+              <b>full_name</b>()
+            
+            <a href="../../classes/RDoc/TopLevel.html#method-i-full_name" name="method-i-full_name" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Returns the relative name of this file</p>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-full_name_source')" id="l_method-i-full_name_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/e75e7fcc9f90d41ae14019c0f3b5d5048badbb5a/lib/rdoc/top_level.rb#L401" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-full_name_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File lib/rdoc/top_level.rb, line 401</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">full_name</span>
+  <span class="ruby-ivar">@relative_name</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-hash">
+            
+              <b>hash</b>()
+            
+            <a href="../../classes/RDoc/TopLevel.html#method-i-hash" name="method-i-hash" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>An <a href="TopLevel.html">RDoc::TopLevel</a> has the same hash as another
+with the same <a
+href="TopLevel.html#attribute-i-absolute_name">#absolute_name</a></p>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-hash_source')" id="l_method-i-hash_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/e75e7fcc9f90d41ae14019c0f3b5d5048badbb5a/lib/rdoc/top_level.rb#L409" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-hash_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File lib/rdoc/top_level.rb, line 409</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">hash</span>
+  <span class="ruby-ivar">@absolute_name</span>.<span class="ruby-identifier">hash</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-http_url">
+            
+              <b>http_url</b>(prefix)
+            
+            <a href="../../classes/RDoc/TopLevel.html#method-i-http_url" name="method-i-http_url" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>URL for this with a <code>prefix</code></p>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-http_url_source')" id="l_method-i-http_url_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/e75e7fcc9f90d41ae14019c0f3b5d5048badbb5a/lib/rdoc/top_level.rb#L416" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-http_url_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File lib/rdoc/top_level.rb, line 416</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">http_url</span>(<span class="ruby-identifier">prefix</span>)
+  <span class="ruby-identifier">path</span> = [<span class="ruby-identifier">prefix</span>, <span class="ruby-ivar">@relative_name</span>.<span class="ruby-identifier">tr</span>(<span class="ruby-string">&#39;.&#39;</span>, <span class="ruby-string">&#39;_&#39;</span>)]
+
+  <span class="ruby-constant">File</span>.<span class="ruby-identifier">join</span>(<span class="ruby-operator">*</span><span class="ruby-identifier">path</span>.<span class="ruby-identifier">compact</span>) <span class="ruby-operator">+</span> <span class="ruby-string">&#39;.html&#39;</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-last_modified">
+            
+              <b>last_modified</b>()
+            
+            <a href="../../classes/RDoc/TopLevel.html#method-i-last_modified" name="method-i-last_modified" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p><a href="../Time.html">Time</a> this file was last modified, if known</p>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-last_modified_source')" id="l_method-i-last_modified_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/e75e7fcc9f90d41ae14019c0f3b5d5048badbb5a/lib/rdoc/top_level.rb#L434" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-last_modified_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File lib/rdoc/top_level.rb, line 434</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">last_modified</span>
+  <span class="ruby-ivar">@file_stat</span> <span class="ruby-operator">?</span> <span class="ruby-identifier">file_stat</span>.<span class="ruby-identifier">mtime</span> <span class="ruby-operator">:</span> <span class="ruby-keyword">nil</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-name">
+            
+              <b>name</b>()
+            
+            <a href="../../classes/RDoc/TopLevel.html#method-i-name" name="method-i-name" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+            <div class="aka">
+              Alias for: <a href="TopLevel.html#method-i-base_name">base_name</a>
+            </div>
+          
+          
+          
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-object_class">
+            
+              <b>object_class</b>()
+            
+            <a href="../../classes/RDoc/TopLevel.html#method-i-object_class" name="method-i-object_class" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Returns the NormalClass “Object”, creating it if not found.</p>
+
+<p>Records <code>self</code> as a location in “Object”.</p>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-object_class_source')" id="l_method-i-object_class_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/e75e7fcc9f90d41ae14019c0f3b5d5048badbb5a/lib/rdoc/top_level.rb#L443" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-object_class_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File lib/rdoc/top_level.rb, line 443</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">object_class</span>
+  <span class="ruby-ivar">@object_class</span> <span class="ruby-operator">||=</span> <span class="ruby-keyword">begin</span>
+    <span class="ruby-identifier">oc</span> = <span class="ruby-keyword">self</span>.<span class="ruby-identifier">class</span>.<span class="ruby-identifier">find_class_named</span>(<span class="ruby-string">&#39;Object&#39;</span>) <span class="ruby-operator">||</span> <span class="ruby-identifier">add_class</span>(<span class="ruby-constant">RDoc</span><span class="ruby-operator">::</span><span class="ruby-constant">NormalClass</span>, <span class="ruby-string">&#39;Object&#39;</span>)
+    <span class="ruby-identifier">oc</span>.<span class="ruby-identifier">record_location</span> <span class="ruby-keyword">self</span>
+    <span class="ruby-identifier">oc</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-path">
+            
+              <b>path</b>()
+            
+            <a href="../../classes/RDoc/TopLevel.html#method-i-path" name="method-i-path" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Path to this file</p>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-path_source')" id="l_method-i-path_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/e75e7fcc9f90d41ae14019c0f3b5d5048badbb5a/lib/rdoc/top_level.rb#L454" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-path_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File lib/rdoc/top_level.rb, line 454</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">path</span>
+  <span class="ruby-identifier">http_url</span> <span class="ruby-constant">RDoc</span><span class="ruby-operator">::</span><span class="ruby-constant">RDoc</span>.<span class="ruby-identifier">current</span>.<span class="ruby-identifier">generator</span>.<span class="ruby-identifier">file_dir</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                    </div>
+
+    </div>
+  </body>
+</html>    

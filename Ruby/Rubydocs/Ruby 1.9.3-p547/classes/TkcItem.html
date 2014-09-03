@@ -1,0 +1,598 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>TkcItem</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="../css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/main.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/github.css" type="text/css" media="screen" />
+<script src="../js/jquery-1.3.2.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/jquery-effect.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+
+<body>     
+    <div class="banner">
+        
+        <h1>
+            <span class="type">Class</span> 
+            TkcItem 
+            
+                <span class="parent">&lt; 
+                    
+                    <a href="TkObject.html">TkObject</a>
+                    
+                </span>
+            
+        </h1>
+        <ul class="files">
+            
+            <li><a href="../files/ext/tk/lib/tk/canvas_rb.html">ext/tk/lib/tk/canvas.rb</a></li>
+            
+            <li><a href="../files/ext/tk/lib/tkextlib/iwidgets/scrolledcanvas_rb.html">ext/tk/lib/tkextlib/iwidgets/scrolledcanvas.rb</a></li>
+            
+        </ul>
+    </div>
+    <div id="bodyContent">
+        <div id="content">
+  
+
+
+  
+
+
+  
+  
+
+
+  
+
+
+  
+    <!-- Method ref -->
+    <div class="sectiontitle">Methods</div>
+    <dl class="methods">
+      
+        <dt>C</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-create">create</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>D</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-delete">delete</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-destroy">destroy</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>E</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-exist-3F">exist?</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>I</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-id">id</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-c-id2obj">id2obj</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>N</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-new">new</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>R</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-remove">remove</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>T</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-type2class">type2class</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+    </dl>
+  
+
+  
+    <!-- Includes -->
+    <div class="sectiontitle">Included Modules</div>
+    <ul>
+      
+        <li>
+          
+            <a href="TkcTagAccess.html">
+              TkcTagAccess
+            </a>
+          
+        </li>
+      
+    </ul>
+  
+
+
+
+  
+
+    
+
+    
+
+    
+      <!-- Section constants -->
+      <div class="sectiontitle">Constants</div>
+      <table border='0' cellpadding='5'>
+        
+          <tr valign='top'>
+            <td class="attr-name">CItemTypeName</td>
+            <td>=</td>
+            <td class="attr-value">nil</td>
+          </tr>
+          
+            <tr valign='top'>
+              <td>&nbsp;</td>
+              <td colspan="2" class="attr-desc"></td>
+            </tr>
+          
+        
+          <tr valign='top'>
+            <td class="attr-name">CItemTypeToClass</td>
+            <td>=</td>
+            <td class="attr-value">{}</td>
+          </tr>
+          
+            <tr valign='top'>
+              <td>&nbsp;</td>
+              <td colspan="2" class="attr-desc"></td>
+            </tr>
+          
+        
+          <tr valign='top'>
+            <td class="attr-name">CItemID_TBL</td>
+            <td>=</td>
+            <td class="attr-value">TkCore::INTERP.create_table</td>
+          </tr>
+          
+            <tr valign='top'>
+              <td>&nbsp;</td>
+              <td colspan="2" class="attr-desc"></td>
+            </tr>
+          
+        
+      </table>
+    
+
+
+    
+
+
+    <!-- Methods -->
+    
+      <div class="sectiontitle">Class Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-c-create">
+            
+              <b>create</b>(canvas, *args)
+            
+            <a href="../classes/TkcItem.html#method-c-create" name="method-c-create" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-create_source')" id="l_method-c-create_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/8149f70e13fb2f2577bb9d0666f9f86a13777041/ext/tk/lib/tk/canvas.rb#L730" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-create_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tk/canvas.rb, line 730</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">create</span>(<span class="ruby-identifier">canvas</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">args</span>)
+  <span class="ruby-keyword">unless</span> <span class="ruby-keyword">self</span><span class="ruby-operator">::</span><span class="ruby-constant">CItemTypeName</span>
+    <span class="ruby-identifier">fail</span> <span class="ruby-constant">RuntimeError</span>, <span class="ruby-node">&quot;#{self} is an abstract class&quot;</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">args</span>, <span class="ruby-identifier">fontkeys</span>, <span class="ruby-identifier">methodkeys</span> = <span class="ruby-identifier">_parse_create_args</span>(<span class="ruby-identifier">args</span>)
+  <span class="ruby-identifier">idnum</span> = <span class="ruby-identifier">tk_call_without_enc</span>(<span class="ruby-identifier">canvas</span>.<span class="ruby-identifier">path</span>, <span class="ruby-string">&#39;create&#39;</span>,
+                              <span class="ruby-keyword">self</span><span class="ruby-operator">::</span><span class="ruby-constant">CItemTypeName</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">args</span>)
+  <span class="ruby-identifier">canvas</span>.<span class="ruby-identifier">itemconfigure</span>(<span class="ruby-identifier">idnum</span>, <span class="ruby-identifier">fontkeys</span>) <span class="ruby-keyword">unless</span> <span class="ruby-identifier">fontkeys</span>.<span class="ruby-identifier">empty?</span>
+  <span class="ruby-identifier">canvas</span>.<span class="ruby-identifier">itemconfigure</span>(<span class="ruby-identifier">idnum</span>, <span class="ruby-identifier">methodkeys</span>) <span class="ruby-keyword">unless</span> <span class="ruby-identifier">methodkeys</span>.<span class="ruby-identifier">empty?</span>
+  <span class="ruby-identifier">idnum</span>.<span class="ruby-identifier">to_i</span>  <span class="ruby-comment"># &#39;canvas item id&#39; is an integer number</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-id2obj">
+            
+              <b>id2obj</b>(canvas, id)
+            
+            <a href="../classes/TkcItem.html#method-c-id2obj" name="method-c-id2obj" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-id2obj_source')" id="l_method-c-id2obj_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/8149f70e13fb2f2577bb9d0666f9f86a13777041/ext/tk/lib/tk/canvas.rb#L662" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-id2obj_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tk/canvas.rb, line 662</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">TkcItem</span>.<span class="ruby-identifier">id2obj</span>(<span class="ruby-identifier">canvas</span>, <span class="ruby-identifier">id</span>)
+  <span class="ruby-identifier">cpath</span> = <span class="ruby-identifier">canvas</span>.<span class="ruby-identifier">path</span>
+  <span class="ruby-constant">CItemID_TBL</span>.<span class="ruby-identifier">mutex</span>.<span class="ruby-identifier">synchronize</span>{
+    <span class="ruby-keyword">if</span> <span class="ruby-constant">CItemID_TBL</span>[<span class="ruby-identifier">cpath</span>]
+      <span class="ruby-constant">CItemID_TBL</span>[<span class="ruby-identifier">cpath</span>][<span class="ruby-identifier">id</span>]<span class="ruby-operator">?</span> <span class="ruby-constant">CItemID_TBL</span>[<span class="ruby-identifier">cpath</span>][<span class="ruby-identifier">id</span>]<span class="ruby-operator">:</span> <span class="ruby-identifier">id</span>
+    <span class="ruby-keyword">else</span>
+      <span class="ruby-identifier">id</span>
+    <span class="ruby-keyword">end</span>
+  }
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-new">
+            
+              <b>new</b>(parent, *args)
+            
+            <a href="../classes/TkcItem.html#method-c-new" name="method-c-new" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-new_source')" id="l_method-c-new_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/8149f70e13fb2f2577bb9d0666f9f86a13777041/ext/tk/lib/tk/canvas.rb#L743" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-new_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tk/canvas.rb, line 743</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">initialize</span>(<span class="ruby-identifier">parent</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">args</span>)
+  <span class="ruby-comment">#unless parent.kind_of?(Tk::Canvas)</span>
+  <span class="ruby-comment">#  fail ArgumentError, &quot;expect Tk::Canvas for 1st argument&quot;</span>
+  <span class="ruby-comment">#end</span>
+  <span class="ruby-ivar">@parent</span> = <span class="ruby-ivar">@c</span> = <span class="ruby-identifier">parent</span>
+  <span class="ruby-ivar">@path</span> = <span class="ruby-identifier">parent</span>.<span class="ruby-identifier">path</span>
+
+  <span class="ruby-ivar">@id</span> = <span class="ruby-identifier">create_self</span>(<span class="ruby-operator">*</span><span class="ruby-identifier">args</span>) <span class="ruby-comment"># an integer number as &#39;canvas item id&#39;</span>
+  <span class="ruby-constant">CItemID_TBL</span>.<span class="ruby-identifier">mutex</span>.<span class="ruby-identifier">synchronize</span>{
+    <span class="ruby-constant">CItemID_TBL</span>[<span class="ruby-ivar">@path</span>] = {} <span class="ruby-keyword">unless</span> <span class="ruby-constant">CItemID_TBL</span>[<span class="ruby-ivar">@path</span>]
+    <span class="ruby-constant">CItemID_TBL</span>[<span class="ruby-ivar">@path</span>][<span class="ruby-ivar">@id</span>] = <span class="ruby-keyword">self</span>
+  }
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-type2class">
+            
+              <b>type2class</b>(type)
+            
+            <a href="../classes/TkcItem.html#method-c-type2class" name="method-c-type2class" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-type2class_source')" id="l_method-c-type2class_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/8149f70e13fb2f2577bb9d0666f9f86a13777041/ext/tk/lib/tk/canvas.rb#L658" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-type2class_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tk/canvas.rb, line 658</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">TkcItem</span>.<span class="ruby-identifier">type2class</span>(<span class="ruby-identifier">type</span>)
+  <span class="ruby-constant">CItemTypeToClass</span>[<span class="ruby-identifier">type</span>]
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                  
+      <div class="sectiontitle">Instance Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-i-delete">
+            
+              <b>delete</b>()
+            
+            <a href="../classes/TkcItem.html#method-i-delete" name="method-i-delete" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+            <div class="aka">
+              Also aliased as: <a href="TkcItem.html#method-i-remove">remove</a>, <a href="TkcItem.html#method-i-destroy">destroy</a>
+            </div>
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-delete_source')" id="l_method-i-delete_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/8149f70e13fb2f2577bb9d0666f9f86a13777041/ext/tk/lib/tk/canvas.rb#L773" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-delete_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tk/canvas.rb, line 773</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">delete</span>
+  <span class="ruby-ivar">@c</span>.<span class="ruby-identifier">delete</span> <span class="ruby-ivar">@id</span>
+  <span class="ruby-constant">CItemID_TBL</span>.<span class="ruby-identifier">mutex</span>.<span class="ruby-identifier">synchronize</span>{
+    <span class="ruby-constant">CItemID_TBL</span>[<span class="ruby-ivar">@path</span>].<span class="ruby-identifier">delete</span>(<span class="ruby-ivar">@id</span>) <span class="ruby-keyword">if</span> <span class="ruby-constant">CItemID_TBL</span>[<span class="ruby-ivar">@path</span>]
+  }
+  <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-destroy">
+            
+              <b>destroy</b>()
+            
+            <a href="../classes/TkcItem.html#method-i-destroy" name="method-i-destroy" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+            <div class="aka">
+              Alias for: <a href="TkcItem.html#method-i-delete">delete</a>
+            </div>
+          
+          
+          
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-exist-3F">
+            
+              <b>exist?</b>()
+            
+            <a href="../classes/TkcItem.html#method-i-exist-3F" name="method-i-exist-3F" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-exist-3F_source')" id="l_method-i-exist-3F_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/8149f70e13fb2f2577bb9d0666f9f86a13777041/ext/tk/lib/tk/canvas.rb#L765" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-exist-3F_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tk/canvas.rb, line 765</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">exist?</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-ivar">@c</span>.<span class="ruby-identifier">find_withtag</span>(<span class="ruby-ivar">@id</span>)
+    <span class="ruby-keyword">true</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-keyword">false</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-id">
+            
+              <b>id</b>()
+            
+            <a href="../classes/TkcItem.html#method-i-id" name="method-i-id" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-id_source')" id="l_method-i-id_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/8149f70e13fb2f2577bb9d0666f9f86a13777041/ext/tk/lib/tk/canvas.rb#L761" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-id_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tk/canvas.rb, line 761</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">id</span>
+  <span class="ruby-ivar">@id</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-remove">
+            
+              <b>remove</b>()
+            
+            <a href="../classes/TkcItem.html#method-i-remove" name="method-i-remove" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+            <div class="aka">
+              Alias for: <a href="TkcItem.html#method-i-delete">delete</a>
+            </div>
+          
+          
+          
+          </div>
+                    </div>
+
+    </div>
+  </body>
+</html>    

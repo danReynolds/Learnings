@@ -1,0 +1,1113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>Tk::Tcllib::ChatWidget</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="../../../css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../../../css/main.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../../../css/github.css" type="text/css" media="screen" />
+<script src="../../../js/jquery-1.3.2.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../../js/jquery-effect.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../../js/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+
+<body>     
+    <div class="banner">
+        
+        <h1>
+            <span class="type">Class</span> 
+            Tk::Tcllib::ChatWidget 
+            
+                <span class="parent">&lt; 
+                    
+                    TkText
+                    
+                </span>
+            
+        </h1>
+        <ul class="files">
+            
+            <li><a href="../../../files/ext/tk/lib/tkextlib/tcllib/chatwidget_rb.html">ext/tk/lib/tkextlib/tcllib/chatwidget.rb</a></li>
+            
+        </ul>
+    </div>
+    <div id="bodyContent">
+        <div id="content">
+  
+
+
+  
+
+
+  
+  
+
+
+  
+
+
+  
+    <!-- Method ref -->
+    <div class="sectiontitle">Methods</div>
+    <dl class="methods">
+      
+        <dt>A</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-add_name">add_name</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>C</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-chat_widget">chat_widget</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>D</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-delete_name">delete_name</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>E</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-entry_widget">entry_widget</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>G</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-get_name">get_name</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>H</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-hide_names">hide_names</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-hide_topic">hide_topic</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-hook_add">hook_add</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-hook_list">hook_list</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-hook_remove">hook_remove</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-hook_run">hook_run</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>L</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-list_name">list_name</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-list_name_full">list_name_full</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>M</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-message">message</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>N</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-names_widget">names_widget</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>P</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-package_name">package_name</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-c-package_version">package_version</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>S</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-set_topic">set_topic</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-show_names">show_names</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-show_topic">show_topic</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+    </dl>
+  
+
+  
+
+
+
+  
+
+    
+
+    
+
+    
+      <!-- Section constants -->
+      <div class="sectiontitle">Constants</div>
+      <table border='0' cellpadding='5'>
+        
+          <tr valign='top'>
+            <td class="attr-name">PACKAGE_NAME</td>
+            <td>=</td>
+            <td class="attr-value">&#39;chatwidget&#39;.freeze</td>
+          </tr>
+          
+            <tr valign='top'>
+              <td>&nbsp;</td>
+              <td colspan="2" class="attr-desc"></td>
+            </tr>
+          
+        
+          <tr valign='top'>
+            <td class="attr-name">TkCommandNames</td>
+            <td>=</td>
+            <td class="attr-value">[&#39;::chatwidget::chatwidget&#39;.freeze].freeze</td>
+          </tr>
+          
+            <tr valign='top'>
+              <td>&nbsp;</td>
+              <td colspan="2" class="attr-desc"></td>
+            </tr>
+          
+        
+      </table>
+    
+
+
+    
+
+
+    <!-- Methods -->
+    
+      <div class="sectiontitle">Class Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-c-package_name">
+            
+              <b>package_name</b>()
+            
+            <a href="../../../classes/Tk/Tcllib/ChatWidget.html#method-c-package_name" name="method-c-package_name" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-package_name_source')" id="l_method-c-package_name_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/3a47cf3395dd4c4fe8bdd5df13aab698f2ca314b/ext/tk/lib/tkextlib/tcllib/chatwidget.rb#L19" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-package_name_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/tcllib/chatwidget.rb, line 19</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">package_name</span>
+  <span class="ruby-constant">PACKAGE_NAME</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-package_version">
+            
+              <b>package_version</b>()
+            
+            <a href="../../../classes/Tk/Tcllib/ChatWidget.html#method-c-package_version" name="method-c-package_version" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-package_version_source')" id="l_method-c-package_version_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/3a47cf3395dd4c4fe8bdd5df13aab698f2ca314b/ext/tk/lib/tkextlib/tcllib/chatwidget.rb#L23" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-package_version_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/tcllib/chatwidget.rb, line 23</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">package_version</span>
+  <span class="ruby-keyword">begin</span>
+    <span class="ruby-constant">TkPackage</span>.<span class="ruby-identifier">require</span>(<span class="ruby-string">&#39;chatwidget&#39;</span>)
+  <span class="ruby-keyword">rescue</span>
+    <span class="ruby-string">&#39;&#39;</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                  
+      <div class="sectiontitle">Instance Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-i-add_name">
+            
+              <b>add_name</b>(nick, opts={})
+            
+            <a href="../../../classes/Tk/Tcllib/ChatWidget.html#method-i-add_name" name="method-i-add_name" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-add_name_source')" id="l_method-i-add_name_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/3a47cf3395dd4c4fe8bdd5df13aab698f2ca314b/ext/tk/lib/tkextlib/tcllib/chatwidget.rb#L63" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-add_name_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/tcllib/chatwidget.rb, line 63</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">add_name</span>(<span class="ruby-identifier">nick</span>, <span class="ruby-identifier">opts</span>={})
+  <span class="ruby-identifier">tk_send</span>(<span class="ruby-string">&#39;name&#39;</span>, <span class="ruby-string">&#39;add&#39;</span>, <span class="ruby-identifier">nick</span>, <span class="ruby-operator">*</span>(<span class="ruby-identifier">hash_kv</span>(<span class="ruby-identifier">opts</span>)))
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-chat_widget">
+            
+              <b>chat_widget</b>()
+            
+            <a href="../../../classes/Tk/Tcllib/ChatWidget.html#method-i-chat_widget" name="method-i-chat_widget" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-chat_widget_source')" id="l_method-i-chat_widget_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/3a47cf3395dd4c4fe8bdd5df13aab698f2ca314b/ext/tk/lib/tkextlib/tcllib/chatwidget.rb#L148" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-chat_widget_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/tcllib/chatwidget.rb, line 148</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">chat_widget</span>
+  <span class="ruby-identifier">window</span>(<span class="ruby-identifier">tk_send</span>(<span class="ruby-string">&#39;chat&#39;</span>))
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-delete_name">
+            
+              <b>delete_name</b>(nick)
+            
+            <a href="../../../classes/Tk/Tcllib/ChatWidget.html#method-i-delete_name" name="method-i-delete_name" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-delete_name_source')" id="l_method-i-delete_name_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/3a47cf3395dd4c4fe8bdd5df13aab698f2ca314b/ext/tk/lib/tkextlib/tcllib/chatwidget.rb#L67" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-delete_name_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/tcllib/chatwidget.rb, line 67</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">delete_name</span>(<span class="ruby-identifier">nick</span>)
+  <span class="ruby-identifier">tk_send</span>(<span class="ruby-string">&#39;name&#39;</span>, <span class="ruby-string">&#39;delete&#39;</span>, <span class="ruby-identifier">nick</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-entry_widget">
+            
+              <b>entry_widget</b>()
+            
+            <a href="../../../classes/Tk/Tcllib/ChatWidget.html#method-i-entry_widget" name="method-i-entry_widget" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-entry_widget_source')" id="l_method-i-entry_widget_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/3a47cf3395dd4c4fe8bdd5df13aab698f2ca314b/ext/tk/lib/tkextlib/tcllib/chatwidget.rb#L144" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-entry_widget_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/tcllib/chatwidget.rb, line 144</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">entry_widget</span>
+  <span class="ruby-identifier">window</span>(<span class="ruby-identifier">tk_send</span>(<span class="ruby-string">&#39;entry&#39;</span>))
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-get_name">
+            
+              <b>get_name</b>(nick)
+            
+            <a href="../../../classes/Tk/Tcllib/ChatWidget.html#method-i-get_name" name="method-i-get_name" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-get_name_source')" id="l_method-i-get_name_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/3a47cf3395dd4c4fe8bdd5df13aab698f2ca314b/ext/tk/lib/tkextlib/tcllib/chatwidget.rb#L71" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-get_name_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/tcllib/chatwidget.rb, line 71</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">get_name</span>(<span class="ruby-identifier">nick</span>)
+  <span class="ruby-identifier">lst</span> = <span class="ruby-identifier">tk_send</span>(<span class="ruby-string">&#39;name&#39;</span>, <span class="ruby-string">&#39;get&#39;</span>, <span class="ruby-identifier">nick</span>)
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">nil</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">lst</span>.<span class="ruby-identifier">empty?</span>
+  <span class="ruby-identifier">nick</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">opts</span> = <span class="ruby-identifier">tk_split_simplelist</span>(<span class="ruby-identifier">lst</span>)
+  <span class="ruby-identifier">h_opt</span> = {}
+  <span class="ruby-identifier">opts</span>.<span class="ruby-identifier">slice</span>(<span class="ruby-number">2</span>){<span class="ruby-operator">|</span><span class="ruby-identifier">k</span>, <span class="ruby-identifier">v</span><span class="ruby-operator">|</span> <span class="ruby-identifier">h_opt</span>[<span class="ruby-identifier">k</span>[<span class="ruby-number">1</span><span class="ruby-operator">..</span><span class="ruby-number">-1</span>]] = <span class="ruby-identifier">tk_tcl2ruby</span>(<span class="ruby-identifier">v</span>)}
+  [<span class="ruby-identifier">nick</span>, <span class="ruby-identifier">h_opt</span>]
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-hide_names">
+            
+              <b>hide_names</b>()
+            
+            <a href="../../../classes/Tk/Tcllib/ChatWidget.html#method-i-hide_names" name="method-i-hide_names" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-hide_names_source')" id="l_method-i-hide_names_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/3a47cf3395dd4c4fe8bdd5df13aab698f2ca314b/ext/tk/lib/tkextlib/tcllib/chatwidget.rb#L135" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-hide_names_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/tcllib/chatwidget.rb, line 135</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">hide_names</span>
+  <span class="ruby-identifier">tk_send</span>(<span class="ruby-string">&#39;names&#39;</span>, <span class="ruby-string">&#39;hide&#39;</span>)
+  <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-hide_topic">
+            
+              <b>hide_topic</b>()
+            
+            <a href="../../../classes/Tk/Tcllib/ChatWidget.html#method-i-hide_topic" name="method-i-hide_topic" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-hide_topic_source')" id="l_method-i-hide_topic_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/3a47cf3395dd4c4fe8bdd5df13aab698f2ca314b/ext/tk/lib/tkextlib/tcllib/chatwidget.rb#L41" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-hide_topic_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/tcllib/chatwidget.rb, line 41</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">hide_topic</span>
+  <span class="ruby-identifier">tk_send_without_enc</span>(<span class="ruby-string">&#39;topic&#39;</span>, <span class="ruby-string">&#39;hide&#39;</span>)
+  <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-hook_add">
+            
+              <b>hook_add</b>(type, *args, &amp;blk)
+            
+            <a href="../../../classes/Tk/Tcllib/ChatWidget.html#method-i-hook_add" name="method-i-hook_add" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-hook_add_source')" id="l_method-i-hook_add_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/3a47cf3395dd4c4fe8bdd5df13aab698f2ca314b/ext/tk/lib/tkextlib/tcllib/chatwidget.rb#L93" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-hook_add_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/tcllib/chatwidget.rb, line 93</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">hook_add</span>(<span class="ruby-identifier">type</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">args</span>, <span class="ruby-operator">&amp;</span><span class="ruby-identifier">blk</span>) <span class="ruby-comment"># args -&gt; [prior, cmd], [prior], [cmd]</span>
+  <span class="ruby-comment">#type -&gt; &#39;message&#39;, &#39;post&#39;, &#39;names_group&#39;, &#39;names_nick&#39;, &#39;chatstate&#39;, &#39;url&#39;</span>
+
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">prior</span> = <span class="ruby-identifier">args</span>.<span class="ruby-identifier">shift</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-operator">!</span><span class="ruby-identifier">prior</span>.<span class="ruby-identifier">kind_of?</span>(<span class="ruby-constant">Numeric</span>)
+      <span class="ruby-identifier">cmd</span> = <span class="ruby-identifier">prior</span>
+      <span class="ruby-keyword">if</span> (<span class="ruby-identifier">prior</span> = <span class="ruby-identifier">args</span>.<span class="ruby-identifier">shift</span>) <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-operator">!</span><span class="ruby-identifier">prior</span>.<span class="ruby-identifier">kind_of?</span>(<span class="ruby-constant">Numeric</span>)  <span class="ruby-comment"># error</span>
+        <span class="ruby-identifier">args</span>.<span class="ruby-identifier">unshift</span>(<span class="ruby-identifier">prior</span>)
+      <span class="ruby-keyword">end</span>
+      <span class="ruby-identifier">args</span>.<span class="ruby-identifier">unshift</span>(<span class="ruby-identifier">cmd</span>)
+    <span class="ruby-keyword">end</span>
+    <span class="ruby-identifier">prior</span> <span class="ruby-operator">||=</span> <span class="ruby-number">50</span>  <span class="ruby-comment"># default priority</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-identifier">cmd</span> = <span class="ruby-identifier">args</span>.<span class="ruby-identifier">shift</span> <span class="ruby-operator">||</span> <span class="ruby-identifier">blk</span>
+
+  <span class="ruby-identifier">fail</span> <span class="ruby-constant">ArgumentError</span>, <span class="ruby-string">&quot;invalid arguments&quot;</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">args</span>.<span class="ruby-identifier">empty?</span>
+  <span class="ruby-identifier">fail</span> <span class="ruby-constant">ArgumentError</span>, <span class="ruby-string">&quot;no callback is given&quot;</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">cmd</span>
+
+  <span class="ruby-identifier">_parse_hook_list</span>(<span class="ruby-identifier">tk_send</span>(<span class="ruby-string">&#39;hook&#39;</span>, <span class="ruby-string">&#39;add&#39;</span>, <span class="ruby-identifier">type</span>, <span class="ruby-identifier">cmd</span>, <span class="ruby-identifier">prior</span>))
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-hook_list">
+            
+              <b>hook_list</b>(type)
+            
+            <a href="../../../classes/Tk/Tcllib/ChatWidget.html#method-i-hook_list" name="method-i-hook_list" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-hook_list_source')" id="l_method-i-hook_list_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/3a47cf3395dd4c4fe8bdd5df13aab698f2ca314b/ext/tk/lib/tkextlib/tcllib/chatwidget.rb#L125" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-hook_list_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/tcllib/chatwidget.rb, line 125</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">hook_list</span>(<span class="ruby-identifier">type</span>)
+  <span class="ruby-comment">#type -&gt; &#39;message&#39;, &#39;post&#39;, &#39;names_group&#39;, &#39;names_nick&#39;, &#39;chatstate&#39;, &#39;url&#39;</span>
+  <span class="ruby-identifier">_parse_hook_list</span>(<span class="ruby-identifier">tk_send</span>(<span class="ruby-string">&#39;hook&#39;</span>, <span class="ruby-string">&#39;list&#39;</span>, <span class="ruby-identifier">type</span>))
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-hook_remove">
+            
+              <b>hook_remove</b>(type, cmd)
+            
+            <a href="../../../classes/Tk/Tcllib/ChatWidget.html#method-i-hook_remove" name="method-i-hook_remove" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-hook_remove_source')" id="l_method-i-hook_remove_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/3a47cf3395dd4c4fe8bdd5df13aab698f2ca314b/ext/tk/lib/tkextlib/tcllib/chatwidget.rb#L115" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-hook_remove_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/tcllib/chatwidget.rb, line 115</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">hook_remove</span>(<span class="ruby-identifier">type</span>, <span class="ruby-identifier">cmd</span>)
+  <span class="ruby-comment">#type -&gt; &#39;message&#39;, &#39;post&#39;, &#39;names_group&#39;, &#39;names_nick&#39;, &#39;chatstate&#39;, &#39;url&#39;</span>
+  <span class="ruby-identifier">_parse_hook_list</span>(<span class="ruby-identifier">tk_send</span>(<span class="ruby-string">&#39;hook&#39;</span>, <span class="ruby-string">&#39;remove&#39;</span>, <span class="ruby-identifier">type</span>, <span class="ruby-identifier">cmd</span>))
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-hook_run">
+            
+              <b>hook_run</b>(type, *cmd_args)
+            
+            <a href="../../../classes/Tk/Tcllib/ChatWidget.html#method-i-hook_run" name="method-i-hook_run" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-hook_run_source')" id="l_method-i-hook_run_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/3a47cf3395dd4c4fe8bdd5df13aab698f2ca314b/ext/tk/lib/tkextlib/tcllib/chatwidget.rb#L120" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-hook_run_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/tcllib/chatwidget.rb, line 120</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">hook_run</span>(<span class="ruby-identifier">type</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">cmd_args</span>)
+  <span class="ruby-comment">#type -&gt; &#39;message&#39;, &#39;post&#39;, &#39;names_group&#39;, &#39;names_nick&#39;, &#39;chatstate&#39;, &#39;url&#39;</span>
+  <span class="ruby-identifier">tk_send</span>(<span class="ruby-string">&#39;hook&#39;</span>, <span class="ruby-string">&#39;run&#39;</span>, <span class="ruby-identifier">type</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">cmd_args</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-list_name">
+            
+              <b>list_name</b>()
+            
+            <a href="../../../classes/Tk/Tcllib/ChatWidget.html#method-i-list_name" name="method-i-list_name" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-list_name_source')" id="l_method-i-list_name_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/3a47cf3395dd4c4fe8bdd5df13aab698f2ca314b/ext/tk/lib/tkextlib/tcllib/chatwidget.rb#L50" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-list_name_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/tcllib/chatwidget.rb, line 50</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">list_name</span>
+  <span class="ruby-identifier">tk_split_simplelist</span>(<span class="ruby-identifier">tk_send</span>(<span class="ruby-string">&#39;name&#39;</span>, <span class="ruby-string">&#39;list&#39;</span>))
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-list_name_full">
+            
+              <b>list_name_full</b>()
+            
+            <a href="../../../classes/Tk/Tcllib/ChatWidget.html#method-i-list_name_full" name="method-i-list_name_full" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-list_name_full_source')" id="l_method-i-list_name_full_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/3a47cf3395dd4c4fe8bdd5df13aab698f2ca314b/ext/tk/lib/tkextlib/tcllib/chatwidget.rb#L54" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-list_name_full_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/tcllib/chatwidget.rb, line 54</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">list_name_full</span>
+  <span class="ruby-identifier">tk_split_simplelist</span>(<span class="ruby-identifier">tk_send</span>(<span class="ruby-string">&#39;name&#39;</span>, <span class="ruby-string">&#39;list&#39;</span>)).<span class="ruby-identifier">map</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">lst</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">nick</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">opts</span> = <span class="ruby-identifier">tk_split_simplelist</span>(<span class="ruby-identifier">lst</span>)
+    <span class="ruby-identifier">h_opt</span> = {}
+    <span class="ruby-identifier">opts</span>.<span class="ruby-identifier">slice</span>(<span class="ruby-number">2</span>){<span class="ruby-operator">|</span><span class="ruby-identifier">k</span>, <span class="ruby-identifier">v</span><span class="ruby-operator">|</span> <span class="ruby-identifier">h_opt</span>[<span class="ruby-identifier">k</span>[<span class="ruby-number">1</span><span class="ruby-operator">..</span><span class="ruby-number">-1</span>]] = <span class="ruby-identifier">tk_tcl2ruby</span>(<span class="ruby-identifier">v</span>)}
+    [<span class="ruby-identifier">nick</span>, <span class="ruby-identifier">h_opt</span>]
+  }
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-message">
+            
+              <b>message</b>(msg, opts={})
+            
+            <a href="../../../classes/Tk/Tcllib/ChatWidget.html#method-i-message" name="method-i-message" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-message_source')" id="l_method-i-message_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/3a47cf3395dd4c4fe8bdd5df13aab698f2ca314b/ext/tk/lib/tkextlib/tcllib/chatwidget.rb#L80" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-message_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/tcllib/chatwidget.rb, line 80</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">message</span>(<span class="ruby-identifier">msg</span>, <span class="ruby-identifier">opts</span>={})
+  <span class="ruby-identifier">tk_send</span>(<span class="ruby-string">&#39;message&#39;</span>, <span class="ruby-identifier">msg</span>, <span class="ruby-operator">*</span>(<span class="ruby-identifier">hash_kv</span>(<span class="ruby-identifier">opts</span>)))
+  <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-names_widget">
+            
+              <b>names_widget</b>()
+            
+            <a href="../../../classes/Tk/Tcllib/ChatWidget.html#method-i-names_widget" name="method-i-names_widget" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-names_widget_source')" id="l_method-i-names_widget_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/3a47cf3395dd4c4fe8bdd5df13aab698f2ca314b/ext/tk/lib/tkextlib/tcllib/chatwidget.rb#L140" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-names_widget_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/tcllib/chatwidget.rb, line 140</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">names_widget</span>
+  <span class="ruby-identifier">window</span>(<span class="ruby-identifier">tk_send</span>(<span class="ruby-string">&#39;names&#39;</span>))
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-set_topic">
+            
+              <b>set_topic</b>(topic)
+            
+            <a href="../../../classes/Tk/Tcllib/ChatWidget.html#method-i-set_topic" name="method-i-set_topic" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-set_topic_source')" id="l_method-i-set_topic_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/3a47cf3395dd4c4fe8bdd5df13aab698f2ca314b/ext/tk/lib/tkextlib/tcllib/chatwidget.rb#L46" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-set_topic_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/tcllib/chatwidget.rb, line 46</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">set_topic</span>(<span class="ruby-identifier">topic</span>)
+  <span class="ruby-identifier">tk_send</span>(<span class="ruby-string">&#39;topic&#39;</span>, <span class="ruby-string">&#39;set&#39;</span>, <span class="ruby-identifier">topic</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-show_names">
+            
+              <b>show_names</b>()
+            
+            <a href="../../../classes/Tk/Tcllib/ChatWidget.html#method-i-show_names" name="method-i-show_names" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-show_names_source')" id="l_method-i-show_names_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/3a47cf3395dd4c4fe8bdd5df13aab698f2ca314b/ext/tk/lib/tkextlib/tcllib/chatwidget.rb#L130" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-show_names_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/tcllib/chatwidget.rb, line 130</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">show_names</span>
+  <span class="ruby-identifier">tk_send</span>(<span class="ruby-string">&#39;names&#39;</span>, <span class="ruby-string">&#39;show&#39;</span>)
+  <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-show_topic">
+            
+              <b>show_topic</b>()
+            
+            <a href="../../../classes/Tk/Tcllib/ChatWidget.html#method-i-show_topic" name="method-i-show_topic" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-show_topic_source')" id="l_method-i-show_topic_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/3a47cf3395dd4c4fe8bdd5df13aab698f2ca314b/ext/tk/lib/tkextlib/tcllib/chatwidget.rb#L36" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-show_topic_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/tcllib/chatwidget.rb, line 36</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">show_topic</span>
+  <span class="ruby-identifier">tk_send_without_enc</span>(<span class="ruby-string">&#39;topic&#39;</span>, <span class="ruby-string">&#39;show&#39;</span>)
+  <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                    </div>
+
+    </div>
+  </body>
+</html>    

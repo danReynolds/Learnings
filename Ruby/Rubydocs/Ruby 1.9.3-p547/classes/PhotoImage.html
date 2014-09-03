@@ -1,0 +1,948 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>PhotoImage</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="../css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/main.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/github.css" type="text/css" media="screen" />
+<script src="../js/jquery-1.3.2.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/jquery-effect.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+
+<body>     
+    <div class="banner">
+        
+        <h1>
+            <span class="type">Class</span> 
+            PhotoImage 
+            
+                <span class="parent">&lt; 
+                    
+                    <a href="TkImage.html">TkImage</a>
+                    
+                </span>
+            
+        </h1>
+        <ul class="files">
+            
+            <li><a href="../files/ext/tk/lib/tk/image_rb.html">ext/tk/lib/tk/image.rb</a></li>
+            
+        </ul>
+    </div>
+    <div id="bodyContent">
+        <div id="content">
+  
+    <div class="description">
+      
+<p>A photo is an image whose pixels can display any color or be transparent.
+At present, only GIF and PPM/PGM formats are supported, but an interface
+exists to allow additional image file formats to be added easily.</p>
+
+<p>This class documentation is a copy from the original Tcl/Tk at <a
+href="http://www.tcl.tk/man/tcl8.5/TkCmd/photo.htm">www.tcl.tk/man/tcl8.5/TkCmd/photo.htm</a>
+with some rewrited parts.</p>
+
+    </div>
+  
+
+
+  
+
+
+  
+  
+
+
+  
+
+
+  
+    <!-- Method ref -->
+    <div class="sectiontitle">Methods</div>
+    <dl class="methods">
+      
+        <dt>B</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-blank">blank</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>C</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-cget">cget</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-cget_strict">cget_strict</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-copy">copy</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>D</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-data">data</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>G</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-get">get</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-get_transparency">get_transparency</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>N</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-new">new</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>P</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-put">put</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>R</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-read">read</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-redither">redither</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>S</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-set_transparency">set_transparency</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>W</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-write">write</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+    </dl>
+  
+
+  
+
+
+
+  
+
+    
+
+    
+
+    
+      <!-- Section constants -->
+      <div class="sectiontitle">Constants</div>
+      <table border='0' cellpadding='5'>
+        
+          <tr valign='top'>
+            <td class="attr-name">NullArgOptionKeys</td>
+            <td>=</td>
+            <td class="attr-value">[ &quot;shrink&quot;, &quot;grayscale&quot; ]</td>
+          </tr>
+          
+            <tr valign='top'>
+              <td>&nbsp;</td>
+              <td colspan="2" class="attr-desc"></td>
+            </tr>
+          
+        
+      </table>
+    
+
+
+    
+
+
+    <!-- Methods -->
+    
+      <div class="sectiontitle">Class Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-c-new">
+            
+              <b>new</b>(*args)
+            
+            <a href="../classes/PhotoImage.html#method-c-new" name="method-c-new" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Create a new image with the given options.</p>
+
+<h2 id="method-c-new-label-Examples+of+use+%3A">Examples of use :</h2>
+
+<h3 id="method-c-new-label-Create+an+empty+image+of+300x200+pixels">Create an empty image of 300x200 pixels</h3>
+
+<pre><code>image = TkPhotoImage.new(:height =&gt; 200, :width =&gt; 300)
+</code></pre>
+
+<h3 id="method-c-new-label-Create+an+image+from+a+file">Create an image from a file</h3>
+
+<pre><code>image = TkPhotoImage.new(:file: =&gt; &#39;my_image.gif&#39;)
+</code></pre>
+
+<h2 id="method-c-new-label-Options">Options</h2>
+
+<p>Photos support the following options:</p>
+<ul><li>
+<p>:data Specifies the contents of the image as a string.</p>
+</li><li>
+<p>:format Specifies the name of the file format for the data.</p>
+</li><li>
+<p>:file Gives the name of a file that is to be read to supply data for the
+image.</p>
+</li><li>
+<p>:gamma Specifies that the colors allocated for displaying this image in a
+window should be corrected for a non-linear display with the specified
+gamma exponent value.</p>
+</li><li>
+<p>height Specifies the height of the image, in pixels. This option is useful
+primarily in situations where the user wishes to build up the contents of
+the image piece by piece. A value of zero (the default) allows the image to
+expand or shrink vertically to fit the data stored in it.</p>
+</li><li>
+<p>palette Specifies the resolution of the color cube to be allocated for
+displaying this image.</p>
+</li><li>
+<p>width Specifies the width of the image, in pixels. This option is useful
+primarily in situations where the user wishes to build up the contents of
+the image piece by piece. A value of zero (the default) allows the image to
+expand or shrink horizontally to fit the data stored in it.</p>
+</li></ul>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-new_source')" id="l_method-c-new_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/3ca633b890706c4f5892a179389b8389b5022dc0/ext/tk/lib/tk/image.rb#L189" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-new_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tk/image.rb, line 189</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">initialize</span>(<span class="ruby-operator">*</span><span class="ruby-identifier">args</span>)
+  <span class="ruby-ivar">@type</span> = <span class="ruby-string">&#39;photo&#39;</span>
+  <span class="ruby-keyword">super</span>(<span class="ruby-operator">*</span><span class="ruby-identifier">args</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                  
+      <div class="sectiontitle">Instance Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-i-blank">
+            
+              <b>blank</b>()
+            
+            <a href="../classes/PhotoImage.html#method-i-blank" name="method-i-blank" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Blank the image; that is, set the entire image to have no data, so it will
+be displayed as transparent, and the background of whatever window it is
+displayed in will show through.</p>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-blank_source')" id="l_method-i-blank_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/3ca633b890706c4f5892a179389b8389b5022dc0/ext/tk/lib/tk/image.rb#L197" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-blank_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tk/image.rb, line 197</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">blank</span>
+  <span class="ruby-identifier">tk_send_without_enc</span>(<span class="ruby-string">&#39;blank&#39;</span>)
+  <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-cget">
+            
+              <b>cget</b>(option)
+            
+            <a href="../classes/PhotoImage.html#method-i-cget" name="method-i-cget" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Returns the current value of the configuration option given by option.
+Example, display name of the file from which <code>image</code> was
+created:</p>
+
+<pre><code>puts image.cget :file</code></pre>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-cget_source')" id="l_method-i-cget_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/3ca633b890706c4f5892a179389b8389b5022dc0/ext/tk/lib/tk/image.rb#L214" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-cget_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tk/image.rb, line 214</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">cget</span>(<span class="ruby-identifier">option</span>)
+  <span class="ruby-keyword">unless</span> <span class="ruby-constant">TkConfigMethod</span>.<span class="ruby-identifier">__IGNORE_UNKNOWN_CONFIGURE_OPTION__</span>
+    <span class="ruby-identifier">cget_strict</span>(<span class="ruby-identifier">option</span>)
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-keyword">begin</span>
+      <span class="ruby-identifier">cget_strict</span>(<span class="ruby-identifier">option</span>)
+    <span class="ruby-keyword">rescue</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">e</span>
+      <span class="ruby-keyword">if</span> <span class="ruby-identifier">current_configinfo</span>.<span class="ruby-identifier">has_key?</span>(<span class="ruby-identifier">option</span>.<span class="ruby-identifier">to_s</span>)
+        <span class="ruby-comment"># error on known option</span>
+        <span class="ruby-identifier">fail</span> <span class="ruby-identifier">e</span>
+      <span class="ruby-keyword">else</span>
+        <span class="ruby-comment"># unknown option</span>
+        <span class="ruby-keyword">nil</span>
+      <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-cget_strict">
+            
+              <b>cget_strict</b>(option)
+            
+            <a href="../classes/PhotoImage.html#method-i-cget_strict" name="method-i-cget_strict" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-cget_strict_source')" id="l_method-i-cget_strict_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/3ca633b890706c4f5892a179389b8389b5022dc0/ext/tk/lib/tk/image.rb#L202" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-cget_strict_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tk/image.rb, line 202</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">cget_strict</span>(<span class="ruby-identifier">option</span>)
+  <span class="ruby-keyword">case</span> <span class="ruby-identifier">option</span>.<span class="ruby-identifier">to_s</span>
+  <span class="ruby-keyword">when</span> <span class="ruby-string">&#39;data&#39;</span>, <span class="ruby-string">&#39;file&#39;</span>
+    <span class="ruby-identifier">tk_send</span> <span class="ruby-string">&#39;cget&#39;</span>, <span class="ruby-string">&#39;-&#39;</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">option</span>.<span class="ruby-identifier">to_s</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">tk_tcl2ruby</span>(<span class="ruby-identifier">tk_send</span>(<span class="ruby-string">&#39;cget&#39;</span>, <span class="ruby-string">&#39;-&#39;</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">option</span>.<span class="ruby-identifier">to_s</span>))
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-copy">
+            
+              <b>copy</b>(src, *opts)
+            
+            <a href="../classes/PhotoImage.html#method-i-copy" name="method-i-copy" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Copies a region from the image called source to the image called
+destination, possibly with pixel zooming and/or subsampling. If no options
+are specified, this method copies the whole of source into destination,
+starting at coordinates (0,0) in destination. The following options may be
+specified:</p>
+<ul><li>
+<p>:from [x1, y1, x2, y2] Specifies a rectangular sub-region of the source
+image to be copied. (x1,y1) and (x2,y2) specify diagonally opposite corners
+of the rectangle. If x2 and y2 are not specified, the default value is the
+bottom-right corner of the source image. The pixels copied will include the
+left and top edges of the specified rectangle but not the bottom or right
+edges. If the :from option is not given, the default is the whole source
+image.</p>
+</li><li>
+<p>:to [x1, y1, x2, y2] Specifies a rectangular sub-region of the destination
+image to be affected. (x1,y1) and (x2,y2) specify diagonally opposite
+corners of the rectangle. If x2 and y2 are not specified, the default value
+is (x1,y1) plus the size of the source region (after subsampling and
+zooming, if specified). If x2 and  y2 are specified, the source region will
+be replicated if necessary to fill the destination region in a tiled
+fashion.</p>
+</li><li>
+<p>:shrink Specifies that the size of the destination image should be reduced,
+if  necessary, so that the region being copied into is at the bottom-right 
+corner of the image. This option will not affect the width or height of 
+the image if the user has specified a non-zero value for the :width or
+:height configuration option, respectively.</p>
+</li><li>
+<p>:zoom [x, y] Specifies that the source region should be magnified by a
+factor of x  in the X direction and y in the Y direction. If y is not
+given, the default value is the same as x. With this option, each pixel in
+the source image will be expanded into a block of x x y pixels in the
+destination image, all the same color. x and y must be greater than 0.</p>
+</li><li>
+<p>:subsample [x, y] Specifies that the source image should be reduced in size
+by using only every xth pixel in the X direction and yth pixel in the Y
+direction.  Negative values will cause the image to be flipped about the Y
+or X axes,  respectively. If y is not given, the default value is the same
+as x.</p>
+</li><li>
+<p>:compositingrule rule Specifies how transparent pixels in the source image
+are combined with  the destination image. When a compositing rule of
+<code>overlay</code> is set, the old  contents of the destination image are
+visible, as if the source image were  printed on a piece of transparent
+film and placed over the top of the  destination. When a compositing rule
+of <code>set</code> is set, the old contents of  the destination image are
+discarded and the source image is used as-is. The default compositing rule
+is <code>overlay</code>.</p>
+</li></ul>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-copy_source')" id="l_method-i-copy_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/3ca633b890706c4f5892a179389b8389b5022dc0/ext/tk/lib/tk/image.rb#L277" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-copy_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tk/image.rb, line 277</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">copy</span>(<span class="ruby-identifier">src</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">opts</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">opts</span>.<span class="ruby-identifier">size</span> <span class="ruby-operator">==</span> <span class="ruby-number">0</span>
+    <span class="ruby-identifier">tk_send</span>(<span class="ruby-string">&#39;copy&#39;</span>, <span class="ruby-identifier">src</span>)
+  <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">opts</span>.<span class="ruby-identifier">size</span> <span class="ruby-operator">==</span> <span class="ruby-number">1</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">opts</span>[<span class="ruby-number">0</span>].<span class="ruby-identifier">kind_of?</span>(<span class="ruby-constant">Hash</span>)
+    <span class="ruby-identifier">tk_send</span>(<span class="ruby-string">&#39;copy&#39;</span>, <span class="ruby-identifier">src</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">_photo_hash_kv</span>(<span class="ruby-identifier">opts</span>[<span class="ruby-number">0</span>]))
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-comment"># for backward compatibility</span>
+    <span class="ruby-identifier">args</span> = <span class="ruby-identifier">opts</span>.<span class="ruby-identifier">collect</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">term</span><span class="ruby-operator">|</span>
+      <span class="ruby-keyword">if</span> <span class="ruby-identifier">term</span>.<span class="ruby-identifier">kind_of?</span>(<span class="ruby-constant">String</span>) <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">term</span>.<span class="ruby-identifier">include?</span>(<span class="ruby-value">?\</span><span class="ruby-identifier">s</span>)
+        <span class="ruby-identifier">term</span>.<span class="ruby-identifier">split</span>
+      <span class="ruby-keyword">else</span>
+        <span class="ruby-identifier">term</span>
+      <span class="ruby-keyword">end</span>
+    }.<span class="ruby-identifier">flatten</span>
+    <span class="ruby-identifier">tk_send</span>(<span class="ruby-string">&#39;copy&#39;</span>, <span class="ruby-identifier">src</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">args</span>)
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-data">
+            
+              <b>data</b>(keys={})
+            
+            <a href="../classes/PhotoImage.html#method-i-data" name="method-i-data" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Returns image data in the form of a string. The following options may be
+specified:</p>
+<ul><li>
+<p>:background color If the color is specified, the data will not contain any
+transparency information. In all transparent pixels the color will be
+replaced by the specified color.</p>
+</li><li>
+<p>:format format-name Specifies the name of the image file format handler to
+be used. Specifically, this subcommand searches for the first handler whose
+name matches an initial substring of format-name and which has the
+capability to read this image data. If this option is not given, this
+subcommand uses the first handler that has the capability to read the image
+data.</p>
+</li><li>
+<p>:from [x1, y1, x2, y2] Specifies a rectangular region of imageName to be
+returned. If only x1 and y1 are specified, the region extends from (x1,y1)
+to the bottom-right corner of imageName. If all four coordinates are given,
+they specify diagonally opposite corners of the rectangular region,
+including x1,y1 and excluding x2,y2. The default, if this option is not
+given, is the whole image.</p>
+</li><li>
+<p>:grayscale If this options is specified, the data will not contain color
+information. All pixel data will be transformed into grayscale.</p>
+</li></ul>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-data_source')" id="l_method-i-data_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/3ca633b890706c4f5892a179389b8389b5022dc0/ext/tk/lib/tk/image.rb#L318" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-data_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tk/image.rb, line 318</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">data</span>(<span class="ruby-identifier">keys</span>={})
+  <span class="ruby-identifier">tk_split_list</span>(<span class="ruby-identifier">tk_send</span>(<span class="ruby-string">&#39;data&#39;</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">_photo_hash_kv</span>(<span class="ruby-identifier">keys</span>)))
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-get">
+            
+              <b>get</b>(x, y)
+            
+            <a href="../classes/PhotoImage.html#method-i-get" name="method-i-get" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Returns the color of the pixel at coordinates (x,y) in the image as a list 
+of three integers between 0 and 255, representing the red, green and blue
+components respectively.</p>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-get_source')" id="l_method-i-get_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/3ca633b890706c4f5892a179389b8389b5022dc0/ext/tk/lib/tk/image.rb#L325" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-get_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tk/image.rb, line 325</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">get</span>(<span class="ruby-identifier">x</span>, <span class="ruby-identifier">y</span>)
+  <span class="ruby-identifier">tk_send</span>(<span class="ruby-string">&#39;get&#39;</span>, <span class="ruby-identifier">x</span>, <span class="ruby-identifier">y</span>).<span class="ruby-identifier">split</span>.<span class="ruby-identifier">collect</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">n</span><span class="ruby-operator">|</span> <span class="ruby-identifier">n</span>.<span class="ruby-identifier">to_i</span>}
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-get_transparency">
+            
+              <b>get_transparency</b>(x, y)
+            
+            <a href="../classes/PhotoImage.html#method-i-get_transparency" name="method-i-get_transparency" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Returns a boolean indicating if the pixel at (x,y) is transparent.</p>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-get_transparency_source')" id="l_method-i-get_transparency_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/3ca633b890706c4f5892a179389b8389b5022dc0/ext/tk/lib/tk/image.rb#L366" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-get_transparency_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tk/image.rb, line 366</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">get_transparency</span>(<span class="ruby-identifier">x</span>, <span class="ruby-identifier">y</span>)
+  <span class="ruby-identifier">bool</span>(<span class="ruby-identifier">tk_send</span>(<span class="ruby-string">&#39;transparency&#39;</span>, <span class="ruby-string">&#39;get&#39;</span>, <span class="ruby-identifier">x</span>, <span class="ruby-identifier">y</span>))
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-put">
+            
+              <b>put</b>(data, *opts)
+            
+            <a href="../classes/PhotoImage.html#method-i-put" name="method-i-put" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-put_source')" id="l_method-i-put_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/3ca633b890706c4f5892a179389b8389b5022dc0/ext/tk/lib/tk/image.rb#L329" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-put_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tk/image.rb, line 329</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">put</span>(<span class="ruby-identifier">data</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">opts</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">opts</span>.<span class="ruby-identifier">empty?</span>
+    <span class="ruby-identifier">tk_send</span>(<span class="ruby-string">&#39;put&#39;</span>, <span class="ruby-identifier">data</span>)
+  <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">opts</span>.<span class="ruby-identifier">size</span> <span class="ruby-operator">==</span> <span class="ruby-number">1</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">opts</span>[<span class="ruby-number">0</span>].<span class="ruby-identifier">kind_of?</span>(<span class="ruby-constant">Hash</span>)
+    <span class="ruby-identifier">tk_send</span>(<span class="ruby-string">&#39;put&#39;</span>, <span class="ruby-identifier">data</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">_photo_hash_kv</span>(<span class="ruby-identifier">opts</span>[<span class="ruby-number">0</span>]))
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-comment"># for backward compatibility</span>
+    <span class="ruby-identifier">tk_send</span>(<span class="ruby-string">&#39;put&#39;</span>, <span class="ruby-identifier">data</span>, <span class="ruby-string">&#39;-to&#39;</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">opts</span>)
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-read">
+            
+              <b>read</b>(file, *opts)
+            
+            <a href="../classes/PhotoImage.html#method-i-read" name="method-i-read" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-read_source')" id="l_method-i-read_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/3ca633b890706c4f5892a179389b8389b5022dc0/ext/tk/lib/tk/image.rb#L341" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-read_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tk/image.rb, line 341</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">read</span>(<span class="ruby-identifier">file</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">opts</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">opts</span>.<span class="ruby-identifier">size</span> <span class="ruby-operator">==</span> <span class="ruby-number">0</span>
+    <span class="ruby-identifier">tk_send</span>(<span class="ruby-string">&#39;read&#39;</span>, <span class="ruby-identifier">file</span>)
+  <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">opts</span>.<span class="ruby-identifier">size</span> <span class="ruby-operator">==</span> <span class="ruby-number">1</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">opts</span>[<span class="ruby-number">0</span>].<span class="ruby-identifier">kind_of?</span>(<span class="ruby-constant">Hash</span>)
+    <span class="ruby-identifier">tk_send</span>(<span class="ruby-string">&#39;read&#39;</span>, <span class="ruby-identifier">file</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">_photo_hash_kv</span>(<span class="ruby-identifier">opts</span>[<span class="ruby-number">0</span>]))
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-comment"># for backward compatibility</span>
+    <span class="ruby-identifier">args</span> = <span class="ruby-identifier">opts</span>.<span class="ruby-identifier">collect</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">term</span><span class="ruby-operator">|</span>
+      <span class="ruby-keyword">if</span> <span class="ruby-identifier">term</span>.<span class="ruby-identifier">kind_of?</span>(<span class="ruby-constant">String</span>) <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">term</span>.<span class="ruby-identifier">include?</span>(<span class="ruby-value">?\</span><span class="ruby-identifier">s</span>)
+        <span class="ruby-identifier">term</span>.<span class="ruby-identifier">split</span>
+      <span class="ruby-keyword">else</span>
+        <span class="ruby-identifier">term</span>
+      <span class="ruby-keyword">end</span>
+    }.<span class="ruby-identifier">flatten</span>
+    <span class="ruby-identifier">tk_send</span>(<span class="ruby-string">&#39;read&#39;</span>, <span class="ruby-identifier">file</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">args</span>)
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-redither">
+            
+              <b>redither</b>()
+            
+            <a href="../classes/PhotoImage.html#method-i-redither" name="method-i-redither" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-redither_source')" id="l_method-i-redither_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/3ca633b890706c4f5892a179389b8389b5022dc0/ext/tk/lib/tk/image.rb#L360" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-redither_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tk/image.rb, line 360</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">redither</span>
+  <span class="ruby-identifier">tk_send</span> <span class="ruby-string">&#39;redither&#39;</span>
+  <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-set_transparency">
+            
+              <b>set_transparency</b>(x, y, state)
+            
+            <a href="../classes/PhotoImage.html#method-i-set_transparency" name="method-i-set_transparency" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Makes the pixel at (x,y) transparent if <code>state</code> is true, and
+makes that pixel opaque otherwise.</p>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-set_transparency_source')" id="l_method-i-set_transparency_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/3ca633b890706c4f5892a179389b8389b5022dc0/ext/tk/lib/tk/image.rb#L372" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-set_transparency_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tk/image.rb, line 372</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">set_transparency</span>(<span class="ruby-identifier">x</span>, <span class="ruby-identifier">y</span>, <span class="ruby-identifier">state</span>)
+  <span class="ruby-identifier">tk_send</span>(<span class="ruby-string">&#39;transparency&#39;</span>, <span class="ruby-string">&#39;set&#39;</span>, <span class="ruby-identifier">x</span>, <span class="ruby-identifier">y</span>, <span class="ruby-identifier">state</span>)
+  <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-write">
+            
+              <b>write</b>(file, *opts)
+            
+            <a href="../classes/PhotoImage.html#method-i-write" name="method-i-write" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-write_source')" id="l_method-i-write_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/3ca633b890706c4f5892a179389b8389b5022dc0/ext/tk/lib/tk/image.rb#L377" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-write_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tk/image.rb, line 377</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">write</span>(<span class="ruby-identifier">file</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">opts</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">opts</span>.<span class="ruby-identifier">size</span> <span class="ruby-operator">==</span> <span class="ruby-number">0</span>
+    <span class="ruby-identifier">tk_send</span>(<span class="ruby-string">&#39;write&#39;</span>, <span class="ruby-identifier">file</span>)
+  <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">opts</span>.<span class="ruby-identifier">size</span> <span class="ruby-operator">==</span> <span class="ruby-number">1</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">opts</span>[<span class="ruby-number">0</span>].<span class="ruby-identifier">kind_of?</span>(<span class="ruby-constant">Hash</span>)
+    <span class="ruby-identifier">tk_send</span>(<span class="ruby-string">&#39;write&#39;</span>, <span class="ruby-identifier">file</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">_photo_hash_kv</span>(<span class="ruby-identifier">opts</span>[<span class="ruby-number">0</span>]))
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-comment"># for backward compatibility</span>
+    <span class="ruby-identifier">args</span> = <span class="ruby-identifier">opts</span>.<span class="ruby-identifier">collect</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">term</span><span class="ruby-operator">|</span>
+      <span class="ruby-keyword">if</span> <span class="ruby-identifier">term</span>.<span class="ruby-identifier">kind_of?</span>(<span class="ruby-constant">String</span>) <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">term</span>.<span class="ruby-identifier">include?</span>(<span class="ruby-value">?\</span><span class="ruby-identifier">s</span>)
+        <span class="ruby-identifier">term</span>.<span class="ruby-identifier">split</span>
+      <span class="ruby-keyword">else</span>
+        <span class="ruby-identifier">term</span>
+      <span class="ruby-keyword">end</span>
+    }.<span class="ruby-identifier">flatten</span>
+    <span class="ruby-identifier">tk_send</span>(<span class="ruby-string">&#39;write&#39;</span>, <span class="ruby-identifier">file</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">args</span>)
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                    </div>
+
+    </div>
+  </body>
+</html>    

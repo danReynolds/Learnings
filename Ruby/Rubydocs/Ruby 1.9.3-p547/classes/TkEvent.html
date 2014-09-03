@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>TkEvent</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="../css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/main.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/github.css" type="text/css" media="screen" />
+<script src="../js/jquery-1.3.2.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/jquery-effect.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+
+<body>     
+    <div class="banner">
+        
+        <h1>
+            <span class="type">Module</span> 
+            TkEvent 
+            
+        </h1>
+        <ul class="files">
+            
+            <li><a href="../files/ext/tk/lib/tk/event_rb.html">ext/tk/lib/tk/event.rb</a></li>
+            
+        </ul>
+    </div>
+    <div id="bodyContent">
+        <div id="content">
+  
+
+
+  
+
+
+  
+  
+
+
+  
+    <!-- Namespace -->
+    <div class="sectiontitle">Namespace</div>
+    <ul>
+      
+        <li>
+          <span class="type">CLASS</span>
+          <a href="TkEvent/Event.html">TkEvent::Event</a>
+        </li>
+      
+    </ul>
+  
+
+
+  
+    <!-- Method ref -->
+    <div class="sectiontitle">Methods</div>
+    <dl class="methods">
+      
+        <dt>I</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-install_bind">install_bind</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-install_bind_for_event_class">install_bind_for_event_class</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+    </dl>
+  
+
+  
+
+
+
+  
+
+    
+
+    
+
+    
+
+
+    
+
+
+    <!-- Methods -->
+        
+      <div class="sectiontitle">Instance Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-i-install_bind">
+            
+              <b>install_bind</b>(cmd, *args)
+            
+            <a href="../classes/TkEvent.html#method-i-install_bind" name="method-i-install_bind" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-install_bind_source')" id="l_method-i-install_bind_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tk/event.rb#L559" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-install_bind_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tk/event.rb, line 559</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">install_bind</span>(<span class="ruby-identifier">cmd</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">args</span>)
+  <span class="ruby-identifier">install_bind_for_event_class</span>(<span class="ruby-constant">TkEvent</span><span class="ruby-operator">::</span><span class="ruby-constant">Event</span>, <span class="ruby-identifier">cmd</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">args</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-install_bind_for_event_class">
+            
+              <b>install_bind_for_event_class</b>(klass, cmd, *args)
+            
+            <a href="../classes/TkEvent.html#method-i-install_bind_for_event_class" name="method-i-install_bind_for_event_class" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-install_bind_for_event_class_source')" id="l_method-i-install_bind_for_event_class_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tk/event.rb#L457" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-install_bind_for_event_class_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tk/event.rb, line 457</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">install_bind_for_event_class</span>(<span class="ruby-identifier">klass</span>, <span class="ruby-identifier">cmd</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">args</span>)
+  <span class="ruby-identifier">extra_args_tbl</span> = <span class="ruby-identifier">klass</span>.<span class="ruby-identifier">_get_extra_args_tbl</span>
+
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">args</span>.<span class="ruby-identifier">compact</span>.<span class="ruby-identifier">size</span> <span class="ruby-operator">&gt;</span> <span class="ruby-number">0</span>
+    <span class="ruby-identifier">args</span>.<span class="ruby-identifier">map!</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">arg</span><span class="ruby-operator">|</span> <span class="ruby-identifier">klass</span>.<span class="ruby-identifier">_sym2subst</span>(<span class="ruby-identifier">arg</span>)}
+    <span class="ruby-identifier">args</span> = <span class="ruby-identifier">args</span>.<span class="ruby-identifier">join</span>(<span class="ruby-string">&#39; &#39;</span>)
+    <span class="ruby-identifier">keys</span> = <span class="ruby-identifier">klass</span>.<span class="ruby-identifier">_get_subst_key</span>(<span class="ruby-identifier">args</span>)
+
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">cmd</span>.<span class="ruby-identifier">kind_of?</span>(<span class="ruby-constant">String</span>)
+      <span class="ruby-identifier">id</span> = <span class="ruby-identifier">cmd</span>
+    <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">cmd</span>.<span class="ruby-identifier">kind_of?</span>(<span class="ruby-constant">TkCallbackEntry</span>)
+      <span class="ruby-identifier">id</span> = <span class="ruby-identifier">install_cmd</span>(<span class="ruby-identifier">cmd</span>)
+    <span class="ruby-keyword">else</span>
+      <span class="ruby-identifier">id</span> = <span class="ruby-identifier">install_cmd</span>(<span class="ruby-identifier">proc</span>{<span class="ruby-operator">|</span><span class="ruby-operator">*</span><span class="ruby-identifier">arg</span><span class="ruby-operator">|</span>
+        <span class="ruby-identifier">ex_args</span> = []
+        <span class="ruby-identifier">extra_args_tbl</span>.<span class="ruby-identifier">reverse_each</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">conv</span><span class="ruby-operator">|</span> <span class="ruby-identifier">ex_args</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">conv</span>.<span class="ruby-identifier">call</span>(<span class="ruby-identifier">arg</span>.<span class="ruby-identifier">pop</span>)}
+        <span class="ruby-keyword">begin</span>
+          <span class="ruby-constant">TkUtil</span>.<span class="ruby-identifier">eval_cmd</span>(<span class="ruby-identifier">cmd</span>, <span class="ruby-operator">*</span>(<span class="ruby-identifier">ex_args</span>.<span class="ruby-identifier">concat</span>(<span class="ruby-identifier">klass</span>.<span class="ruby-identifier">scan_args</span>(<span class="ruby-identifier">keys</span>, <span class="ruby-identifier">arg</span>))))
+        <span class="ruby-keyword">rescue</span> <span class="ruby-constant">Exception</span>=<span class="ruby-operator">&gt;</span><span class="ruby-identifier">e</span>
+          <span class="ruby-keyword">if</span> <span class="ruby-constant">TkCore</span><span class="ruby-operator">::</span><span class="ruby-constant">INTERP</span>.<span class="ruby-identifier">kind_of?</span>(<span class="ruby-constant">TclTkIp</span>)
+            <span class="ruby-identifier">fail</span> <span class="ruby-identifier">e</span>
+          <span class="ruby-keyword">else</span>
+            <span class="ruby-comment"># MultiTkIp</span>
+            <span class="ruby-identifier">fail</span> <span class="ruby-constant">Exception</span>, <span class="ruby-node">&quot;#{e.class}: #{e.message.dup}&quot;</span>
+          <span class="ruby-keyword">end</span>
+        <span class="ruby-keyword">end</span>
+      })
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">cmd</span>.<span class="ruby-identifier">respond_to?</span>(<span class="ruby-value">:arity</span>) <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">cmd</span>.<span class="ruby-identifier">arity</span> <span class="ruby-operator">==</span> <span class="ruby-number">0</span>  <span class="ruby-comment"># args.size == 0</span>
+    <span class="ruby-identifier">args</span> = <span class="ruby-string">&#39;&#39;</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">cmd</span>.<span class="ruby-identifier">kind_of?</span>(<span class="ruby-constant">String</span>)
+      <span class="ruby-identifier">id</span> = <span class="ruby-identifier">cmd</span>
+    <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">cmd</span>.<span class="ruby-identifier">kind_of?</span>(<span class="ruby-constant">TkCallbackEntry</span>)
+      <span class="ruby-identifier">id</span> = <span class="ruby-identifier">install_cmd</span>(<span class="ruby-identifier">cmd</span>)
+    <span class="ruby-keyword">else</span>
+      <span class="ruby-identifier">id</span> = <span class="ruby-identifier">install_cmd</span>(<span class="ruby-identifier">proc</span>{
+                         <span class="ruby-keyword">begin</span>
+                           <span class="ruby-constant">TkUtil</span>.<span class="ruby-identifier">eval_cmd</span>(<span class="ruby-identifier">cmd</span>)
+                         <span class="ruby-keyword">rescue</span> <span class="ruby-constant">Exception</span>=<span class="ruby-operator">&gt;</span><span class="ruby-identifier">e</span>
+                           <span class="ruby-keyword">if</span> <span class="ruby-constant">TkCore</span><span class="ruby-operator">::</span><span class="ruby-constant">INTERP</span>.<span class="ruby-identifier">kind_of?</span>(<span class="ruby-constant">TclTkIp</span>)
+                             <span class="ruby-identifier">fail</span> <span class="ruby-identifier">e</span>
+                           <span class="ruby-keyword">else</span>
+                             <span class="ruby-comment"># MultiTkIp</span>
+                             <span class="ruby-identifier">fail</span> <span class="ruby-constant">Exception</span>, <span class="ruby-node">&quot;#{e.class}: #{e.message.dup}&quot;</span>
+                           <span class="ruby-keyword">end</span>
+                         <span class="ruby-keyword">end</span>
+                       })
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">keys</span>, <span class="ruby-identifier">args</span> = <span class="ruby-identifier">klass</span>.<span class="ruby-identifier">_get_all_subst_keys</span>
+
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">cmd</span>.<span class="ruby-identifier">kind_of?</span>(<span class="ruby-constant">String</span>)
+      <span class="ruby-identifier">id</span> = <span class="ruby-identifier">cmd</span>
+    <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">cmd</span>.<span class="ruby-identifier">kind_of?</span>(<span class="ruby-constant">TkCallbackEntry</span>)
+      <span class="ruby-identifier">id</span> = <span class="ruby-identifier">install_cmd</span>(<span class="ruby-identifier">cmd</span>)
+    <span class="ruby-keyword">else</span>
+      <span class="ruby-identifier">id</span> = <span class="ruby-identifier">install_cmd</span>(<span class="ruby-identifier">proc</span>{<span class="ruby-operator">|</span><span class="ruby-operator">*</span><span class="ruby-identifier">arg</span><span class="ruby-operator">|</span>
+        <span class="ruby-identifier">ex_args</span> = []
+        <span class="ruby-identifier">extra_args_tbl</span>.<span class="ruby-identifier">reverse_each</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">conv</span><span class="ruby-operator">|</span> <span class="ruby-identifier">ex_args</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">conv</span>.<span class="ruby-identifier">call</span>(<span class="ruby-identifier">arg</span>.<span class="ruby-identifier">pop</span>)}
+        <span class="ruby-keyword">begin</span>
+          <span class="ruby-constant">TkUtil</span>.<span class="ruby-identifier">eval_cmd</span>(<span class="ruby-identifier">cmd</span>, <span class="ruby-operator">*</span>(<span class="ruby-identifier">ex_args</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">klass</span>.<span class="ruby-identifier">new</span>(<span class="ruby-operator">*</span><span class="ruby-identifier">klass</span>.<span class="ruby-identifier">scan_args</span>(<span class="ruby-identifier">keys</span>, <span class="ruby-identifier">arg</span>))))
+        <span class="ruby-keyword">rescue</span> <span class="ruby-constant">Exception</span>=<span class="ruby-operator">&gt;</span><span class="ruby-identifier">e</span>
+          <span class="ruby-keyword">if</span> <span class="ruby-constant">TkCore</span><span class="ruby-operator">::</span><span class="ruby-constant">INTERP</span>.<span class="ruby-identifier">kind_of?</span>(<span class="ruby-constant">TclTkIp</span>)
+            <span class="ruby-identifier">fail</span> <span class="ruby-identifier">e</span>
+          <span class="ruby-keyword">else</span>
+            <span class="ruby-comment"># MultiTkIp</span>
+            <span class="ruby-identifier">fail</span> <span class="ruby-constant">Exception</span>, <span class="ruby-node">&quot;#{e.class}: #{e.message.dup}&quot;</span>
+          <span class="ruby-keyword">end</span>
+        <span class="ruby-keyword">end</span>
+      })
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-keyword">if</span> <span class="ruby-constant">TkCore</span><span class="ruby-operator">::</span><span class="ruby-constant">INTERP</span>.<span class="ruby-identifier">kind_of?</span>(<span class="ruby-constant">TclTkIp</span>)
+    <span class="ruby-identifier">id</span> <span class="ruby-operator">+</span> <span class="ruby-string">&#39; &#39;</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">args</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-comment"># MultiTkIp</span>
+    <span class="ruby-node">&quot;if {[set st [catch {#{id} #{args}} ret]] != 0} {
+       if {$st == 4} {
+         return -code continue $ret
+       } elseif {$st == 3} {
+         return -code break $ret
+       } elseif {$st == 2} {
+         return -code return $ret
+       } elseif {[regexp {^Exception: (TkCallbackContinue: .*)$} \
+                                                             $ret m msg]} {
+         return -code continue $msg
+       } elseif {[regexp {^Exception: (TkCallbackBreak: .*)$} $ret m msg]} {
+         return -code break $msg
+       } elseif {[regexp {^Exception: (TkCallbackReturn: .*)$} $ret m msg]} {
+         return -code return $msg
+       } elseif {[regexp {^Exception: (\\S+: .*)$} $ret m msg]} {
+         return -code return $msg
+       } else {
+         return -code error $ret
+       }
+     } else {
+        set ret
+     }&quot;</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                    </div>
+
+    </div>
+  </body>
+</html>    

@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>tktextio.rb</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="../../../../css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../../../../css/main.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../../../../css/github.css" type="text/css" media="screen" />
+<script src="../../../../js/jquery-1.3.2.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../../../js/jquery-effect.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../../../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../../../js/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+
+<body>     
+    <div class="banner">
+        
+        <h1>
+            tktextio.rb
+        </h1>
+        <ul class="files">
+            <li>ext/tk/sample/tktextio.rb</li>
+            <li>Last modified: 2014-05-16 18:32:33 +0000</li>
+        </ul>
+    </div>
+
+    <div id="bodyContent">
+        <div id="content">
+  
+    <div class="description">
+      <dl class="rdoc-list note-list"><dt><a href="../../../../classes/TkTextIO.html">TkTextIO</a> class 
+<dd>
+<p>handling I/O stream on a TkText widget</p>
+
+<pre><code>by Hidetoshi NAGAI (nagai@ai.kyutech.ac.jp)</code></pre>
+</dd></dl>
+
+<p>NOTE: <a href="../../../../classes/TkTextIO.html">TkTextIO</a> supports
+&#39;character&#39; (not &#39;byte&#39;) access only.</p>
+
+<pre><code>So, for example, TkTextIO#getc returns a character, TkTextIO#pos
+means the character position, TkTextIO#read(size) counts by
+characters, and so on.
+Of course, it is available to make TkTextIO class to suuport
+&#39;byte&#39; access. However, it may break multi-byte characters.
+and then, displayed string on the text widget may be garbled.
+I think that it is not good on the supposed situation of using
+TkTextIO.
+</code></pre>
+
+    </div>
+  
+
+
+  
+    <!-- File only: requires -->
+    <div class="sectiontitle">Required Files</div>
+    <ul>
+      
+        <li>tk</li>
+      
+        <li>tk/text</li>
+      
+        <li>tk/textmark</li>
+      
+        <li>thread</li>
+      
+    </ul>
+  
+
+
+  
+  
+
+
+  
+    <!-- Namespace -->
+    <div class="sectiontitle">Namespace</div>
+    <ul>
+      
+        <li>
+          <span class="type">MODULE</span>
+          <a href="../../../../classes/Errno.html">Errno</a>
+        </li>
+      
+        <li>
+          <span class="type">CLASS</span>
+          <a href="../../../../classes/IO.html">IO</a>
+        </li>
+      
+        <li>
+          <span class="type">CLASS</span>
+          <a href="../../../../classes/TkTextIO.html">TkTextIO</a>
+        </li>
+      
+    </ul>
+  
+
+
+  
+
+  
+
+
+
+  
+
+    
+
+    
+
+    
+
+
+    
+
+
+    <!-- Methods -->
+              </div>
+
+    </div>
+  </body>
+</html>

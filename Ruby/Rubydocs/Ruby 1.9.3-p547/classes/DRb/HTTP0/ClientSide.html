@@ -1,0 +1,405 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>DRb::HTTP0::ClientSide</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="../../../css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../../../css/main.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../../../css/github.css" type="text/css" media="screen" />
+<script src="../../../js/jquery-1.3.2.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../../js/jquery-effect.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../../js/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+
+<body>     
+    <div class="banner">
+        
+        <h1>
+            <span class="type">Class</span> 
+            DRb::HTTP0::ClientSide 
+            
+                <span class="parent">&lt; 
+                    
+                    <a href="../../Object.html">Object</a>
+                    
+                </span>
+            
+        </h1>
+        <ul class="files">
+            
+            <li><a href="../../../files/sample/drb/http0_rb.html">sample/drb/http0.rb</a></li>
+            
+        </ul>
+    </div>
+    <div id="bodyContent">
+        <div id="content">
+  
+
+
+  
+
+
+  
+  
+
+
+  
+
+
+  
+    <!-- Method ref -->
+    <div class="sectiontitle">Methods</div>
+    <dl class="methods">
+      
+        <dt>A</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-alive-3F">alive?</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>C</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-close">close</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>N</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-new">new</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>P</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-post">post</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>R</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-recv_reply">recv_reply</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>S</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-send_request">send_request</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+    </dl>
+  
+
+  
+
+
+
+  
+
+    
+
+    
+
+    
+
+
+    
+
+
+    <!-- Methods -->
+    
+      <div class="sectiontitle">Class Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-c-new">
+            
+              <b>new</b>(uri, config)
+            
+            <a href="../../../classes/DRb/HTTP0/ClientSide.html#method-c-new" name="method-c-new" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-new_source')" id="l_method-c-new_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/3a47cf3395dd4c4fe8bdd5df13aab698f2ca314b/sample/drb/http0.rb#L39" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-new_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File sample/drb/http0.rb, line 39</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">initialize</span>(<span class="ruby-identifier">uri</span>, <span class="ruby-identifier">config</span>)
+  <span class="ruby-ivar">@uri</span> = <span class="ruby-identifier">uri</span>
+  <span class="ruby-ivar">@res</span> = <span class="ruby-keyword">nil</span>
+  <span class="ruby-ivar">@config</span> = <span class="ruby-identifier">config</span>
+  <span class="ruby-ivar">@msg</span> = <span class="ruby-constant">DRbMessage</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">config</span>)
+  <span class="ruby-ivar">@proxy</span> = <span class="ruby-constant">ENV</span>[<span class="ruby-string">&#39;HTTP_PROXY&#39;</span>]
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                  
+      <div class="sectiontitle">Instance Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-i-alive-3F">
+            
+              <b>alive?</b>()
+            
+            <a href="../../../classes/DRb/HTTP0/ClientSide.html#method-i-alive-3F" name="method-i-alive-3F" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-alive-3F_source')" id="l_method-i-alive-3F_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/3a47cf3395dd4c4fe8bdd5df13aab698f2ca314b/sample/drb/http0.rb#L48" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-alive-3F_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File sample/drb/http0.rb, line 48</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">alive?</span>; <span class="ruby-keyword">false</span>; <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-close">
+            
+              <b>close</b>()
+            
+            <a href="../../../classes/DRb/HTTP0/ClientSide.html#method-i-close" name="method-i-close" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-close_source')" id="l_method-i-close_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/3a47cf3395dd4c4fe8bdd5df13aab698f2ca314b/sample/drb/http0.rb#L47" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-close_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File sample/drb/http0.rb, line 47</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">close</span>; <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-post">
+            
+              <b>post</b>(url, data)
+            
+            <a href="../../../classes/DRb/HTTP0/ClientSide.html#method-i-post" name="method-i-post" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-post_source')" id="l_method-i-post_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/3a47cf3395dd4c4fe8bdd5df13aab698f2ca314b/sample/drb/http0.rb#L61" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-post_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File sample/drb/http0.rb, line 61</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">post</span>(<span class="ruby-identifier">url</span>, <span class="ruby-identifier">data</span>)
+  <span class="ruby-identifier">it</span> = <span class="ruby-constant">URI</span>.<span class="ruby-identifier">parse</span>(<span class="ruby-identifier">url</span>)
+  <span class="ruby-identifier">path</span> = [(<span class="ruby-identifier">it</span>.<span class="ruby-identifier">path</span><span class="ruby-operator">==</span><span class="ruby-string">&#39;&#39;</span> <span class="ruby-operator">?</span> <span class="ruby-string">&#39;/&#39;</span> <span class="ruby-operator">:</span> <span class="ruby-identifier">it</span>.<span class="ruby-identifier">path</span>), <span class="ruby-identifier">it</span>.<span class="ruby-identifier">query</span>].<span class="ruby-identifier">compact</span>.<span class="ruby-identifier">join</span>(<span class="ruby-string">&#39;?&#39;</span>)
+  <span class="ruby-identifier">http</span> = <span class="ruby-constant">Net</span><span class="ruby-operator">::</span><span class="ruby-constant">HTTP</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">it</span>.<span class="ruby-identifier">host</span>, <span class="ruby-identifier">it</span>.<span class="ruby-identifier">port</span>)
+  <span class="ruby-identifier">sio</span> = <span class="ruby-constant">StrStream</span>.<span class="ruby-identifier">new</span>
+  <span class="ruby-identifier">http</span>.<span class="ruby-identifier">post</span>(<span class="ruby-identifier">path</span>, <span class="ruby-identifier">data</span>, {<span class="ruby-string">&#39;Content-Type&#39;</span>=<span class="ruby-operator">&gt;</span><span class="ruby-string">&#39;application/octetstream;&#39;</span>}) <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">str</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">sio</span>.<span class="ruby-identifier">write</span>(<span class="ruby-identifier">str</span>)
+    <span class="ruby-keyword">if</span> <span class="ruby-ivar">@config</span>[<span class="ruby-value">:load_limit</span>] <span class="ruby-operator">&lt;</span> <span class="ruby-identifier">sio</span>.<span class="ruby-identifier">buf</span>.<span class="ruby-identifier">size</span>
+      <span class="ruby-identifier">raise</span> <span class="ruby-constant">TypeError</span>, <span class="ruby-string">&#39;too large packet&#39;</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-ivar">@reply_stream</span> = <span class="ruby-identifier">sio</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-recv_reply">
+            
+              <b>recv_reply</b>()
+            
+            <a href="../../../classes/DRb/HTTP0/ClientSide.html#method-i-recv_reply" name="method-i-recv_reply" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-recv_reply_source')" id="l_method-i-recv_reply_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/3a47cf3395dd4c4fe8bdd5df13aab698f2ca314b/sample/drb/http0.rb#L57" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-recv_reply_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File sample/drb/http0.rb, line 57</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">recv_reply</span>
+  <span class="ruby-ivar">@msg</span>.<span class="ruby-identifier">recv_reply</span>(<span class="ruby-ivar">@reply_stream</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-send_request">
+            
+              <b>send_request</b>(ref, msg_id, *arg, &amp;b)
+            
+            <a href="../../../classes/DRb/HTTP0/ClientSide.html#method-i-send_request" name="method-i-send_request" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-send_request_source')" id="l_method-i-send_request_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/3a47cf3395dd4c4fe8bdd5df13aab698f2ca314b/sample/drb/http0.rb#L50" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-send_request_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File sample/drb/http0.rb, line 50</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">send_request</span>(<span class="ruby-identifier">ref</span>, <span class="ruby-identifier">msg_id</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">arg</span>, <span class="ruby-operator">&amp;</span><span class="ruby-identifier">b</span>)
+  <span class="ruby-identifier">stream</span> = <span class="ruby-constant">StrStream</span>.<span class="ruby-identifier">new</span>
+  <span class="ruby-ivar">@msg</span>.<span class="ruby-identifier">send_request</span>(<span class="ruby-identifier">stream</span>, <span class="ruby-identifier">ref</span>, <span class="ruby-identifier">msg_id</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">arg</span>, <span class="ruby-operator">&amp;</span><span class="ruby-identifier">b</span>)
+  <span class="ruby-ivar">@reply_stream</span> = <span class="ruby-constant">StrStream</span>.<span class="ruby-identifier">new</span>
+  <span class="ruby-identifier">post</span>(<span class="ruby-ivar">@uri</span>, <span class="ruby-identifier">stream</span>.<span class="ruby-identifier">buf</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                    </div>
+
+    </div>
+  </body>
+</html>    

@@ -1,0 +1,441 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>RailsGuides::Helpers</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="../../css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../../css/main.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../../css/github.css" type="text/css" media="screen" />
+<script src="../../js/jquery-1.3.2.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../js/jquery-effect.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../js/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+
+<body>     
+    <div class="banner">
+        
+        <h1>
+            <span class="type">Module</span> 
+            RailsGuides::Helpers 
+            
+        </h1>
+        <ul class="files">
+            
+            <li><a href="../../files/guides/rails_guides/helpers_rb.html">guides/rails_guides/helpers.rb</a></li>
+            
+        </ul>
+    </div>
+    <div id="bodyContent">
+        <div id="content">
+  
+
+
+  
+
+
+  
+  
+
+
+  
+
+
+  
+    <!-- Method ref -->
+    <div class="sectiontitle">Methods</div>
+    <dl class="methods">
+      
+        <dt>A</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-author">author</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>C</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-code">code</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>D</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-docs_for_menu">docs_for_menu</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-documents_by_section">documents_by_section</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-documents_flat">documents_flat</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>F</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-finished_documents">finished_documents</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>G</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-guide">guide</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+    </dl>
+  
+
+  
+
+
+
+  
+
+    
+
+    
+
+    
+
+
+    
+
+
+    <!-- Methods -->
+        
+      <div class="sectiontitle">Instance Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-i-author">
+            
+              <b>author</b>(name, nick, image = &#39;credits_pic_blank.gif&#39;, &amp;block)
+            
+            <a href="../../classes/RailsGuides/Helpers.html#method-i-author" name="method-i-author" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-author_source')" id="l_method-i-author_source">show</a>
+                
+                  | <a href="https://github.com/rails/rails/blob/67d4dc2bdb27648a61e153996d629b44834a9de4/guides/rails_guides/helpers.rb#L39" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-author_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File guides/rails_guides/helpers.rb, line 39</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">author</span>(<span class="ruby-identifier">name</span>, <span class="ruby-identifier">nick</span>, <span class="ruby-identifier">image</span> = <span class="ruby-string">&#39;credits_pic_blank.gif&#39;</span>, <span class="ruby-operator">&amp;</span><span class="ruby-identifier">block</span>)
+  <span class="ruby-identifier">image</span> = <span class="ruby-node">&quot;images/#{image}&quot;</span>
+
+  <span class="ruby-identifier">result</span> = <span class="ruby-identifier">content_tag</span>(<span class="ruby-value">:img</span>, <span class="ruby-keyword">nil</span>, <span class="ruby-value">:src</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">image</span>, <span class="ruby-value">:class</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&#39;left pic&#39;</span>, <span class="ruby-value">:alt</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">name</span>, <span class="ruby-value">:width</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-number">91</span>, <span class="ruby-value">:height</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-number">91</span>)
+  <span class="ruby-identifier">result</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">content_tag</span>(<span class="ruby-value">:h3</span>, <span class="ruby-identifier">name</span>)
+  <span class="ruby-identifier">result</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">content_tag</span>(<span class="ruby-value">:p</span>, <span class="ruby-identifier">capture</span>(<span class="ruby-operator">&amp;</span><span class="ruby-identifier">block</span>))
+  <span class="ruby-identifier">content_tag</span>(<span class="ruby-value">:div</span>, <span class="ruby-identifier">result</span>, <span class="ruby-value">:class</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&#39;clearfix&#39;</span>, <span class="ruby-value">:id</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">nick</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-code">
+            
+              <b>code</b>(&amp;block)
+            
+            <a href="../../classes/RailsGuides/Helpers.html#method-i-code" name="method-i-code" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-code_source')" id="l_method-i-code_source">show</a>
+                
+                  | <a href="https://github.com/rails/rails/blob/67d4dc2bdb27648a61e153996d629b44834a9de4/guides/rails_guides/helpers.rb#L48" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-code_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File guides/rails_guides/helpers.rb, line 48</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">code</span>(<span class="ruby-operator">&amp;</span><span class="ruby-identifier">block</span>)
+  <span class="ruby-identifier">c</span> = <span class="ruby-identifier">capture</span>(<span class="ruby-operator">&amp;</span><span class="ruby-identifier">block</span>)
+  <span class="ruby-identifier">content_tag</span>(<span class="ruby-value">:code</span>, <span class="ruby-identifier">c</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-docs_for_menu">
+            
+              <b>docs_for_menu</b>(position=nil)
+            
+            <a href="../../classes/RailsGuides/Helpers.html#method-i-docs_for_menu" name="method-i-docs_for_menu" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-docs_for_menu_source')" id="l_method-i-docs_for_menu_source">show</a>
+                
+                  | <a href="https://github.com/rails/rails/blob/67d4dc2bdb27648a61e153996d629b44834a9de4/guides/rails_guides/helpers.rb#L29" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-docs_for_menu_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File guides/rails_guides/helpers.rb, line 29</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">docs_for_menu</span>(<span class="ruby-identifier">position</span>=<span class="ruby-keyword">nil</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">position</span>.<span class="ruby-identifier">nil?</span>
+    <span class="ruby-identifier">documents_by_section</span>
+  <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">position</span> <span class="ruby-operator">==</span> <span class="ruby-string">&#39;L&#39;</span>
+    <span class="ruby-identifier">documents_by_section</span>.<span class="ruby-identifier">to</span>(<span class="ruby-number">3</span>)
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">documents_by_section</span>.<span class="ruby-identifier">from</span>(<span class="ruby-number">4</span>)
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-documents_by_section">
+            
+              <b>documents_by_section</b>()
+            
+            <a href="../../classes/RailsGuides/Helpers.html#method-i-documents_by_section" name="method-i-documents_by_section" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-documents_by_section_source')" id="l_method-i-documents_by_section_source">show</a>
+                
+                  | <a href="https://github.com/rails/rails/blob/67d4dc2bdb27648a61e153996d629b44834a9de4/guides/rails_guides/helpers.rb#L17" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-documents_by_section_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File guides/rails_guides/helpers.rb, line 17</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">documents_by_section</span>
+  <span class="ruby-ivar">@documents_by_section</span> <span class="ruby-operator">||=</span> <span class="ruby-constant">YAML</span>.<span class="ruby-identifier">load_file</span>(<span class="ruby-constant">File</span>.<span class="ruby-identifier">expand_path</span>(<span class="ruby-string">&#39;../../source/documents.yaml&#39;</span>, <span class="ruby-keyword">__FILE__</span>))
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-documents_flat">
+            
+              <b>documents_flat</b>()
+            
+            <a href="../../classes/RailsGuides/Helpers.html#method-i-documents_flat" name="method-i-documents_flat" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-documents_flat_source')" id="l_method-i-documents_flat_source">show</a>
+                
+                  | <a href="https://github.com/rails/rails/blob/67d4dc2bdb27648a61e153996d629b44834a9de4/guides/rails_guides/helpers.rb#L21" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-documents_flat_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File guides/rails_guides/helpers.rb, line 21</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">documents_flat</span>
+  <span class="ruby-identifier">documents_by_section</span>.<span class="ruby-identifier">flat_map</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">section</span><span class="ruby-operator">|</span> <span class="ruby-identifier">section</span>[<span class="ruby-string">&#39;documents&#39;</span>]}
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-finished_documents">
+            
+              <b>finished_documents</b>(documents)
+            
+            <a href="../../classes/RailsGuides/Helpers.html#method-i-finished_documents" name="method-i-finished_documents" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-finished_documents_source')" id="l_method-i-finished_documents_source">show</a>
+                
+                  | <a href="https://github.com/rails/rails/blob/67d4dc2bdb27648a61e153996d629b44834a9de4/guides/rails_guides/helpers.rb#L25" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-finished_documents_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File guides/rails_guides/helpers.rb, line 25</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">finished_documents</span>(<span class="ruby-identifier">documents</span>)
+  <span class="ruby-identifier">documents</span>.<span class="ruby-identifier">reject</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">document</span><span class="ruby-operator">|</span> <span class="ruby-identifier">document</span>[<span class="ruby-string">&#39;work_in_progress&#39;</span>] }
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-guide">
+            
+              <b>guide</b>(name, url, options = {}, &amp;block)
+            
+            <a href="../../classes/RailsGuides/Helpers.html#method-i-guide" name="method-i-guide" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-guide_source')" id="l_method-i-guide_source">show</a>
+                
+                  | <a href="https://github.com/rails/rails/blob/67d4dc2bdb27648a61e153996d629b44834a9de4/guides/rails_guides/helpers.rb#L5" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-guide_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File guides/rails_guides/helpers.rb, line 5</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">guide</span>(<span class="ruby-identifier">name</span>, <span class="ruby-identifier">url</span>, <span class="ruby-identifier">options</span> = {}, <span class="ruby-operator">&amp;</span><span class="ruby-identifier">block</span>)
+  <span class="ruby-identifier">link</span> = <span class="ruby-identifier">content_tag</span>(<span class="ruby-value">:a</span>, <span class="ruby-value">:href</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">url</span>) { <span class="ruby-identifier">name</span> }
+  <span class="ruby-identifier">result</span> = <span class="ruby-identifier">content_tag</span>(<span class="ruby-value">:dt</span>, <span class="ruby-identifier">link</span>)
+
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">options</span>[<span class="ruby-value">:work_in_progress</span>]
+    <span class="ruby-identifier">result</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">content_tag</span>(<span class="ruby-value">:dd</span>, <span class="ruby-string">&#39;Work in progress&#39;</span>, <span class="ruby-value">:class</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&#39;work-in-progress&#39;</span>)
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-identifier">result</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">content_tag</span>(<span class="ruby-value">:dd</span>, <span class="ruby-identifier">capture</span>(<span class="ruby-operator">&amp;</span><span class="ruby-identifier">block</span>))
+  <span class="ruby-identifier">result</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                    </div>
+
+    </div>
+  </body>
+</html>    

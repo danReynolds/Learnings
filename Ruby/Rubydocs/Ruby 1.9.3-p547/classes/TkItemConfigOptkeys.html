@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>TkItemConfigOptkeys</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="../css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/main.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/github.css" type="text/css" media="screen" />
+<script src="../js/jquery-1.3.2.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/jquery-effect.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+
+<body>     
+    <div class="banner">
+        
+        <h1>
+            <span class="type">Module</span> 
+            TkItemConfigOptkeys 
+            
+        </h1>
+        <ul class="files">
+            
+            <li><a href="../files/ext/tk/lib/tk/itemconfig_rb.html">ext/tk/lib/tk/itemconfig.rb</a></li>
+            
+        </ul>
+    </div>
+    <div id="bodyContent">
+        <div id="content">
+  
+
+
+  
+
+
+  
+  
+
+
+  
+
+
+  
+    <!-- Method ref -->
+    <div class="sectiontitle">Methods</div>
+    <dl class="methods">
+      
+        <dt>#</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-__conv_item_keyonly_opts">__conv_item_keyonly_opts</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>I</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-itemconfig_hash_kv">itemconfig_hash_kv</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+    </dl>
+  
+
+  
+    <!-- Includes -->
+    <div class="sectiontitle">Included Modules</div>
+    <ul>
+      
+        <li>
+          
+            <a href="TkUtil.html">
+              TkUtil
+            </a>
+          
+        </li>
+      
+    </ul>
+  
+
+
+
+  
+
+    
+
+    
+
+    
+
+
+    
+
+
+    <!-- Methods -->
+        
+      <div class="sectiontitle">Instance Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-i-__conv_item_keyonly_opts">
+            
+              <b>__conv_item_keyonly_opts</b>(id, keys)
+            
+            <a href="../classes/TkItemConfigOptkeys.html#method-i-__conv_item_keyonly_opts" name="method-i-__conv_item_keyonly_opts" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-__conv_item_keyonly_opts_source')" id="l_method-i-__conv_item_keyonly_opts_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tk/itemconfig.rb#L93" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-__conv_item_keyonly_opts_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tk/itemconfig.rb, line 93</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">__conv_item_keyonly_opts</span>(<span class="ruby-identifier">id</span>, <span class="ruby-identifier">keys</span>)
+  <span class="ruby-keyword">return</span> <span class="ruby-identifier">keys</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">keys</span>.<span class="ruby-identifier">kind_of?</span>(<span class="ruby-constant">Hash</span>)
+  <span class="ruby-identifier">keyonly</span> = <span class="ruby-identifier">__item_keyonly_optkeys</span>(<span class="ruby-identifier">id</span>)
+  <span class="ruby-identifier">keys2</span> = {}
+  <span class="ruby-identifier">keys</span>.<span class="ruby-identifier">each</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">k</span>, <span class="ruby-identifier">v</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">optkey</span> = <span class="ruby-identifier">keyonly</span>.<span class="ruby-identifier">find</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">kk</span>,<span class="ruby-identifier">vv</span><span class="ruby-operator">|</span> <span class="ruby-identifier">kk</span>.<span class="ruby-identifier">to_s</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">k</span>.<span class="ruby-identifier">to_s</span>}
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">optkey</span>
+      <span class="ruby-identifier">defkey</span>, <span class="ruby-identifier">undefkey</span> = <span class="ruby-identifier">optkey</span>
+      <span class="ruby-keyword">if</span> <span class="ruby-identifier">v</span>
+        <span class="ruby-identifier">keys2</span>[<span class="ruby-identifier">defkey</span>.<span class="ruby-identifier">to_s</span>] = <span class="ruby-constant">None</span>
+      <span class="ruby-keyword">else</span>
+        <span class="ruby-identifier">keys2</span>[<span class="ruby-identifier">undefkey</span>.<span class="ruby-identifier">to_s</span>] = <span class="ruby-constant">None</span>
+      <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">else</span>
+      <span class="ruby-identifier">keys2</span>[<span class="ruby-identifier">k</span>.<span class="ruby-identifier">to_s</span>] = <span class="ruby-identifier">v</span>
+    <span class="ruby-keyword">end</span>
+  }
+  <span class="ruby-identifier">keys2</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-itemconfig_hash_kv">
+            
+              <b>itemconfig_hash_kv</b>(id, keys, enc_mode = nil, conf = nil)
+            
+            <a href="../classes/TkItemConfigOptkeys.html#method-i-itemconfig_hash_kv" name="method-i-itemconfig_hash_kv" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-itemconfig_hash_kv_source')" id="l_method-i-itemconfig_hash_kv_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tk/itemconfig.rb#L113" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-itemconfig_hash_kv_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tk/itemconfig.rb, line 113</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">itemconfig_hash_kv</span>(<span class="ruby-identifier">id</span>, <span class="ruby-identifier">keys</span>, <span class="ruby-identifier">enc_mode</span> = <span class="ruby-keyword">nil</span>, <span class="ruby-identifier">conf</span> = <span class="ruby-keyword">nil</span>)
+  <span class="ruby-identifier">hash_kv</span>(<span class="ruby-identifier">__conv_item_keyonly_opts</span>(<span class="ruby-identifier">id</span>, <span class="ruby-identifier">keys</span>), <span class="ruby-identifier">enc_mode</span>, <span class="ruby-identifier">conf</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                    </div>
+
+    </div>
+  </body>
+</html>    

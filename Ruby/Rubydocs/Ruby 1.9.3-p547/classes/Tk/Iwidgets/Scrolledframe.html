@@ -1,0 +1,505 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>Tk::Iwidgets::Scrolledframe</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="../../../css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../../../css/main.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../../../css/github.css" type="text/css" media="screen" />
+<script src="../../../js/jquery-1.3.2.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../../js/jquery-effect.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../../js/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+
+<body>     
+    <div class="banner">
+        
+        <h1>
+            <span class="type">Class</span> 
+            Tk::Iwidgets::Scrolledframe 
+            
+                <span class="parent">&lt; 
+                    
+                    <a href="Scrolledwidget.html">Tk::Iwidgets::Scrolledwidget</a>
+                    
+                </span>
+            
+        </h1>
+        <ul class="files">
+            
+            <li><a href="../../../files/ext/tk/lib/tkextlib/iwidgets/scrolledframe_rb.html">ext/tk/lib/tkextlib/iwidgets/scrolledframe.rb</a></li>
+            
+        </ul>
+    </div>
+    <div id="bodyContent">
+        <div id="content">
+  
+
+
+  
+
+
+  
+  
+
+
+  
+
+
+  
+    <!-- Method ref -->
+    <div class="sectiontitle">Methods</div>
+    <dl class="methods">
+      
+        <dt>C</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-child_site">child_site</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>J</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-justify">justify</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>X</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-xview">xview</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-xview_moveto">xview_moveto</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-xview_scroll">xview_scroll</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>Y</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-yview">yview</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-yview_moveto">yview_moveto</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-yview_scroll">yview_scroll</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+    </dl>
+  
+
+  
+
+
+
+  
+
+    
+
+    
+
+    
+      <!-- Section constants -->
+      <div class="sectiontitle">Constants</div>
+      <table border='0' cellpadding='5'>
+        
+          <tr valign='top'>
+            <td class="attr-name">TkCommandNames</td>
+            <td>=</td>
+            <td class="attr-value">[&#39;::iwidgets::scrolledframe&#39;.freeze].freeze</td>
+          </tr>
+          
+            <tr valign='top'>
+              <td>&nbsp;</td>
+              <td colspan="2" class="attr-desc"></td>
+            </tr>
+          
+        
+          <tr valign='top'>
+            <td class="attr-name">WidgetClassName</td>
+            <td>=</td>
+            <td class="attr-value">&#39;Scrolledframe&#39;.freeze</td>
+          </tr>
+          
+            <tr valign='top'>
+              <td>&nbsp;</td>
+              <td colspan="2" class="attr-desc"></td>
+            </tr>
+          
+        
+      </table>
+    
+
+
+    
+
+
+    <!-- Methods -->
+        
+      <div class="sectiontitle">Instance Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-i-child_site">
+            
+              <b>child_site</b>()
+            
+            <a href="../../../classes/Tk/Iwidgets/Scrolledframe.html#method-i-child_site" name="method-i-child_site" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-child_site_source')" id="l_method-i-child_site_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/iwidgets/scrolledframe.rb#L21" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-child_site_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/iwidgets/scrolledframe.rb, line 21</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">child_site</span>
+  <span class="ruby-identifier">window</span>(<span class="ruby-identifier">tk_call</span>(<span class="ruby-ivar">@path</span>, <span class="ruby-string">&#39;childsite&#39;</span>))
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-justify">
+            
+              <b>justify</b>(dir)
+            
+            <a href="../../../classes/Tk/Iwidgets/Scrolledframe.html#method-i-justify" name="method-i-justify" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-justify_source')" id="l_method-i-justify_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/iwidgets/scrolledframe.rb#L25" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-justify_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/iwidgets/scrolledframe.rb, line 25</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">justify</span>(<span class="ruby-identifier">dir</span>)
+  <span class="ruby-identifier">tk_call</span>(<span class="ruby-ivar">@path</span>, <span class="ruby-string">&#39;justify&#39;</span>, <span class="ruby-identifier">dir</span>)
+  <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-xview">
+            
+              <b>xview</b>(*index)
+            
+            <a href="../../../classes/Tk/Iwidgets/Scrolledframe.html#method-i-xview" name="method-i-xview" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-xview_source')" id="l_method-i-xview_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/iwidgets/scrolledframe.rb#L30" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-xview_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/iwidgets/scrolledframe.rb, line 30</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">xview</span>(<span class="ruby-operator">*</span><span class="ruby-identifier">index</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">index</span>.<span class="ruby-identifier">size</span> <span class="ruby-operator">==</span> <span class="ruby-number">0</span>
+    <span class="ruby-identifier">list</span>(<span class="ruby-identifier">tk_send_without_enc</span>(<span class="ruby-string">&#39;xview&#39;</span>))
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">tk_send_without_enc</span>(<span class="ruby-string">&#39;xview&#39;</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">index</span>)
+    <span class="ruby-keyword">self</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-xview_moveto">
+            
+              <b>xview_moveto</b>(*index)
+            
+            <a href="../../../classes/Tk/Iwidgets/Scrolledframe.html#method-i-xview_moveto" name="method-i-xview_moveto" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-xview_moveto_source')" id="l_method-i-xview_moveto_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/iwidgets/scrolledframe.rb#L38" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-xview_moveto_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/iwidgets/scrolledframe.rb, line 38</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">xview_moveto</span>(<span class="ruby-operator">*</span><span class="ruby-identifier">index</span>)
+  <span class="ruby-identifier">xview</span>(<span class="ruby-string">&#39;moveto&#39;</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">index</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-xview_scroll">
+            
+              <b>xview_scroll</b>(*index)
+            
+            <a href="../../../classes/Tk/Iwidgets/Scrolledframe.html#method-i-xview_scroll" name="method-i-xview_scroll" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-xview_scroll_source')" id="l_method-i-xview_scroll_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/iwidgets/scrolledframe.rb#L41" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-xview_scroll_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/iwidgets/scrolledframe.rb, line 41</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">xview_scroll</span>(<span class="ruby-operator">*</span><span class="ruby-identifier">index</span>)
+  <span class="ruby-identifier">xview</span>(<span class="ruby-string">&#39;scroll&#39;</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">index</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-yview">
+            
+              <b>yview</b>(*index)
+            
+            <a href="../../../classes/Tk/Iwidgets/Scrolledframe.html#method-i-yview" name="method-i-yview" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-yview_source')" id="l_method-i-yview_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/iwidgets/scrolledframe.rb#L45" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-yview_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/iwidgets/scrolledframe.rb, line 45</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">yview</span>(<span class="ruby-operator">*</span><span class="ruby-identifier">index</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">index</span>.<span class="ruby-identifier">size</span> <span class="ruby-operator">==</span> <span class="ruby-number">0</span>
+    <span class="ruby-identifier">list</span>(<span class="ruby-identifier">tk_send_without_enc</span>(<span class="ruby-string">&#39;yview&#39;</span>))
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">tk_send_without_enc</span>(<span class="ruby-string">&#39;yview&#39;</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">index</span>)
+    <span class="ruby-keyword">self</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-yview_moveto">
+            
+              <b>yview_moveto</b>(*index)
+            
+            <a href="../../../classes/Tk/Iwidgets/Scrolledframe.html#method-i-yview_moveto" name="method-i-yview_moveto" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-yview_moveto_source')" id="l_method-i-yview_moveto_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/iwidgets/scrolledframe.rb#L53" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-yview_moveto_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/iwidgets/scrolledframe.rb, line 53</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">yview_moveto</span>(<span class="ruby-operator">*</span><span class="ruby-identifier">index</span>)
+  <span class="ruby-identifier">yview</span>(<span class="ruby-string">&#39;moveto&#39;</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">index</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-yview_scroll">
+            
+              <b>yview_scroll</b>(*index)
+            
+            <a href="../../../classes/Tk/Iwidgets/Scrolledframe.html#method-i-yview_scroll" name="method-i-yview_scroll" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-yview_scroll_source')" id="l_method-i-yview_scroll_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/iwidgets/scrolledframe.rb#L56" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-yview_scroll_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/iwidgets/scrolledframe.rb, line 56</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">yview_scroll</span>(<span class="ruby-operator">*</span><span class="ruby-identifier">index</span>)
+  <span class="ruby-identifier">yview</span>(<span class="ruby-string">&#39;scroll&#39;</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">index</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                    </div>
+
+    </div>
+  </body>
+</html>    

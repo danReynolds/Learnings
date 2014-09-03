@@ -1,0 +1,1296 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>Test1</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="../css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/main.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/github.css" type="text/css" media="screen" />
+<script src="../js/jquery-1.3.2.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/jquery-effect.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+
+<body>     
+    <div class="banner">
+        
+        <h1>
+            <span class="type">Class</span> 
+            Test1 
+            
+                <span class="parent">&lt; 
+                    
+                    <a href="Object.html">Object</a>
+                    
+                </span>
+            
+        </h1>
+        <ul class="files">
+            
+            <li><a href="../files/ext/tk/sample/tcltklib/sample1_rb.html">ext/tk/sample/tcltklib/sample1.rb</a></li>
+            
+        </ul>
+    </div>
+    <div id="bodyContent">
+        <div id="content">
+  
+    <div class="description">
+      
+<p>以下は, <a href="Test1.html">Test1</a> のインスタンスの initialize() で, tcl/tk
+に関する処理を行う例である. 必ずしもそのようにする必要は無く, (もし, そうしたければ) class の外で tcl/tk
+に関する処理を行っても良い.</p>
+
+    </div>
+  
+
+
+  
+
+
+  
+  
+
+
+  
+
+
+  
+    <!-- Method ref -->
+    <div class="sectiontitle">Methods</div>
+    <dl class="methods">
+      
+        <dt>I</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-inittoplevel">inittoplevel</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>N</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-new">new</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>S</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-sample">sample</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>T</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-test_button">test_button</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-test_canvas">test_canvas</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-test_checkbutton">test_checkbutton</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-test_entry">test_entry</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-test_label">test_label</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-test_listbox">test_listbox</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-test_menu">test_menu</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-test_modal">test_modal</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-test_radiobutton">test_radiobutton</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-test_raise">test_raise</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-test_scale">test_scale</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-test_text">test_text</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+    </dl>
+  
+
+  
+
+
+
+  
+
+    
+
+    
+
+    
+
+
+    
+
+
+    <!-- Methods -->
+    
+      <div class="sectiontitle">Class Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-c-new">
+            
+              <b>new</b>()
+            
+            <a href="../classes/Test1.html#method-c-new" name="method-c-new" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>初期化(インタプリタを生成してウィジェットを生成する).</p>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-new_source')" id="l_method-c-new_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/b10617c3d1c302e03c41fbd8fffdc7a61bf3d1cf/ext/tk/sample/tcltklib/sample1.rb#L16" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-new_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/sample/tcltklib/sample1.rb, line 16</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">initialize</span>()
+
+  <span class="ruby-comment">#### 使う前のおまじない</span>
+
+  <span class="ruby-comment"># インタプリタの生成.</span>
+  <span class="ruby-identifier">ip</span> = <span class="ruby-constant">TclTkInterpreter</span>.<span class="ruby-identifier">new</span>()
+  <span class="ruby-comment"># コマンドに対応するオブジェクトを c に設定しておく.</span>
+  <span class="ruby-identifier">c</span> = <span class="ruby-identifier">ip</span>.<span class="ruby-identifier">commands</span>()
+  <span class="ruby-comment"># 使用するコマンドに対応するオブジェクトは変数に入れておく.</span>
+  <span class="ruby-identifier">append</span>, <span class="ruby-identifier">bind</span>, <span class="ruby-identifier">button</span>, <span class="ruby-identifier">destroy</span>, <span class="ruby-identifier">incr</span>, <span class="ruby-identifier">info</span>, <span class="ruby-identifier">label</span>, <span class="ruby-identifier">place</span>, <span class="ruby-identifier">set</span>, <span class="ruby-identifier">wm</span> =
+    <span class="ruby-identifier">c</span>.<span class="ruby-identifier">values_at</span>(
+    <span class="ruby-string">&quot;append&quot;</span>, <span class="ruby-string">&quot;bind&quot;</span>, <span class="ruby-string">&quot;button&quot;</span>, <span class="ruby-string">&quot;destroy&quot;</span>, <span class="ruby-string">&quot;incr&quot;</span>, <span class="ruby-string">&quot;info&quot;</span>, <span class="ruby-string">&quot;label&quot;</span>, <span class="ruby-string">&quot;place&quot;</span>,
+    <span class="ruby-string">&quot;set&quot;</span>, <span class="ruby-string">&quot;wm&quot;</span>)
+
+  <span class="ruby-comment">#### tcl/tk のコマンドに対応するオブジェクト(TclTkCommand)の操作</span>
+
+  <span class="ruby-comment"># 実行する時は, e() メソッドを使う.</span>
+  <span class="ruby-comment"># (以下は, tcl/tk における info command r* を実行.)</span>
+  <span class="ruby-identifier">print</span> <span class="ruby-identifier">info</span>.<span class="ruby-identifier">e</span>(<span class="ruby-string">&quot;command&quot;</span>, <span class="ruby-string">&quot;r*&quot;</span>), <span class="ruby-string">&quot;\n&quot;</span>
+  <span class="ruby-comment"># 引数は, まとめた文字列にしても同じ.</span>
+  <span class="ruby-identifier">print</span> <span class="ruby-identifier">info</span>.<span class="ruby-identifier">e</span>(<span class="ruby-string">&quot;command r*&quot;</span>), <span class="ruby-string">&quot;\n&quot;</span>
+  <span class="ruby-comment"># 変数を用いなくとも実行できるが, 見ためが悪い.</span>
+  <span class="ruby-identifier">print</span> <span class="ruby-identifier">c</span>[<span class="ruby-string">&quot;info&quot;</span>].<span class="ruby-identifier">e</span>(<span class="ruby-string">&quot;command&quot;</span>, <span class="ruby-string">&quot;r*&quot;</span>), <span class="ruby-string">&quot;\n&quot;</span>
+  <span class="ruby-comment"># インタプリタのメソッドとしても実行できるが, 効率が悪い.</span>
+  <span class="ruby-identifier">print</span> <span class="ruby-identifier">ip</span>.<span class="ruby-identifier">info</span>(<span class="ruby-string">&quot;command&quot;</span>, <span class="ruby-string">&quot;r*&quot;</span>), <span class="ruby-string">&quot;\n&quot;</span>
+
+  <span class="ruby-comment">####</span>
+
+  <span class="ruby-comment"># 以下, 生成したオブジェクトは変数に代入しておかないと</span>
+  <span class="ruby-comment"># GC の対象になってしまう.</span>
+
+  <span class="ruby-comment">#### tcl/tk の変数に対応するオブジェクト(TclTkVariable)の操作</span>
+
+  <span class="ruby-comment"># 生成と同時に値を設定する.</span>
+  <span class="ruby-identifier">v1</span> = <span class="ruby-constant">TclTkVariable</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">ip</span>, <span class="ruby-string">&quot;20&quot;</span>)
+  <span class="ruby-comment"># 読み出しは get メソッドを使う.</span>
+  <span class="ruby-identifier">print</span> <span class="ruby-identifier">v1</span>.<span class="ruby-identifier">get</span>(), <span class="ruby-string">&quot;\n&quot;</span>
+  <span class="ruby-comment"># 設定は set メソッドを使う.</span>
+  <span class="ruby-identifier">v1</span>.<span class="ruby-identifier">set</span>(<span class="ruby-number">40</span>)
+  <span class="ruby-identifier">print</span> <span class="ruby-identifier">v1</span>.<span class="ruby-identifier">get</span>(), <span class="ruby-string">&quot;\n&quot;</span>
+  <span class="ruby-comment"># set コマンドを使って読み出し, 設定は可能だが見ためが悪い.</span>
+  <span class="ruby-comment"># e() メソッド等の引数に直接 TclTkObject や数値を書いても良い.</span>
+  <span class="ruby-identifier">set</span>.<span class="ruby-identifier">e</span>(<span class="ruby-identifier">v1</span>, <span class="ruby-number">30</span>)
+  <span class="ruby-identifier">print</span> <span class="ruby-identifier">set</span>.<span class="ruby-identifier">e</span>(<span class="ruby-identifier">v1</span>), <span class="ruby-string">&quot;\n&quot;</span>
+  <span class="ruby-comment"># tcl/tk のコマンドで変数を操作できる.</span>
+  <span class="ruby-identifier">incr</span>.<span class="ruby-identifier">e</span>(<span class="ruby-identifier">v1</span>)
+  <span class="ruby-identifier">print</span> <span class="ruby-identifier">v1</span>.<span class="ruby-identifier">get</span>(), <span class="ruby-string">&quot;\n&quot;</span>
+  <span class="ruby-identifier">append</span>.<span class="ruby-identifier">e</span>(<span class="ruby-identifier">v1</span>, <span class="ruby-number">10</span>)
+  <span class="ruby-identifier">print</span> <span class="ruby-identifier">v1</span>.<span class="ruby-identifier">get</span>(), <span class="ruby-string">&quot;\n&quot;</span>
+
+  <span class="ruby-comment">#### tcl/tk のウィジェットに対応するオブジェクト(TclTkWidget)の操作</span>
+
+  <span class="ruby-comment"># ルートウィジェットを取り出す.</span>
+  <span class="ruby-identifier">root</span> = <span class="ruby-identifier">ip</span>.<span class="ruby-identifier">rootwidget</span>()
+  <span class="ruby-comment"># ウィジェットの操作.</span>
+  <span class="ruby-identifier">root</span>.<span class="ruby-identifier">e</span>(<span class="ruby-string">&quot;configure -height 300 -width 300&quot;</span>)
+  <span class="ruby-comment"># タイトルを付けるときは wm を使う.</span>
+  <span class="ruby-identifier">wm</span>.<span class="ruby-identifier">e</span>(<span class="ruby-string">&quot;title&quot;</span>, <span class="ruby-identifier">root</span>, <span class="ruby-identifier">$0</span>)
+  <span class="ruby-comment"># 親ウィジェットとコマンドを指定して, ウィジェットを作る.</span>
+  <span class="ruby-identifier">l1</span> = <span class="ruby-constant">TclTkWidget</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">ip</span>, <span class="ruby-identifier">root</span>, <span class="ruby-identifier">label</span>, <span class="ruby-string">&quot;-text {type `x&#39; to print}&quot;</span>)
+  <span class="ruby-comment"># place すると表示される.</span>
+  <span class="ruby-identifier">place</span>.<span class="ruby-identifier">e</span>(<span class="ruby-identifier">l1</span>, <span class="ruby-string">&quot;-x 0 -rely 0.0 -relwidth 1 -relheight 0.1&quot;</span>)
+  <span class="ruby-comment"># コマンド名は文字列で指定しても良いが, 見ためが悪い.</span>
+  <span class="ruby-comment"># (コマンド名は独立した引数でなければならない.)</span>
+  <span class="ruby-identifier">l2</span> = <span class="ruby-constant">TclTkWidget</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">ip</span>, <span class="ruby-identifier">root</span>, <span class="ruby-string">&quot;label&quot;</span>)
+  <span class="ruby-comment"># ウィジェットの操作.</span>
+  <span class="ruby-identifier">l2</span>.<span class="ruby-identifier">e</span>(<span class="ruby-string">&quot;configure -text {type `q&#39; to exit}&quot;</span>)
+  <span class="ruby-identifier">place</span>.<span class="ruby-identifier">e</span>(<span class="ruby-identifier">l2</span>, <span class="ruby-string">&quot;-x 0 -rely 0.1 -relwidth 1 -relheight 0.1&quot;</span>)
+
+  <span class="ruby-comment">#### tcl/tk のコールバックに対応するオブジェクト(TclTkCallback)の操作</span>
+
+  <span class="ruby-comment"># コールバックを生成する.</span>
+  <span class="ruby-identifier">c1</span> = <span class="ruby-constant">TclTkCallback</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">ip</span>, <span class="ruby-identifier">proc</span>{<span class="ruby-identifier">sample</span>(<span class="ruby-identifier">ip</span>, <span class="ruby-identifier">root</span>)})
+  <span class="ruby-comment"># コールバックを持つウィジェットを生成する.</span>
+  <span class="ruby-identifier">b1</span> = <span class="ruby-constant">TclTkWidget</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">ip</span>, <span class="ruby-identifier">root</span>, <span class="ruby-identifier">button</span>, <span class="ruby-string">&quot;-text sample -command&quot;</span>, <span class="ruby-identifier">c1</span>)
+  <span class="ruby-identifier">place</span>.<span class="ruby-identifier">e</span>(<span class="ruby-identifier">b1</span>, <span class="ruby-string">&quot;-x 0 -rely 0.2 -relwidth 1 -relheight 0.1&quot;</span>)
+  <span class="ruby-comment"># イベントループを抜けるには destroy.e(root) する.</span>
+  <span class="ruby-identifier">c2</span> = <span class="ruby-constant">TclTkCallback</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">ip</span>, <span class="ruby-identifier">proc</span>{<span class="ruby-identifier">destroy</span>.<span class="ruby-identifier">e</span>(<span class="ruby-identifier">root</span>)})
+  <span class="ruby-identifier">b2</span> = <span class="ruby-constant">TclTkWidget</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">ip</span>, <span class="ruby-identifier">root</span>, <span class="ruby-identifier">button</span>, <span class="ruby-string">&quot;-text exit -command&quot;</span>, <span class="ruby-identifier">c2</span>)
+  <span class="ruby-identifier">place</span>.<span class="ruby-identifier">e</span>(<span class="ruby-identifier">b2</span>, <span class="ruby-string">&quot;-x 0 -rely 0.3 -relwidth 1 -relheight 0.1&quot;</span>)
+
+  <span class="ruby-comment">#### イベントのバインド</span>
+  <span class="ruby-comment"># script の追加 (bind tag sequence +script) は今のところできない.</span>
+  <span class="ruby-comment"># (イテレータ変数の設定がうまくいかない.)</span>
+
+  <span class="ruby-comment"># 基本的にはウィジェットに対するコールバックと同じ.</span>
+  <span class="ruby-identifier">c3</span> = <span class="ruby-constant">TclTkCallback</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">ip</span>, <span class="ruby-identifier">proc</span>{<span class="ruby-identifier">print</span>(<span class="ruby-string">&quot;q pressed\n&quot;</span>); <span class="ruby-identifier">destroy</span>.<span class="ruby-identifier">e</span>(<span class="ruby-identifier">root</span>)})
+  <span class="ruby-identifier">bind</span>.<span class="ruby-identifier">e</span>(<span class="ruby-identifier">root</span>, <span class="ruby-string">&quot;q&quot;</span>, <span class="ruby-identifier">c3</span>)
+  <span class="ruby-comment"># bind コマンドで % 置換によりパラメータを受け取りたいときは,</span>
+  <span class="ruby-comment"># proc{} の後ろに文字列で指定すると,</span>
+  <span class="ruby-comment"># 置換結果をイテレータ変数を通して受け取ることができる.</span>
+  <span class="ruby-comment"># ただし proc{} の後ろの文字列は,</span>
+  <span class="ruby-comment"># bind コマンドに与えるコールバック以外で指定してはいけない.</span>
+  <span class="ruby-identifier">c4</span> = <span class="ruby-constant">TclTkCallback</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">ip</span>, <span class="ruby-identifier">proc</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">i</span><span class="ruby-operator">|</span> <span class="ruby-identifier">print</span>(<span class="ruby-node">&quot;#{i} pressed\n&quot;</span>)}, <span class="ruby-string">&quot;%A&quot;</span>)
+  <span class="ruby-identifier">bind</span>.<span class="ruby-identifier">e</span>(<span class="ruby-identifier">root</span>, <span class="ruby-string">&quot;x&quot;</span>, <span class="ruby-identifier">c4</span>)
+  <span class="ruby-comment"># TclTkCallback を GC の対象にしたければ,</span>
+  <span class="ruby-comment"># dcb() (または deletecallbackkeys()) する必要がある.</span>
+  <span class="ruby-identifier">cb</span> = [<span class="ruby-identifier">c1</span>, <span class="ruby-identifier">c2</span>, <span class="ruby-identifier">c3</span>, <span class="ruby-identifier">c4</span>]
+  <span class="ruby-identifier">c5</span> = <span class="ruby-constant">TclTkCallback</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">ip</span>, <span class="ruby-identifier">proc</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">w</span><span class="ruby-operator">|</span> <span class="ruby-constant">TclTk</span>.<span class="ruby-identifier">dcb</span>(<span class="ruby-identifier">cb</span>, <span class="ruby-identifier">root</span>, <span class="ruby-identifier">w</span>)}, <span class="ruby-string">&quot;%W&quot;</span>)
+  <span class="ruby-identifier">bind</span>.<span class="ruby-identifier">e</span>(<span class="ruby-identifier">root</span>, <span class="ruby-string">&quot;&lt;Destroy&gt;&quot;</span>, <span class="ruby-identifier">c5</span>)
+  <span class="ruby-identifier">cb</span>.<span class="ruby-identifier">push</span>(<span class="ruby-identifier">c5</span>)
+
+  <span class="ruby-comment">#### tcl/tk のイメージに対応するオブジェクト(TclTkImage)の操作</span>
+
+  <span class="ruby-comment"># データを指定して生成する.</span>
+  <span class="ruby-identifier">i1</span> = <span class="ruby-constant">TclTkImage</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">ip</span>, <span class="ruby-string">&quot;photo&quot;</span>, <span class="ruby-string">&quot;-file maru.gif&quot;</span>)
+  <span class="ruby-comment"># ラベルに張り付けてみる.</span>
+  <span class="ruby-identifier">l3</span> = <span class="ruby-constant">TclTkWidget</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">ip</span>, <span class="ruby-identifier">root</span>, <span class="ruby-identifier">label</span>, <span class="ruby-string">&quot;-relief raised -image&quot;</span>, <span class="ruby-identifier">i1</span>)
+  <span class="ruby-identifier">place</span>.<span class="ruby-identifier">e</span>(<span class="ruby-identifier">l3</span>, <span class="ruby-string">&quot;-x 0 -rely 0.4 -relwidth 0.2 -relheight 0.2&quot;</span>)
+  <span class="ruby-comment"># 空のイメージを生成して後で操作する.</span>
+  <span class="ruby-identifier">i2</span> = <span class="ruby-constant">TclTkImage</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">ip</span>, <span class="ruby-string">&quot;photo&quot;</span>)
+  <span class="ruby-comment"># イメージを操作する.</span>
+  <span class="ruby-identifier">i2</span>.<span class="ruby-identifier">e</span>(<span class="ruby-string">&quot;copy&quot;</span>, <span class="ruby-identifier">i1</span>)
+  <span class="ruby-identifier">i2</span>.<span class="ruby-identifier">e</span>(<span class="ruby-string">&quot;configure -gamma 0.5&quot;</span>)
+  <span class="ruby-identifier">l4</span> = <span class="ruby-constant">TclTkWidget</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">ip</span>, <span class="ruby-identifier">root</span>, <span class="ruby-identifier">label</span>, <span class="ruby-string">&quot;-relief raised -image&quot;</span>, <span class="ruby-identifier">i2</span>)
+  <span class="ruby-identifier">place</span>.<span class="ruby-identifier">e</span>(<span class="ruby-identifier">l4</span>, <span class="ruby-string">&quot;-relx 0.2 -rely 0.4 -relwidth 0.2 -relheight 0.2&quot;</span>)
+
+  <span class="ruby-comment">####</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                  
+      <div class="sectiontitle">Instance Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-i-inittoplevel">
+            
+              <b>inittoplevel</b>(ip, parent, title)
+            
+            <a href="../classes/Test1.html#method-i-inittoplevel" name="method-i-inittoplevel" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>inittoplevel(ip, parent, title)</p>
+
+<pre><code>以下の処理をまとめて行う.
+    1. toplevel ウィジェットを作成する.
+    2. コールバックを登録する配列を用意し, toplevel ウィジェットの
+      &lt;Destroy&gt; イベントにコールバックを削除する手続きを登録する.
+    3. クローズボタンを作る.
+  作成した toplevel ウィジェット, クローズボタン, コールバック登録用変数
+  を返す.
+ip: インタプリタ
+parent: 親ウィジェット
+title: toplevel ウィジェットのウインドウのタイトル</code></pre>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-inittoplevel_source')" id="l_method-i-inittoplevel_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/b10617c3d1c302e03c41fbd8fffdc7a61bf3d1cf/ext/tk/sample/tcltklib/sample1.rb#L208" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-inittoplevel_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/sample/tcltklib/sample1.rb, line 208</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">inittoplevel</span>(<span class="ruby-identifier">ip</span>, <span class="ruby-identifier">parent</span>, <span class="ruby-identifier">title</span>)
+  <span class="ruby-identifier">bind</span>, <span class="ruby-identifier">button</span>, <span class="ruby-identifier">destroy</span>, <span class="ruby-identifier">toplevel</span>, <span class="ruby-identifier">wm</span> = <span class="ruby-identifier">ip</span>.<span class="ruby-identifier">commands</span>().<span class="ruby-identifier">values_at</span>(
+    <span class="ruby-string">&quot;bind&quot;</span>, <span class="ruby-string">&quot;button&quot;</span>, <span class="ruby-string">&quot;destroy&quot;</span>, <span class="ruby-string">&quot;toplevel&quot;</span>, <span class="ruby-string">&quot;wm&quot;</span>)
+
+  <span class="ruby-comment"># 新しいウインドウを開くには, toplevel を使う.</span>
+  <span class="ruby-identifier">t1</span> = <span class="ruby-constant">TclTkWidget</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">ip</span>, <span class="ruby-identifier">parent</span>, <span class="ruby-identifier">toplevel</span>)
+  <span class="ruby-comment"># タイトルを付けておく</span>
+  <span class="ruby-identifier">wm</span>.<span class="ruby-identifier">e</span>(<span class="ruby-string">&quot;title&quot;</span>, <span class="ruby-identifier">t1</span>, <span class="ruby-identifier">title</span>)
+
+  <span class="ruby-comment"># ウィジェットが破壊されたとき, コールバックが GC の対象になるようにする.</span>
+  <span class="ruby-identifier">cb</span> = []
+  <span class="ruby-identifier">cb</span>.<span class="ruby-identifier">push</span>(<span class="ruby-identifier">c</span> = <span class="ruby-constant">TclTkCallback</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">ip</span>, <span class="ruby-identifier">proc</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">w</span><span class="ruby-operator">|</span> <span class="ruby-constant">TclTk</span>.<span class="ruby-identifier">dcb</span>(<span class="ruby-identifier">cb</span>, <span class="ruby-identifier">t1</span>, <span class="ruby-identifier">w</span>)}, <span class="ruby-string">&quot;%W&quot;</span>))
+  <span class="ruby-identifier">bind</span>.<span class="ruby-identifier">e</span>(<span class="ruby-identifier">t1</span>, <span class="ruby-string">&quot;&lt;Destroy&gt;&quot;</span>, <span class="ruby-identifier">c</span>)
+  <span class="ruby-comment"># close ボタンを作っておく.</span>
+  <span class="ruby-comment"># toplevel ウィジェットを破壊するには destroy する.</span>
+  <span class="ruby-identifier">cb</span>.<span class="ruby-identifier">push</span>(<span class="ruby-identifier">c</span> = <span class="ruby-constant">TclTkCallback</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">ip</span>, <span class="ruby-identifier">proc</span>{<span class="ruby-identifier">destroy</span>.<span class="ruby-identifier">e</span>(<span class="ruby-identifier">t1</span>)}))
+  <span class="ruby-identifier">b1</span> = <span class="ruby-constant">TclTkWidget</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">ip</span>, <span class="ruby-identifier">t1</span>, <span class="ruby-identifier">button</span>, <span class="ruby-string">&quot;-text close -command&quot;</span>, <span class="ruby-identifier">c</span>)
+
+  <span class="ruby-keyword">return</span> <span class="ruby-identifier">t1</span>, <span class="ruby-identifier">b1</span>, <span class="ruby-identifier">cb</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-sample">
+            
+              <b>sample</b>(ip, parent)
+            
+            <a href="../classes/Test1.html#method-i-sample" name="method-i-sample" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>サンプルのためのウィジェットを生成する.</p>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-sample_source')" id="l_method-i-sample_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/b10617c3d1c302e03c41fbd8fffdc7a61bf3d1cf/ext/tk/sample/tcltklib/sample1.rb#L137" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-sample_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/sample/tcltklib/sample1.rb, line 137</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">sample</span>(<span class="ruby-identifier">ip</span>, <span class="ruby-identifier">parent</span>)
+  <span class="ruby-identifier">bind</span>, <span class="ruby-identifier">button</span>, <span class="ruby-identifier">destroy</span>, <span class="ruby-identifier">grid</span>, <span class="ruby-identifier">toplevel</span>, <span class="ruby-identifier">wm</span> = <span class="ruby-identifier">ip</span>.<span class="ruby-identifier">commands</span>().<span class="ruby-identifier">values_at</span>(
+    <span class="ruby-string">&quot;bind&quot;</span>, <span class="ruby-string">&quot;button&quot;</span>, <span class="ruby-string">&quot;destroy&quot;</span>, <span class="ruby-string">&quot;grid&quot;</span>, <span class="ruby-string">&quot;toplevel&quot;</span>, <span class="ruby-string">&quot;wm&quot;</span>)
+
+  <span class="ruby-comment">## toplevel</span>
+
+  <span class="ruby-comment"># 新しいウインドウを開くには, toplevel を使う.</span>
+  <span class="ruby-identifier">t1</span> = <span class="ruby-constant">TclTkWidget</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">ip</span>, <span class="ruby-identifier">parent</span>, <span class="ruby-identifier">toplevel</span>)
+  <span class="ruby-comment"># タイトルを付けておく</span>
+  <span class="ruby-identifier">wm</span>.<span class="ruby-identifier">e</span>(<span class="ruby-string">&quot;title&quot;</span>, <span class="ruby-identifier">t1</span>, <span class="ruby-string">&quot;sample&quot;</span>)
+
+  <span class="ruby-comment"># ウィジェットが破壊されたとき, コールバックが GC の対象になるようにする.</span>
+  <span class="ruby-identifier">cb</span> = []
+  <span class="ruby-identifier">cb</span>.<span class="ruby-identifier">push</span>(<span class="ruby-identifier">c</span> = <span class="ruby-constant">TclTkCallback</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">ip</span>, <span class="ruby-identifier">proc</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">w</span><span class="ruby-operator">|</span> <span class="ruby-constant">TclTk</span>.<span class="ruby-identifier">dcb</span>(<span class="ruby-identifier">cb</span>, <span class="ruby-identifier">t1</span>, <span class="ruby-identifier">w</span>)}, <span class="ruby-string">&quot;%W&quot;</span>))
+  <span class="ruby-identifier">bind</span>.<span class="ruby-identifier">e</span>(<span class="ruby-identifier">t1</span>, <span class="ruby-string">&quot;&lt;Destroy&gt;&quot;</span>, <span class="ruby-identifier">c</span>)
+
+  <span class="ruby-comment"># ボタンの生成.</span>
+  <span class="ruby-identifier">wid</span> = []
+  <span class="ruby-comment"># toplevel ウィジェットを破壊するには destroy する.</span>
+  <span class="ruby-identifier">cb</span>.<span class="ruby-identifier">push</span>(<span class="ruby-identifier">c</span> = <span class="ruby-constant">TclTkCallback</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">ip</span>, <span class="ruby-identifier">proc</span>{<span class="ruby-identifier">destroy</span>.<span class="ruby-identifier">e</span>(<span class="ruby-identifier">t1</span>)}))
+  <span class="ruby-identifier">wid</span>.<span class="ruby-identifier">push</span>(<span class="ruby-constant">TclTkWidget</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">ip</span>, <span class="ruby-identifier">t1</span>, <span class="ruby-identifier">button</span>, <span class="ruby-string">&quot;-text close -command&quot;</span>, <span class="ruby-identifier">c</span>))
+  <span class="ruby-identifier">cb</span>.<span class="ruby-identifier">push</span>(<span class="ruby-identifier">c</span> = <span class="ruby-constant">TclTkCallback</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">ip</span>, <span class="ruby-identifier">proc</span>{<span class="ruby-identifier">test_label</span>(<span class="ruby-identifier">ip</span>, <span class="ruby-identifier">t1</span>)}))
+  <span class="ruby-identifier">wid</span>.<span class="ruby-identifier">push</span>(<span class="ruby-constant">TclTkWidget</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">ip</span>, <span class="ruby-identifier">t1</span>, <span class="ruby-identifier">button</span>, <span class="ruby-string">&quot;-text label -command&quot;</span>, <span class="ruby-identifier">c</span>))
+  <span class="ruby-identifier">cb</span>.<span class="ruby-identifier">push</span>(<span class="ruby-identifier">c</span> = <span class="ruby-constant">TclTkCallback</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">ip</span>, <span class="ruby-identifier">proc</span>{<span class="ruby-identifier">test_button</span>(<span class="ruby-identifier">ip</span>, <span class="ruby-identifier">t1</span>)}))
+  <span class="ruby-identifier">wid</span>.<span class="ruby-identifier">push</span>(<span class="ruby-constant">TclTkWidget</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">ip</span>, <span class="ruby-identifier">t1</span>, <span class="ruby-identifier">button</span>, <span class="ruby-string">&quot;-text button -command&quot;</span>, <span class="ruby-identifier">c</span>))
+  <span class="ruby-identifier">cb</span>.<span class="ruby-identifier">push</span>(<span class="ruby-identifier">c</span> = <span class="ruby-constant">TclTkCallback</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">ip</span>, <span class="ruby-identifier">proc</span>{<span class="ruby-identifier">test_checkbutton</span>(<span class="ruby-identifier">ip</span>, <span class="ruby-identifier">t1</span>)}))
+  <span class="ruby-identifier">wid</span>.<span class="ruby-identifier">push</span>(<span class="ruby-constant">TclTkWidget</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">ip</span>, <span class="ruby-identifier">t1</span>, <span class="ruby-identifier">button</span>, <span class="ruby-string">&quot;-text checkbutton -command&quot;</span>, <span class="ruby-identifier">c</span>))
+  <span class="ruby-identifier">cb</span>.<span class="ruby-identifier">push</span>(<span class="ruby-identifier">c</span> = <span class="ruby-constant">TclTkCallback</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">ip</span>, <span class="ruby-identifier">proc</span>{<span class="ruby-identifier">test_radiobutton</span>(<span class="ruby-identifier">ip</span>, <span class="ruby-identifier">t1</span>)}))
+  <span class="ruby-identifier">wid</span>.<span class="ruby-identifier">push</span>(<span class="ruby-constant">TclTkWidget</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">ip</span>, <span class="ruby-identifier">t1</span>, <span class="ruby-identifier">button</span>, <span class="ruby-string">&quot;-text radiobutton -command&quot;</span>, <span class="ruby-identifier">c</span>))
+  <span class="ruby-identifier">cb</span>.<span class="ruby-identifier">push</span>(<span class="ruby-identifier">c</span> = <span class="ruby-constant">TclTkCallback</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">ip</span>, <span class="ruby-identifier">proc</span>{<span class="ruby-identifier">test_scale</span>(<span class="ruby-identifier">ip</span>, <span class="ruby-identifier">t1</span>)}))
+  <span class="ruby-identifier">wid</span>.<span class="ruby-identifier">push</span>(<span class="ruby-constant">TclTkWidget</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">ip</span>, <span class="ruby-identifier">t1</span>, <span class="ruby-identifier">button</span>, <span class="ruby-string">&quot;-text scale -command&quot;</span>, <span class="ruby-identifier">c</span>))
+  <span class="ruby-identifier">cb</span>.<span class="ruby-identifier">push</span>(<span class="ruby-identifier">c</span> = <span class="ruby-constant">TclTkCallback</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">ip</span>, <span class="ruby-identifier">proc</span>{<span class="ruby-identifier">test_entry</span>(<span class="ruby-identifier">ip</span>, <span class="ruby-identifier">t1</span>)}))
+  <span class="ruby-identifier">wid</span>.<span class="ruby-identifier">push</span>(<span class="ruby-constant">TclTkWidget</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">ip</span>, <span class="ruby-identifier">t1</span>, <span class="ruby-identifier">button</span>, <span class="ruby-string">&quot;-text entry -command&quot;</span>, <span class="ruby-identifier">c</span>))
+  <span class="ruby-identifier">cb</span>.<span class="ruby-identifier">push</span>(<span class="ruby-identifier">c</span> = <span class="ruby-constant">TclTkCallback</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">ip</span>, <span class="ruby-identifier">proc</span>{<span class="ruby-identifier">test_text</span>(<span class="ruby-identifier">ip</span>, <span class="ruby-identifier">t1</span>)}))
+  <span class="ruby-identifier">wid</span>.<span class="ruby-identifier">push</span>(<span class="ruby-constant">TclTkWidget</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">ip</span>, <span class="ruby-identifier">t1</span>, <span class="ruby-identifier">button</span>, <span class="ruby-string">&quot;-text text -command&quot;</span>, <span class="ruby-identifier">c</span>))
+  <span class="ruby-identifier">cb</span>.<span class="ruby-identifier">push</span>(<span class="ruby-identifier">c</span> = <span class="ruby-constant">TclTkCallback</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">ip</span>, <span class="ruby-identifier">proc</span>{<span class="ruby-identifier">test_raise</span>(<span class="ruby-identifier">ip</span>, <span class="ruby-identifier">t1</span>)}))
+  <span class="ruby-identifier">wid</span>.<span class="ruby-identifier">push</span>(<span class="ruby-constant">TclTkWidget</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">ip</span>, <span class="ruby-identifier">t1</span>, <span class="ruby-identifier">button</span>, <span class="ruby-string">&quot;-text raise/lower -command&quot;</span>, <span class="ruby-identifier">c</span>))
+  <span class="ruby-identifier">cb</span>.<span class="ruby-identifier">push</span>(<span class="ruby-identifier">c</span> = <span class="ruby-constant">TclTkCallback</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">ip</span>, <span class="ruby-identifier">proc</span>{<span class="ruby-identifier">test_modal</span>(<span class="ruby-identifier">ip</span>, <span class="ruby-identifier">t1</span>)}))
+  <span class="ruby-identifier">wid</span>.<span class="ruby-identifier">push</span>(<span class="ruby-constant">TclTkWidget</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">ip</span>, <span class="ruby-identifier">t1</span>, <span class="ruby-identifier">button</span>, <span class="ruby-string">&quot;-text message/modal -command&quot;</span>,
+    <span class="ruby-identifier">c</span>))
+  <span class="ruby-identifier">cb</span>.<span class="ruby-identifier">push</span>(<span class="ruby-identifier">c</span> = <span class="ruby-constant">TclTkCallback</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">ip</span>, <span class="ruby-identifier">proc</span>{<span class="ruby-identifier">test_menu</span>(<span class="ruby-identifier">ip</span>, <span class="ruby-identifier">t1</span>)}))
+  <span class="ruby-identifier">wid</span>.<span class="ruby-identifier">push</span>(<span class="ruby-constant">TclTkWidget</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">ip</span>, <span class="ruby-identifier">t1</span>, <span class="ruby-identifier">button</span>, <span class="ruby-string">&quot;-text menu -command&quot;</span>, <span class="ruby-identifier">c</span>))
+  <span class="ruby-identifier">cb</span>.<span class="ruby-identifier">push</span>(<span class="ruby-identifier">c</span> = <span class="ruby-constant">TclTkCallback</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">ip</span>, <span class="ruby-identifier">proc</span>{<span class="ruby-identifier">test_listbox</span>(<span class="ruby-identifier">ip</span>, <span class="ruby-identifier">t1</span>)}))
+  <span class="ruby-identifier">wid</span>.<span class="ruby-identifier">push</span>(<span class="ruby-constant">TclTkWidget</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">ip</span>, <span class="ruby-identifier">t1</span>, <span class="ruby-identifier">button</span>, <span class="ruby-string">&quot;-text listbox/scrollbar&quot;</span>,
+    <span class="ruby-string">&quot;-command&quot;</span>, <span class="ruby-identifier">c</span>))
+  <span class="ruby-identifier">cb</span>.<span class="ruby-identifier">push</span>(<span class="ruby-identifier">c</span> = <span class="ruby-constant">TclTkCallback</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">ip</span>, <span class="ruby-identifier">proc</span>{<span class="ruby-identifier">test_canvas</span>(<span class="ruby-identifier">ip</span>, <span class="ruby-identifier">t1</span>)}))
+  <span class="ruby-identifier">wid</span>.<span class="ruby-identifier">push</span>(<span class="ruby-constant">TclTkWidget</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">ip</span>, <span class="ruby-identifier">t1</span>, <span class="ruby-identifier">button</span>, <span class="ruby-string">&quot;-text canvas -command&quot;</span>, <span class="ruby-identifier">c</span>))
+
+  <span class="ruby-comment"># grid で表示する.</span>
+  <span class="ruby-identifier">ro</span> = <span class="ruby-identifier">co</span> = <span class="ruby-number">0</span>
+  <span class="ruby-identifier">wid</span>.<span class="ruby-identifier">each</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">w</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">grid</span>.<span class="ruby-identifier">e</span>(<span class="ruby-identifier">w</span>, <span class="ruby-string">&quot;-row&quot;</span>, <span class="ruby-identifier">ro</span>, <span class="ruby-string">&quot;-column&quot;</span>, <span class="ruby-identifier">co</span>, <span class="ruby-string">&quot;-sticky news&quot;</span>)
+    <span class="ruby-identifier">ro</span> <span class="ruby-operator">+=</span> <span class="ruby-number">1</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">ro</span> <span class="ruby-operator">==</span> <span class="ruby-number">7</span>
+      <span class="ruby-identifier">ro</span> = <span class="ruby-number">0</span>
+      <span class="ruby-identifier">co</span> <span class="ruby-operator">+=</span> <span class="ruby-number">1</span>
+    <span class="ruby-keyword">end</span>
+  }
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-test_button">
+            
+              <b>test_button</b>(ip, parent)
+            
+            <a href="../classes/Test1.html#method-i-test_button" name="method-i-test_button" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>button のサンプル.</p>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-test_button_source')" id="l_method-i-test_button_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/b10617c3d1c302e03c41fbd8fffdc7a61bf3d1cf/ext/tk/sample/tcltklib/sample1.rb#L273" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-test_button_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/sample/tcltklib/sample1.rb, line 273</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">test_button</span>(<span class="ruby-identifier">ip</span>, <span class="ruby-identifier">parent</span>)
+  <span class="ruby-identifier">button</span>, <span class="ruby-identifier">pack</span> = <span class="ruby-identifier">ip</span>.<span class="ruby-identifier">commands</span>().<span class="ruby-identifier">values_at</span>(<span class="ruby-string">&quot;button&quot;</span>, <span class="ruby-string">&quot;pack&quot;</span>)
+  <span class="ruby-identifier">t1</span>, <span class="ruby-identifier">b1</span>, <span class="ruby-identifier">cb</span> = <span class="ruby-identifier">inittoplevel</span>(<span class="ruby-identifier">ip</span>, <span class="ruby-identifier">parent</span>, <span class="ruby-string">&quot;button&quot;</span>)
+
+  <span class="ruby-comment">## button</span>
+
+  <span class="ruby-comment"># コールバック内で参照する変数は先に宣言しておかなければならない.</span>
+  <span class="ruby-identifier">b3</span> = <span class="ruby-identifier">b4</span> = <span class="ruby-keyword">nil</span>
+  <span class="ruby-identifier">cb</span>.<span class="ruby-identifier">push</span>(<span class="ruby-identifier">c</span> = <span class="ruby-constant">TclTkCallback</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">ip</span>, <span class="ruby-identifier">proc</span>{<span class="ruby-identifier">b3</span>.<span class="ruby-identifier">e</span>(<span class="ruby-string">&quot;flash&quot;</span>); <span class="ruby-identifier">b4</span>.<span class="ruby-identifier">e</span>(<span class="ruby-string">&quot;flash&quot;</span>)}))
+  <span class="ruby-identifier">b2</span> = <span class="ruby-constant">TclTkWidget</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">ip</span>, <span class="ruby-identifier">t1</span>, <span class="ruby-identifier">button</span>, <span class="ruby-string">&quot;-text flash -command&quot;</span>, <span class="ruby-identifier">c</span>)
+  <span class="ruby-identifier">cb</span>.<span class="ruby-identifier">push</span>(<span class="ruby-identifier">c</span> = <span class="ruby-constant">TclTkCallback</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">ip</span>, <span class="ruby-identifier">proc</span>{<span class="ruby-identifier">b2</span>.<span class="ruby-identifier">e</span>(<span class="ruby-string">&quot;configure -state normal&quot;</span>)}))
+  <span class="ruby-identifier">b3</span> = <span class="ruby-constant">TclTkWidget</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">ip</span>, <span class="ruby-identifier">t1</span>, <span class="ruby-identifier">button</span>, <span class="ruby-string">&quot;-text normal -command&quot;</span>, <span class="ruby-identifier">c</span>)
+  <span class="ruby-identifier">cb</span>.<span class="ruby-identifier">push</span>(<span class="ruby-identifier">c</span> = <span class="ruby-constant">TclTkCallback</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">ip</span>, <span class="ruby-identifier">proc</span>{<span class="ruby-identifier">b2</span>.<span class="ruby-identifier">e</span>(<span class="ruby-string">&quot;configure -state disabled&quot;</span>)}))
+  <span class="ruby-identifier">b4</span> = <span class="ruby-constant">TclTkWidget</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">ip</span>, <span class="ruby-identifier">t1</span>, <span class="ruby-identifier">button</span>, <span class="ruby-string">&quot;-text disable -command&quot;</span>, <span class="ruby-identifier">c</span>)
+  <span class="ruby-identifier">pack</span>.<span class="ruby-identifier">e</span>(<span class="ruby-identifier">b1</span>, <span class="ruby-identifier">b2</span>, <span class="ruby-identifier">b3</span>, <span class="ruby-identifier">b4</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-test_canvas">
+            
+              <b>test_canvas</b>(ip, parent)
+            
+            <a href="../classes/Test1.html#method-i-test_canvas" name="method-i-test_canvas" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>canvas のサンプル.</p>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-test_canvas_source')" id="l_method-i-test_canvas_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/b10617c3d1c302e03c41fbd8fffdc7a61bf3d1cf/ext/tk/sample/tcltklib/sample1.rb#L560" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-test_canvas_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/sample/tcltklib/sample1.rb, line 560</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">test_canvas</span>(<span class="ruby-identifier">ip</span>, <span class="ruby-identifier">parent</span>)
+  <span class="ruby-identifier">canvas</span>, <span class="ruby-identifier">lower</span>, <span class="ruby-identifier">pack</span> = <span class="ruby-identifier">ip</span>.<span class="ruby-identifier">commands</span>().<span class="ruby-identifier">values_at</span>(<span class="ruby-string">&quot;canvas&quot;</span>, <span class="ruby-string">&quot;lower&quot;</span>, <span class="ruby-string">&quot;pack&quot;</span>)
+  <span class="ruby-identifier">t1</span>, <span class="ruby-identifier">b1</span>, <span class="ruby-identifier">cb</span> = <span class="ruby-identifier">inittoplevel</span>(<span class="ruby-identifier">ip</span>, <span class="ruby-identifier">parent</span>, <span class="ruby-string">&quot;canvas&quot;</span>)
+
+  <span class="ruby-comment">## canvas</span>
+
+  <span class="ruby-identifier">ca1</span> = <span class="ruby-constant">TclTkWidget</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">ip</span>, <span class="ruby-identifier">t1</span>, <span class="ruby-identifier">canvas</span>, <span class="ruby-string">&quot;-width 400 -height 300&quot;</span>)
+  <span class="ruby-identifier">lower</span>.<span class="ruby-identifier">e</span>(<span class="ruby-identifier">ca1</span>, <span class="ruby-identifier">b1</span>)
+  <span class="ruby-comment"># rectangle を作る.</span>
+  <span class="ruby-identifier">idr</span> = <span class="ruby-identifier">ca1</span>.<span class="ruby-identifier">e</span>(<span class="ruby-string">&quot;create rectangle 10 10 20 20&quot;</span>)
+  <span class="ruby-comment"># oval を作る.</span>
+  <span class="ruby-identifier">ca1</span>.<span class="ruby-identifier">e</span>(<span class="ruby-string">&quot;create oval 60 10 100 50&quot;</span>)
+  <span class="ruby-comment"># polygon を作る.</span>
+  <span class="ruby-identifier">ca1</span>.<span class="ruby-identifier">e</span>(<span class="ruby-string">&quot;create polygon 110 10 110 30 140 10&quot;</span>)
+  <span class="ruby-comment"># line を作る.</span>
+  <span class="ruby-identifier">ca1</span>.<span class="ruby-identifier">e</span>(<span class="ruby-string">&quot;create line 150 10 150 30 190 10&quot;</span>)
+  <span class="ruby-comment"># arc を作る.</span>
+  <span class="ruby-identifier">ca1</span>.<span class="ruby-identifier">e</span>(<span class="ruby-string">&quot;create arc 200 10 250 50 -start 0 -extent 90 -style pieslice&quot;</span>)
+  <span class="ruby-comment"># i1 は本当は, どこかで破壊しなければならないが, 面倒なので放ってある.</span>
+  <span class="ruby-identifier">i1</span> = <span class="ruby-constant">TclTkImage</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">ip</span>, <span class="ruby-string">&quot;photo&quot;</span>, <span class="ruby-string">&quot;-file maru.gif&quot;</span>)
+  <span class="ruby-comment"># image を作る.</span>
+  <span class="ruby-identifier">ca1</span>.<span class="ruby-identifier">e</span>(<span class="ruby-string">&quot;create image 100 100 -image&quot;</span>, <span class="ruby-identifier">i1</span>)
+  <span class="ruby-comment"># bitmap を作る.</span>
+  <span class="ruby-identifier">ca1</span>.<span class="ruby-identifier">e</span>(<span class="ruby-string">&quot;create bitmap 260 50 -bitmap questhead&quot;</span>)
+  <span class="ruby-comment"># text を作る.</span>
+  <span class="ruby-identifier">ca1</span>.<span class="ruby-identifier">e</span>(<span class="ruby-string">&quot;create text 320 50 -text {drag rectangle}&quot;</span>)
+  <span class="ruby-comment"># window を作る(クローズボタン).</span>
+  <span class="ruby-identifier">ca1</span>.<span class="ruby-identifier">e</span>(<span class="ruby-string">&quot;create window 200 200 -window&quot;</span>, <span class="ruby-identifier">b1</span>)
+
+  <span class="ruby-comment"># bind により rectangle を drag できるようにする.</span>
+  <span class="ruby-identifier">cb</span>.<span class="ruby-identifier">push</span>(<span class="ruby-identifier">c</span> = <span class="ruby-constant">TclTkCallback</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">ip</span>, <span class="ruby-identifier">proc</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">i</span><span class="ruby-operator">|</span>
+    <span class="ruby-comment"># i に x と y を受け取るので, 取り出す.</span>
+    <span class="ruby-identifier">x</span>, <span class="ruby-identifier">y</span> = <span class="ruby-identifier">i</span>.<span class="ruby-identifier">split</span>(<span class="ruby-regexp">/ /</span>); <span class="ruby-identifier">x</span> = <span class="ruby-identifier">x</span>.<span class="ruby-identifier">to_f</span>; <span class="ruby-identifier">y</span> = <span class="ruby-identifier">y</span>.<span class="ruby-identifier">to_f</span>
+    <span class="ruby-comment"># 座標を変更する.</span>
+    <span class="ruby-identifier">ca1</span>.<span class="ruby-identifier">e</span>(<span class="ruby-node">&quot;coords current #{x - 5} #{y - 5} #{x + 5} #{y + 5}&quot;</span>)},
+    <span class="ruby-comment"># x, y 座標を空白で区切ったものをイテレータ変数へ渡すように指定.</span>
+    <span class="ruby-string">&quot;%x %y&quot;</span>))
+  <span class="ruby-comment"># rectangle に bind する.</span>
+  <span class="ruby-identifier">ca1</span>.<span class="ruby-identifier">e</span>(<span class="ruby-string">&quot;bind&quot;</span>, <span class="ruby-identifier">idr</span>, <span class="ruby-string">&quot;&lt;B1-Motion&gt;&quot;</span>, <span class="ruby-identifier">c</span>)
+
+  <span class="ruby-identifier">pack</span>.<span class="ruby-identifier">e</span>(<span class="ruby-identifier">ca1</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-test_checkbutton">
+            
+              <b>test_checkbutton</b>(ip, parent)
+            
+            <a href="../classes/Test1.html#method-i-test_checkbutton" name="method-i-test_checkbutton" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>checkbutton のサンプル.</p>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-test_checkbutton_source')" id="l_method-i-test_checkbutton_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/b10617c3d1c302e03c41fbd8fffdc7a61bf3d1cf/ext/tk/sample/tcltklib/sample1.rb#L291" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-test_checkbutton_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/sample/tcltklib/sample1.rb, line 291</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">test_checkbutton</span>(<span class="ruby-identifier">ip</span>, <span class="ruby-identifier">parent</span>)
+  <span class="ruby-identifier">checkbutton</span>, <span class="ruby-identifier">global</span>, <span class="ruby-identifier">pack</span> = <span class="ruby-identifier">ip</span>.<span class="ruby-identifier">commands</span>().<span class="ruby-identifier">values_at</span>(
+    <span class="ruby-string">&quot;checkbutton&quot;</span>, <span class="ruby-string">&quot;global&quot;</span>, <span class="ruby-string">&quot;pack&quot;</span>)
+  <span class="ruby-identifier">t1</span>, <span class="ruby-identifier">b1</span>, <span class="ruby-identifier">cb</span> = <span class="ruby-identifier">inittoplevel</span>(<span class="ruby-identifier">ip</span>, <span class="ruby-identifier">parent</span>, <span class="ruby-string">&quot;checkbutton&quot;</span>)
+
+  <span class="ruby-comment">## checkbutton</span>
+
+  <span class="ruby-identifier">v1</span> = <span class="ruby-constant">TclTkVariable</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">ip</span>, <span class="ruby-keyword">nil</span>)
+  <span class="ruby-identifier">global</span>.<span class="ruby-identifier">e</span>(<span class="ruby-identifier">v1</span>)
+  <span class="ruby-comment"># -variable で変数を設定する.</span>
+  <span class="ruby-identifier">ch1</span> = <span class="ruby-constant">TclTkWidget</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">ip</span>, <span class="ruby-identifier">t1</span>, <span class="ruby-identifier">checkbutton</span>, <span class="ruby-string">&quot;-onvalue on -offvalue off&quot;</span>,
+    <span class="ruby-string">&quot;-textvariable&quot;</span>, <span class="ruby-identifier">v1</span>, <span class="ruby-string">&quot;-variable&quot;</span>, <span class="ruby-identifier">v1</span>)
+  <span class="ruby-identifier">pack</span>.<span class="ruby-identifier">e</span>(<span class="ruby-identifier">b1</span>, <span class="ruby-identifier">ch1</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-test_entry">
+            
+              <b>test_entry</b>(ip, parent)
+            
+            <a href="../classes/Test1.html#method-i-test_entry" name="method-i-test_entry" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>entry のサンプル.</p>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-test_entry_source')" id="l_method-i-test_entry_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/b10617c3d1c302e03c41fbd8fffdc7a61bf3d1cf/ext/tk/sample/tcltklib/sample1.rb#L351" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-test_entry_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/sample/tcltklib/sample1.rb, line 351</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">test_entry</span>(<span class="ruby-identifier">ip</span>, <span class="ruby-identifier">parent</span>)
+  <span class="ruby-identifier">button</span>, <span class="ruby-identifier">entry</span>, <span class="ruby-identifier">global</span>, <span class="ruby-identifier">pack</span> = <span class="ruby-identifier">ip</span>.<span class="ruby-identifier">commands</span>().<span class="ruby-identifier">values_at</span>(
+    <span class="ruby-string">&quot;button&quot;</span>, <span class="ruby-string">&quot;entry&quot;</span>, <span class="ruby-string">&quot;global&quot;</span>, <span class="ruby-string">&quot;pack&quot;</span>)
+  <span class="ruby-identifier">t1</span>, <span class="ruby-identifier">b1</span>, <span class="ruby-identifier">cb</span> = <span class="ruby-identifier">inittoplevel</span>(<span class="ruby-identifier">ip</span>, <span class="ruby-identifier">parent</span>, <span class="ruby-string">&quot;entry&quot;</span>)
+
+  <span class="ruby-comment">## entry</span>
+
+  <span class="ruby-identifier">v1</span> = <span class="ruby-constant">TclTkVariable</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">ip</span>, <span class="ruby-keyword">nil</span>)
+  <span class="ruby-identifier">global</span>.<span class="ruby-identifier">e</span>(<span class="ruby-identifier">v1</span>)
+  <span class="ruby-comment"># ヌルストリングは &quot;{}&quot; で指定する.</span>
+  <span class="ruby-identifier">v1</span>.<span class="ruby-identifier">set</span>(<span class="ruby-string">&quot;{}&quot;</span>)
+  <span class="ruby-identifier">en1</span> = <span class="ruby-constant">TclTkWidget</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">ip</span>, <span class="ruby-identifier">t1</span>, <span class="ruby-identifier">entry</span>, <span class="ruby-string">&quot;-textvariable&quot;</span>, <span class="ruby-identifier">v1</span>)
+  <span class="ruby-identifier">cb</span>.<span class="ruby-identifier">push</span>(<span class="ruby-identifier">c</span> = <span class="ruby-constant">TclTkCallback</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">ip</span>, <span class="ruby-identifier">proc</span>{
+    <span class="ruby-identifier">global</span>.<span class="ruby-identifier">e</span>(<span class="ruby-identifier">v1</span>); <span class="ruby-identifier">print</span>(<span class="ruby-identifier">v1</span>.<span class="ruby-identifier">get</span>(), <span class="ruby-string">&quot;\n&quot;</span>); <span class="ruby-identifier">v1</span>.<span class="ruby-identifier">set</span>(<span class="ruby-string">&quot;{}&quot;</span>)}))
+  <span class="ruby-identifier">b2</span> = <span class="ruby-constant">TclTkWidget</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">ip</span>, <span class="ruby-identifier">t1</span>, <span class="ruby-identifier">button</span>, <span class="ruby-string">&quot;-text print -command&quot;</span>, <span class="ruby-identifier">c</span>)
+  <span class="ruby-identifier">pack</span>.<span class="ruby-identifier">e</span>(<span class="ruby-identifier">b1</span>, <span class="ruby-identifier">en1</span>, <span class="ruby-identifier">b2</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-test_label">
+            
+              <b>test_label</b>(ip, parent)
+            
+            <a href="../classes/Test1.html#method-i-test_label" name="method-i-test_label" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>label のサンプル.</p>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-test_label_source')" id="l_method-i-test_label_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/b10617c3d1c302e03c41fbd8fffdc7a61bf3d1cf/ext/tk/sample/tcltklib/sample1.rb#L230" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-test_label_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/sample/tcltklib/sample1.rb, line 230</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">test_label</span>(<span class="ruby-identifier">ip</span>, <span class="ruby-identifier">parent</span>)
+  <span class="ruby-identifier">button</span>, <span class="ruby-identifier">global</span>, <span class="ruby-identifier">label</span>, <span class="ruby-identifier">pack</span> = <span class="ruby-identifier">ip</span>.<span class="ruby-identifier">commands</span>().<span class="ruby-identifier">values_at</span>(
+    <span class="ruby-string">&quot;button&quot;</span>, <span class="ruby-string">&quot;global&quot;</span>, <span class="ruby-string">&quot;label&quot;</span>, <span class="ruby-string">&quot;pack&quot;</span>)
+  <span class="ruby-identifier">t1</span>, <span class="ruby-identifier">b1</span>, <span class="ruby-identifier">cb</span> = <span class="ruby-identifier">inittoplevel</span>(<span class="ruby-identifier">ip</span>, <span class="ruby-identifier">parent</span>, <span class="ruby-string">&quot;label&quot;</span>)
+
+  <span class="ruby-comment">## label</span>
+
+  <span class="ruby-comment"># いろいろな形のラベル.</span>
+  <span class="ruby-identifier">l1</span> = <span class="ruby-constant">TclTkWidget</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">ip</span>, <span class="ruby-identifier">t1</span>, <span class="ruby-identifier">label</span>, <span class="ruby-string">&quot;-text {default(flat)}&quot;</span>)
+  <span class="ruby-identifier">l2</span> = <span class="ruby-constant">TclTkWidget</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">ip</span>, <span class="ruby-identifier">t1</span>, <span class="ruby-identifier">label</span>, <span class="ruby-string">&quot;-text raised -relief raised&quot;</span>)
+  <span class="ruby-identifier">l3</span> = <span class="ruby-constant">TclTkWidget</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">ip</span>, <span class="ruby-identifier">t1</span>, <span class="ruby-identifier">label</span>, <span class="ruby-string">&quot;-text sunken -relief sunken&quot;</span>)
+  <span class="ruby-identifier">l4</span> = <span class="ruby-constant">TclTkWidget</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">ip</span>, <span class="ruby-identifier">t1</span>, <span class="ruby-identifier">label</span>, <span class="ruby-string">&quot;-text groove -relief groove&quot;</span>)
+  <span class="ruby-identifier">l5</span> = <span class="ruby-constant">TclTkWidget</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">ip</span>, <span class="ruby-identifier">t1</span>, <span class="ruby-identifier">label</span>, <span class="ruby-string">&quot;-text ridge -relief ridge&quot;</span>)
+  <span class="ruby-identifier">l6</span> = <span class="ruby-constant">TclTkWidget</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">ip</span>, <span class="ruby-identifier">t1</span>, <span class="ruby-identifier">label</span>, <span class="ruby-string">&quot;-bitmap error&quot;</span>)
+  <span class="ruby-identifier">l7</span> = <span class="ruby-constant">TclTkWidget</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">ip</span>, <span class="ruby-identifier">t1</span>, <span class="ruby-identifier">label</span>, <span class="ruby-string">&quot;-bitmap questhead&quot;</span>)
+
+  <span class="ruby-comment"># pack しても表示される.</span>
+  <span class="ruby-identifier">pack</span>.<span class="ruby-identifier">e</span>(<span class="ruby-identifier">b1</span>, <span class="ruby-identifier">l1</span>, <span class="ruby-identifier">l2</span>, <span class="ruby-identifier">l3</span>, <span class="ruby-identifier">l4</span>, <span class="ruby-identifier">l5</span>, <span class="ruby-identifier">l6</span>, <span class="ruby-identifier">l7</span>, <span class="ruby-string">&quot;-pady 3&quot;</span>)
+
+  <span class="ruby-comment">## -textvariable</span>
+
+  <span class="ruby-comment"># tcltk ライブラリの実装では, コールバックは tcl/tk の``手続き&#39;&#39;を通して</span>
+  <span class="ruby-comment"># 呼ばれる. したがって, コールバックの中で(大域)変数にアクセスするときは,</span>
+  <span class="ruby-comment"># global する必要がある.</span>
+  <span class="ruby-comment"># global する前に変数に値を設定してしまうとエラーになるので,</span>
+  <span class="ruby-comment"># tcl/tk における表現形だけ生成して, 実際に値を設定しないように,</span>
+  <span class="ruby-comment"># 2 番目の引数には nil を与える.</span>
+  <span class="ruby-identifier">v1</span> = <span class="ruby-constant">TclTkVariable</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">ip</span>, <span class="ruby-keyword">nil</span>)
+  <span class="ruby-identifier">global</span>.<span class="ruby-identifier">e</span>(<span class="ruby-identifier">v1</span>)
+  <span class="ruby-identifier">v1</span>.<span class="ruby-identifier">set</span>(<span class="ruby-number">100</span>)
+  <span class="ruby-comment"># -textvariable で変数を設定する.</span>
+  <span class="ruby-identifier">l6</span> = <span class="ruby-constant">TclTkWidget</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">ip</span>, <span class="ruby-identifier">t1</span>, <span class="ruby-identifier">label</span>, <span class="ruby-string">&quot;-textvariable&quot;</span>, <span class="ruby-identifier">v1</span>)
+  <span class="ruby-comment"># コールバックの中から変数を操作する.</span>
+  <span class="ruby-identifier">cb</span>.<span class="ruby-identifier">push</span>(<span class="ruby-identifier">c</span> = <span class="ruby-constant">TclTkCallback</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">ip</span>, <span class="ruby-identifier">proc</span>{
+    <span class="ruby-identifier">global</span>.<span class="ruby-identifier">e</span>(<span class="ruby-identifier">v1</span>); <span class="ruby-identifier">v1</span>.<span class="ruby-identifier">set</span>(<span class="ruby-identifier">v1</span>.<span class="ruby-identifier">get</span>().<span class="ruby-identifier">to_i</span> <span class="ruby-operator">+</span> <span class="ruby-number">10</span>)}))
+  <span class="ruby-identifier">b2</span> = <span class="ruby-constant">TclTkWidget</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">ip</span>, <span class="ruby-identifier">t1</span>, <span class="ruby-identifier">button</span>, <span class="ruby-string">&quot;-text +10 -command&quot;</span>, <span class="ruby-identifier">c</span>)
+  <span class="ruby-identifier">cb</span>.<span class="ruby-identifier">push</span>(<span class="ruby-identifier">c</span> = <span class="ruby-constant">TclTkCallback</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">ip</span>, <span class="ruby-identifier">proc</span>{
+    <span class="ruby-identifier">global</span>.<span class="ruby-identifier">e</span>(<span class="ruby-identifier">v1</span>); <span class="ruby-identifier">v1</span>.<span class="ruby-identifier">set</span>(<span class="ruby-identifier">v1</span>.<span class="ruby-identifier">get</span>().<span class="ruby-identifier">to_i</span> <span class="ruby-operator">-</span> <span class="ruby-number">10</span>)}))
+  <span class="ruby-identifier">b3</span> = <span class="ruby-constant">TclTkWidget</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">ip</span>, <span class="ruby-identifier">t1</span>, <span class="ruby-identifier">button</span>, <span class="ruby-string">&quot;-text -10 -command&quot;</span>, <span class="ruby-identifier">c</span>)
+  <span class="ruby-identifier">pack</span>.<span class="ruby-identifier">e</span>(<span class="ruby-identifier">l6</span>, <span class="ruby-identifier">b2</span>, <span class="ruby-identifier">b3</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-test_listbox">
+            
+              <b>test_listbox</b>(ip, parent)
+            
+            <a href="../classes/Test1.html#method-i-test_listbox" name="method-i-test_listbox" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>listbox のサンプル.</p>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-test_listbox_source')" id="l_method-i-test_listbox_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/b10617c3d1c302e03c41fbd8fffdc7a61bf3d1cf/ext/tk/sample/tcltklib/sample1.rb#L498" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-test_listbox_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/sample/tcltklib/sample1.rb, line 498</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">test_listbox</span>(<span class="ruby-identifier">ip</span>, <span class="ruby-identifier">parent</span>)
+  <span class="ruby-identifier">clipboard</span>, <span class="ruby-identifier">frame</span>, <span class="ruby-identifier">grid</span>, <span class="ruby-identifier">listbox</span>, <span class="ruby-identifier">lower</span>, <span class="ruby-identifier">menu</span>, <span class="ruby-identifier">menubutton</span>, <span class="ruby-identifier">pack</span>, <span class="ruby-identifier">scrollbar</span>,
+    <span class="ruby-identifier">selection</span> = <span class="ruby-identifier">ip</span>.<span class="ruby-identifier">commands</span>().<span class="ruby-identifier">values_at</span>(
+    <span class="ruby-string">&quot;clipboard&quot;</span>, <span class="ruby-string">&quot;frame&quot;</span>, <span class="ruby-string">&quot;grid&quot;</span>, <span class="ruby-string">&quot;listbox&quot;</span>, <span class="ruby-string">&quot;lower&quot;</span>, <span class="ruby-string">&quot;menu&quot;</span>, <span class="ruby-string">&quot;menubutton&quot;</span>,
+    <span class="ruby-string">&quot;pack&quot;</span>, <span class="ruby-string">&quot;scrollbar&quot;</span>, <span class="ruby-string">&quot;selection&quot;</span>)
+  <span class="ruby-identifier">t1</span>, <span class="ruby-identifier">b1</span>, <span class="ruby-identifier">cb</span> = <span class="ruby-identifier">inittoplevel</span>(<span class="ruby-identifier">ip</span>, <span class="ruby-identifier">parent</span>, <span class="ruby-string">&quot;listbox&quot;</span>)
+
+  <span class="ruby-comment">## listbox/scrollbar</span>
+
+  <span class="ruby-identifier">f1</span> = <span class="ruby-constant">TclTkWidget</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">ip</span>, <span class="ruby-identifier">t1</span>, <span class="ruby-identifier">frame</span>)
+  <span class="ruby-comment"># コールバック内で参照する変数は先に宣言しておかなければならない.</span>
+  <span class="ruby-identifier">li1</span> = <span class="ruby-identifier">sc1</span> = <span class="ruby-identifier">sc2</span> = <span class="ruby-keyword">nil</span>
+  <span class="ruby-comment"># 実行時に, 後ろにパラメータがつくコールバックは,</span>
+  <span class="ruby-comment"># イテレータ変数でそのパラメータを受け取ることができる.</span>
+  <span class="ruby-comment"># (複数のパラメータはひとつの文字列にまとめられる.)</span>
+  <span class="ruby-identifier">cb</span>.<span class="ruby-identifier">push</span>(<span class="ruby-identifier">c1</span> = <span class="ruby-constant">TclTkCallback</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">ip</span>, <span class="ruby-identifier">proc</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">i</span><span class="ruby-operator">|</span> <span class="ruby-identifier">li1</span>.<span class="ruby-identifier">e</span>(<span class="ruby-string">&quot;xview&quot;</span>, <span class="ruby-identifier">i</span>)}))
+  <span class="ruby-identifier">cb</span>.<span class="ruby-identifier">push</span>(<span class="ruby-identifier">c2</span> = <span class="ruby-constant">TclTkCallback</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">ip</span>, <span class="ruby-identifier">proc</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">i</span><span class="ruby-operator">|</span> <span class="ruby-identifier">li1</span>.<span class="ruby-identifier">e</span>(<span class="ruby-string">&quot;yview&quot;</span>, <span class="ruby-identifier">i</span>)}))
+  <span class="ruby-identifier">cb</span>.<span class="ruby-identifier">push</span>(<span class="ruby-identifier">c3</span> = <span class="ruby-constant">TclTkCallback</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">ip</span>, <span class="ruby-identifier">proc</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">i</span><span class="ruby-operator">|</span> <span class="ruby-identifier">sc1</span>.<span class="ruby-identifier">e</span>(<span class="ruby-string">&quot;set&quot;</span>, <span class="ruby-identifier">i</span>)}))
+  <span class="ruby-identifier">cb</span>.<span class="ruby-identifier">push</span>(<span class="ruby-identifier">c4</span> = <span class="ruby-constant">TclTkCallback</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">ip</span>, <span class="ruby-identifier">proc</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">i</span><span class="ruby-operator">|</span> <span class="ruby-identifier">sc2</span>.<span class="ruby-identifier">e</span>(<span class="ruby-string">&quot;set&quot;</span>, <span class="ruby-identifier">i</span>)}))
+  <span class="ruby-comment"># listbox</span>
+  <span class="ruby-identifier">li1</span> = <span class="ruby-constant">TclTkWidget</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">ip</span>, <span class="ruby-identifier">f1</span>, <span class="ruby-identifier">listbox</span>,
+    <span class="ruby-string">&quot;-xscrollcommand&quot;</span>, <span class="ruby-identifier">c3</span>, <span class="ruby-string">&quot;-yscrollcommand&quot;</span>, <span class="ruby-identifier">c4</span>,
+    <span class="ruby-string">&quot;-selectmode extended -exportselection true&quot;</span>)
+  <span class="ruby-keyword">for</span> <span class="ruby-identifier">i</span> <span class="ruby-keyword">in</span> <span class="ruby-number">1</span><span class="ruby-operator">..</span><span class="ruby-number">20</span>
+    <span class="ruby-identifier">li1</span>.<span class="ruby-identifier">e</span>(<span class="ruby-node">&quot;insert end {line #{i} line #{i} line #{i} line #{i} line #{i}}&quot;</span>)
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-comment"># scrollbar</span>
+  <span class="ruby-identifier">sc1</span> = <span class="ruby-constant">TclTkWidget</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">ip</span>, <span class="ruby-identifier">f1</span>, <span class="ruby-identifier">scrollbar</span>, <span class="ruby-string">&quot;-orient horizontal -command&quot;</span>, <span class="ruby-identifier">c1</span>)
+  <span class="ruby-identifier">sc2</span> = <span class="ruby-constant">TclTkWidget</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">ip</span>, <span class="ruby-identifier">f1</span>, <span class="ruby-identifier">scrollbar</span>, <span class="ruby-string">&quot;-orient vertical -command&quot;</span>, <span class="ruby-identifier">c2</span>)
+
+  <span class="ruby-comment">## selection/clipboard</span>
+
+  <span class="ruby-identifier">mb1</span> = <span class="ruby-constant">TclTkWidget</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">ip</span>, <span class="ruby-identifier">t1</span>, <span class="ruby-identifier">menubutton</span>, <span class="ruby-string">&quot;-text edit&quot;</span>)
+  <span class="ruby-identifier">me1</span> = <span class="ruby-constant">TclTkWidget</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">ip</span>, <span class="ruby-identifier">mb1</span>, <span class="ruby-identifier">menu</span>)
+  <span class="ruby-identifier">mb1</span>.<span class="ruby-identifier">e</span>(<span class="ruby-string">&quot;configure -menu&quot;</span>, <span class="ruby-identifier">me1</span>)
+  <span class="ruby-identifier">cb</span>.<span class="ruby-identifier">push</span>(<span class="ruby-identifier">c</span> = <span class="ruby-constant">TclTkCallback</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">ip</span>, <span class="ruby-identifier">proc</span>{
+    <span class="ruby-comment"># clipboard をクリア.</span>
+    <span class="ruby-identifier">clipboard</span>.<span class="ruby-identifier">e</span>(<span class="ruby-string">&quot;clear&quot;</span>)
+    <span class="ruby-comment"># selection から文字列を読み込み clipboard に追加する.</span>
+    <span class="ruby-identifier">clipboard</span>.<span class="ruby-identifier">e</span>(<span class="ruby-node">&quot;append {#{selection.e(&#39;get&#39;)}}&quot;</span>)}))
+  <span class="ruby-identifier">me1</span>.<span class="ruby-identifier">e</span>(<span class="ruby-string">&quot;add command -label {selection -&gt; clipboard} -command&quot;</span>,<span class="ruby-identifier">c</span>)
+  <span class="ruby-identifier">cb</span>.<span class="ruby-identifier">push</span>(<span class="ruby-identifier">c</span> = <span class="ruby-constant">TclTkCallback</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">ip</span>, <span class="ruby-identifier">proc</span>{
+    <span class="ruby-comment"># li1 をクリア.</span>
+    <span class="ruby-identifier">li1</span>.<span class="ruby-identifier">e</span>(<span class="ruby-string">&quot;delete 0 end&quot;</span>)
+    <span class="ruby-comment"># clipboard から文字列を取り出し, 1 行ずつ</span>
+    <span class="ruby-identifier">selection</span>.<span class="ruby-identifier">e</span>(<span class="ruby-string">&quot;get -selection CLIPBOARD&quot;</span>).<span class="ruby-identifier">split</span>(<span class="ruby-regexp">/\n/</span>).<span class="ruby-identifier">each</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">line</span><span class="ruby-operator">|</span>
+      <span class="ruby-comment"># li1 に挿入する.</span>
+      <span class="ruby-identifier">li1</span>.<span class="ruby-identifier">e</span>(<span class="ruby-node">&quot;insert end {#{line}}&quot;</span>)}}))
+  <span class="ruby-identifier">me1</span>.<span class="ruby-identifier">e</span>(<span class="ruby-string">&quot;add command -label {clipboard -&gt; listbox} -command&quot;</span>,<span class="ruby-identifier">c</span>)
+
+  <span class="ruby-identifier">grid</span>.<span class="ruby-identifier">e</span>(<span class="ruby-identifier">li1</span>, <span class="ruby-string">&quot;-row 0 -column 0 -sticky news&quot;</span>)
+  <span class="ruby-identifier">grid</span>.<span class="ruby-identifier">e</span>(<span class="ruby-identifier">sc1</span>, <span class="ruby-string">&quot;-row 1 -column 0 -sticky ew&quot;</span>)
+  <span class="ruby-identifier">grid</span>.<span class="ruby-identifier">e</span>(<span class="ruby-identifier">sc2</span>, <span class="ruby-string">&quot;-row 0 -column 1 -sticky ns&quot;</span>)
+  <span class="ruby-identifier">grid</span>.<span class="ruby-identifier">e</span>(<span class="ruby-string">&quot;rowconfigure&quot;</span>, <span class="ruby-identifier">f1</span>, <span class="ruby-string">&quot;0 -weight 100&quot;</span>)
+  <span class="ruby-identifier">grid</span>.<span class="ruby-identifier">e</span>(<span class="ruby-string">&quot;columnconfigure&quot;</span>, <span class="ruby-identifier">f1</span>, <span class="ruby-string">&quot;0 -weight 100&quot;</span>)
+  <span class="ruby-identifier">f2</span> = <span class="ruby-constant">TclTkWidget</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">ip</span>, <span class="ruby-identifier">t1</span>, <span class="ruby-identifier">frame</span>)
+  <span class="ruby-identifier">lower</span>.<span class="ruby-identifier">e</span>(<span class="ruby-identifier">f2</span>, <span class="ruby-identifier">b1</span>)
+  <span class="ruby-identifier">pack</span>.<span class="ruby-identifier">e</span>(<span class="ruby-identifier">b1</span>, <span class="ruby-identifier">mb1</span>, <span class="ruby-string">&quot;-in&quot;</span>, <span class="ruby-identifier">f2</span>, <span class="ruby-string">&quot;-side left&quot;</span>)
+  <span class="ruby-identifier">pack</span>.<span class="ruby-identifier">e</span>(<span class="ruby-identifier">f2</span>, <span class="ruby-identifier">f1</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-test_menu">
+            
+              <b>test_menu</b>(ip, parent)
+            
+            <a href="../classes/Test1.html#method-i-test_menu" name="method-i-test_menu" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>menu のサンプル.</p>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-test_menu_source')" id="l_method-i-test_menu_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/b10617c3d1c302e03c41fbd8fffdc7a61bf3d1cf/ext/tk/sample/tcltklib/sample1.rb#L452" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-test_menu_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/sample/tcltklib/sample1.rb, line 452</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">test_menu</span>(<span class="ruby-identifier">ip</span>, <span class="ruby-identifier">parent</span>)
+  <span class="ruby-identifier">global</span>, <span class="ruby-identifier">menu</span>, <span class="ruby-identifier">menubutton</span>, <span class="ruby-identifier">pack</span> = <span class="ruby-identifier">ip</span>.<span class="ruby-identifier">commands</span>().<span class="ruby-identifier">values_at</span>(
+    <span class="ruby-string">&quot;global&quot;</span>, <span class="ruby-string">&quot;menu&quot;</span>, <span class="ruby-string">&quot;menubutton&quot;</span>, <span class="ruby-string">&quot;pack&quot;</span>)
+  <span class="ruby-identifier">tk_optionMenu</span> = <span class="ruby-constant">TclTkLibCommand</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">ip</span>, <span class="ruby-string">&quot;tk_optionMenu&quot;</span>)
+  <span class="ruby-identifier">t1</span>, <span class="ruby-identifier">b1</span>, <span class="ruby-identifier">cb</span> = <span class="ruby-identifier">inittoplevel</span>(<span class="ruby-identifier">ip</span>, <span class="ruby-identifier">parent</span>, <span class="ruby-string">&quot;menu&quot;</span>)
+
+  <span class="ruby-comment">## menu</span>
+
+  <span class="ruby-comment"># menubutton を生成する.</span>
+  <span class="ruby-identifier">mb1</span> = <span class="ruby-constant">TclTkWidget</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">ip</span>, <span class="ruby-identifier">t1</span>, <span class="ruby-identifier">menubutton</span>, <span class="ruby-string">&quot;-text menu&quot;</span>)
+  <span class="ruby-comment"># menu を生成する.</span>
+  <span class="ruby-identifier">me1</span> = <span class="ruby-constant">TclTkWidget</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">ip</span>, <span class="ruby-identifier">mb1</span>, <span class="ruby-identifier">menu</span>)
+  <span class="ruby-comment"># mb1 から me1 が起動されるようにする.</span>
+  <span class="ruby-identifier">mb1</span>.<span class="ruby-identifier">e</span>(<span class="ruby-string">&quot;configure -menu&quot;</span>, <span class="ruby-identifier">me1</span>)
+
+  <span class="ruby-comment"># cascade で起動される menu を生成する.</span>
+  <span class="ruby-identifier">me11</span> = <span class="ruby-constant">TclTkWidget</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">ip</span>, <span class="ruby-identifier">me1</span>, <span class="ruby-identifier">menu</span>)
+  <span class="ruby-comment"># radiobutton のサンプル.</span>
+  <span class="ruby-identifier">v1</span> = <span class="ruby-constant">TclTkVariable</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">ip</span>, <span class="ruby-keyword">nil</span>); <span class="ruby-identifier">global</span>.<span class="ruby-identifier">e</span>(<span class="ruby-identifier">v1</span>); <span class="ruby-identifier">v1</span>.<span class="ruby-identifier">set</span>(<span class="ruby-string">&quot;r1&quot;</span>)
+  <span class="ruby-identifier">me11</span>.<span class="ruby-identifier">e</span>(<span class="ruby-string">&quot;add radiobutton -label radio1 -value r1 -variable&quot;</span>, <span class="ruby-identifier">v1</span>)
+  <span class="ruby-identifier">me11</span>.<span class="ruby-identifier">e</span>(<span class="ruby-string">&quot;add radiobutton -label radio2 -value r2 -variable&quot;</span>, <span class="ruby-identifier">v1</span>)
+  <span class="ruby-identifier">me11</span>.<span class="ruby-identifier">e</span>(<span class="ruby-string">&quot;add radiobutton -label radio3 -value r3 -variable&quot;</span>, <span class="ruby-identifier">v1</span>)
+  <span class="ruby-comment"># cascade により mb11 が起動されるようにする.</span>
+  <span class="ruby-identifier">me1</span>.<span class="ruby-identifier">e</span>(<span class="ruby-string">&quot;add cascade -label cascade -menu&quot;</span>, <span class="ruby-identifier">me11</span>)
+
+  <span class="ruby-comment"># checkbutton のサンプル.</span>
+  <span class="ruby-identifier">v2</span> = <span class="ruby-constant">TclTkVariable</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">ip</span>, <span class="ruby-keyword">nil</span>); <span class="ruby-identifier">global</span>.<span class="ruby-identifier">e</span>(<span class="ruby-identifier">v2</span>); <span class="ruby-identifier">v2</span>.<span class="ruby-identifier">set</span>(<span class="ruby-string">&quot;none&quot;</span>)
+  <span class="ruby-identifier">me1</span>.<span class="ruby-identifier">e</span>(<span class="ruby-string">&quot;add checkbutton -label check -variable&quot;</span>, <span class="ruby-identifier">v2</span>)
+  <span class="ruby-comment"># separator のサンプル.</span>
+  <span class="ruby-identifier">me1</span>.<span class="ruby-identifier">e</span>(<span class="ruby-string">&quot;add separator&quot;</span>)
+  <span class="ruby-comment"># command のサンプル.</span>
+  <span class="ruby-identifier">v3</span> = <span class="ruby-keyword">nil</span>
+  <span class="ruby-identifier">cb</span>.<span class="ruby-identifier">push</span>(<span class="ruby-identifier">c</span> = <span class="ruby-constant">TclTkCallback</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">ip</span>, <span class="ruby-identifier">proc</span>{
+    <span class="ruby-identifier">global</span>.<span class="ruby-identifier">e</span>(<span class="ruby-identifier">v1</span>, <span class="ruby-identifier">v2</span>, <span class="ruby-identifier">v3</span>); <span class="ruby-identifier">print</span> <span class="ruby-string">&quot;v1: &quot;</span>, <span class="ruby-identifier">v1</span>.<span class="ruby-identifier">get</span>(), <span class="ruby-string">&quot;, v2: &quot;</span>, <span class="ruby-identifier">v2</span>.<span class="ruby-identifier">get</span>(),
+    <span class="ruby-string">&quot;, v3: &quot;</span>, <span class="ruby-identifier">v3</span>.<span class="ruby-identifier">get</span>(), <span class="ruby-string">&quot;\n&quot;</span>}))
+  <span class="ruby-identifier">me1</span>.<span class="ruby-identifier">e</span>(<span class="ruby-string">&quot;add command -label print -command&quot;</span>, <span class="ruby-identifier">c</span>)
+
+  <span class="ruby-comment">## tk_optionMenu</span>
+
+  <span class="ruby-identifier">v3</span> = <span class="ruby-constant">TclTkVariable</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">ip</span>, <span class="ruby-keyword">nil</span>); <span class="ruby-identifier">global</span>.<span class="ruby-identifier">e</span>(<span class="ruby-identifier">v3</span>); <span class="ruby-identifier">v3</span>.<span class="ruby-identifier">set</span>(<span class="ruby-string">&quot;opt2&quot;</span>)
+  <span class="ruby-identifier">om1</span> = <span class="ruby-constant">TclTkWidget</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">ip</span>, <span class="ruby-identifier">t1</span>, <span class="ruby-identifier">tk_optionMenu</span>, <span class="ruby-identifier">v3</span>, <span class="ruby-string">&quot;opt1 opt2 opt3 opt4&quot;</span>)
+
+  <span class="ruby-identifier">pack</span>.<span class="ruby-identifier">e</span>(<span class="ruby-identifier">b1</span>, <span class="ruby-identifier">mb1</span>, <span class="ruby-identifier">om1</span>, <span class="ruby-string">&quot;-side left&quot;</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-test_modal">
+            
+              <b>test_modal</b>(ip, parent)
+            
+            <a href="../classes/Test1.html#method-i-test_modal" name="method-i-test_modal" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>modal なウィジェットのサンプル.</p>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-test_modal_source')" id="l_method-i-test_modal_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/b10617c3d1c302e03c41fbd8fffdc7a61bf3d1cf/ext/tk/sample/tcltklib/sample1.rb#L408" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-test_modal_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/sample/tcltklib/sample1.rb, line 408</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">test_modal</span>(<span class="ruby-identifier">ip</span>, <span class="ruby-identifier">parent</span>)
+  <span class="ruby-identifier">button</span>, <span class="ruby-identifier">frame</span>, <span class="ruby-identifier">message</span>, <span class="ruby-identifier">pack</span>, <span class="ruby-identifier">tk_chooseColor</span>, <span class="ruby-identifier">tk_getOpenFile</span>,
+    <span class="ruby-identifier">tk_messageBox</span> = <span class="ruby-identifier">ip</span>.<span class="ruby-identifier">commands</span>().<span class="ruby-identifier">values_at</span>(
+    <span class="ruby-string">&quot;button&quot;</span>, <span class="ruby-string">&quot;frame&quot;</span>, <span class="ruby-string">&quot;message&quot;</span>, <span class="ruby-string">&quot;pack&quot;</span>, <span class="ruby-string">&quot;tk_chooseColor&quot;</span>,
+    <span class="ruby-string">&quot;tk_getOpenFile&quot;</span>, <span class="ruby-string">&quot;tk_messageBox&quot;</span>)
+  <span class="ruby-comment"># 最初に load されていないライブラリは ip.commands() に存在しないので,</span>
+  <span class="ruby-comment"># TclTkLibCommand を生成する必要がある.</span>
+  <span class="ruby-identifier">tk_dialog</span> = <span class="ruby-constant">TclTkLibCommand</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">ip</span>, <span class="ruby-string">&quot;tk_dialog&quot;</span>)
+  <span class="ruby-identifier">t1</span>, <span class="ruby-identifier">b1</span>, <span class="ruby-identifier">cb</span> = <span class="ruby-identifier">inittoplevel</span>(<span class="ruby-identifier">ip</span>, <span class="ruby-identifier">parent</span>, <span class="ruby-string">&quot;message/modal&quot;</span>)
+
+  <span class="ruby-comment">## message</span>
+
+  <span class="ruby-identifier">mes</span> = <span class="ruby-string">&quot;これは message ウィジェットのテストです.&quot;</span>
+  <span class="ruby-identifier">mes</span> <span class="ruby-operator">+=</span> <span class="ruby-string">&quot;以下は modal なウィジェットのテストです.&quot;</span>
+  <span class="ruby-identifier">me1</span> = <span class="ruby-constant">TclTkWidget</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">ip</span>, <span class="ruby-identifier">t1</span>, <span class="ruby-identifier">message</span>, <span class="ruby-node">&quot;-text {#{mes}}&quot;</span>)
+
+  <span class="ruby-comment">## modal</span>
+
+  <span class="ruby-comment"># tk_messageBox</span>
+  <span class="ruby-identifier">cb</span>.<span class="ruby-identifier">push</span>(<span class="ruby-identifier">c</span> = <span class="ruby-constant">TclTkCallback</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">ip</span>, <span class="ruby-identifier">proc</span>{
+    <span class="ruby-identifier">print</span> <span class="ruby-identifier">tk_messageBox</span>.<span class="ruby-identifier">e</span>(<span class="ruby-string">&quot;-type yesnocancel -message messageBox&quot;</span>,
+    <span class="ruby-string">&quot;-icon error -default cancel -title messageBox&quot;</span>), <span class="ruby-string">&quot;\n&quot;</span>}))
+  <span class="ruby-identifier">b2</span> = <span class="ruby-constant">TclTkWidget</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">ip</span>, <span class="ruby-identifier">t1</span>, <span class="ruby-identifier">button</span>, <span class="ruby-string">&quot;-text messageBox -command&quot;</span>, <span class="ruby-identifier">c</span>)
+  <span class="ruby-comment"># tk_dialog</span>
+  <span class="ruby-identifier">cb</span>.<span class="ruby-identifier">push</span>(<span class="ruby-identifier">c</span> = <span class="ruby-constant">TclTkCallback</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">ip</span>, <span class="ruby-identifier">proc</span>{
+    <span class="ruby-comment"># ウィジェット名を生成するためにダミーの frame を生成.</span>
+    <span class="ruby-identifier">print</span> <span class="ruby-identifier">tk_dialog</span>.<span class="ruby-identifier">e</span>(<span class="ruby-constant">TclTkWidget</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">ip</span>, <span class="ruby-identifier">t1</span>, <span class="ruby-identifier">frame</span>),
+    <span class="ruby-string">&quot;dialog dialog error 2 yes no cancel&quot;</span>), <span class="ruby-string">&quot;\n&quot;</span>}))
+  <span class="ruby-identifier">b3</span> = <span class="ruby-constant">TclTkWidget</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">ip</span>, <span class="ruby-identifier">t1</span>, <span class="ruby-identifier">button</span>, <span class="ruby-string">&quot;-text dialog -command&quot;</span>, <span class="ruby-identifier">c</span>)
+  <span class="ruby-comment"># tk_chooseColor</span>
+  <span class="ruby-identifier">cb</span>.<span class="ruby-identifier">push</span>(<span class="ruby-identifier">c</span> = <span class="ruby-constant">TclTkCallback</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">ip</span>, <span class="ruby-identifier">proc</span>{
+    <span class="ruby-identifier">print</span> <span class="ruby-identifier">tk_chooseColor</span>.<span class="ruby-identifier">e</span>(<span class="ruby-string">&quot;-title chooseColor&quot;</span>), <span class="ruby-string">&quot;\n&quot;</span>}))
+  <span class="ruby-identifier">b4</span> = <span class="ruby-constant">TclTkWidget</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">ip</span>, <span class="ruby-identifier">t1</span>, <span class="ruby-identifier">button</span>, <span class="ruby-string">&quot;-text chooseColor -command&quot;</span>, <span class="ruby-identifier">c</span>)
+  <span class="ruby-comment"># tk_getOpenFile</span>
+  <span class="ruby-identifier">cb</span>.<span class="ruby-identifier">push</span>(<span class="ruby-identifier">c</span> = <span class="ruby-constant">TclTkCallback</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">ip</span>, <span class="ruby-identifier">proc</span>{
+    <span class="ruby-identifier">print</span> <span class="ruby-identifier">tk_getOpenFile</span>.<span class="ruby-identifier">e</span>(<span class="ruby-string">&quot;-defaultextension .rb&quot;</span>,
+    <span class="ruby-string">&quot;-filetypes {{{Ruby Script} {.rb}} {{All Files} {*}}}&quot;</span>,
+    <span class="ruby-string">&quot;-title getOpenFile&quot;</span>), <span class="ruby-string">&quot;\n&quot;</span>}))
+  <span class="ruby-identifier">b5</span> = <span class="ruby-constant">TclTkWidget</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">ip</span>, <span class="ruby-identifier">t1</span>, <span class="ruby-identifier">button</span>, <span class="ruby-string">&quot;-text getOpenFile -command&quot;</span>, <span class="ruby-identifier">c</span>)
+
+  <span class="ruby-identifier">pack</span>.<span class="ruby-identifier">e</span>(<span class="ruby-identifier">b1</span>, <span class="ruby-identifier">me1</span>, <span class="ruby-identifier">b2</span>, <span class="ruby-identifier">b3</span>, <span class="ruby-identifier">b4</span>, <span class="ruby-identifier">b5</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-test_radiobutton">
+            
+              <b>test_radiobutton</b>(ip, parent)
+            
+            <a href="../classes/Test1.html#method-i-test_radiobutton" name="method-i-test_radiobutton" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>radiobutton のサンプル.</p>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-test_radiobutton_source')" id="l_method-i-test_radiobutton_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/b10617c3d1c302e03c41fbd8fffdc7a61bf3d1cf/ext/tk/sample/tcltklib/sample1.rb#L307" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-test_radiobutton_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/sample/tcltklib/sample1.rb, line 307</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">test_radiobutton</span>(<span class="ruby-identifier">ip</span>, <span class="ruby-identifier">parent</span>)
+  <span class="ruby-identifier">global</span>, <span class="ruby-identifier">label</span>, <span class="ruby-identifier">pack</span>, <span class="ruby-identifier">radiobutton</span> = <span class="ruby-identifier">ip</span>.<span class="ruby-identifier">commands</span>().<span class="ruby-identifier">values_at</span>(
+    <span class="ruby-string">&quot;global&quot;</span>, <span class="ruby-string">&quot;label&quot;</span>, <span class="ruby-string">&quot;pack&quot;</span>, <span class="ruby-string">&quot;radiobutton&quot;</span>)
+  <span class="ruby-identifier">t1</span>, <span class="ruby-identifier">b1</span>, <span class="ruby-identifier">cb</span> = <span class="ruby-identifier">inittoplevel</span>(<span class="ruby-identifier">ip</span>, <span class="ruby-identifier">parent</span>, <span class="ruby-string">&quot;radiobutton&quot;</span>)
+
+  <span class="ruby-comment">## radiobutton</span>
+
+  <span class="ruby-identifier">v1</span> = <span class="ruby-constant">TclTkVariable</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">ip</span>, <span class="ruby-keyword">nil</span>)
+  <span class="ruby-identifier">global</span>.<span class="ruby-identifier">e</span>(<span class="ruby-identifier">v1</span>)
+  <span class="ruby-comment"># ヌルストリングは &quot;{}&quot; で指定する.</span>
+  <span class="ruby-identifier">v1</span>.<span class="ruby-identifier">set</span>(<span class="ruby-string">&quot;{}&quot;</span>)
+  <span class="ruby-identifier">l1</span> = <span class="ruby-constant">TclTkWidget</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">ip</span>, <span class="ruby-identifier">t1</span>, <span class="ruby-identifier">label</span>, <span class="ruby-string">&quot;-textvariable&quot;</span>, <span class="ruby-identifier">v1</span>)
+  <span class="ruby-comment"># -variable で同じ変数を指定すると同じグループになる.</span>
+  <span class="ruby-identifier">ra1</span> = <span class="ruby-constant">TclTkWidget</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">ip</span>, <span class="ruby-identifier">t1</span>, <span class="ruby-identifier">radiobutton</span>,
+    <span class="ruby-string">&quot;-text radio1 -value r1 -variable&quot;</span>, <span class="ruby-identifier">v1</span>)
+  <span class="ruby-identifier">ra2</span> = <span class="ruby-constant">TclTkWidget</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">ip</span>, <span class="ruby-identifier">t1</span>, <span class="ruby-identifier">radiobutton</span>,
+    <span class="ruby-string">&quot;-text radio2 -value r2 -variable&quot;</span>, <span class="ruby-identifier">v1</span>)
+  <span class="ruby-identifier">cb</span>.<span class="ruby-identifier">push</span>(<span class="ruby-identifier">c</span> = <span class="ruby-constant">TclTkCallback</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">ip</span>, <span class="ruby-identifier">proc</span>{<span class="ruby-identifier">global</span>.<span class="ruby-identifier">e</span>(<span class="ruby-identifier">v1</span>); <span class="ruby-identifier">v1</span>.<span class="ruby-identifier">set</span>(<span class="ruby-string">&quot;{}&quot;</span>)}))
+  <span class="ruby-identifier">ra3</span> = <span class="ruby-constant">TclTkWidget</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">ip</span>, <span class="ruby-identifier">t1</span>, <span class="ruby-identifier">radiobutton</span>,
+    <span class="ruby-string">&quot;-text clear -value r3 -variable&quot;</span>, <span class="ruby-identifier">v1</span>, <span class="ruby-string">&quot;-command&quot;</span>, <span class="ruby-identifier">c</span>)
+  <span class="ruby-identifier">pack</span>.<span class="ruby-identifier">e</span>(<span class="ruby-identifier">b1</span>, <span class="ruby-identifier">l1</span>, <span class="ruby-identifier">ra1</span>, <span class="ruby-identifier">ra2</span>, <span class="ruby-identifier">ra3</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-test_raise">
+            
+              <b>test_raise</b>(ip, parent)
+            
+            <a href="../classes/Test1.html#method-i-test_raise" name="method-i-test_raise" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>raise/lower のサンプル.</p>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-test_raise_source')" id="l_method-i-test_raise_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/b10617c3d1c302e03c41fbd8fffdc7a61bf3d1cf/ext/tk/sample/tcltklib/sample1.rb#L386" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-test_raise_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/sample/tcltklib/sample1.rb, line 386</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">test_raise</span>(<span class="ruby-identifier">ip</span>, <span class="ruby-identifier">parent</span>)
+  <span class="ruby-identifier">button</span>, <span class="ruby-identifier">frame</span>, <span class="ruby-identifier">lower</span>, <span class="ruby-identifier">pack</span>, <span class="ruby-identifier">raise</span> = <span class="ruby-identifier">ip</span>.<span class="ruby-identifier">commands</span>().<span class="ruby-identifier">values_at</span>(
+    <span class="ruby-string">&quot;button&quot;</span>, <span class="ruby-string">&quot;frame&quot;</span>, <span class="ruby-string">&quot;lower&quot;</span>, <span class="ruby-string">&quot;pack&quot;</span>, <span class="ruby-string">&quot;raise&quot;</span>)
+  <span class="ruby-identifier">t1</span>, <span class="ruby-identifier">b1</span>, <span class="ruby-identifier">cb</span> = <span class="ruby-identifier">inittoplevel</span>(<span class="ruby-identifier">ip</span>, <span class="ruby-identifier">parent</span>, <span class="ruby-string">&quot;raise/lower&quot;</span>)
+
+  <span class="ruby-comment">## raise/lower</span>
+
+  <span class="ruby-comment"># button を隠すテストのために, frame を使う.</span>
+  <span class="ruby-identifier">f1</span> = <span class="ruby-constant">TclTkWidget</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">ip</span>, <span class="ruby-identifier">t1</span>, <span class="ruby-identifier">frame</span>)
+  <span class="ruby-comment"># コールバック内で参照する変数は先に宣言しておかなければならない.</span>
+  <span class="ruby-identifier">b2</span> = <span class="ruby-keyword">nil</span>
+  <span class="ruby-identifier">cb</span>.<span class="ruby-identifier">push</span>(<span class="ruby-identifier">c</span> = <span class="ruby-constant">TclTkCallback</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">ip</span>, <span class="ruby-identifier">proc</span>{<span class="ruby-identifier">raise</span>.<span class="ruby-identifier">e</span>(<span class="ruby-identifier">f1</span>, <span class="ruby-identifier">b2</span>)}))
+  <span class="ruby-identifier">b2</span> = <span class="ruby-constant">TclTkWidget</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">ip</span>, <span class="ruby-identifier">t1</span>, <span class="ruby-identifier">button</span>, <span class="ruby-string">&quot;-text raise -command&quot;</span>, <span class="ruby-identifier">c</span>)
+  <span class="ruby-identifier">cb</span>.<span class="ruby-identifier">push</span>(<span class="ruby-identifier">c</span> = <span class="ruby-constant">TclTkCallback</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">ip</span>, <span class="ruby-identifier">proc</span>{<span class="ruby-identifier">lower</span>.<span class="ruby-identifier">e</span>(<span class="ruby-identifier">f1</span>, <span class="ruby-identifier">b2</span>)}))
+  <span class="ruby-identifier">b3</span> = <span class="ruby-constant">TclTkWidget</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">ip</span>, <span class="ruby-identifier">t1</span>, <span class="ruby-identifier">button</span>, <span class="ruby-string">&quot;-text lower -command&quot;</span>, <span class="ruby-identifier">c</span>)
+  <span class="ruby-identifier">lower</span>.<span class="ruby-identifier">e</span>(<span class="ruby-identifier">f1</span>, <span class="ruby-identifier">b3</span>)
+
+  <span class="ruby-identifier">pack</span>.<span class="ruby-identifier">e</span>(<span class="ruby-identifier">b2</span>, <span class="ruby-identifier">b3</span>, <span class="ruby-string">&quot;-in&quot;</span>, <span class="ruby-identifier">f1</span>)
+  <span class="ruby-identifier">pack</span>.<span class="ruby-identifier">e</span>(<span class="ruby-identifier">b1</span>, <span class="ruby-identifier">f1</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-test_scale">
+            
+              <b>test_scale</b>(ip, parent)
+            
+            <a href="../classes/Test1.html#method-i-test_scale" name="method-i-test_scale" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>scale のサンプル.</p>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-test_scale_source')" id="l_method-i-test_scale_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/b10617c3d1c302e03c41fbd8fffdc7a61bf3d1cf/ext/tk/sample/tcltklib/sample1.rb#L331" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-test_scale_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/sample/tcltklib/sample1.rb, line 331</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">test_scale</span>(<span class="ruby-identifier">ip</span>, <span class="ruby-identifier">parent</span>)
+  <span class="ruby-identifier">global</span>, <span class="ruby-identifier">pack</span>, <span class="ruby-identifier">scale</span> = <span class="ruby-identifier">ip</span>.<span class="ruby-identifier">commands</span>().<span class="ruby-identifier">values_at</span>(
+    <span class="ruby-string">&quot;global&quot;</span>, <span class="ruby-string">&quot;pack&quot;</span>, <span class="ruby-string">&quot;scale&quot;</span>)
+  <span class="ruby-identifier">t1</span>, <span class="ruby-identifier">b1</span>, <span class="ruby-identifier">cb</span> = <span class="ruby-identifier">inittoplevel</span>(<span class="ruby-identifier">ip</span>, <span class="ruby-identifier">parent</span>, <span class="ruby-string">&quot;scale&quot;</span>)
+
+  <span class="ruby-comment">## scale</span>
+
+  <span class="ruby-identifier">v1</span> = <span class="ruby-constant">TclTkVariable</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">ip</span>, <span class="ruby-keyword">nil</span>)
+  <span class="ruby-identifier">global</span>.<span class="ruby-identifier">e</span>(<span class="ruby-identifier">v1</span>)
+  <span class="ruby-identifier">v1</span>.<span class="ruby-identifier">set</span>(<span class="ruby-number">219</span>)
+  <span class="ruby-comment"># コールバック内で参照する変数は先に宣言しておかなければならない.</span>
+  <span class="ruby-identifier">sca1</span> = <span class="ruby-keyword">nil</span>
+  <span class="ruby-identifier">cb</span>.<span class="ruby-identifier">push</span>(<span class="ruby-identifier">c</span> = <span class="ruby-constant">TclTkCallback</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">ip</span>, <span class="ruby-identifier">proc</span>{<span class="ruby-identifier">global</span>.<span class="ruby-identifier">e</span>(<span class="ruby-identifier">v1</span>); <span class="ruby-identifier">v</span> = <span class="ruby-identifier">v1</span>.<span class="ruby-identifier">get</span>();
+    <span class="ruby-identifier">sca1</span>.<span class="ruby-identifier">e</span>(<span class="ruby-string">&quot;configure -background&quot;</span>, <span class="ruby-identifier">format</span>(<span class="ruby-node">&quot;#%02x%02x%02x&quot;</span>, <span class="ruby-identifier">v</span>, <span class="ruby-identifier">v</span>, <span class="ruby-identifier">v</span>))}))
+  <span class="ruby-identifier">sca1</span> = <span class="ruby-constant">TclTkWidget</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">ip</span>, <span class="ruby-identifier">t1</span>, <span class="ruby-identifier">scale</span>,
+    <span class="ruby-string">&quot;-label scale -orient h -from 0 -to 255 -variable&quot;</span>, <span class="ruby-identifier">v1</span>, <span class="ruby-string">&quot;-command&quot;</span>, <span class="ruby-identifier">c</span>)
+  <span class="ruby-identifier">pack</span>.<span class="ruby-identifier">e</span>(<span class="ruby-identifier">b1</span>, <span class="ruby-identifier">sca1</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-test_text">
+            
+              <b>test_text</b>(ip, parent)
+            
+            <a href="../classes/Test1.html#method-i-test_text" name="method-i-test_text" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>text のサンプル.</p>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-test_text_source')" id="l_method-i-test_text_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/b10617c3d1c302e03c41fbd8fffdc7a61bf3d1cf/ext/tk/sample/tcltklib/sample1.rb#L370" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-test_text_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/sample/tcltklib/sample1.rb, line 370</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">test_text</span>(<span class="ruby-identifier">ip</span>, <span class="ruby-identifier">parent</span>)
+  <span class="ruby-identifier">button</span>, <span class="ruby-identifier">pack</span>, <span class="ruby-identifier">text</span> = <span class="ruby-identifier">ip</span>.<span class="ruby-identifier">commands</span>().<span class="ruby-identifier">values_at</span>(
+    <span class="ruby-string">&quot;button&quot;</span>, <span class="ruby-string">&quot;pack&quot;</span>, <span class="ruby-string">&quot;text&quot;</span>)
+  <span class="ruby-identifier">t1</span>, <span class="ruby-identifier">b1</span>, <span class="ruby-identifier">cb</span> = <span class="ruby-identifier">inittoplevel</span>(<span class="ruby-identifier">ip</span>, <span class="ruby-identifier">parent</span>, <span class="ruby-string">&quot;text&quot;</span>)
+
+  <span class="ruby-comment">## text</span>
+
+  <span class="ruby-identifier">te1</span> = <span class="ruby-constant">TclTkWidget</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">ip</span>, <span class="ruby-identifier">t1</span>, <span class="ruby-identifier">text</span>)
+  <span class="ruby-identifier">cb</span>.<span class="ruby-identifier">push</span>(<span class="ruby-identifier">c</span> = <span class="ruby-constant">TclTkCallback</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">ip</span>, <span class="ruby-identifier">proc</span>{
+    <span class="ruby-comment"># 1 行目の 0 文字目から最後までを表示し, 削除する.</span>
+    <span class="ruby-identifier">print</span>(<span class="ruby-identifier">te1</span>.<span class="ruby-identifier">e</span>(<span class="ruby-string">&quot;get 1.0 end&quot;</span>)); <span class="ruby-identifier">te1</span>.<span class="ruby-identifier">e</span>(<span class="ruby-string">&quot;delete 1.0 end&quot;</span>)}))
+  <span class="ruby-identifier">b2</span> = <span class="ruby-constant">TclTkWidget</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">ip</span>, <span class="ruby-identifier">t1</span>, <span class="ruby-identifier">button</span>, <span class="ruby-string">&quot;-text print -command&quot;</span>, <span class="ruby-identifier">c</span>)
+  <span class="ruby-identifier">pack</span>.<span class="ruby-identifier">e</span>(<span class="ruby-identifier">b1</span>, <span class="ruby-identifier">te1</span>, <span class="ruby-identifier">b2</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                    </div>
+
+    </div>
+  </body>
+</html>    

@@ -1,0 +1,1040 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>Tk::Winico</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="../../css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../../css/main.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../../css/github.css" type="text/css" media="screen" />
+<script src="../../js/jquery-1.3.2.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../js/jquery-effect.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../js/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+
+<body>     
+    <div class="banner">
+        
+        <h1>
+            <span class="type">Class</span> 
+            Tk::Winico 
+            
+                <span class="parent">&lt; 
+                    
+                    <a href="../TkObject.html">TkObject</a>
+                    
+                </span>
+            
+        </h1>
+        <ul class="files">
+            
+            <li><a href="../../files/ext/tk/lib/tkextlib/winico/winico_rb.html">ext/tk/lib/tkextlib/winico/winico.rb</a></li>
+            
+        </ul>
+    </div>
+    <div id="bodyContent">
+        <div id="content">
+  
+
+
+  
+
+
+  
+  
+
+
+  
+    <!-- Namespace -->
+    <div class="sectiontitle">Namespace</div>
+    <ul>
+      
+        <li>
+          <span class="type">CLASS</span>
+          <a href="Winico/Winico_callback.html">Tk::Winico::Winico_callback</a>
+        </li>
+      
+    </ul>
+  
+
+
+  
+    <!-- Method ref -->
+    <div class="sectiontitle">Methods</div>
+    <dl class="methods">
+      
+        <dt>A</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-add_to_taskbar">add_to_taskbar</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>D</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-delete">delete</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-delete_from_taskbar">delete_from_taskbar</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-destroy">destroy</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>I</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-icon_info">icon_info</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-id">id</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-c-id2obj">id2obj</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-c-info">info</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-info">info</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>M</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-modify_taskbar">modify_taskbar</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>N</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-new">new</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-c-new_from_file">new_from_file</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-c-new_from_resource">new_from_resource</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>P</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-package_name">package_name</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-c-package_version">package_version</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>S</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-set_window">set_window</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>T</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-taskbar_add">taskbar_add</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-taskbar_delete">taskbar_delete</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-taskbar_modify">taskbar_modify</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+    </dl>
+  
+
+  
+
+
+
+  
+
+    
+
+    
+
+    
+      <!-- Section constants -->
+      <div class="sectiontitle">Constants</div>
+      <table border='0' cellpadding='5'>
+        
+          <tr valign='top'>
+            <td class="attr-name">PACKAGE_NAME</td>
+            <td>=</td>
+            <td class="attr-value">&#39;winico&#39;.freeze</td>
+          </tr>
+          
+            <tr valign='top'>
+              <td>&nbsp;</td>
+              <td colspan="2" class="attr-desc"></td>
+            </tr>
+          
+        
+          <tr valign='top'>
+            <td class="attr-name">WinicoID_TBL</td>
+            <td>=</td>
+            <td class="attr-value">TkCore::INTERP.create_table</td>
+          </tr>
+          
+            <tr valign='top'>
+              <td>&nbsp;</td>
+              <td colspan="2" class="attr-desc"></td>
+            </tr>
+          
+        
+      </table>
+    
+
+
+    
+
+
+    <!-- Methods -->
+    
+      <div class="sectiontitle">Class Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-c-icon_info">
+            
+              <b>icon_info</b>(id)
+            
+            <a href="../../classes/Tk/Winico.html#method-c-icon_info" name="method-c-icon_info" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-icon_info_source')" id="l_method-c-icon_info_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/287a34ae0dfc23e4158f67cb7783d239f202c368/ext/tk/lib/tkextlib/winico/winico.rb#L54" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-icon_info_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/winico/winico.rb, line 54</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">icon_info</span>(<span class="ruby-identifier">id</span>)
+  <span class="ruby-identifier">simplelist</span>(<span class="ruby-constant">Tk</span>.<span class="ruby-identifier">tk_call</span>(<span class="ruby-string">&#39;winico&#39;</span>, <span class="ruby-string">&#39;info&#39;</span>, <span class="ruby-identifier">id</span>)).<span class="ruby-identifier">collect</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">inf</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">h</span> = <span class="ruby-constant">Hash</span>[<span class="ruby-operator">*</span><span class="ruby-identifier">list</span>(<span class="ruby-identifier">inf</span>)]
+    <span class="ruby-identifier">h</span>.<span class="ruby-identifier">keys</span>.<span class="ruby-identifier">each</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">k</span><span class="ruby-operator">|</span> <span class="ruby-identifier">h</span>[<span class="ruby-identifier">k</span>[<span class="ruby-number">1</span><span class="ruby-operator">..</span><span class="ruby-number">-1</span>]] = <span class="ruby-identifier">h</span>.<span class="ruby-identifier">delete</span>(<span class="ruby-identifier">k</span>)}
+  }
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-id2obj">
+            
+              <b>id2obj</b>(id)
+            
+            <a href="../../classes/Tk/Winico.html#method-c-id2obj" name="method-c-id2obj" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-id2obj_source')" id="l_method-c-id2obj_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/287a34ae0dfc23e4158f67cb7783d239f202c368/ext/tk/lib/tkextlib/winico/winico.rb#L42" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-id2obj_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/winico/winico.rb, line 42</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">id2obj</span>(<span class="ruby-identifier">id</span>)
+  <span class="ruby-constant">WinicoID_TBL</span>.<span class="ruby-identifier">mutex</span>.<span class="ruby-identifier">synchronize</span>{
+    (<span class="ruby-constant">WinicoID_TBL</span>.<span class="ruby-identifier">key?</span>(<span class="ruby-identifier">id</span>))<span class="ruby-operator">?</span> <span class="ruby-constant">WinicoID_TBL</span>[<span class="ruby-identifier">id</span>] <span class="ruby-operator">:</span> <span class="ruby-identifier">id</span>
+  }
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-info">
+            
+              <b>info</b>()
+            
+            <a href="../../classes/Tk/Winico.html#method-c-info" name="method-c-info" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-info_source')" id="l_method-c-info_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/287a34ae0dfc23e4158f67cb7783d239f202c368/ext/tk/lib/tkextlib/winico/winico.rb#L48" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-info_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/winico/winico.rb, line 48</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">info</span>
+  <span class="ruby-identifier">simplelist</span>(<span class="ruby-constant">Tk</span>.<span class="ruby-identifier">tk_call</span>(<span class="ruby-string">&#39;winico&#39;</span>, <span class="ruby-string">&#39;info&#39;</span>)).<span class="ruby-identifier">collect</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">id</span><span class="ruby-operator">|</span>
+    <span class="ruby-constant">Tk</span><span class="ruby-operator">::</span><span class="ruby-constant">Winico</span>.<span class="ruby-identifier">id2obj</span>(<span class="ruby-identifier">id</span>)
+  }
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-new">
+            
+              <b>new</b>(file_name, resource_name=nil, winico_id=nil)
+            
+            <a href="../../classes/Tk/Winico.html#method-c-new" name="method-c-new" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-new_source')" id="l_method-c-new_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/287a34ae0dfc23e4158f67cb7783d239f202c368/ext/tk/lib/tkextlib/winico/winico.rb#L71" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-new_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/winico/winico.rb, line 71</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">initialize</span>(<span class="ruby-identifier">file_name</span>, <span class="ruby-identifier">resource_name</span>=<span class="ruby-keyword">nil</span>, <span class="ruby-identifier">winico_id</span>=<span class="ruby-keyword">nil</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">resource_name</span>
+    <span class="ruby-comment"># from resource</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">file_name</span>
+      <span class="ruby-ivar">@id</span> = <span class="ruby-constant">Tk</span>.<span class="ruby-identifier">tk_call</span>(<span class="ruby-string">&#39;winico&#39;</span>, <span class="ruby-string">&#39;load&#39;</span>, <span class="ruby-identifier">resource_name</span>, <span class="ruby-identifier">file_name</span>)
+    <span class="ruby-keyword">else</span>
+      <span class="ruby-ivar">@id</span> = <span class="ruby-constant">Tk</span>.<span class="ruby-identifier">tk_call</span>(<span class="ruby-string">&#39;winico&#39;</span>, <span class="ruby-string">&#39;load&#39;</span>, <span class="ruby-identifier">resource_name</span>)
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">file_name</span>
+    <span class="ruby-comment"># from .ico file</span>
+    <span class="ruby-ivar">@id</span> = <span class="ruby-constant">Tk</span>.<span class="ruby-identifier">tk_call</span>(<span class="ruby-string">&#39;winico&#39;</span>, <span class="ruby-string">&#39;createfrom&#39;</span>, <span class="ruby-identifier">file_name</span>)
+  <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">winico_id</span>
+    <span class="ruby-ivar">@id</span> = <span class="ruby-identifier">winico_id</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">fail</span> <span class="ruby-constant">ArgumentError</span>,
+         <span class="ruby-string">&quot;must be given proper information from where loading icons&quot;</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-ivar">@path</span> = <span class="ruby-ivar">@id</span>
+  <span class="ruby-constant">WinicoID_TBL</span>.<span class="ruby-identifier">mutex</span>.<span class="ruby-identifier">synchronize</span>{
+    <span class="ruby-constant">WinicoID_TBL</span>[<span class="ruby-ivar">@id</span>] = <span class="ruby-keyword">self</span>
+  }
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-new_from_file">
+            
+              <b>new_from_file</b>(file_name)
+            
+            <a href="../../classes/Tk/Winico.html#method-c-new_from_file" name="method-c-new_from_file" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-new_from_file_source')" id="l_method-c-new_from_file_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/287a34ae0dfc23e4158f67cb7783d239f202c368/ext/tk/lib/tkextlib/winico/winico.rb#L63" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-new_from_file_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/winico/winico.rb, line 63</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">new_from_file</span>(<span class="ruby-identifier">file_name</span>)
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">file_name</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-new_from_resource">
+            
+              <b>new_from_resource</b>(resource_name, file_name = nil)
+            
+            <a href="../../classes/Tk/Winico.html#method-c-new_from_resource" name="method-c-new_from_resource" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-new_from_resource_source')" id="l_method-c-new_from_resource_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/287a34ae0dfc23e4158f67cb7783d239f202c368/ext/tk/lib/tkextlib/winico/winico.rb#L67" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-new_from_resource_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/winico/winico.rb, line 67</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">new_from_resource</span>(<span class="ruby-identifier">resource_name</span>, <span class="ruby-identifier">file_name</span> = <span class="ruby-keyword">nil</span>)
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">file_name</span>, <span class="ruby-identifier">resource_name</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-package_name">
+            
+              <b>package_name</b>()
+            
+            <a href="../../classes/Tk/Winico.html#method-c-package_name" name="method-c-package_name" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-package_name_source')" id="l_method-c-package_name_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/287a34ae0dfc23e4158f67cb7783d239f202c368/ext/tk/lib/tkextlib/winico/winico.rb#L21" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-package_name_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/winico/winico.rb, line 21</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">package_name</span>
+  <span class="ruby-constant">PACKAGE_NAME</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-package_version">
+            
+              <b>package_version</b>()
+            
+            <a href="../../classes/Tk/Winico.html#method-c-package_version" name="method-c-package_version" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-package_version_source')" id="l_method-c-package_version_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/287a34ae0dfc23e4158f67cb7783d239f202c368/ext/tk/lib/tkextlib/winico/winico.rb#L25" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-package_version_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/winico/winico.rb, line 25</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">package_version</span>
+  <span class="ruby-keyword">begin</span>
+    <span class="ruby-constant">TkPackage</span>.<span class="ruby-identifier">require</span>(<span class="ruby-string">&#39;winico&#39;</span>)
+  <span class="ruby-keyword">rescue</span>
+    <span class="ruby-string">&#39;&#39;</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                  
+      <div class="sectiontitle">Instance Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-i-add_to_taskbar">
+            
+              <b>add_to_taskbar</b>(keys = {})
+            
+            <a href="../../classes/Tk/Winico.html#method-i-add_to_taskbar" name="method-i-add_to_taskbar" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+            <div class="aka">
+              Also aliased as: <a href="Winico.html#method-i-taskbar_add">taskbar_add</a>
+            </div>
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-add_to_taskbar_source')" id="l_method-i-add_to_taskbar_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/287a34ae0dfc23e4158f67cb7783d239f202c368/ext/tk/lib/tkextlib/winico/winico.rb#L185" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-add_to_taskbar_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/winico/winico.rb, line 185</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">add_to_taskbar</span>(<span class="ruby-identifier">keys</span> = {})
+  <span class="ruby-identifier">keys</span> = <span class="ruby-identifier">_symbolkey2str</span>(<span class="ruby-identifier">keys</span>)
+  <span class="ruby-constant">Winico_callback</span>.<span class="ruby-identifier">_config_keys</span>.<span class="ruby-identifier">each</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">k</span><span class="ruby-operator">|</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">keys</span>[<span class="ruby-identifier">k</span>].<span class="ruby-identifier">kind_of?</span>(<span class="ruby-constant">Array</span>)
+      <span class="ruby-identifier">cmd</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">args</span> = <span class="ruby-identifier">keys</span>[<span class="ruby-identifier">k</span>]
+      <span class="ruby-comment">#keys[k] = Winico_callback.new(cmd, args.join(&#39; &#39;))</span>
+      <span class="ruby-identifier">keys</span>[<span class="ruby-identifier">k</span>] = <span class="ruby-constant">Winico_callback</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">cmd</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">args</span>)
+     <span class="ruby-comment"># elsif keys[k].kind_of?(Proc)</span>
+    <span class="ruby-keyword">elsif</span> <span class="ruby-constant">TkComm</span>.<span class="ruby-identifier">_callback_entry?</span>(<span class="ruby-identifier">keys</span>[<span class="ruby-identifier">k</span>])
+      <span class="ruby-identifier">keys</span>[<span class="ruby-identifier">k</span>] = <span class="ruby-constant">Winico_callback</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">keys</span>[<span class="ruby-identifier">k</span>])
+    <span class="ruby-keyword">end</span>
+  }
+  <span class="ruby-identifier">tk_call</span>(<span class="ruby-string">&#39;winico&#39;</span>, <span class="ruby-string">&#39;taskbar&#39;</span>, <span class="ruby-string">&#39;add&#39;</span>, <span class="ruby-ivar">@id</span>, <span class="ruby-operator">*</span>(<span class="ruby-identifier">hash_kv</span>(<span class="ruby-identifier">keys</span>)))
+  <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-delete">
+            
+              <b>delete</b>()
+            
+            <a href="../../classes/Tk/Winico.html#method-i-delete" name="method-i-delete" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+            <div class="aka">
+              Also aliased as: <a href="Winico.html#method-i-destroy">destroy</a>
+            </div>
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-delete_source')" id="l_method-i-delete_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/287a34ae0dfc23e4158f67cb7783d239f202c368/ext/tk/lib/tkextlib/winico/winico.rb#L104" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-delete_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/winico/winico.rb, line 104</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">delete</span>
+  <span class="ruby-identifier">tk_call</span>(<span class="ruby-string">&#39;winico&#39;</span>, <span class="ruby-string">&#39;delete&#39;</span>, <span class="ruby-ivar">@id</span>)
+  <span class="ruby-constant">WinicoID_TBL</span>.<span class="ruby-identifier">mutex</span>.<span class="ruby-identifier">synchronize</span>{
+    <span class="ruby-constant">WinicoID_TBL</span>.<span class="ruby-identifier">delete</span>(<span class="ruby-ivar">@id</span>)
+  }
+  <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-delete_from_taskbar">
+            
+              <b>delete_from_taskbar</b>()
+            
+            <a href="../../classes/Tk/Winico.html#method-i-delete_from_taskbar" name="method-i-delete_from_taskbar" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+            <div class="aka">
+              Also aliased as: <a href="Winico.html#method-i-taskbar_delete">taskbar_delete</a>
+            </div>
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-delete_from_taskbar_source')" id="l_method-i-delete_from_taskbar_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/287a34ae0dfc23e4158f67cb7783d239f202c368/ext/tk/lib/tkextlib/winico/winico.rb#L219" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-delete_from_taskbar_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/winico/winico.rb, line 219</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">delete_from_taskbar</span>
+  <span class="ruby-identifier">tk_call</span>(<span class="ruby-string">&#39;winico&#39;</span>, <span class="ruby-string">&#39;taskbar&#39;</span>, <span class="ruby-string">&#39;delete&#39;</span>, <span class="ruby-ivar">@id</span>)
+  <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-destroy">
+            
+              <b>destroy</b>()
+            
+            <a href="../../classes/Tk/Winico.html#method-i-destroy" name="method-i-destroy" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+            <div class="aka">
+              Alias for: <a href="Winico.html#method-i-delete">delete</a>
+            </div>
+          
+          
+          
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-id">
+            
+              <b>id</b>()
+            
+            <a href="../../classes/Tk/Winico.html#method-i-id" name="method-i-id" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-id_source')" id="l_method-i-id_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/287a34ae0dfc23e4158f67cb7783d239f202c368/ext/tk/lib/tkextlib/winico/winico.rb#L94" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-id_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/winico/winico.rb, line 94</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">id</span>
+  <span class="ruby-ivar">@id</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-info">
+            
+              <b>info</b>()
+            
+            <a href="../../classes/Tk/Winico.html#method-i-info" name="method-i-info" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-info_source')" id="l_method-i-info_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/287a34ae0dfc23e4158f67cb7783d239f202c368/ext/tk/lib/tkextlib/winico/winico.rb#L113" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-info_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/winico/winico.rb, line 113</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">info</span>
+  <span class="ruby-constant">Tk</span><span class="ruby-operator">::</span><span class="ruby-constant">Winico</span>.<span class="ruby-identifier">icon_info</span>(<span class="ruby-ivar">@id</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-modify_taskbar">
+            
+              <b>modify_taskbar</b>(keys = {})
+            
+            <a href="../../classes/Tk/Winico.html#method-i-modify_taskbar" name="method-i-modify_taskbar" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+            <div class="aka">
+              Also aliased as: <a href="Winico.html#method-i-taskbar_modify">taskbar_modify</a>
+            </div>
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-modify_taskbar_source')" id="l_method-i-modify_taskbar_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/287a34ae0dfc23e4158f67cb7783d239f202c368/ext/tk/lib/tkextlib/winico/winico.rb#L202" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-modify_taskbar_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/winico/winico.rb, line 202</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">modify_taskbar</span>(<span class="ruby-identifier">keys</span> = {})
+  <span class="ruby-identifier">keys</span> = <span class="ruby-identifier">_symbolkey2str</span>(<span class="ruby-identifier">keys</span>)
+  <span class="ruby-constant">Winico_callback</span>.<span class="ruby-identifier">_config_keys</span>.<span class="ruby-identifier">each</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">k</span><span class="ruby-operator">|</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">keys</span>[<span class="ruby-identifier">k</span>].<span class="ruby-identifier">kind_of?</span>(<span class="ruby-constant">Array</span>)
+      <span class="ruby-identifier">cmd</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">args</span> = <span class="ruby-identifier">keys</span>[<span class="ruby-identifier">k</span>]
+      <span class="ruby-comment">#keys[k] = Winico_callback.new(cmd, args.join(&#39; &#39;))</span>
+      <span class="ruby-identifier">keys</span>[<span class="ruby-identifier">k</span>] = <span class="ruby-constant">Winico_callback</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">cmd</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">args</span>)
+    <span class="ruby-comment"># elsif keys[k].kind_of?(Proc)</span>
+    <span class="ruby-keyword">elsif</span> <span class="ruby-constant">TkComm</span>.<span class="ruby-identifier">_callback_entry?</span>(<span class="ruby-identifier">keys</span>[<span class="ruby-identifier">k</span>])
+      <span class="ruby-identifier">keys</span>[<span class="ruby-identifier">k</span>] = <span class="ruby-constant">Winico_callback</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">keys</span>[<span class="ruby-identifier">k</span>])
+    <span class="ruby-keyword">end</span>
+  }
+  <span class="ruby-identifier">tk_call</span>(<span class="ruby-string">&#39;winico&#39;</span>, <span class="ruby-string">&#39;taskbar&#39;</span>, <span class="ruby-string">&#39;modify&#39;</span>, <span class="ruby-ivar">@id</span>, <span class="ruby-operator">*</span>(<span class="ruby-identifier">hash_kv</span>(<span class="ruby-identifier">keys</span>)))
+  <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-set_window">
+            
+              <b>set_window</b>(win_id, *opts)
+            
+            <a href="../../classes/Tk/Winico.html#method-i-set_window" name="method-i-set_window" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-set_window_source')" id="l_method-i-set_window_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/287a34ae0dfc23e4158f67cb7783d239f202c368/ext/tk/lib/tkextlib/winico/winico.rb#L98" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-set_window_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/winico/winico.rb, line 98</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">set_window</span>(<span class="ruby-identifier">win_id</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">opts</span>) <span class="ruby-comment"># opts := ?&#39;big&#39;|&#39;small&#39;?, ?pos?</span>
+  <span class="ruby-comment"># NOTE:: the window, which is denoted by win_id, MUST BE MAPPED.</span>
+  <span class="ruby-comment">#        If not, then this may fail or crash.</span>
+  <span class="ruby-identifier">tk_call</span>(<span class="ruby-string">&#39;winico&#39;</span>, <span class="ruby-string">&#39;setwindow&#39;</span>, <span class="ruby-identifier">win_id</span>, <span class="ruby-ivar">@id</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">opts</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-taskbar_add">
+            
+              <b>taskbar_add</b>(keys = {})
+            
+            <a href="../../classes/Tk/Winico.html#method-i-taskbar_add" name="method-i-taskbar_add" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+            <div class="aka">
+              Alias for: <a href="Winico.html#method-i-add_to_taskbar">add_to_taskbar</a>
+            </div>
+          
+          
+          
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-taskbar_delete">
+            
+              <b>taskbar_delete</b>()
+            
+            <a href="../../classes/Tk/Winico.html#method-i-taskbar_delete" name="method-i-taskbar_delete" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+            <div class="aka">
+              Alias for: <a href="Winico.html#method-i-delete_from_taskbar">delete_from_taskbar</a>
+            </div>
+          
+          
+          
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-taskbar_modify">
+            
+              <b>taskbar_modify</b>(keys = {})
+            
+            <a href="../../classes/Tk/Winico.html#method-i-taskbar_modify" name="method-i-taskbar_modify" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+            <div class="aka">
+              Alias for: <a href="Winico.html#method-i-modify_taskbar">modify_taskbar</a>
+            </div>
+          
+          
+          
+          </div>
+                    </div>
+
+    </div>
+  </body>
+</html>    

@@ -1,0 +1,4059 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>Tk::HTML_Widget</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="../../css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../../css/main.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../../css/github.css" type="text/css" media="screen" />
+<script src="../../js/jquery-1.3.2.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../js/jquery-effect.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../js/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+
+<body>     
+    <div class="banner">
+        
+        <h1>
+            <span class="type">Class</span> 
+            Tk::HTML_Widget 
+            
+                <span class="parent">&lt; 
+                    
+                    <a href="../TkWindow.html">TkWindow</a>
+                    
+                </span>
+            
+        </h1>
+        <ul class="files">
+            
+            <li><a href="../../files/ext/tk/lib/tkextlib/tkHTML/htmlwidget_rb.html">ext/tk/lib/tkextlib/tkHTML/htmlwidget.rb</a></li>
+            
+            <li><a href="../../files/ext/tk/sample/tkextlib/tkHTML/hv_rb.html">ext/tk/sample/tkextlib/tkHTML/hv.rb</a></li>
+            
+            <li><a href="../../files/ext/tk/sample/tkextlib/tkHTML/ss_rb.html">ext/tk/sample/tkextlib/tkHTML/ss.rb</a></li>
+            
+        </ul>
+    </div>
+    <div id="bodyContent">
+        <div id="content">
+  
+
+
+  
+
+
+  
+  
+
+
+  
+    <!-- Namespace -->
+    <div class="sectiontitle">Namespace</div>
+    <ul>
+      
+        <li>
+          <span class="type">CLASS</span>
+          <a href="HTML_Widget/ClippingWindow.html">Tk::HTML_Widget::ClippingWindow</a>
+        </li>
+      
+    </ul>
+  
+
+
+  
+    <!-- Method ref -->
+    <div class="sectiontitle">Methods</div>
+    <dl class="methods">
+      
+        <dt>A</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-ascii_text">ascii_text</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>B</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-base64_decode">base64_decode</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-c-base64_encode">base64_encode</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-bgimage">bgimage</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-break_text">break_text</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>C</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-clear">clear</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-clipping_window">clipping_window</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-clipwin">clipwin</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-coords">coords</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-c-crc32">crc32</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>D</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-dom_attr">dom_attr</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-dom_form_element">dom_form_element</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-dom_formel">dom_formel</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-dom_id">dom_id</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-dom_ids">dom_ids</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-dom_name_index">dom_name_index</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-dom_nameidx">dom_nameidx</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-dom_radio_index">dom_radio_index</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-dom_radioidx">dom_radioidx</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-dom_tree">dom_tree</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-dom_value">dom_value</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>F</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-form_info">form_info</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-forminfo">forminfo</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>G</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-gunzip_data">gunzip_data</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-c-gunzip_file">gunzip_file</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-c-gzip_data">gzip_data</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-c-gzip_file">gzip_file</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>H</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-href">href</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-html_text">html_text</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-htmlclip">htmlclip</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>I</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-image_add">image_add</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-image_at">image_at</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-image_set">image_set</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-image_update">image_update</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-images">images</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-index">index</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-insert_cursor">insert_cursor</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>L</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-layout">layout</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-c-lockcopy">lockcopy</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>N</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-names">names</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>O</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-on_screen">on_screen</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-over">over</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-over_attr">over_attr</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-over_markup">over_markup</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>P</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-package_name">package_name</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-c-package_version">package_version</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-parse">parse</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-plain_text">plain_text</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-postscript">postscript</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>R</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-reformat">reformat</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-refresh">refresh</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-resolver">resolver</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>S</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-selection_clear">selection_clear</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-selection_set">selection_set</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-sizewindow">sizewindow</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-source">source</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-c-stdchan">stdchan</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>T</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-text_ascii">text_ascii</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-text_break">text_break</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-text_delete">text_delete</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-text_find">text_find</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-c-text_format">text_format</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-text_html">text_html</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-text_insert">text_insert</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-text_table">text_table</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-token_DOM">token_DOM</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-token_append">token_append</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-token_attrs">token_attrs</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-token_define">token_define</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-token_delete">token_delete</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-token_dom">token_dom</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-token_dom_tokens">token_dom_tokens</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-token_domtokens">token_domtokens</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-token_find">token_find</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-token_get">token_get</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-token_get_attr">token_get_attr</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-token_get_end">token_get_end</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-token_getend">token_getend</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-token_handler">token_handler</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-token_insert">token_insert</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-token_list">token_list</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-token_markup">token_markup</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-token_offset">token_offset</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-token_on_events">token_on_events</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-token_set_attr">token_set_attr</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-token_unique">token_unique</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>U</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-url_join">url_join</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-c-url_split">url_split</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>X</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-xor">xor</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+    </dl>
+  
+
+  
+    <!-- Includes -->
+    <div class="sectiontitle">Included Modules</div>
+    <ul>
+      
+        <li>
+          
+            Scrollable
+          
+        </li>
+      
+    </ul>
+  
+
+
+
+  
+
+    
+
+    
+
+    
+      <!-- Section constants -->
+      <div class="sectiontitle">Constants</div>
+      <table border='0' cellpadding='5'>
+        
+          <tr valign='top'>
+            <td class="attr-name">PACKAGE_NAME</td>
+            <td>=</td>
+            <td class="attr-value">&#39;Tkhtml&#39;.freeze</td>
+          </tr>
+          
+            <tr valign='top'>
+              <td>&nbsp;</td>
+              <td colspan="2" class="attr-desc"></td>
+            </tr>
+          
+        
+          <tr valign='top'>
+            <td class="attr-name">TkCommandNames</td>
+            <td>=</td>
+            <td class="attr-value">[&#39;html&#39;.freeze].freeze</td>
+          </tr>
+          
+            <tr valign='top'>
+              <td>&nbsp;</td>
+              <td colspan="2" class="attr-desc"></td>
+            </tr>
+          
+        
+          <tr valign='top'>
+            <td class="attr-name">WidgetClassName</td>
+            <td>=</td>
+            <td class="attr-value">&#39;Html&#39;.freeze</td>
+          </tr>
+          
+            <tr valign='top'>
+              <td>&nbsp;</td>
+              <td colspan="2" class="attr-desc"></td>
+            </tr>
+          
+        
+      </table>
+    
+
+
+    
+
+
+    <!-- Methods -->
+    
+      <div class="sectiontitle">Class Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-c-base64_decode">
+            
+              <b>base64_decode</b>(dat)
+            
+            <a href="../../classes/Tk/HTML_Widget.html#method-c-base64_decode" name="method-c-base64_decode" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-base64_decode_source')" id="l_method-c-base64_decode_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/tkHTML/htmlwidget.rb#L160" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-base64_decode_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/tkHTML/htmlwidget.rb, line 160</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">base64_decode</span>(<span class="ruby-identifier">dat</span>)
+  <span class="ruby-identifier">tk_call</span>(<span class="ruby-string">&#39;html&#39;</span>, <span class="ruby-string">&#39;base64&#39;</span>, <span class="ruby-string">&#39;encode&#39;</span>, <span class="ruby-identifier">dat</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-base64_encode">
+            
+              <b>base64_encode</b>(dat)
+            
+            <a href="../../classes/Tk/HTML_Widget.html#method-c-base64_encode" name="method-c-base64_encode" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-base64_encode_source')" id="l_method-c-base64_encode_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/tkHTML/htmlwidget.rb#L156" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-base64_encode_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/tkHTML/htmlwidget.rb, line 156</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">base64_encode</span>(<span class="ruby-identifier">dat</span>)
+  <span class="ruby-identifier">tk_call</span>(<span class="ruby-string">&#39;html&#39;</span>, <span class="ruby-string">&#39;base64&#39;</span>, <span class="ruby-string">&#39;encode&#39;</span>, <span class="ruby-identifier">dat</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-crc32">
+            
+              <b>crc32</b>(data)
+            
+            <a href="../../classes/Tk/HTML_Widget.html#method-c-crc32" name="method-c-crc32" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-crc32_source')" id="l_method-c-crc32_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/tkHTML/htmlwidget.rb#L176" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-crc32_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/tkHTML/htmlwidget.rb, line 176</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">crc32</span>(<span class="ruby-identifier">data</span>)
+  <span class="ruby-identifier">tk_call</span>(<span class="ruby-string">&#39;html&#39;</span>, <span class="ruby-string">&#39;crc32&#39;</span>, <span class="ruby-identifier">data</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-gunzip_data">
+            
+              <b>gunzip_data</b>(dat)
+            
+            <a href="../../classes/Tk/HTML_Widget.html#method-c-gunzip_data" name="method-c-gunzip_data" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-gunzip_data_source')" id="l_method-c-gunzip_data_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/tkHTML/htmlwidget.rb#L152" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-gunzip_data_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/tkHTML/htmlwidget.rb, line 152</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">gunzip_data</span>(<span class="ruby-identifier">dat</span>)
+  <span class="ruby-identifier">tk_call</span>(<span class="ruby-string">&#39;html&#39;</span>, <span class="ruby-string">&#39;gunzip&#39;</span>, <span class="ruby-string">&#39;data&#39;</span>, <span class="ruby-identifier">filet</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-gunzip_file">
+            
+              <b>gunzip_file</b>(file, dat)
+            
+            <a href="../../classes/Tk/HTML_Widget.html#method-c-gunzip_file" name="method-c-gunzip_file" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-gunzip_file_source')" id="l_method-c-gunzip_file_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/tkHTML/htmlwidget.rb#L144" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-gunzip_file_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/tkHTML/htmlwidget.rb, line 144</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">gunzip_file</span>(<span class="ruby-identifier">file</span>, <span class="ruby-identifier">dat</span>)
+  <span class="ruby-identifier">tk_call</span>(<span class="ruby-string">&#39;html&#39;</span>, <span class="ruby-string">&#39;gunzip&#39;</span>, <span class="ruby-string">&#39;file&#39;</span>, <span class="ruby-identifier">filet</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-gzip_data">
+            
+              <b>gzip_data</b>(dat)
+            
+            <a href="../../classes/Tk/HTML_Widget.html#method-c-gzip_data" name="method-c-gzip_data" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-gzip_data_source')" id="l_method-c-gzip_data_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/tkHTML/htmlwidget.rb#L148" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-gzip_data_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/tkHTML/htmlwidget.rb, line 148</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">gzip_data</span>(<span class="ruby-identifier">dat</span>)
+  <span class="ruby-identifier">tk_call</span>(<span class="ruby-string">&#39;html&#39;</span>, <span class="ruby-string">&#39;gzip&#39;</span>, <span class="ruby-string">&#39;data&#39;</span>, <span class="ruby-identifier">file</span>, <span class="ruby-identifier">dat</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-gzip_file">
+            
+              <b>gzip_file</b>(file, dat)
+            
+            <a href="../../classes/Tk/HTML_Widget.html#method-c-gzip_file" name="method-c-gzip_file" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-gzip_file_source')" id="l_method-c-gzip_file_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/tkHTML/htmlwidget.rb#L140" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-gzip_file_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/tkHTML/htmlwidget.rb, line 140</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">gzip_file</span>(<span class="ruby-identifier">file</span>, <span class="ruby-identifier">dat</span>)
+  <span class="ruby-identifier">tk_call</span>(<span class="ruby-string">&#39;html&#39;</span>, <span class="ruby-string">&#39;gzip&#39;</span>, <span class="ruby-string">&#39;file&#39;</span>, <span class="ruby-identifier">file</span>, <span class="ruby-identifier">dat</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-lockcopy">
+            
+              <b>lockcopy</b>(src, dst)
+            
+            <a href="../../classes/Tk/HTML_Widget.html#method-c-lockcopy" name="method-c-lockcopy" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-lockcopy_source')" id="l_method-c-lockcopy_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/tkHTML/htmlwidget.rb#L136" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-lockcopy_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/tkHTML/htmlwidget.rb, line 136</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">lockcopy</span>(<span class="ruby-identifier">src</span>, <span class="ruby-identifier">dst</span>)
+  <span class="ruby-identifier">tk_call</span>(<span class="ruby-string">&#39;html&#39;</span>, <span class="ruby-string">&#39;lockcopy&#39;</span>, <span class="ruby-identifier">src</span>, <span class="ruby-identifier">dst</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-package_name">
+            
+              <b>package_name</b>()
+            
+            <a href="../../classes/Tk/HTML_Widget.html#method-c-package_name" name="method-c-package_name" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-package_name_source')" id="l_method-c-package_name_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/tkHTML/htmlwidget.rb#L20" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-package_name_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/tkHTML/htmlwidget.rb, line 20</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">package_name</span>
+  <span class="ruby-constant">PACKAGE_NAME</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-package_version">
+            
+              <b>package_version</b>()
+            
+            <a href="../../classes/Tk/HTML_Widget.html#method-c-package_version" name="method-c-package_version" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-package_version_source')" id="l_method-c-package_version_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/tkHTML/htmlwidget.rb#L24" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-package_version_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/tkHTML/htmlwidget.rb, line 24</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">package_version</span>
+  <span class="ruby-keyword">begin</span>
+    <span class="ruby-constant">TkPackage</span>.<span class="ruby-identifier">require</span>(<span class="ruby-string">&#39;Tkhtml&#39;</span>)
+  <span class="ruby-keyword">rescue</span>
+    <span class="ruby-string">&#39;&#39;</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-reformat">
+            
+              <b>reformat</b>(src, dst, txt)
+            
+            <a href="../../classes/Tk/HTML_Widget.html#method-c-reformat" name="method-c-reformat" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>class methods</p>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-reformat_source')" id="l_method-c-reformat_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/tkHTML/htmlwidget.rb#L124" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-reformat_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/tkHTML/htmlwidget.rb, line 124</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">reformat</span>(<span class="ruby-identifier">src</span>, <span class="ruby-identifier">dst</span>, <span class="ruby-identifier">txt</span>)
+  <span class="ruby-identifier">tk_call</span>(<span class="ruby-string">&#39;html&#39;</span>, <span class="ruby-string">&#39;reformat&#39;</span>, <span class="ruby-identifier">src</span>, <span class="ruby-identifier">dst</span>, <span class="ruby-identifier">txt</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-stdchan">
+            
+              <b>stdchan</b>(cmd, channel)
+            
+            <a href="../../classes/Tk/HTML_Widget.html#method-c-stdchan" name="method-c-stdchan" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-stdchan_source')" id="l_method-c-stdchan_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/tkHTML/htmlwidget.rb#L172" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-stdchan_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/tkHTML/htmlwidget.rb, line 172</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">stdchan</span>(<span class="ruby-identifier">cmd</span>, <span class="ruby-identifier">channel</span>)
+  <span class="ruby-identifier">tk_call</span>(<span class="ruby-string">&#39;html&#39;</span>, <span class="ruby-string">&#39;stdchan&#39;</span>, <span class="ruby-identifier">cmd</span>, <span class="ruby-identifier">channel</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-text_format">
+            
+              <b>text_format</b>(dat, len)
+            
+            <a href="../../classes/Tk/HTML_Widget.html#method-c-text_format" name="method-c-text_format" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-text_format_source')" id="l_method-c-text_format_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/tkHTML/htmlwidget.rb#L164" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-text_format_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/tkHTML/htmlwidget.rb, line 164</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">text_format</span>(<span class="ruby-identifier">dat</span>, <span class="ruby-identifier">len</span>)
+  <span class="ruby-identifier">tk_call</span>(<span class="ruby-string">&#39;html&#39;</span>, <span class="ruby-string">&#39;text&#39;</span>, <span class="ruby-string">&#39;format&#39;</span>, <span class="ruby-identifier">dat</span>, <span class="ruby-identifier">len</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-url_join">
+            
+              <b>url_join</b>(*args)
+            
+            <a href="../../classes/Tk/HTML_Widget.html#method-c-url_join" name="method-c-url_join" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-url_join_source')" id="l_method-c-url_join_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/tkHTML/htmlwidget.rb#L128" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-url_join_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/tkHTML/htmlwidget.rb, line 128</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">url_join</span>(<span class="ruby-operator">*</span><span class="ruby-identifier">args</span>) <span class="ruby-comment"># args := sheme authority path query fragment</span>
+  <span class="ruby-identifier">tk_call</span>(<span class="ruby-string">&#39;html&#39;</span>, <span class="ruby-string">&#39;urljoin&#39;</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">args</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-url_split">
+            
+              <b>url_split</b>(uri)
+            
+            <a href="../../classes/Tk/HTML_Widget.html#method-c-url_split" name="method-c-url_split" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-url_split_source')" id="l_method-c-url_split_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/tkHTML/htmlwidget.rb#L132" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-url_split_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/tkHTML/htmlwidget.rb, line 132</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">url_split</span>(<span class="ruby-identifier">uri</span>)
+  <span class="ruby-identifier">tk_call</span>(<span class="ruby-string">&#39;html&#39;</span>, <span class="ruby-string">&#39;urlsplit&#39;</span>, <span class="ruby-identifier">uri</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-xor">
+            
+              <b>xor</b>(cmd, *args)
+            
+            <a href="../../classes/Tk/HTML_Widget.html#method-c-xor" name="method-c-xor" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-xor_source')" id="l_method-c-xor_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/tkHTML/htmlwidget.rb#L168" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-xor_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/tkHTML/htmlwidget.rb, line 168</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">xor</span>(<span class="ruby-identifier">cmd</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">args</span>)
+  <span class="ruby-identifier">tk_call</span>(<span class="ruby-string">&#39;html&#39;</span>, <span class="ruby-string">&#39;xor&#39;</span>, <span class="ruby-identifier">cmd</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">args</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                  
+      <div class="sectiontitle">Instance Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-i-ascii_text">
+            
+              <b>ascii_text</b>(first, last)
+            
+            <a href="../../classes/Tk/HTML_Widget.html#method-i-ascii_text" name="method-i-ascii_text" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+            <div class="aka">
+              Alias for: <a href="HTML_Widget.html#method-i-plain_text">plain_text</a>
+            </div>
+          
+          
+          
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-bgimage">
+            
+              <b>bgimage</b>(image, tid=None)
+            
+            <a href="../../classes/Tk/HTML_Widget.html#method-i-bgimage" name="method-i-bgimage" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-bgimage_source')" id="l_method-i-bgimage_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/tkHTML/htmlwidget.rb#L189" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-bgimage_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/tkHTML/htmlwidget.rb, line 189</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">bgimage</span>(<span class="ruby-identifier">image</span>, <span class="ruby-identifier">tid</span>=<span class="ruby-constant">None</span>)
+  <span class="ruby-identifier">tk_send</span>(<span class="ruby-string">&#39;bgimage&#39;</span>, <span class="ruby-identifier">image</span>, <span class="ruby-identifier">tid</span>)
+  <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-break_text">
+            
+              <b>break_text</b>(idx)
+            
+            <a href="../../classes/Tk/HTML_Widget.html#method-i-break_text" name="method-i-break_text" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+            <div class="aka">
+              Also aliased as: <a href="HTML_Widget.html#method-i-text_break">text_break</a>
+            </div>
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-break_text_source')" id="l_method-i-break_text_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/tkHTML/htmlwidget.rb#L323" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-break_text_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/tkHTML/htmlwidget.rb, line 323</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">break_text</span>(<span class="ruby-identifier">idx</span>)
+  <span class="ruby-identifier">tk_send</span>(<span class="ruby-string">&#39;text&#39;</span>, <span class="ruby-string">&#39;break&#39;</span>, <span class="ruby-identifier">idx</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-clear">
+            
+              <b>clear</b>()
+            
+            <a href="../../classes/Tk/HTML_Widget.html#method-i-clear" name="method-i-clear" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-clear_source')" id="l_method-i-clear_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/tkHTML/htmlwidget.rb#L194" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-clear_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/tkHTML/htmlwidget.rb, line 194</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">clear</span>()
+  <span class="ruby-identifier">tk_send</span>(<span class="ruby-string">&#39;clear&#39;</span>)
+  <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-clipping_window">
+            
+              <b>clipping_window</b>()
+            
+            <a href="../../classes/Tk/HTML_Widget.html#method-i-clipping_window" name="method-i-clipping_window" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>instance methods</p>
+            </div>
+          
+          
+          
+            <div class="aka">
+              Also aliased as: <a href="HTML_Widget.html#method-i-clipwin">clipwin</a>, <a href="HTML_Widget.html#method-i-htmlclip">htmlclip</a>
+            </div>
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-clipping_window_source')" id="l_method-i-clipping_window_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/tkHTML/htmlwidget.rb#L183" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-clipping_window_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/tkHTML/htmlwidget.rb, line 183</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">clipping_window</span>
+  <span class="ruby-constant">ClippingWindow</span>.<span class="ruby-identifier">new</span>(<span class="ruby-keyword">self</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-clipwin">
+            
+              <b>clipwin</b>()
+            
+            <a href="../../classes/Tk/HTML_Widget.html#method-i-clipwin" name="method-i-clipwin" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+            <div class="aka">
+              Alias for: <a href="HTML_Widget.html#method-i-clipping_window">clipping_window</a>
+            </div>
+          
+          
+          
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-coords">
+            
+              <b>coords</b>(index=None, percent=None)
+            
+            <a href="../../classes/Tk/HTML_Widget.html#method-i-coords" name="method-i-coords" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-coords_source')" id="l_method-i-coords_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/tkHTML/htmlwidget.rb#L199" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-coords_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/tkHTML/htmlwidget.rb, line 199</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">coords</span>(<span class="ruby-identifier">index</span>=<span class="ruby-constant">None</span>, <span class="ruby-identifier">percent</span>=<span class="ruby-constant">None</span>)
+  <span class="ruby-identifier">tk_send</span>(<span class="ruby-string">&#39;coords&#39;</span>, <span class="ruby-identifier">index</span>, <span class="ruby-identifier">percent</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-dom_attr">
+            
+              <b>dom_attr</b>(idx)
+            
+            <a href="../../classes/Tk/HTML_Widget.html#method-i-dom_attr" name="method-i-dom_attr" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-dom_attr_source')" id="l_method-i-dom_attr_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/tkHTML/htmlwidget.rb#L441" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-dom_attr_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/tkHTML/htmlwidget.rb, line 441</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">dom_attr</span>(<span class="ruby-identifier">idx</span>)
+  <span class="ruby-identifier">tk_send</span>(<span class="ruby-string">&#39;dom&#39;</span>, <span class="ruby-string">&#39;attr&#39;</span>, <span class="ruby-identifier">idx</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-dom_form_element">
+            
+              <b>dom_form_element</b>(name)
+            
+            <a href="../../classes/Tk/HTML_Widget.html#method-i-dom_form_element" name="method-i-dom_form_element" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+            <div class="aka">
+              Alias for: <a href="HTML_Widget.html#method-i-dom_formel">dom_formel</a>
+            </div>
+          
+          
+          
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-dom_formel">
+            
+              <b>dom_formel</b>(name)
+            
+            <a href="../../classes/Tk/HTML_Widget.html#method-i-dom_formel" name="method-i-dom_formel" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+            <div class="aka">
+              Also aliased as: <a href="HTML_Widget.html#method-i-dom_form_element">dom_form_element</a>
+            </div>
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-dom_formel_source')" id="l_method-i-dom_formel_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/tkHTML/htmlwidget.rb#L445" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-dom_formel_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/tkHTML/htmlwidget.rb, line 445</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">dom_formel</span>(<span class="ruby-identifier">name</span>)
+  <span class="ruby-identifier">tk_send</span>(<span class="ruby-string">&#39;dom&#39;</span>, <span class="ruby-string">&#39;formel&#39;</span>, <span class="ruby-identifier">name</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-dom_id">
+            
+              <b>dom_id</b>(*spec)
+            
+            <a href="../../classes/Tk/HTML_Widget.html#method-i-dom_id" name="method-i-dom_id" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-dom_id_source')" id="l_method-i-dom_id_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/tkHTML/htmlwidget.rb#L429" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-dom_id_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/tkHTML/htmlwidget.rb, line 429</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">dom_id</span>(<span class="ruby-operator">*</span><span class="ruby-identifier">spec</span>)
+  <span class="ruby-identifier">tk_send</span>(<span class="ruby-string">&#39;dom&#39;</span>, <span class="ruby-string">&#39;id&#39;</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">spec</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-dom_ids">
+            
+              <b>dom_ids</b>(*spec)
+            
+            <a href="../../classes/Tk/HTML_Widget.html#method-i-dom_ids" name="method-i-dom_ids" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-dom_ids_source')" id="l_method-i-dom_ids_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/tkHTML/htmlwidget.rb#L433" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-dom_ids_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/tkHTML/htmlwidget.rb, line 433</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">dom_ids</span>(<span class="ruby-operator">*</span><span class="ruby-identifier">spec</span>)
+  <span class="ruby-identifier">list</span>(<span class="ruby-identifier">tk_send</span>(<span class="ruby-string">&#39;dom&#39;</span>, <span class="ruby-string">&#39;ids&#39;</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">spec</span>))
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-dom_name_index">
+            
+              <b>dom_name_index</b>(tag, name)
+            
+            <a href="../../classes/Tk/HTML_Widget.html#method-i-dom_name_index" name="method-i-dom_name_index" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+            <div class="aka">
+              Alias for: <a href="HTML_Widget.html#method-i-dom_nameidx">dom_nameidx</a>
+            </div>
+          
+          
+          
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-dom_nameidx">
+            
+              <b>dom_nameidx</b>(tag, name)
+            
+            <a href="../../classes/Tk/HTML_Widget.html#method-i-dom_nameidx" name="method-i-dom_nameidx" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+            <div class="aka">
+              Also aliased as: <a href="HTML_Widget.html#method-i-dom_name_index">dom_name_index</a>
+            </div>
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-dom_nameidx_source')" id="l_method-i-dom_nameidx_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/tkHTML/htmlwidget.rb#L419" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-dom_nameidx_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/tkHTML/htmlwidget.rb, line 419</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">dom_nameidx</span>(<span class="ruby-identifier">tag</span>, <span class="ruby-identifier">name</span>)
+  <span class="ruby-identifier">number</span>(<span class="ruby-identifier">tk_send</span>(<span class="ruby-string">&#39;dom&#39;</span>, <span class="ruby-string">&#39;nameidx&#39;</span>, <span class="ruby-identifier">tag</span>, <span class="ruby-identifier">name</span>))
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-dom_radio_index">
+            
+              <b>dom_radio_index</b>(tag, name)
+            
+            <a href="../../classes/Tk/HTML_Widget.html#method-i-dom_radio_index" name="method-i-dom_radio_index" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+            <div class="aka">
+              Alias for: <a href="HTML_Widget.html#method-i-dom_radioidx">dom_radioidx</a>
+            </div>
+          
+          
+          
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-dom_radioidx">
+            
+              <b>dom_radioidx</b>(tag, name)
+            
+            <a href="../../classes/Tk/HTML_Widget.html#method-i-dom_radioidx" name="method-i-dom_radioidx" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+            <div class="aka">
+              Also aliased as: <a href="HTML_Widget.html#method-i-dom_radio_index">dom_radio_index</a>
+            </div>
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-dom_radioidx_source')" id="l_method-i-dom_radioidx_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/tkHTML/htmlwidget.rb#L424" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-dom_radioidx_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/tkHTML/htmlwidget.rb, line 424</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">dom_radioidx</span>(<span class="ruby-identifier">tag</span>, <span class="ruby-identifier">name</span>)
+  <span class="ruby-identifier">number</span>(<span class="ruby-identifier">tk_send</span>(<span class="ruby-string">&#39;dom&#39;</span>, <span class="ruby-string">&#39;radioidx&#39;</span>, <span class="ruby-identifier">tag</span>, <span class="ruby-identifier">name</span>))
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-dom_tree">
+            
+              <b>dom_tree</b>(idx, val)
+            
+            <a href="../../classes/Tk/HTML_Widget.html#method-i-dom_tree" name="method-i-dom_tree" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-dom_tree_source')" id="l_method-i-dom_tree_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/tkHTML/htmlwidget.rb#L450" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-dom_tree_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/tkHTML/htmlwidget.rb, line 450</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">dom_tree</span>(<span class="ruby-identifier">idx</span>, <span class="ruby-identifier">val</span>)
+  <span class="ruby-identifier">list</span>(<span class="ruby-identifier">tk_send</span>(<span class="ruby-string">&#39;dom&#39;</span>, <span class="ruby-string">&#39;tree&#39;</span>, <span class="ruby-identifier">idx</span>, <span class="ruby-identifier">val</span>))
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-dom_value">
+            
+              <b>dom_value</b>(*spec)
+            
+            <a href="../../classes/Tk/HTML_Widget.html#method-i-dom_value" name="method-i-dom_value" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-dom_value_source')" id="l_method-i-dom_value_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/tkHTML/htmlwidget.rb#L437" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-dom_value_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/tkHTML/htmlwidget.rb, line 437</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">dom_value</span>(<span class="ruby-operator">*</span><span class="ruby-identifier">spec</span>)
+  <span class="ruby-identifier">list</span>(<span class="ruby-identifier">tk_send</span>(<span class="ruby-string">&#39;dom&#39;</span>, <span class="ruby-string">&#39;value&#39;</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">spec</span>))
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-form_info">
+            
+              <b>form_info</b>(*args)
+            
+            <a href="../../classes/Tk/HTML_Widget.html#method-i-form_info" name="method-i-form_info" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+            <div class="aka">
+              Alias for: <a href="HTML_Widget.html#method-i-forminfo">forminfo</a>
+            </div>
+          
+          
+          
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-forminfo">
+            
+              <b>forminfo</b>(*args)
+            
+            <a href="../../classes/Tk/HTML_Widget.html#method-i-forminfo" name="method-i-forminfo" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+            <div class="aka">
+              Also aliased as: <a href="HTML_Widget.html#method-i-form_info">form_info</a>
+            </div>
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-forminfo_source')" id="l_method-i-forminfo_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/tkHTML/htmlwidget.rb#L203" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-forminfo_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/tkHTML/htmlwidget.rb, line 203</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">forminfo</span>(<span class="ruby-operator">*</span><span class="ruby-identifier">args</span>)
+  <span class="ruby-identifier">tk_send</span>(<span class="ruby-string">&#39;forminfo&#39;</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">args</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-href">
+            
+              <b>href</b>(x, y)
+            
+            <a href="../../classes/Tk/HTML_Widget.html#method-i-href" name="method-i-href" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-href_source')" id="l_method-i-href_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/tkHTML/htmlwidget.rb#L208" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-href_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/tkHTML/htmlwidget.rb, line 208</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">href</span>(<span class="ruby-identifier">x</span>, <span class="ruby-identifier">y</span>)
+  <span class="ruby-identifier">simplelist</span>(<span class="ruby-identifier">tk_send</span>(<span class="ruby-string">&#39;href&#39;</span>, <span class="ruby-identifier">x</span>, <span class="ruby-identifier">y</span>))
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-html_text">
+            
+              <b>html_text</b>(first, last)
+            
+            <a href="../../classes/Tk/HTML_Widget.html#method-i-html_text" name="method-i-html_text" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+            <div class="aka">
+              Also aliased as: <a href="HTML_Widget.html#method-i-text_html">text_html</a>
+            </div>
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-html_text_source')" id="l_method-i-html_text_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/tkHTML/htmlwidget.rb#L313" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-html_text_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/tkHTML/htmlwidget.rb, line 313</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">html_text</span>(<span class="ruby-identifier">first</span>, <span class="ruby-identifier">last</span>)
+  <span class="ruby-identifier">tk_send</span>(<span class="ruby-string">&#39;text&#39;</span>, <span class="ruby-string">&#39;html&#39;</span>, <span class="ruby-identifier">first</span>, <span class="ruby-identifier">last</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-htmlclip">
+            
+              <b>htmlclip</b>()
+            
+            <a href="../../classes/Tk/HTML_Widget.html#method-i-htmlclip" name="method-i-htmlclip" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+            <div class="aka">
+              Alias for: <a href="HTML_Widget.html#method-i-clipping_window">clipping_window</a>
+            </div>
+          
+          
+          
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-image_add">
+            
+              <b>image_add</b>(id, img)
+            
+            <a href="../../classes/Tk/HTML_Widget.html#method-i-image_add" name="method-i-image_add" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-image_add_source')" id="l_method-i-image_add_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/tkHTML/htmlwidget.rb#L212" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-image_add_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/tkHTML/htmlwidget.rb, line 212</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">image_add</span>(<span class="ruby-identifier">id</span>, <span class="ruby-identifier">img</span>)
+  <span class="ruby-identifier">tk_send</span>(<span class="ruby-string">&#39;imageadd&#39;</span>, <span class="ruby-identifier">id</span>, <span class="ruby-identifier">img</span>)
+  <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-image_at">
+            
+              <b>image_at</b>(x, y)
+            
+            <a href="../../classes/Tk/HTML_Widget.html#method-i-image_at" name="method-i-image_at" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-image_at_source')" id="l_method-i-image_at_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/tkHTML/htmlwidget.rb#L217" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-image_at_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/tkHTML/htmlwidget.rb, line 217</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">image_at</span>(<span class="ruby-identifier">x</span>, <span class="ruby-identifier">y</span>)
+  <span class="ruby-identifier">tk_send</span>(<span class="ruby-string">&#39;imageat&#39;</span>, <span class="ruby-identifier">x</span>, <span class="ruby-identifier">y</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-image_set">
+            
+              <b>image_set</b>(id, num)
+            
+            <a href="../../classes/Tk/HTML_Widget.html#method-i-image_set" name="method-i-image_set" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-image_set_source')" id="l_method-i-image_set_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/tkHTML/htmlwidget.rb#L225" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-image_set_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/tkHTML/htmlwidget.rb, line 225</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">image_set</span>(<span class="ruby-identifier">id</span>, <span class="ruby-identifier">num</span>)
+  <span class="ruby-identifier">tk_send</span>(<span class="ruby-string">&#39;imageset&#39;</span>, <span class="ruby-identifier">id</span>, <span class="ruby-identifier">num</span>)
+  <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-image_update">
+            
+              <b>image_update</b>(id, imgs)
+            
+            <a href="../../classes/Tk/HTML_Widget.html#method-i-image_update" name="method-i-image_update" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-image_update_source')" id="l_method-i-image_update_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/tkHTML/htmlwidget.rb#L230" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-image_update_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/tkHTML/htmlwidget.rb, line 230</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">image_update</span>(<span class="ruby-identifier">id</span>, <span class="ruby-identifier">imgs</span>)
+  <span class="ruby-identifier">tk_send</span>(<span class="ruby-string">&#39;imageupdate&#39;</span>, <span class="ruby-identifier">id</span>, <span class="ruby-identifier">imgs</span>)
+  <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-images">
+            
+              <b>images</b>()
+            
+            <a href="../../classes/Tk/HTML_Widget.html#method-i-images" name="method-i-images" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-images_source')" id="l_method-i-images_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/tkHTML/htmlwidget.rb#L221" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-images_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/tkHTML/htmlwidget.rb, line 221</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">images</span>()
+  <span class="ruby-identifier">list</span>(<span class="ruby-identifier">tk_send</span>(<span class="ruby-string">&#39;images&#39;</span>))
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-index">
+            
+              <b>index</b>(idx, count=None, unit=None)
+            
+            <a href="../../classes/Tk/HTML_Widget.html#method-i-index" name="method-i-index" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-index_source')" id="l_method-i-index_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/tkHTML/htmlwidget.rb#L235" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-index_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/tkHTML/htmlwidget.rb, line 235</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">index</span>(<span class="ruby-identifier">idx</span>, <span class="ruby-identifier">count</span>=<span class="ruby-constant">None</span>, <span class="ruby-identifier">unit</span>=<span class="ruby-constant">None</span>)
+  <span class="ruby-identifier">tk_send</span>(<span class="ruby-string">&#39;index&#39;</span>, <span class="ruby-identifier">idx</span>, <span class="ruby-identifier">count</span>, <span class="ruby-identifier">unit</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-insert_cursor">
+            
+              <b>insert_cursor</b>(idx)
+            
+            <a href="../../classes/Tk/HTML_Widget.html#method-i-insert_cursor" name="method-i-insert_cursor" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-insert_cursor_source')" id="l_method-i-insert_cursor_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/tkHTML/htmlwidget.rb#L239" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-insert_cursor_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/tkHTML/htmlwidget.rb, line 239</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">insert_cursor</span>(<span class="ruby-identifier">idx</span>)
+  <span class="ruby-identifier">tk_send</span>(<span class="ruby-string">&#39;insert&#39;</span>, <span class="ruby-identifier">idx</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-layout">
+            
+              <b>layout</b>()
+            
+            <a href="../../classes/Tk/HTML_Widget.html#method-i-layout" name="method-i-layout" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-layout_source')" id="l_method-i-layout_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/tkHTML/htmlwidget.rb#L286" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-layout_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/tkHTML/htmlwidget.rb, line 286</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">layout</span>()
+  <span class="ruby-identifier">tk_send</span>(<span class="ruby-string">&#39;layout&#39;</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-names">
+            
+              <b>names</b>()
+            
+            <a href="../../classes/Tk/HTML_Widget.html#method-i-names" name="method-i-names" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-names_source')" id="l_method-i-names_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/tkHTML/htmlwidget.rb#L243" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-names_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/tkHTML/htmlwidget.rb, line 243</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">names</span>()
+  <span class="ruby-identifier">simple_list</span>(<span class="ruby-identifier">tk_send</span>(<span class="ruby-string">&#39;names&#39;</span>))
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-on_screen">
+            
+              <b>on_screen</b>(id, x, y)
+            
+            <a href="../../classes/Tk/HTML_Widget.html#method-i-on_screen" name="method-i-on_screen" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-on_screen_source')" id="l_method-i-on_screen_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/tkHTML/htmlwidget.rb#L247" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-on_screen_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/tkHTML/htmlwidget.rb, line 247</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">on_screen</span>(<span class="ruby-identifier">id</span>, <span class="ruby-identifier">x</span>, <span class="ruby-identifier">y</span>)
+  <span class="ruby-identifier">bool</span>(<span class="ruby-identifier">tk_send</span>(<span class="ruby-string">&#39;onscreen&#39;</span>, <span class="ruby-identifier">id</span>, <span class="ruby-identifier">x</span>, <span class="ruby-identifier">y</span>))
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-over">
+            
+              <b>over</b>(x, y)
+            
+            <a href="../../classes/Tk/HTML_Widget.html#method-i-over" name="method-i-over" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-over_source')" id="l_method-i-over_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/tkHTML/htmlwidget.rb#L251" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-over_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/tkHTML/htmlwidget.rb, line 251</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">over</span>(<span class="ruby-identifier">x</span>, <span class="ruby-identifier">y</span>)
+  <span class="ruby-identifier">list</span>(<span class="ruby-identifier">tk_send</span>(<span class="ruby-string">&#39;over&#39;</span>, <span class="ruby-identifier">x</span>, <span class="ruby-identifier">y</span>))
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-over_attr">
+            
+              <b>over_attr</b>(x, y, attrs)
+            
+            <a href="../../classes/Tk/HTML_Widget.html#method-i-over_attr" name="method-i-over_attr" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-over_attr_source')" id="l_method-i-over_attr_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/tkHTML/htmlwidget.rb#L259" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-over_attr_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/tkHTML/htmlwidget.rb, line 259</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">over_attr</span>(<span class="ruby-identifier">x</span>, <span class="ruby-identifier">y</span>, <span class="ruby-identifier">attrs</span>)
+  <span class="ruby-identifier">list</span>(<span class="ruby-identifier">tk_send</span>(<span class="ruby-string">&#39;overattr&#39;</span>, <span class="ruby-identifier">x</span>, <span class="ruby-identifier">y</span>, <span class="ruby-identifier">attrs</span>))
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-over_markup">
+            
+              <b>over_markup</b>(x, y)
+            
+            <a href="../../classes/Tk/HTML_Widget.html#method-i-over_markup" name="method-i-over_markup" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-over_markup_source')" id="l_method-i-over_markup_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/tkHTML/htmlwidget.rb#L255" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-over_markup_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/tkHTML/htmlwidget.rb, line 255</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">over_markup</span>(<span class="ruby-identifier">x</span>, <span class="ruby-identifier">y</span>)
+  <span class="ruby-identifier">list</span>(<span class="ruby-identifier">tk_send</span>(<span class="ruby-string">&#39;over&#39;</span>, <span class="ruby-identifier">x</span>, <span class="ruby-identifier">y</span>, <span class="ruby-string">&#39;-muponly&#39;</span>))
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-parse">
+            
+              <b>parse</b>(txt)
+            
+            <a href="../../classes/Tk/HTML_Widget.html#method-i-parse" name="method-i-parse" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-parse_source')" id="l_method-i-parse_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/tkHTML/htmlwidget.rb#L263" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-parse_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/tkHTML/htmlwidget.rb, line 263</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">parse</span>(<span class="ruby-identifier">txt</span>)
+  <span class="ruby-identifier">tk_send</span>(<span class="ruby-string">&#39;parse&#39;</span>, <span class="ruby-identifier">txt</span>)
+  <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-plain_text">
+            
+              <b>plain_text</b>(first, last)
+            
+            <a href="../../classes/Tk/HTML_Widget.html#method-i-plain_text" name="method-i-plain_text" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+            <div class="aka">
+              Also aliased as: <a href="HTML_Widget.html#method-i-ascii_text">ascii_text</a>, <a href="HTML_Widget.html#method-i-text_ascii">text_ascii</a>
+            </div>
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-plain_text_source')" id="l_method-i-plain_text_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/tkHTML/htmlwidget.rb#L302" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-plain_text_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/tkHTML/htmlwidget.rb, line 302</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">plain_text</span>(<span class="ruby-identifier">first</span>, <span class="ruby-identifier">last</span>)
+  <span class="ruby-identifier">tk_send</span>(<span class="ruby-string">&#39;text&#39;</span>, <span class="ruby-string">&#39;ascii&#39;</span>, <span class="ruby-identifier">first</span>, <span class="ruby-identifier">last</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-postscript">
+            
+              <b>postscript</b>(*args)
+            
+            <a href="../../classes/Tk/HTML_Widget.html#method-i-postscript" name="method-i-postscript" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-postscript_source')" id="l_method-i-postscript_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/tkHTML/htmlwidget.rb#L294" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-postscript_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/tkHTML/htmlwidget.rb, line 294</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">postscript</span>(<span class="ruby-operator">*</span><span class="ruby-identifier">args</span>)
+  <span class="ruby-identifier">tk_send</span>(<span class="ruby-string">&#39;postscript&#39;</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">args</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-refresh">
+            
+              <b>refresh</b>(*opts)
+            
+            <a href="../../classes/Tk/HTML_Widget.html#method-i-refresh" name="method-i-refresh" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-refresh_source')" id="l_method-i-refresh_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/tkHTML/htmlwidget.rb#L282" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-refresh_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/tkHTML/htmlwidget.rb, line 282</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">refresh</span>(<span class="ruby-operator">*</span><span class="ruby-identifier">opts</span>)
+  <span class="ruby-identifier">tk_send</span>(<span class="ruby-string">&#39;refresh&#39;</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">opts</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-resolver">
+            
+              <b>resolver</b>(*uri_args)
+            
+            <a href="../../classes/Tk/HTML_Widget.html#method-i-resolver" name="method-i-resolver" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-resolver_source')" id="l_method-i-resolver_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/tkHTML/htmlwidget.rb#L268" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-resolver_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/tkHTML/htmlwidget.rb, line 268</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">resolver</span>(<span class="ruby-operator">*</span><span class="ruby-identifier">uri_args</span>)
+  <span class="ruby-identifier">tk_send</span>(<span class="ruby-string">&#39;resolver&#39;</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">uri_args</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-selection_clear">
+            
+              <b>selection_clear</b>()
+            
+            <a href="../../classes/Tk/HTML_Widget.html#method-i-selection_clear" name="method-i-selection_clear" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-selection_clear_source')" id="l_method-i-selection_clear_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/tkHTML/htmlwidget.rb#L272" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-selection_clear_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/tkHTML/htmlwidget.rb, line 272</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">selection_clear</span>()
+  <span class="ruby-identifier">tk_send</span>(<span class="ruby-string">&#39;selection&#39;</span>, <span class="ruby-string">&#39;clear&#39;</span>)
+  <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-selection_set">
+            
+              <b>selection_set</b>(first, last)
+            
+            <a href="../../classes/Tk/HTML_Widget.html#method-i-selection_set" name="method-i-selection_set" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-selection_set_source')" id="l_method-i-selection_set_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/tkHTML/htmlwidget.rb#L277" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-selection_set_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/tkHTML/htmlwidget.rb, line 277</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">selection_set</span>(<span class="ruby-identifier">first</span>, <span class="ruby-identifier">last</span>)
+  <span class="ruby-identifier">tk_send</span>(<span class="ruby-string">&#39;selection&#39;</span>, <span class="ruby-string">&#39;set&#39;</span>, <span class="ruby-identifier">first</span>, <span class="ruby-identifier">last</span>)
+  <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-sizewindow">
+            
+              <b>sizewindow</b>(*args)
+            
+            <a href="../../classes/Tk/HTML_Widget.html#method-i-sizewindow" name="method-i-sizewindow" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-sizewindow_source')" id="l_method-i-sizewindow_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/tkHTML/htmlwidget.rb#L290" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-sizewindow_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/tkHTML/htmlwidget.rb, line 290</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">sizewindow</span>(<span class="ruby-operator">*</span><span class="ruby-identifier">args</span>)
+  <span class="ruby-identifier">tk_send</span>(<span class="ruby-string">&#39;sizewindow&#39;</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">args</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-source">
+            
+              <b>source</b>()
+            
+            <a href="../../classes/Tk/HTML_Widget.html#method-i-source" name="method-i-source" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-source_source')" id="l_method-i-source_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/tkHTML/htmlwidget.rb#L298" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-source_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/tkHTML/htmlwidget.rb, line 298</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">source</span>()
+  <span class="ruby-identifier">tk_send</span>(<span class="ruby-string">&#39;source&#39;</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-text_ascii">
+            
+              <b>text_ascii</b>(first, last)
+            
+            <a href="../../classes/Tk/HTML_Widget.html#method-i-text_ascii" name="method-i-text_ascii" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+            <div class="aka">
+              Alias for: <a href="HTML_Widget.html#method-i-plain_text">plain_text</a>
+            </div>
+          
+          
+          
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-text_break">
+            
+              <b>text_break</b>(idx)
+            
+            <a href="../../classes/Tk/HTML_Widget.html#method-i-text_break" name="method-i-text_break" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+            <div class="aka">
+              Alias for: <a href="HTML_Widget.html#method-i-break_text">break_text</a>
+            </div>
+          
+          
+          
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-text_delete">
+            
+              <b>text_delete</b>(first, last)
+            
+            <a href="../../classes/Tk/HTML_Widget.html#method-i-text_delete" name="method-i-text_delete" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-text_delete_source')" id="l_method-i-text_delete_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/tkHTML/htmlwidget.rb#L308" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-text_delete_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/tkHTML/htmlwidget.rb, line 308</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">text_delete</span>(<span class="ruby-identifier">first</span>, <span class="ruby-identifier">last</span>)
+  <span class="ruby-identifier">tk_send</span>(<span class="ruby-string">&#39;text&#39;</span>, <span class="ruby-string">&#39;delete&#39;</span>, <span class="ruby-identifier">first</span>, <span class="ruby-identifier">last</span>)
+  <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-text_find">
+            
+              <b>text_find</b>(txt, *args)
+            
+            <a href="../../classes/Tk/HTML_Widget.html#method-i-text_find" name="method-i-text_find" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-text_find_source')" id="l_method-i-text_find_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/tkHTML/htmlwidget.rb#L328" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-text_find_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/tkHTML/htmlwidget.rb, line 328</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">text_find</span>(<span class="ruby-identifier">txt</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">args</span>)
+  <span class="ruby-identifier">tk_send</span>(<span class="ruby-string">&#39;text&#39;</span>, <span class="ruby-string">&#39;find&#39;</span>, <span class="ruby-identifier">txt</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">args</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-text_html">
+            
+              <b>text_html</b>(first, last)
+            
+            <a href="../../classes/Tk/HTML_Widget.html#method-i-text_html" name="method-i-text_html" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+            <div class="aka">
+              Alias for: <a href="HTML_Widget.html#method-i-html_text">html_text</a>
+            </div>
+          
+          
+          
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-text_insert">
+            
+              <b>text_insert</b>(idx, txt)
+            
+            <a href="../../classes/Tk/HTML_Widget.html#method-i-text_insert" name="method-i-text_insert" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-text_insert_source')" id="l_method-i-text_insert_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/tkHTML/htmlwidget.rb#L318" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-text_insert_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/tkHTML/htmlwidget.rb, line 318</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">text_insert</span>(<span class="ruby-identifier">idx</span>, <span class="ruby-identifier">txt</span>)
+  <span class="ruby-identifier">tk_send</span>(<span class="ruby-string">&#39;text&#39;</span>, <span class="ruby-string">&#39;insert&#39;</span>, <span class="ruby-identifier">idx</span>, <span class="ruby-identifier">txt</span>)
+  <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-text_table">
+            
+              <b>text_table</b>(idx, imgs=None, attrs=None)
+            
+            <a href="../../classes/Tk/HTML_Widget.html#method-i-text_table" name="method-i-text_table" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-text_table_source')" id="l_method-i-text_table_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/tkHTML/htmlwidget.rb#L332" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-text_table_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/tkHTML/htmlwidget.rb, line 332</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">text_table</span>(<span class="ruby-identifier">idx</span>, <span class="ruby-identifier">imgs</span>=<span class="ruby-constant">None</span>, <span class="ruby-identifier">attrs</span>=<span class="ruby-constant">None</span>)
+  <span class="ruby-identifier">tk_send</span>(<span class="ruby-string">&#39;text&#39;</span>, <span class="ruby-string">&#39;table&#39;</span>, <span class="ruby-identifier">idx</span>, <span class="ruby-identifier">imgs</span>, <span class="ruby-identifier">attrs</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-token_DOM">
+            
+              <b>token_DOM</b>(first, last=None)
+            
+            <a href="../../classes/Tk/HTML_Widget.html#method-i-token_DOM" name="method-i-token_DOM" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+            <div class="aka">
+              Also aliased as: <a href="HTML_Widget.html#method-i-token_dom">token_dom</a>, <a href="HTML_Widget.html#method-i-token_domtokens">token_domtokens</a>, <a href="HTML_Widget.html#method-i-token_dom_tokens">token_dom_tokens</a>
+            </div>
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-token_DOM_source')" id="l_method-i-token_DOM_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/tkHTML/htmlwidget.rb#L367" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-token_DOM_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/tkHTML/htmlwidget.rb, line 367</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">token_DOM</span>(<span class="ruby-identifier">first</span>, <span class="ruby-identifier">last</span>=<span class="ruby-constant">None</span>)
+  <span class="ruby-identifier">list</span>(<span class="ruby-identifier">tk_send</span>(<span class="ruby-string">&#39;token&#39;</span>, <span class="ruby-string">&#39;domtokens&#39;</span>, <span class="ruby-identifier">first</span>, <span class="ruby-identifier">last</span>))
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-token_append">
+            
+              <b>token_append</b>(tag, *args)
+            
+            <a href="../../classes/Tk/HTML_Widget.html#method-i-token_append" name="method-i-token_append" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-token_append_source')" id="l_method-i-token_append_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/tkHTML/htmlwidget.rb#L336" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-token_append_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/tkHTML/htmlwidget.rb, line 336</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">token_append</span>(<span class="ruby-identifier">tag</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">args</span>)
+  <span class="ruby-identifier">tk_send</span>(<span class="ruby-string">&#39;token&#39;</span>, <span class="ruby-string">&#39;append&#39;</span>, <span class="ruby-identifier">tag</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">args</span>)
+  <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-token_attrs">
+            
+              <b>token_attrs</b>(*args)
+            
+            <a href="../../classes/Tk/HTML_Widget.html#method-i-token_attrs" name="method-i-token_attrs" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-token_attrs_source')" id="l_method-i-token_attrs_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/tkHTML/htmlwidget.rb#L407" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-token_attrs_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/tkHTML/htmlwidget.rb, line 407</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">token_attrs</span>(<span class="ruby-operator">*</span><span class="ruby-identifier">args</span>)
+  <span class="ruby-identifier">list</span>(<span class="ruby-identifier">tk_send</span>(<span class="ruby-string">&#39;token&#39;</span>, <span class="ruby-string">&#39;attrs&#39;</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">args</span>))
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-token_define">
+            
+              <b>token_define</b>(*args)
+            
+            <a href="../../classes/Tk/HTML_Widget.html#method-i-token_define" name="method-i-token_define" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-token_define_source')" id="l_method-i-token_define_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/tkHTML/htmlwidget.rb#L346" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-token_define_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/tkHTML/htmlwidget.rb, line 346</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">token_define</span>(<span class="ruby-operator">*</span><span class="ruby-identifier">args</span>)
+  <span class="ruby-identifier">tk_send</span>(<span class="ruby-string">&#39;token&#39;</span>, <span class="ruby-string">&#39;defile&#39;</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">args</span>)
+  <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-token_delete">
+            
+              <b>token_delete</b>(first, last=None)
+            
+            <a href="../../classes/Tk/HTML_Widget.html#method-i-token_delete" name="method-i-token_delete" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-token_delete_source')" id="l_method-i-token_delete_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/tkHTML/htmlwidget.rb#L341" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-token_delete_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/tkHTML/htmlwidget.rb, line 341</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">token_delete</span>(<span class="ruby-identifier">first</span>, <span class="ruby-identifier">last</span>=<span class="ruby-constant">None</span>)
+  <span class="ruby-identifier">tk_send</span>(<span class="ruby-string">&#39;token&#39;</span>, <span class="ruby-string">&#39;delete&#39;</span>, <span class="ruby-identifier">first</span>, <span class="ruby-identifier">last</span>)
+  <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-token_dom">
+            
+              <b>token_dom</b>(first, last=None)
+            
+            <a href="../../classes/Tk/HTML_Widget.html#method-i-token_dom" name="method-i-token_dom" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+            <div class="aka">
+              Alias for: <a href="HTML_Widget.html#method-i-token_DOM">token_DOM</a>
+            </div>
+          
+          
+          
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-token_dom_tokens">
+            
+              <b>token_dom_tokens</b>(first, last=None)
+            
+            <a href="../../classes/Tk/HTML_Widget.html#method-i-token_dom_tokens" name="method-i-token_dom_tokens" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+            <div class="aka">
+              Alias for: <a href="HTML_Widget.html#method-i-token_DOM">token_DOM</a>
+            </div>
+          
+          
+          
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-token_domtokens">
+            
+              <b>token_domtokens</b>(first, last=None)
+            
+            <a href="../../classes/Tk/HTML_Widget.html#method-i-token_domtokens" name="method-i-token_domtokens" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+            <div class="aka">
+              Alias for: <a href="HTML_Widget.html#method-i-token_DOM">token_DOM</a>
+            </div>
+          
+          
+          
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-token_find">
+            
+              <b>token_find</b>(tag, *args)
+            
+            <a href="../../classes/Tk/HTML_Widget.html#method-i-token_find" name="method-i-token_find" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-token_find_source')" id="l_method-i-token_find_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/tkHTML/htmlwidget.rb#L351" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-token_find_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/tkHTML/htmlwidget.rb, line 351</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">token_find</span>(<span class="ruby-identifier">tag</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">args</span>)
+  <span class="ruby-identifier">list</span>(<span class="ruby-identifier">tk_send</span>(<span class="ruby-string">&#39;token&#39;</span>, <span class="ruby-string">&#39;find&#39;</span>, <span class="ruby-identifier">tag</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">args</span>))
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-token_get">
+            
+              <b>token_get</b>(first, last=None)
+            
+            <a href="../../classes/Tk/HTML_Widget.html#method-i-token_get" name="method-i-token_get" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-token_get_source')" id="l_method-i-token_get_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/tkHTML/htmlwidget.rb#L355" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-token_get_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/tkHTML/htmlwidget.rb, line 355</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">token_get</span>(<span class="ruby-identifier">first</span>, <span class="ruby-identifier">last</span>=<span class="ruby-constant">None</span>)
+  <span class="ruby-identifier">list</span>(<span class="ruby-identifier">tk_send</span>(<span class="ruby-string">&#39;token&#39;</span>, <span class="ruby-string">&#39;get&#39;</span>, <span class="ruby-identifier">first</span>, <span class="ruby-identifier">last</span>))
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-token_get_attr">
+            
+              <b>token_get_attr</b>(idx, name=None)
+            
+            <a href="../../classes/Tk/HTML_Widget.html#method-i-token_get_attr" name="method-i-token_get_attr" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-token_get_attr_source')" id="l_method-i-token_get_attr_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/tkHTML/htmlwidget.rb#L383" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-token_get_attr_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/tkHTML/htmlwidget.rb, line 383</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">token_get_attr</span>(<span class="ruby-identifier">idx</span>, <span class="ruby-identifier">name</span>=<span class="ruby-constant">None</span>)
+  <span class="ruby-identifier">list</span>(<span class="ruby-identifier">tk_send</span>(<span class="ruby-string">&#39;token&#39;</span>, <span class="ruby-string">&#39;attr&#39;</span>, <span class="ruby-identifier">idx</span>, <span class="ruby-identifier">name</span>))
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-token_get_end">
+            
+              <b>token_get_end</b>(idx)
+            
+            <a href="../../classes/Tk/HTML_Widget.html#method-i-token_get_end" name="method-i-token_get_end" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+            <div class="aka">
+              Also aliased as: <a href="HTML_Widget.html#method-i-token_getend">token_getend</a>
+            </div>
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-token_get_end_source')" id="l_method-i-token_get_end_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/tkHTML/htmlwidget.rb#L374" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-token_get_end_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/tkHTML/htmlwidget.rb, line 374</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">token_get_end</span>(<span class="ruby-identifier">idx</span>)
+  <span class="ruby-identifier">tk_send</span>(<span class="ruby-string">&#39;token&#39;</span>, <span class="ruby-string">&#39;getend&#39;</span>, <span class="ruby-identifier">idx</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-token_getend">
+            
+              <b>token_getend</b>(idx)
+            
+            <a href="../../classes/Tk/HTML_Widget.html#method-i-token_getend" name="method-i-token_getend" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+            <div class="aka">
+              Alias for: <a href="HTML_Widget.html#method-i-token_get_end">token_get_end</a>
+            </div>
+          
+          
+          
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-token_handler">
+            
+              <b>token_handler</b>(tag, cmd=nil, &amp;b)
+            
+            <a href="../../classes/Tk/HTML_Widget.html#method-i-token_handler" name="method-i-token_handler" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-token_handler_source')" id="l_method-i-token_handler_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/tkHTML/htmlwidget.rb#L392" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-token_handler_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/tkHTML/htmlwidget.rb, line 392</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">token_handler</span>(<span class="ruby-identifier">tag</span>, <span class="ruby-identifier">cmd</span>=<span class="ruby-keyword">nil</span>, <span class="ruby-operator">&amp;</span><span class="ruby-identifier">b</span>)
+  <span class="ruby-identifier">cmd</span> = <span class="ruby-constant">Proc</span>.<span class="ruby-identifier">new</span>(<span class="ruby-operator">&amp;</span><span class="ruby-identifier">b</span>) <span class="ruby-keyword">if</span> <span class="ruby-operator">!</span><span class="ruby-identifier">cmd</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">b</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">cmd</span>
+    <span class="ruby-identifier">tk_send</span>(<span class="ruby-string">&#39;token&#39;</span>, <span class="ruby-string">&#39;handler&#39;</span>, <span class="ruby-identifier">tag</span>, <span class="ruby-identifier">cmd</span>)
+    <span class="ruby-keyword">return</span> <span class="ruby-keyword">self</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-keyword">return</span> <span class="ruby-identifier">tk_send</span>(<span class="ruby-string">&#39;token&#39;</span>, <span class="ruby-string">&#39;handler&#39;</span>, <span class="ruby-identifier">tag</span>)
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-token_insert">
+            
+              <b>token_insert</b>(idx, tag, *args)
+            
+            <a href="../../classes/Tk/HTML_Widget.html#method-i-token_insert" name="method-i-token_insert" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-token_insert_source')" id="l_method-i-token_insert_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/tkHTML/htmlwidget.rb#L402" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-token_insert_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/tkHTML/htmlwidget.rb, line 402</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">token_insert</span>(<span class="ruby-identifier">idx</span>, <span class="ruby-identifier">tag</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">args</span>)
+  <span class="ruby-identifier">tk_send</span>(<span class="ruby-string">&#39;token&#39;</span>, <span class="ruby-string">&#39;insert&#39;</span>, <span class="ruby-identifier">idx</span>, <span class="ruby-identifier">tag</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">args</span>)
+  <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-token_list">
+            
+              <b>token_list</b>(first, last=None)
+            
+            <a href="../../classes/Tk/HTML_Widget.html#method-i-token_list" name="method-i-token_list" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-token_list_source')" id="l_method-i-token_list_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/tkHTML/htmlwidget.rb#L359" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-token_list_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/tkHTML/htmlwidget.rb, line 359</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">token_list</span>(<span class="ruby-identifier">first</span>, <span class="ruby-identifier">last</span>=<span class="ruby-constant">None</span>)
+  <span class="ruby-identifier">list</span>(<span class="ruby-identifier">tk_send</span>(<span class="ruby-string">&#39;token&#39;</span>, <span class="ruby-string">&#39;list&#39;</span>, <span class="ruby-identifier">first</span>, <span class="ruby-identifier">last</span>))
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-token_markup">
+            
+              <b>token_markup</b>(first, last=None)
+            
+            <a href="../../classes/Tk/HTML_Widget.html#method-i-token_markup" name="method-i-token_markup" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-token_markup_source')" id="l_method-i-token_markup_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/tkHTML/htmlwidget.rb#L363" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-token_markup_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/tkHTML/htmlwidget.rb, line 363</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">token_markup</span>(<span class="ruby-identifier">first</span>, <span class="ruby-identifier">last</span>=<span class="ruby-constant">None</span>)
+  <span class="ruby-identifier">list</span>(<span class="ruby-identifier">tk_send</span>(<span class="ruby-string">&#39;token&#39;</span>, <span class="ruby-string">&#39;markup&#39;</span>, <span class="ruby-identifier">first</span>, <span class="ruby-identifier">last</span>))
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-token_offset">
+            
+              <b>token_offset</b>(start, num1, num2)
+            
+            <a href="../../classes/Tk/HTML_Widget.html#method-i-token_offset" name="method-i-token_offset" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-token_offset_source')" id="l_method-i-token_offset_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/tkHTML/htmlwidget.rb#L379" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-token_offset_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/tkHTML/htmlwidget.rb, line 379</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">token_offset</span>(<span class="ruby-identifier">start</span>, <span class="ruby-identifier">num1</span>, <span class="ruby-identifier">num2</span>)
+  <span class="ruby-identifier">list</span>(<span class="ruby-identifier">tk_send</span>(<span class="ruby-string">&#39;token&#39;</span>, <span class="ruby-string">&#39;offset&#39;</span>, <span class="ruby-identifier">start</span>, <span class="ruby-identifier">num1</span>, <span class="ruby-identifier">num2</span>))
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-token_on_events">
+            
+              <b>token_on_events</b>(*args)
+            
+            <a href="../../classes/Tk/HTML_Widget.html#method-i-token_on_events" name="method-i-token_on_events" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-token_on_events_source')" id="l_method-i-token_on_events_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/tkHTML/htmlwidget.rb#L415" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-token_on_events_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/tkHTML/htmlwidget.rb, line 415</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">token_on_events</span>(<span class="ruby-operator">*</span><span class="ruby-identifier">args</span>)
+  <span class="ruby-identifier">list</span>(<span class="ruby-identifier">tk_send</span>(<span class="ruby-string">&#39;token&#39;</span>, <span class="ruby-string">&#39;onEvents&#39;</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">args</span>))
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-token_set_attr">
+            
+              <b>token_set_attr</b>(idx, name=None, val=None)
+            
+            <a href="../../classes/Tk/HTML_Widget.html#method-i-token_set_attr" name="method-i-token_set_attr" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-token_set_attr_source')" id="l_method-i-token_set_attr_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/tkHTML/htmlwidget.rb#L387" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-token_set_attr_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/tkHTML/htmlwidget.rb, line 387</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">token_set_attr</span>(<span class="ruby-identifier">idx</span>, <span class="ruby-identifier">name</span>=<span class="ruby-constant">None</span>, <span class="ruby-identifier">val</span>=<span class="ruby-constant">None</span>)
+  <span class="ruby-identifier">tk_send</span>(<span class="ruby-string">&#39;token&#39;</span>, <span class="ruby-string">&#39;attr&#39;</span>, <span class="ruby-identifier">idx</span>, <span class="ruby-identifier">name</span>, <span class="ruby-identifier">val</span>)
+  <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-token_unique">
+            
+              <b>token_unique</b>(*args)
+            
+            <a href="../../classes/Tk/HTML_Widget.html#method-i-token_unique" name="method-i-token_unique" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-token_unique_source')" id="l_method-i-token_unique_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/tkHTML/htmlwidget.rb#L411" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-token_unique_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/tkHTML/htmlwidget.rb, line 411</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">token_unique</span>(<span class="ruby-operator">*</span><span class="ruby-identifier">args</span>)
+  <span class="ruby-identifier">list</span>(<span class="ruby-identifier">tk_send</span>(<span class="ruby-string">&#39;token&#39;</span>, <span class="ruby-string">&#39;unique&#39;</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">args</span>))
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                    </div>
+
+    </div>
+  </body>
+</html>    

@@ -1,0 +1,2628 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>Tk::Iwidgets::Scrolledtext</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="../../../css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../../../css/main.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../../../css/github.css" type="text/css" media="screen" />
+<script src="../../../js/jquery-1.3.2.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../../js/jquery-effect.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../../js/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+
+<body>     
+    <div class="banner">
+        
+        <h1>
+            <span class="type">Class</span> 
+            Tk::Iwidgets::Scrolledtext 
+            
+                <span class="parent">&lt; 
+                    
+                    <a href="Scrolledwidget.html">Tk::Iwidgets::Scrolledwidget</a>
+                    
+                </span>
+            
+        </h1>
+        <ul class="files">
+            
+            <li><a href="../../../files/ext/tk/lib/tkextlib/iwidgets/scrolledtext_rb.html">ext/tk/lib/tkextlib/iwidgets/scrolledtext.rb</a></li>
+            
+        </ul>
+    </div>
+    <div id="bodyContent">
+        <div id="content">
+  
+
+
+  
+
+
+  
+  
+
+
+  
+
+
+  
+    <!-- Method ref -->
+    <div class="sectiontitle">Methods</div>
+    <dl class="methods">
+      
+        <dt>B</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-bbox">bbox</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>C</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-child_site">child_site</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-clear">clear</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-compare">compare</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-current_image_configinfo">current_image_configinfo</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>D</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-debug">debug</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-debug-3D">debug=</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-delete">delete</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-dlineinfo">dlineinfo</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>E</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-export">export</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>G</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-get">get</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-get_displaychars">get_displaychars</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>I</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-image_cget">image_cget</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-image_cget_strict">image_cget_strict</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-image_cget_tkstring">image_cget_tkstring</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-image_configinfo">image_configinfo</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-image_configure">image_configure</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-image_names">image_names</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-import">import</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-index">index</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-insert">insert</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>M</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-mark_gravity">mark_gravity</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-mark_names">mark_names</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-mark_next">mark_next</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-mark_previous">mark_previous</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-mark_set">mark_set</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-mark_unset">mark_unset</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-method_missing">method_missing</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>N</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-new">new</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-next_mark">next_mark</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>P</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-previous_mark">previous_mark</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>R</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-rsearch">rsearch</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-rsearch_with_length">rsearch_with_length</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>S</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-scan_dragto">scan_dragto</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-scan_mark">scan_mark</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-search">search</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-search_with_length">search_with_length</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-see">see</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-set_mark">set_mark</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>T</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-tksearch">tksearch</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-tksearch_with_count">tksearch_with_count</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>U</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-unset_mark">unset_mark</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>X</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-xview">xview</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-xview_moveto">xview_moveto</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-xview_scroll">xview_scroll</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>Y</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-yview">yview</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-yview_moveto">yview_moveto</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-yview_scroll">yview_scroll</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+    </dl>
+  
+
+  
+    <!-- Includes -->
+    <div class="sectiontitle">Included Modules</div>
+    <ul>
+      
+        <li>
+          
+            <a href="../../TkTextTagConfig.html">
+              TkTextTagConfig
+            </a>
+          
+        </li>
+      
+    </ul>
+  
+
+
+
+  
+
+    
+
+    
+
+    
+      <!-- Section constants -->
+      <div class="sectiontitle">Constants</div>
+      <table border='0' cellpadding='5'>
+        
+          <tr valign='top'>
+            <td class="attr-name">TkCommandNames</td>
+            <td>=</td>
+            <td class="attr-value">[&#39;::iwidgets::scrolledtext&#39;.freeze].freeze</td>
+          </tr>
+          
+            <tr valign='top'>
+              <td>&nbsp;</td>
+              <td colspan="2" class="attr-desc"></td>
+            </tr>
+          
+        
+          <tr valign='top'>
+            <td class="attr-name">WidgetClassName</td>
+            <td>=</td>
+            <td class="attr-value">&#39;Scrolledtext&#39;.freeze</td>
+          </tr>
+          
+            <tr valign='top'>
+              <td>&nbsp;</td>
+              <td colspan="2" class="attr-desc"></td>
+            </tr>
+          
+        
+      </table>
+    
+
+
+    
+
+
+    <!-- Methods -->
+    
+      <div class="sectiontitle">Class Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-c-new">
+            
+              <b>new</b>(*args)
+            
+            <a href="../../../classes/Tk/Iwidgets/Scrolledtext.html#method-c-new" name="method-c-new" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-new_source')" id="l_method-c-new_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/iwidgets/scrolledtext.rb#L34" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-new_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/iwidgets/scrolledtext.rb, line 34</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">initialize</span>(<span class="ruby-operator">*</span><span class="ruby-identifier">args</span>)
+  <span class="ruby-keyword">super</span>(<span class="ruby-operator">*</span><span class="ruby-identifier">args</span>)
+  <span class="ruby-ivar">@text</span> = <span class="ruby-identifier">component_widget</span>(<span class="ruby-string">&#39;text&#39;</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                  
+      <div class="sectiontitle">Instance Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-i-bbox">
+            
+              <b>bbox</b>(index)
+            
+            <a href="../../../classes/Tk/Iwidgets/Scrolledtext.html#method-i-bbox" name="method-i-bbox" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-bbox_source')" id="l_method-i-bbox_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/iwidgets/scrolledtext.rb#L85" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-bbox_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/iwidgets/scrolledtext.rb, line 85</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">bbox</span>(<span class="ruby-identifier">index</span>)
+  <span class="ruby-identifier">list</span>(<span class="ruby-identifier">tk_send</span>(<span class="ruby-string">&#39;bbox&#39;</span>, <span class="ruby-identifier">index</span>))
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-child_site">
+            
+              <b>child_site</b>()
+            
+            <a href="../../../classes/Tk/Iwidgets/Scrolledtext.html#method-i-child_site" name="method-i-child_site" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-child_site_source')" id="l_method-i-child_site_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/iwidgets/scrolledtext.rb#L49" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-child_site_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/iwidgets/scrolledtext.rb, line 49</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">child_site</span>
+  <span class="ruby-identifier">window</span>(<span class="ruby-identifier">tk_call</span>(<span class="ruby-ivar">@path</span>, <span class="ruby-string">&#39;childsite&#39;</span>))
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-clear">
+            
+              <b>clear</b>()
+            
+            <a href="../../../classes/Tk/Iwidgets/Scrolledtext.html#method-i-clear" name="method-i-clear" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-clear_source')" id="l_method-i-clear_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/iwidgets/scrolledtext.rb#L53" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-clear_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/iwidgets/scrolledtext.rb, line 53</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">clear</span>
+  <span class="ruby-identifier">tk_call</span>(<span class="ruby-ivar">@path</span>, <span class="ruby-string">&#39;clear&#39;</span>)
+  <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-compare">
+            
+              <b>compare</b>(idx1, op, idx2)
+            
+            <a href="../../../classes/Tk/Iwidgets/Scrolledtext.html#method-i-compare" name="method-i-compare" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-compare_source')" id="l_method-i-compare_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/iwidgets/scrolledtext.rb#L88" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-compare_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/iwidgets/scrolledtext.rb, line 88</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">compare</span>(<span class="ruby-identifier">idx1</span>, <span class="ruby-identifier">op</span>, <span class="ruby-identifier">idx2</span>)
+  <span class="ruby-identifier">bool</span>(<span class="ruby-identifier">tk_send_without_enc</span>(<span class="ruby-string">&#39;compare&#39;</span>, <span class="ruby-identifier">_get_eval_enc_str</span>(<span class="ruby-identifier">idx1</span>),
+                           <span class="ruby-identifier">op</span>, <span class="ruby-identifier">_get_eval_enc_str</span>(<span class="ruby-identifier">idx2</span>)))
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-current_image_configinfo">
+            
+              <b>current_image_configinfo</b>(index, slot = nil)
+            
+            <a href="../../../classes/Tk/Iwidgets/Scrolledtext.html#method-i-current_image_configinfo" name="method-i-current_image_configinfo" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-current_image_configinfo_source')" id="l_method-i-current_image_configinfo_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/iwidgets/scrolledtext.rb#L259" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-current_image_configinfo_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/iwidgets/scrolledtext.rb, line 259</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">current_image_configinfo</span>(<span class="ruby-identifier">index</span>, <span class="ruby-identifier">slot</span> = <span class="ruby-keyword">nil</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-constant">TkComm</span><span class="ruby-operator">::</span><span class="ruby-constant">GET_CONFIGINFO_AS_ARRAY</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">slot</span>
+      <span class="ruby-identifier">conf</span> = <span class="ruby-identifier">image_configinfo</span>(<span class="ruby-identifier">index</span>, <span class="ruby-identifier">slot</span>)
+      {<span class="ruby-identifier">conf</span>[<span class="ruby-number">0</span>] =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">conf</span>[<span class="ruby-number">4</span>]}
+    <span class="ruby-keyword">else</span>
+      <span class="ruby-identifier">ret</span> = {}
+      <span class="ruby-identifier">image_configinfo</span>(<span class="ruby-identifier">index</span>).<span class="ruby-identifier">each</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">conf</span><span class="ruby-operator">|</span>
+        <span class="ruby-identifier">ret</span>[<span class="ruby-identifier">conf</span>[<span class="ruby-number">0</span>]] = <span class="ruby-identifier">conf</span>[<span class="ruby-number">4</span>] <span class="ruby-keyword">if</span> <span class="ruby-identifier">conf</span>.<span class="ruby-identifier">size</span> <span class="ruby-operator">&gt;</span> <span class="ruby-number">2</span>
+      }
+      <span class="ruby-identifier">ret</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">else</span> <span class="ruby-comment"># ! TkComm::GET_CONFIGINFO_AS_ARRAY</span>
+    <span class="ruby-identifier">ret</span> = {}
+    <span class="ruby-identifier">image_configinfo</span>(<span class="ruby-identifier">index</span>, <span class="ruby-identifier">slot</span>).<span class="ruby-identifier">each</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">k</span>, <span class="ruby-identifier">conf</span><span class="ruby-operator">|</span>
+      <span class="ruby-identifier">ret</span>[<span class="ruby-identifier">k</span>] = <span class="ruby-identifier">conf</span>[<span class="ruby-number">-1</span>] <span class="ruby-keyword">if</span> <span class="ruby-identifier">conf</span>.<span class="ruby-identifier">kind_of?</span>(<span class="ruby-constant">Array</span>)
+    }
+    <span class="ruby-identifier">ret</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-debug">
+            
+              <b>debug</b>()
+            
+            <a href="../../../classes/Tk/Iwidgets/Scrolledtext.html#method-i-debug" name="method-i-debug" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-debug_source')" id="l_method-i-debug_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/iwidgets/scrolledtext.rb#L93" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-debug_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/iwidgets/scrolledtext.rb, line 93</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">debug</span>
+  <span class="ruby-identifier">bool</span>(<span class="ruby-identifier">tk_send_without_enc</span>(<span class="ruby-string">&#39;debug&#39;</span>))
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-debug-3D">
+            
+              <b>debug=</b>(boolean)
+            
+            <a href="../../../classes/Tk/Iwidgets/Scrolledtext.html#method-i-debug-3D" name="method-i-debug-3D" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-debug-3D_source')" id="l_method-i-debug-3D_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/iwidgets/scrolledtext.rb#L96" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-debug-3D_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/iwidgets/scrolledtext.rb, line 96</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">debug=</span>(<span class="ruby-identifier">boolean</span>)
+  <span class="ruby-identifier">tk_send_without_enc</span>(<span class="ruby-string">&#39;debug&#39;</span>, <span class="ruby-identifier">boolean</span>)
+  <span class="ruby-comment">#self</span>
+  <span class="ruby-identifier">boolean</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-delete">
+            
+              <b>delete</b>(first, last=None)
+            
+            <a href="../../../classes/Tk/Iwidgets/Scrolledtext.html#method-i-delete" name="method-i-delete" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-delete_source')" id="l_method-i-delete_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/iwidgets/scrolledtext.rb#L102" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-delete_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/iwidgets/scrolledtext.rb, line 102</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">delete</span>(<span class="ruby-identifier">first</span>, <span class="ruby-identifier">last</span>=<span class="ruby-constant">None</span>)
+  <span class="ruby-identifier">tk_send_without_enc</span>(<span class="ruby-string">&#39;delete&#39;</span>, <span class="ruby-identifier">first</span>, <span class="ruby-identifier">last</span>)
+  <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-dlineinfo">
+            
+              <b>dlineinfo</b>(index)
+            
+            <a href="../../../classes/Tk/Iwidgets/Scrolledtext.html#method-i-dlineinfo" name="method-i-dlineinfo" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-dlineinfo_source')" id="l_method-i-dlineinfo_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/iwidgets/scrolledtext.rb#L107" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-dlineinfo_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/iwidgets/scrolledtext.rb, line 107</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">dlineinfo</span>(<span class="ruby-identifier">index</span>)
+  <span class="ruby-identifier">list</span>(<span class="ruby-identifier">tk_send_without_enc</span>(<span class="ruby-string">&#39;dlineinfo&#39;</span>, <span class="ruby-identifier">_get_eval_enc_str</span>(<span class="ruby-identifier">index</span>)))
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-export">
+            
+              <b>export</b>(file)
+            
+            <a href="../../../classes/Tk/Iwidgets/Scrolledtext.html#method-i-export" name="method-i-export" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-export_source')" id="l_method-i-export_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/iwidgets/scrolledtext.rb#L67" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-export_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/iwidgets/scrolledtext.rb, line 67</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">export</span>(<span class="ruby-identifier">file</span>)
+  <span class="ruby-identifier">tk_call</span>(<span class="ruby-ivar">@path</span>, <span class="ruby-string">&#39;export&#39;</span>, <span class="ruby-identifier">file</span>)
+  <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-get">
+            
+              <b>get</b>(*index)
+            
+            <a href="../../../classes/Tk/Iwidgets/Scrolledtext.html#method-i-get" name="method-i-get" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-get_source')" id="l_method-i-get_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/iwidgets/scrolledtext.rb#L111" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-get_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/iwidgets/scrolledtext.rb, line 111</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">get</span>(<span class="ruby-operator">*</span><span class="ruby-identifier">index</span>)
+  <span class="ruby-identifier">_fromUTF8</span>(<span class="ruby-identifier">tk_send_without_enc</span>(<span class="ruby-string">&#39;get&#39;</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">index</span>))
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-get_displaychars">
+            
+              <b>get_displaychars</b>(*index)
+            
+            <a href="../../../classes/Tk/Iwidgets/Scrolledtext.html#method-i-get_displaychars" name="method-i-get_displaychars" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-get_displaychars_source')" id="l_method-i-get_displaychars_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/iwidgets/scrolledtext.rb#L114" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-get_displaychars_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/iwidgets/scrolledtext.rb, line 114</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">get_displaychars</span>(<span class="ruby-operator">*</span><span class="ruby-identifier">index</span>)
+  <span class="ruby-comment"># Tk8.5 feature</span>
+  <span class="ruby-identifier">get</span>(<span class="ruby-string">&#39;-displaychars&#39;</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">index</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-image_cget">
+            
+              <b>image_cget</b>(index, slot)
+            
+            <a href="../../../classes/Tk/Iwidgets/Scrolledtext.html#method-i-image_cget" name="method-i-image_cget" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-image_cget_source')" id="l_method-i-image_cget_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/iwidgets/scrolledtext.rb#L134" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-image_cget_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/iwidgets/scrolledtext.rb, line 134</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">image_cget</span>(<span class="ruby-identifier">index</span>, <span class="ruby-identifier">slot</span>)
+  <span class="ruby-keyword">unless</span> <span class="ruby-constant">TkItemConfigMethod</span>.<span class="ruby-identifier">__IGNORE_UNKNOWN_CONFIGURE_OPTION__</span>
+    <span class="ruby-identifier">image_cget_strict</span>(<span class="ruby-identifier">index</span>, <span class="ruby-identifier">slot</span>)
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-keyword">begin</span>
+      <span class="ruby-identifier">image_cget_strict</span>(<span class="ruby-identifier">index</span>, <span class="ruby-identifier">slot</span>)
+    <span class="ruby-keyword">rescue</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">e</span>
+      <span class="ruby-keyword">begin</span>
+        <span class="ruby-keyword">if</span> <span class="ruby-identifier">current_image_configinfo</span>.<span class="ruby-identifier">has_key?</span>(<span class="ruby-identifier">slot</span>.<span class="ruby-identifier">to_s</span>)
+          <span class="ruby-comment"># error on known option</span>
+          <span class="ruby-identifier">fail</span> <span class="ruby-identifier">e</span>
+        <span class="ruby-keyword">else</span>
+          <span class="ruby-comment"># unknown option</span>
+          <span class="ruby-keyword">nil</span>
+        <span class="ruby-keyword">end</span>
+      <span class="ruby-keyword">rescue</span>
+        <span class="ruby-identifier">fail</span> <span class="ruby-identifier">e</span>  <span class="ruby-comment"># tag error</span>
+      <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-image_cget_strict">
+            
+              <b>image_cget_strict</b>(index, slot)
+            
+            <a href="../../../classes/Tk/Iwidgets/Scrolledtext.html#method-i-image_cget_strict" name="method-i-image_cget_strict" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-image_cget_strict_source')" id="l_method-i-image_cget_strict_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/iwidgets/scrolledtext.rb#L123" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-image_cget_strict_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/iwidgets/scrolledtext.rb, line 123</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">image_cget_strict</span>(<span class="ruby-identifier">index</span>, <span class="ruby-identifier">slot</span>)
+  <span class="ruby-keyword">case</span> <span class="ruby-identifier">slot</span>.<span class="ruby-identifier">to_s</span>
+  <span class="ruby-keyword">when</span> <span class="ruby-string">&#39;text&#39;</span>, <span class="ruby-string">&#39;label&#39;</span>, <span class="ruby-string">&#39;show&#39;</span>, <span class="ruby-string">&#39;data&#39;</span>, <span class="ruby-string">&#39;file&#39;</span>
+    <span class="ruby-identifier">_fromUTF8</span>(<span class="ruby-identifier">tk_send_without_enc</span>(<span class="ruby-string">&#39;image&#39;</span>, <span class="ruby-string">&#39;cget&#39;</span>,
+                                  <span class="ruby-identifier">_get_eval_enc_str</span>(<span class="ruby-identifier">index</span>), <span class="ruby-node">&quot;-#{slot}&quot;</span>))
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">tk_tcl2ruby</span>(<span class="ruby-identifier">_fromUTF8</span>(<span class="ruby-identifier">tk_send_without_enc</span>(<span class="ruby-string">&#39;image&#39;</span>, <span class="ruby-string">&#39;cget&#39;</span>,
+                                              <span class="ruby-identifier">_get_eval_enc_str</span>(<span class="ruby-identifier">index</span>),
+                                              <span class="ruby-node">&quot;-#{slot}&quot;</span>)))
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-image_cget_tkstring">
+            
+              <b>image_cget_tkstring</b>(index, slot)
+            
+            <a href="../../../classes/Tk/Iwidgets/Scrolledtext.html#method-i-image_cget_tkstring" name="method-i-image_cget_tkstring" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-image_cget_tkstring_source')" id="l_method-i-image_cget_tkstring_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/iwidgets/scrolledtext.rb#L119" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-image_cget_tkstring_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/iwidgets/scrolledtext.rb, line 119</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">image_cget_tkstring</span>(<span class="ruby-identifier">index</span>, <span class="ruby-identifier">slot</span>)
+  <span class="ruby-identifier">_fromUTF8</span>(<span class="ruby-identifier">tk_send_without_enc</span>(<span class="ruby-string">&#39;image&#39;</span>, <span class="ruby-string">&#39;cget&#39;</span>,
+                                <span class="ruby-identifier">_get_eval_enc_str</span>(<span class="ruby-identifier">index</span>), <span class="ruby-node">&quot;-#{slot.to_s}&quot;</span>))
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-image_configinfo">
+            
+              <b>image_configinfo</b>(index, slot = nil)
+            
+            <a href="../../../classes/Tk/Iwidgets/Scrolledtext.html#method-i-image_configinfo" name="method-i-image_configinfo" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-image_configinfo_source')" id="l_method-i-image_configinfo_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/iwidgets/scrolledtext.rb#L170" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-image_configinfo_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/iwidgets/scrolledtext.rb, line 170</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">image_configinfo</span>(<span class="ruby-identifier">index</span>, <span class="ruby-identifier">slot</span> = <span class="ruby-keyword">nil</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-constant">TkComm</span><span class="ruby-operator">::</span><span class="ruby-constant">GET_CONFIGINFO_AS_ARRAY</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">slot</span>
+      <span class="ruby-keyword">case</span> <span class="ruby-identifier">slot</span>.<span class="ruby-identifier">to_s</span>
+      <span class="ruby-keyword">when</span> <span class="ruby-string">&#39;text&#39;</span>, <span class="ruby-string">&#39;label&#39;</span>, <span class="ruby-string">&#39;show&#39;</span>, <span class="ruby-string">&#39;data&#39;</span>, <span class="ruby-string">&#39;file&#39;</span>
+        <span class="ruby-comment">#conf = tk_split_simplelist(_fromUTF8(tk_send_without_enc(&#39;image&#39;, &#39;configure&#39;, _get_eval_enc_str(index), &quot;-#{slot}&quot;)))</span>
+        <span class="ruby-identifier">conf</span> = <span class="ruby-identifier">tk_split_simplelist</span>(<span class="ruby-identifier">tk_send_without_enc</span>(<span class="ruby-string">&#39;image&#39;</span>, <span class="ruby-string">&#39;configure&#39;</span>, <span class="ruby-identifier">_get_eval_enc_str</span>(<span class="ruby-identifier">index</span>), <span class="ruby-node">&quot;-#{slot}&quot;</span>), <span class="ruby-keyword">false</span>, <span class="ruby-keyword">true</span>)
+      <span class="ruby-keyword">else</span>
+        <span class="ruby-comment">#conf = tk_split_list(_fromUTF8(tk_send_without_enc(&#39;image&#39;, &#39;configure&#39;, _get_eval_enc_str(index), &quot;-#{slot}&quot;)))</span>
+        <span class="ruby-identifier">conf</span> = <span class="ruby-identifier">tk_split_list</span>(<span class="ruby-identifier">tk_send_without_enc</span>(<span class="ruby-string">&#39;image&#39;</span>, <span class="ruby-string">&#39;configure&#39;</span>, <span class="ruby-identifier">_get_eval_enc_str</span>(<span class="ruby-identifier">index</span>), <span class="ruby-node">&quot;-#{slot}&quot;</span>), <span class="ruby-number">0</span>, <span class="ruby-keyword">false</span>, <span class="ruby-keyword">true</span>)
+      <span class="ruby-keyword">end</span>
+      <span class="ruby-identifier">conf</span>[<span class="ruby-number">0</span>] = <span class="ruby-identifier">conf</span>[<span class="ruby-number">0</span>][<span class="ruby-number">1</span><span class="ruby-operator">..</span><span class="ruby-number">-1</span>]
+      <span class="ruby-identifier">conf</span>
+    <span class="ruby-keyword">else</span>
+      <span class="ruby-comment">#tk_split_simplelist(_fromUTF8(tk_send_without_enc(&#39;image&#39;, &#39;configure&#39;, _get_eval_enc_str(index)))).collect{|conflist|</span>
+      <span class="ruby-comment">#  conf = tk_split_simplelist(conflist)</span>
+      <span class="ruby-identifier">tk_split_simplelist</span>(<span class="ruby-identifier">tk_send_without_enc</span>(<span class="ruby-string">&#39;image&#39;</span>, <span class="ruby-string">&#39;configure&#39;</span>, <span class="ruby-identifier">_get_eval_enc_str</span>(<span class="ruby-identifier">index</span>)), <span class="ruby-keyword">false</span>, <span class="ruby-keyword">false</span>).<span class="ruby-identifier">collect</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">conflist</span><span class="ruby-operator">|</span>
+        <span class="ruby-identifier">conf</span> = <span class="ruby-identifier">tk_split_simplelist</span>(<span class="ruby-identifier">conflist</span>, <span class="ruby-keyword">false</span>, <span class="ruby-keyword">true</span>)
+        <span class="ruby-identifier">conf</span>[<span class="ruby-number">0</span>] = <span class="ruby-identifier">conf</span>[<span class="ruby-number">0</span>][<span class="ruby-number">1</span><span class="ruby-operator">..</span><span class="ruby-number">-1</span>]
+        <span class="ruby-keyword">case</span> <span class="ruby-identifier">conf</span>[<span class="ruby-number">0</span>]
+        <span class="ruby-keyword">when</span> <span class="ruby-string">&#39;text&#39;</span>, <span class="ruby-string">&#39;label&#39;</span>, <span class="ruby-string">&#39;show&#39;</span>, <span class="ruby-string">&#39;data&#39;</span>, <span class="ruby-string">&#39;file&#39;</span>
+        <span class="ruby-keyword">else</span>
+          <span class="ruby-keyword">if</span> <span class="ruby-identifier">conf</span>[<span class="ruby-number">3</span>]
+            <span class="ruby-keyword">if</span> <span class="ruby-identifier">conf</span>[<span class="ruby-number">3</span>].<span class="ruby-identifier">index</span>(<span class="ruby-string">&#39;{&#39;</span>)
+              <span class="ruby-identifier">conf</span>[<span class="ruby-number">3</span>] = <span class="ruby-identifier">tk_split_list</span>(<span class="ruby-identifier">conf</span>[<span class="ruby-number">3</span>])
+            <span class="ruby-keyword">else</span>
+              <span class="ruby-identifier">conf</span>[<span class="ruby-number">3</span>] = <span class="ruby-identifier">tk_tcl2ruby</span>(<span class="ruby-identifier">conf</span>[<span class="ruby-number">3</span>])
+            <span class="ruby-keyword">end</span>
+          <span class="ruby-keyword">end</span>
+          <span class="ruby-keyword">if</span> <span class="ruby-identifier">conf</span>[<span class="ruby-number">4</span>]
+            <span class="ruby-keyword">if</span> <span class="ruby-identifier">conf</span>[<span class="ruby-number">4</span>].<span class="ruby-identifier">index</span>(<span class="ruby-string">&#39;{&#39;</span>)
+              <span class="ruby-identifier">conf</span>[<span class="ruby-number">4</span>] = <span class="ruby-identifier">tk_split_list</span>(<span class="ruby-identifier">conf</span>[<span class="ruby-number">4</span>])
+            <span class="ruby-keyword">else</span>
+              <span class="ruby-identifier">conf</span>[<span class="ruby-number">4</span>] = <span class="ruby-identifier">tk_tcl2ruby</span>(<span class="ruby-identifier">conf</span>[<span class="ruby-number">4</span>])
+            <span class="ruby-keyword">end</span>
+          <span class="ruby-keyword">end</span>
+        <span class="ruby-keyword">end</span>
+        <span class="ruby-identifier">conf</span>[<span class="ruby-number">1</span>] = <span class="ruby-identifier">conf</span>[<span class="ruby-number">1</span>][<span class="ruby-number">1</span><span class="ruby-operator">..</span><span class="ruby-number">-1</span>] <span class="ruby-keyword">if</span> <span class="ruby-identifier">conf</span>.<span class="ruby-identifier">size</span> <span class="ruby-operator">==</span> <span class="ruby-number">2</span> <span class="ruby-comment"># alias info</span>
+        <span class="ruby-identifier">conf</span>
+      }
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">else</span> <span class="ruby-comment"># ! TkComm::GET_CONFIGINFO_AS_ARRAY</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">slot</span>
+      <span class="ruby-keyword">case</span> <span class="ruby-identifier">slot</span>.<span class="ruby-identifier">to_s</span>
+      <span class="ruby-keyword">when</span> <span class="ruby-string">&#39;text&#39;</span>, <span class="ruby-string">&#39;label&#39;</span>, <span class="ruby-string">&#39;show&#39;</span>, <span class="ruby-string">&#39;data&#39;</span>, <span class="ruby-string">&#39;file&#39;</span>
+        <span class="ruby-comment">#conf = tk_split_simplelist(_fromUTF8(tk_send_without_enc(&#39;image&#39;, &#39;configure&#39;, _get_eval_enc_str(index), &quot;-#{slot}&quot;)))</span>
+        <span class="ruby-identifier">conf</span> = <span class="ruby-identifier">tk_split_simplelist</span>(<span class="ruby-identifier">tk_send_without_enc</span>(<span class="ruby-string">&#39;image&#39;</span>, <span class="ruby-string">&#39;configure&#39;</span>, <span class="ruby-identifier">_get_eval_enc_str</span>(<span class="ruby-identifier">index</span>), <span class="ruby-node">&quot;-#{slot}&quot;</span>), <span class="ruby-keyword">false</span>, <span class="ruby-keyword">true</span>)
+      <span class="ruby-keyword">else</span>
+        <span class="ruby-comment">#conf = tk_split_list(_fromUTF8(tk_send_without_enc(&#39;image&#39;, &#39;configure&#39;, _get_eval_enc_str(index), &quot;-#{slot}&quot;)))</span>
+        <span class="ruby-identifier">conf</span> = <span class="ruby-identifier">tk_split_list</span>(<span class="ruby-identifier">tk_send_without_enc</span>(<span class="ruby-string">&#39;image&#39;</span>, <span class="ruby-string">&#39;configure&#39;</span>, <span class="ruby-identifier">_get_eval_enc_str</span>(<span class="ruby-identifier">index</span>), <span class="ruby-node">&quot;-#{slot}&quot;</span>), <span class="ruby-number">0</span>, <span class="ruby-keyword">false</span>, <span class="ruby-keyword">true</span>)
+      <span class="ruby-keyword">end</span>
+      <span class="ruby-identifier">key</span> = <span class="ruby-identifier">conf</span>.<span class="ruby-identifier">shift</span>[<span class="ruby-number">1</span><span class="ruby-operator">..</span><span class="ruby-number">-1</span>]
+      { <span class="ruby-identifier">key</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">conf</span> }
+    <span class="ruby-keyword">else</span>
+      <span class="ruby-identifier">ret</span> = {}
+      <span class="ruby-comment">#tk_split_simplelist(_fromUTF8(tk_send_without_enc(&#39;image&#39;, &#39;configure&#39;, _get_eval_enc_str(index)))).each{|conflist|</span>
+      <span class="ruby-comment">#  conf = tk_split_simplelist(conflist)</span>
+      <span class="ruby-identifier">tk_split_simplelist</span>(<span class="ruby-identifier">tk_send_without_enc</span>(<span class="ruby-string">&#39;image&#39;</span>, <span class="ruby-string">&#39;configure&#39;</span>, <span class="ruby-identifier">_get_eval_enc_str</span>(<span class="ruby-identifier">index</span>)), <span class="ruby-keyword">false</span>, <span class="ruby-keyword">false</span>).<span class="ruby-identifier">each</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">conflist</span><span class="ruby-operator">|</span>
+        <span class="ruby-identifier">conf</span> = <span class="ruby-identifier">tk_split_simplelist</span>(<span class="ruby-identifier">conflist</span>, <span class="ruby-keyword">false</span>, <span class="ruby-keyword">true</span>)
+        <span class="ruby-identifier">key</span> = <span class="ruby-identifier">conf</span>.<span class="ruby-identifier">shift</span>[<span class="ruby-number">1</span><span class="ruby-operator">..</span><span class="ruby-number">-1</span>]
+        <span class="ruby-keyword">case</span> <span class="ruby-identifier">key</span>
+        <span class="ruby-keyword">when</span> <span class="ruby-string">&#39;text&#39;</span>, <span class="ruby-string">&#39;label&#39;</span>, <span class="ruby-string">&#39;show&#39;</span>, <span class="ruby-string">&#39;data&#39;</span>, <span class="ruby-string">&#39;file&#39;</span>
+        <span class="ruby-keyword">else</span>
+          <span class="ruby-keyword">if</span> <span class="ruby-identifier">conf</span>[<span class="ruby-number">2</span>]
+            <span class="ruby-keyword">if</span> <span class="ruby-identifier">conf</span>[<span class="ruby-number">2</span>].<span class="ruby-identifier">index</span>(<span class="ruby-string">&#39;{&#39;</span>)
+              <span class="ruby-identifier">conf</span>[<span class="ruby-number">2</span>] = <span class="ruby-identifier">tk_split_list</span>(<span class="ruby-identifier">conf</span>[<span class="ruby-number">2</span>])
+            <span class="ruby-keyword">else</span>
+              <span class="ruby-identifier">conf</span>[<span class="ruby-number">2</span>] = <span class="ruby-identifier">tk_tcl2ruby</span>(<span class="ruby-identifier">conf</span>[<span class="ruby-number">2</span>])
+            <span class="ruby-keyword">end</span>
+          <span class="ruby-keyword">end</span>
+          <span class="ruby-keyword">if</span> <span class="ruby-identifier">conf</span>[<span class="ruby-number">3</span>]
+            <span class="ruby-keyword">if</span> <span class="ruby-identifier">conf</span>[<span class="ruby-number">3</span>].<span class="ruby-identifier">index</span>(<span class="ruby-string">&#39;{&#39;</span>)
+              <span class="ruby-identifier">conf</span>[<span class="ruby-number">3</span>] = <span class="ruby-identifier">tk_split_list</span>(<span class="ruby-identifier">conf</span>[<span class="ruby-number">3</span>])
+            <span class="ruby-keyword">else</span>
+              <span class="ruby-identifier">conf</span>[<span class="ruby-number">3</span>] = <span class="ruby-identifier">tk_tcl2ruby</span>(<span class="ruby-identifier">conf</span>[<span class="ruby-number">3</span>])
+            <span class="ruby-keyword">end</span>
+          <span class="ruby-keyword">end</span>
+        <span class="ruby-keyword">end</span>
+        <span class="ruby-keyword">if</span> <span class="ruby-identifier">conf</span>.<span class="ruby-identifier">size</span> <span class="ruby-operator">==</span> <span class="ruby-number">1</span>
+          <span class="ruby-identifier">ret</span>[<span class="ruby-identifier">key</span>] = <span class="ruby-identifier">conf</span>[<span class="ruby-number">0</span>][<span class="ruby-number">1</span><span class="ruby-operator">..</span><span class="ruby-number">-1</span>]  <span class="ruby-comment"># alias info</span>
+        <span class="ruby-keyword">else</span>
+          <span class="ruby-identifier">ret</span>[<span class="ruby-identifier">key</span>] = <span class="ruby-identifier">conf</span>
+        <span class="ruby-keyword">end</span>
+      }
+      <span class="ruby-identifier">ret</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-image_configure">
+            
+              <b>image_configure</b>(index, slot, value=None)
+            
+            <a href="../../../classes/Tk/Iwidgets/Scrolledtext.html#method-i-image_configure" name="method-i-image_configure" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-image_configure_source')" id="l_method-i-image_configure_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/iwidgets/scrolledtext.rb#L156" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-image_configure_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/iwidgets/scrolledtext.rb, line 156</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">image_configure</span>(<span class="ruby-identifier">index</span>, <span class="ruby-identifier">slot</span>, <span class="ruby-identifier">value</span>=<span class="ruby-constant">None</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">slot</span>.<span class="ruby-identifier">kind_of?</span> <span class="ruby-constant">Hash</span>
+    <span class="ruby-identifier">_fromUTF8</span>(<span class="ruby-identifier">tk_send_without_enc</span>(<span class="ruby-string">&#39;image&#39;</span>, <span class="ruby-string">&#39;configure&#39;</span>,
+                                  <span class="ruby-identifier">_get_eval_enc_str</span>(<span class="ruby-identifier">index</span>),
+                                  <span class="ruby-operator">*</span><span class="ruby-identifier">hash_kv</span>(<span class="ruby-identifier">slot</span>, <span class="ruby-keyword">true</span>)))
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">_fromUTF8</span>(<span class="ruby-identifier">tk_send_without_enc</span>(<span class="ruby-string">&#39;image&#39;</span>, <span class="ruby-string">&#39;configure&#39;</span>,
+                                  <span class="ruby-identifier">_get_eval_enc_str</span>(<span class="ruby-identifier">index</span>),
+                                  <span class="ruby-node">&quot;-#{slot}&quot;</span>,
+                                  <span class="ruby-identifier">_get_eval_enc_str</span>(<span class="ruby-identifier">value</span>)))
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-image_names">
+            
+              <b>image_names</b>()
+            
+            <a href="../../../classes/Tk/Iwidgets/Scrolledtext.html#method-i-image_names" name="method-i-image_names" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-image_names_source')" id="l_method-i-image_names_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/iwidgets/scrolledtext.rb#L280" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-image_names_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/iwidgets/scrolledtext.rb, line 280</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">image_names</span>
+  <span class="ruby-comment">#tk_split_simplelist(_fromUTF8(tk_send_without_enc(&#39;image&#39;, &#39;names&#39;))).collect{|elt|</span>
+  <span class="ruby-identifier">tk_split_simplelist</span>(<span class="ruby-identifier">tk_send_without_enc</span>(<span class="ruby-string">&#39;image&#39;</span>, <span class="ruby-string">&#39;names&#39;</span>), <span class="ruby-keyword">false</span>, <span class="ruby-keyword">true</span>).<span class="ruby-identifier">collect</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">elt</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">tagid2obj</span>(<span class="ruby-identifier">elt</span>)
+  }
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-import">
+            
+              <b>import</b>(file, idx=nil)
+            
+            <a href="../../../classes/Tk/Iwidgets/Scrolledtext.html#method-i-import" name="method-i-import" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-import_source')" id="l_method-i-import_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/iwidgets/scrolledtext.rb#L58" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-import_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/iwidgets/scrolledtext.rb, line 58</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">import</span>(<span class="ruby-identifier">file</span>, <span class="ruby-identifier">idx</span>=<span class="ruby-keyword">nil</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">idx</span>
+    <span class="ruby-identifier">tk_call</span>(<span class="ruby-ivar">@path</span>, <span class="ruby-string">&#39;import&#39;</span>, <span class="ruby-identifier">file</span>, <span class="ruby-identifier">index</span>(<span class="ruby-identifier">idx</span>))
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">tk_call</span>(<span class="ruby-ivar">@path</span>, <span class="ruby-string">&#39;import&#39;</span>, <span class="ruby-identifier">file</span>)
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-index">
+            
+              <b>index</b>(idx)
+            
+            <a href="../../../classes/Tk/Iwidgets/Scrolledtext.html#method-i-index" name="method-i-index" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-index_source')" id="l_method-i-index_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/iwidgets/scrolledtext.rb#L287" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-index_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/iwidgets/scrolledtext.rb, line 287</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">index</span>(<span class="ruby-identifier">idx</span>)
+  <span class="ruby-identifier">tk_send_without_enc</span>(<span class="ruby-string">&#39;index&#39;</span>, <span class="ruby-identifier">_get_eval_enc_str</span>(<span class="ruby-identifier">idx</span>))
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-insert">
+            
+              <b>insert</b>(index, *args)
+            
+            <a href="../../../classes/Tk/Iwidgets/Scrolledtext.html#method-i-insert" name="method-i-insert" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-insert_source')" id="l_method-i-insert_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/iwidgets/scrolledtext.rb#L291" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-insert_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/iwidgets/scrolledtext.rb, line 291</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">insert</span>(<span class="ruby-identifier">index</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">args</span>)
+  <span class="ruby-identifier">tk_send</span>(<span class="ruby-string">&#39;insert&#39;</span>, <span class="ruby-identifier">index</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">args</span>)
+  <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-mark_gravity">
+            
+              <b>mark_gravity</b>(mark, direction=nil)
+            
+            <a href="../../../classes/Tk/Iwidgets/Scrolledtext.html#method-i-mark_gravity" name="method-i-mark_gravity" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-mark_gravity_source')" id="l_method-i-mark_gravity_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/iwidgets/scrolledtext.rb#L303" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-mark_gravity_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/iwidgets/scrolledtext.rb, line 303</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">mark_gravity</span>(<span class="ruby-identifier">mark</span>, <span class="ruby-identifier">direction</span>=<span class="ruby-keyword">nil</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">direction</span>
+    <span class="ruby-identifier">tk_send_without_enc</span>(<span class="ruby-string">&#39;mark&#39;</span>, <span class="ruby-string">&#39;gravity&#39;</span>,
+                        <span class="ruby-identifier">_get_eval_enc_str</span>(<span class="ruby-identifier">mark</span>), <span class="ruby-identifier">direction</span>)
+    <span class="ruby-keyword">self</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">tk_send_without_enc</span>(<span class="ruby-string">&#39;mark&#39;</span>, <span class="ruby-string">&#39;gravity&#39;</span>, <span class="ruby-identifier">_get_eval_enc_str</span>(<span class="ruby-identifier">mark</span>))
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-mark_names">
+            
+              <b>mark_names</b>()
+            
+            <a href="../../../classes/Tk/Iwidgets/Scrolledtext.html#method-i-mark_names" name="method-i-mark_names" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-mark_names_source')" id="l_method-i-mark_names_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/iwidgets/scrolledtext.rb#L296" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-mark_names_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/iwidgets/scrolledtext.rb, line 296</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">mark_names</span>
+  <span class="ruby-comment">#tk_split_simplelist(_fromUTF8(tk_send_without_enc(&#39;mark&#39;, &#39;names&#39;))).collect{|elt|</span>
+  <span class="ruby-identifier">tk_split_simplelist</span>(<span class="ruby-identifier">tk_send_without_enc</span>(<span class="ruby-string">&#39;mark&#39;</span>, <span class="ruby-string">&#39;names&#39;</span>), <span class="ruby-keyword">false</span>, <span class="ruby-keyword">true</span>).<span class="ruby-identifier">collect</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">elt</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">tagid2obj</span>(<span class="ruby-identifier">elt</span>)
+  }
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-mark_next">
+            
+              <b>mark_next</b>(index)
+            
+            <a href="../../../classes/Tk/Iwidgets/Scrolledtext.html#method-i-mark_next" name="method-i-mark_next" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+            <div class="aka">
+              Also aliased as: <a href="Scrolledtext.html#method-i-next_mark">next_mark</a>
+            </div>
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-mark_next_source')" id="l_method-i-mark_next_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/iwidgets/scrolledtext.rb#L327" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-mark_next_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/iwidgets/scrolledtext.rb, line 327</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">mark_next</span>(<span class="ruby-identifier">index</span>)
+  <span class="ruby-identifier">tagid2obj</span>(<span class="ruby-identifier">_fromUTF8</span>(<span class="ruby-identifier">tk_send_without_enc</span>(<span class="ruby-string">&#39;mark&#39;</span>, <span class="ruby-string">&#39;next&#39;</span>,
+                                          <span class="ruby-identifier">_get_eval_enc_str</span>(<span class="ruby-identifier">index</span>))))
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-mark_previous">
+            
+              <b>mark_previous</b>(index)
+            
+            <a href="../../../classes/Tk/Iwidgets/Scrolledtext.html#method-i-mark_previous" name="method-i-mark_previous" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+            <div class="aka">
+              Also aliased as: <a href="Scrolledtext.html#method-i-previous_mark">previous_mark</a>
+            </div>
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-mark_previous_source')" id="l_method-i-mark_previous_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/iwidgets/scrolledtext.rb#L333" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-mark_previous_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/iwidgets/scrolledtext.rb, line 333</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">mark_previous</span>(<span class="ruby-identifier">index</span>)
+  <span class="ruby-identifier">tagid2obj</span>(<span class="ruby-identifier">_fromUTF8</span>(<span class="ruby-identifier">tk_send_without_enc</span>(<span class="ruby-string">&#39;mark&#39;</span>, <span class="ruby-string">&#39;previous&#39;</span>,
+                                          <span class="ruby-identifier">_get_eval_enc_str</span>(<span class="ruby-identifier">index</span>))))
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-mark_set">
+            
+              <b>mark_set</b>(mark, index)
+            
+            <a href="../../../classes/Tk/Iwidgets/Scrolledtext.html#method-i-mark_set" name="method-i-mark_set" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+            <div class="aka">
+              Also aliased as: <a href="Scrolledtext.html#method-i-set_mark">set_mark</a>
+            </div>
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-mark_set_source')" id="l_method-i-mark_set_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/iwidgets/scrolledtext.rb#L313" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-mark_set_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/iwidgets/scrolledtext.rb, line 313</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">mark_set</span>(<span class="ruby-identifier">mark</span>, <span class="ruby-identifier">index</span>)
+  <span class="ruby-identifier">tk_send_without_enc</span>(<span class="ruby-string">&#39;mark&#39;</span>, <span class="ruby-string">&#39;set&#39;</span>, <span class="ruby-identifier">_get_eval_enc_str</span>(<span class="ruby-identifier">mark</span>),
+                      <span class="ruby-identifier">_get_eval_enc_str</span>(<span class="ruby-identifier">index</span>))
+  <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-mark_unset">
+            
+              <b>mark_unset</b>(*marks)
+            
+            <a href="../../../classes/Tk/Iwidgets/Scrolledtext.html#method-i-mark_unset" name="method-i-mark_unset" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+            <div class="aka">
+              Also aliased as: <a href="Scrolledtext.html#method-i-unset_mark">unset_mark</a>
+            </div>
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-mark_unset_source')" id="l_method-i-mark_unset_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/iwidgets/scrolledtext.rb#L320" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-mark_unset_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/iwidgets/scrolledtext.rb, line 320</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">mark_unset</span>(<span class="ruby-operator">*</span><span class="ruby-identifier">marks</span>)
+  <span class="ruby-identifier">tk_send_without_enc</span>(<span class="ruby-string">&#39;mark&#39;</span>, <span class="ruby-string">&#39;unset&#39;</span>,
+                      <span class="ruby-operator">*</span>(<span class="ruby-identifier">marks</span>.<span class="ruby-identifier">collect</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">mark</span><span class="ruby-operator">|</span> <span class="ruby-identifier">_get_eval_enc_str</span>(<span class="ruby-identifier">mark</span>)}))
+  <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-method_missing">
+            
+              <b>method_missing</b>(id, *args)
+            
+            <a href="../../../classes/Tk/Iwidgets/Scrolledtext.html#method-i-method_missing" name="method-i-method_missing" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-method_missing_source')" id="l_method-i-method_missing_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/iwidgets/scrolledtext.rb#L39" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-method_missing_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/iwidgets/scrolledtext.rb, line 39</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">method_missing</span>(<span class="ruby-identifier">id</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">args</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-ivar">@text</span>.<span class="ruby-identifier">respond_to?</span>(<span class="ruby-identifier">id</span>)
+    <span class="ruby-ivar">@text</span>.<span class="ruby-identifier">__send__</span>(<span class="ruby-identifier">id</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">args</span>)
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-keyword">super</span>(<span class="ruby-identifier">id</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">args</span>)
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-next_mark">
+            
+              <b>next_mark</b>(index)
+            
+            <a href="../../../classes/Tk/Iwidgets/Scrolledtext.html#method-i-next_mark" name="method-i-next_mark" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+            <div class="aka">
+              Alias for: <a href="Scrolledtext.html#method-i-mark_next">mark_next</a>
+            </div>
+          
+          
+          
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-previous_mark">
+            
+              <b>previous_mark</b>(index)
+            
+            <a href="../../../classes/Tk/Iwidgets/Scrolledtext.html#method-i-previous_mark" name="method-i-previous_mark" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+            <div class="aka">
+              Alias for: <a href="Scrolledtext.html#method-i-mark_previous">mark_previous</a>
+            </div>
+          
+          
+          
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-rsearch">
+            
+              <b>rsearch</b>(pat,start,stop=None)
+            
+            <a href="../../../classes/Tk/Iwidgets/Scrolledtext.html#method-i-rsearch" name="method-i-rsearch" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-rsearch_source')" id="l_method-i-rsearch_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/iwidgets/scrolledtext.rb#L528" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-rsearch_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/iwidgets/scrolledtext.rb, line 528</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">rsearch</span>(<span class="ruby-identifier">pat</span>,<span class="ruby-identifier">start</span>,<span class="ruby-identifier">stop</span>=<span class="ruby-constant">None</span>)
+  <span class="ruby-identifier">rsearch_with_length</span>(<span class="ruby-identifier">pat</span>,<span class="ruby-identifier">start</span>,<span class="ruby-identifier">stop</span>)[<span class="ruby-number">0</span>]
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-rsearch_with_length">
+            
+              <b>rsearch_with_length</b>(pat,start,stop=None)
+            
+            <a href="../../../classes/Tk/Iwidgets/Scrolledtext.html#method-i-rsearch_with_length" name="method-i-rsearch_with_length" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-rsearch_with_length_source')" id="l_method-i-rsearch_with_length_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/iwidgets/scrolledtext.rb#L476" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-rsearch_with_length_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/iwidgets/scrolledtext.rb, line 476</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">rsearch_with_length</span>(<span class="ruby-identifier">pat</span>,<span class="ruby-identifier">start</span>,<span class="ruby-identifier">stop</span>=<span class="ruby-constant">None</span>)
+  <span class="ruby-identifier">pat</span> = <span class="ruby-identifier">pat</span>.<span class="ruby-identifier">chr</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">pat</span>.<span class="ruby-identifier">kind_of?</span> <span class="ruby-constant">Integer</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">stop</span> <span class="ruby-operator">!=</span> <span class="ruby-constant">None</span>
+    <span class="ruby-keyword">return</span> [<span class="ruby-string">&quot;&quot;</span>, <span class="ruby-number">0</span>] <span class="ruby-keyword">if</span> <span class="ruby-identifier">compare</span>(<span class="ruby-identifier">start</span>,<span class="ruby-string">&#39;&lt;=&#39;</span>,<span class="ruby-identifier">stop</span>)
+    <span class="ruby-identifier">txt</span> = <span class="ruby-identifier">get</span>(<span class="ruby-identifier">stop</span>,<span class="ruby-identifier">start</span>)
+    <span class="ruby-keyword">if</span> (<span class="ruby-identifier">pos</span> = <span class="ruby-identifier">txt</span>.<span class="ruby-identifier">rindex</span>(<span class="ruby-identifier">pat</span>))
+      <span class="ruby-identifier">match</span> = <span class="ruby-node">$&amp;</span>
+      <span class="ruby-comment">#pos = txt[0..(pos-1)].split(&#39;&#39;).length if pos &gt; 0</span>
+      <span class="ruby-identifier">pos</span> = <span class="ruby-identifier">_ktext_length</span>(<span class="ruby-identifier">txt</span>[<span class="ruby-number">0</span><span class="ruby-operator">..</span>(<span class="ruby-identifier">pos</span><span class="ruby-operator">-</span><span class="ruby-number">1</span>)]) <span class="ruby-keyword">if</span> <span class="ruby-identifier">pos</span> <span class="ruby-operator">&gt;</span> <span class="ruby-number">0</span>
+      <span class="ruby-keyword">if</span> <span class="ruby-identifier">pat</span>.<span class="ruby-identifier">kind_of?</span> <span class="ruby-constant">String</span>
+        <span class="ruby-comment">#return [index(stop + &quot; + #{pos} chars&quot;), pat.split(&#39;&#39;).length]</span>
+        <span class="ruby-keyword">return</span> [<span class="ruby-identifier">index</span>(<span class="ruby-identifier">stop</span> <span class="ruby-operator">+</span> <span class="ruby-node">&quot; + #{pos} chars&quot;</span>), <span class="ruby-identifier">_ktext_length</span>(<span class="ruby-identifier">pat</span>), <span class="ruby-identifier">pat</span>.<span class="ruby-identifier">dup</span>]
+      <span class="ruby-keyword">else</span>
+        <span class="ruby-comment">#return [index(stop + &quot; + #{pos} chars&quot;), $&amp;.split(&#39;&#39;).length]</span>
+        <span class="ruby-keyword">return</span> [<span class="ruby-identifier">index</span>(<span class="ruby-identifier">stop</span> <span class="ruby-operator">+</span> <span class="ruby-node">&quot; + #{pos} chars&quot;</span>), <span class="ruby-identifier">_ktext_length</span>(<span class="ruby-identifier">match</span>), <span class="ruby-identifier">match</span>]
+      <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">else</span>
+      <span class="ruby-keyword">return</span> [<span class="ruby-string">&quot;&quot;</span>, <span class="ruby-number">0</span>]
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">txt</span> = <span class="ruby-identifier">get</span>(<span class="ruby-string">&#39;1.0&#39;</span>,<span class="ruby-identifier">start</span>)
+    <span class="ruby-keyword">if</span> (<span class="ruby-identifier">pos</span> = <span class="ruby-identifier">txt</span>.<span class="ruby-identifier">rindex</span>(<span class="ruby-identifier">pat</span>))
+      <span class="ruby-identifier">match</span> = <span class="ruby-node">$&amp;</span>
+      <span class="ruby-comment">#pos = txt[0..(pos-1)].split(&#39;&#39;).length if pos &gt; 0</span>
+      <span class="ruby-identifier">pos</span> = <span class="ruby-identifier">_ktext_length</span>(<span class="ruby-identifier">txt</span>[<span class="ruby-number">0</span><span class="ruby-operator">..</span>(<span class="ruby-identifier">pos</span><span class="ruby-operator">-</span><span class="ruby-number">1</span>)]) <span class="ruby-keyword">if</span> <span class="ruby-identifier">pos</span> <span class="ruby-operator">&gt;</span> <span class="ruby-number">0</span>
+      <span class="ruby-keyword">if</span> <span class="ruby-identifier">pat</span>.<span class="ruby-identifier">kind_of?</span> <span class="ruby-constant">String</span>
+        <span class="ruby-comment">#return [index(&quot;1.0 + #{pos} chars&quot;), pat.split(&#39;&#39;).length]</span>
+        <span class="ruby-keyword">return</span> [<span class="ruby-identifier">index</span>(<span class="ruby-node">&quot;1.0 + #{pos} chars&quot;</span>), <span class="ruby-identifier">_ktext_length</span>(<span class="ruby-identifier">pat</span>), <span class="ruby-identifier">pat</span>.<span class="ruby-identifier">dup</span>]
+      <span class="ruby-keyword">else</span>
+        <span class="ruby-comment">#return [index(&quot;1.0 + #{pos} chars&quot;), $&amp;.split(&#39;&#39;).length]</span>
+        <span class="ruby-keyword">return</span> [<span class="ruby-identifier">index</span>(<span class="ruby-node">&quot;1.0 + #{pos} chars&quot;</span>), <span class="ruby-identifier">_ktext_length</span>(<span class="ruby-identifier">match</span>), <span class="ruby-identifier">match</span>]
+      <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">else</span>
+      <span class="ruby-identifier">txt</span> = <span class="ruby-identifier">get</span>(<span class="ruby-string">&#39;1.0&#39;</span>,<span class="ruby-string">&#39;end - 1 char&#39;</span>)
+      <span class="ruby-keyword">if</span> (<span class="ruby-identifier">pos</span> = <span class="ruby-identifier">txt</span>.<span class="ruby-identifier">rindex</span>(<span class="ruby-identifier">pat</span>))
+        <span class="ruby-identifier">match</span> = <span class="ruby-node">$&amp;</span>
+        <span class="ruby-comment">#pos = txt[0..(pos-1)].split(&#39;&#39;).length if pos &gt; 0</span>
+        <span class="ruby-identifier">pos</span> = <span class="ruby-identifier">_ktext_length</span>(<span class="ruby-identifier">txt</span>[<span class="ruby-number">0</span><span class="ruby-operator">..</span>(<span class="ruby-identifier">pos</span><span class="ruby-operator">-</span><span class="ruby-number">1</span>)]) <span class="ruby-keyword">if</span> <span class="ruby-identifier">pos</span> <span class="ruby-operator">&gt;</span> <span class="ruby-number">0</span>
+        <span class="ruby-keyword">if</span> <span class="ruby-identifier">pat</span>.<span class="ruby-identifier">kind_of?</span> <span class="ruby-constant">String</span>
+          <span class="ruby-comment">#return [index(&quot;1.0 + #{pos} chars&quot;), pat.split(&#39;&#39;).length]</span>
+          <span class="ruby-keyword">return</span> [<span class="ruby-identifier">index</span>(<span class="ruby-node">&quot;1.0 + #{pos} chars&quot;</span>), <span class="ruby-identifier">_ktext_length</span>(<span class="ruby-identifier">pat</span>), <span class="ruby-identifier">pat</span>.<span class="ruby-identifier">dup</span>]
+        <span class="ruby-keyword">else</span>
+          <span class="ruby-comment">#return [index(&quot;1.0 + #{pos} chars&quot;), $&amp;.split(&#39;&#39;).length]</span>
+          <span class="ruby-keyword">return</span> [<span class="ruby-identifier">index</span>(<span class="ruby-node">&quot;1.0 + #{pos} chars&quot;</span>), <span class="ruby-identifier">_ktext_length</span>(<span class="ruby-identifier">match</span>), <span class="ruby-identifier">match</span>]
+        <span class="ruby-keyword">end</span>
+      <span class="ruby-keyword">else</span>
+        <span class="ruby-keyword">return</span> [<span class="ruby-string">&quot;&quot;</span>, <span class="ruby-number">0</span>]
+      <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-scan_dragto">
+            
+              <b>scan_dragto</b>(x, y)
+            
+            <a href="../../../classes/Tk/Iwidgets/Scrolledtext.html#method-i-scan_dragto" name="method-i-scan_dragto" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-scan_dragto_source')" id="l_method-i-scan_dragto_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/iwidgets/scrolledtext.rb#L343" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-scan_dragto_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/iwidgets/scrolledtext.rb, line 343</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">scan_dragto</span>(<span class="ruby-identifier">x</span>, <span class="ruby-identifier">y</span>)
+  <span class="ruby-identifier">tk_send_without_enc</span>(<span class="ruby-string">&#39;scan&#39;</span>, <span class="ruby-string">&#39;dragto&#39;</span>, <span class="ruby-identifier">x</span>, <span class="ruby-identifier">y</span>)
+  <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-scan_mark">
+            
+              <b>scan_mark</b>(x, y)
+            
+            <a href="../../../classes/Tk/Iwidgets/Scrolledtext.html#method-i-scan_mark" name="method-i-scan_mark" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-scan_mark_source')" id="l_method-i-scan_mark_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/iwidgets/scrolledtext.rb#L339" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-scan_mark_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/iwidgets/scrolledtext.rb, line 339</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">scan_mark</span>(<span class="ruby-identifier">x</span>, <span class="ruby-identifier">y</span>)
+  <span class="ruby-identifier">tk_send_without_enc</span>(<span class="ruby-string">&#39;scan&#39;</span>, <span class="ruby-string">&#39;mark&#39;</span>, <span class="ruby-identifier">x</span>, <span class="ruby-identifier">y</span>)
+  <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-search">
+            
+              <b>search</b>(pat,start,stop=None)
+            
+            <a href="../../../classes/Tk/Iwidgets/Scrolledtext.html#method-i-search" name="method-i-search" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-search_source')" id="l_method-i-search_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/iwidgets/scrolledtext.rb#L472" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-search_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/iwidgets/scrolledtext.rb, line 472</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">search</span>(<span class="ruby-identifier">pat</span>,<span class="ruby-identifier">start</span>,<span class="ruby-identifier">stop</span>=<span class="ruby-constant">None</span>)
+  <span class="ruby-identifier">search_with_length</span>(<span class="ruby-identifier">pat</span>,<span class="ruby-identifier">start</span>,<span class="ruby-identifier">stop</span>)[<span class="ruby-number">0</span>]
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-search_with_length">
+            
+              <b>search_with_length</b>(pat,start,stop=None)
+            
+            <a href="../../../classes/Tk/Iwidgets/Scrolledtext.html#method-i-search_with_length" name="method-i-search_with_length" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-search_with_length_source')" id="l_method-i-search_with_length_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/iwidgets/scrolledtext.rb#L415" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-search_with_length_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/iwidgets/scrolledtext.rb, line 415</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">search_with_length</span>(<span class="ruby-identifier">pat</span>,<span class="ruby-identifier">start</span>,<span class="ruby-identifier">stop</span>=<span class="ruby-constant">None</span>)
+  <span class="ruby-identifier">pat</span> = <span class="ruby-identifier">pat</span>.<span class="ruby-identifier">chr</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">pat</span>.<span class="ruby-identifier">kind_of?</span> <span class="ruby-constant">Integer</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">stop</span> <span class="ruby-operator">!=</span> <span class="ruby-constant">None</span>
+    <span class="ruby-keyword">return</span> [<span class="ruby-string">&quot;&quot;</span>, <span class="ruby-number">0</span>] <span class="ruby-keyword">if</span> <span class="ruby-identifier">compare</span>(<span class="ruby-identifier">start</span>,<span class="ruby-string">&#39;&gt;=&#39;</span>,<span class="ruby-identifier">stop</span>)
+    <span class="ruby-identifier">txt</span> = <span class="ruby-identifier">get</span>(<span class="ruby-identifier">start</span>,<span class="ruby-identifier">stop</span>)
+    <span class="ruby-keyword">if</span> (<span class="ruby-identifier">pos</span> = <span class="ruby-identifier">txt</span>.<span class="ruby-identifier">index</span>(<span class="ruby-identifier">pat</span>))
+      <span class="ruby-identifier">match</span> = <span class="ruby-node">$&amp;</span>
+      <span class="ruby-comment">#pos = txt[0..(pos-1)].split(&#39;&#39;).length if pos &gt; 0</span>
+      <span class="ruby-identifier">pos</span> = <span class="ruby-identifier">_ktext_length</span>(<span class="ruby-identifier">txt</span>[<span class="ruby-number">0</span><span class="ruby-operator">..</span>(<span class="ruby-identifier">pos</span><span class="ruby-operator">-</span><span class="ruby-number">1</span>)]) <span class="ruby-keyword">if</span> <span class="ruby-identifier">pos</span> <span class="ruby-operator">&gt;</span> <span class="ruby-number">0</span>
+      <span class="ruby-keyword">if</span> <span class="ruby-identifier">pat</span>.<span class="ruby-identifier">kind_of?</span> <span class="ruby-constant">String</span>
+        <span class="ruby-comment">#return [index(start + &quot; + #{pos} chars&quot;), pat.split(&#39;&#39;).length]</span>
+        <span class="ruby-keyword">return</span> [<span class="ruby-identifier">index</span>(<span class="ruby-identifier">start</span> <span class="ruby-operator">+</span> <span class="ruby-node">&quot; + #{pos} chars&quot;</span>),
+                <span class="ruby-identifier">_ktext_length</span>(<span class="ruby-identifier">pat</span>), <span class="ruby-identifier">pat</span>.<span class="ruby-identifier">dup</span>]
+      <span class="ruby-keyword">else</span>
+        <span class="ruby-comment">#return [index(start + &quot; + #{pos} chars&quot;), $&amp;.split(&#39;&#39;).length]</span>
+        <span class="ruby-keyword">return</span> [<span class="ruby-identifier">index</span>(<span class="ruby-identifier">start</span> <span class="ruby-operator">+</span> <span class="ruby-node">&quot; + #{pos} chars&quot;</span>),
+                <span class="ruby-identifier">_ktext_length</span>(<span class="ruby-identifier">match</span>), <span class="ruby-identifier">match</span>]
+      <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">else</span>
+      <span class="ruby-keyword">return</span> [<span class="ruby-string">&quot;&quot;</span>, <span class="ruby-number">0</span>]
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">txt</span> = <span class="ruby-identifier">get</span>(<span class="ruby-identifier">start</span>,<span class="ruby-string">&#39;end - 1 char&#39;</span>)
+    <span class="ruby-keyword">if</span> (<span class="ruby-identifier">pos</span> = <span class="ruby-identifier">txt</span>.<span class="ruby-identifier">index</span>(<span class="ruby-identifier">pat</span>))
+      <span class="ruby-identifier">match</span> = <span class="ruby-node">$&amp;</span>
+      <span class="ruby-comment">#pos = txt[0..(pos-1)].split(&#39;&#39;).length if pos &gt; 0</span>
+      <span class="ruby-identifier">pos</span> = <span class="ruby-identifier">_ktext_length</span>(<span class="ruby-identifier">txt</span>[<span class="ruby-number">0</span><span class="ruby-operator">..</span>(<span class="ruby-identifier">pos</span><span class="ruby-operator">-</span><span class="ruby-number">1</span>)]) <span class="ruby-keyword">if</span> <span class="ruby-identifier">pos</span> <span class="ruby-operator">&gt;</span> <span class="ruby-number">0</span>
+      <span class="ruby-keyword">if</span> <span class="ruby-identifier">pat</span>.<span class="ruby-identifier">kind_of?</span> <span class="ruby-constant">String</span>
+        <span class="ruby-comment">#return [index(start + &quot; + #{pos} chars&quot;), pat.split(&#39;&#39;).length]</span>
+        <span class="ruby-keyword">return</span> [<span class="ruby-identifier">index</span>(<span class="ruby-identifier">start</span> <span class="ruby-operator">+</span> <span class="ruby-node">&quot; + #{pos} chars&quot;</span>),
+                <span class="ruby-identifier">_ktext_length</span>(<span class="ruby-identifier">pat</span>), <span class="ruby-identifier">pat</span>.<span class="ruby-identifier">dup</span>]
+      <span class="ruby-keyword">else</span>
+        <span class="ruby-comment">#return [index(start + &quot; + #{pos} chars&quot;), $&amp;.split(&#39;&#39;).length]</span>
+        <span class="ruby-keyword">return</span> [<span class="ruby-identifier">index</span>(<span class="ruby-identifier">start</span> <span class="ruby-operator">+</span> <span class="ruby-node">&quot; + #{pos} chars&quot;</span>),
+                <span class="ruby-identifier">_ktext_length</span>(<span class="ruby-identifier">match</span>), <span class="ruby-identifier">match</span>]
+      <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">else</span>
+      <span class="ruby-identifier">txt</span> = <span class="ruby-identifier">get</span>(<span class="ruby-string">&#39;1.0&#39;</span>,<span class="ruby-string">&#39;end - 1 char&#39;</span>)
+      <span class="ruby-keyword">if</span> (<span class="ruby-identifier">pos</span> = <span class="ruby-identifier">txt</span>.<span class="ruby-identifier">index</span>(<span class="ruby-identifier">pat</span>))
+        <span class="ruby-identifier">match</span> = <span class="ruby-node">$&amp;</span>
+        <span class="ruby-comment">#pos = txt[0..(pos-1)].split(&#39;&#39;).length if pos &gt; 0</span>
+        <span class="ruby-identifier">pos</span> = <span class="ruby-identifier">_ktext_length</span>(<span class="ruby-identifier">txt</span>[<span class="ruby-number">0</span><span class="ruby-operator">..</span>(<span class="ruby-identifier">pos</span><span class="ruby-operator">-</span><span class="ruby-number">1</span>)]) <span class="ruby-keyword">if</span> <span class="ruby-identifier">pos</span> <span class="ruby-operator">&gt;</span> <span class="ruby-number">0</span>
+        <span class="ruby-keyword">if</span> <span class="ruby-identifier">pat</span>.<span class="ruby-identifier">kind_of?</span> <span class="ruby-constant">String</span>
+          <span class="ruby-comment">#return [index(&quot;1.0 + #{pos} chars&quot;), pat.split(&#39;&#39;).length]</span>
+          <span class="ruby-keyword">return</span> [<span class="ruby-identifier">index</span>(<span class="ruby-node">&quot;1.0 + #{pos} chars&quot;</span>),
+                  <span class="ruby-identifier">_ktext_length</span>(<span class="ruby-identifier">pat</span>), <span class="ruby-identifier">pat</span>.<span class="ruby-identifier">dup</span>]
+        <span class="ruby-keyword">else</span>
+          <span class="ruby-comment">#return [index(&quot;1.0 + #{pos} chars&quot;), $&amp;.split(&#39;&#39;).length]</span>
+          <span class="ruby-keyword">return</span> [<span class="ruby-identifier">index</span>(<span class="ruby-node">&quot;1.0 + #{pos} chars&quot;</span>), <span class="ruby-identifier">_ktext_length</span>(<span class="ruby-identifier">match</span>), <span class="ruby-identifier">match</span>]
+        <span class="ruby-keyword">end</span>
+      <span class="ruby-keyword">else</span>
+        <span class="ruby-keyword">return</span> [<span class="ruby-string">&quot;&quot;</span>, <span class="ruby-number">0</span>]
+      <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-see">
+            
+              <b>see</b>(index)
+            
+            <a href="../../../classes/Tk/Iwidgets/Scrolledtext.html#method-i-see" name="method-i-see" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-see_source')" id="l_method-i-see_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/iwidgets/scrolledtext.rb#L532" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-see_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/iwidgets/scrolledtext.rb, line 532</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">see</span>(<span class="ruby-identifier">index</span>)
+  <span class="ruby-identifier">tk_send_without_enc</span>(<span class="ruby-string">&#39;see&#39;</span>, <span class="ruby-identifier">index</span>)
+  <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-set_mark">
+            
+              <b>set_mark</b>(mark, index)
+            
+            <a href="../../../classes/Tk/Iwidgets/Scrolledtext.html#method-i-set_mark" name="method-i-set_mark" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+            <div class="aka">
+              Alias for: <a href="Scrolledtext.html#method-i-mark_set">mark_set</a>
+            </div>
+          
+          
+          
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-tksearch">
+            
+              <b>tksearch</b>(*args)
+            
+            <a href="../../../classes/Tk/Iwidgets/Scrolledtext.html#method-i-tksearch" name="method-i-tksearch" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-tksearch_source')" id="l_method-i-tksearch_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/iwidgets/scrolledtext.rb#L375" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-tksearch_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/iwidgets/scrolledtext.rb, line 375</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">tksearch</span>(<span class="ruby-operator">*</span><span class="ruby-identifier">args</span>)
+  <span class="ruby-comment"># call &#39;search&#39; subcommand of text widget</span>
+  <span class="ruby-comment">#   args ::= [&lt;array_of_opts&gt;] &lt;pattern&gt; &lt;start_index&gt; [&lt;stop_index&gt;]</span>
+  <span class="ruby-comment"># If &lt;pattern&gt; is regexp, then it must be a regular expression of Tcl</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">args</span>[<span class="ruby-number">0</span>].<span class="ruby-identifier">kind_of?</span>(<span class="ruby-constant">Array</span>)
+    <span class="ruby-identifier">opts</span> = <span class="ruby-identifier">args</span>.<span class="ruby-identifier">shift</span>.<span class="ruby-identifier">collect</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">opt</span><span class="ruby-operator">|</span> <span class="ruby-string">&#39;-&#39;</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">opt</span>.<span class="ruby-identifier">to_s</span> }
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">opts</span> = []
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-identifier">opts</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-string">&#39;--&#39;</span>
+
+  <span class="ruby-identifier">ret</span> = <span class="ruby-identifier">tk_send</span>(<span class="ruby-string">&#39;search&#39;</span>, <span class="ruby-operator">*</span>(<span class="ruby-identifier">opts</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">args</span>))
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">ret</span> <span class="ruby-operator">==</span> <span class="ruby-string">&quot;&quot;</span>
+    <span class="ruby-keyword">nil</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">ret</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-tksearch_with_count">
+            
+              <b>tksearch_with_count</b>(*args)
+            
+            <a href="../../../classes/Tk/Iwidgets/Scrolledtext.html#method-i-tksearch_with_count" name="method-i-tksearch_with_count" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-tksearch_with_count_source')" id="l_method-i-tksearch_with_count_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/iwidgets/scrolledtext.rb#L395" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-tksearch_with_count_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/iwidgets/scrolledtext.rb, line 395</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">tksearch_with_count</span>(<span class="ruby-operator">*</span><span class="ruby-identifier">args</span>)
+  <span class="ruby-comment"># call &#39;search&#39; subcommand of text widget</span>
+  <span class="ruby-comment">#   args ::= [&lt;array_of_opts&gt;] &lt;var&gt; &lt;pattern&gt; &lt;start_index&gt; [&lt;stop_index&gt;]</span>
+  <span class="ruby-comment"># If &lt;pattern&gt; is regexp, then it must be a regular expression of Tcl</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">args</span>[<span class="ruby-number">0</span>].<span class="ruby-identifier">kind_of?</span>(<span class="ruby-constant">Array</span>)
+    <span class="ruby-identifier">opts</span> = <span class="ruby-identifier">args</span>.<span class="ruby-identifier">shift</span>.<span class="ruby-identifier">collect</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">opt</span><span class="ruby-operator">|</span> <span class="ruby-string">&#39;-&#39;</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">opt</span>.<span class="ruby-identifier">to_s</span> }
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">opts</span> = []
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-identifier">opts</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-string">&#39;-count&#39;</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">args</span>.<span class="ruby-identifier">shift</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-string">&#39;--&#39;</span>
+
+  <span class="ruby-identifier">ret</span> = <span class="ruby-identifier">tk_send</span>(<span class="ruby-string">&#39;search&#39;</span>, <span class="ruby-operator">*</span>(<span class="ruby-identifier">opts</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">args</span>))
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">ret</span> <span class="ruby-operator">==</span> <span class="ruby-string">&quot;&quot;</span>
+    <span class="ruby-keyword">nil</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">ret</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-unset_mark">
+            
+              <b>unset_mark</b>(*marks)
+            
+            <a href="../../../classes/Tk/Iwidgets/Scrolledtext.html#method-i-unset_mark" name="method-i-unset_mark" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+            <div class="aka">
+              Alias for: <a href="Scrolledtext.html#method-i-mark_unset">mark_unset</a>
+            </div>
+          
+          
+          
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-xview">
+            
+              <b>xview</b>(*index)
+            
+            <a href="../../../classes/Tk/Iwidgets/Scrolledtext.html#method-i-xview" name="method-i-xview" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-xview_source')" id="l_method-i-xview_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/iwidgets/scrolledtext.rb#L539" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-xview_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/iwidgets/scrolledtext.rb, line 539</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">xview</span>(<span class="ruby-operator">*</span><span class="ruby-identifier">index</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">index</span>.<span class="ruby-identifier">size</span> <span class="ruby-operator">==</span> <span class="ruby-number">0</span>
+    <span class="ruby-identifier">list</span>(<span class="ruby-identifier">tk_send_without_enc</span>(<span class="ruby-string">&#39;xview&#39;</span>))
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">tk_send_without_enc</span>(<span class="ruby-string">&#39;xview&#39;</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">index</span>)
+    <span class="ruby-keyword">self</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-xview_moveto">
+            
+              <b>xview_moveto</b>(*index)
+            
+            <a href="../../../classes/Tk/Iwidgets/Scrolledtext.html#method-i-xview_moveto" name="method-i-xview_moveto" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-xview_moveto_source')" id="l_method-i-xview_moveto_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/iwidgets/scrolledtext.rb#L547" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-xview_moveto_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/iwidgets/scrolledtext.rb, line 547</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">xview_moveto</span>(<span class="ruby-operator">*</span><span class="ruby-identifier">index</span>)
+  <span class="ruby-identifier">xview</span>(<span class="ruby-string">&#39;moveto&#39;</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">index</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-xview_scroll">
+            
+              <b>xview_scroll</b>(*index)
+            
+            <a href="../../../classes/Tk/Iwidgets/Scrolledtext.html#method-i-xview_scroll" name="method-i-xview_scroll" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-xview_scroll_source')" id="l_method-i-xview_scroll_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/iwidgets/scrolledtext.rb#L550" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-xview_scroll_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/iwidgets/scrolledtext.rb, line 550</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">xview_scroll</span>(<span class="ruby-operator">*</span><span class="ruby-identifier">index</span>)
+  <span class="ruby-identifier">xview</span>(<span class="ruby-string">&#39;scroll&#39;</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">index</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-yview">
+            
+              <b>yview</b>(*index)
+            
+            <a href="../../../classes/Tk/Iwidgets/Scrolledtext.html#method-i-yview" name="method-i-yview" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-yview_source')" id="l_method-i-yview_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/iwidgets/scrolledtext.rb#L554" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-yview_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/iwidgets/scrolledtext.rb, line 554</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">yview</span>(<span class="ruby-operator">*</span><span class="ruby-identifier">index</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">index</span>.<span class="ruby-identifier">size</span> <span class="ruby-operator">==</span> <span class="ruby-number">0</span>
+    <span class="ruby-identifier">list</span>(<span class="ruby-identifier">tk_send_without_enc</span>(<span class="ruby-string">&#39;yview&#39;</span>))
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">tk_send_without_enc</span>(<span class="ruby-string">&#39;yview&#39;</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">index</span>)
+    <span class="ruby-keyword">self</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-yview_moveto">
+            
+              <b>yview_moveto</b>(*index)
+            
+            <a href="../../../classes/Tk/Iwidgets/Scrolledtext.html#method-i-yview_moveto" name="method-i-yview_moveto" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-yview_moveto_source')" id="l_method-i-yview_moveto_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/iwidgets/scrolledtext.rb#L562" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-yview_moveto_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/iwidgets/scrolledtext.rb, line 562</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">yview_moveto</span>(<span class="ruby-operator">*</span><span class="ruby-identifier">index</span>)
+  <span class="ruby-identifier">yview</span>(<span class="ruby-string">&#39;moveto&#39;</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">index</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-yview_scroll">
+            
+              <b>yview_scroll</b>(*index)
+            
+            <a href="../../../classes/Tk/Iwidgets/Scrolledtext.html#method-i-yview_scroll" name="method-i-yview_scroll" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-yview_scroll_source')" id="l_method-i-yview_scroll_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/iwidgets/scrolledtext.rb#L565" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-yview_scroll_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/iwidgets/scrolledtext.rb, line 565</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">yview_scroll</span>(<span class="ruby-operator">*</span><span class="ruby-identifier">index</span>)
+  <span class="ruby-identifier">yview</span>(<span class="ruby-string">&#39;scroll&#39;</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">index</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                    </div>
+
+    </div>
+  </body>
+</html>    

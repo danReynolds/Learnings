@@ -1,0 +1,397 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>Kindle</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="../css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/main.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/github.css" type="text/css" media="screen" />
+<script src="../js/jquery-1.3.2.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/jquery-effect.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+
+<body>     
+    <div class="banner">
+        
+        <h1>
+            <span class="type">Module</span> 
+            Kindle 
+            
+        </h1>
+        <ul class="files">
+            
+            <li><a href="../files/guides/rails_guides/kindle_rb.html">guides/rails_guides/kindle.rb</a></li>
+            
+        </ul>
+    </div>
+    <div id="bodyContent">
+        <div id="content">
+  
+
+
+  
+
+
+  
+  
+
+
+  
+
+
+  
+    <!-- Method ref -->
+    <div class="sectiontitle">Methods</div>
+    <dl class="methods">
+      
+        <dt>A</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-add_head_section">add_head_section</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>G</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-generate">generate</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-generate_document_metadata">generate_document_metadata</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-generate_front_matter">generate_front_matter</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-generate_sections">generate_sections</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+    </dl>
+  
+
+  
+
+
+
+  
+
+    
+
+    
+
+    
+
+
+    
+
+
+    <!-- Methods -->
+        
+      <div class="sectiontitle">Instance Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-i-add_head_section">
+            
+              <b>add_head_section</b>(doc, title)
+            
+            <a href="../classes/Kindle.html#method-i-add_head_section" name="method-i-add_head_section" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-add_head_section_source')" id="l_method-i-add_head_section_source">show</a>
+                
+                  | <a href="https://github.com/rails/rails/blob/e8fe1d1a20e1e2c142002b47795a81b8f1fa7d42/guides/rails_guides/kindle.rb#L107" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-add_head_section_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File guides/rails_guides/kindle.rb, line 107</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">add_head_section</span>(<span class="ruby-identifier">doc</span>, <span class="ruby-identifier">title</span>)
+  <span class="ruby-identifier">head</span> = <span class="ruby-constant">Nokogiri</span><span class="ruby-operator">::</span><span class="ruby-constant">XML</span><span class="ruby-operator">::</span><span class="ruby-constant">Node</span>.<span class="ruby-identifier">new</span> <span class="ruby-string">&quot;head&quot;</span>, <span class="ruby-identifier">doc</span>
+  <span class="ruby-identifier">title_node</span> = <span class="ruby-constant">Nokogiri</span><span class="ruby-operator">::</span><span class="ruby-constant">XML</span><span class="ruby-operator">::</span><span class="ruby-constant">Node</span>.<span class="ruby-identifier">new</span> <span class="ruby-string">&quot;title&quot;</span>, <span class="ruby-identifier">doc</span>
+  <span class="ruby-identifier">title_node</span>.<span class="ruby-identifier">content</span> = <span class="ruby-identifier">title</span>
+  <span class="ruby-identifier">title_node</span>.<span class="ruby-identifier">parent</span> = <span class="ruby-identifier">head</span>
+  <span class="ruby-identifier">css</span> = <span class="ruby-constant">Nokogiri</span><span class="ruby-operator">::</span><span class="ruby-constant">XML</span><span class="ruby-operator">::</span><span class="ruby-constant">Node</span>.<span class="ruby-identifier">new</span> <span class="ruby-string">&quot;link&quot;</span>, <span class="ruby-identifier">doc</span>
+  <span class="ruby-identifier">css</span>[<span class="ruby-string">&#39;rel&#39;</span>] = <span class="ruby-string">&#39;stylesheet&#39;</span>
+  <span class="ruby-identifier">css</span>[<span class="ruby-string">&#39;type&#39;</span>] = <span class="ruby-string">&#39;text/css&#39;</span>
+  <span class="ruby-identifier">css</span>[<span class="ruby-string">&#39;href&#39;</span>] = <span class="ruby-node">&quot;#{Dir.pwd}/stylesheets/kindle.css&quot;</span>
+  <span class="ruby-identifier">css</span>.<span class="ruby-identifier">parent</span> = <span class="ruby-identifier">head</span>
+  <span class="ruby-identifier">doc</span>.<span class="ruby-identifier">at</span>(<span class="ruby-string">&quot;body&quot;</span>).<span class="ruby-identifier">before</span> <span class="ruby-identifier">head</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-generate">
+            
+              <b>generate</b>(output_dir, mobi_outfile, logfile)
+            
+            <a href="../classes/Kindle.html#method-i-generate" name="method-i-generate" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-generate_source')" id="l_method-i-generate_source">show</a>
+                
+                  | <a href="https://github.com/rails/rails/blob/e8fe1d1a20e1e2c142002b47795a81b8f1fa7d42/guides/rails_guides/kindle.rb#L15" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-generate_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File guides/rails_guides/kindle.rb, line 15</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">generate</span>(<span class="ruby-identifier">output_dir</span>, <span class="ruby-identifier">mobi_outfile</span>, <span class="ruby-identifier">logfile</span>)
+  <span class="ruby-identifier">output_dir</span> = <span class="ruby-constant">File</span>.<span class="ruby-identifier">absolute_path</span>(<span class="ruby-identifier">output_dir</span>)
+  <span class="ruby-constant">Dir</span>.<span class="ruby-identifier">chdir</span> <span class="ruby-identifier">output_dir</span> <span class="ruby-keyword">do</span> 
+    <span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;=&gt; Using output dir: #{output_dir}&quot;</span>
+    <span class="ruby-identifier">puts</span> <span class="ruby-string">&quot;=&gt; Arranging html pages in document order&quot;</span>
+    <span class="ruby-identifier">toc</span> = <span class="ruby-constant">File</span>.<span class="ruby-identifier">read</span>(<span class="ruby-string">&quot;toc.ncx&quot;</span>)
+    <span class="ruby-identifier">doc</span> = <span class="ruby-constant">Nokogiri</span><span class="ruby-operator">::</span><span class="ruby-constant">XML</span>(<span class="ruby-identifier">toc</span>).<span class="ruby-identifier">xpath</span>(<span class="ruby-string">&quot;//ncx:content&quot;</span>, <span class="ruby-string">&#39;ncx&#39;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;http://www.daisy.org/z3986/2005/ncx/&quot;</span>)
+    <span class="ruby-identifier">html_pages</span> = <span class="ruby-identifier">doc</span>.<span class="ruby-identifier">select</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">c</span><span class="ruby-operator">|</span> <span class="ruby-identifier">c</span>[<span class="ruby-value">:src</span>]}.<span class="ruby-identifier">map</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">c</span><span class="ruby-operator">|</span> <span class="ruby-identifier">c</span>[<span class="ruby-value">:src</span>]}.<span class="ruby-identifier">uniq</span>
+   
+    <span class="ruby-identifier">generate_front_matter</span>(<span class="ruby-identifier">html_pages</span>)
+
+    <span class="ruby-identifier">generate_sections</span>(<span class="ruby-identifier">html_pages</span>)
+
+    <span class="ruby-identifier">generate_document_metadata</span>(<span class="ruby-identifier">mobi_outfile</span>)
+
+    <span class="ruby-identifier">puts</span> <span class="ruby-string">&quot;Creating MOBI document with kindlegen. This make take a while.&quot;</span>
+    <span class="ruby-identifier">cmd</span> = <span class="ruby-node">&quot;kindlerb . &gt; #{File.absolute_path logfile} 2&gt;&amp;1&quot;</span>
+    <span class="ruby-identifier">puts</span> <span class="ruby-identifier">cmd</span>
+    <span class="ruby-identifier">system</span>(<span class="ruby-identifier">cmd</span>)
+    <span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;MOBI document generated at #{File.expand_path(mobi_outfile, output_dir)}&quot;</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-generate_document_metadata">
+            
+              <b>generate_document_metadata</b>(mobi_outfile)
+            
+            <a href="../classes/Kindle.html#method-i-generate_document_metadata" name="method-i-generate_document_metadata" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-generate_document_metadata_source')" id="l_method-i-generate_document_metadata_source">show</a>
+                
+                  | <a href="https://github.com/rails/rails/blob/e8fe1d1a20e1e2c142002b47795a81b8f1fa7d42/guides/rails_guides/kindle.rb#L86" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-generate_document_metadata_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File guides/rails_guides/kindle.rb, line 86</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">generate_document_metadata</span>(<span class="ruby-identifier">mobi_outfile</span>)
+  <span class="ruby-identifier">puts</span> <span class="ruby-string">&quot;=&gt; Generating _document.yml&quot;</span>
+  <span class="ruby-identifier">x</span> = <span class="ruby-constant">Nokogiri</span><span class="ruby-operator">::</span><span class="ruby-constant">XML</span>(<span class="ruby-constant">File</span>.<span class="ruby-identifier">open</span>(<span class="ruby-string">&quot;rails_guides.opf&quot;</span>)).<span class="ruby-identifier">remove_namespaces!</span>
+  <span class="ruby-identifier">cover_jpg</span> = <span class="ruby-node">&quot;#{Dir.pwd}/images/rails_guides_kindle_cover.jpg&quot;</span>
+  <span class="ruby-identifier">cover_gif</span> = <span class="ruby-identifier">cover_jpg</span>.<span class="ruby-identifier">sub</span>(<span class="ruby-regexp">/jpg$/</span>, <span class="ruby-string">&#39;gif&#39;</span>)
+  <span class="ruby-identifier">puts</span> <span class="ruby-node">%xconvert #{cover_jpg} #{cover_gif}`</span>
+  <span class="ruby-identifier">document</span> = {
+    <span class="ruby-string">&#39;doc_uuid&#39;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">x</span>.<span class="ruby-identifier">at</span>(<span class="ruby-string">&quot;package&quot;</span>)[<span class="ruby-string">&#39;unique-identifier&#39;</span>],
+    <span class="ruby-string">&#39;title&#39;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">x</span>.<span class="ruby-identifier">at</span>(<span class="ruby-string">&quot;title&quot;</span>).<span class="ruby-identifier">inner_text</span>.<span class="ruby-identifier">gsub</span>(<span class="ruby-regexp">/\(.*$/</span>, <span class="ruby-string">&quot; v2&quot;</span>),
+    <span class="ruby-string">&#39;publisher&#39;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">x</span>.<span class="ruby-identifier">at</span>(<span class="ruby-string">&quot;publisher&quot;</span>).<span class="ruby-identifier">inner_text</span>,
+    <span class="ruby-string">&#39;author&#39;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">x</span>.<span class="ruby-identifier">at</span>(<span class="ruby-string">&quot;creator&quot;</span>).<span class="ruby-identifier">inner_text</span>,
+    <span class="ruby-string">&#39;subject&#39;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">x</span>.<span class="ruby-identifier">at</span>(<span class="ruby-string">&quot;subject&quot;</span>).<span class="ruby-identifier">inner_text</span>,
+    <span class="ruby-string">&#39;date&#39;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">x</span>.<span class="ruby-identifier">at</span>(<span class="ruby-string">&quot;date&quot;</span>).<span class="ruby-identifier">inner_text</span>,
+    <span class="ruby-string">&#39;cover&#39;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">cover_gif</span>,
+    <span class="ruby-string">&#39;masthead&#39;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword">nil</span>,
+    <span class="ruby-string">&#39;mobi_outfile&#39;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">mobi_outfile</span>
+  }
+  <span class="ruby-identifier">puts</span> <span class="ruby-identifier">document</span>.<span class="ruby-identifier">to_yaml</span>
+  <span class="ruby-constant">File</span>.<span class="ruby-identifier">open</span>(<span class="ruby-string">&quot;_document.yml&quot;</span>, <span class="ruby-string">&#39;w&#39;</span>){<span class="ruby-operator">|</span><span class="ruby-identifier">f</span><span class="ruby-operator">|</span> <span class="ruby-identifier">f</span>.<span class="ruby-identifier">puts</span> <span class="ruby-identifier">document</span>.<span class="ruby-identifier">to_yaml</span>}
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-generate_front_matter">
+            
+              <b>generate_front_matter</b>(html_pages)
+            
+            <a href="../classes/Kindle.html#method-i-generate_front_matter" name="method-i-generate_front_matter" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-generate_front_matter_source')" id="l_method-i-generate_front_matter_source">show</a>
+                
+                  | <a href="https://github.com/rails/rails/blob/e8fe1d1a20e1e2c142002b47795a81b8f1fa7d42/guides/rails_guides/kindle.rb#L38" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-generate_front_matter_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File guides/rails_guides/kindle.rb, line 38</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">generate_front_matter</span>(<span class="ruby-identifier">html_pages</span>)
+  <span class="ruby-identifier">frontmatter</span> = []
+  <span class="ruby-identifier">html_pages</span>.<span class="ruby-identifier">delete_if</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">x</span><span class="ruby-operator">|</span> 
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">x</span> <span class="ruby-operator">=~</span> <span class="ruby-regexp">/(toc|welcome|credits|copyright).html/</span>
+      <span class="ruby-identifier">frontmatter</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">x</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">x</span> <span class="ruby-operator">=~</span> <span class="ruby-regexp">/toc/</span>
+      <span class="ruby-keyword">true</span>
+    <span class="ruby-keyword">end</span>
+  }
+  <span class="ruby-identifier">html</span> = <span class="ruby-identifier">frontmatter</span>.<span class="ruby-identifier">map</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">x</span><span class="ruby-operator">|</span>
+    <span class="ruby-constant">Nokogiri</span><span class="ruby-operator">::</span><span class="ruby-constant">HTML</span>(<span class="ruby-constant">File</span>.<span class="ruby-identifier">open</span>(<span class="ruby-identifier">x</span>)).<span class="ruby-identifier">at</span>(<span class="ruby-string">&quot;body&quot;</span>).<span class="ruby-identifier">inner_html</span>
+  }.<span class="ruby-identifier">join</span>(<span class="ruby-string">&quot;\n&quot;</span>)
+
+  <span class="ruby-identifier">fdoc</span> = <span class="ruby-constant">Nokogiri</span><span class="ruby-operator">::</span><span class="ruby-constant">HTML</span>(<span class="ruby-identifier">html</span>)
+  <span class="ruby-identifier">fdoc</span>.<span class="ruby-identifier">search</span>(<span class="ruby-string">&quot;h3&quot;</span>).<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">h3</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">h3</span>.<span class="ruby-identifier">name</span> = <span class="ruby-string">&#39;h4&#39;</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">fdoc</span>.<span class="ruby-identifier">search</span>(<span class="ruby-string">&quot;h2&quot;</span>).<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">h2</span><span class="ruby-operator">|</span> 
+    <span class="ruby-identifier">h2</span>.<span class="ruby-identifier">name</span> = <span class="ruby-string">&#39;h3&#39;</span>
+    <span class="ruby-identifier">h2</span>[<span class="ruby-string">&#39;id&#39;</span>] = <span class="ruby-identifier">h2</span>.<span class="ruby-identifier">inner_text</span>.<span class="ruby-identifier">gsub</span>(<span class="ruby-regexp">/\s/</span>, <span class="ruby-string">&#39;-&#39;</span>)
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">add_head_section</span> <span class="ruby-identifier">fdoc</span>, <span class="ruby-string">&quot;Front Matter&quot;</span>
+  <span class="ruby-constant">File</span>.<span class="ruby-identifier">open</span>(<span class="ruby-string">&quot;frontmatter.html&quot;</span>,<span class="ruby-string">&#39;w&#39;</span>) {<span class="ruby-operator">|</span><span class="ruby-identifier">f</span><span class="ruby-operator">|</span> <span class="ruby-identifier">f</span>.<span class="ruby-identifier">puts</span> <span class="ruby-identifier">fdoc</span>.<span class="ruby-identifier">to_html</span>}
+  <span class="ruby-identifier">html_pages</span>.<span class="ruby-identifier">unshift</span> <span class="ruby-string">&quot;frontmatter.html&quot;</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-generate_sections">
+            
+              <b>generate_sections</b>(html_pages)
+            
+            <a href="../classes/Kindle.html#method-i-generate_sections" name="method-i-generate_sections" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-generate_sections_source')" id="l_method-i-generate_sections_source">show</a>
+                
+                  | <a href="https://github.com/rails/rails/blob/e8fe1d1a20e1e2c142002b47795a81b8f1fa7d42/guides/rails_guides/kindle.rb#L63" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-generate_sections_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File guides/rails_guides/kindle.rb, line 63</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">generate_sections</span>(<span class="ruby-identifier">html_pages</span>)
+  <span class="ruby-constant">FileUtils</span><span class="ruby-operator">::</span><span class="ruby-identifier">rm_rf</span>(<span class="ruby-string">&quot;sections/&quot;</span>)
+  <span class="ruby-identifier">html_pages</span>.<span class="ruby-identifier">each_with_index</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">page</span>, <span class="ruby-identifier">section_idx</span><span class="ruby-operator">|</span>
+    <span class="ruby-constant">FileUtils</span><span class="ruby-operator">::</span><span class="ruby-identifier">mkdir_p</span>(<span class="ruby-string">&quot;sections/%03d&quot;</span> <span class="ruby-operator">%</span> <span class="ruby-identifier">section_idx</span>)
+    <span class="ruby-identifier">doc</span> = <span class="ruby-constant">Nokogiri</span><span class="ruby-operator">::</span><span class="ruby-constant">HTML</span>(<span class="ruby-constant">File</span>.<span class="ruby-identifier">open</span>(<span class="ruby-identifier">page</span>))
+    <span class="ruby-identifier">title</span> = <span class="ruby-identifier">doc</span>.<span class="ruby-identifier">at</span>(<span class="ruby-string">&quot;title&quot;</span>).<span class="ruby-identifier">inner_text</span>.<span class="ruby-identifier">gsub</span>(<span class="ruby-string">&quot;Ruby on Rails Guides: &quot;</span>, <span class="ruby-string">&#39;&#39;</span>)
+    <span class="ruby-identifier">title</span> = <span class="ruby-identifier">page</span>.<span class="ruby-identifier">capitalize</span>.<span class="ruby-identifier">gsub</span>(<span class="ruby-string">&#39;.html&#39;</span>, <span class="ruby-string">&#39;&#39;</span>) <span class="ruby-keyword">if</span> <span class="ruby-identifier">title</span>.<span class="ruby-identifier">strip</span> <span class="ruby-operator">==</span> <span class="ruby-string">&#39;&#39;</span>
+    <span class="ruby-constant">File</span>.<span class="ruby-identifier">open</span>(<span class="ruby-string">&quot;sections/%03d/_section.txt&quot;</span> <span class="ruby-operator">%</span> <span class="ruby-identifier">section_idx</span>, <span class="ruby-string">&#39;w&#39;</span>) {<span class="ruby-operator">|</span><span class="ruby-identifier">f</span><span class="ruby-operator">|</span> <span class="ruby-identifier">f</span>.<span class="ruby-identifier">puts</span> <span class="ruby-identifier">title</span>}
+    <span class="ruby-identifier">doc</span>.<span class="ruby-identifier">xpath</span>(<span class="ruby-string">&quot;//h3[@id]&quot;</span>).<span class="ruby-identifier">each_with_index</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">h3</span>,<span class="ruby-identifier">item_idx</span><span class="ruby-operator">|</span>
+      <span class="ruby-identifier">subsection</span> = <span class="ruby-identifier">h3</span>.<span class="ruby-identifier">inner_text</span>
+      <span class="ruby-identifier">content</span> = <span class="ruby-identifier">h3</span>.<span class="ruby-identifier">xpath</span>(<span class="ruby-string">&quot;./following-sibling::*&quot;</span>).<span class="ruby-identifier">take_while</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">x</span><span class="ruby-operator">|</span> <span class="ruby-identifier">x</span>.<span class="ruby-identifier">name</span> <span class="ruby-operator">!=</span> <span class="ruby-string">&quot;h3&quot;</span>}.<span class="ruby-identifier">map</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">x</span><span class="ruby-operator">|</span> <span class="ruby-identifier">x</span>.<span class="ruby-identifier">to_html</span>}
+      <span class="ruby-identifier">item</span> = <span class="ruby-constant">Nokogiri</span><span class="ruby-operator">::</span><span class="ruby-constant">HTML</span>(<span class="ruby-identifier">h3</span>.<span class="ruby-identifier">to_html</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">content</span>.<span class="ruby-identifier">join</span>(<span class="ruby-string">&quot;\n&quot;</span>))
+      <span class="ruby-identifier">item_path</span> = <span class="ruby-string">&quot;sections/%03d/%03d.html&quot;</span> <span class="ruby-operator">%</span> [<span class="ruby-identifier">section_idx</span>, <span class="ruby-identifier">item_idx</span>] 
+      <span class="ruby-identifier">add_head_section</span>(<span class="ruby-identifier">item</span>, <span class="ruby-identifier">subsection</span>)
+      <span class="ruby-identifier">item</span>.<span class="ruby-identifier">search</span>(<span class="ruby-string">&quot;img&quot;</span>).<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">img</span><span class="ruby-operator">|</span>
+        <span class="ruby-identifier">img</span>[<span class="ruby-string">&#39;src&#39;</span>] = <span class="ruby-node">&quot;#{Dir.pwd}/#{img[&#39;src&#39;]}&quot;</span>
+      <span class="ruby-keyword">end</span>
+      <span class="ruby-identifier">item</span>.<span class="ruby-identifier">xpath</span>(<span class="ruby-string">&quot;//li/p&quot;</span>).<span class="ruby-identifier">each</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">p</span><span class="ruby-operator">|</span> <span class="ruby-identifier">p</span>.<span class="ruby-identifier">swap</span>(<span class="ruby-identifier">p</span>.<span class="ruby-identifier">children</span>); <span class="ruby-identifier">p</span>.<span class="ruby-identifier">remove</span>}
+      <span class="ruby-constant">File</span>.<span class="ruby-identifier">open</span>(<span class="ruby-identifier">item_path</span>, <span class="ruby-string">&#39;w&#39;</span>) {<span class="ruby-operator">|</span><span class="ruby-identifier">f</span><span class="ruby-operator">|</span> <span class="ruby-identifier">f</span>.<span class="ruby-identifier">puts</span> <span class="ruby-identifier">item</span>.<span class="ruby-identifier">to_html</span>}
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                    </div>
+
+    </div>
+  </body>
+</html>    

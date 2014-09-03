@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>Exports::Cygwin</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="../../css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../../css/main.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../../css/github.css" type="text/css" media="screen" />
+<script src="../../js/jquery-1.3.2.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../js/jquery-effect.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../js/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+
+<body>     
+    <div class="banner">
+        
+        <h1>
+            <span class="type">Class</span> 
+            Exports::Cygwin 
+            
+                <span class="parent">&lt; 
+                    
+                    <a href="../Exports.html">Exports</a>
+                    
+                </span>
+            
+        </h1>
+        <ul class="files">
+            
+            <li><a href="../../files/win32/mkexports_rb.html">win32/mkexports.rb</a></li>
+            
+        </ul>
+    </div>
+    <div id="bodyContent">
+        <div id="content">
+  
+
+
+  
+
+
+  
+  
+
+
+  
+
+
+  
+    <!-- Method ref -->
+    <div class="sectiontitle">Methods</div>
+    <dl class="methods">
+      
+        <dt>E</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-each_export">each_export</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-each_line">each_line</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-exports">exports</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>N</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-nm">nm</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+    </dl>
+  
+
+  
+
+
+
+  
+
+    
+
+    
+
+    
+
+
+    
+
+
+    <!-- Methods -->
+    
+      <div class="sectiontitle">Class Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-c-nm">
+            
+              <b>nm</b>()
+            
+            <a href="../../classes/Exports/Cygwin.html#method-c-nm" name="method-c-nm" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-nm_source')" id="l_method-c-nm_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/4701a70b31fdb07f560822d79b1d1f0742a82afb/win32/mkexports.rb#L134" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-nm_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File win32/mkexports.rb, line 134</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">nm</span>
+  <span class="ruby-identifier">@@nm</span> <span class="ruby-operator">||=</span> <span class="ruby-constant">RbConfig</span><span class="ruby-operator">::</span><span class="ruby-constant">CONFIG</span>[<span class="ruby-string">&quot;NM&quot;</span>]
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                  
+      <div class="sectiontitle">Instance Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-i-each_export">
+            
+              <b>each_export</b>(objs)
+            
+            <a href="../../classes/Exports/Cygwin.html#method-i-each_export" name="method-i-each_export" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-each_export_source')" id="l_method-i-each_export_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/4701a70b31fdb07f560822d79b1d1f0742a82afb/win32/mkexports.rb#L146" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-each_export_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File win32/mkexports.rb, line 146</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">each_export</span>(<span class="ruby-identifier">objs</span>)
+  <span class="ruby-identifier">symprefix</span> = <span class="ruby-constant">RbConfig</span><span class="ruby-operator">::</span><span class="ruby-constant">CONFIG</span>[<span class="ruby-string">&quot;SYMBOL_PREFIX&quot;</span>]
+  <span class="ruby-identifier">symprefix</span>.<span class="ruby-identifier">strip!</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">symprefix</span>
+  <span class="ruby-identifier">re</span> = <span class="ruby-node">/\s(?:(T)|[[:upper:]])\s#{symprefix}((?!Init_|.*_threadptr_|DllMain\b).*)$/</span>
+  <span class="ruby-identifier">objdump</span>(<span class="ruby-identifier">objs</span>) <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">l</span><span class="ruby-operator">|</span>
+    <span class="ruby-keyword">next</span> <span class="ruby-keyword">if</span> <span class="ruby-regexp">/@.*@/</span> <span class="ruby-operator">=~</span> <span class="ruby-identifier">l</span>
+    <span class="ruby-keyword">yield</span> <span class="ruby-node">$2</span>, <span class="ruby-operator">!</span><span class="ruby-node">$1</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">re</span> <span class="ruby-operator">=~</span> <span class="ruby-identifier">l</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-each_line">
+            
+              <b>each_line</b>(objs, &amp;block)
+            
+            <a href="../../classes/Exports/Cygwin.html#method-i-each_line" name="method-i-each_line" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-each_line_source')" id="l_method-i-each_line_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/4701a70b31fdb07f560822d79b1d1f0742a82afb/win32/mkexports.rb#L142" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-each_line_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File win32/mkexports.rb, line 142</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">each_line</span>(<span class="ruby-identifier">objs</span>, <span class="ruby-operator">&amp;</span><span class="ruby-identifier">block</span>)
+  <span class="ruby-constant">IO</span>.<span class="ruby-identifier">foreach</span>(<span class="ruby-node">&quot;|#{self.class.nm} --extern --defined #{objs.join(&#39; &#39;)}&quot;</span>, <span class="ruby-operator">&amp;</span><span class="ruby-identifier">block</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-exports">
+            
+              <b>exports</b>(*)
+            
+            <a href="../../classes/Exports/Cygwin.html#method-i-exports" name="method-i-exports" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-exports_source')" id="l_method-i-exports_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/4701a70b31fdb07f560822d79b1d1f0742a82afb/win32/mkexports.rb#L138" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-exports_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File win32/mkexports.rb, line 138</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">exports</span>(<span class="ruby-operator">*</span>)
+  <span class="ruby-keyword">super</span>()
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                    </div>
+
+    </div>
+  </body>
+</html>    

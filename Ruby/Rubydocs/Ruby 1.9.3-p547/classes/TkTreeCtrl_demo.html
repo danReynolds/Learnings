@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>TkTreeCtrl_demo</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="../css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/main.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/github.css" type="text/css" media="screen" />
+<script src="../js/jquery-1.3.2.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/jquery-effect.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+
+<body>     
+    <div class="banner">
+        
+        <h1>
+            <span class="type">Class</span> 
+            TkTreeCtrl_demo 
+            
+                <span class="parent">&lt; 
+                    
+                    <a href="Object.html">Object</a>
+                    
+                </span>
+            
+        </h1>
+        <ul class="files">
+            
+            <li><a href="../files/ext/tk/sample/tkextlib/treectrl/demo_rb.html">ext/tk/sample/tkextlib/treectrl/demo.rb</a></li>
+            
+        </ul>
+    </div>
+    <div id="bodyContent">
+        <div id="content">
+  
+
+
+  
+
+
+  
+  
+
+
+  
+
+
+  
+    <!-- Method ref -->
+    <div class="sectiontitle">Methods</div>
+    <dl class="methods">
+      
+        <dt>I</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-init_pics">init_pics</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>N</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-new">new</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+    </dl>
+  
+
+  
+
+
+
+  
+
+    
+
+    
+
+    
+
+
+    
+
+
+    <!-- Methods -->
+    
+      <div class="sectiontitle">Class Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-c-new">
+            
+              <b>new</b>(dir)
+            
+            <a href="../classes/TkTreeCtrl_demo.html#method-c-new" name="method-c-new" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-new_source')" id="l_method-c-new_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/287a34ae0dfc23e4158f67cb7783d239f202c368/ext/tk/sample/tkextlib/treectrl/demo.rb#L24" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-new_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/sample/tkextlib/treectrl/demo.rb, line 24</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">initialize</span>(<span class="ruby-identifier">dir</span>)
+  <span class="ruby-ivar">@ScriptDir</span> = <span class="ruby-identifier">dir</span> <span class="ruby-operator">||</span> <span class="ruby-string">&#39;.&#39;</span>
+
+  <span class="ruby-ivar">@thisPlatform</span> = <span class="ruby-constant">Tk</span><span class="ruby-operator">::</span><span class="ruby-constant">PLATFORM</span>[<span class="ruby-string">&#39;platform&#39;</span>]
+  <span class="ruby-keyword">if</span> <span class="ruby-ivar">@thisPlatform</span> <span class="ruby-operator">==</span> <span class="ruby-string">&#39;unix&#39;</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-constant">Tk</span>.<span class="ruby-identifier">windowingsystem</span> <span class="ruby-operator">==</span> <span class="ruby-string">&#39;aqua&#39;</span>
+    <span class="ruby-ivar">@thisPlatform</span> = <span class="ruby-string">&#39;macosx&#39;</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-ivar">@RandomN</span> = [<span class="ruby-number">500</span>]
+
+  <span class="ruby-ivar">@images</span> = <span class="ruby-constant">Hash</span>.<span class="ruby-identifier">new</span>
+  <span class="ruby-ivar">@sel_images</span> = <span class="ruby-constant">Hash</span>.<span class="ruby-identifier">new</span>
+
+  <span class="ruby-ivar">@popup</span> = <span class="ruby-constant">Hash</span>.<span class="ruby-identifier">new</span>
+  <span class="ruby-ivar">@mTree</span> = <span class="ruby-constant">Hash</span>.<span class="ruby-identifier">new</span>
+  <span class="ruby-ivar">@mHeader</span> = <span class="ruby-constant">Hash</span>.<span class="ruby-identifier">new</span>
+
+  <span class="ruby-ivar">@non_clear_list</span> = []
+
+  <span class="ruby-ivar">@demoCmd</span> = <span class="ruby-constant">Hash</span>.<span class="ruby-identifier">new</span>
+  <span class="ruby-ivar">@demoFile</span> = <span class="ruby-constant">Hash</span>.<span class="ruby-identifier">new</span>
+
+  <span class="ruby-comment"># Get default colors</span>
+  <span class="ruby-identifier">w</span> = <span class="ruby-constant">TkListbox</span>.<span class="ruby-identifier">new</span>
+  <span class="ruby-ivar">@SystemButtonFace</span>    = <span class="ruby-identifier">w</span>[<span class="ruby-value">:highlightbackground</span>]
+  <span class="ruby-ivar">@SystemHighlight</span>     = <span class="ruby-identifier">w</span>[<span class="ruby-value">:selectbackground</span>]
+  <span class="ruby-ivar">@SystemHighlightText</span> = <span class="ruby-identifier">w</span>[<span class="ruby-value">:selectforeground</span>]
+  <span class="ruby-identifier">w</span>.<span class="ruby-identifier">destroy</span>
+
+  <span class="ruby-comment">####################</span>
+
+  <span class="ruby-identifier">make_source_window</span>()
+  <span class="ruby-identifier">make_menubar</span>()
+  <span class="ruby-identifier">make_main_window</span>()
+
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">$Version_1_1_OrLater</span>
+    <span class="ruby-keyword">begin</span>
+      <span class="ruby-ivar">@tree2</span>[<span class="ruby-value">:backgroundimage</span>]
+      <span class="ruby-ivar">@has_bgimg</span> = <span class="ruby-keyword">true</span>
+    <span class="ruby-keyword">rescue</span>
+      <span class="ruby-ivar">@has_bgimg</span> = <span class="ruby-keyword">false</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-ivar">@has_bgimg</span> = <span class="ruby-keyword">false</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-comment">####################</span>
+
+  <span class="ruby-identifier">make_list_popup</span>()
+  <span class="ruby-identifier">make_header_popup</span>()
+
+  <span class="ruby-identifier">init_pics</span>(<span class="ruby-string">&#39;sky&#39;</span>)
+
+  <span class="ruby-comment">####################</span>
+
+  <span class="ruby-ivar">@tree2</span>.<span class="ruby-identifier">bind</span>(<span class="ruby-string">&#39;ButtonPress-3&#39;</span>,
+              <span class="ruby-identifier">proc</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">w</span>, <span class="ruby-identifier">x</span>, <span class="ruby-identifier">y</span>, <span class="ruby-identifier">rootx</span>, <span class="ruby-identifier">rooty</span><span class="ruby-operator">|</span>
+                <span class="ruby-identifier">show_list_popup</span>(<span class="ruby-identifier">w</span>, <span class="ruby-identifier">x</span>, <span class="ruby-identifier">y</span>, <span class="ruby-identifier">rootx</span>, <span class="ruby-identifier">rooty</span>)
+              }, <span class="ruby-string">&#39;%W %x %y %X %Y&#39;</span>)
+
+  <span class="ruby-comment"># Allow &quot;scan&quot; bindings</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-ivar">@thisPlatform</span> <span class="ruby-operator">==</span> <span class="ruby-string">&#39;windows&#39;</span>
+    <span class="ruby-ivar">@tree2</span>.<span class="ruby-identifier">bind_remove</span>(<span class="ruby-string">&#39;Control-ButtonPress-3&#39;</span>)
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-comment">####################</span>
+
+  <span class="ruby-identifier">init_demo_scripts_module</span>()
+  <span class="ruby-identifier">load_demo_scripts</span>()
+  <span class="ruby-identifier">init_demo_list</span>()
+
+  <span class="ruby-comment">####################</span>
+
+  <span class="ruby-ivar">@tree1</span>.<span class="ruby-identifier">notify_bind</span>(<span class="ruby-ivar">@tree1</span>, <span class="ruby-string">&#39;Selection&#39;</span>,
+                     <span class="ruby-identifier">proc</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">c</span>, <span class="ruby-identifier">t</span><span class="ruby-operator">|</span>
+                       <span class="ruby-keyword">if</span> <span class="ruby-identifier">c</span> <span class="ruby-operator">==</span> <span class="ruby-number">1</span>
+                         <span class="ruby-identifier">item</span> = <span class="ruby-identifier">t</span>.<span class="ruby-identifier">selection_get</span>[<span class="ruby-number">0</span>]
+                         <span class="ruby-identifier">demo_set</span>(<span class="ruby-ivar">@demoCmd</span>[<span class="ruby-identifier">item</span>], <span class="ruby-ivar">@demoFile</span>[<span class="ruby-identifier">item</span>])
+                       <span class="ruby-keyword">end</span>
+                     }, <span class="ruby-string">&#39;%c %T&#39;</span>)
+
+  <span class="ruby-comment"># When one item is selected in the demo list, display the styles in</span>
+  <span class="ruby-comment"># that item.</span>
+  <span class="ruby-comment"># See DemoClear for why the tag &quot;DontDelete&quot; is used</span>
+  <span class="ruby-ivar">@tree2</span>.<span class="ruby-identifier">notify_bind</span>(<span class="ruby-string">&#39;DontDelete&#39;</span>, <span class="ruby-string">&#39;Selection&#39;</span>,
+                     <span class="ruby-identifier">proc</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">c</span>, <span class="ruby-identifier">t</span><span class="ruby-operator">|</span>
+                       <span class="ruby-identifier">display_styles_in_item</span>(<span class="ruby-identifier">t</span>.<span class="ruby-identifier">selection_get</span>[<span class="ruby-number">0</span>]) <span class="ruby-keyword">if</span> <span class="ruby-identifier">c</span> <span class="ruby-operator">==</span> <span class="ruby-number">1</span>
+                     }, <span class="ruby-string">&#39;%c %T&#39;</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                  
+      <div class="sectiontitle">Instance Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-i-init_pics">
+            
+              <b>init_pics</b>(*args)
+            
+            <a href="../classes/TkTreeCtrl_demo.html#method-i-init_pics" name="method-i-init_pics" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-init_pics_source')" id="l_method-i-init_pics_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/287a34ae0dfc23e4158f67cb7783d239f202c368/ext/tk/sample/tkextlib/treectrl/demo.rb#L116" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-init_pics_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/sample/tkextlib/treectrl/demo.rb, line 116</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">init_pics</span>(<span class="ruby-operator">*</span><span class="ruby-identifier">args</span>)
+  <span class="ruby-identifier">args</span>.<span class="ruby-identifier">each</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">pat</span><span class="ruby-operator">|</span>
+    <span class="ruby-keyword">unless</span> <span class="ruby-constant">TkImage</span>.<span class="ruby-identifier">names</span>.<span class="ruby-identifier">find</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">img</span><span class="ruby-operator">|</span> (<span class="ruby-identifier">name</span> = <span class="ruby-ivar">@images</span>.<span class="ruby-identifier">key</span>(<span class="ruby-identifier">img</span>)) <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-constant">File</span>.<span class="ruby-identifier">fnmatch</span>(<span class="ruby-identifier">pat</span>, <span class="ruby-identifier">name</span>)}
+      <span class="ruby-constant">Dir</span>.<span class="ruby-identifier">glob</span>(<span class="ruby-constant">File</span>.<span class="ruby-identifier">join</span>(<span class="ruby-ivar">@ScriptDir</span>, <span class="ruby-string">&#39;pics&#39;</span>, <span class="ruby-node">&quot;#{pat}.gif&quot;</span>)).<span class="ruby-identifier">each</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">file</span><span class="ruby-operator">|</span>
+        <span class="ruby-identifier">name</span> = <span class="ruby-constant">File</span>.<span class="ruby-identifier">basename</span>(<span class="ruby-identifier">file</span>, <span class="ruby-string">&#39;.gif&#39;</span>)
+        <span class="ruby-identifier">img</span> = <span class="ruby-constant">TkPhotoImage</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value">:file=</span><span class="ruby-operator">&gt;</span><span class="ruby-identifier">file</span>)
+        <span class="ruby-ivar">@images</span>[<span class="ruby-identifier">name</span>] = <span class="ruby-identifier">img</span>
+        <span class="ruby-ivar">@sel_images</span>[<span class="ruby-identifier">name</span>] = <span class="ruby-constant">TkPhotoImage</span>.<span class="ruby-identifier">new</span>
+        <span class="ruby-ivar">@sel_images</span>[<span class="ruby-identifier">name</span>].<span class="ruby-identifier">copy</span>(<span class="ruby-identifier">img</span>)
+        <span class="ruby-constant">Tk</span><span class="ruby-operator">::</span><span class="ruby-constant">TreeCtrl</span>.<span class="ruby-identifier">image_tint</span>(<span class="ruby-ivar">@sel_images</span>[<span class="ruby-identifier">name</span>], <span class="ruby-ivar">@SystemHighlight</span>, <span class="ruby-number">128</span>)
+      }
+    <span class="ruby-keyword">end</span>
+  }
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                    </div>
+
+    </div>
+  </body>
+</html>    

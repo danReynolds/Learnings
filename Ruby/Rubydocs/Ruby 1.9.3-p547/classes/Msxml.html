@@ -1,0 +1,812 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>Msxml</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="../css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/main.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/github.css" type="text/css" media="screen" />
+<script src="../js/jquery-1.3.2.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/jquery-effect.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+
+<body>     
+    <div class="banner">
+        
+        <h1>
+            <span class="type">Class</span> 
+            Msxml 
+            
+                <span class="parent">&lt; 
+                    
+                    <a href="Object.html">Object</a>
+                    
+                </span>
+            
+        </h1>
+        <ul class="files">
+            
+            <li><a href="../files/ext/win32ole/sample/xml_rb.html">ext/win32ole/sample/xml.rb</a></li>
+            
+        </ul>
+    </div>
+    <div id="bodyContent">
+        <div id="content">
+  
+    <div class="description">
+      
+<p>XMLDocument extends IXML Document.  It is obsolete.  You should use
+DOMDocument.  This object should not be confused with the XMLDocument
+property on the XML data island.</p>
+
+    </div>
+  
+
+
+  
+
+
+  
+  
+
+
+  
+
+
+  
+    <!-- Method ref -->
+    <div class="sectiontitle">Methods</div>
+    <dl class="methods">
+      
+        <dt>A</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-async">async</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-async-3D">async=</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>C</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-charset">charset</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-charset-3D">charset=</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-createElement">createElement</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>D</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-doctype">doctype</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>M</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-method_missing">method_missing</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>N</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-new">new</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>R</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-readyState">readyState</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-root">root</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>U</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-url">url</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-url-3D">url=</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>V</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-version">version</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+    </dl>
+  
+
+  
+    <!-- Includes -->
+    <div class="sectiontitle">Included Modules</div>
+    <ul>
+      
+        <li>
+          
+            <a href="WIN32OLE/VARIANT.html">
+              WIN32OLE::VARIANT
+            </a>
+          
+        </li>
+      
+    </ul>
+  
+
+
+
+  
+
+    
+
+    
+
+    
+
+
+    
+      <!-- Section attributes -->
+      <div class="sectiontitle">Attributes</div>
+      <table border='0' cellpadding='5'>
+        
+          <tr valign='top'>
+            <td class='attr-rw'>
+              [R]
+            </td>
+            <td class='attr-name'>clsid</td>
+            <td class='attr-desc'></td>
+          </tr>
+        
+          <tr valign='top'>
+            <td class='attr-rw'>
+              [R]
+            </td>
+            <td class='attr-name'>dispatch</td>
+            <td class='attr-desc'></td>
+          </tr>
+        
+          <tr valign='top'>
+            <td class='attr-rw'>
+              [R]
+            </td>
+            <td class='attr-name'>lastargs</td>
+            <td class='attr-desc'></td>
+          </tr>
+        
+          <tr valign='top'>
+            <td class='attr-rw'>
+              [R]
+            </td>
+            <td class='attr-name'>progid</td>
+            <td class='attr-desc'></td>
+          </tr>
+        
+      </table>
+    
+
+
+    <!-- Methods -->
+    
+      <div class="sectiontitle">Class Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-c-new">
+            
+              <b>new</b>(obj = nil)
+            
+            <a href="../classes/Msxml.html#method-c-new" name="method-c-new" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-new_source')" id="l_method-c-new_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/287a34ae0dfc23e4158f67cb7783d239f202c368/ext/win32ole/sample/xml.rb#L7206" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-new_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/win32ole/sample/xml.rb, line 7206</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">initialize</span>(<span class="ruby-identifier">obj</span> = <span class="ruby-keyword">nil</span>)
+  <span class="ruby-ivar">@clsid</span> = <span class="ruby-string">&quot;{CFC399AF-D876-11D0-9C10-00C04FC99C8E}&quot;</span>
+  <span class="ruby-ivar">@progid</span> = <span class="ruby-string">&quot;Msxml&quot;</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">obj</span>.<span class="ruby-identifier">nil?</span>
+    <span class="ruby-ivar">@dispatch</span> = <span class="ruby-constant">WIN32OLE</span>.<span class="ruby-identifier">new</span>(<span class="ruby-ivar">@progid</span>)
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-ivar">@dispatch</span> = <span class="ruby-identifier">obj</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                  
+      <div class="sectiontitle">Instance Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-i-async">
+            
+              <b>async</b>()
+            
+            <a href="../classes/Msxml.html#method-i-async" name="method-i-async" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>HRESULT async get asynchronous loading flag.</p>
+
+<pre><code>BOOL arg0 --- pf [OUT]</code></pre>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-async_source')" id="l_method-i-async_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/287a34ae0dfc23e4158f67cb7783d239f202c368/ext/win32ole/sample/xml.rb#L7292" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-async_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/win32ole/sample/xml.rb, line 7292</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">async</span>
+  <span class="ruby-constant">OLEProperty</span>.<span class="ruby-identifier">new</span>(<span class="ruby-ivar">@dispatch</span>, <span class="ruby-number">65649</span>, [<span class="ruby-constant">VT_BYREF</span><span class="ruby-operator">|</span><span class="ruby-constant">VT_BOOL</span>], [<span class="ruby-constant">VT_BYREF</span><span class="ruby-operator">|</span><span class="ruby-constant">VT_BOOL</span>, <span class="ruby-constant">VT_HRESULT</span>])
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-async-3D">
+            
+              <b>async=</b>(arg0)
+            
+            <a href="../classes/Msxml.html#method-i-async-3D" name="method-i-async-3D" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>HRESULT async get asynchronous loading flag.</p>
+
+<pre><code>BOOL arg0 --- pf [IN]</code></pre>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-async-3D_source')" id="l_method-i-async-3D_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/287a34ae0dfc23e4158f67cb7783d239f202c368/ext/win32ole/sample/xml.rb#L7241" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-async-3D_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/win32ole/sample/xml.rb, line 7241</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">async=</span>(<span class="ruby-identifier">arg0</span>)
+  <span class="ruby-identifier">ret</span> = <span class="ruby-ivar">@dispatch</span>.<span class="ruby-identifier">_setproperty</span>(<span class="ruby-number">65649</span>, [<span class="ruby-identifier">arg0</span>], [<span class="ruby-constant">VT_BOOL</span>, <span class="ruby-constant">VT_HRESULT</span>])
+  <span class="ruby-ivar">@lastargs</span> = <span class="ruby-constant">WIN32OLE</span><span class="ruby-operator">::</span><span class="ruby-constant">ARGV</span>
+  <span class="ruby-identifier">ret</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-charset">
+            
+              <b>charset</b>()
+            
+            <a href="../classes/Msxml.html#method-i-charset" name="method-i-charset" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>HRESULT charset get encoding.</p>
+
+<pre><code>BSTR arg0 --- p [OUT]</code></pre>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-charset_source')" id="l_method-i-charset_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/287a34ae0dfc23e4158f67cb7783d239f202c368/ext/win32ole/sample/xml.rb#L7271" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-charset_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/win32ole/sample/xml.rb, line 7271</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">charset</span>
+  <span class="ruby-constant">OLEProperty</span>.<span class="ruby-identifier">new</span>(<span class="ruby-ivar">@dispatch</span>, <span class="ruby-number">65645</span>, [<span class="ruby-constant">VT_BYREF</span><span class="ruby-operator">|</span><span class="ruby-constant">VT_BSTR</span>], [<span class="ruby-constant">VT_BYREF</span><span class="ruby-operator">|</span><span class="ruby-constant">VT_BSTR</span>, <span class="ruby-constant">VT_HRESULT</span>])
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-charset-3D">
+            
+              <b>charset=</b>(arg0)
+            
+            <a href="../classes/Msxml.html#method-i-charset-3D" name="method-i-charset-3D" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>HRESULT charset get encoding.</p>
+
+<pre><code>BSTR arg0 --- p [IN]</code></pre>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-charset-3D_source')" id="l_method-i-charset-3D_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/287a34ae0dfc23e4158f67cb7783d239f202c368/ext/win32ole/sample/xml.rb#L7232" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-charset-3D_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/win32ole/sample/xml.rb, line 7232</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">charset=</span>(<span class="ruby-identifier">arg0</span>)
+  <span class="ruby-identifier">ret</span> = <span class="ruby-ivar">@dispatch</span>.<span class="ruby-identifier">_setproperty</span>(<span class="ruby-number">65645</span>, [<span class="ruby-identifier">arg0</span>], [<span class="ruby-constant">VT_BSTR</span>, <span class="ruby-constant">VT_HRESULT</span>])
+  <span class="ruby-ivar">@lastargs</span> = <span class="ruby-constant">WIN32OLE</span><span class="ruby-operator">::</span><span class="ruby-constant">ARGV</span>
+  <span class="ruby-identifier">ret</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-createElement">
+            
+              <b>createElement</b>(arg0, arg1=nil, arg2=nil)
+            
+            <a href="../classes/Msxml.html#method-i-createElement" name="method-i-createElement" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>HRESULT createElement create different types of IXMLElements.</p>
+
+<pre><code>VARIANT arg0 --- vType [IN]
+VARIANT arg1 --- var1 [IN]
+IXMLElement2,IXMLElement2 arg2 --- ppElem [OUT]</code></pre>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-createElement_source')" id="l_method-i-createElement_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/287a34ae0dfc23e4158f67cb7783d239f202c368/ext/win32ole/sample/xml.rb#L7301" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-createElement_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/win32ole/sample/xml.rb, line 7301</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">createElement</span>(<span class="ruby-identifier">arg0</span>, <span class="ruby-identifier">arg1</span>=<span class="ruby-keyword">nil</span>, <span class="ruby-identifier">arg2</span>=<span class="ruby-keyword">nil</span>)
+  <span class="ruby-identifier">ret</span> = <span class="ruby-ivar">@dispatch</span>.<span class="ruby-identifier">_invoke</span>(<span class="ruby-number">65644</span>, [<span class="ruby-identifier">arg0</span>, <span class="ruby-identifier">arg1</span>, <span class="ruby-identifier">arg2</span>], [<span class="ruby-constant">VT_VARIANT</span>, <span class="ruby-constant">VT_VARIANT</span>, <span class="ruby-constant">VT_BYREF</span><span class="ruby-operator">|</span><span class="ruby-constant">VT_BYREF</span><span class="ruby-operator">|</span><span class="ruby-constant">VT_DISPATCH</span>])
+  <span class="ruby-ivar">@lastargs</span> = <span class="ruby-constant">WIN32OLE</span><span class="ruby-operator">::</span><span class="ruby-constant">ARGV</span>
+  <span class="ruby-identifier">ret</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-doctype">
+            
+              <b>doctype</b>()
+            
+            <a href="../classes/Msxml.html#method-i-doctype" name="method-i-doctype" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>HRESULT doctype get document type.</p>
+
+<pre><code>BSTR arg0 --- p [OUT]</code></pre>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-doctype_source')" id="l_method-i-doctype_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/287a34ae0dfc23e4158f67cb7783d239f202c368/ext/win32ole/sample/xml.rb#L7285" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-doctype_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/win32ole/sample/xml.rb, line 7285</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">doctype</span>
+  <span class="ruby-constant">OLEProperty</span>.<span class="ruby-identifier">new</span>(<span class="ruby-ivar">@dispatch</span>, <span class="ruby-number">65647</span>, [<span class="ruby-constant">VT_BYREF</span><span class="ruby-operator">|</span><span class="ruby-constant">VT_BSTR</span>], [<span class="ruby-constant">VT_BYREF</span><span class="ruby-operator">|</span><span class="ruby-constant">VT_BSTR</span>, <span class="ruby-constant">VT_HRESULT</span>])
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-method_missing">
+            
+              <b>method_missing</b>(cmd, *arg)
+            
+            <a href="../classes/Msxml.html#method-i-method_missing" name="method-i-method_missing" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-method_missing_source')" id="l_method-i-method_missing_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/287a34ae0dfc23e4158f67cb7783d239f202c368/ext/win32ole/sample/xml.rb#L7216" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-method_missing_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/win32ole/sample/xml.rb, line 7216</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">method_missing</span>(<span class="ruby-identifier">cmd</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">arg</span>)
+  <span class="ruby-ivar">@dispatch</span>.<span class="ruby-identifier">method_missing</span>(<span class="ruby-identifier">cmd</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">arg</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-readyState">
+            
+              <b>readyState</b>()
+            
+            <a href="../classes/Msxml.html#method-i-readyState" name="method-i-readyState" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>HRESULT readyState get ready state.</p>
+
+<pre><code>I4 arg0 --- pl [OUT]</code></pre>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-readyState_source')" id="l_method-i-readyState_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/287a34ae0dfc23e4158f67cb7783d239f202c368/ext/win32ole/sample/xml.rb#L7264" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-readyState_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/win32ole/sample/xml.rb, line 7264</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">readyState</span>
+  <span class="ruby-constant">OLEProperty</span>.<span class="ruby-identifier">new</span>(<span class="ruby-ivar">@dispatch</span>, <span class="ruby-number">65643</span>, [<span class="ruby-constant">VT_BYREF</span><span class="ruby-operator">|</span><span class="ruby-constant">VT_I4</span>], [<span class="ruby-constant">VT_BYREF</span><span class="ruby-operator">|</span><span class="ruby-constant">VT_I4</span>, <span class="ruby-constant">VT_HRESULT</span>])
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-root">
+            
+              <b>root</b>()
+            
+            <a href="../classes/Msxml.html#method-i-root" name="method-i-root" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>HRESULT root get root IXMLElement of the XML document.</p>
+
+<pre><code>IXMLElement2,IXMLElement2 arg0 --- p [OUT]</code></pre>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-root_source')" id="l_method-i-root_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/287a34ae0dfc23e4158f67cb7783d239f202c368/ext/win32ole/sample/xml.rb#L7250" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-root_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/win32ole/sample/xml.rb, line 7250</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">root</span>
+  <span class="ruby-constant">OLEProperty</span>.<span class="ruby-identifier">new</span>(<span class="ruby-ivar">@dispatch</span>, <span class="ruby-number">65637</span>, [<span class="ruby-constant">VT_BYREF</span><span class="ruby-operator">|</span><span class="ruby-constant">VT_BYREF</span><span class="ruby-operator">|</span><span class="ruby-constant">VT_DISPATCH</span>], [<span class="ruby-constant">VT_BYREF</span><span class="ruby-operator">|</span><span class="ruby-constant">VT_BYREF</span><span class="ruby-operator">|</span><span class="ruby-constant">VT_DISPATCH</span>, <span class="ruby-constant">VT_HRESULT</span>])
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-url">
+            
+              <b>url</b>()
+            
+            <a href="../classes/Msxml.html#method-i-url" name="method-i-url" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>HRESULT url set URL to load an XML document from the URL.</p>
+
+<pre><code>BSTR arg0 --- p [OUT]</code></pre>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-url_source')" id="l_method-i-url_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/287a34ae0dfc23e4158f67cb7783d239f202c368/ext/win32ole/sample/xml.rb#L7257" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-url_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/win32ole/sample/xml.rb, line 7257</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">url</span>
+  <span class="ruby-constant">OLEProperty</span>.<span class="ruby-identifier">new</span>(<span class="ruby-ivar">@dispatch</span>, <span class="ruby-number">65641</span>, [<span class="ruby-constant">VT_BYREF</span><span class="ruby-operator">|</span><span class="ruby-constant">VT_BSTR</span>], [<span class="ruby-constant">VT_BYREF</span><span class="ruby-operator">|</span><span class="ruby-constant">VT_BSTR</span>, <span class="ruby-constant">VT_HRESULT</span>])
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-url-3D">
+            
+              <b>url=</b>(arg0)
+            
+            <a href="../classes/Msxml.html#method-i-url-3D" name="method-i-url-3D" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>HRESULT url set URL to load an XML document from the URL.</p>
+
+<pre><code>BSTR arg0 --- p [IN]</code></pre>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-url-3D_source')" id="l_method-i-url-3D_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/287a34ae0dfc23e4158f67cb7783d239f202c368/ext/win32ole/sample/xml.rb#L7223" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-url-3D_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/win32ole/sample/xml.rb, line 7223</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">url=</span>(<span class="ruby-identifier">arg0</span>)
+  <span class="ruby-identifier">ret</span> = <span class="ruby-ivar">@dispatch</span>.<span class="ruby-identifier">_setproperty</span>(<span class="ruby-number">65641</span>, [<span class="ruby-identifier">arg0</span>], [<span class="ruby-constant">VT_BSTR</span>, <span class="ruby-constant">VT_HRESULT</span>])
+  <span class="ruby-ivar">@lastargs</span> = <span class="ruby-constant">WIN32OLE</span><span class="ruby-operator">::</span><span class="ruby-constant">ARGV</span>
+  <span class="ruby-identifier">ret</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-version">
+            
+              <b>version</b>()
+            
+            <a href="../classes/Msxml.html#method-i-version" name="method-i-version" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>HRESULT version get XML version number.</p>
+
+<pre><code>BSTR arg0 --- p [OUT]</code></pre>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-version_source')" id="l_method-i-version_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/287a34ae0dfc23e4158f67cb7783d239f202c368/ext/win32ole/sample/xml.rb#L7278" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-version_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/win32ole/sample/xml.rb, line 7278</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">version</span>
+  <span class="ruby-constant">OLEProperty</span>.<span class="ruby-identifier">new</span>(<span class="ruby-ivar">@dispatch</span>, <span class="ruby-number">65646</span>, [<span class="ruby-constant">VT_BYREF</span><span class="ruby-operator">|</span><span class="ruby-constant">VT_BSTR</span>], [<span class="ruby-constant">VT_BYREF</span><span class="ruby-operator">|</span><span class="ruby-constant">VT_BSTR</span>, <span class="ruby-constant">VT_HRESULT</span>])
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                    </div>
+
+    </div>
+  </body>
+</html>    

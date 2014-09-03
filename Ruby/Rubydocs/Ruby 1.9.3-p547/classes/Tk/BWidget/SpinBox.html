@@ -1,0 +1,568 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>Tk::BWidget::SpinBox</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="../../../css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../../../css/main.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../../../css/github.css" type="text/css" media="screen" />
+<script src="../../../js/jquery-1.3.2.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../../js/jquery-effect.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../../js/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+
+<body>     
+    <div class="banner">
+        
+        <h1>
+            <span class="type">Class</span> 
+            Tk::BWidget::SpinBox 
+            
+                <span class="parent">&lt; 
+                    
+                    <a href="../Entry.html">Tk::Entry</a>
+                    
+                </span>
+            
+        </h1>
+        <ul class="files">
+            
+            <li><a href="../../../files/ext/tk/lib/tkextlib/bwidget/spinbox_rb.html">ext/tk/lib/tkextlib/bwidget/spinbox.rb</a></li>
+            
+        </ul>
+    </div>
+    <div id="bodyContent">
+        <div id="content">
+  
+
+
+  
+
+
+  
+  
+
+
+  
+
+
+  
+    <!-- Method ref -->
+    <div class="sectiontitle">Methods</div>
+    <dl class="methods">
+      
+        <dt>E</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-entrybind">entrybind</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-entrybind_append">entrybind_append</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-entrybind_remove">entrybind_remove</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-entrybindinfo">entrybindinfo</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>G</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-get_index_of_value">get_index_of_value</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-get_value">get_value</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-get_value_index">get_value_index</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>S</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-set_index_value">set_index_value</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-set_value">set_value</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-set_value_by_index">set_value_by_index</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+    </dl>
+  
+
+  
+    <!-- Includes -->
+    <div class="sectiontitle">Included Modules</div>
+    <ul>
+      
+        <li>
+          
+            Scrollable
+          
+        </li>
+      
+    </ul>
+  
+
+
+
+  
+
+    
+
+    
+
+    
+      <!-- Section constants -->
+      <div class="sectiontitle">Constants</div>
+      <table border='0' cellpadding='5'>
+        
+          <tr valign='top'>
+            <td class="attr-name">TkCommandNames</td>
+            <td>=</td>
+            <td class="attr-value">[&#39;SpinBox&#39;.freeze].freeze</td>
+          </tr>
+          
+            <tr valign='top'>
+              <td>&nbsp;</td>
+              <td colspan="2" class="attr-desc"></td>
+            </tr>
+          
+        
+          <tr valign='top'>
+            <td class="attr-name">WidgetClassName</td>
+            <td>=</td>
+            <td class="attr-value">&#39;SpinBox&#39;.freeze</td>
+          </tr>
+          
+            <tr valign='top'>
+              <td>&nbsp;</td>
+              <td colspan="2" class="attr-desc"></td>
+            </tr>
+          
+        
+      </table>
+    
+
+
+    
+
+
+    <!-- Methods -->
+        
+      <div class="sectiontitle">Instance Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-i-entrybind">
+            
+              <b>entrybind</b>(context, *args)
+            
+            <a href="../../../classes/Tk/BWidget/SpinBox.html#method-i-entrybind" name="method-i-entrybind" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>def entrybind(*args)</p>
+
+<pre><code>_bind([path, &#39;bind&#39;], *args)
+self</code></pre>
+
+<p>end</p>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-entrybind_source')" id="l_method-i-entrybind_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/bwidget/spinbox.rb#L49" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-entrybind_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/bwidget/spinbox.rb, line 49</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">entrybind</span>(<span class="ruby-identifier">context</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">args</span>)
+  <span class="ruby-comment">#if args[0].kind_of?(Proc) || args[0].kind_of?(Method)</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-constant">TkComm</span>.<span class="ruby-identifier">_callback_entry?</span>(<span class="ruby-identifier">args</span>[<span class="ruby-number">0</span>]) <span class="ruby-operator">||</span> <span class="ruby-operator">!</span><span class="ruby-identifier">block_given?</span>
+    <span class="ruby-identifier">cmd</span> = <span class="ruby-identifier">args</span>.<span class="ruby-identifier">shift</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">cmd</span> = <span class="ruby-constant">Proc</span>.<span class="ruby-identifier">new</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">_bind</span>([<span class="ruby-identifier">path</span>, <span class="ruby-string">&#39;bind&#39;</span>], <span class="ruby-identifier">context</span>, <span class="ruby-identifier">cmd</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">args</span>)
+  <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-entrybind_append">
+            
+              <b>entrybind_append</b>(context, *args)
+            
+            <a href="../../../classes/Tk/BWidget/SpinBox.html#method-i-entrybind_append" name="method-i-entrybind_append" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>def <a
+href="SpinBox.html#method-i-entrybind_append">#entrybind_append</a>(*args)</p>
+
+<pre><code>_bind_append([path, &#39;bind&#39;], *args)
+self</code></pre>
+
+<p>end</p>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-entrybind_append_source')" id="l_method-i-entrybind_append_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/bwidget/spinbox.rb#L64" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-entrybind_append_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/bwidget/spinbox.rb, line 64</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">entrybind_append</span>(<span class="ruby-identifier">context</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">args</span>)
+  <span class="ruby-comment">#if args[0].kind_of?(Proc) || args[0].kind_of?(Method)</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-constant">TkComm</span>.<span class="ruby-identifier">_callback_entry?</span>(<span class="ruby-identifier">args</span>[<span class="ruby-number">0</span>]) <span class="ruby-operator">||</span> <span class="ruby-operator">!</span><span class="ruby-identifier">block_given?</span>
+    <span class="ruby-identifier">cmd</span> = <span class="ruby-identifier">args</span>.<span class="ruby-identifier">shift</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">cmd</span> = <span class="ruby-constant">Proc</span>.<span class="ruby-identifier">new</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">_bind_append</span>([<span class="ruby-identifier">path</span>, <span class="ruby-string">&#39;bind&#39;</span>], <span class="ruby-identifier">context</span>, <span class="ruby-identifier">cmd</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">args</span>)
+  <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-entrybind_remove">
+            
+              <b>entrybind_remove</b>(*args)
+            
+            <a href="../../../classes/Tk/BWidget/SpinBox.html#method-i-entrybind_remove" name="method-i-entrybind_remove" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-entrybind_remove_source')" id="l_method-i-entrybind_remove_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/bwidget/spinbox.rb#L75" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-entrybind_remove_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/bwidget/spinbox.rb, line 75</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">entrybind_remove</span>(<span class="ruby-operator">*</span><span class="ruby-identifier">args</span>)
+  <span class="ruby-identifier">_bind_remove</span>([<span class="ruby-identifier">path</span>, <span class="ruby-string">&#39;bind&#39;</span>], <span class="ruby-operator">*</span><span class="ruby-identifier">args</span>)
+  <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-entrybindinfo">
+            
+              <b>entrybindinfo</b>(*args)
+            
+            <a href="../../../classes/Tk/BWidget/SpinBox.html#method-i-entrybindinfo" name="method-i-entrybindinfo" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-entrybindinfo_source')" id="l_method-i-entrybindinfo_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/bwidget/spinbox.rb#L80" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-entrybindinfo_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/bwidget/spinbox.rb, line 80</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">entrybindinfo</span>(<span class="ruby-operator">*</span><span class="ruby-identifier">args</span>)
+  <span class="ruby-identifier">_bindinfo</span>([<span class="ruby-identifier">path</span>, <span class="ruby-string">&#39;bind&#39;</span>], <span class="ruby-operator">*</span><span class="ruby-identifier">args</span>)
+  <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-get_index_of_value">
+            
+              <b>get_index_of_value</b>()
+            
+            <a href="../../../classes/Tk/BWidget/SpinBox.html#method-i-get_index_of_value" name="method-i-get_index_of_value" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+            <div class="aka">
+              Also aliased as: <a href="SpinBox.html#method-i-get_value">get_value</a>, <a href="SpinBox.html#method-i-get_value_index">get_value_index</a>
+            </div>
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-get_index_of_value_source')" id="l_method-i-get_index_of_value_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/bwidget/spinbox.rb#L85" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-get_index_of_value_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/bwidget/spinbox.rb, line 85</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">get_index_of_value</span>
+  <span class="ruby-identifier">number</span>(<span class="ruby-identifier">tk_send_without_enc</span>(<span class="ruby-string">&#39;getvalue&#39;</span>))
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-get_value">
+            
+              <b>get_value</b>()
+            
+            <a href="../../../classes/Tk/BWidget/SpinBox.html#method-i-get_value" name="method-i-get_value" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+            <div class="aka">
+              Alias for: <a href="SpinBox.html#method-i-get_index_of_value">get_index_of_value</a>
+            </div>
+          
+          
+          
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-get_value_index">
+            
+              <b>get_value_index</b>()
+            
+            <a href="../../../classes/Tk/BWidget/SpinBox.html#method-i-get_value_index" name="method-i-get_value_index" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+            <div class="aka">
+              Alias for: <a href="SpinBox.html#method-i-get_index_of_value">get_index_of_value</a>
+            </div>
+          
+          
+          
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-set_index_value">
+            
+              <b>set_index_value</b>(idx)
+            
+            <a href="../../../classes/Tk/BWidget/SpinBox.html#method-i-set_index_value" name="method-i-set_index_value" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+            <div class="aka">
+              Alias for: <a href="SpinBox.html#method-i-set_value_by_index">set_value_by_index</a>
+            </div>
+          
+          
+          
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-set_value">
+            
+              <b>set_value</b>(idx)
+            
+            <a href="../../../classes/Tk/BWidget/SpinBox.html#method-i-set_value" name="method-i-set_value" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+            <div class="aka">
+              Alias for: <a href="SpinBox.html#method-i-set_value_by_index">set_value_by_index</a>
+            </div>
+          
+          
+          
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-set_value_by_index">
+            
+              <b>set_value_by_index</b>(idx)
+            
+            <a href="../../../classes/Tk/BWidget/SpinBox.html#method-i-set_value_by_index" name="method-i-set_value_by_index" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+            <div class="aka">
+              Also aliased as: <a href="SpinBox.html#method-i-set_value">set_value</a>, <a href="SpinBox.html#method-i-set_index_value">set_index_value</a>
+            </div>
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-set_value_by_index_source')" id="l_method-i-set_value_by_index_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/bwidget/spinbox.rb#L91" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-set_value_by_index_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/bwidget/spinbox.rb, line 91</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">set_value_by_index</span>(<span class="ruby-identifier">idx</span>)
+  <span class="ruby-identifier">idx</span> = <span class="ruby-node">&quot;@#{idx}&quot;</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">idx</span>.<span class="ruby-identifier">kind_of?</span>(<span class="ruby-constant">Integer</span>)
+  <span class="ruby-identifier">tk_send_without_enc</span>(<span class="ruby-string">&#39;setvalue&#39;</span>, <span class="ruby-identifier">idx</span>)
+  <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                    </div>
+
+    </div>
+  </body>
+</html>    

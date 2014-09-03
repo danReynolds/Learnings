@@ -1,0 +1,530 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>CertStore</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="../css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/main.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/github.css" type="text/css" media="screen" />
+<script src="../js/jquery-1.3.2.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/jquery-effect.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+
+<body>     
+    <div class="banner">
+        
+        <h1>
+            <span class="type">Class</span> 
+            CertStore 
+            
+                <span class="parent">&lt; 
+                    
+                    <a href="Object.html">Object</a>
+                    
+                </span>
+            
+        </h1>
+        <ul class="files">
+            
+            <li><a href="../files/sample/openssl/certstore_rb.html">sample/openssl/certstore.rb</a></li>
+            
+        </ul>
+    </div>
+    <div id="bodyContent">
+        <div id="content">
+  
+
+
+  
+
+
+  
+  
+
+
+  
+
+
+  
+    <!-- Method ref -->
+    <div class="sectiontitle">Methods</div>
+    <dl class="methods">
+      
+        <dt>G</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-generate_cert">generate_cert</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>I</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-is_ca-3F">is_ca?</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>M</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-match_cert">match_cert</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>N</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-new">new</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>S</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-scan_certs">scan_certs</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>V</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-verify">verify</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+    </dl>
+  
+
+  
+    <!-- Includes -->
+    <div class="sectiontitle">Included Modules</div>
+    <ul>
+      
+        <li>
+          
+            <a href="OpenSSL.html">
+              OpenSSL
+            </a>
+          
+        </li>
+      
+        <li>
+          
+            <a href="OpenSSL/X509.html">
+              OpenSSL::X509
+            </a>
+          
+        </li>
+      
+    </ul>
+  
+
+
+
+  
+
+    
+
+    
+
+    
+      <!-- Section constants -->
+      <div class="sectiontitle">Constants</div>
+      <table border='0' cellpadding='5'>
+        
+          <tr valign='top'>
+            <td class="attr-name">CERT_TYPE_SELF_SIGNED</td>
+            <td>=</td>
+            <td class="attr-value">0</td>
+          </tr>
+          
+            <tr valign='top'>
+              <td>&nbsp;</td>
+              <td colspan="2" class="attr-desc"></td>
+            </tr>
+          
+        
+          <tr valign='top'>
+            <td class="attr-name">CERT_TYPE_OTHER</td>
+            <td>=</td>
+            <td class="attr-value">1</td>
+          </tr>
+          
+            <tr valign='top'>
+              <td>&nbsp;</td>
+              <td colspan="2" class="attr-desc"></td>
+            </tr>
+          
+        
+          <tr valign='top'>
+            <td class="attr-name">CERT_TYPE_EE</td>
+            <td>=</td>
+            <td class="attr-value">2</td>
+          </tr>
+          
+            <tr valign='top'>
+              <td>&nbsp;</td>
+              <td colspan="2" class="attr-desc"></td>
+            </tr>
+          
+        
+      </table>
+    
+
+
+    
+      <!-- Section attributes -->
+      <div class="sectiontitle">Attributes</div>
+      <table border='0' cellpadding='5'>
+        
+          <tr valign='top'>
+            <td class='attr-rw'>
+              [R]
+            </td>
+            <td class='attr-name'>crl</td>
+            <td class='attr-desc'></td>
+          </tr>
+        
+          <tr valign='top'>
+            <td class='attr-rw'>
+              [R]
+            </td>
+            <td class='attr-name'>ee</td>
+            <td class='attr-desc'></td>
+          </tr>
+        
+          <tr valign='top'>
+            <td class='attr-rw'>
+              [R]
+            </td>
+            <td class='attr-name'>other_ca</td>
+            <td class='attr-desc'></td>
+          </tr>
+        
+          <tr valign='top'>
+            <td class='attr-rw'>
+              [R]
+            </td>
+            <td class='attr-name'>request</td>
+            <td class='attr-desc'></td>
+          </tr>
+        
+          <tr valign='top'>
+            <td class='attr-rw'>
+              [R]
+            </td>
+            <td class='attr-name'>self_signed_ca</td>
+            <td class='attr-desc'></td>
+          </tr>
+        
+      </table>
+    
+
+
+    <!-- Methods -->
+    
+      <div class="sectiontitle">Class Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-c-new">
+            
+              <b>new</b>(certs_dir)
+            
+            <a href="../classes/CertStore.html#method-c-new" name="method-c-new" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-new_source')" id="l_method-c-new_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/3a47cf3395dd4c4fe8bdd5df13aab698f2ca314b/sample/openssl/certstore.rb#L15" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-new_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File sample/openssl/certstore.rb, line 15</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">initialize</span>(<span class="ruby-identifier">certs_dir</span>)
+  <span class="ruby-ivar">@certs_dir</span> = <span class="ruby-identifier">certs_dir</span>
+  <span class="ruby-ivar">@c_store</span> = <span class="ruby-constant">CHashDir</span>.<span class="ruby-identifier">new</span>(<span class="ruby-ivar">@certs_dir</span>)
+  <span class="ruby-ivar">@c_store</span>.<span class="ruby-identifier">hash_dir</span>(<span class="ruby-keyword">true</span>)
+  <span class="ruby-ivar">@crl_store</span> = <span class="ruby-constant">CrlStore</span>.<span class="ruby-identifier">new</span>(<span class="ruby-ivar">@c_store</span>)
+  <span class="ruby-ivar">@x509store</span> = <span class="ruby-constant">Store</span>.<span class="ruby-identifier">new</span>
+  <span class="ruby-ivar">@self_signed_ca</span> = <span class="ruby-ivar">@other_ca</span> = <span class="ruby-ivar">@ee</span> = <span class="ruby-ivar">@crl</span> = <span class="ruby-keyword">nil</span>
+
+  <span class="ruby-comment"># Uncomment this line to let OpenSSL to check CRL for each certs.</span>
+  <span class="ruby-comment"># @x509store.flags = V_FLAG_CRL_CHECK | V_FLAG_CRL_CHECK_ALL</span>
+
+  <span class="ruby-identifier">add_path</span>
+  <span class="ruby-identifier">scan_certs</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                  
+      <div class="sectiontitle">Instance Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-i-generate_cert">
+            
+              <b>generate_cert</b>(filename)
+            
+            <a href="../classes/CertStore.html#method-i-generate_cert" name="method-i-generate_cert" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-generate_cert_source')" id="l_method-i-generate_cert_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/3a47cf3395dd4c4fe8bdd5df13aab698f2ca314b/sample/openssl/certstore.rb#L30" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-generate_cert_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File sample/openssl/certstore.rb, line 30</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">generate_cert</span>(<span class="ruby-identifier">filename</span>)
+  <span class="ruby-ivar">@c_store</span>.<span class="ruby-identifier">load_pem_file</span>(<span class="ruby-identifier">filename</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-is_ca-3F">
+            
+              <b>is_ca?</b>(cert)
+            
+            <a href="../classes/CertStore.html#method-i-is_ca-3F" name="method-i-is_ca-3F" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-is_ca-3F_source')" id="l_method-i-is_ca-3F_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/3a47cf3395dd4c4fe8bdd5df13aab698f2ca314b/sample/openssl/certstore.rb#L47" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-is_ca-3F_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File sample/openssl/certstore.rb, line 47</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">is_ca?</span>(<span class="ruby-identifier">cert</span>)
+  <span class="ruby-keyword">case</span> <span class="ruby-identifier">guess_cert_type</span>(<span class="ruby-identifier">cert</span>)
+  <span class="ruby-keyword">when</span> <span class="ruby-constant">CERT_TYPE_SELF_SIGNED</span>
+    <span class="ruby-keyword">true</span>
+  <span class="ruby-keyword">when</span> <span class="ruby-constant">CERT_TYPE_OTHER</span>
+    <span class="ruby-keyword">true</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-keyword">false</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-match_cert">
+            
+              <b>match_cert</b>(cert1, cert2)
+            
+            <a href="../classes/CertStore.html#method-i-match_cert" name="method-i-match_cert" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-match_cert_source')" id="l_method-i-match_cert_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/3a47cf3395dd4c4fe8bdd5df13aab698f2ca314b/sample/openssl/certstore.rb#L43" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-match_cert_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File sample/openssl/certstore.rb, line 43</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">match_cert</span>(<span class="ruby-identifier">cert1</span>, <span class="ruby-identifier">cert2</span>)
+  (<span class="ruby-identifier">cert1</span>.<span class="ruby-identifier">issuer</span>.<span class="ruby-identifier">cmp</span>(<span class="ruby-identifier">cert2</span>.<span class="ruby-identifier">issuer</span>) <span class="ruby-operator">==</span> <span class="ruby-number">0</span>) <span class="ruby-keyword">and</span> <span class="ruby-identifier">cert1</span>.<span class="ruby-identifier">serial</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">cert2</span>.<span class="ruby-identifier">serial</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-scan_certs">
+            
+              <b>scan_certs</b>()
+            
+            <a href="../classes/CertStore.html#method-i-scan_certs" name="method-i-scan_certs" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-scan_certs_source')" id="l_method-i-scan_certs_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/3a47cf3395dd4c4fe8bdd5df13aab698f2ca314b/sample/openssl/certstore.rb#L58" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-scan_certs_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File sample/openssl/certstore.rb, line 58</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">scan_certs</span>
+  <span class="ruby-ivar">@self_signed_ca</span> = []
+  <span class="ruby-ivar">@other_ca</span> = []
+  <span class="ruby-ivar">@ee</span> = []
+  <span class="ruby-ivar">@crl</span> = []
+  <span class="ruby-ivar">@request</span> = []
+  <span class="ruby-identifier">load_certs</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-verify">
+            
+              <b>verify</b>(cert)
+            
+            <a href="../classes/CertStore.html#method-i-verify" name="method-i-verify" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-verify_source')" id="l_method-i-verify_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/3a47cf3395dd4c4fe8bdd5df13aab698f2ca314b/sample/openssl/certstore.rb#L34" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-verify_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File sample/openssl/certstore.rb, line 34</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">verify</span>(<span class="ruby-identifier">cert</span>)
+  <span class="ruby-identifier">error</span>, <span class="ruby-identifier">crl_map</span> = <span class="ruby-identifier">do_verify</span>(<span class="ruby-identifier">cert</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">error</span>
+    [[<span class="ruby-keyword">false</span>, <span class="ruby-identifier">cert</span>, <span class="ruby-identifier">crl_map</span>[<span class="ruby-identifier">cert</span>.<span class="ruby-identifier">subject</span>], <span class="ruby-identifier">error</span>]]
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-ivar">@x509store</span>.<span class="ruby-identifier">chain</span>.<span class="ruby-identifier">collect</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">c</span><span class="ruby-operator">|</span> [<span class="ruby-keyword">true</span>, <span class="ruby-identifier">c</span>, <span class="ruby-identifier">crl_map</span>[<span class="ruby-identifier">c</span>.<span class="ruby-identifier">subject</span>], <span class="ruby-keyword">nil</span>] }
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                    </div>
+
+    </div>
+  </body>
+</html>    

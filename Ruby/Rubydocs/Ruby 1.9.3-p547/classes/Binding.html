@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>Binding</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="../css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/main.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/github.css" type="text/css" media="screen" />
+<script src="../js/jquery-1.3.2.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/jquery-effect.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+
+<body>     
+    <div class="banner">
+        
+        <h1>
+            <span class="type">Class</span> 
+            Binding 
+            
+                <span class="parent">&lt; 
+                    
+                    <a href="Object.html">Object</a>
+                    
+                </span>
+            
+        </h1>
+        <ul class="files">
+            
+            <li><a href="../files/proc_c.html">proc.c</a></li>
+            
+        </ul>
+    </div>
+    <div id="bodyContent">
+        <div id="content">
+  
+    <div class="description">
+      
+<p>Objects of class <code>Binding</code> encapsulate the execution context at
+some particular place in the code and retain this context for future use.
+The variables, methods, value of <code>self</code>, and possibly an
+iterator block that can be accessed in this context are all retained. <a
+href="Binding.html">Binding</a> objects can be created using
+<code>Kernel#binding</code>, and are made available to the callback of
+<code>Kernel#set_trace_func</code>.</p>
+
+<p>These binding objects can be passed as the second argument of the
+<code>Kernel#eval</code> method, establishing an environment for the
+evaluation.</p>
+
+<pre><code>class Demo
+  def initialize(n)
+    @secret = n
+  end
+  def get_binding
+    return binding()
+  end
+end
+
+k1 = Demo.new(99)
+b1 = k1.get_binding
+k2 = Demo.new(-3)
+b2 = k2.get_binding
+
+eval(&quot;@secret&quot;, b1)   #=&gt; 99
+eval(&quot;@secret&quot;, b2)   #=&gt; -3
+eval(&quot;@secret&quot;)       #=&gt; nil
+</code></pre>
+
+<p><a href="Binding.html">Binding</a> objects have no class-specific methods.</p>
+
+    </div>
+  
+
+
+  
+
+
+  
+  
+
+
+  
+
+
+  
+    <!-- Method ref -->
+    <div class="sectiontitle">Methods</div>
+    <dl class="methods">
+      
+        <dt>E</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-eval">eval</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+    </dl>
+  
+
+  
+
+
+
+  
+
+    
+
+    
+
+    
+
+
+    
+
+
+    <!-- Methods -->
+        
+      <div class="sectiontitle">Instance Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-i-eval">
+            
+              <b>binding.eval(string [, filename [,lineno]])  &rarr; obj
+</b>
+            
+            <a href="../classes/Binding.html#method-i-eval" name="method-i-eval" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Evaluates the Ruby expression(s) in <em>string</em>, in the
+<em>binding</em>&#39;s context.  If the optional <em>filename</em> and
+<em>lineno</em> parameters are present, they will be used when reporting
+syntax errors.</p>
+
+<pre><code>def get_binding(param)
+  return binding
+end
+b = get_binding(&quot;hello&quot;)
+b.eval(&quot;param&quot;)   #=&gt; &quot;hello&quot;
+</code></pre>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-eval_source')" id="l_method-i-eval_source">show</a>
+                
+              </p>
+              <div id="method-i-eval_source" class="dyn-source">
+                <pre>static VALUE
+bind_eval(int argc, VALUE *argv, VALUE bindval)
+{
+    VALUE args[4];
+
+    rb_scan_args(argc, argv, &quot;12&quot;, &amp;args[0], &amp;args[2], &amp;args[3]);
+    args[1] = bindval;
+    return rb_f_eval(argc+1, args, Qnil /* self will be searched in eval */);
+}</pre>
+              </div>
+            </div>
+            
+          </div>
+                    </div>
+
+    </div>
+  </body>
+</html>    

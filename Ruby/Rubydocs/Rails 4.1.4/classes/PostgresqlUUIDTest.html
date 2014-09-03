@@ -1,0 +1,493 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>PostgresqlUUIDTest</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="../css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/main.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/github.css" type="text/css" media="screen" />
+<script src="../js/jquery-1.3.2.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/jquery-effect.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+
+<body>     
+    <div class="banner">
+        
+        <h1>
+            <span class="type">Class</span> 
+            PostgresqlUUIDTest 
+            
+                <span class="parent">&lt; 
+                    
+                    ActiveRecord::TestCase
+                    
+                </span>
+            
+        </h1>
+        <ul class="files">
+            
+            <li><a href="../files/activerecord/test/cases/adapters/postgresql/uuid_test_rb.html">activerecord/test/cases/adapters/postgresql/uuid_test.rb</a></li>
+            
+        </ul>
+    </div>
+    <div id="bodyContent">
+        <div id="content">
+  
+
+
+  
+
+
+  
+  
+
+
+  
+    <!-- Namespace -->
+    <div class="sectiontitle">Namespace</div>
+    <ul>
+      
+        <li>
+          <span class="type">CLASS</span>
+          <a href="PostgresqlUUIDTest/UUID.html">PostgresqlUUIDTest::UUID</a>
+        </li>
+      
+    </ul>
+  
+
+
+  
+    <!-- Method ref -->
+    <div class="sectiontitle">Methods</div>
+    <dl class="methods">
+      
+        <dt>S</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-setup">setup</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>T</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-teardown">teardown</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-test_auto_create_uuid">test_auto_create_uuid</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-test_change_column_default">test_change_column_default</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-test_id_has_a_default">test_id_has_a_default</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-test_id_is_uuid">test_id_is_uuid</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-test_pk_and_sequence_for_uuid_primary_key">test_pk_and_sequence_for_uuid_primary_key</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-test_schema_dumper_for_uuid_primary_key">test_schema_dumper_for_uuid_primary_key</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+    </dl>
+  
+
+  
+
+
+
+  
+
+    
+
+    
+
+    
+
+
+    
+
+
+    <!-- Methods -->
+        
+      <div class="sectiontitle">Instance Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-i-setup">
+            
+              <b>setup</b>()
+            
+            <a href="../classes/PostgresqlUUIDTest.html#method-i-setup" name="method-i-setup" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-setup_source')" id="l_method-i-setup_source">show</a>
+                
+                  | <a href="https://github.com/rails/rails/blob/00fd52bb0d1fe2201bc7bffae3d89493f4ae7612/activerecord/test/cases/adapters/postgresql/uuid_test.rb#L11" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-setup_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File activerecord/test/cases/adapters/postgresql/uuid_test.rb, line 11</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">setup</span>
+  <span class="ruby-ivar">@connection</span> = <span class="ruby-constant">ActiveRecord</span><span class="ruby-operator">::</span><span class="ruby-constant">Base</span>.<span class="ruby-identifier">connection</span>
+
+  <span class="ruby-keyword">unless</span> <span class="ruby-ivar">@connection</span>.<span class="ruby-identifier">extension_enabled?</span>(<span class="ruby-string">&#39;uuid-ossp&#39;</span>)
+    <span class="ruby-ivar">@connection</span>.<span class="ruby-identifier">enable_extension</span> <span class="ruby-string">&#39;uuid-ossp&#39;</span>
+    <span class="ruby-ivar">@connection</span>.<span class="ruby-identifier">commit_db_transaction</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-ivar">@connection</span>.<span class="ruby-identifier">reconnect!</span>
+
+  <span class="ruby-ivar">@connection</span>.<span class="ruby-identifier">transaction</span> <span class="ruby-keyword">do</span>
+    <span class="ruby-ivar">@connection</span>.<span class="ruby-identifier">create_table</span>(<span class="ruby-string">&#39;pg_uuids&#39;</span>, <span class="ruby-identifier">id</span><span class="ruby-operator">:</span> <span class="ruby-value">:uuid</span>, <span class="ruby-identifier">default</span><span class="ruby-operator">:</span> <span class="ruby-string">&#39;uuid_generate_v1()&#39;</span>) <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">t</span><span class="ruby-operator">|</span>
+      <span class="ruby-identifier">t</span>.<span class="ruby-identifier">string</span> <span class="ruby-string">&#39;name&#39;</span>
+      <span class="ruby-identifier">t</span>.<span class="ruby-identifier">uuid</span> <span class="ruby-string">&#39;other_uuid&#39;</span>, <span class="ruby-identifier">default</span><span class="ruby-operator">:</span> <span class="ruby-string">&#39;uuid_generate_v4()&#39;</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-teardown">
+            
+              <b>teardown</b>()
+            
+            <a href="../classes/PostgresqlUUIDTest.html#method-i-teardown" name="method-i-teardown" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-teardown_source')" id="l_method-i-teardown_source">show</a>
+                
+                  | <a href="https://github.com/rails/rails/blob/00fd52bb0d1fe2201bc7bffae3d89493f4ae7612/activerecord/test/cases/adapters/postgresql/uuid_test.rb#L29" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-teardown_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File activerecord/test/cases/adapters/postgresql/uuid_test.rb, line 29</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">teardown</span>
+  <span class="ruby-ivar">@connection</span>.<span class="ruby-identifier">execute</span> <span class="ruby-string">&#39;drop table if exists pg_uuids&#39;</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-test_auto_create_uuid">
+            
+              <b>test_auto_create_uuid</b>()
+            
+            <a href="../classes/PostgresqlUUIDTest.html#method-i-test_auto_create_uuid" name="method-i-test_auto_create_uuid" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-test_auto_create_uuid_source')" id="l_method-i-test_auto_create_uuid_source">show</a>
+                
+                  | <a href="https://github.com/rails/rails/blob/00fd52bb0d1fe2201bc7bffae3d89493f4ae7612/activerecord/test/cases/adapters/postgresql/uuid_test.rb#L44" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-test_auto_create_uuid_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File activerecord/test/cases/adapters/postgresql/uuid_test.rb, line 44</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">test_auto_create_uuid</span>
+  <span class="ruby-identifier">u</span> = <span class="ruby-constant">UUID</span>.<span class="ruby-identifier">create</span>
+  <span class="ruby-identifier">u</span>.<span class="ruby-identifier">reload</span>
+  <span class="ruby-identifier">assert_not_nil</span> <span class="ruby-identifier">u</span>.<span class="ruby-identifier">other_uuid</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-test_change_column_default">
+            
+              <b>test_change_column_default</b>()
+            
+            <a href="../classes/PostgresqlUUIDTest.html#method-i-test_change_column_default" name="method-i-test_change_column_default" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-test_change_column_default_source')" id="l_method-i-test_change_column_default_source">show</a>
+                
+                  | <a href="https://github.com/rails/rails/blob/00fd52bb0d1fe2201bc7bffae3d89493f4ae7612/activerecord/test/cases/adapters/postgresql/uuid_test.rb#L63" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-test_change_column_default_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File activerecord/test/cases/adapters/postgresql/uuid_test.rb, line 63</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">test_change_column_default</span>
+  <span class="ruby-ivar">@connection</span>.<span class="ruby-identifier">add_column</span> <span class="ruby-value">:pg_uuids</span>, <span class="ruby-value">:thingy</span>, <span class="ruby-value">:uuid</span>, <span class="ruby-identifier">null</span><span class="ruby-operator">:</span> <span class="ruby-keyword">false</span>, <span class="ruby-identifier">default</span><span class="ruby-operator">:</span> <span class="ruby-string">&quot;uuid_generate_v1()&quot;</span>
+  <span class="ruby-constant">UUID</span>.<span class="ruby-identifier">reset_column_information</span>
+  <span class="ruby-identifier">column</span> = <span class="ruby-constant">UUID</span>.<span class="ruby-identifier">columns</span>.<span class="ruby-identifier">find</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">c</span><span class="ruby-operator">|</span> <span class="ruby-identifier">c</span>.<span class="ruby-identifier">name</span> <span class="ruby-operator">==</span> <span class="ruby-string">&#39;thingy&#39;</span> }
+  <span class="ruby-identifier">assert_equal</span> <span class="ruby-string">&quot;uuid_generate_v1()&quot;</span>, <span class="ruby-identifier">column</span>.<span class="ruby-identifier">default_function</span>
+
+  <span class="ruby-ivar">@connection</span>.<span class="ruby-identifier">change_column</span> <span class="ruby-value">:pg_uuids</span>, <span class="ruby-value">:thingy</span>, <span class="ruby-value">:uuid</span>, <span class="ruby-identifier">null</span><span class="ruby-operator">:</span> <span class="ruby-keyword">false</span>, <span class="ruby-identifier">default</span><span class="ruby-operator">:</span> <span class="ruby-string">&quot;uuid_generate_v4()&quot;</span>
+
+  <span class="ruby-constant">UUID</span>.<span class="ruby-identifier">reset_column_information</span>
+  <span class="ruby-identifier">column</span> = <span class="ruby-constant">UUID</span>.<span class="ruby-identifier">columns</span>.<span class="ruby-identifier">find</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">c</span><span class="ruby-operator">|</span> <span class="ruby-identifier">c</span>.<span class="ruby-identifier">name</span> <span class="ruby-operator">==</span> <span class="ruby-string">&#39;thingy&#39;</span> }
+  <span class="ruby-identifier">assert_equal</span> <span class="ruby-string">&quot;uuid_generate_v4()&quot;</span>, <span class="ruby-identifier">column</span>.<span class="ruby-identifier">default_function</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-test_id_has_a_default">
+            
+              <b>test_id_has_a_default</b>()
+            
+            <a href="../classes/PostgresqlUUIDTest.html#method-i-test_id_has_a_default" name="method-i-test_id_has_a_default" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-test_id_has_a_default_source')" id="l_method-i-test_id_has_a_default_source">show</a>
+                
+                  | <a href="https://github.com/rails/rails/blob/00fd52bb0d1fe2201bc7bffae3d89493f4ae7612/activerecord/test/cases/adapters/postgresql/uuid_test.rb#L39" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-test_id_has_a_default_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File activerecord/test/cases/adapters/postgresql/uuid_test.rb, line 39</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">test_id_has_a_default</span>
+  <span class="ruby-identifier">u</span> = <span class="ruby-constant">UUID</span>.<span class="ruby-identifier">create</span>
+  <span class="ruby-identifier">assert_not_nil</span> <span class="ruby-identifier">u</span>.<span class="ruby-identifier">id</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-test_id_is_uuid">
+            
+              <b>test_id_is_uuid</b>()
+            
+            <a href="../classes/PostgresqlUUIDTest.html#method-i-test_id_is_uuid" name="method-i-test_id_is_uuid" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-test_id_is_uuid_source')" id="l_method-i-test_id_is_uuid_source">show</a>
+                
+                  | <a href="https://github.com/rails/rails/blob/00fd52bb0d1fe2201bc7bffae3d89493f4ae7612/activerecord/test/cases/adapters/postgresql/uuid_test.rb#L34" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-test_id_is_uuid_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File activerecord/test/cases/adapters/postgresql/uuid_test.rb, line 34</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">test_id_is_uuid</span>
+  <span class="ruby-identifier">assert_equal</span> <span class="ruby-value">:uuid</span>, <span class="ruby-constant">UUID</span>.<span class="ruby-identifier">columns_hash</span>[<span class="ruby-string">&#39;id&#39;</span>].<span class="ruby-identifier">type</span>
+  <span class="ruby-identifier">assert</span> <span class="ruby-constant">UUID</span>.<span class="ruby-identifier">primary_key</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-test_pk_and_sequence_for_uuid_primary_key">
+            
+              <b>test_pk_and_sequence_for_uuid_primary_key</b>()
+            
+            <a href="../classes/PostgresqlUUIDTest.html#method-i-test_pk_and_sequence_for_uuid_primary_key" name="method-i-test_pk_and_sequence_for_uuid_primary_key" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-test_pk_and_sequence_for_uuid_primary_key_source')" id="l_method-i-test_pk_and_sequence_for_uuid_primary_key_source">show</a>
+                
+                  | <a href="https://github.com/rails/rails/blob/00fd52bb0d1fe2201bc7bffae3d89493f4ae7612/activerecord/test/cases/adapters/postgresql/uuid_test.rb#L50" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-test_pk_and_sequence_for_uuid_primary_key_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File activerecord/test/cases/adapters/postgresql/uuid_test.rb, line 50</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">test_pk_and_sequence_for_uuid_primary_key</span>
+  <span class="ruby-identifier">pk</span>, <span class="ruby-identifier">seq</span> = <span class="ruby-ivar">@connection</span>.<span class="ruby-identifier">pk_and_sequence_for</span>(<span class="ruby-string">&#39;pg_uuids&#39;</span>)
+  <span class="ruby-identifier">assert_equal</span> <span class="ruby-string">&#39;id&#39;</span>, <span class="ruby-identifier">pk</span>
+  <span class="ruby-identifier">assert_equal</span> <span class="ruby-keyword">nil</span>, <span class="ruby-identifier">seq</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-test_schema_dumper_for_uuid_primary_key">
+            
+              <b>test_schema_dumper_for_uuid_primary_key</b>()
+            
+            <a href="../classes/PostgresqlUUIDTest.html#method-i-test_schema_dumper_for_uuid_primary_key" name="method-i-test_schema_dumper_for_uuid_primary_key" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-test_schema_dumper_for_uuid_primary_key_source')" id="l_method-i-test_schema_dumper_for_uuid_primary_key_source">show</a>
+                
+                  | <a href="https://github.com/rails/rails/blob/00fd52bb0d1fe2201bc7bffae3d89493f4ae7612/activerecord/test/cases/adapters/postgresql/uuid_test.rb#L56" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-test_schema_dumper_for_uuid_primary_key_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File activerecord/test/cases/adapters/postgresql/uuid_test.rb, line 56</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">test_schema_dumper_for_uuid_primary_key</span>
+  <span class="ruby-identifier">schema</span> = <span class="ruby-constant">StringIO</span>.<span class="ruby-identifier">new</span>
+  <span class="ruby-constant">ActiveRecord</span><span class="ruby-operator">::</span><span class="ruby-constant">SchemaDumper</span>.<span class="ruby-identifier">dump</span>(<span class="ruby-ivar">@connection</span>, <span class="ruby-identifier">schema</span>)
+  <span class="ruby-identifier">assert_match</span>(<span class="ruby-regexp">/\bcreate_table &quot;pg_uuids&quot;, id: :uuid, default: &quot;uuid_generate_v1\(\)&quot;/</span>, <span class="ruby-identifier">schema</span>.<span class="ruby-identifier">string</span>)
+  <span class="ruby-identifier">assert_match</span>(<span class="ruby-regexp">/t\.uuid   &quot;other_uuid&quot;, default: &quot;uuid_generate_v4\(\)&quot;/</span>, <span class="ruby-identifier">schema</span>.<span class="ruby-identifier">string</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                    </div>
+
+    </div>
+  </body>
+</html>    

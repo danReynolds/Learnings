@@ -1,0 +1,839 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>BenchmarkDriver</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="../css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/main.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/github.css" type="text/css" media="screen" />
+<script src="../js/jquery-1.3.2.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/jquery-effect.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+
+<body>     
+    <div class="banner">
+        
+        <h1>
+            <span class="type">Class</span> 
+            BenchmarkDriver 
+            
+                <span class="parent">&lt; 
+                    
+                    <a href="Object.html">Object</a>
+                    
+                </span>
+            
+        </h1>
+        <ul class="files">
+            
+            <li><a href="../files/benchmark/driver_rb.html">benchmark/driver.rb</a></li>
+            
+        </ul>
+    </div>
+    <div id="bodyContent">
+        <div id="content">
+  
+
+
+  
+
+
+  
+  
+
+
+  
+
+
+  
+    <!-- Method ref -->
+    <div class="sectiontitle">Methods</div>
+    <dl class="methods">
+      
+        <dt>A</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-average">average</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>B</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-benchmark">benchmark</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>F</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-files">files</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>M</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-measure">measure</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-measure_file">measure_file</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-message">message</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-message_print">message_print</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>N</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-new">new</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>O</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-output">output</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>P</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-progress_message">progress_message</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>R</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-run">run</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>S</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-show_results">show_results</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+    </dl>
+  
+
+  
+
+
+
+  
+
+    
+
+    
+
+    
+
+
+    
+
+
+    <!-- Methods -->
+    
+      <div class="sectiontitle">Class Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-c-benchmark">
+            
+              <b>benchmark</b>(opt)
+            
+            <a href="../classes/BenchmarkDriver.html#method-c-benchmark" name="method-c-benchmark" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-benchmark_source')" id="l_method-c-benchmark_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/df7775561bfcb2e11a6bbc09f60b765ba5c11370/benchmark/driver.rb#L23" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-benchmark_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File benchmark/driver.rb, line 23</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">benchmark</span>(<span class="ruby-identifier">opt</span>)
+  <span class="ruby-identifier">driver</span> = <span class="ruby-keyword">self</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">opt</span>[<span class="ruby-value">:execs</span>], <span class="ruby-identifier">opt</span>[<span class="ruby-value">:dir</span>], <span class="ruby-identifier">opt</span>)
+  <span class="ruby-keyword">begin</span>
+    <span class="ruby-identifier">driver</span>.<span class="ruby-identifier">run</span>
+  <span class="ruby-keyword">ensure</span>
+    <span class="ruby-identifier">driver</span>.<span class="ruby-identifier">show_results</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-new">
+            
+              <b>new</b>(execs, dir, opt = {})
+            
+            <a href="../classes/BenchmarkDriver.html#method-c-new" name="method-c-new" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-new_source')" id="l_method-c-new_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/df7775561bfcb2e11a6bbc09f60b765ba5c11370/benchmark/driver.rb#L56" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-new_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File benchmark/driver.rb, line 56</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">initialize</span> <span class="ruby-identifier">execs</span>, <span class="ruby-identifier">dir</span>, <span class="ruby-identifier">opt</span> = {}
+  <span class="ruby-ivar">@execs</span> = <span class="ruby-identifier">execs</span>.<span class="ruby-identifier">map</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">e</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">e</span>.<span class="ruby-identifier">strip!</span>
+    <span class="ruby-keyword">next</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">e</span>.<span class="ruby-identifier">empty?</span>
+
+    <span class="ruby-keyword">if</span> <span class="ruby-regexp">/(.+)::(.+)/</span> <span class="ruby-operator">=~</span> <span class="ruby-identifier">e</span>
+      <span class="ruby-comment"># ex) ruby-a::/path/to/ruby-a</span>
+      <span class="ruby-identifier">v</span> = <span class="ruby-node">$1</span>.<span class="ruby-identifier">strip</span>
+      <span class="ruby-identifier">e</span> = <span class="ruby-node">$2</span>
+    <span class="ruby-keyword">else</span>
+      <span class="ruby-identifier">v</span> =  <span class="ruby-node">%x#{e} -v`</span>.<span class="ruby-identifier">chomp</span>
+      <span class="ruby-identifier">v</span>.<span class="ruby-identifier">sub!</span>(<span class="ruby-regexp">/ patchlevel \d+/</span>, <span class="ruby-string">&#39;&#39;</span>)
+    <span class="ruby-keyword">end</span>
+    [<span class="ruby-identifier">e</span>, <span class="ruby-identifier">v</span>]
+  }.<span class="ruby-identifier">compact</span>
+
+  <span class="ruby-ivar">@dir</span> = <span class="ruby-identifier">dir</span>
+  <span class="ruby-ivar">@repeat</span> = <span class="ruby-identifier">opt</span>[<span class="ruby-value">:repeat</span>] <span class="ruby-operator">||</span> <span class="ruby-number">1</span>
+  <span class="ruby-ivar">@repeat</span> = <span class="ruby-number">1</span> <span class="ruby-keyword">if</span> <span class="ruby-ivar">@repeat</span> <span class="ruby-operator">&lt;</span> <span class="ruby-number">1</span>
+  <span class="ruby-ivar">@pattern</span> = <span class="ruby-identifier">opt</span>[<span class="ruby-value">:pattern</span>] <span class="ruby-operator">||</span> <span class="ruby-keyword">nil</span>
+  <span class="ruby-ivar">@verbose</span> = <span class="ruby-identifier">opt</span>[<span class="ruby-value">:quiet</span>] <span class="ruby-operator">?</span> <span class="ruby-keyword">false</span> <span class="ruby-operator">:</span> (<span class="ruby-identifier">opt</span>[<span class="ruby-value">:verbose</span>] <span class="ruby-operator">||</span> <span class="ruby-keyword">false</span>)
+  <span class="ruby-ivar">@output</span> = <span class="ruby-identifier">opt</span>[<span class="ruby-value">:output</span>] <span class="ruby-operator">?</span> <span class="ruby-identifier">open</span>(<span class="ruby-identifier">opt</span>[<span class="ruby-value">:output</span>], <span class="ruby-string">&#39;w&#39;</span>) <span class="ruby-operator">:</span> <span class="ruby-keyword">nil</span>
+  <span class="ruby-ivar">@loop_wl1</span> = <span class="ruby-ivar">@loop_wl2</span> = <span class="ruby-keyword">nil</span>
+  <span class="ruby-ivar">@opt</span> = <span class="ruby-identifier">opt</span>
+
+  <span class="ruby-comment"># [[name, [[r-1-1, r-1-2, ...], [r-2-1, r-2-2, ...]]], ...]</span>
+  <span class="ruby-ivar">@results</span> = []
+
+  <span class="ruby-keyword">if</span> <span class="ruby-ivar">@verbose</span>
+    <span class="ruby-ivar">@start_time</span> = <span class="ruby-constant">Time</span>.<span class="ruby-identifier">now</span>
+    <span class="ruby-identifier">message</span> <span class="ruby-ivar">@start_time</span>
+    <span class="ruby-ivar">@execs</span>.<span class="ruby-identifier">each_with_index</span>{<span class="ruby-operator">|</span>(<span class="ruby-identifier">e</span>, <span class="ruby-identifier">v</span>), <span class="ruby-identifier">i</span><span class="ruby-operator">|</span>
+      <span class="ruby-identifier">message</span> <span class="ruby-node">&quot;target #{i}: #{v}&quot;</span>
+    }
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                  
+      <div class="sectiontitle">Instance Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-i-average">
+            
+              <b>average</b>(results)
+            
+            <a href="../classes/BenchmarkDriver.html#method-i-average" name="method-i-average" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-average_source')" id="l_method-i-average_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/df7775561bfcb2e11a6bbc09f60b765ba5c11370/benchmark/driver.rb#L93" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-average_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File benchmark/driver.rb, line 93</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">average</span> <span class="ruby-identifier">results</span>
+  <span class="ruby-identifier">results</span>.<span class="ruby-identifier">inject</span>(<span class="ruby-value">:+</span>) <span class="ruby-operator">/</span> <span class="ruby-identifier">results</span>.<span class="ruby-identifier">length</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-files">
+            
+              <b>files</b>()
+            
+            <a href="../classes/BenchmarkDriver.html#method-i-files" name="method-i-files" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-files_source')" id="l_method-i-files_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/df7775561bfcb2e11a6bbc09f60b765ba5c11370/benchmark/driver.rb#L155" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-files_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File benchmark/driver.rb, line 155</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">files</span>
+  <span class="ruby-identifier">flag</span> = {}
+  <span class="ruby-identifier">vm1</span> = <span class="ruby-identifier">vm2</span> = <span class="ruby-identifier">wl1</span> = <span class="ruby-identifier">wl2</span> = <span class="ruby-keyword">false</span>
+  <span class="ruby-ivar">@files</span> = <span class="ruby-constant">Dir</span>.<span class="ruby-identifier">glob</span>(<span class="ruby-constant">File</span>.<span class="ruby-identifier">join</span>(<span class="ruby-ivar">@dir</span>, <span class="ruby-string">&#39;bm*.rb&#39;</span>)).<span class="ruby-identifier">map</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">file</span><span class="ruby-operator">|</span>
+    <span class="ruby-keyword">next</span> <span class="ruby-keyword">if</span> <span class="ruby-ivar">@pattern</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-node">/#{@pattern}/</span> <span class="ruby-operator">!~</span> <span class="ruby-constant">File</span>.<span class="ruby-identifier">basename</span>(<span class="ruby-identifier">file</span>)
+    <span class="ruby-keyword">case</span> <span class="ruby-identifier">file</span>
+    <span class="ruby-keyword">when</span> <span class="ruby-regexp">/bm_(vm[12])_/</span>, <span class="ruby-regexp">/bm_loop_(whileloop2?).rb/</span>
+      <span class="ruby-identifier">flag</span>[<span class="ruby-node">$1</span>] = <span class="ruby-keyword">true</span>
+    <span class="ruby-keyword">end</span>
+    <span class="ruby-identifier">file</span>
+  }.<span class="ruby-identifier">compact</span>
+
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">flag</span>[<span class="ruby-string">&#39;vm1&#39;</span>] <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-operator">!</span><span class="ruby-identifier">flag</span>[<span class="ruby-string">&#39;whileloop&#39;</span>]
+    <span class="ruby-ivar">@files</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-constant">File</span>.<span class="ruby-identifier">join</span>(<span class="ruby-ivar">@dir</span>, <span class="ruby-string">&#39;bm_loop_whileloop.rb&#39;</span>)
+  <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">flag</span>[<span class="ruby-string">&#39;vm2&#39;</span>] <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-operator">!</span><span class="ruby-identifier">flag</span>[<span class="ruby-string">&#39;whileloop2&#39;</span>]
+    <span class="ruby-ivar">@files</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-constant">File</span>.<span class="ruby-identifier">join</span>(<span class="ruby-ivar">@dir</span>, <span class="ruby-string">&#39;bm_loop_whileloop2.rb&#39;</span>)
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-ivar">@files</span>.<span class="ruby-identifier">sort!</span>
+  <span class="ruby-identifier">progress_message</span> <span class="ruby-node">&quot;total: #{@files.size * @repeat} trial(s) (#{@repeat} trial(s) for #{@files.size} benchmark(s))\n&quot;</span>
+  <span class="ruby-ivar">@files</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-measure">
+            
+              <b>measure</b>(executable, file)
+            
+            <a href="../classes/BenchmarkDriver.html#method-i-measure" name="method-i-measure" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-measure_source')" id="l_method-i-measure_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/df7775561bfcb2e11a6bbc09f60b765ba5c11370/benchmark/driver.rb#L220" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-measure_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File benchmark/driver.rb, line 220</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">measure</span> <span class="ruby-identifier">executable</span>, <span class="ruby-identifier">file</span>
+  <span class="ruby-identifier">cmd</span> = <span class="ruby-node">&quot;#{executable} #{file}&quot;</span>
+  <span class="ruby-identifier">m</span> = <span class="ruby-constant">Benchmark</span>.<span class="ruby-identifier">measure</span>{
+    <span class="ruby-identifier">system</span>(<span class="ruby-identifier">cmd</span>, <span class="ruby-identifier">out</span><span class="ruby-operator">:</span> <span class="ruby-constant">File</span><span class="ruby-operator">::</span><span class="ruby-constant">NULL</span>)
+  }
+
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">$?</span> <span class="ruby-operator">!=</span> <span class="ruby-number">0</span>
+    <span class="ruby-identifier">raise</span> <span class="ruby-node">&quot;\`#{cmd}\&#39; exited with abnormal status (#{$?})&quot;</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-identifier">m</span>.<span class="ruby-identifier">real</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-measure_file">
+            
+              <b>measure_file</b>(file)
+            
+            <a href="../classes/BenchmarkDriver.html#method-i-measure_file" name="method-i-measure_file" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-measure_file_source')" id="l_method-i-measure_file_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/df7775561bfcb2e11a6bbc09f60b765ba5c11370/benchmark/driver.rb#L191" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-measure_file_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File benchmark/driver.rb, line 191</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">measure_file</span> <span class="ruby-identifier">file</span>
+  <span class="ruby-identifier">name</span> = <span class="ruby-constant">File</span>.<span class="ruby-identifier">basename</span>(<span class="ruby-identifier">file</span>, <span class="ruby-string">&#39;.rb&#39;</span>).<span class="ruby-identifier">sub</span>(<span class="ruby-regexp">/^bm_/</span>, <span class="ruby-string">&#39;&#39;</span>)
+  <span class="ruby-identifier">prepare_file</span> = <span class="ruby-constant">File</span>.<span class="ruby-identifier">join</span>(<span class="ruby-constant">File</span>.<span class="ruby-identifier">dirname</span>(<span class="ruby-identifier">file</span>), <span class="ruby-node">&quot;prepare_#{name}.rb&quot;</span>)
+  <span class="ruby-identifier">load</span> <span class="ruby-identifier">prepare_file</span> <span class="ruby-keyword">if</span> <span class="ruby-constant">FileTest</span>.<span class="ruby-identifier">exist?</span>(<span class="ruby-identifier">prepare_file</span>)
+
+  <span class="ruby-keyword">if</span> <span class="ruby-ivar">@verbose</span>
+    <span class="ruby-identifier">output</span>
+    <span class="ruby-identifier">output</span> <span class="ruby-string">&#39;-----------------------------------------------------------&#39;</span>
+    <span class="ruby-identifier">output</span> <span class="ruby-identifier">name</span>
+    <span class="ruby-identifier">output</span>
+    <span class="ruby-identifier">output</span> <span class="ruby-constant">File</span>.<span class="ruby-identifier">read</span>(<span class="ruby-identifier">file</span>)
+    <span class="ruby-identifier">output</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-identifier">result</span> = [<span class="ruby-identifier">name</span>]
+  <span class="ruby-identifier">result</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-ivar">@execs</span>.<span class="ruby-identifier">map</span>{<span class="ruby-operator">|</span>(<span class="ruby-identifier">e</span>, <span class="ruby-identifier">v</span>)<span class="ruby-operator">|</span>
+    (<span class="ruby-number">0</span><span class="ruby-operator">...</span><span class="ruby-ivar">@repeat</span>).<span class="ruby-identifier">map</span>{
+      <span class="ruby-identifier">message_print</span> <span class="ruby-node">&quot;#{v}\t&quot;</span>
+      <span class="ruby-identifier">progress_message</span> <span class="ruby-string">&#39;.&#39;</span>
+
+      <span class="ruby-identifier">m</span> = <span class="ruby-identifier">measure</span>(<span class="ruby-identifier">e</span>, <span class="ruby-identifier">file</span>)
+      <span class="ruby-identifier">message</span> <span class="ruby-node">&quot;#{m}&quot;</span>
+      <span class="ruby-identifier">m</span>
+    }
+  }
+  <span class="ruby-ivar">@results</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">result</span>
+  <span class="ruby-identifier">result</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-message">
+            
+              <b>message</b>(*args)
+            
+            <a href="../classes/BenchmarkDriver.html#method-i-message" name="method-i-message" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-message_source')" id="l_method-i-message_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/df7775561bfcb2e11a6bbc09f60b765ba5c11370/benchmark/driver.rb#L37" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-message_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File benchmark/driver.rb, line 37</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">message</span> <span class="ruby-operator">*</span><span class="ruby-identifier">args</span>
+  <span class="ruby-identifier">output</span>(<span class="ruby-operator">*</span><span class="ruby-identifier">args</span>) <span class="ruby-keyword">if</span> <span class="ruby-ivar">@verbose</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-message_print">
+            
+              <b>message_print</b>(*args)
+            
+            <a href="../classes/BenchmarkDriver.html#method-i-message_print" name="method-i-message_print" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-message_print_source')" id="l_method-i-message_print_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/df7775561bfcb2e11a6bbc09f60b765ba5c11370/benchmark/driver.rb#L41" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-message_print_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File benchmark/driver.rb, line 41</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">message_print</span> <span class="ruby-operator">*</span><span class="ruby-identifier">args</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-ivar">@verbose</span>
+    <span class="ruby-identifier">print</span>(<span class="ruby-operator">*</span><span class="ruby-identifier">args</span>)
+    <span class="ruby-constant">STDOUT</span>.<span class="ruby-identifier">flush</span>
+    <span class="ruby-ivar">@output</span> <span class="ruby-keyword">and</span> <span class="ruby-ivar">@output</span>.<span class="ruby-identifier">print</span>(<span class="ruby-operator">*</span><span class="ruby-identifier">args</span>)
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-output">
+            
+              <b>output</b>(*args)
+            
+            <a href="../classes/BenchmarkDriver.html#method-i-output" name="method-i-output" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-output_source')" id="l_method-i-output_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/df7775561bfcb2e11a6bbc09f60b765ba5c11370/benchmark/driver.rb#L32" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-output_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File benchmark/driver.rb, line 32</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">output</span> <span class="ruby-operator">*</span><span class="ruby-identifier">args</span>
+  <span class="ruby-identifier">puts</span>(<span class="ruby-operator">*</span><span class="ruby-identifier">args</span>)
+  <span class="ruby-ivar">@output</span> <span class="ruby-keyword">and</span> <span class="ruby-ivar">@output</span>.<span class="ruby-identifier">puts</span>(<span class="ruby-operator">*</span><span class="ruby-identifier">args</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-progress_message">
+            
+              <b>progress_message</b>(*args)
+            
+            <a href="../classes/BenchmarkDriver.html#method-i-progress_message" name="method-i-progress_message" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-progress_message_source')" id="l_method-i-progress_message_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/df7775561bfcb2e11a6bbc09f60b765ba5c11370/benchmark/driver.rb#L49" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-progress_message_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File benchmark/driver.rb, line 49</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">progress_message</span> <span class="ruby-operator">*</span><span class="ruby-identifier">args</span>
+  <span class="ruby-keyword">unless</span> <span class="ruby-constant">STDOUT</span>.<span class="ruby-identifier">tty?</span>
+    <span class="ruby-constant">STDERR</span>.<span class="ruby-identifier">print</span>(<span class="ruby-operator">*</span><span class="ruby-identifier">args</span>)
+    <span class="ruby-constant">STDERR</span>.<span class="ruby-identifier">flush</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-run">
+            
+              <b>run</b>()
+            
+            <a href="../classes/BenchmarkDriver.html#method-i-run" name="method-i-run" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-run_source')" id="l_method-i-run_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/df7775561bfcb2e11a6bbc09f60b765ba5c11370/benchmark/driver.rb#L178" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-run_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File benchmark/driver.rb, line 178</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">run</span>
+  <span class="ruby-identifier">files</span>.<span class="ruby-identifier">each_with_index</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">file</span>, <span class="ruby-identifier">i</span><span class="ruby-operator">|</span>
+    <span class="ruby-ivar">@i</span> = <span class="ruby-identifier">i</span>
+    <span class="ruby-identifier">r</span> = <span class="ruby-identifier">measure_file</span>(<span class="ruby-identifier">file</span>)
+
+    <span class="ruby-keyword">if</span> <span class="ruby-regexp">/bm_loop_whileloop.rb/</span> <span class="ruby-operator">=~</span> <span class="ruby-identifier">file</span>
+      <span class="ruby-ivar">@loop_wl1</span> = <span class="ruby-identifier">r</span>[<span class="ruby-number">1</span>].<span class="ruby-identifier">map</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">e</span><span class="ruby-operator">|</span> <span class="ruby-identifier">e</span>.<span class="ruby-identifier">min</span>}
+    <span class="ruby-keyword">elsif</span> <span class="ruby-regexp">/bm_loop_whileloop2.rb/</span> <span class="ruby-operator">=~</span> <span class="ruby-identifier">file</span>
+      <span class="ruby-ivar">@loop_wl2</span> = <span class="ruby-identifier">r</span>[<span class="ruby-number">1</span>].<span class="ruby-identifier">map</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">e</span><span class="ruby-operator">|</span> <span class="ruby-identifier">e</span>.<span class="ruby-identifier">min</span>}
+    <span class="ruby-keyword">end</span>
+  }
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-show_results">
+            
+              <b>show_results</b>()
+            
+            <a href="../classes/BenchmarkDriver.html#method-i-show_results" name="method-i-show_results" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-show_results_source')" id="l_method-i-show_results_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/df7775561bfcb2e11a6bbc09f60b765ba5c11370/benchmark/driver.rb#L97" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-show_results_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File benchmark/driver.rb, line 97</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">show_results</span>
+  <span class="ruby-identifier">output</span>
+
+  <span class="ruby-keyword">if</span> <span class="ruby-ivar">@verbose</span>
+    <span class="ruby-identifier">message</span> <span class="ruby-string">&#39;-----------------------------------------------------------&#39;</span>
+    <span class="ruby-identifier">message</span> <span class="ruby-string">&#39;raw data:&#39;</span>
+    <span class="ruby-identifier">message</span>
+    <span class="ruby-identifier">message</span> <span class="ruby-constant">PP</span>.<span class="ruby-identifier">pp</span>(<span class="ruby-ivar">@results</span>, <span class="ruby-string">&quot;&quot;</span>, <span class="ruby-number">79</span>)
+    <span class="ruby-identifier">message</span>
+    <span class="ruby-identifier">message</span> <span class="ruby-node">&quot;Elapesed time: #{Time.now - @start_time} (sec)&quot;</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-identifier">output</span> <span class="ruby-string">&#39;-----------------------------------------------------------&#39;</span>
+  <span class="ruby-identifier">output</span> <span class="ruby-string">&#39;benchmark results:&#39;</span>
+
+  <span class="ruby-keyword">if</span> <span class="ruby-ivar">@verbose</span> <span class="ruby-keyword">and</span> <span class="ruby-ivar">@repeat</span> <span class="ruby-operator">&gt;</span> <span class="ruby-number">1</span>
+    <span class="ruby-identifier">output</span> <span class="ruby-node">&quot;minimum results in each #{@repeat} measurements.&quot;</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-identifier">difference</span> = <span class="ruby-string">&quot;\taverage difference&quot;</span> <span class="ruby-keyword">if</span> <span class="ruby-ivar">@execs</span>.<span class="ruby-identifier">length</span> <span class="ruby-operator">==</span> <span class="ruby-number">2</span>
+  <span class="ruby-identifier">total_difference</span> = <span class="ruby-number">0</span>
+
+  <span class="ruby-identifier">output</span> <span class="ruby-node">&quot;name\t#{@execs.map{|(e, v)| v}.join(&quot;\t&quot;)}#{difference}&quot;</span>
+  <span class="ruby-ivar">@results</span>.<span class="ruby-identifier">each</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">v</span>, <span class="ruby-identifier">result</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">rets</span> = []
+    <span class="ruby-identifier">s</span> = <span class="ruby-keyword">nil</span>
+    <span class="ruby-identifier">result</span>.<span class="ruby-identifier">each_with_index</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">e</span>, <span class="ruby-identifier">i</span><span class="ruby-operator">|</span>
+      <span class="ruby-identifier">r</span> = <span class="ruby-identifier">e</span>.<span class="ruby-identifier">min</span>
+      <span class="ruby-keyword">case</span> <span class="ruby-identifier">v</span>
+      <span class="ruby-keyword">when</span> <span class="ruby-regexp">/^vm1_/</span>
+        <span class="ruby-keyword">if</span> <span class="ruby-ivar">@loop_wl1</span>
+          <span class="ruby-identifier">r</span> <span class="ruby-operator">-=</span> <span class="ruby-ivar">@loop_wl1</span>[<span class="ruby-identifier">i</span>]
+          <span class="ruby-identifier">s</span> = <span class="ruby-string">&#39;*&#39;</span>
+        <span class="ruby-keyword">end</span>
+      <span class="ruby-keyword">when</span> <span class="ruby-regexp">/^vm2_/</span>
+        <span class="ruby-keyword">if</span> <span class="ruby-ivar">@loop_wl2</span>
+          <span class="ruby-identifier">r</span> <span class="ruby-operator">-=</span> <span class="ruby-ivar">@loop_wl2</span>[<span class="ruby-identifier">i</span>]
+          <span class="ruby-identifier">s</span> = <span class="ruby-string">&#39;*&#39;</span>
+        <span class="ruby-keyword">end</span>
+      <span class="ruby-keyword">end</span>
+      <span class="ruby-identifier">rets</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">sprintf</span>(<span class="ruby-string">&quot;%.3f&quot;</span>, <span class="ruby-identifier">r</span>)
+    }
+
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">difference</span>
+      <span class="ruby-identifier">diff</span> = <span class="ruby-identifier">average</span>(<span class="ruby-identifier">result</span>.<span class="ruby-identifier">last</span>) <span class="ruby-operator">-</span> <span class="ruby-identifier">average</span>(<span class="ruby-identifier">result</span>.<span class="ruby-identifier">first</span>)
+      <span class="ruby-identifier">total_difference</span> <span class="ruby-operator">+=</span> <span class="ruby-identifier">diff</span>
+      <span class="ruby-identifier">rets</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">sprintf</span>(<span class="ruby-string">&quot;%.3f&quot;</span>, <span class="ruby-identifier">diff</span>)
+    <span class="ruby-keyword">end</span>
+
+    <span class="ruby-identifier">output</span> <span class="ruby-node">&quot;#{v}#{s}\t#{rets.join(&quot;\t&quot;)}&quot;</span>
+  }
+
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">difference</span> <span class="ruby-keyword">and</span> <span class="ruby-ivar">@verbose</span>
+    <span class="ruby-identifier">output</span> <span class="ruby-string">&#39;-----------------------------------------------------------&#39;</span>
+    <span class="ruby-identifier">output</span> <span class="ruby-node">&quot;average total difference is #{total_difference}&quot;</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                    </div>
+
+    </div>
+  </body>
+</html>    

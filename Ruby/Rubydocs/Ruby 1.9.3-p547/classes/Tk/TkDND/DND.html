@@ -1,0 +1,512 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>Tk::TkDND::DND</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="../../../css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../../../css/main.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../../../css/github.css" type="text/css" media="screen" />
+<script src="../../../js/jquery-1.3.2.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../../js/jquery-effect.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../../js/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+
+<body>     
+    <div class="banner">
+        
+        <h1>
+            <span class="type">Module</span> 
+            Tk::TkDND::DND 
+            
+        </h1>
+        <ul class="files">
+            
+            <li><a href="../../../files/ext/tk/lib/tkextlib/tkDND/tkdnd_rb.html">ext/tk/lib/tkextlib/tkDND/tkdnd.rb</a></li>
+            
+        </ul>
+    </div>
+    <div id="bodyContent">
+        <div id="content">
+  
+
+
+  
+
+
+  
+  
+
+
+  
+
+
+  
+    <!-- Method ref -->
+    <div class="sectiontitle">Methods</div>
+    <dl class="methods">
+      
+        <dt>D</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-dnd_bindsource">dnd_bindsource</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-dnd_bindsource_info">dnd_bindsource_info</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-dnd_bindtarget">dnd_bindtarget</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-dnd_bindtarget_info">dnd_bindtarget_info</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-dnd_clearsource">dnd_clearsource</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-dnd_cleartarget">dnd_cleartarget</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-dnd_drag">dnd_drag</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>V</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-version">version</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+    </dl>
+  
+
+  
+
+
+
+  
+
+    
+
+    
+
+    
+
+
+    
+
+
+    <!-- Methods -->
+    
+      <div class="sectiontitle">Class Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-c-version">
+            
+              <b>version</b>()
+            
+            <a href="../../../classes/Tk/TkDND/DND.html#method-c-version" name="method-c-version" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-version_source')" id="l_method-c-version_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/287a34ae0dfc23e4158f67cb7783d239f202c368/ext/tk/lib/tkextlib/tkDND/tkdnd.rb#L83" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-version_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/tkDND/tkdnd.rb, line 83</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">version</span>
+  <span class="ruby-keyword">begin</span>
+    <span class="ruby-constant">TkPackage</span>.<span class="ruby-identifier">require</span>(<span class="ruby-string">&#39;tkdnd&#39;</span>)
+  <span class="ruby-keyword">rescue</span>
+    <span class="ruby-string">&#39;&#39;</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                  
+      <div class="sectiontitle">Instance Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-i-dnd_bindsource">
+            
+              <b>dnd_bindsource</b>(type, *args)
+            
+            <a href="../../../classes/Tk/TkDND/DND.html#method-i-dnd_bindsource" name="method-i-dnd_bindsource" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>def <a href="DND.html#method-i-dnd_bindsource">#dnd_bindsource</a>(type,
+cmd=Proc.new, prior=None)</p>
+
+<pre><code>tk_call(&#39;dnd&#39;, &#39;bindsource&#39;, @path, type, cmd, prior)
+self</code></pre>
+
+<p>end</p>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-dnd_bindsource_source')" id="l_method-i-dnd_bindsource_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/287a34ae0dfc23e4158f67cb7783d239f202c368/ext/tk/lib/tkextlib/tkDND/tkdnd.rb#L153" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-dnd_bindsource_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/tkDND/tkdnd.rb, line 153</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">dnd_bindsource</span>(<span class="ruby-identifier">type</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">args</span>)
+  <span class="ruby-comment"># if args[0].kind_of?(Proc) || args[0].kind_of?(Method)</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-constant">TkComm</span>.<span class="ruby-identifier">_callback_entry?</span>(<span class="ruby-identifier">args</span>[<span class="ruby-number">0</span>]) <span class="ruby-operator">||</span> <span class="ruby-operator">!</span><span class="ruby-identifier">block_given?</span>
+    <span class="ruby-identifier">cmd</span> = <span class="ruby-identifier">args</span>.<span class="ruby-identifier">shift</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">cmd</span> = <span class="ruby-constant">Proc</span>.<span class="ruby-identifier">new</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-identifier">args</span> = [<span class="ruby-constant">None</span>] <span class="ruby-keyword">if</span> <span class="ruby-identifier">args</span>.<span class="ruby-identifier">empty</span>
+
+  <span class="ruby-identifier">tk_call</span>(<span class="ruby-string">&#39;dnd&#39;</span>, <span class="ruby-string">&#39;bindsource&#39;</span>, <span class="ruby-ivar">@path</span>, <span class="ruby-identifier">type</span>, <span class="ruby-identifier">cmd</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">args</span>)
+  <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-dnd_bindsource_info">
+            
+              <b>dnd_bindsource_info</b>(type=nil)
+            
+            <a href="../../../classes/Tk/TkDND/DND.html#method-i-dnd_bindsource_info" name="method-i-dnd_bindsource_info" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-dnd_bindsource_info_source')" id="l_method-i-dnd_bindsource_info_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/287a34ae0dfc23e4158f67cb7783d239f202c368/ext/tk/lib/tkextlib/tkDND/tkdnd.rb#L141" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-dnd_bindsource_info_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/tkDND/tkdnd.rb, line 141</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">dnd_bindsource_info</span>(<span class="ruby-identifier">type</span>=<span class="ruby-keyword">nil</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">type</span>
+    <span class="ruby-identifier">procedure</span>(<span class="ruby-identifier">tk_call</span>(<span class="ruby-string">&#39;dnd&#39;</span>, <span class="ruby-string">&#39;bindsource&#39;</span>, <span class="ruby-ivar">@path</span>, <span class="ruby-identifier">type</span>))
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">simplelist</span>(<span class="ruby-identifier">tk_call</span>(<span class="ruby-string">&#39;dnd&#39;</span>, <span class="ruby-string">&#39;bindsource&#39;</span>, <span class="ruby-ivar">@path</span>))
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-dnd_bindtarget">
+            
+              <b>dnd_bindtarget</b>(type, event, *args)
+            
+            <a href="../../../classes/Tk/TkDND/DND.html#method-i-dnd_bindtarget" name="method-i-dnd_bindtarget" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>def <a href="DND.html#method-i-dnd_bindtarget">#dnd_bindtarget</a>(type,
+event, cmd=Proc.new, prior=50, *args)</p>
+
+<pre><code>event = tk_event_sequence(event)
+if prior.kind_of?(Numeric)
+  tk_call(&#39;dnd&#39;, &#39;bindtarget&#39;, @path, type, event,
+          install_bind_for_event_class(DND_Subst, cmd, *args),
+          prior)
+else
+  tk_call(&#39;dnd&#39;, &#39;bindtarget&#39;, @path, type, event,
+          install_bind_for_event_class(DND_Subst, cmd, prior, *args))
+end
+self</code></pre>
+
+<p>end</p>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-dnd_bindtarget_source')" id="l_method-i-dnd_bindtarget_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/287a34ae0dfc23e4158f67cb7783d239f202c368/ext/tk/lib/tkextlib/tkDND/tkdnd.rb#L113" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-dnd_bindtarget_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/tkDND/tkdnd.rb, line 113</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">dnd_bindtarget</span>(<span class="ruby-identifier">type</span>, <span class="ruby-identifier">event</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">args</span>)
+  <span class="ruby-comment"># if args[0].kind_of?(Proc) || args[0].kind_of?(Method)</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-constant">TkComm</span>.<span class="ruby-identifier">_callback_entry?</span>(<span class="ruby-identifier">args</span>[<span class="ruby-number">0</span>]) <span class="ruby-operator">||</span> <span class="ruby-operator">!</span><span class="ruby-identifier">block_given?</span>
+    <span class="ruby-identifier">cmd</span> = <span class="ruby-identifier">args</span>.<span class="ruby-identifier">shift</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">cmd</span> = <span class="ruby-constant">Proc</span>.<span class="ruby-identifier">new</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-identifier">prior</span> = <span class="ruby-number">50</span>
+  <span class="ruby-identifier">prior</span> = <span class="ruby-identifier">args</span>.<span class="ruby-identifier">shift</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">args</span>.<span class="ruby-identifier">empty?</span>
+
+  <span class="ruby-identifier">event</span> = <span class="ruby-identifier">tk_event_sequence</span>(<span class="ruby-identifier">event</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">prior</span>.<span class="ruby-identifier">kind_of?</span>(<span class="ruby-constant">Numeric</span>)
+    <span class="ruby-identifier">tk_call</span>(<span class="ruby-string">&#39;dnd&#39;</span>, <span class="ruby-string">&#39;bindtarget&#39;</span>, <span class="ruby-ivar">@path</span>, <span class="ruby-identifier">type</span>, <span class="ruby-identifier">event</span>,
+            <span class="ruby-identifier">install_bind_for_event_class</span>(<span class="ruby-constant">DND_Subst</span>, <span class="ruby-identifier">cmd</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">args</span>),
+            <span class="ruby-identifier">prior</span>)
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">tk_call</span>(<span class="ruby-string">&#39;dnd&#39;</span>, <span class="ruby-string">&#39;bindtarget&#39;</span>, <span class="ruby-ivar">@path</span>, <span class="ruby-identifier">type</span>, <span class="ruby-identifier">event</span>,
+            <span class="ruby-identifier">install_bind_for_event_class</span>(<span class="ruby-constant">DND_Subst</span>, <span class="ruby-identifier">cmd</span>, <span class="ruby-identifier">prior</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">args</span>))
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-dnd_bindtarget_info">
+            
+              <b>dnd_bindtarget_info</b>(type=nil, event=nil)
+            
+            <a href="../../../classes/Tk/TkDND/DND.html#method-i-dnd_bindtarget_info" name="method-i-dnd_bindtarget_info" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-dnd_bindtarget_info_source')" id="l_method-i-dnd_bindtarget_info_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/287a34ae0dfc23e4158f67cb7783d239f202c368/ext/tk/lib/tkextlib/tkDND/tkdnd.rb#L91" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-dnd_bindtarget_info_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/tkDND/tkdnd.rb, line 91</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">dnd_bindtarget_info</span>(<span class="ruby-identifier">type</span>=<span class="ruby-keyword">nil</span>, <span class="ruby-identifier">event</span>=<span class="ruby-keyword">nil</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">event</span>
+    <span class="ruby-identifier">procedure</span>(<span class="ruby-identifier">tk_call</span>(<span class="ruby-string">&#39;dnd&#39;</span>, <span class="ruby-string">&#39;bindtarget&#39;</span>, <span class="ruby-ivar">@path</span>, <span class="ruby-identifier">type</span>, <span class="ruby-identifier">event</span>))
+  <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">type</span>
+    <span class="ruby-identifier">procedure</span>(<span class="ruby-identifier">tk_call</span>(<span class="ruby-string">&#39;dnd&#39;</span>, <span class="ruby-string">&#39;bindtarget&#39;</span>, <span class="ruby-ivar">@path</span>, <span class="ruby-identifier">type</span>))
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">simplelist</span>(<span class="ruby-identifier">tk_call</span>(<span class="ruby-string">&#39;dnd&#39;</span>, <span class="ruby-string">&#39;bindtarget&#39;</span>, <span class="ruby-ivar">@path</span>))
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-dnd_clearsource">
+            
+              <b>dnd_clearsource</b>()
+            
+            <a href="../../../classes/Tk/TkDND/DND.html#method-i-dnd_clearsource" name="method-i-dnd_clearsource" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-dnd_clearsource_source')" id="l_method-i-dnd_clearsource_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/287a34ae0dfc23e4158f67cb7783d239f202c368/ext/tk/lib/tkextlib/tkDND/tkdnd.rb#L167" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-dnd_clearsource_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/tkDND/tkdnd.rb, line 167</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">dnd_clearsource</span>()
+  <span class="ruby-identifier">tk_call</span>(<span class="ruby-string">&#39;dnd&#39;</span>, <span class="ruby-string">&#39;clearsource&#39;</span>, <span class="ruby-ivar">@path</span>)
+  <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-dnd_cleartarget">
+            
+              <b>dnd_cleartarget</b>()
+            
+            <a href="../../../classes/Tk/TkDND/DND.html#method-i-dnd_cleartarget" name="method-i-dnd_cleartarget" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-dnd_cleartarget_source')" id="l_method-i-dnd_cleartarget_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/287a34ae0dfc23e4158f67cb7783d239f202c368/ext/tk/lib/tkextlib/tkDND/tkdnd.rb#L136" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-dnd_cleartarget_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/tkDND/tkdnd.rb, line 136</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">dnd_cleartarget</span>
+  <span class="ruby-identifier">tk_call</span>(<span class="ruby-string">&#39;dnd&#39;</span>, <span class="ruby-string">&#39;cleartarget&#39;</span>, <span class="ruby-ivar">@path</span>)
+  <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-dnd_drag">
+            
+              <b>dnd_drag</b>(keys=nil)
+            
+            <a href="../../../classes/Tk/TkDND/DND.html#method-i-dnd_drag" name="method-i-dnd_drag" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-dnd_drag_source')" id="l_method-i-dnd_drag_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/287a34ae0dfc23e4158f67cb7783d239f202c368/ext/tk/lib/tkextlib/tkDND/tkdnd.rb#L172" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-dnd_drag_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/tkDND/tkdnd.rb, line 172</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">dnd_drag</span>(<span class="ruby-identifier">keys</span>=<span class="ruby-keyword">nil</span>)
+  <span class="ruby-identifier">tk_call</span>(<span class="ruby-string">&#39;dnd&#39;</span>, <span class="ruby-string">&#39;drag&#39;</span>, <span class="ruby-ivar">@path</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">hash_kv</span>(<span class="ruby-identifier">keys</span>))
+  <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                    </div>
+
+    </div>
+  </body>
+</html>    

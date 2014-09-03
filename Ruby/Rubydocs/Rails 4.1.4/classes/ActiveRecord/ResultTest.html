@@ -1,0 +1,331 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>ActiveRecord::ResultTest</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="../../css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../../css/main.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../../css/github.css" type="text/css" media="screen" />
+<script src="../../js/jquery-1.3.2.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../js/jquery-effect.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../js/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+
+<body>     
+    <div class="banner">
+        
+        <h1>
+            <span class="type">Class</span> 
+            ActiveRecord::ResultTest 
+            
+                <span class="parent">&lt; 
+                    
+                    ActiveRecord::TestCase
+                    
+                </span>
+            
+        </h1>
+        <ul class="files">
+            
+            <li><a href="../../files/activerecord/test/cases/result_test_rb.html">activerecord/test/cases/result_test.rb</a></li>
+            
+        </ul>
+    </div>
+    <div id="bodyContent">
+        <div id="content">
+  
+
+
+  
+
+
+  
+  
+
+
+  
+
+
+  
+    <!-- Method ref -->
+    <div class="sectiontitle">Methods</div>
+    <dl class="methods">
+      
+        <dt>R</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-result">result</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>T</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-test_each_with_block_returns_row_hashes">test_each_with_block_returns_row_hashes</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-test_each_without_block_returns_a_sized_enumerator">test_each_without_block_returns_a_sized_enumerator</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-test_each_without_block_returns_an_enumerator">test_each_without_block_returns_an_enumerator</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-test_to_hash_returns_row_hashes">test_to_hash_returns_row_hashes</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+    </dl>
+  
+
+  
+
+
+
+  
+
+    
+
+    
+
+    
+
+
+    
+
+
+    <!-- Methods -->
+        
+      <div class="sectiontitle">Instance Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-i-result">
+            
+              <b>result</b>()
+            
+            <a href="../../classes/ActiveRecord/ResultTest.html#method-i-result" name="method-i-result" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-result_source')" id="l_method-i-result_source">show</a>
+                
+                  | <a href="https://github.com/rails/rails/blob/13d2696c10726afecd393753fcac88c5a9907d8c/activerecord/test/cases/result_test.rb#L5" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-result_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File activerecord/test/cases/result_test.rb, line 5</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">result</span>
+  <span class="ruby-constant">Result</span>.<span class="ruby-identifier">new</span>([<span class="ruby-string">&#39;col_1&#39;</span>, <span class="ruby-string">&#39;col_2&#39;</span>], [
+    [<span class="ruby-string">&#39;row 1 col 1&#39;</span>, <span class="ruby-string">&#39;row 1 col 2&#39;</span>],
+    [<span class="ruby-string">&#39;row 2 col 1&#39;</span>, <span class="ruby-string">&#39;row 2 col 2&#39;</span>],
+    [<span class="ruby-string">&#39;row 3 col 1&#39;</span>, <span class="ruby-string">&#39;row 3 col 2&#39;</span>],
+  ])
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-test_each_with_block_returns_row_hashes">
+            
+              <b>test_each_with_block_returns_row_hashes</b>()
+            
+            <a href="../../classes/ActiveRecord/ResultTest.html#method-i-test_each_with_block_returns_row_hashes" name="method-i-test_each_with_block_returns_row_hashes" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-test_each_with_block_returns_row_hashes_source')" id="l_method-i-test_each_with_block_returns_row_hashes_source">show</a>
+                
+                  | <a href="https://github.com/rails/rails/blob/13d2696c10726afecd393753fcac88c5a9907d8c/activerecord/test/cases/result_test.rb#L21" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-test_each_with_block_returns_row_hashes_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File activerecord/test/cases/result_test.rb, line 21</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">test_each_with_block_returns_row_hashes</span>
+  <span class="ruby-identifier">result</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">row</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">assert_equal</span> [<span class="ruby-string">&#39;col_1&#39;</span>, <span class="ruby-string">&#39;col_2&#39;</span>], <span class="ruby-identifier">row</span>.<span class="ruby-identifier">keys</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-test_each_without_block_returns_a_sized_enumerator">
+            
+              <b>test_each_without_block_returns_a_sized_enumerator</b>()
+            
+            <a href="../../classes/ActiveRecord/ResultTest.html#method-i-test_each_without_block_returns_a_sized_enumerator" name="method-i-test_each_without_block_returns_a_sized_enumerator" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-test_each_without_block_returns_a_sized_enumerator_source')" id="l_method-i-test_each_without_block_returns_a_sized_enumerator_source">show</a>
+                
+                  | <a href="https://github.com/rails/rails/blob/13d2696c10726afecd393753fcac88c5a9907d8c/activerecord/test/cases/result_test.rb#L35" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-test_each_without_block_returns_a_sized_enumerator_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File activerecord/test/cases/result_test.rb, line 35</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">test_each_without_block_returns_a_sized_enumerator</span>
+  <span class="ruby-identifier">assert_equal</span> <span class="ruby-number">3</span>, <span class="ruby-identifier">result</span>.<span class="ruby-identifier">each</span>.<span class="ruby-identifier">size</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-test_each_without_block_returns_an_enumerator">
+            
+              <b>test_each_without_block_returns_an_enumerator</b>()
+            
+            <a href="../../classes/ActiveRecord/ResultTest.html#method-i-test_each_without_block_returns_an_enumerator" name="method-i-test_each_without_block_returns_an_enumerator" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-test_each_without_block_returns_an_enumerator_source')" id="l_method-i-test_each_without_block_returns_an_enumerator_source">show</a>
+                
+                  | <a href="https://github.com/rails/rails/blob/13d2696c10726afecd393753fcac88c5a9907d8c/activerecord/test/cases/result_test.rb#L27" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-test_each_without_block_returns_an_enumerator_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File activerecord/test/cases/result_test.rb, line 27</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">test_each_without_block_returns_an_enumerator</span>
+  <span class="ruby-identifier">result</span>.<span class="ruby-identifier">each</span>.<span class="ruby-identifier">with_index</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">row</span>, <span class="ruby-identifier">index</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">assert_equal</span> [<span class="ruby-string">&#39;col_1&#39;</span>, <span class="ruby-string">&#39;col_2&#39;</span>], <span class="ruby-identifier">row</span>.<span class="ruby-identifier">keys</span>
+    <span class="ruby-identifier">assert_kind_of</span> <span class="ruby-constant">Integer</span>, <span class="ruby-identifier">index</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-test_to_hash_returns_row_hashes">
+            
+              <b>test_to_hash_returns_row_hashes</b>()
+            
+            <a href="../../classes/ActiveRecord/ResultTest.html#method-i-test_to_hash_returns_row_hashes" name="method-i-test_to_hash_returns_row_hashes" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-test_to_hash_returns_row_hashes_source')" id="l_method-i-test_to_hash_returns_row_hashes_source">show</a>
+                
+                  | <a href="https://github.com/rails/rails/blob/13d2696c10726afecd393753fcac88c5a9907d8c/activerecord/test/cases/result_test.rb#L13" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-test_to_hash_returns_row_hashes_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File activerecord/test/cases/result_test.rb, line 13</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">test_to_hash_returns_row_hashes</span>
+  <span class="ruby-identifier">assert_equal</span> [
+    {<span class="ruby-string">&#39;col_1&#39;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&#39;row 1 col 1&#39;</span>, <span class="ruby-string">&#39;col_2&#39;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&#39;row 1 col 2&#39;</span>},
+    {<span class="ruby-string">&#39;col_1&#39;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&#39;row 2 col 1&#39;</span>, <span class="ruby-string">&#39;col_2&#39;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&#39;row 2 col 2&#39;</span>},
+    {<span class="ruby-string">&#39;col_1&#39;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&#39;row 3 col 1&#39;</span>, <span class="ruby-string">&#39;col_2&#39;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&#39;row 3 col 2&#39;</span>},
+  ], <span class="ruby-identifier">result</span>.<span class="ruby-identifier">to_hash</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                    </div>
+
+    </div>
+  </body>
+</html>    

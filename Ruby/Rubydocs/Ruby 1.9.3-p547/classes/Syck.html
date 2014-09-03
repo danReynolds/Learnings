@@ -1,0 +1,2342 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>Syck</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="../css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/main.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/github.css" type="text/css" media="screen" />
+<script src="../js/jquery-1.3.2.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/jquery-effect.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+
+<body>     
+    <div class="banner">
+        
+        <h1>
+            <span class="type">Module</span> 
+            Syck 
+            
+        </h1>
+        <ul class="files">
+            
+            <li><a href="../files/ext/syck/lib/syck_rb.html">ext/syck/lib/syck.rb</a></li>
+            
+            <li><a href="../files/ext/syck/lib/syck/baseemitter_rb.html">ext/syck/lib/syck/baseemitter.rb</a></li>
+            
+            <li><a href="../files/ext/syck/lib/syck/basenode_rb.html">ext/syck/lib/syck/basenode.rb</a></li>
+            
+            <li><a href="../files/ext/syck/lib/syck/constants_rb.html">ext/syck/lib/syck/constants.rb</a></li>
+            
+            <li><a href="../files/ext/syck/lib/syck/encoding_rb.html">ext/syck/lib/syck/encoding.rb</a></li>
+            
+            <li><a href="../files/ext/syck/lib/syck/error_rb.html">ext/syck/lib/syck/error.rb</a></li>
+            
+            <li><a href="../files/ext/syck/lib/syck/loader_rb.html">ext/syck/lib/syck/loader.rb</a></li>
+            
+            <li><a href="../files/ext/syck/lib/syck/stream_rb.html">ext/syck/lib/syck/stream.rb</a></li>
+            
+            <li><a href="../files/ext/syck/lib/syck/stringio_rb.html">ext/syck/lib/syck/stringio.rb</a></li>
+            
+            <li><a href="../files/ext/syck/lib/syck/syck_rb.html">ext/syck/lib/syck/syck.rb</a></li>
+            
+            <li><a href="../files/ext/syck/lib/syck/tag_rb.html">ext/syck/lib/syck/tag.rb</a></li>
+            
+            <li><a href="../files/ext/syck/lib/syck/types_rb.html">ext/syck/lib/syck/types.rb</a></li>
+            
+            <li><a href="../files/ext/syck/lib/syck/yamlnode_rb.html">ext/syck/lib/syck/yamlnode.rb</a></li>
+            
+            <li><a href="../files/ext/syck/lib/syck/ypath_rb.html">ext/syck/lib/syck/ypath.rb</a></li>
+            
+            <li><a href="../files/lib/rubygems/syck_hack_rb.html">lib/rubygems/syck_hack.rb</a></li>
+            
+            <li><a href="../files/lib/yaml_rb.html">lib/yaml.rb</a></li>
+            
+        </ul>
+    </div>
+    <div id="bodyContent">
+        <div id="content">
+  
+    <div class="description">
+      
+<h2 id="module-Syck-label-YAML">YAML</h2>
+
+<p>YAML(tm) (rhymes with &#39;camel&#39;) is a straightforward machine
+parsable data serialization format designed for human readability and
+interaction with scripting languages such as Perl and Python. YAML is
+optimized for data serialization, formatted dumping, configuration files,
+log files, Internet messaging and filtering. This specification describes
+the YAML information model and serialization format. Together with the
+Unicode standard for characters, it provides all the information necessary
+to understand YAML Version 1.0 and construct computer programs to process
+it.</p>
+
+<p>See <a href="http://yaml.org">yaml.org</a>/ for more information.  For a
+quick tutorial, please visit YAML In Five Minutes (<a
+href="http://yaml.kwiki.org/?YamlInFiveMinutes">yaml.kwiki.org/?YamlInFiveMinutes</a>).</p>
+
+<h2 id="module-Syck-label-About+This+Library">About This Library</h2>
+
+<p>The YAML 1.0 specification outlines four stages of YAML loading and
+dumping. This library honors all four of those stages, although data is
+really only available to you in three stages.</p>
+
+<p>The four stages are: native, representation, serialization, and
+presentation.</p>
+
+<p>The native stage refers to data which has been loaded completely into
+Ruby&#39;s own types. (See +YAML::load+.)</p>
+
+<p>The representation stage means data which has been composed into
++YAML::BaseNode+ objects.  In this stage, the document is available as a
+tree of node objects.  You can perform <a href="Syck/YPath.html">YPath</a>
+queries and transformations at this level.  (See +YAML::parse+.)</p>
+
+<p>The serialization stage happens inside the parser.  The YAML parser used in
+Ruby is called Syck.  Serialized nodes are available in the extension as
+SyckNode structs.</p>
+
+<p>The presentation stage is the YAML document itself.  This is accessible to
+you as a string.  (See +YAML::dump+.)</p>
+
+<p>For more information about the various information models, see Chapter 3 of
+the YAML 1.0 Specification (<a
+href="http://yaml.org/spec/#id2491269">yaml.org/spec/#id2491269</a>).</p>
+
+<p>The YAML module provides quick access to the most common loading
+(YAML::load) and dumping (YAML::dump) tasks.  This module also provides an
+API for registering global types (YAML::add_domain_type).</p>
+
+<h2 id="module-Syck-label-Example">Example</h2>
+
+<p>A simple round-trip (load and dump) of an object.</p>
+
+<pre><code>require &quot;yaml&quot;
+
+test_obj = [&quot;dogs&quot;, &quot;cats&quot;, &quot;badgers&quot;]
+
+yaml_obj = YAML::dump( test_obj )
+                    # -&gt; ---
+                         - dogs
+                         - cats
+                         - badgers
+ruby_obj = YAML::load( yaml_obj )
+                    # =&gt; [&quot;dogs&quot;, &quot;cats&quot;, &quot;badgers&quot;]
+ruby_obj == test_obj
+                    # =&gt; true
+</code></pre>
+
+<p>To register your custom types with the global resolver, use
+<code>add_domain_type</code>.</p>
+
+<pre><code>YAML::add_domain_type( &quot;your-site.com,2004&quot;, &quot;widget&quot; ) do |type, val|
+    Widget.new( val )
+end
+</code></pre>
+
+<p>YAML::BaseNode class</p>
+
+<p>Constants used throughout the library</p>
+
+<p>Handle Unicode-to-Internal conversion</p>
+
+<p><a href="Syck/Error.html">Error</a> messages and exception class</p>
+
+<p>YAML::Loader class .. type handling ..</p>
+
+<p>$Id$</p>
+
+<h1 id="module-Syck-label-yaml%2Ftag.rb%3A+methods+for+associating+a+taguri+to+a+class.">yaml/tag.rb: methods for associating a taguri to a class.</h1>
+<dl class="rdoc-list note-list"><dt>Author
+<dd>
+<p>why the lucky stiff</p>
+</dd></dl>
+
+<p>Classes required by the full core typeset</p>
+
+    </div>
+  
+
+
+  
+
+
+  
+  
+
+
+  
+    <!-- Namespace -->
+    <div class="sectiontitle">Namespace</div>
+    <ul>
+      
+        <li>
+          <span class="type">MODULE</span>
+          <a href="Syck/BaseEmitter.html">Syck::BaseEmitter</a>
+        </li>
+      
+        <li>
+          <span class="type">MODULE</span>
+          <a href="Syck/BaseNode.html">Syck::BaseNode</a>
+        </li>
+      
+        <li>
+          <span class="type">CLASS</span>
+          <a href="Syck/DefaultKey.html">Syck::DefaultKey</a>
+        </li>
+      
+        <li>
+          <span class="type">CLASS</span>
+          <a href="Syck/DomainType.html">Syck::DomainType</a>
+        </li>
+      
+        <li>
+          <span class="type">CLASS</span>
+          <a href="Syck/Error.html">Syck::Error</a>
+        </li>
+      
+        <li>
+          <span class="type">CLASS</span>
+          <a href="Syck/Loader.html">Syck::Loader</a>
+        </li>
+      
+        <li>
+          <span class="type">CLASS</span>
+          <a href="Syck/Mapping.html">Syck::Mapping</a>
+        </li>
+      
+        <li>
+          <span class="type">CLASS</span>
+          <a href="Syck/Node.html">Syck::Node</a>
+        </li>
+      
+        <li>
+          <span class="type">CLASS</span>
+          <a href="Syck/Object.html">Syck::Object</a>
+        </li>
+      
+        <li>
+          <span class="type">CLASS</span>
+          <a href="Syck/Omap.html">Syck::Omap</a>
+        </li>
+      
+        <li>
+          <span class="type">CLASS</span>
+          <a href="Syck/Pairs.html">Syck::Pairs</a>
+        </li>
+      
+        <li>
+          <span class="type">CLASS</span>
+          <a href="Syck/ParseError.html">Syck::ParseError</a>
+        </li>
+      
+        <li>
+          <span class="type">CLASS</span>
+          <a href="Syck/PrivateType.html">Syck::PrivateType</a>
+        </li>
+      
+        <li>
+          <span class="type">CLASS</span>
+          <a href="Syck/Sequence.html">Syck::Sequence</a>
+        </li>
+      
+        <li>
+          <span class="type">CLASS</span>
+          <a href="Syck/Set.html">Syck::Set</a>
+        </li>
+      
+        <li>
+          <span class="type">CLASS</span>
+          <a href="Syck/SpecialHash.html">Syck::SpecialHash</a>
+        </li>
+      
+        <li>
+          <span class="type">CLASS</span>
+          <a href="Syck/Stream.html">Syck::Stream</a>
+        </li>
+      
+        <li>
+          <span class="type">CLASS</span>
+          <a href="Syck/TypeError.html">Syck::TypeError</a>
+        </li>
+      
+        <li>
+          <span class="type">CLASS</span>
+          <a href="Syck/YPath.html">Syck::YPath</a>
+        </li>
+      
+        <li>
+          <span class="type">CLASS</span>
+          <a href="Syck/YamlNode.html">Syck::YamlNode</a>
+        </li>
+      
+    </ul>
+  
+
+
+  
+    <!-- Method ref -->
+    <div class="sectiontitle">Methods</div>
+    <dl class="methods">
+      
+        <dt>A</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-add_builtin_type">add_builtin_type</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-c-add_domain_type">add_domain_type</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-c-add_private_type">add_private_type</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-c-add_ruby_type">add_ruby_type</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>D</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-detect_implicit">detect_implicit</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-c-dump">dump</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-c-dump_stream">dump_stream</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>E</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-each_document">each_document</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-c-each_node">each_node</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-c-emitter">emitter</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-c-escape">escape</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>G</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-generic_parser">generic_parser</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>L</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-load">load</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-c-load_documents">load_documents</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-c-load_file">load_file</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-c-load_stream">load_stream</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>M</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-make_stream">make_stream</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>O</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-object_maker">object_maker</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>P</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-parse">parse</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-c-parse_documents">parse_documents</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-c-parse_file">parse_file</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-c-parser">parser</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>Q</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-quick_emit">quick_emit</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>R</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-read_type_class">read_type_class</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-c-resolver">resolver</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>T</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-tag_class">tag_class</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-c-tagged_classes">tagged_classes</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-c-tagurize">tagurize</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-c-transfer">transfer</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-c-try_implicit">try_implicit</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>U</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-unescape">unescape</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+    </dl>
+  
+
+  
+
+
+
+  
+
+    
+
+    
+
+    
+      <!-- Section constants -->
+      <div class="sectiontitle">Constants</div>
+      <table border='0' cellpadding='5'>
+        
+          <tr valign='top'>
+            <td class="attr-name">VERSION</td>
+            <td>=</td>
+            <td class="attr-value">&#39;0.60&#39;</td>
+          </tr>
+          
+            <tr valign='top'>
+              <td>&nbsp;</td>
+              <td colspan="2" class="attr-desc"><p>Constants</p></td>
+            </tr>
+          
+        
+          <tr valign='top'>
+            <td class="attr-name">SUPPORTED_YAML_VERSIONS</td>
+            <td>=</td>
+            <td class="attr-value">[&#39;1.0&#39;]</td>
+          </tr>
+          
+            <tr valign='top'>
+              <td>&nbsp;</td>
+              <td colspan="2" class="attr-desc"></td>
+            </tr>
+          
+        
+          <tr valign='top'>
+            <td class="attr-name">WORD_CHAR</td>
+            <td>=</td>
+            <td class="attr-value">&#39;A-Za-z0-9&#39;</td>
+          </tr>
+          
+            <tr valign='top'>
+              <td>&nbsp;</td>
+              <td colspan="2" class="attr-desc"><p>Parser tokens</p></td>
+            </tr>
+          
+        
+          <tr valign='top'>
+            <td class="attr-name">PRINTABLE_CHAR</td>
+            <td>=</td>
+            <td class="attr-value">&#39;-_A-Za-z0-9!?/()$\&#39;&quot;. &#39;</td>
+          </tr>
+          
+            <tr valign='top'>
+              <td>&nbsp;</td>
+              <td colspan="2" class="attr-desc"></td>
+            </tr>
+          
+        
+          <tr valign='top'>
+            <td class="attr-name">NOT_PLAIN_CHAR</td>
+            <td>=</td>
+            <td class="attr-value">&#39;\x7f\x0-\x1f\x80-\x9f&#39;</td>
+          </tr>
+          
+            <tr valign='top'>
+              <td>&nbsp;</td>
+              <td colspan="2" class="attr-desc"></td>
+            </tr>
+          
+        
+          <tr valign='top'>
+            <td class="attr-name">ESCAPE_CHAR</td>
+            <td>=</td>
+            <td class="attr-value">&#39;[\\x00-\\x09\\x0b-\\x1f]&#39;</td>
+          </tr>
+          
+            <tr valign='top'>
+              <td>&nbsp;</td>
+              <td colspan="2" class="attr-desc"></td>
+            </tr>
+          
+        
+          <tr valign='top'>
+            <td class="attr-name">INDICATOR_CHAR</td>
+            <td>=</td>
+            <td class="attr-value">&#39;*&amp;!|\\\\^@%{}[]=&#39;</td>
+          </tr>
+          
+            <tr valign='top'>
+              <td>&nbsp;</td>
+              <td colspan="2" class="attr-desc"></td>
+            </tr>
+          
+        
+          <tr valign='top'>
+            <td class="attr-name">SPACE_INDICATORS</td>
+            <td>=</td>
+            <td class="attr-value">&#39;-#:,?&#39;</td>
+          </tr>
+          
+            <tr valign='top'>
+              <td>&nbsp;</td>
+              <td colspan="2" class="attr-desc"></td>
+            </tr>
+          
+        
+          <tr valign='top'>
+            <td class="attr-name">RESTRICTED_INDICATORS</td>
+            <td>=</td>
+            <td class="attr-value">&#39;#:,}]&#39;</td>
+          </tr>
+          
+            <tr valign='top'>
+              <td>&nbsp;</td>
+              <td colspan="2" class="attr-desc"></td>
+            </tr>
+          
+        
+          <tr valign='top'>
+            <td class="attr-name">DNS_COMP_RE</td>
+            <td>=</td>
+            <td class="attr-value">&quot;\\w(?:[-\\w]*\\w)?&quot;</td>
+          </tr>
+          
+            <tr valign='top'>
+              <td>&nbsp;</td>
+              <td colspan="2" class="attr-desc"></td>
+            </tr>
+          
+        
+          <tr valign='top'>
+            <td class="attr-name">DNS_NAME_RE</td>
+            <td>=</td>
+            <td class="attr-value">&quot;(?:(?:#{DNS_COMP_RE}\\.)+#{DNS_COMP_RE}|#{DNS_COMP_RE})&quot;</td>
+          </tr>
+          
+            <tr valign='top'>
+              <td>&nbsp;</td>
+              <td colspan="2" class="attr-desc"></td>
+            </tr>
+          
+        
+          <tr valign='top'>
+            <td class="attr-name">ESCAPES</td>
+            <td>=</td>
+            <td class="attr-value">%w{\x00   \x01       \x02  \x03     \x04        \x05   \x06      \a
+\x08    \t         \n             \v         \f             \r         \x0e   \x0f
+\x10       \x11  \x12     \x13        \x14   \x15      \x16 \x17
+\x18       \x19  \x1a     \e          \x1c    \x1d       \x1e  \x1f
+}</td>
+          </tr>
+          
+            <tr valign='top'>
+              <td>&nbsp;</td>
+              <td colspan="2" class="attr-desc"></td>
+            </tr>
+          
+        
+          <tr valign='top'>
+            <td class="attr-name">UNESCAPES</td>
+            <td>=</td>
+            <td class="attr-value">{
+&#39;a&#39; =&gt; &quot;\x07&quot;, &#39;b&#39; =&gt; &quot;\x08&quot;, &#39;t&#39; =&gt; &quot;\x09&quot;,
+&#39;n&#39; =&gt; &quot;\x0a&quot;, &#39;v&#39; =&gt; &quot;\x0b&quot;, &#39;f&#39; =&gt; &quot;\x0c&quot;,
+&#39;r&#39; =&gt; &quot;\x0d&quot;, &#39;e&#39; =&gt; &quot;\x1b&quot;, &#39;\\&#39; =&gt; &#39;\\&#39;,
+}</td>
+          </tr>
+          
+            <tr valign='top'>
+              <td>&nbsp;</td>
+              <td colspan="2" class="attr-desc"></td>
+            </tr>
+          
+        
+          <tr valign='top'>
+            <td class="attr-name">DEFAULTS</td>
+            <td>=</td>
+            <td class="attr-value">{
+:Indent =&gt; 2, :UseHeader =&gt; false, :UseVersion =&gt; false, :Version =&gt; &#39;1.0&#39;,
+:SortKeys =&gt; false, :AnchorFormat =&gt; &#39;id%03d&#39;, :ExplicitTypes =&gt; false,
+:WidthType =&gt; &#39;absolute&#39;, :BestWidth =&gt; 80,
+:UseBlock =&gt; false, :UseFold =&gt; false, :Encoding =&gt; :None
+}</td>
+          </tr>
+          
+            <tr valign='top'>
+              <td>&nbsp;</td>
+              <td colspan="2" class="attr-desc"><p>Default settings</p></td>
+            </tr>
+          
+        
+          <tr valign='top'>
+            <td class="attr-name">ERROR_NO_HEADER_NODE</td>
+            <td>=</td>
+            <td class="attr-value">&quot;With UseHeader=false, the node Array or Hash must have elements&quot;</td>
+          </tr>
+          
+            <tr valign='top'>
+              <td>&nbsp;</td>
+              <td colspan="2" class="attr-desc"><p><a href="Syck/Error.html">Error</a> messages</p></td>
+            </tr>
+          
+        
+          <tr valign='top'>
+            <td class="attr-name">ERROR_NEED_HEADER</td>
+            <td>=</td>
+            <td class="attr-value">&quot;With UseHeader=false, the node must be an Array or Hash&quot;</td>
+          </tr>
+          
+            <tr valign='top'>
+              <td>&nbsp;</td>
+              <td colspan="2" class="attr-desc"></td>
+            </tr>
+          
+        
+          <tr valign='top'>
+            <td class="attr-name">ERROR_BAD_EXPLICIT</td>
+            <td>=</td>
+            <td class="attr-value">&quot;Unsupported explicit transfer: &#39;%s&#39;&quot;</td>
+          </tr>
+          
+            <tr valign='top'>
+              <td>&nbsp;</td>
+              <td colspan="2" class="attr-desc"></td>
+            </tr>
+          
+        
+          <tr valign='top'>
+            <td class="attr-name">ERROR_MANY_EXPLICIT</td>
+            <td>=</td>
+            <td class="attr-value">&quot;More than one explicit transfer&quot;</td>
+          </tr>
+          
+            <tr valign='top'>
+              <td>&nbsp;</td>
+              <td colspan="2" class="attr-desc"></td>
+            </tr>
+          
+        
+          <tr valign='top'>
+            <td class="attr-name">ERROR_MANY_IMPLICIT</td>
+            <td>=</td>
+            <td class="attr-value">&quot;More than one implicit request&quot;</td>
+          </tr>
+          
+            <tr valign='top'>
+              <td>&nbsp;</td>
+              <td colspan="2" class="attr-desc"></td>
+            </tr>
+          
+        
+          <tr valign='top'>
+            <td class="attr-name">ERROR_NO_ANCHOR</td>
+            <td>=</td>
+            <td class="attr-value">&quot;No anchor for alias &#39;%s&#39;&quot;</td>
+          </tr>
+          
+            <tr valign='top'>
+              <td>&nbsp;</td>
+              <td colspan="2" class="attr-desc"></td>
+            </tr>
+          
+        
+          <tr valign='top'>
+            <td class="attr-name">ERROR_BAD_ANCHOR</td>
+            <td>=</td>
+            <td class="attr-value">&quot;Invalid anchor: %s&quot;</td>
+          </tr>
+          
+            <tr valign='top'>
+              <td>&nbsp;</td>
+              <td colspan="2" class="attr-desc"></td>
+            </tr>
+          
+        
+          <tr valign='top'>
+            <td class="attr-name">ERROR_MANY_ANCHOR</td>
+            <td>=</td>
+            <td class="attr-value">&quot;More than one anchor&quot;</td>
+          </tr>
+          
+            <tr valign='top'>
+              <td>&nbsp;</td>
+              <td colspan="2" class="attr-desc"></td>
+            </tr>
+          
+        
+          <tr valign='top'>
+            <td class="attr-name">ERROR_ANCHOR_ALIAS</td>
+            <td>=</td>
+            <td class="attr-value">&quot;Can&#39;t define both an anchor and an alias&quot;</td>
+          </tr>
+          
+            <tr valign='top'>
+              <td>&nbsp;</td>
+              <td colspan="2" class="attr-desc"></td>
+            </tr>
+          
+        
+          <tr valign='top'>
+            <td class="attr-name">ERROR_BAD_ALIAS</td>
+            <td>=</td>
+            <td class="attr-value">&quot;Invalid alias: %s&quot;</td>
+          </tr>
+          
+            <tr valign='top'>
+              <td>&nbsp;</td>
+              <td colspan="2" class="attr-desc"></td>
+            </tr>
+          
+        
+          <tr valign='top'>
+            <td class="attr-name">ERROR_MANY_ALIAS</td>
+            <td>=</td>
+            <td class="attr-value">&quot;More than one alias&quot;</td>
+          </tr>
+          
+            <tr valign='top'>
+              <td>&nbsp;</td>
+              <td colspan="2" class="attr-desc"></td>
+            </tr>
+          
+        
+          <tr valign='top'>
+            <td class="attr-name">ERROR_ZERO_INDENT</td>
+            <td>=</td>
+            <td class="attr-value">&quot;Can&#39;t use zero as an indentation width&quot;</td>
+          </tr>
+          
+            <tr valign='top'>
+              <td>&nbsp;</td>
+              <td colspan="2" class="attr-desc"></td>
+            </tr>
+          
+        
+          <tr valign='top'>
+            <td class="attr-name">ERROR_UNSUPPORTED_VERSION</td>
+            <td>=</td>
+            <td class="attr-value">&quot;This release of YAML.rb does not support YAML version %s&quot;</td>
+          </tr>
+          
+            <tr valign='top'>
+              <td>&nbsp;</td>
+              <td colspan="2" class="attr-desc"></td>
+            </tr>
+          
+        
+          <tr valign='top'>
+            <td class="attr-name">ERROR_UNSUPPORTED_ENCODING</td>
+            <td>=</td>
+            <td class="attr-value">&quot;Attempt to use unsupported encoding: %s&quot;</td>
+          </tr>
+          
+            <tr valign='top'>
+              <td>&nbsp;</td>
+              <td colspan="2" class="attr-desc"></td>
+            </tr>
+          
+        
+      </table>
+    
+
+
+    
+
+
+    <!-- Methods -->
+    
+      <div class="sectiontitle">Class Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-c-add_builtin_type">
+            
+              <b>add_builtin_type</b>( type_tag, &amp;transfer_proc )
+            
+            <a href="../classes/Syck.html#method-c-add_builtin_type" name="method-c-add_builtin_type" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Add a transfer method for a builtin type</p>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-add_builtin_type_source')" id="l_method-c-add_builtin_type_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/8ef7bb8c211d156b33f1f97f7c500e5b465fdf5b/ext/syck/lib/syck.rb#L310" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-add_builtin_type_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/syck/lib/syck.rb, line 310</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">add_builtin_type</span>( <span class="ruby-identifier">type_tag</span>, <span class="ruby-operator">&amp;</span><span class="ruby-identifier">transfer_proc</span> )
+    <span class="ruby-identifier">resolver</span>.<span class="ruby-identifier">add_type</span>( <span class="ruby-node">&quot;tag:yaml.org,2002:#{ type_tag }&quot;</span>, <span class="ruby-identifier">transfer_proc</span> )
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-add_domain_type">
+            
+              <b>add_domain_type</b>( domain, type_tag, &amp;transfer_proc )
+            
+            <a href="../classes/Syck.html#method-c-add_domain_type" name="method-c-add_domain_type" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Add a global handler for a YAML domain type.</p>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-add_domain_type_source')" id="l_method-c-add_domain_type_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/8ef7bb8c211d156b33f1f97f7c500e5b465fdf5b/ext/syck/lib/syck.rb#L303" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-add_domain_type_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/syck/lib/syck.rb, line 303</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">add_domain_type</span>( <span class="ruby-identifier">domain</span>, <span class="ruby-identifier">type_tag</span>, <span class="ruby-operator">&amp;</span><span class="ruby-identifier">transfer_proc</span> )
+    <span class="ruby-identifier">resolver</span>.<span class="ruby-identifier">add_type</span>( <span class="ruby-node">&quot;tag:#{ domain }:#{ type_tag }&quot;</span>, <span class="ruby-identifier">transfer_proc</span> )
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-add_private_type">
+            
+              <b>add_private_type</b>( type_re, &amp;transfer_proc )
+            
+            <a href="../classes/Syck.html#method-c-add_private_type" name="method-c-add_private_type" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Add a private document type</p>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-add_private_type_source')" id="l_method-c-add_private_type_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/8ef7bb8c211d156b33f1f97f7c500e5b465fdf5b/ext/syck/lib/syck.rb#L325" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-add_private_type_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/syck/lib/syck.rb, line 325</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">add_private_type</span>( <span class="ruby-identifier">type_re</span>, <span class="ruby-operator">&amp;</span><span class="ruby-identifier">transfer_proc</span> )
+    <span class="ruby-identifier">warn</span> <span class="ruby-node">&quot;#{caller[0]}: YAML.add_private_type is deprecated, use add_domain_type&quot;</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">$VERBOSE</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-operator">!</span><span class="ruby-identifier">caller</span>[<span class="ruby-number">0</span>].<span class="ruby-identifier">start_with?</span>(<span class="ruby-constant">File</span>.<span class="ruby-identifier">dirname</span>(<span class="ruby-keyword">__FILE__</span>))
+    <span class="ruby-identifier">resolver</span>.<span class="ruby-identifier">add_type</span>( <span class="ruby-string">&quot;x-private:&quot;</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">type_re</span>, <span class="ruby-identifier">transfer_proc</span> )
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-add_ruby_type">
+            
+              <b>add_ruby_type</b>( type_tag, &amp;transfer_proc )
+            
+            <a href="../classes/Syck.html#method-c-add_ruby_type" name="method-c-add_ruby_type" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Add a transfer method for a builtin type</p>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-add_ruby_type_source')" id="l_method-c-add_ruby_type_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/8ef7bb8c211d156b33f1f97f7c500e5b465fdf5b/ext/syck/lib/syck.rb#L317" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-add_ruby_type_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/syck/lib/syck.rb, line 317</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">add_ruby_type</span>( <span class="ruby-identifier">type_tag</span>, <span class="ruby-operator">&amp;</span><span class="ruby-identifier">transfer_proc</span> )
+    <span class="ruby-identifier">warn</span> <span class="ruby-node">&quot;#{caller[0]}: YAML.add_ruby_type is deprecated, use add_domain_type&quot;</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">$VERBOSE</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-operator">!</span><span class="ruby-identifier">caller</span>[<span class="ruby-number">0</span>].<span class="ruby-identifier">start_with?</span>(<span class="ruby-constant">File</span>.<span class="ruby-identifier">dirname</span>(<span class="ruby-keyword">__FILE__</span>))
+    <span class="ruby-identifier">resolver</span>.<span class="ruby-identifier">add_type</span>( <span class="ruby-node">&quot;tag:ruby.yaml.org,2002:#{ type_tag }&quot;</span>, <span class="ruby-identifier">transfer_proc</span> )
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-detect_implicit">
+            
+              <b>detect_implicit</b>( val )
+            
+            <a href="../classes/Syck.html#method-c-detect_implicit" name="method-c-detect_implicit" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Detect typing of a string</p>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-detect_implicit_source')" id="l_method-c-detect_implicit_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/8ef7bb8c211d156b33f1f97f7c500e5b465fdf5b/ext/syck/lib/syck.rb#L333" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-detect_implicit_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/syck/lib/syck.rb, line 333</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">detect_implicit</span>( <span class="ruby-identifier">val</span> )
+    <span class="ruby-identifier">warn</span> <span class="ruby-node">&quot;#{caller[0]}: YAML.detect_implicit is deprecated&quot;</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">$VERBOSE</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-operator">!</span><span class="ruby-identifier">caller</span>[<span class="ruby-number">0</span>].<span class="ruby-identifier">start_with?</span>(<span class="ruby-constant">File</span>.<span class="ruby-identifier">dirname</span>(<span class="ruby-keyword">__FILE__</span>))
+    <span class="ruby-identifier">resolver</span>.<span class="ruby-identifier">detect_implicit</span>( <span class="ruby-identifier">val</span> )
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-dump">
+            
+              <b>dump</b>( obj, io = nil )
+            
+            <a href="../classes/Syck.html#method-c-dump" name="method-c-dump" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Converts <em>obj</em> to YAML and writes the YAML result to <em>io</em>.</p>
+
+<pre><code>File.open( &#39;animals.yaml&#39;, &#39;w&#39; ) do |out|
+  YAML.dump( [&#39;badger&#39;, &#39;elephant&#39;, &#39;tiger&#39;], out )
+end
+</code></pre>
+
+<p>If no <em>io</em> is provided, a string containing the dumped YAML is
+returned.</p>
+
+<pre><code>YAML.dump( :locked )
+   #=&gt; &quot;--- :locked&quot;
+</code></pre>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-dump_source')" id="l_method-c-dump_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/8ef7bb8c211d156b33f1f97f7c500e5b465fdf5b/ext/syck/lib/syck.rb#L117" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-dump_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/syck/lib/syck.rb, line 117</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">dump</span>( <span class="ruby-identifier">obj</span>, <span class="ruby-identifier">io</span> = <span class="ruby-keyword">nil</span> )
+    <span class="ruby-identifier">obj</span>.<span class="ruby-identifier">to_yaml</span>( <span class="ruby-identifier">io</span> <span class="ruby-operator">||</span> <span class="ruby-identifier">io2</span> = <span class="ruby-constant">StringIO</span>.<span class="ruby-identifier">new</span> )
+    <span class="ruby-identifier">io</span> <span class="ruby-operator">||</span> ( <span class="ruby-identifier">io2</span>.<span class="ruby-identifier">rewind</span>; <span class="ruby-identifier">io2</span>.<span class="ruby-identifier">read</span> )
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-dump_stream">
+            
+              <b>dump_stream</b>( *objs )
+            
+            <a href="../classes/Syck.html#method-c-dump_stream" name="method-c-dump_stream" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Returns a YAML stream containing each of the items in <code>objs</code>,
+each having their own document.</p>
+
+<pre><code>YAML.dump_stream( 0, [], {} )
+  #=&gt; --- 0
+      --- []
+      --- {}
+</code></pre>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-dump_stream_source')" id="l_method-c-dump_stream_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/8ef7bb8c211d156b33f1f97f7c500e5b465fdf5b/ext/syck/lib/syck.rb#L292" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-dump_stream_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/syck/lib/syck.rb, line 292</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">dump_stream</span>( <span class="ruby-operator">*</span><span class="ruby-identifier">objs</span> )
+    <span class="ruby-identifier">d</span> = <span class="ruby-constant">Stream</span>.<span class="ruby-identifier">new</span>
+    <span class="ruby-identifier">objs</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">doc</span><span class="ruby-operator">|</span>
+        <span class="ruby-identifier">d</span>.<span class="ruby-identifier">add</span>( <span class="ruby-identifier">doc</span> )
+    <span class="ruby-keyword">end</span>
+    <span class="ruby-identifier">d</span>.<span class="ruby-identifier">emit</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-each_document">
+            
+              <b>each_document</b>( io, &amp;block )
+            
+            <a href="../classes/Syck.html#method-c-each_document" name="method-c-each_document" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Calls <em>block</em> with each consecutive document in the YAML stream
+contained in <em>io</em>.</p>
+
+<pre><code>File.open( &#39;many-docs.yaml&#39; ) do |yf|
+  YAML.each_document( yf ) do |ydoc|
+    ## ydoc contains the single object
+    ## from the YAML document
+  end
+end
+</code></pre>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-each_document_source')" id="l_method-c-each_document_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/8ef7bb8c211d156b33f1f97f7c500e5b465fdf5b/ext/syck/lib/syck.rb#L217" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-each_document_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/syck/lib/syck.rb, line 217</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">each_document</span>( <span class="ruby-identifier">io</span>, <span class="ruby-operator">&amp;</span><span class="ruby-identifier">block</span> )
+    <span class="ruby-identifier">warn</span> <span class="ruby-node">&quot;#{caller[0]}: YAML.each_document is deprecated&quot;</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">$VERBOSE</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-operator">!</span><span class="ruby-identifier">caller</span>[<span class="ruby-number">0</span>].<span class="ruby-identifier">start_with?</span>(<span class="ruby-constant">File</span>.<span class="ruby-identifier">dirname</span>(<span class="ruby-keyword">__FILE__</span>))
+    <span class="ruby-identifier">parser</span>.<span class="ruby-identifier">load_documents</span>( <span class="ruby-identifier">io</span>, <span class="ruby-operator">&amp;</span><span class="ruby-identifier">block</span> )
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-each_node">
+            
+              <b>each_node</b>( io, &amp;doc_proc )
+            
+            <a href="../classes/Syck.html#method-c-each_node" name="method-c-each_node" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Calls <em>block</em> with a tree of +YAML::BaseNodes+, one tree for each
+consecutive document in the YAML stream contained in <em>io</em>.</p>
+
+<pre><code>File.open( &#39;many-docs.yaml&#39; ) do |yf|
+  YAML.each_node( yf ) do |ydoc|
+    ## ydoc contains a tree of nodes
+    ## from the YAML document
+  end
+end
+</code></pre>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-each_node_source')" id="l_method-c-each_node_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/8ef7bb8c211d156b33f1f97f7c500e5b465fdf5b/ext/syck/lib/syck.rb#L248" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-each_node_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/syck/lib/syck.rb, line 248</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">each_node</span>( <span class="ruby-identifier">io</span>, <span class="ruby-operator">&amp;</span><span class="ruby-identifier">doc_proc</span> )
+    <span class="ruby-identifier">warn</span> <span class="ruby-node">&quot;#{caller[0]}: YAML.each_node is deprecated&quot;</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">$VERBOSE</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-operator">!</span><span class="ruby-identifier">caller</span>[<span class="ruby-number">0</span>].<span class="ruby-identifier">start_with?</span>(<span class="ruby-constant">File</span>.<span class="ruby-identifier">dirname</span>(<span class="ruby-keyword">__FILE__</span>))
+    <span class="ruby-identifier">generic_parser</span>.<span class="ruby-identifier">load_documents</span>( <span class="ruby-identifier">io</span>, <span class="ruby-operator">&amp;</span><span class="ruby-identifier">doc_proc</span> )
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-emitter">
+            
+              <b>emitter</b>()
+            
+            <a href="../classes/Syck.html#method-c-emitter" name="method-c-emitter" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Returns a new default emitter</p>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-emitter_source')" id="l_method-c-emitter_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/8ef7bb8c211d156b33f1f97f7c500e5b465fdf5b/ext/syck/lib/syck.rb#L99" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-emitter_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/syck/lib/syck.rb, line 99</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">emitter</span>
+    <span class="ruby-identifier">warn</span> <span class="ruby-node">&quot;#{caller[0]}: YAML.emitter is deprecated&quot;</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">$VERBOSE</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-operator">!</span><span class="ruby-identifier">caller</span>[<span class="ruby-number">0</span>].<span class="ruby-identifier">start_with?</span>(<span class="ruby-constant">File</span>.<span class="ruby-identifier">dirname</span>(<span class="ruby-keyword">__FILE__</span>))
+    <span class="ruby-constant">Emitter</span>.<span class="ruby-identifier">new</span>.<span class="ruby-identifier">set_resolver</span>( <span class="ruby-keyword">self</span>.<span class="ruby-identifier">resolver</span> )
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-escape">
+            
+              <b>escape</b>( value, skip = &quot;&quot; )
+            
+            <a href="../classes/Syck.html#method-c-escape" name="method-c-escape" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Escape the string, condensing common escapes</p>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-escape_source')" id="l_method-c-escape_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/eb71e5cd67f4ce4da5ba331f93a8e36c65457b94/ext/syck/lib/syck/encoding.rb#L10" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-escape_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/syck/lib/syck/encoding.rb, line 10</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">escape</span>( <span class="ruby-identifier">value</span>, <span class="ruby-identifier">skip</span> = <span class="ruby-string">&quot;&quot;</span> )
+      <span class="ruby-identifier">warn</span> <span class="ruby-node">&quot;#{caller[0]}: YAML.escape is deprecated&quot;</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">$VERBOSE</span>
+        <span class="ruby-identifier">value</span>.<span class="ruby-identifier">gsub</span>( <span class="ruby-regexp">/\/</span>, <span class="ruby-string">&quot;\\\\\\&quot;</span> ).
+      <span class="ruby-identifier">gsub</span>( <span class="ruby-regexp">/&quot;/</span>, <span class="ruby-string">&quot;\\\&quot;&quot;</span> ).
+      <span class="ruby-identifier">gsub</span>( <span class="ruby-regexp">/([\x00-\x1f])/</span> ) <span class="ruby-keyword">do</span>
+         <span class="ruby-identifier">skip</span>[<span class="ruby-node">$&amp;</span>] <span class="ruby-operator">||</span> <span class="ruby-constant">ESCAPES</span>[ <span class="ruby-node">$&amp;</span>.<span class="ruby-identifier">unpack</span>(<span class="ruby-string">&quot;C&quot;</span>)[<span class="ruby-number">0</span>] ]
+     <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-generic_parser">
+            
+              <b>generic_parser</b>()
+            
+            <a href="../classes/Syck.html#method-c-generic_parser" name="method-c-generic_parser" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Returns a new generic parser</p>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-generic_parser_source')" id="l_method-c-generic_parser_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/8ef7bb8c211d156b33f1f97f7c500e5b465fdf5b/ext/syck/lib/syck.rb#L87" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-generic_parser_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/syck/lib/syck.rb, line 87</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">generic_parser</span>
+    <span class="ruby-identifier">warn</span> <span class="ruby-node">&quot;#{caller[0]}: YAML.generic_parser is deprecated, switch to psych&quot;</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">$VERBOSE</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-operator">!</span><span class="ruby-identifier">caller</span>[<span class="ruby-number">0</span>].<span class="ruby-identifier">start_with?</span>(<span class="ruby-constant">File</span>.<span class="ruby-identifier">dirname</span>(<span class="ruby-keyword">__FILE__</span>))
+    <span class="ruby-constant">Parser</span>.<span class="ruby-identifier">new</span>.<span class="ruby-identifier">set_resolver</span>( <span class="ruby-constant">GenericResolver</span> )
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-load">
+            
+              <b>load</b>( io )
+            
+            <a href="../classes/Syck.html#method-c-load" name="method-c-load" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Load a document from the current <em>io</em> stream.</p>
+
+<pre><code>File.open( &#39;animals.yaml&#39; ) { |yf| YAML::load( yf ) }
+   #=&gt; [&#39;badger&#39;, &#39;elephant&#39;, &#39;tiger&#39;]
+</code></pre>
+
+<p>Can also load from a string.</p>
+
+<pre><code>YAML.load( &quot;--- :locked&quot; )
+   #=&gt; :locked
+</code></pre>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-load_source')" id="l_method-c-load_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/8ef7bb8c211d156b33f1f97f7c500e5b465fdf5b/ext/syck/lib/syck.rb#L133" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-load_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/syck/lib/syck.rb, line 133</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">load</span>( <span class="ruby-identifier">io</span> )
+    <span class="ruby-identifier">parser</span>.<span class="ruby-identifier">load</span>( <span class="ruby-identifier">io</span> )
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-load_documents">
+            
+              <b>load_documents</b>( io, &amp;doc_proc )
+            
+            <a href="../classes/Syck.html#method-c-load_documents" name="method-c-load_documents" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Calls <em>block</em> with each consecutive document in the YAML stream
+contained in <em>io</em>.</p>
+
+<pre><code>File.open( &#39;many-docs.yaml&#39; ) do |yf|
+  YAML.load_documents( yf ) do |ydoc|
+    ## ydoc contains the single object
+    ## from the YAML document
+  end
+end
+</code></pre>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-load_documents_source')" id="l_method-c-load_documents_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/8ef7bb8c211d156b33f1f97f7c500e5b465fdf5b/ext/syck/lib/syck.rb#L233" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-load_documents_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/syck/lib/syck.rb, line 233</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">load_documents</span>( <span class="ruby-identifier">io</span>, <span class="ruby-operator">&amp;</span><span class="ruby-identifier">doc_proc</span> )
+    <span class="ruby-identifier">parser</span>.<span class="ruby-identifier">load_documents</span>( <span class="ruby-identifier">io</span>, <span class="ruby-operator">&amp;</span><span class="ruby-identifier">doc_proc</span> )
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-load_file">
+            
+              <b>load_file</b>( filepath )
+            
+            <a href="../classes/Syck.html#method-c-load_file" name="method-c-load_file" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Load a document from the file located at <em>filepath</em>.</p>
+
+<pre><code>YAML.load_file( &#39;animals.yaml&#39; )
+   #=&gt; [&#39;badger&#39;, &#39;elephant&#39;, &#39;tiger&#39;]
+</code></pre>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-load_file_source')" id="l_method-c-load_file_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/8ef7bb8c211d156b33f1f97f7c500e5b465fdf5b/ext/syck/lib/syck.rb#L143" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-load_file_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/syck/lib/syck.rb, line 143</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">load_file</span>( <span class="ruby-identifier">filepath</span> )
+    <span class="ruby-constant">File</span>.<span class="ruby-identifier">open</span>( <span class="ruby-identifier">filepath</span> ) <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">f</span><span class="ruby-operator">|</span>
+        <span class="ruby-identifier">load</span>( <span class="ruby-identifier">f</span> )
+    <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-load_stream">
+            
+              <b>load_stream</b>( io )
+            
+            <a href="../classes/Syck.html#method-c-load_stream" name="method-c-load_stream" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Loads all documents from the current <em>io</em> stream, returning a
++YAML::Stream+ object containing all loaded documents.</p>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-load_stream_source')" id="l_method-c-load_stream_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/8ef7bb8c211d156b33f1f97f7c500e5b465fdf5b/ext/syck/lib/syck.rb#L274" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-load_stream_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/syck/lib/syck.rb, line 274</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">load_stream</span>( <span class="ruby-identifier">io</span> )
+    <span class="ruby-identifier">d</span> = <span class="ruby-keyword">nil</span>
+    <span class="ruby-identifier">parser</span>.<span class="ruby-identifier">load_documents</span>( <span class="ruby-identifier">io</span> ) <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">doc</span><span class="ruby-operator">|</span>
+        <span class="ruby-identifier">d</span> = <span class="ruby-constant">Stream</span>.<span class="ruby-identifier">new</span> <span class="ruby-keyword">if</span> <span class="ruby-keyword">not</span> <span class="ruby-identifier">d</span>
+        <span class="ruby-identifier">d</span>.<span class="ruby-identifier">add</span>( <span class="ruby-identifier">doc</span> )
+    <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">return</span> <span class="ruby-identifier">d</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-make_stream">
+            
+              <b>make_stream</b>( io )
+            
+            <a href="../classes/Syck.html#method-c-make_stream" name="method-c-make_stream" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Class method for creating streams</p>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-make_stream_source')" id="l_method-c-make_stream_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/eb71e5cd67f4ce4da5ba331f93a8e36c65457b94/ext/syck/lib/syck/stringio.rb#L57" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-make_stream_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/syck/lib/syck/stringio.rb, line 57</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">Syck</span>.<span class="ruby-identifier">make_stream</span>( <span class="ruby-identifier">io</span> )
+<span class="ruby-keyword">if</span> <span class="ruby-constant">String</span> <span class="ruby-operator">===</span> <span class="ruby-identifier">io</span>
+    <span class="ruby-identifier">io</span> = <span class="ruby-constant">StringIO</span>.<span class="ruby-identifier">new</span>( <span class="ruby-identifier">io</span> )
+<span class="ruby-keyword">elsif</span> <span class="ruby-keyword">not</span> <span class="ruby-constant">IO</span> <span class="ruby-operator">===</span> <span class="ruby-identifier">io</span>
+    <span class="ruby-identifier">raise</span> <span class="ruby-constant">Syck</span><span class="ruby-operator">::</span><span class="ruby-constant">Error</span>, <span class="ruby-string">&quot;YAML stream must be an IO or String object.&quot;</span>
+<span class="ruby-keyword">end</span>
+<span class="ruby-keyword">if</span> <span class="ruby-constant">Syck</span><span class="ruby-operator">::</span><span class="ruby-identifier">unicode</span>
+    <span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">io</span>.<span class="ruby-identifier">readline</span>
+        <span class="ruby-constant">Syck</span>.<span class="ruby-identifier">utf_to_internal</span>( <span class="ruby-identifier">readline</span>( <span class="ruby-ivar">@ln_sep</span> ), <span class="ruby-ivar">@utf_encoding</span> )
+    <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">io</span>.<span class="ruby-identifier">check_unicode</span>
+        <span class="ruby-ivar">@utf_encoding</span> = <span class="ruby-constant">Syck</span>.<span class="ruby-identifier">sniff_encoding</span>( <span class="ruby-identifier">read</span>( <span class="ruby-number">4</span> ) )
+        <span class="ruby-ivar">@ln_sep</span> = <span class="ruby-constant">Syck</span>.<span class="ruby-identifier">enc_separator</span>( <span class="ruby-ivar">@utf_encoding</span> )
+        <span class="ruby-identifier">seek</span>( <span class="ruby-number">-4</span>, <span class="ruby-constant">IO</span><span class="ruby-operator">::</span><span class="ruby-constant">SEEK_CUR</span> )
+    <span class="ruby-keyword">end</span>
+            <span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">io</span>.<span class="ruby-identifier">utf_encoding</span>
+              <span class="ruby-ivar">@utf_encoding</span>
+            <span class="ruby-keyword">end</span>
+    <span class="ruby-identifier">io</span>.<span class="ruby-identifier">check_unicode</span>
+<span class="ruby-keyword">else</span>
+    <span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">io</span>.<span class="ruby-identifier">utf_encoding</span>
+        <span class="ruby-value">:None</span>
+    <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span>
+<span class="ruby-identifier">io</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-object_maker">
+            
+              <b>object_maker</b>( obj_class, val )
+            
+            <a href="../classes/Syck.html#method-c-object_maker" name="method-c-object_maker" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Allocate blank object</p>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-object_maker_source')" id="l_method-c-object_maker_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/8ef7bb8c211d156b33f1f97f7c500e5b465fdf5b/ext/syck/lib/syck.rb#L376" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-object_maker_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/syck/lib/syck.rb, line 376</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">object_maker</span>( <span class="ruby-identifier">obj_class</span>, <span class="ruby-identifier">val</span> )
+    <span class="ruby-identifier">warn</span> <span class="ruby-node">&quot;#{caller[0]}: YAML.object_maker is deprecated&quot;</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">$VERBOSE</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-operator">!</span><span class="ruby-identifier">caller</span>[<span class="ruby-number">0</span>].<span class="ruby-identifier">start_with?</span>(<span class="ruby-constant">File</span>.<span class="ruby-identifier">dirname</span>(<span class="ruby-keyword">__FILE__</span>))
+    <span class="ruby-keyword">if</span> <span class="ruby-constant">Hash</span> <span class="ruby-operator">===</span> <span class="ruby-identifier">val</span>
+        <span class="ruby-identifier">o</span> = <span class="ruby-identifier">obj_class</span>.<span class="ruby-identifier">allocate</span>
+        <span class="ruby-identifier">val</span>.<span class="ruby-identifier">each_pair</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">k</span>,<span class="ruby-identifier">v</span><span class="ruby-operator">|</span>
+            <span class="ruby-identifier">o</span>.<span class="ruby-identifier">instance_variable_set</span>(<span class="ruby-node">&quot;@#{k}&quot;</span>, <span class="ruby-identifier">v</span>)
+        }
+        <span class="ruby-identifier">o</span>
+    <span class="ruby-keyword">else</span>
+        <span class="ruby-identifier">raise</span> <span class="ruby-constant">Error</span>, <span class="ruby-string">&quot;Invalid object explicitly tagged !ruby/Object: &quot;</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">val</span>.<span class="ruby-identifier">inspect</span>
+    <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-parse">
+            
+              <b>parse</b>( io )
+            
+            <a href="../classes/Syck.html#method-c-parse" name="method-c-parse" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Parse the first document from the current <em>io</em> stream</p>
+
+<pre><code>File.open( &#39;animals.yaml&#39; ) { |yf| YAML::load( yf ) }
+   #=&gt; #&lt;YAML::Syck::Node:0x82ccce0
+        @kind=:seq,
+        @value=
+         [#&lt;YAML::Syck::Node:0x82ccd94
+           @kind=:scalar,
+           @type_id=&quot;str&quot;,
+           @value=&quot;badger&quot;&gt;,
+          #&lt;YAML::Syck::Node:0x82ccd58
+           @kind=:scalar,
+           @type_id=&quot;str&quot;,
+           @value=&quot;elephant&quot;&gt;,
+          #&lt;YAML::Syck::Node:0x82ccd1c
+           @kind=:scalar,
+           @type_id=&quot;str&quot;,
+           @value=&quot;tiger&quot;&gt;]&gt;
+</code></pre>
+
+<p>Can also load from a string.</p>
+
+<pre><code>YAML.parse( &quot;--- :locked&quot; )
+   #=&gt; #&lt;YAML::Syck::Node:0x82edddc
+         @type_id=&quot;tag:ruby.yaml.org,2002:sym&quot;,
+         @value=&quot;:locked&quot;, @kind=:scalar&gt;
+</code></pre>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-parse_source')" id="l_method-c-parse_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/8ef7bb8c211d156b33f1f97f7c500e5b465fdf5b/ext/syck/lib/syck.rb#L176" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-parse_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/syck/lib/syck.rb, line 176</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">parse</span>( <span class="ruby-identifier">io</span> )
+    <span class="ruby-identifier">generic_parser</span>.<span class="ruby-identifier">load</span>( <span class="ruby-identifier">io</span> )
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-parse_documents">
+            
+              <b>parse_documents</b>( io, &amp;doc_proc )
+            
+            <a href="../classes/Syck.html#method-c-parse_documents" name="method-c-parse_documents" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Calls <em>block</em> with a tree of +YAML::BaseNodes+, one tree for each
+consecutive document in the YAML stream contained in <em>io</em>.</p>
+
+<pre><code>File.open( &#39;many-docs.yaml&#39; ) do |yf|
+  YAML.parse_documents( yf ) do |ydoc|
+    ## ydoc contains a tree of nodes
+    ## from the YAML document
+  end
+end
+</code></pre>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-parse_documents_source')" id="l_method-c-parse_documents_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/8ef7bb8c211d156b33f1f97f7c500e5b465fdf5b/ext/syck/lib/syck.rb#L264" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-parse_documents_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/syck/lib/syck.rb, line 264</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">parse_documents</span>( <span class="ruby-identifier">io</span>, <span class="ruby-operator">&amp;</span><span class="ruby-identifier">doc_proc</span> )
+    <span class="ruby-identifier">warn</span> <span class="ruby-node">&quot;#{caller[0]}: YAML.parse_documents is deprecated, use load_stream&quot;</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">$VERBOSE</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-operator">!</span><span class="ruby-identifier">caller</span>[<span class="ruby-number">0</span>].<span class="ruby-identifier">start_with?</span>(<span class="ruby-constant">File</span>.<span class="ruby-identifier">dirname</span>(<span class="ruby-keyword">__FILE__</span>))
+    <span class="ruby-keyword">self</span>.<span class="ruby-identifier">each_node</span>( <span class="ruby-identifier">io</span>, <span class="ruby-operator">&amp;</span><span class="ruby-identifier">doc_proc</span> )
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-parse_file">
+            
+              <b>parse_file</b>( filepath )
+            
+            <a href="../classes/Syck.html#method-c-parse_file" name="method-c-parse_file" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Parse a document from the file located at <em>filepath</em>.</p>
+
+<pre><code>YAML.parse_file( &#39;animals.yaml&#39; )
+   #=&gt; #&lt;YAML::Syck::Node:0x82ccce0
+        @kind=:seq,
+        @value=
+         [#&lt;YAML::Syck::Node:0x82ccd94
+           @kind=:scalar,
+           @type_id=&quot;str&quot;,
+           @value=&quot;badger&quot;&gt;,
+          #&lt;YAML::Syck::Node:0x82ccd58
+           @kind=:scalar,
+           @type_id=&quot;str&quot;,
+           @value=&quot;elephant&quot;&gt;,
+          #&lt;YAML::Syck::Node:0x82ccd1c
+           @kind=:scalar,
+           @type_id=&quot;str&quot;,
+           @value=&quot;tiger&quot;&gt;]&gt;
+</code></pre>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-parse_file_source')" id="l_method-c-parse_file_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/8ef7bb8c211d156b33f1f97f7c500e5b465fdf5b/ext/syck/lib/syck.rb#L200" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-parse_file_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/syck/lib/syck.rb, line 200</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">parse_file</span>( <span class="ruby-identifier">filepath</span> )
+    <span class="ruby-constant">File</span>.<span class="ruby-identifier">open</span>( <span class="ruby-identifier">filepath</span> ) <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">f</span><span class="ruby-operator">|</span>
+        <span class="ruby-identifier">parse</span>( <span class="ruby-identifier">f</span> )
+    <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-parser">
+            
+              <b>parser</b>()
+            
+            <a href="../classes/Syck.html#method-c-parser" name="method-c-parser" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Returns a new default parser</p>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-parser_source')" id="l_method-c-parser_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/8ef7bb8c211d156b33f1f97f7c500e5b465fdf5b/ext/syck/lib/syck.rb#L84" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-parser_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/syck/lib/syck.rb, line 84</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">parser</span>; <span class="ruby-constant">Parser</span>.<span class="ruby-identifier">new</span>.<span class="ruby-identifier">set_resolver</span>( <span class="ruby-keyword">self</span>.<span class="ruby-identifier">resolver</span> ); <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-quick_emit">
+            
+              <b>quick_emit</b>( oid, opts = {}, &amp;e )
+            
+            <a href="../classes/Syck.html#method-c-quick_emit" name="method-c-quick_emit" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Allocate an Emitter if needed</p>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-quick_emit_source')" id="l_method-c-quick_emit_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/8ef7bb8c211d156b33f1f97f7c500e5b465fdf5b/ext/syck/lib/syck.rb#L392" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-quick_emit_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/syck/lib/syck.rb, line 392</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">quick_emit</span>( <span class="ruby-identifier">oid</span>, <span class="ruby-identifier">opts</span> = {}, <span class="ruby-operator">&amp;</span><span class="ruby-identifier">e</span> )
+    <span class="ruby-identifier">warn</span> <span class="ruby-node">&quot;#{caller[0]}: YAML.quick_emit is deprecated&quot;</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">$VERBOSE</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-operator">!</span><span class="ruby-identifier">caller</span>[<span class="ruby-number">0</span>].<span class="ruby-identifier">start_with?</span>(<span class="ruby-constant">File</span>.<span class="ruby-identifier">dirname</span>(<span class="ruby-keyword">__FILE__</span>))
+    <span class="ruby-identifier">out</span> =
+        <span class="ruby-keyword">if</span> <span class="ruby-identifier">opts</span>.<span class="ruby-identifier">is_a?</span> <span class="ruby-constant">Emitter</span>
+            <span class="ruby-identifier">opts</span>
+        <span class="ruby-keyword">else</span>
+            <span class="ruby-identifier">emitter</span>.<span class="ruby-identifier">reset</span>( <span class="ruby-identifier">opts</span> )
+        <span class="ruby-keyword">end</span>
+    <span class="ruby-identifier">out</span>.<span class="ruby-identifier">emit</span>( <span class="ruby-identifier">oid</span>, <span class="ruby-operator">&amp;</span><span class="ruby-identifier">e</span> )
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-read_type_class">
+            
+              <b>read_type_class</b>( type, obj_class )
+            
+            <a href="../classes/Syck.html#method-c-read_type_class" name="method-c-read_type_class" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p><a href="Method.html">Method</a> to extract colon-seperated type and class,
+returning the type and the constant of the class</p>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-read_type_class_source')" id="l_method-c-read_type_class_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/8ef7bb8c211d156b33f1f97f7c500e5b465fdf5b/ext/syck/lib/syck.rb#L366" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-read_type_class_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/syck/lib/syck.rb, line 366</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">read_type_class</span>( <span class="ruby-identifier">type</span>, <span class="ruby-identifier">obj_class</span> )
+    <span class="ruby-identifier">warn</span> <span class="ruby-node">&quot;#{caller[0]}: YAML.read_type_class is deprecated&quot;</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">$VERBOSE</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-operator">!</span><span class="ruby-identifier">caller</span>[<span class="ruby-number">0</span>].<span class="ruby-identifier">start_with?</span>(<span class="ruby-constant">File</span>.<span class="ruby-identifier">dirname</span>(<span class="ruby-keyword">__FILE__</span>))
+    <span class="ruby-identifier">type</span>, <span class="ruby-identifier">tclass</span> = <span class="ruby-identifier">type</span>.<span class="ruby-identifier">split</span>( <span class="ruby-string">&#39;:&#39;</span>, <span class="ruby-number">4</span> ).<span class="ruby-identifier">last</span>(<span class="ruby-number">2</span>)
+    <span class="ruby-identifier">tclass</span>.<span class="ruby-identifier">split</span>( <span class="ruby-string">&quot;::&quot;</span> ).<span class="ruby-identifier">each</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">c</span><span class="ruby-operator">|</span> <span class="ruby-identifier">obj_class</span> = <span class="ruby-identifier">obj_class</span>.<span class="ruby-identifier">const_get</span>( <span class="ruby-identifier">c</span> ) } <span class="ruby-keyword">if</span> <span class="ruby-identifier">tclass</span>
+    <span class="ruby-keyword">return</span> [ <span class="ruby-identifier">type</span>, <span class="ruby-identifier">obj_class</span> ]
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-resolver">
+            
+              <b>resolver</b>()
+            
+            <a href="../classes/Syck.html#method-c-resolver" name="method-c-resolver" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Returns the default resolver</p>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-resolver_source')" id="l_method-c-resolver_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/8ef7bb8c211d156b33f1f97f7c500e5b465fdf5b/ext/syck/lib/syck.rb#L93" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-resolver_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/syck/lib/syck.rb, line 93</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">resolver</span>
+    <span class="ruby-identifier">warn</span> <span class="ruby-node">&quot;#{caller[0]}: YAML.resolver is deprecated&quot;</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">$VERBOSE</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-operator">!</span><span class="ruby-identifier">caller</span>[<span class="ruby-number">0</span>].<span class="ruby-identifier">start_with?</span>(<span class="ruby-constant">File</span>.<span class="ruby-identifier">dirname</span>(<span class="ruby-keyword">__FILE__</span>))
+    <span class="ruby-constant">DefaultResolver</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-tag_class">
+            
+              <b>tag_class</b>( tag, cls )
+            
+            <a href="../classes/Syck.html#method-c-tag_class" name="method-c-tag_class" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Associates a taguri <em>tag</em> with a Ruby class <em>cls</em>.  The
+taguri is used to give types to classes when loading YAML.  Taguris are of
+the form:</p>
+
+<pre><code>tag:authorityName,date:specific</code></pre>
+
+<p>The <code>authorityName</code> is a domain name or email address.  The
+<code>date</code> is the date the type was issued in YYYY or YYYY-MM or
+YYYY-MM-DD format.  The <code>specific</code> is a name for the type being
+added.</p>
+
+<p>For example, built-in YAML types have &#39;yaml.org&#39; as the
+<code>authorityName</code> and &#39;2002&#39; as the <code>date</code>. 
+The <code>specific</code> is simply the name of the type:</p>
+
+<pre><code>tag:yaml.org,2002:int
+tag:yaml.org,2002:float
+tag:yaml.org,2002:timestamp</code></pre>
+
+<p>The domain must be owned by you on the <code>date</code> declared.  If you
+don&#39;t own any domains on the date you declare the type, you can simply
+use an e-mail address.</p>
+
+<pre><code>tag:why@ruby-lang.org,2004:notes/personal</code></pre>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-tag_class_source')" id="l_method-c-tag_class_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/5b5bbdbb35098e8e2dabe7af5d31526a54dc8bbd/ext/syck/lib/syck/tag.rb#L34" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-tag_class_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/syck/lib/syck/tag.rb, line 34</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">tag_class</span>( <span class="ruby-identifier">tag</span>, <span class="ruby-identifier">cls</span> )
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">@@tagged_classes</span>.<span class="ruby-identifier">has_key?</span> <span class="ruby-identifier">tag</span>
+        <span class="ruby-identifier">warn</span> <span class="ruby-node">&quot;class #{ @@tagged_classes[tag] } held ownership of the #{ tag } tag&quot;</span>
+    <span class="ruby-keyword">end</span>
+    <span class="ruby-identifier">@@tagged_classes</span>[<span class="ruby-identifier">tag</span>] = <span class="ruby-identifier">cls</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-tagged_classes">
+            
+              <b>tagged_classes</b>()
+            
+            <a href="../classes/Syck.html#method-c-tagged_classes" name="method-c-tagged_classes" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Returns the complete dictionary of taguris, paired with classes.  The key
+for the dictionary is the full taguri.  The value for each key is the class
+constant associated to that taguri.</p>
+
+<pre><code>YAML.tagged_classes[&quot;tag:yaml.org,2002:int&quot;] =&gt; Integer
+</code></pre>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-tagged_classes_source')" id="l_method-c-tagged_classes_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/5b5bbdbb35098e8e2dabe7af5d31526a54dc8bbd/ext/syck/lib/syck/tag.rb#L47" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-tagged_classes_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/syck/lib/syck/tag.rb, line 47</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">tagged_classes</span>
+    <span class="ruby-identifier">@@tagged_classes</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-tagurize">
+            
+              <b>tagurize</b>( val )
+            
+            <a href="../classes/Syck.html#method-c-tagurize" name="method-c-tagurize" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Convert a type_id to a taguri</p>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-tagurize_source')" id="l_method-c-tagurize_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/8ef7bb8c211d156b33f1f97f7c500e5b465fdf5b/ext/syck/lib/syck.rb#L341" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-tagurize_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/syck/lib/syck.rb, line 341</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">tagurize</span>( <span class="ruby-identifier">val</span> )
+    <span class="ruby-identifier">warn</span> <span class="ruby-node">&quot;#{caller[0]}: YAML.tagurize is deprecated&quot;</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">$VERBOSE</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-operator">!</span><span class="ruby-identifier">caller</span>[<span class="ruby-number">0</span>].<span class="ruby-identifier">start_with?</span>(<span class="ruby-constant">File</span>.<span class="ruby-identifier">dirname</span>(<span class="ruby-keyword">__FILE__</span>))
+    <span class="ruby-identifier">resolver</span>.<span class="ruby-identifier">tagurize</span>( <span class="ruby-identifier">val</span> )
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-transfer">
+            
+              <b>transfer</b>( type_id, obj )
+            
+            <a href="../classes/Syck.html#method-c-transfer" name="method-c-transfer" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Apply a transfer method to a Ruby object</p>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-transfer_source')" id="l_method-c-transfer_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/8ef7bb8c211d156b33f1f97f7c500e5b465fdf5b/ext/syck/lib/syck.rb#L349" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-transfer_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/syck/lib/syck.rb, line 349</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">transfer</span>( <span class="ruby-identifier">type_id</span>, <span class="ruby-identifier">obj</span> )
+    <span class="ruby-identifier">warn</span> <span class="ruby-node">&quot;#{caller[0]}: YAML.transfer is deprecated&quot;</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">$VERBOSE</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-operator">!</span><span class="ruby-identifier">caller</span>[<span class="ruby-number">0</span>].<span class="ruby-identifier">start_with?</span>(<span class="ruby-constant">File</span>.<span class="ruby-identifier">dirname</span>(<span class="ruby-keyword">__FILE__</span>))
+    <span class="ruby-identifier">resolver</span>.<span class="ruby-identifier">transfer</span>( <span class="ruby-identifier">tagurize</span>( <span class="ruby-identifier">type_id</span> ), <span class="ruby-identifier">obj</span> )
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-try_implicit">
+            
+              <b>try_implicit</b>( obj )
+            
+            <a href="../classes/Syck.html#method-c-try_implicit" name="method-c-try_implicit" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Apply any implicit a node may qualify for</p>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-try_implicit_source')" id="l_method-c-try_implicit_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/8ef7bb8c211d156b33f1f97f7c500e5b465fdf5b/ext/syck/lib/syck.rb#L357" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-try_implicit_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/syck/lib/syck.rb, line 357</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">try_implicit</span>( <span class="ruby-identifier">obj</span> )
+    <span class="ruby-identifier">warn</span> <span class="ruby-node">&quot;#{caller[0]}: YAML.try_implicit is deprecated&quot;</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">$VERBOSE</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-operator">!</span><span class="ruby-identifier">caller</span>[<span class="ruby-number">0</span>].<span class="ruby-identifier">start_with?</span>(<span class="ruby-constant">File</span>.<span class="ruby-identifier">dirname</span>(<span class="ruby-keyword">__FILE__</span>))
+    <span class="ruby-identifier">transfer</span>( <span class="ruby-identifier">detect_implicit</span>( <span class="ruby-identifier">obj</span> ), <span class="ruby-identifier">obj</span> )
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-unescape">
+            
+              <b>unescape</b>( value )
+            
+            <a href="../classes/Syck.html#method-c-unescape" name="method-c-unescape" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Unescape the condenses escapes</p>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-unescape_source')" id="l_method-c-unescape_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/eb71e5cd67f4ce4da5ba331f93a8e36c65457b94/ext/syck/lib/syck/encoding.rb#L22" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-unescape_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/syck/lib/syck/encoding.rb, line 22</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">unescape</span>( <span class="ruby-identifier">value</span> )
+      <span class="ruby-identifier">warn</span> <span class="ruby-node">&quot;#{caller[0]}: YAML.unescape is deprecated&quot;</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">$VERBOSE</span>
+        <span class="ruby-identifier">value</span>.<span class="ruby-identifier">gsub</span>( <span class="ruby-regexp">/\(?:([nevfbart\])|0?x([0-9a-fA-F]{2})|u([0-9a-fA-F]{4}))/</span> ) {
+                <span class="ruby-keyword">if</span> <span class="ruby-node">$3</span>
+                        [<span class="ruby-node">&quot;#$3&quot;</span>.<span class="ruby-identifier">hex</span> ].<span class="ruby-identifier">pack</span>(<span class="ruby-string">&#39;U*&#39;</span>)
+                <span class="ruby-keyword">elsif</span> <span class="ruby-node">$2</span>
+                        [<span class="ruby-node">$2</span>].<span class="ruby-identifier">pack</span>( <span class="ruby-string">&quot;H2&quot;</span> )
+                <span class="ruby-keyword">else</span>
+                        <span class="ruby-constant">UNESCAPES</span>[<span class="ruby-node">$1</span>]
+                <span class="ruby-keyword">end</span>
+        }
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                        </div>
+
+    </div>
+  </body>
+</html>    

@@ -1,0 +1,343 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>TkManageFocus</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="../css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/main.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/github.css" type="text/css" media="screen" />
+<script src="../js/jquery-1.3.2.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/jquery-effect.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+
+<body>     
+    <div class="banner">
+        
+        <h1>
+            <span class="type">Module</span> 
+            TkManageFocus 
+            
+        </h1>
+        <ul class="files">
+            
+            <li><a href="../files/ext/tk/lib/tk/mngfocus_rb.html">ext/tk/lib/tk/mngfocus.rb</a></li>
+            
+        </ul>
+    </div>
+    <div id="bodyContent">
+        <div id="content">
+  
+
+
+  
+
+
+  
+  
+
+
+  
+
+
+  
+    <!-- Method ref -->
+    <div class="sectiontitle">Methods</div>
+    <dl class="methods">
+      
+        <dt>F</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-focusNext">focusNext</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-focusPrev">focusPrev</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-c-followsMouse">followsMouse</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>N</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-next">next</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>P</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-prev">prev</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+    </dl>
+  
+
+  
+
+
+
+  
+
+    
+
+    
+
+    
+      <!-- Section constants -->
+      <div class="sectiontitle">Constants</div>
+      <table border='0' cellpadding='5'>
+        
+          <tr valign='top'>
+            <td class="attr-name">TkCommandNames</td>
+            <td>=</td>
+            <td class="attr-value">[
+&#39;tk_focusFollowMouse&#39;.freeze,
+&#39;tk_focusNext&#39;.freeze,
+&#39;tk_focusPrev&#39;.freeze
+].freeze</td>
+          </tr>
+          
+            <tr valign='top'>
+              <td>&nbsp;</td>
+              <td colspan="2" class="attr-desc"></td>
+            </tr>
+          
+        
+      </table>
+    
+
+
+    
+
+
+    <!-- Methods -->
+    
+      <div class="sectiontitle">Class Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-c-followsMouse">
+            
+              <b>followsMouse</b>()
+            
+            <a href="../classes/TkManageFocus.html#method-c-followsMouse" name="method-c-followsMouse" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-followsMouse_source')" id="l_method-c-followsMouse_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/287a34ae0dfc23e4158f67cb7783d239f202c368/ext/tk/lib/tk/mngfocus.rb#L16" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-followsMouse_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tk/mngfocus.rb, line 16</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">TkManageFocus</span>.<span class="ruby-identifier">followsMouse</span>
+  <span class="ruby-identifier">tk_call_without_enc</span>(<span class="ruby-string">&#39;tk_focusFollowsMouse&#39;</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-next">
+            
+              <b>next</b>(win)
+            
+            <a href="../classes/TkManageFocus.html#method-c-next" name="method-c-next" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-next_source')" id="l_method-c-next_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/287a34ae0dfc23e4158f67cb7783d239f202c368/ext/tk/lib/tk/mngfocus.rb#L20" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-next_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tk/mngfocus.rb, line 20</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">TkManageFocus</span>.<span class="ruby-keyword">next</span>(<span class="ruby-identifier">win</span>)
+  <span class="ruby-identifier">tk_tcl2ruby</span>(<span class="ruby-identifier">tk_call</span>(<span class="ruby-string">&#39;tk_focusNext&#39;</span>, <span class="ruby-identifier">win</span>))
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-prev">
+            
+              <b>prev</b>(win)
+            
+            <a href="../classes/TkManageFocus.html#method-c-prev" name="method-c-prev" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-prev_source')" id="l_method-c-prev_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/287a34ae0dfc23e4158f67cb7783d239f202c368/ext/tk/lib/tk/mngfocus.rb#L27" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-prev_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tk/mngfocus.rb, line 27</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">TkManageFocus</span>.<span class="ruby-identifier">prev</span>(<span class="ruby-identifier">win</span>)
+  <span class="ruby-identifier">tk_tcl2ruby</span>(<span class="ruby-identifier">tk_call</span>(<span class="ruby-string">&#39;tk_focusPrev&#39;</span>, <span class="ruby-identifier">win</span>))
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                  
+      <div class="sectiontitle">Instance Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-i-focusNext">
+            
+              <b>focusNext</b>()
+            
+            <a href="../classes/TkManageFocus.html#method-i-focusNext" name="method-i-focusNext" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-focusNext_source')" id="l_method-i-focusNext_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/287a34ae0dfc23e4158f67cb7783d239f202c368/ext/tk/lib/tk/mngfocus.rb#L23" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-focusNext_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tk/mngfocus.rb, line 23</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">focusNext</span>
+  <span class="ruby-constant">TkManageFocus</span>.<span class="ruby-identifier">next</span>(<span class="ruby-keyword">self</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-focusPrev">
+            
+              <b>focusPrev</b>()
+            
+            <a href="../classes/TkManageFocus.html#method-i-focusPrev" name="method-i-focusPrev" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-focusPrev_source')" id="l_method-i-focusPrev_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/287a34ae0dfc23e4158f67cb7783d239f202c368/ext/tk/lib/tk/mngfocus.rb#L30" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-focusPrev_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tk/mngfocus.rb, line 30</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">focusPrev</span>
+  <span class="ruby-constant">TkManageFocus</span>.<span class="ruby-identifier">prev</span>(<span class="ruby-keyword">self</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                    </div>
+
+    </div>
+  </body>
+</html>    

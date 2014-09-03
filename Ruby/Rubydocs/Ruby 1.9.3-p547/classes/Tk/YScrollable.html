@@ -1,0 +1,319 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>Tk::Y_Scrollable</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="../../css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../../css/main.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../../css/github.css" type="text/css" media="screen" />
+<script src="../../js/jquery-1.3.2.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../js/jquery-effect.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../js/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+
+<body>     
+    <div class="banner">
+        
+        <h1>
+            <span class="type">Module</span> 
+            Tk::Y_Scrollable 
+            
+        </h1>
+        <ul class="files">
+            
+            <li><a href="../../files/ext/tk/lib/tk/scrollable_rb.html">ext/tk/lib/tk/scrollable.rb</a></li>
+            
+        </ul>
+    </div>
+    <div id="bodyContent">
+        <div id="content">
+  
+
+
+  
+
+
+  
+  
+
+
+  
+
+
+  
+    <!-- Method ref -->
+    <div class="sectiontitle">Methods</div>
+    <dl class="methods">
+      
+        <dt>Y</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-yscrollbar">yscrollbar</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-yscrollcommand">yscrollcommand</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-yview">yview</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-yview_moveto">yview_moveto</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-yview_scroll">yview_scroll</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+    </dl>
+  
+
+  
+
+
+
+  
+
+    
+
+    
+
+    
+
+
+    
+
+
+    <!-- Methods -->
+        
+      <div class="sectiontitle">Instance Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-i-yscrollbar">
+            
+              <b>yscrollbar</b>(bar=nil)
+            
+            <a href="../../classes/Tk/YScrollable.html#method-i-yscrollbar" name="method-i-yscrollbar" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-yscrollbar_source')" id="l_method-i-yscrollbar_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/8c74a181614dca02ea416e5e338b57450967ee02/ext/tk/lib/tk/scrollable.rb#L63" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-yscrollbar_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tk/scrollable.rb, line 63</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">yscrollbar</span>(<span class="ruby-identifier">bar</span>=<span class="ruby-keyword">nil</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">bar</span>
+    <span class="ruby-ivar">@yscrollbar</span> = <span class="ruby-identifier">bar</span>
+    <span class="ruby-ivar">@yscrollbar</span>.<span class="ruby-identifier">orient</span> <span class="ruby-string">&#39;vertical&#39;</span>
+    <span class="ruby-keyword">self</span>.<span class="ruby-identifier">yscrollcommand</span> {<span class="ruby-operator">|</span><span class="ruby-operator">*</span><span class="ruby-identifier">arg</span><span class="ruby-operator">|</span> <span class="ruby-ivar">@yscrollbar</span>.<span class="ruby-identifier">set</span>(<span class="ruby-operator">*</span><span class="ruby-identifier">arg</span>)}
+    <span class="ruby-ivar">@yscrollbar</span>.<span class="ruby-identifier">command</span> {<span class="ruby-operator">|</span><span class="ruby-operator">*</span><span class="ruby-identifier">arg</span><span class="ruby-operator">|</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">yview</span>(<span class="ruby-operator">*</span><span class="ruby-identifier">arg</span>)}
+    <span class="ruby-constant">Tk</span>.<span class="ruby-identifier">update</span>  <span class="ruby-comment"># avoid scrollbar trouble</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-ivar">@yscrollbar</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-yscrollcommand">
+            
+              <b>yscrollcommand</b>(cmd=Proc.new)
+            
+            <a href="../../classes/Tk/YScrollable.html#method-i-yscrollcommand" name="method-i-yscrollcommand" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-yscrollcommand_source')" id="l_method-i-yscrollcommand_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/8c74a181614dca02ea416e5e338b57450967ee02/ext/tk/lib/tk/scrollable.rb#L42" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-yscrollcommand_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tk/scrollable.rb, line 42</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">yscrollcommand</span>(<span class="ruby-identifier">cmd</span>=<span class="ruby-constant">Proc</span>.<span class="ruby-identifier">new</span>)
+  <span class="ruby-identifier">configure_cmd</span> <span class="ruby-string">&#39;yscrollcommand&#39;</span>, <span class="ruby-identifier">cmd</span>
+  <span class="ruby-comment"># Tk.update  # avoid scrollbar trouble</span>
+  <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-yview">
+            
+              <b>yview</b>(*index)
+            
+            <a href="../../classes/Tk/YScrollable.html#method-i-yview" name="method-i-yview" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-yview_source')" id="l_method-i-yview_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/8c74a181614dca02ea416e5e338b57450967ee02/ext/tk/lib/tk/scrollable.rb#L48" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-yview_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tk/scrollable.rb, line 48</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">yview</span>(<span class="ruby-operator">*</span><span class="ruby-identifier">index</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">index</span>.<span class="ruby-identifier">size</span> <span class="ruby-operator">==</span> <span class="ruby-number">0</span>
+    <span class="ruby-identifier">list</span>(<span class="ruby-identifier">tk_send_without_enc</span>(<span class="ruby-string">&#39;yview&#39;</span>))
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">tk_send_without_enc</span>(<span class="ruby-string">&#39;yview&#39;</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">index</span>)
+    <span class="ruby-keyword">self</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-yview_moveto">
+            
+              <b>yview_moveto</b>(*index)
+            
+            <a href="../../classes/Tk/YScrollable.html#method-i-yview_moveto" name="method-i-yview_moveto" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-yview_moveto_source')" id="l_method-i-yview_moveto_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/8c74a181614dca02ea416e5e338b57450967ee02/ext/tk/lib/tk/scrollable.rb#L56" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-yview_moveto_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tk/scrollable.rb, line 56</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">yview_moveto</span>(<span class="ruby-operator">*</span><span class="ruby-identifier">index</span>)
+  <span class="ruby-identifier">yview</span>(<span class="ruby-string">&#39;moveto&#39;</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">index</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-yview_scroll">
+            
+              <b>yview_scroll</b>(*index)
+            
+            <a href="../../classes/Tk/YScrollable.html#method-i-yview_scroll" name="method-i-yview_scroll" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-yview_scroll_source')" id="l_method-i-yview_scroll_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/8c74a181614dca02ea416e5e338b57450967ee02/ext/tk/lib/tk/scrollable.rb#L59" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-yview_scroll_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tk/scrollable.rb, line 59</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">yview_scroll</span>(<span class="ruby-operator">*</span><span class="ruby-identifier">index</span>)
+  <span class="ruby-identifier">yview</span>(<span class="ruby-string">&#39;scroll&#39;</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">index</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                    </div>
+
+    </div>
+  </body>
+</html>    

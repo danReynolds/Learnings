@@ -1,0 +1,778 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>TkResourceDB</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="../css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/main.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/github.css" type="text/css" media="screen" />
+<script src="../js/jquery-1.3.2.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/jquery-effect.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+
+<body>     
+    <div class="banner">
+        
+        <h1>
+            <span class="type">Module</span> 
+            TkResourceDB 
+            
+        </h1>
+        <ul class="files">
+            
+            <li><a href="../files/ext/tk/lib/tk/optiondb_rb.html">ext/tk/lib/tk/optiondb.rb</a></li>
+            
+        </ul>
+    </div>
+    <div id="bodyContent">
+        <div id="content">
+  
+
+
+  
+
+
+  
+  
+
+
+  
+
+
+  
+    <!-- Method ref -->
+    <div class="sectiontitle">Methods</div>
+    <dl class="methods">
+      
+        <dt>A</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-add">add</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>C</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-clear">clear</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>E</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-eval_under_random_base">eval_under_random_base</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>G</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-get">get</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>M</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-mutex">mutex</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>N</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-new_proc_class">new_proc_class</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-c-new_proc_class_random">new_proc_class_random</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>R</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-read_entries">read_entries</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-c-read_file">read_file</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-c-read_with_encoding">read_with_encoding</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-c-readfile">readfile</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+    </dl>
+  
+
+  
+    <!-- Includes -->
+    <div class="sectiontitle">Included Modules</div>
+    <ul>
+      
+        <li>
+          
+            <a href="Tk.html">
+              Tk
+            </a>
+          
+        </li>
+      
+    </ul>
+  
+
+
+
+  
+
+    
+
+    
+
+    
+      <!-- Section constants -->
+      <div class="sectiontitle">Constants</div>
+      <table border='0' cellpadding='5'>
+        
+          <tr valign='top'>
+            <td class="attr-name">TkCommandNames</td>
+            <td>=</td>
+            <td class="attr-value">[&#39;option&#39;.freeze].freeze</td>
+          </tr>
+          
+            <tr valign='top'>
+              <td>&nbsp;</td>
+              <td colspan="2" class="attr-desc"></td>
+            </tr>
+          
+        
+          <tr valign='top'>
+            <td class="attr-name">CmdClassID</td>
+            <td>=</td>
+            <td class="attr-value">[&#39;CMD_CLASS&#39;.freeze, TkUtil.untrust(&#39;00000&#39;)]).instance_eval{
+@mutex = Mutex.new</td>
+          </tr>
+          
+            <tr valign='top'>
+              <td>&nbsp;</td>
+              <td colspan="2" class="attr-desc"></td>
+            </tr>
+          
+        
+          <tr valign='top'>
+            <td class="attr-name">RAND_BASE_CNT</td>
+            <td>=</td>
+            <td class="attr-value">[0]</td>
+          </tr>
+          
+            <tr valign='top'>
+              <td>&nbsp;</td>
+              <td colspan="2" class="attr-desc"></td>
+            </tr>
+          
+        
+          <tr valign='top'>
+            <td class="attr-name">RAND_BASE_HEAD</td>
+            <td>=</td>
+            <td class="attr-value">&#39;ABCDEFGHIJKLMNOPQRSTUVWXYZ&#39;</td>
+          </tr>
+          
+            <tr valign='top'>
+              <td>&nbsp;</td>
+              <td colspan="2" class="attr-desc"></td>
+            </tr>
+          
+        
+          <tr valign='top'>
+            <td class="attr-name">RAND_BASE_CHAR</td>
+            <td>=</td>
+            <td class="attr-value">RAND_BASE_HEAD + &#39;abcdefghijklmnopqrstuvwxyz0123456789_&#39;</td>
+          </tr>
+          
+            <tr valign='top'>
+              <td>&nbsp;</td>
+              <td colspan="2" class="attr-desc"></td>
+            </tr>
+          
+        
+      </table>
+    
+
+
+    
+
+
+    <!-- Methods -->
+    
+      <div class="sectiontitle">Class Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-c-add">
+            
+              <b>add</b>(pat, value, pri=None)
+            
+            <a href="../classes/TkResourceDB.html#method-c-add" name="method-c-add" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-add_source')" id="l_method-c-add_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tk/optiondb.rb#L24" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-add_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tk/optiondb.rb, line 24</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">add</span>(<span class="ruby-identifier">pat</span>, <span class="ruby-identifier">value</span>, <span class="ruby-identifier">pri</span>=<span class="ruby-constant">None</span>)
+  <span class="ruby-comment"># if $SAFE &gt;= 4</span>
+  <span class="ruby-comment">#   fail SecurityError, &quot;can&#39;t call &#39;TkOptionDB.add&#39; at $SAFE &gt;= 4&quot;</span>
+  <span class="ruby-comment"># end</span>
+  <span class="ruby-identifier">tk_call</span>(<span class="ruby-string">&#39;option&#39;</span>, <span class="ruby-string">&#39;add&#39;</span>, <span class="ruby-identifier">pat</span>, <span class="ruby-identifier">value</span>, <span class="ruby-identifier">pri</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-clear">
+            
+              <b>clear</b>()
+            
+            <a href="../classes/TkResourceDB.html#method-c-clear" name="method-c-clear" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-clear_source')" id="l_method-c-clear_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tk/optiondb.rb#L30" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-clear_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tk/optiondb.rb, line 30</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">clear</span>
+  <span class="ruby-comment"># if $SAFE &gt;= 4</span>
+  <span class="ruby-comment">#   fail SecurityError, &quot;can&#39;t call &#39;TkOptionDB.crear&#39; at $SAFE &gt;= 4&quot;</span>
+  <span class="ruby-comment"># end</span>
+  <span class="ruby-identifier">tk_call_without_enc</span>(<span class="ruby-string">&#39;option&#39;</span>, <span class="ruby-string">&#39;clear&#39;</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-eval_under_random_base">
+            
+              <b>eval_under_random_base</b>(parent = nil, &amp;b)
+            
+            <a href="../classes/TkResourceDB.html#method-c-eval_under_random_base" name="method-c-eval_under_random_base" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-eval_under_random_base_source')" id="l_method-c-eval_under_random_base_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tk/optiondb.rb#L359" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-eval_under_random_base_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tk/optiondb.rb, line 359</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">eval_under_random_base</span>(<span class="ruby-identifier">parent</span> = <span class="ruby-keyword">nil</span>, <span class="ruby-operator">&amp;</span><span class="ruby-identifier">b</span>)
+  <span class="ruby-identifier">new_klass</span> = <span class="ruby-identifier">__create_new_class</span>(<span class="ruby-identifier">__get_random_basename</span>(),
+                                 [], <span class="ruby-number">4</span>, <span class="ruby-keyword">false</span>, <span class="ruby-identifier">parent</span>)
+  <span class="ruby-identifier">ret</span> = <span class="ruby-identifier">new_klass</span>.<span class="ruby-identifier">class_eval</span>(<span class="ruby-operator">&amp;</span><span class="ruby-identifier">b</span>) <span class="ruby-keyword">if</span> <span class="ruby-identifier">block_given?</span>
+  <span class="ruby-identifier">__remove_methods_of_proc_class</span>(<span class="ruby-identifier">new_klass</span>)
+  <span class="ruby-identifier">new_klass</span>.<span class="ruby-identifier">freeze</span>
+  <span class="ruby-identifier">ret</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-get">
+            
+              <b>get</b>(win, name, klass)
+            
+            <a href="../classes/TkResourceDB.html#method-c-get" name="method-c-get" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-get_source')" id="l_method-c-get_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tk/optiondb.rb#L36" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-get_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tk/optiondb.rb, line 36</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">get</span>(<span class="ruby-identifier">win</span>, <span class="ruby-identifier">name</span>, <span class="ruby-identifier">klass</span>)
+  <span class="ruby-identifier">tk_call</span>(<span class="ruby-string">&#39;option&#39;</span>, <span class="ruby-string">&#39;get&#39;</span>, <span class="ruby-identifier">win</span> ,<span class="ruby-identifier">name</span>, <span class="ruby-identifier">klass</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-new_proc_class">
+            
+              <b>new_proc_class</b>(klass, func, safe = 4, add = false, parent = nil, &amp;b)
+            
+            <a href="../classes/TkResourceDB.html#method-c-new_proc_class" name="method-c-new_proc_class" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>define new proc class : If you want to modify the new class or create a new
+subclass, you must do such operation in the block parameter. Because the
+created class is flozen after evaluating the block.</p>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-new_proc_class_source')" id="l_method-c-new_proc_class_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tk/optiondb.rb#L350" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-new_proc_class_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tk/optiondb.rb, line 350</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">new_proc_class</span>(<span class="ruby-identifier">klass</span>, <span class="ruby-identifier">func</span>, <span class="ruby-identifier">safe</span> = <span class="ruby-number">4</span>, <span class="ruby-identifier">add</span> = <span class="ruby-keyword">false</span>, <span class="ruby-identifier">parent</span> = <span class="ruby-keyword">nil</span>, <span class="ruby-operator">&amp;</span><span class="ruby-identifier">b</span>)
+  <span class="ruby-identifier">new_klass</span> = <span class="ruby-identifier">__create_new_class</span>(<span class="ruby-identifier">klass</span>, <span class="ruby-identifier">func</span>, <span class="ruby-identifier">safe</span>, <span class="ruby-identifier">add</span>, <span class="ruby-identifier">parent</span>)
+  <span class="ruby-identifier">new_klass</span>.<span class="ruby-identifier">class_eval</span>(<span class="ruby-operator">&amp;</span><span class="ruby-identifier">b</span>) <span class="ruby-keyword">if</span> <span class="ruby-identifier">block_given?</span>
+  <span class="ruby-identifier">__remove_methods_of_proc_class</span>(<span class="ruby-identifier">new_klass</span>)
+  <span class="ruby-identifier">new_klass</span>.<span class="ruby-identifier">freeze</span>
+  <span class="ruby-identifier">new_klass</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-new_proc_class_random">
+            
+              <b>new_proc_class_random</b>(klass, func, safe = 4, add = false, &amp;b)
+            
+            <a href="../classes/TkResourceDB.html#method-c-new_proc_class_random" name="method-c-new_proc_class_random" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-new_proc_class_random_source')" id="l_method-c-new_proc_class_random_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tk/optiondb.rb#L369" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-new_proc_class_random_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tk/optiondb.rb, line 369</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">new_proc_class_random</span>(<span class="ruby-identifier">klass</span>, <span class="ruby-identifier">func</span>, <span class="ruby-identifier">safe</span> = <span class="ruby-number">4</span>, <span class="ruby-identifier">add</span> = <span class="ruby-keyword">false</span>, <span class="ruby-operator">&amp;</span><span class="ruby-identifier">b</span>)
+  <span class="ruby-identifier">eval_under_random_base</span>(){
+    <span class="ruby-constant">TkOptionDB</span>.<span class="ruby-identifier">new_proc_class</span>(<span class="ruby-identifier">klass</span>, <span class="ruby-identifier">func</span>, <span class="ruby-identifier">safe</span>, <span class="ruby-identifier">add</span>, <span class="ruby-keyword">self</span>, <span class="ruby-operator">&amp;</span><span class="ruby-identifier">b</span>)
+  }
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-read_entries">
+            
+              <b>read_entries</b>(file, f_enc=nil)
+            
+            <a href="../classes/TkResourceDB.html#method-c-read_entries" name="method-c-read_entries" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-read_entries_source')" id="l_method-c-read_entries_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tk/optiondb.rb#L45" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-read_entries_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tk/optiondb.rb, line 45</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">read_entries</span>(<span class="ruby-identifier">file</span>, <span class="ruby-identifier">f_enc</span>=<span class="ruby-keyword">nil</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-constant">TkCore</span><span class="ruby-operator">::</span><span class="ruby-constant">INTERP</span>.<span class="ruby-identifier">safe?</span>
+    <span class="ruby-identifier">fail</span> <span class="ruby-constant">SecurityError</span>,
+      <span class="ruby-string">&quot;can&#39;t call &#39;TkOptionDB.read_entries&#39; on a safe interpreter&quot;</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-identifier">i_enc</span> = ((<span class="ruby-constant">Tk</span>.<span class="ruby-identifier">encoding</span>)<span class="ruby-operator">?</span> <span class="ruby-constant">Tk</span>.<span class="ruby-identifier">encoding</span> <span class="ruby-operator">:</span> <span class="ruby-constant">Tk</span>.<span class="ruby-identifier">encoding_system</span>)
+
+  <span class="ruby-keyword">unless</span> <span class="ruby-identifier">f_enc</span>
+    <span class="ruby-identifier">f_enc</span> = <span class="ruby-identifier">i_enc</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-identifier">ent</span> = []
+  <span class="ruby-identifier">cline</span> = <span class="ruby-string">&#39;&#39;</span>
+  <span class="ruby-identifier">open</span>(<span class="ruby-identifier">file</span>, <span class="ruby-string">&#39;r&#39;</span>) {<span class="ruby-operator">|</span><span class="ruby-identifier">f</span><span class="ruby-operator">|</span>
+    <span class="ruby-keyword">while</span> <span class="ruby-identifier">line</span> = <span class="ruby-identifier">f</span>.<span class="ruby-identifier">gets</span>
+      <span class="ruby-comment">#cline += line.chomp!</span>
+      <span class="ruby-identifier">cline</span>.<span class="ruby-identifier">concat</span>(<span class="ruby-identifier">line</span>.<span class="ruby-identifier">chomp!</span>)
+      <span class="ruby-keyword">case</span> <span class="ruby-identifier">cline</span>
+      <span class="ruby-keyword">when</span> <span class="ruby-regexp">/\$/</span>    <span class="ruby-comment"># continue</span>
+        <span class="ruby-identifier">cline</span>.<span class="ruby-identifier">chop!</span>
+        <span class="ruby-keyword">next</span>
+      <span class="ruby-keyword">when</span> <span class="ruby-node">/^\s*(!|#)/</span>     <span class="ruby-comment"># coment</span>
+        <span class="ruby-identifier">cline</span> = <span class="ruby-string">&#39;&#39;</span>
+        <span class="ruby-keyword">next</span>
+      <span class="ruby-keyword">when</span> <span class="ruby-regexp">/^([^:]+):(.*)$/</span>
+        <span class="ruby-identifier">pat</span> = <span class="ruby-node">$1</span>.<span class="ruby-identifier">strip</span>
+        <span class="ruby-identifier">val</span> = <span class="ruby-node">$2</span>.<span class="ruby-identifier">lstrip</span>
+        <span class="ruby-identifier">p</span> <span class="ruby-node">&quot;ResourceDB: #{[pat, val].inspect}&quot;</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">$DEBUG</span>
+        <span class="ruby-identifier">pat</span> = <span class="ruby-constant">TkCore</span><span class="ruby-operator">::</span><span class="ruby-constant">INTERP</span>.<span class="ruby-identifier">_toUTF8</span>(<span class="ruby-identifier">pat</span>, <span class="ruby-identifier">f_enc</span>)
+        <span class="ruby-identifier">pat</span> = <span class="ruby-constant">TkCore</span><span class="ruby-operator">::</span><span class="ruby-constant">INTERP</span>.<span class="ruby-identifier">_fromUTF8</span>(<span class="ruby-identifier">pat</span>, <span class="ruby-identifier">i_enc</span>)
+        <span class="ruby-identifier">val</span> = <span class="ruby-constant">TkCore</span><span class="ruby-operator">::</span><span class="ruby-constant">INTERP</span>.<span class="ruby-identifier">_toUTF8</span>(<span class="ruby-identifier">val</span>, <span class="ruby-identifier">f_enc</span>)
+        <span class="ruby-identifier">val</span> = <span class="ruby-constant">TkCore</span><span class="ruby-operator">::</span><span class="ruby-constant">INTERP</span>.<span class="ruby-identifier">_fromUTF8</span>(<span class="ruby-identifier">val</span>, <span class="ruby-identifier">i_enc</span>)
+        <span class="ruby-identifier">ent</span> <span class="ruby-operator">&lt;&lt;</span> [<span class="ruby-identifier">pat</span>, <span class="ruby-identifier">val</span>]
+        <span class="ruby-identifier">cline</span> = <span class="ruby-string">&#39;&#39;</span>
+      <span class="ruby-keyword">else</span>          <span class="ruby-comment"># unknown --&gt; ignore</span>
+        <span class="ruby-identifier">cline</span> = <span class="ruby-string">&#39;&#39;</span>
+        <span class="ruby-keyword">next</span>
+      <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">end</span>
+  }
+  <span class="ruby-identifier">ent</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-read_file">
+            
+              <b>read_file</b>(file, pri=None)
+            
+            <a href="../classes/TkResourceDB.html#method-c-read_file" name="method-c-read_file" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+            <div class="aka">
+              Alias for: <a href="TkOptionDB.html#method-i-readfile">readfile</a>
+            </div>
+          
+          
+          
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-read_with_encoding">
+            
+              <b>read_with_encoding</b>(file, f_enc=nil, pri=None)
+            
+            <a href="../classes/TkResourceDB.html#method-c-read_with_encoding" name="method-c-read_with_encoding" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-read_with_encoding_source')" id="l_method-c-read_with_encoding_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tk/optiondb.rb#L90" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-read_with_encoding_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tk/optiondb.rb, line 90</span>
+  <span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">read_with_encoding</span>(<span class="ruby-identifier">file</span>, <span class="ruby-identifier">f_enc</span>=<span class="ruby-keyword">nil</span>, <span class="ruby-identifier">pri</span>=<span class="ruby-constant">None</span>)
+    <span class="ruby-comment"># try to read the file as an OptionDB file</span>
+    <span class="ruby-identifier">read_entries</span>(<span class="ruby-identifier">file</span>, <span class="ruby-identifier">f_enc</span>).<span class="ruby-identifier">each</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">pat</span>, <span class="ruby-identifier">val</span><span class="ruby-operator">|</span>
+      <span class="ruby-identifier">add</span>(<span class="ruby-identifier">pat</span>, <span class="ruby-identifier">val</span>, <span class="ruby-identifier">pri</span>)
+    }
+
+<span class="ruby-comment">    i_enc = Tk.encoding()
+
+    unless f_enc
+      f_enc = i_enc
+    end
+
+    cline = &#39;&#39;
+    open(file, &#39;r&#39;) {|f|
+      while line = f.gets
+        cline += line.chomp!
+        case cline
+        when /\\$/    # continue
+          cline.chop!
+          next
+        when /^\s*!/     # coment
+          cline = &#39;&#39;
+          next
+        when /^([^:]+):\s(.*)$/
+          pat = $1
+          val = $2
+          p &quot;ResourceDB: #{[pat, val].inspect}&quot; if $DEBUG
+          pat = TkCore::INTERP._toUTF8(pat, f_enc)
+          pat = TkCore::INTERP._fromUTF8(pat, i_enc)
+          val = TkCore::INTERP._toUTF8(val, f_enc)
+          val = TkCore::INTERP._fromUTF8(val, i_enc)
+          add(pat, val, pri)
+          cline = &#39;&#39;
+        else          # unknown --&gt; ignore
+          cline = &#39;&#39;
+          next
+        end
+      end
+    }
+</span>  <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-readfile">
+            
+              <b>readfile</b>(file, pri=None)
+            
+            <a href="../classes/TkResourceDB.html#method-c-readfile" name="method-c-readfile" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+            <div class="aka">
+              Also aliased as: <a href="TkOptionDB.html#method-i-read_file">read_file</a>
+            </div>
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-readfile_source')" id="l_method-c-readfile_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tk/optiondb.rb#L39" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-readfile_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tk/optiondb.rb, line 39</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">readfile</span>(<span class="ruby-identifier">file</span>, <span class="ruby-identifier">pri</span>=<span class="ruby-constant">None</span>)
+  <span class="ruby-identifier">tk_call</span>(<span class="ruby-string">&#39;option&#39;</span>, <span class="ruby-string">&#39;readfile&#39;</span>, <span class="ruby-identifier">file</span>, <span class="ruby-identifier">pri</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                  
+      <div class="sectiontitle">Instance Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-i-mutex">
+            
+              <b>mutex</b>()
+            
+            <a href="../classes/TkResourceDB.html#method-i-mutex" name="method-i-mutex" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-mutex_source')" id="l_method-i-mutex_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tk/optiondb.rb#L13" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-mutex_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tk/optiondb.rb, line 13</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">mutex</span>; <span class="ruby-ivar">@mutex</span>; <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                    </div>
+
+    </div>
+  </body>
+</html>    

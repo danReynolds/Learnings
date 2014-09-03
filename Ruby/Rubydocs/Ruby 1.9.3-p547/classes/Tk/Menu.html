@@ -1,0 +1,1351 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>Tk::Menu</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="../../css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../../css/main.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../../css/github.css" type="text/css" media="screen" />
+<script src="../../js/jquery-1.3.2.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../js/jquery-effect.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../js/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+
+<body>     
+    <div class="banner">
+        
+        <h1>
+            <span class="type">Class</span> 
+            Tk::Menu 
+            
+                <span class="parent">&lt; 
+                    
+                    <a href="../TkWindow.html">TkWindow</a>
+                    
+                </span>
+            
+        </h1>
+        <ul class="files">
+            
+            <li><a href="../../files/ext/tk/lib/tk/menu_rb.html">ext/tk/lib/tk/menu.rb</a></li>
+            
+            <li><a href="../../files/ext/tk/lib/tk/menuspec_rb.html">ext/tk/lib/tk/menuspec.rb</a></li>
+            
+        </ul>
+    </div>
+    <div id="bodyContent">
+        <div id="content">
+  
+
+
+  
+
+
+  
+  
+
+
+  
+    <!-- Namespace -->
+    <div class="sectiontitle">Namespace</div>
+    <ul>
+      
+        <li>
+          <span class="type">MODULE</span>
+          <a href="Menu/TkInternalFunction.html">Tk::Menu::TkInternalFunction</a>
+        </li>
+      
+    </ul>
+  
+
+
+  
+    <!-- Method ref -->
+    <div class="sectiontitle">Methods</div>
+    <dl class="methods">
+      
+        <dt>A</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-activate">activate</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-add">add</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-add_cascade">add_cascade</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-add_checkbutton">add_checkbutton</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-add_command">add_command</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-add_radiobutton">add_radiobutton</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-add_separator">add_separator</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>C</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-clone_menu">clone_menu</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>D</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-delete">delete</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>I</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-index">index</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-insert">insert</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-invoke">invoke</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>M</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-menutype">menutype</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>N</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-new_menuspec">new_menuspec</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>P</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-popup">popup</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-post">post</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-postcascade">postcascade</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-postcommand">postcommand</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>S</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-set_focus">set_focus</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>T</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-tagid">tagid</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-tearoffcommand">tearoffcommand</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>U</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-unpost">unpost</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>X</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-xposition">xposition</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>Y</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-yposition">yposition</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+    </dl>
+  
+
+  
+    <!-- Includes -->
+    <div class="sectiontitle">Included Modules</div>
+    <ul>
+      
+        <li>
+          
+            Wm
+          
+        </li>
+      
+        <li>
+          
+            <a href="../TkMenuEntryConfig.html">
+              TkMenuEntryConfig
+            </a>
+          
+        </li>
+      
+    </ul>
+  
+
+
+
+  
+
+    
+
+    
+
+    
+      <!-- Section constants -->
+      <div class="sectiontitle">Constants</div>
+      <table border='0' cellpadding='5'>
+        
+          <tr valign='top'>
+            <td class="attr-name">TkCommandNames</td>
+            <td>=</td>
+            <td class="attr-value">[&#39;menu&#39;.freeze].freeze</td>
+          </tr>
+          
+            <tr valign='top'>
+              <td>&nbsp;</td>
+              <td colspan="2" class="attr-desc"></td>
+            </tr>
+          
+        
+          <tr valign='top'>
+            <td class="attr-name">WidgetClassName</td>
+            <td>=</td>
+            <td class="attr-value">&#39;Menu&#39;.freeze</td>
+          </tr>
+          
+            <tr valign='top'>
+              <td>&nbsp;</td>
+              <td colspan="2" class="attr-desc"></td>
+            </tr>
+          
+        
+      </table>
+    
+
+
+    
+
+
+    <!-- Methods -->
+    
+      <div class="sectiontitle">Class Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-c-new_menuspec">
+            
+              <b>new_menuspec</b>(menu_spec, parent = nil, tearoff = false, keys = nil)
+            
+            <a href="../../classes/Tk/Menu.html#method-c-new_menuspec" name="method-c-new_menuspec" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-new_menuspec_source')" id="l_method-c-new_menuspec_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tk/menu.rb#L75" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-new_menuspec_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tk/menu.rb, line 75</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">new_menuspec</span>(<span class="ruby-identifier">menu_spec</span>, <span class="ruby-identifier">parent</span> = <span class="ruby-keyword">nil</span>, <span class="ruby-identifier">tearoff</span> = <span class="ruby-keyword">false</span>, <span class="ruby-identifier">keys</span> = <span class="ruby-keyword">nil</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">parent</span>.<span class="ruby-identifier">kind_of?</span>(<span class="ruby-constant">Hash</span>)
+    <span class="ruby-identifier">keys</span> = <span class="ruby-identifier">_symbolkey2str</span>(<span class="ruby-identifier">parent</span>)
+    <span class="ruby-identifier">parent</span> = <span class="ruby-identifier">keys</span>.<span class="ruby-identifier">delete</span>(<span class="ruby-string">&#39;parent&#39;</span>)
+    <span class="ruby-identifier">tearoff</span> = <span class="ruby-identifier">keys</span>.<span class="ruby-identifier">delete</span>(<span class="ruby-string">&#39;tearoff&#39;</span>)
+  <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">tearoff</span>.<span class="ruby-identifier">kind_of?</span>(<span class="ruby-constant">Hash</span>)
+    <span class="ruby-identifier">keys</span> = <span class="ruby-identifier">_symbolkey2str</span>(<span class="ruby-identifier">tearoff</span>)
+    <span class="ruby-identifier">tearoff</span> = <span class="ruby-identifier">keys</span>.<span class="ruby-identifier">delete</span>(<span class="ruby-string">&#39;tearoff&#39;</span>)
+  <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">keys</span>
+    <span class="ruby-identifier">keys</span> = <span class="ruby-identifier">_symbolkey2str</span>(<span class="ruby-identifier">keys</span>)
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">keys</span> = {}
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-identifier">widgetname</span> = <span class="ruby-identifier">keys</span>.<span class="ruby-identifier">delete</span>(<span class="ruby-string">&#39;widgetname&#39;</span>)
+  <span class="ruby-identifier">_create_menu</span>(<span class="ruby-identifier">parent</span>, <span class="ruby-identifier">menu_spec</span>, <span class="ruby-identifier">widgetname</span>, <span class="ruby-identifier">tearoff</span>, <span class="ruby-identifier">keys</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                  
+      <div class="sectiontitle">Instance Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-i-activate">
+            
+              <b>activate</b>(index)
+            
+            <a href="../../classes/Tk/Menu.html#method-i-activate" name="method-i-activate" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-activate_source')" id="l_method-i-activate_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tk/menu.rb#L98" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-activate_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tk/menu.rb, line 98</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">activate</span>(<span class="ruby-identifier">index</span>)
+  <span class="ruby-identifier">tk_send_without_enc</span>(<span class="ruby-string">&#39;activate&#39;</span>, <span class="ruby-identifier">_get_eval_enc_str</span>(<span class="ruby-identifier">index</span>))
+  <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-add">
+            
+              <b>add</b>(type, keys=nil)
+            
+            <a href="../../classes/Tk/Menu.html#method-i-add" name="method-i-add" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-add_source')" id="l_method-i-add_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tk/menu.rb#L102" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-add_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tk/menu.rb, line 102</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">add</span>(<span class="ruby-identifier">type</span>, <span class="ruby-identifier">keys</span>=<span class="ruby-keyword">nil</span>)
+  <span class="ruby-identifier">tk_send_without_enc</span>(<span class="ruby-string">&#39;add&#39;</span>, <span class="ruby-identifier">type</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">hash_kv</span>(<span class="ruby-identifier">keys</span>, <span class="ruby-keyword">true</span>))
+  <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-add_cascade">
+            
+              <b>add_cascade</b>(keys=nil)
+            
+            <a href="../../classes/Tk/Menu.html#method-i-add_cascade" name="method-i-add_cascade" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-add_cascade_source')" id="l_method-i-add_cascade_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tk/menu.rb#L106" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-add_cascade_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tk/menu.rb, line 106</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">add_cascade</span>(<span class="ruby-identifier">keys</span>=<span class="ruby-keyword">nil</span>)
+  <span class="ruby-identifier">add</span>(<span class="ruby-string">&#39;cascade&#39;</span>, <span class="ruby-identifier">keys</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-add_checkbutton">
+            
+              <b>add_checkbutton</b>(keys=nil)
+            
+            <a href="../../classes/Tk/Menu.html#method-i-add_checkbutton" name="method-i-add_checkbutton" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-add_checkbutton_source')" id="l_method-i-add_checkbutton_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tk/menu.rb#L109" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-add_checkbutton_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tk/menu.rb, line 109</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">add_checkbutton</span>(<span class="ruby-identifier">keys</span>=<span class="ruby-keyword">nil</span>)
+  <span class="ruby-identifier">add</span>(<span class="ruby-string">&#39;checkbutton&#39;</span>, <span class="ruby-identifier">keys</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-add_command">
+            
+              <b>add_command</b>(keys=nil)
+            
+            <a href="../../classes/Tk/Menu.html#method-i-add_command" name="method-i-add_command" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-add_command_source')" id="l_method-i-add_command_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tk/menu.rb#L112" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-add_command_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tk/menu.rb, line 112</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">add_command</span>(<span class="ruby-identifier">keys</span>=<span class="ruby-keyword">nil</span>)
+  <span class="ruby-identifier">add</span>(<span class="ruby-string">&#39;command&#39;</span>, <span class="ruby-identifier">keys</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-add_radiobutton">
+            
+              <b>add_radiobutton</b>(keys=nil)
+            
+            <a href="../../classes/Tk/Menu.html#method-i-add_radiobutton" name="method-i-add_radiobutton" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-add_radiobutton_source')" id="l_method-i-add_radiobutton_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tk/menu.rb#L115" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-add_radiobutton_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tk/menu.rb, line 115</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">add_radiobutton</span>(<span class="ruby-identifier">keys</span>=<span class="ruby-keyword">nil</span>)
+  <span class="ruby-identifier">add</span>(<span class="ruby-string">&#39;radiobutton&#39;</span>, <span class="ruby-identifier">keys</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-add_separator">
+            
+              <b>add_separator</b>(keys=nil)
+            
+            <a href="../../classes/Tk/Menu.html#method-i-add_separator" name="method-i-add_separator" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-add_separator_source')" id="l_method-i-add_separator_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tk/menu.rb#L118" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-add_separator_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tk/menu.rb, line 118</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">add_separator</span>(<span class="ruby-identifier">keys</span>=<span class="ruby-keyword">nil</span>)
+  <span class="ruby-identifier">add</span>(<span class="ruby-string">&#39;separator&#39;</span>, <span class="ruby-identifier">keys</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-clone_menu">
+            
+              <b>clone_menu</b>(*args)
+            
+            <a href="../../classes/Tk/Menu.html#method-i-clone_menu" name="method-i-clone_menu" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-clone_menu_source')" id="l_method-i-clone_menu_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tk/menu.rb#L122" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-clone_menu_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tk/menu.rb, line 122</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">clone_menu</span>(<span class="ruby-operator">*</span><span class="ruby-identifier">args</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">args</span>[<span class="ruby-number">0</span>].<span class="ruby-identifier">kind_of?</span>(<span class="ruby-constant">TkWindow</span>)
+    <span class="ruby-identifier">parent</span> = <span class="ruby-identifier">args</span>.<span class="ruby-identifier">shift</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">parent</span> = <span class="ruby-keyword">self</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">args</span>[<span class="ruby-number">0</span>].<span class="ruby-identifier">kind_of?</span>(<span class="ruby-constant">String</span>) <span class="ruby-operator">||</span> <span class="ruby-identifier">args</span>[<span class="ruby-number">0</span>].<span class="ruby-identifier">kind_of?</span>(<span class="ruby-constant">Symbol</span>) <span class="ruby-comment"># menu type</span>
+    <span class="ruby-identifier">type</span> = <span class="ruby-identifier">args</span>.<span class="ruby-identifier">shift</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">type</span> = <span class="ruby-constant">None</span> <span class="ruby-comment"># &#39;normal&#39;</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">args</span>[<span class="ruby-number">0</span>].<span class="ruby-identifier">kind_of?</span>(<span class="ruby-constant">Hash</span>)
+    <span class="ruby-identifier">keys</span> = <span class="ruby-identifier">_symbolkey2str</span>(<span class="ruby-identifier">args</span>.<span class="ruby-identifier">shift</span>)
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">keys</span> = {}
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-identifier">parent</span> = <span class="ruby-identifier">keys</span>.<span class="ruby-identifier">delete</span>(<span class="ruby-string">&#39;parent&#39;</span>) <span class="ruby-keyword">if</span> <span class="ruby-identifier">keys</span>.<span class="ruby-identifier">has_key?</span>(<span class="ruby-string">&#39;parent&#39;</span>)
+  <span class="ruby-identifier">type</span> = <span class="ruby-identifier">keys</span>.<span class="ruby-identifier">delete</span>(<span class="ruby-string">&#39;type&#39;</span>) <span class="ruby-keyword">if</span> <span class="ruby-identifier">keys</span>.<span class="ruby-identifier">has_key?</span>(<span class="ruby-string">&#39;type&#39;</span>)
+
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">keys</span>.<span class="ruby-identifier">empty?</span>
+    <span class="ruby-constant">Tk</span><span class="ruby-operator">::</span><span class="ruby-constant">MenuClone</span>.<span class="ruby-identifier">new</span>(<span class="ruby-keyword">self</span>, <span class="ruby-identifier">parent</span>, <span class="ruby-identifier">type</span>)
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-constant">Tk</span><span class="ruby-operator">::</span><span class="ruby-constant">MenuClone</span>.<span class="ruby-identifier">new</span>(<span class="ruby-keyword">self</span>, <span class="ruby-identifier">parent</span>, <span class="ruby-identifier">type</span>, <span class="ruby-identifier">keys</span>)
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-delete">
+            
+              <b>delete</b>(first, last=nil)
+            
+            <a href="../../classes/Tk/Menu.html#method-i-delete" name="method-i-delete" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-delete_source')" id="l_method-i-delete_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tk/menu.rb#L163" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-delete_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tk/menu.rb, line 163</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">delete</span>(<span class="ruby-identifier">first</span>, <span class="ruby-identifier">last</span>=<span class="ruby-keyword">nil</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">last</span>
+    <span class="ruby-identifier">tk_send_without_enc</span>(<span class="ruby-string">&#39;delete&#39;</span>, <span class="ruby-identifier">_get_eval_enc_str</span>(<span class="ruby-identifier">first</span>),
+                        <span class="ruby-identifier">_get_eval_enc_str</span>(<span class="ruby-identifier">last</span>))
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">tk_send_without_enc</span>(<span class="ruby-string">&#39;delete&#39;</span>, <span class="ruby-identifier">_get_eval_enc_str</span>(<span class="ruby-identifier">first</span>))
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-index">
+            
+              <b>index</b>(idx)
+            
+            <a href="../../classes/Tk/Menu.html#method-i-index" name="method-i-index" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-index_source')" id="l_method-i-index_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tk/menu.rb#L151" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-index_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tk/menu.rb, line 151</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">index</span>(<span class="ruby-identifier">idx</span>)
+  <span class="ruby-identifier">ret</span> = <span class="ruby-identifier">tk_send_without_enc</span>(<span class="ruby-string">&#39;index&#39;</span>, <span class="ruby-identifier">_get_eval_enc_str</span>(<span class="ruby-identifier">idx</span>))
+  (<span class="ruby-identifier">ret</span> <span class="ruby-operator">==</span> <span class="ruby-string">&#39;none&#39;</span>)<span class="ruby-operator">?</span> <span class="ruby-keyword">nil</span><span class="ruby-operator">:</span> <span class="ruby-identifier">number</span>(<span class="ruby-identifier">ret</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-insert">
+            
+              <b>insert</b>(index, type, keys=nil)
+            
+            <a href="../../classes/Tk/Menu.html#method-i-insert" name="method-i-insert" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-insert_source')" id="l_method-i-insert_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tk/menu.rb#L158" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-insert_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tk/menu.rb, line 158</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">insert</span>(<span class="ruby-identifier">index</span>, <span class="ruby-identifier">type</span>, <span class="ruby-identifier">keys</span>=<span class="ruby-keyword">nil</span>)
+  <span class="ruby-identifier">tk_send_without_enc</span>(<span class="ruby-string">&#39;insert&#39;</span>, <span class="ruby-identifier">_get_eval_enc_str</span>(<span class="ruby-identifier">index</span>),
+                      <span class="ruby-identifier">type</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">hash_kv</span>(<span class="ruby-identifier">keys</span>, <span class="ruby-keyword">true</span>))
+  <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-invoke">
+            
+              <b>invoke</b>(index)
+            
+            <a href="../../classes/Tk/Menu.html#method-i-invoke" name="method-i-invoke" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-invoke_source')" id="l_method-i-invoke_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tk/menu.rb#L155" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-invoke_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tk/menu.rb, line 155</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">invoke</span>(<span class="ruby-identifier">index</span>)
+  <span class="ruby-identifier">_fromUTF8</span>(<span class="ruby-identifier">tk_send_without_enc</span>(<span class="ruby-string">&#39;invoke&#39;</span>, <span class="ruby-identifier">_get_eval_enc_str</span>(<span class="ruby-identifier">index</span>)))
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-menutype">
+            
+              <b>menutype</b>(index)
+            
+            <a href="../../classes/Tk/Menu.html#method-i-menutype" name="method-i-menutype" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-menutype_source')" id="l_method-i-menutype_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tk/menu.rb#L200" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-menutype_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tk/menu.rb, line 200</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">menutype</span>(<span class="ruby-identifier">index</span>)
+  <span class="ruby-identifier">tk_send_without_enc</span>(<span class="ruby-string">&#39;type&#39;</span>, <span class="ruby-identifier">_get_eval_enc_str</span>(<span class="ruby-identifier">index</span>))
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-popup">
+            
+              <b>popup</b>(x, y, index=nil)
+            
+            <a href="../../classes/Tk/Menu.html#method-i-popup" name="method-i-popup" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-popup_source')" id="l_method-i-popup_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tk/menu.rb#L172" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-popup_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tk/menu.rb, line 172</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">popup</span>(<span class="ruby-identifier">x</span>, <span class="ruby-identifier">y</span>, <span class="ruby-identifier">index</span>=<span class="ruby-keyword">nil</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">index</span>
+    <span class="ruby-identifier">tk_call_without_enc</span>(<span class="ruby-string">&#39;tk_popup&#39;</span>, <span class="ruby-identifier">path</span>, <span class="ruby-identifier">x</span>, <span class="ruby-identifier">y</span>,
+                        <span class="ruby-identifier">_get_eval_enc_str</span>(<span class="ruby-identifier">index</span>))
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">tk_call_without_enc</span>(<span class="ruby-string">&#39;tk_popup&#39;</span>, <span class="ruby-identifier">path</span>, <span class="ruby-identifier">x</span>, <span class="ruby-identifier">y</span>)
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-post">
+            
+              <b>post</b>(x, y)
+            
+            <a href="../../classes/Tk/Menu.html#method-i-post" name="method-i-post" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-post_source')" id="l_method-i-post_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tk/menu.rb#L181" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-post_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tk/menu.rb, line 181</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">post</span>(<span class="ruby-identifier">x</span>, <span class="ruby-identifier">y</span>)
+  <span class="ruby-identifier">_fromUTF8</span>(<span class="ruby-identifier">tk_send_without_enc</span>(<span class="ruby-string">&#39;post&#39;</span>, <span class="ruby-identifier">x</span>, <span class="ruby-identifier">y</span>))
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-postcascade">
+            
+              <b>postcascade</b>(index)
+            
+            <a href="../../classes/Tk/Menu.html#method-i-postcascade" name="method-i-postcascade" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-postcascade_source')" id="l_method-i-postcascade_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tk/menu.rb#L184" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-postcascade_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tk/menu.rb, line 184</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">postcascade</span>(<span class="ruby-identifier">index</span>)
+  <span class="ruby-identifier">tk_send_without_enc</span>(<span class="ruby-string">&#39;postcascade&#39;</span>, <span class="ruby-identifier">_get_eval_enc_str</span>(<span class="ruby-identifier">index</span>))
+  <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-postcommand">
+            
+              <b>postcommand</b>(cmd=Proc.new)
+            
+            <a href="../../classes/Tk/Menu.html#method-i-postcommand" name="method-i-postcommand" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-postcommand_source')" id="l_method-i-postcommand_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tk/menu.rb#L188" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-postcommand_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tk/menu.rb, line 188</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">postcommand</span>(<span class="ruby-identifier">cmd</span>=<span class="ruby-constant">Proc</span>.<span class="ruby-identifier">new</span>)
+  <span class="ruby-identifier">configure_cmd</span> <span class="ruby-string">&#39;postcommand&#39;</span>, <span class="ruby-identifier">cmd</span>
+  <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-set_focus">
+            
+              <b>set_focus</b>()
+            
+            <a href="../../classes/Tk/Menu.html#method-i-set_focus" name="method-i-set_focus" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-set_focus_source')" id="l_method-i-set_focus_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tk/menu.rb#L192" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-set_focus_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tk/menu.rb, line 192</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">set_focus</span>
+  <span class="ruby-identifier">tk_call_without_enc</span>(<span class="ruby-string">&#39;tk_menuSetFocus&#39;</span>, <span class="ruby-identifier">path</span>)
+  <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-tagid">
+            
+              <b>tagid</b>(id)
+            
+            <a href="../../classes/Tk/Menu.html#method-i-tagid" name="method-i-tagid" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-tagid_source')" id="l_method-i-tagid_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tk/menu.rb#L93" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-tagid_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tk/menu.rb, line 93</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">tagid</span>(<span class="ruby-identifier">id</span>)
+  <span class="ruby-comment">#id.to_s</span>
+  <span class="ruby-identifier">_get_eval_string</span>(<span class="ruby-identifier">id</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-tearoffcommand">
+            
+              <b>tearoffcommand</b>(cmd=Proc.new)
+            
+            <a href="../../classes/Tk/Menu.html#method-i-tearoffcommand" name="method-i-tearoffcommand" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-tearoffcommand_source')" id="l_method-i-tearoffcommand_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tk/menu.rb#L196" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-tearoffcommand_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tk/menu.rb, line 196</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">tearoffcommand</span>(<span class="ruby-identifier">cmd</span>=<span class="ruby-constant">Proc</span>.<span class="ruby-identifier">new</span>)
+  <span class="ruby-identifier">configure_cmd</span> <span class="ruby-string">&#39;tearoffcommand&#39;</span>, <span class="ruby-identifier">cmd</span>
+  <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-unpost">
+            
+              <b>unpost</b>()
+            
+            <a href="../../classes/Tk/Menu.html#method-i-unpost" name="method-i-unpost" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-unpost_source')" id="l_method-i-unpost_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tk/menu.rb#L203" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-unpost_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tk/menu.rb, line 203</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">unpost</span>
+  <span class="ruby-identifier">tk_send_without_enc</span>(<span class="ruby-string">&#39;unpost&#39;</span>)
+  <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-xposition">
+            
+              <b>xposition</b>(index)
+            
+            <a href="../../classes/Tk/Menu.html#method-i-xposition" name="method-i-xposition" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-xposition_source')" id="l_method-i-xposition_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tk/menu.rb#L207" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-xposition_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tk/menu.rb, line 207</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">xposition</span>(<span class="ruby-identifier">index</span>)
+  <span class="ruby-identifier">number</span>(<span class="ruby-identifier">tk_send_without_enc</span>(<span class="ruby-string">&#39;xposition&#39;</span>, <span class="ruby-identifier">_get_eval_enc_str</span>(<span class="ruby-identifier">index</span>)))
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-yposition">
+            
+              <b>yposition</b>(index)
+            
+            <a href="../../classes/Tk/Menu.html#method-i-yposition" name="method-i-yposition" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-yposition_source')" id="l_method-i-yposition_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tk/menu.rb#L210" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-yposition_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tk/menu.rb, line 210</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">yposition</span>(<span class="ruby-identifier">index</span>)
+  <span class="ruby-identifier">number</span>(<span class="ruby-identifier">tk_send_without_enc</span>(<span class="ruby-string">&#39;yposition&#39;</span>, <span class="ruby-identifier">_get_eval_enc_str</span>(<span class="ruby-identifier">index</span>)))
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                    </div>
+
+    </div>
+  </body>
+</html>    

@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>TkMenuSpec</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="../css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/main.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/github.css" type="text/css" media="screen" />
+<script src="../js/jquery-1.3.2.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/jquery-effect.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+
+<body>     
+    <div class="banner">
+        
+        <h1>
+            <span class="type">Module</span> 
+            TkMenuSpec 
+            
+        </h1>
+        <ul class="files">
+            
+            <li><a href="../files/ext/tk/lib/tk/menuspec_rb.html">ext/tk/lib/tk/menuspec.rb</a></li>
+            
+        </ul>
+    </div>
+    <div id="bodyContent">
+        <div id="content">
+  
+    <div class="description">
+      
+<p>tk/menuspec.rb</p>
+
+<pre><code>Hidethoshi NAGAI (nagai@ai.kyutech.ac.jp)</code></pre>
+
+<p>based on tkmenubar.rb :</p>
+
+<pre><code>Copyright (C) 1998 maeda shugo. All rights reserved.
+This file can be distributed under the terms of the Ruby.</code></pre>
+
+<p>The format of the menu_spec is:</p>
+
+<pre><code>[ menubutton_info, menubutton_info, ... ]</code></pre>
+
+<p>The format of the menubutton_info is:</p>
+
+<pre><code>[ menubutton_info, entry_info, entry_info, ... ]</code></pre>
+
+<p>And each format of *_info is:</p>
+
+<pre><code>[
+  [text, underline, configs], # menu button/entry (*1)
+  [label, command, underline, accelerator, configs],   # command entry
+  [label, TkVar_obj, underline, accelerator, configs], # checkbutton entry
+  [label, [TkVar_obj, value],
+                     underline, accelerator, configs], # radiobutton entry
+  [label, [[...menu_info...], [...menu_info...], ...],
+                     underline, accelerator, configs], # cascade entry (*2)
+  &#39;---&#39;, # separator
+  ...
+]</code></pre>
+
+<p>A menu_info is an array of menu entries:</p>
+
+<pre><code>[ entry_info, entry_info, ... ]</code></pre>
+
+<p>underline, accelerator, and configs are optional pearameters. Hashes are OK
+instead of Arrays. Then the entry type (&#39;command&#39;,
+&#39;checkbutton&#39;, &#39;radiobutton&#39; or &#39;cascade&#39;) is given
+by &#39;type&#39; key (e.g. :type=&gt;&#39;cascade&#39;). When type is
+&#39;cascade&#39;, an array of menu_info is acceptable for &#39;menu&#39;
+key (then, create sub-menu).</p>
+
+<p>If the value of underline is true instead of an integer, check whether the
+text/label string contains a &#39;&amp;&#39; character. When includes, the
+first &#39;&amp;&#39; is removed and its following character is converted
+the corresponding &#39;underline&#39; option (first &#39;&amp;&#39; is
+removed). Else if the value of underline is a String or a <a
+href="Regexp.html">Regexp</a>, use the result of label.index(underline) as
+the index of underline (don&#39;t remove matched substring).</p>
+
+<p>NOTE: (*1)</p>
+
+<pre><code>If you want to make special menus (*.help for UNIX, *.system for Win,
+and *.apple for Mac), append &#39;menu_name&#39;=&gt;name (name is &#39;help&#39; for UNIX,
+&#39;system&#39; for Win, and &#39;apple&#39; for Mac) option to the configs hash of
+menu button/entry information.
+</code></pre>
+
+<p>NOTE: (*2)</p>
+
+<pre><code>If you want to configure a cascade menu, add :menu_config=&gt;{...configs..}
+to the configs of the cascade entry.
+</code></pre>
+
+    </div>
+  
+
+
+  
+
+
+  
+  
+
+
+  
+
+
+  
+
+  
+
+
+
+  
+
+    
+
+    
+
+    
+      <!-- Section constants -->
+      <div class="sectiontitle">Constants</div>
+      <table border='0' cellpadding='5'>
+        
+          <tr valign='top'>
+            <td class="attr-name">MENUSPEC_OPTKEYS</td>
+            <td>=</td>
+            <td class="attr-value">[ &#39;layout_proc&#39; ]</td>
+          </tr>
+          
+            <tr valign='top'>
+              <td>&nbsp;</td>
+              <td colspan="2" class="attr-desc"></td>
+            </tr>
+          
+        
+      </table>
+    
+
+
+    
+
+
+    <!-- Methods -->
+              </div>
+
+    </div>
+  </body>
+</html>    

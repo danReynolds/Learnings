@@ -1,0 +1,934 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>Tk::Scrollbar</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="../../css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../../css/main.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../../css/github.css" type="text/css" media="screen" />
+<script src="../../js/jquery-1.3.2.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../js/jquery-effect.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../js/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+
+<body>     
+    <div class="banner">
+        
+        <h1>
+            <span class="type">Class</span> 
+            Tk::Scrollbar 
+            
+                <span class="parent">&lt; 
+                    
+                    <a href="../TkWindow.html">TkWindow</a>
+                    
+                </span>
+            
+        </h1>
+        <ul class="files">
+            
+            <li><a href="../../files/ext/tk/lib/tk/scrollbar_rb.html">ext/tk/lib/tk/scrollbar.rb</a></li>
+            
+            <li><a href="../../files/ext/tk/lib/tkextlib/tcllib/autoscroll_rb.html">ext/tk/lib/tkextlib/tcllib/autoscroll.rb</a></li>
+            
+        </ul>
+    </div>
+    <div id="bodyContent">
+        <div id="content">
+  
+
+
+  
+
+
+  
+  
+
+
+  
+
+
+  
+    <!-- Method ref -->
+    <div class="sectiontitle">Methods</div>
+    <dl class="methods">
+      
+        <dt>A</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-activate">activate</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-assign">assign</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-assigned_list">assigned_list</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-autoscroll">autoscroll</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>C</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-configure">configure</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>D</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-delta">delta</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>F</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-fraction">fraction</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>G</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-get">get</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>I</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-identify">identify</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>M</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-moveto">moveto</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>P</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-propagate_set">propagate_set</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>S</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-scroll">scroll</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-scroll_pages">scroll_pages</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-scroll_units">scroll_units</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-set">set</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>U</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-unautoscroll">unautoscroll</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+    </dl>
+  
+
+  
+
+
+
+  
+
+    
+
+    
+
+    
+      <!-- Section constants -->
+      <div class="sectiontitle">Constants</div>
+      <table border='0' cellpadding='5'>
+        
+          <tr valign='top'>
+            <td class="attr-name">TkCommandNames</td>
+            <td>=</td>
+            <td class="attr-value">[&#39;scrollbar&#39;.freeze].freeze</td>
+          </tr>
+          
+            <tr valign='top'>
+              <td>&nbsp;</td>
+              <td colspan="2" class="attr-desc"></td>
+            </tr>
+          
+        
+          <tr valign='top'>
+            <td class="attr-name">WidgetClassName</td>
+            <td>=</td>
+            <td class="attr-value">&#39;Scrollbar&#39;.freeze</td>
+          </tr>
+          
+            <tr valign='top'>
+              <td>&nbsp;</td>
+              <td colspan="2" class="attr-desc"></td>
+            </tr>
+          
+        
+      </table>
+    
+
+
+    
+
+
+    <!-- Methods -->
+        
+      <div class="sectiontitle">Instance Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-i-activate">
+            
+              <b>activate</b>(element=None)
+            
+            <a href="../../classes/Tk/Scrollbar.html#method-i-activate" name="method-i-activate" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-activate_source')" id="l_method-i-activate_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tk/scrollbar.rb#L125" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-activate_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tk/scrollbar.rb, line 125</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">activate</span>(<span class="ruby-identifier">element</span>=<span class="ruby-constant">None</span>)
+  <span class="ruby-identifier">tk_send_without_enc</span>(<span class="ruby-string">&#39;activate&#39;</span>, <span class="ruby-identifier">element</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-assign">
+            
+              <b>assign</b>(*wins)
+            
+            <a href="../../classes/Tk/Scrollbar.html#method-i-assign" name="method-i-assign" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-assign_source')" id="l_method-i-assign_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tk/scrollbar.rb#L63" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-assign_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tk/scrollbar.rb, line 63</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">assign</span>(<span class="ruby-operator">*</span><span class="ruby-identifier">wins</span>)
+  <span class="ruby-keyword">begin</span>
+    <span class="ruby-keyword">self</span>.<span class="ruby-identifier">command</span>(<span class="ruby-ivar">@scroll_proc</span>) <span class="ruby-keyword">if</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">cget</span>(<span class="ruby-string">&#39;command&#39;</span>).<span class="ruby-identifier">cmd</span> <span class="ruby-operator">!=</span> <span class="ruby-ivar">@scroll_proc</span>
+  <span class="ruby-keyword">rescue</span> <span class="ruby-constant">Exception</span>
+    <span class="ruby-keyword">self</span>.<span class="ruby-identifier">command</span>(<span class="ruby-ivar">@scroll_proc</span>)
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">orient</span> = <span class="ruby-keyword">self</span>.<span class="ruby-identifier">orient</span>
+  <span class="ruby-identifier">wins</span>.<span class="ruby-identifier">each</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">w</span><span class="ruby-operator">|</span>
+    <span class="ruby-ivar">@assigned</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">w</span> <span class="ruby-keyword">unless</span> <span class="ruby-ivar">@assigned</span>.<span class="ruby-identifier">index</span>(<span class="ruby-identifier">w</span>)
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">orient</span> <span class="ruby-operator">==</span> <span class="ruby-string">&#39;horizontal&#39;</span>
+      <span class="ruby-identifier">w</span>.<span class="ruby-identifier">xscrollcommand</span> <span class="ruby-identifier">proc</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">first</span>, <span class="ruby-identifier">last</span><span class="ruby-operator">|</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">propagate_set</span>(<span class="ruby-identifier">w</span>, <span class="ruby-identifier">first</span>, <span class="ruby-identifier">last</span>)}
+    <span class="ruby-keyword">else</span> <span class="ruby-comment"># &#39;vertical&#39;</span>
+      <span class="ruby-identifier">w</span>.<span class="ruby-identifier">yscrollcommand</span> <span class="ruby-identifier">proc</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">first</span>, <span class="ruby-identifier">last</span><span class="ruby-operator">|</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">propagate_set</span>(<span class="ruby-identifier">w</span>, <span class="ruby-identifier">first</span>, <span class="ruby-identifier">last</span>)}
+    <span class="ruby-keyword">end</span>
+  }
+  <span class="ruby-constant">Tk</span>.<span class="ruby-identifier">update</span>  <span class="ruby-comment"># avoid scrollbar trouble</span>
+  <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-assigned_list">
+            
+              <b>assigned_list</b>()
+            
+            <a href="../../classes/Tk/Scrollbar.html#method-i-assigned_list" name="method-i-assigned_list" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-assigned_list_source')" id="l_method-i-assigned_list_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tk/scrollbar.rb#L82" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-assigned_list_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tk/scrollbar.rb, line 82</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">assigned_list</span>
+  <span class="ruby-keyword">begin</span>
+    <span class="ruby-keyword">return</span> <span class="ruby-ivar">@assigned</span>.<span class="ruby-identifier">dup</span> <span class="ruby-keyword">if</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">cget</span>(<span class="ruby-string">&#39;command&#39;</span>).<span class="ruby-identifier">cmd</span> <span class="ruby-operator">==</span> <span class="ruby-ivar">@scroll_proc</span>
+  <span class="ruby-keyword">rescue</span> <span class="ruby-constant">Exception</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">fail</span> <span class="ruby-constant">RuntimeError</span>, <span class="ruby-string">&quot;not depend on the assigned_list&quot;</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-autoscroll">
+            
+              <b>autoscroll</b>()
+            
+            <a href="../../classes/Tk/Scrollbar.html#method-i-autoscroll" name="method-i-autoscroll" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-autoscroll_source')" id="l_method-i-autoscroll_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/287a34ae0dfc23e4158f67cb7783d239f202c368/ext/tk/lib/tkextlib/tcllib/autoscroll.rb#L112" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-autoscroll_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/tcllib/autoscroll.rb, line 112</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">autoscroll</span>
+  <span class="ruby-comment"># Arranges for the already existing scrollbar to be mapped</span>
+  <span class="ruby-comment"># and unmapped as needed.</span>
+  <span class="ruby-comment">#tk_call_without_enc(&#39;::autoscroll::autoscroll&#39;, @path)</span>
+  <span class="ruby-constant">Tk</span><span class="ruby-operator">::</span><span class="ruby-constant">Tcllib</span><span class="ruby-operator">::</span><span class="ruby-constant">Autoscroll</span>.<span class="ruby-identifier">autoscroll</span>(<span class="ruby-keyword">self</span>)
+  <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-configure">
+            
+              <b>configure</b>(*args)
+            
+            <a href="../../classes/Tk/Scrollbar.html#method-i-configure" name="method-i-configure" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-configure_source')" id="l_method-i-configure_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tk/scrollbar.rb#L90" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-configure_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tk/scrollbar.rb, line 90</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">configure</span>(<span class="ruby-operator">*</span><span class="ruby-identifier">args</span>)
+  <span class="ruby-identifier">ret</span> = <span class="ruby-keyword">super</span>(<span class="ruby-operator">*</span><span class="ruby-identifier">args</span>)
+  <span class="ruby-comment"># Tk.update  # avoid scrollbar trouble</span>
+  <span class="ruby-identifier">ret</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-delta">
+            
+              <b>delta</b>(deltax, deltay)
+            
+            <a href="../../classes/Tk/Scrollbar.html#method-i-delta" name="method-i-delta" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>def delta(deltax=None, deltay=None)</p>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-delta_source')" id="l_method-i-delta_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tk/scrollbar.rb#L97" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-delta_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tk/scrollbar.rb, line 97</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">delta</span>(<span class="ruby-identifier">deltax</span>, <span class="ruby-identifier">deltay</span>)
+  <span class="ruby-identifier">number</span>(<span class="ruby-identifier">tk_send_without_enc</span>(<span class="ruby-string">&#39;delta&#39;</span>, <span class="ruby-identifier">deltax</span>, <span class="ruby-identifier">deltay</span>))
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-fraction">
+            
+              <b>fraction</b>(x, y)
+            
+            <a href="../../classes/Tk/Scrollbar.html#method-i-fraction" name="method-i-fraction" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>def fraction(x=None, y=None)</p>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-fraction_source')" id="l_method-i-fraction_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tk/scrollbar.rb#L102" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-fraction_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tk/scrollbar.rb, line 102</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">fraction</span>(<span class="ruby-identifier">x</span>, <span class="ruby-identifier">y</span>)
+  <span class="ruby-identifier">number</span>(<span class="ruby-identifier">tk_send_without_enc</span>(<span class="ruby-string">&#39;fraction&#39;</span>, <span class="ruby-identifier">x</span>, <span class="ruby-identifier">y</span>))
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-get">
+            
+              <b>get</b>()
+            
+            <a href="../../classes/Tk/Scrollbar.html#method-i-get" name="method-i-get" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-get_source')" id="l_method-i-get_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tk/scrollbar.rb#L110" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-get_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tk/scrollbar.rb, line 110</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">get</span>
+  <span class="ruby-comment">#ary1 = tk_send(&#39;get&#39;).split</span>
+  <span class="ruby-comment">#ary2 = []</span>
+  <span class="ruby-comment">#for i in ary1</span>
+  <span class="ruby-comment">#  ary2.push number(i)</span>
+  <span class="ruby-comment">#end</span>
+  <span class="ruby-comment">#ary2</span>
+  <span class="ruby-identifier">list</span>(<span class="ruby-identifier">tk_send_without_enc</span>(<span class="ruby-string">&#39;get&#39;</span>))
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-identify">
+            
+              <b>identify</b>(x, y)
+            
+            <a href="../../classes/Tk/Scrollbar.html#method-i-identify" name="method-i-identify" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-identify_source')" id="l_method-i-identify_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tk/scrollbar.rb#L106" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-identify_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tk/scrollbar.rb, line 106</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">identify</span>(<span class="ruby-identifier">x</span>, <span class="ruby-identifier">y</span>)
+  <span class="ruby-identifier">tk_send_without_enc</span>(<span class="ruby-string">&#39;identify&#39;</span>, <span class="ruby-identifier">x</span>, <span class="ruby-identifier">y</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-moveto">
+            
+              <b>moveto</b>(fraction)
+            
+            <a href="../../classes/Tk/Scrollbar.html#method-i-moveto" name="method-i-moveto" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-moveto_source')" id="l_method-i-moveto_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tk/scrollbar.rb#L129" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-moveto_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tk/scrollbar.rb, line 129</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">moveto</span>(<span class="ruby-identifier">fraction</span>)
+  <span class="ruby-identifier">tk_send_without_enc</span>(<span class="ruby-string">&#39;moveto&#39;</span>, <span class="ruby-identifier">fraction</span>)
+  <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-propagate_set">
+            
+              <b>propagate_set</b>(src_win, first, last)
+            
+            <a href="../../classes/Tk/Scrollbar.html#method-i-propagate_set" name="method-i-propagate_set" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-propagate_set_source')" id="l_method-i-propagate_set_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tk/scrollbar.rb#L54" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-propagate_set_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tk/scrollbar.rb, line 54</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">propagate_set</span>(<span class="ruby-identifier">src_win</span>, <span class="ruby-identifier">first</span>, <span class="ruby-identifier">last</span>)
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">set</span>(<span class="ruby-identifier">first</span>, <span class="ruby-identifier">last</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">orient</span> <span class="ruby-operator">==</span> <span class="ruby-string">&#39;horizontal&#39;</span>
+    <span class="ruby-ivar">@assigned</span>.<span class="ruby-identifier">each</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">w</span><span class="ruby-operator">|</span> <span class="ruby-identifier">w</span>.<span class="ruby-identifier">xview</span>(<span class="ruby-string">&#39;moveto&#39;</span>, <span class="ruby-identifier">first</span>) <span class="ruby-keyword">if</span> <span class="ruby-identifier">w</span> <span class="ruby-operator">!=</span> <span class="ruby-identifier">src_win</span>}
+  <span class="ruby-keyword">else</span> <span class="ruby-comment"># &#39;vertical&#39;</span>
+    <span class="ruby-ivar">@assigned</span>.<span class="ruby-identifier">each</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">w</span><span class="ruby-operator">|</span> <span class="ruby-identifier">w</span>.<span class="ruby-identifier">yview</span>(<span class="ruby-string">&#39;moveto&#39;</span>, <span class="ruby-identifier">first</span>) <span class="ruby-keyword">if</span> <span class="ruby-identifier">w</span> <span class="ruby-operator">!=</span> <span class="ruby-identifier">src_win</span>}
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-scroll">
+            
+              <b>scroll</b>(*args)
+            
+            <a href="../../classes/Tk/Scrollbar.html#method-i-scroll" name="method-i-scroll" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-scroll_source')" id="l_method-i-scroll_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tk/scrollbar.rb#L134" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-scroll_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tk/scrollbar.rb, line 134</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">scroll</span>(<span class="ruby-operator">*</span><span class="ruby-identifier">args</span>)
+  <span class="ruby-identifier">tk_send_without_enc</span>(<span class="ruby-string">&#39;scroll&#39;</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">args</span>)
+  <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-scroll_pages">
+            
+              <b>scroll_pages</b>(num)
+            
+            <a href="../../classes/Tk/Scrollbar.html#method-i-scroll_pages" name="method-i-scroll_pages" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-scroll_pages_source')" id="l_method-i-scroll_pages_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tk/scrollbar.rb#L144" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-scroll_pages_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tk/scrollbar.rb, line 144</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">scroll_pages</span>(<span class="ruby-identifier">num</span>)
+  <span class="ruby-identifier">scroll</span>(<span class="ruby-identifier">num</span>, <span class="ruby-string">&#39;pages&#39;</span>)
+  <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-scroll_units">
+            
+              <b>scroll_units</b>(num)
+            
+            <a href="../../classes/Tk/Scrollbar.html#method-i-scroll_units" name="method-i-scroll_units" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-scroll_units_source')" id="l_method-i-scroll_units_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tk/scrollbar.rb#L139" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-scroll_units_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tk/scrollbar.rb, line 139</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">scroll_units</span>(<span class="ruby-identifier">num</span>)
+  <span class="ruby-identifier">scroll</span>(<span class="ruby-identifier">num</span>, <span class="ruby-string">&#39;units&#39;</span>)
+  <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-set">
+            
+              <b>set</b>(first, last)
+            
+            <a href="../../classes/Tk/Scrollbar.html#method-i-set" name="method-i-set" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-set_source')" id="l_method-i-set_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tk/scrollbar.rb#L120" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-set_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tk/scrollbar.rb, line 120</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">set</span>(<span class="ruby-identifier">first</span>, <span class="ruby-identifier">last</span>)
+  <span class="ruby-identifier">tk_send_without_enc</span>(<span class="ruby-string">&#39;set&#39;</span>, <span class="ruby-identifier">first</span>, <span class="ruby-identifier">last</span>)
+  <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-unautoscroll">
+            
+              <b>unautoscroll</b>()
+            
+            <a href="../../classes/Tk/Scrollbar.html#method-i-unautoscroll" name="method-i-unautoscroll" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-unautoscroll_source')" id="l_method-i-unautoscroll_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/287a34ae0dfc23e4158f67cb7783d239f202c368/ext/tk/lib/tkextlib/tcllib/autoscroll.rb#L119" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-unautoscroll_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/tcllib/autoscroll.rb, line 119</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">unautoscroll</span>
+  <span class="ruby-comment">#     Returns the scrollbar to its original static state.</span>
+  <span class="ruby-comment">#tk_call_without_enc(&#39;::autoscroll::unautoscroll&#39;, @path)</span>
+  <span class="ruby-constant">Tk</span><span class="ruby-operator">::</span><span class="ruby-constant">Tcllib</span><span class="ruby-operator">::</span><span class="ruby-constant">Autoscroll</span>.<span class="ruby-identifier">unautoscroll</span>(<span class="ruby-keyword">self</span>)
+  <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                    </div>
+
+    </div>
+  </body>
+</html>    

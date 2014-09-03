@@ -1,0 +1,322 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>Object::Syck::Out</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="../../../css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../../../css/main.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../../../css/github.css" type="text/css" media="screen" />
+<script src="../../../js/jquery-1.3.2.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../../js/jquery-effect.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../../js/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+
+<body>     
+    <div class="banner">
+        
+        <h1>
+            <span class="type">Class</span> 
+            Object::Syck::Out 
+            
+                <span class="parent">&lt; 
+                    
+                    rb_cObject 
+                    
+                </span>
+            
+        </h1>
+        <ul class="files">
+            
+            <li><a href="../../../files/ext/syck/lib/syck/rubytypes_rb.html">ext/syck/lib/syck/rubytypes.rb</a></li>
+            
+        </ul>
+    </div>
+    <div id="bodyContent">
+        <div id="content">
+  
+    <div class="description">
+      
+<p>Define YAML::Syck::Out classes</p>
+
+    </div>
+  
+
+
+  
+
+
+  
+  
+
+
+  
+
+
+  
+    <!-- Method ref -->
+    <div class="sectiontitle">Methods</div>
+    <dl class="methods">
+      
+        <dt>M</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-map">map</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>N</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-new">new</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>S</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-scalar">scalar</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-seq">seq</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+    </dl>
+  
+
+  
+
+
+
+  
+
+    
+
+    
+
+    
+
+
+    
+      <!-- Section attributes -->
+      <div class="sectiontitle">Attributes</div>
+      <table border='0' cellpadding='5'>
+        
+          <tr valign='top'>
+            <td class='attr-rw'>
+              [RW]
+            </td>
+            <td class='attr-name'>emitter</td>
+            <td class='attr-desc'></td>
+          </tr>
+        
+      </table>
+    
+
+
+    <!-- Methods -->
+    
+      <div class="sectiontitle">Class Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-c-new">
+            
+              <b>new</b>(p1)
+            
+            <a href="../../../classes/Object/Syck/Out.html#method-c-new" name="method-c-new" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>YAML::Syck::Out::initialize</p>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-new_source')" id="l_method-c-new_source">show</a>
+                
+              </p>
+              <div id="method-c-new_source" class="dyn-source">
+                <pre>VALUE
+syck_out_initialize(VALUE self, VALUE emitter)
+{
+    rb_ivar_set( self, s_emitter, emitter );
+    return self;
+}</pre>
+              </div>
+            </div>
+            
+          </div>
+                  
+      <div class="sectiontitle">Instance Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-i-map">
+            
+              <b>map</b>(p1, p2 = v2)
+            
+            <a href="../../../classes/Object/Syck/Out.html#method-i-map" name="method-i-map" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>YAML::Syck::Out::map</p>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-map_source')" id="l_method-i-map_source">show</a>
+                
+              </p>
+              <div id="method-i-map_source" class="dyn-source">
+                <pre>VALUE
+syck_out_map(int argc, VALUE *argv, VALUE self)
+{
+    VALUE type_id, style, map;
+    if (rb_scan_args(argc, argv, &quot;11&quot;, &amp;type_id, &amp;style) == 1) {
+        style = Qnil;
+    }
+    map = rb_funcall( cMap, s_new, 3, type_id, rb_hash_new(), style );
+    syck_out_mark( rb_ivar_get( self, s_emitter ), map );
+    rb_yield( map );
+    return map;
+}</pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-scalar">
+            
+              <b>scalar</b>(p1, p2, p3 = v3)
+            
+            <a href="../../../classes/Object/Syck/Out.html#method-i-scalar" name="method-i-scalar" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <pre><code>YAML::Syck::Out::scalar</code></pre>
+
+<p>syck_out_scalar( self, type_id, str, style )</p>
+
+<pre><code>VALUE self, type_id, str, style;</code></pre>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-scalar_source')" id="l_method-i-scalar_source">show</a>
+                
+              </p>
+              <div id="method-i-scalar_source" class="dyn-source">
+                <pre>VALUE
+syck_out_scalar(int argc, VALUE *argv, VALUE self)
+{
+    VALUE type_id, str, style, scalar;
+    rb_scan_args(argc, argv, &quot;21&quot;, &amp;type_id, &amp;str, &amp;style);
+    scalar = rb_funcall( cScalar, s_new, 3, type_id, str, style );
+    syck_out_mark( rb_ivar_get( self, s_emitter ), scalar );
+    return scalar;
+}</pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-seq">
+            
+              <b>seq</b>(p1, p2 = v2)
+            
+            <a href="../../../classes/Object/Syck/Out.html#method-i-seq" name="method-i-seq" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>YAML::Syck::Out::seq</p>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-seq_source')" id="l_method-i-seq_source">show</a>
+                
+              </p>
+              <div id="method-i-seq_source" class="dyn-source">
+                <pre>VALUE
+syck_out_seq(int argc, VALUE *argv, VALUE self)
+{
+    VALUE type_id, style, seq;
+    if (rb_scan_args(argc, argv, &quot;11&quot;, &amp;type_id, &amp;style) == 1) {
+        style = Qnil;
+    }
+    seq = rb_funcall( cSeq, s_new, 3, type_id, rb_ary_new(), style );
+    syck_out_mark( rb_ivar_get( self, s_emitter ), seq );
+    rb_yield( seq );
+    return seq;
+}</pre>
+              </div>
+            </div>
+            
+          </div>
+                    </div>
+
+    </div>
+  </body>
+</html>    

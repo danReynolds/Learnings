@@ -1,0 +1,462 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>Syck::Omap</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="../../css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../../css/main.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../../css/github.css" type="text/css" media="screen" />
+<script src="../../js/jquery-1.3.2.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../js/jquery-effect.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../js/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+
+<body>     
+    <div class="banner">
+        
+        <h1>
+            <span class="type">Class</span> 
+            Syck::Omap 
+            
+                <span class="parent">&lt; 
+                    
+                    <a href="../Array.html">Array</a>
+                    
+                </span>
+            
+        </h1>
+        <ul class="files">
+            
+            <li><a href="../../files/ext/syck/lib/syck/types_rb.html">ext/syck/lib/syck/types.rb</a></li>
+            
+        </ul>
+    </div>
+    <div id="bodyContent">
+        <div id="content">
+  
+    <div class="description">
+      
+<p>Builtin collection: !omap</p>
+
+    </div>
+  
+
+
+  
+
+
+  
+  
+
+
+  
+
+
+  
+    <!-- Method ref -->
+    <div class="sectiontitle">Methods</div>
+    <dl class="methods">
+      
+        <dt>#</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-5B-5D">[]</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-c-5B-5D">[]</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-5B-5D-3D">[]=</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>H</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-has_key-3F">has_key?</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>I</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-is_complex_yaml-3F">is_complex_yaml?</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>T</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-to_yaml">to_yaml</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>Y</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-yaml_initialize">yaml_initialize</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+    </dl>
+  
+
+  
+
+
+
+  
+
+    
+
+    
+
+    
+
+
+    
+
+
+    <!-- Methods -->
+    
+      <div class="sectiontitle">Class Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-c-5B-5D">
+            
+              <b>[]</b>( *vals )
+            
+            <a href="../../classes/Syck/Omap.html#method-c-5B-5D" name="method-c-5B-5D" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-5B-5D_source')" id="l_method-c-5B-5D_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/eb71e5cd67f4ce4da5ba331f93a8e36c65457b94/ext/syck/lib/syck/types.rb#L99" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-5B-5D_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/syck/lib/syck/types.rb, line 99</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-operator">[]</span>( <span class="ruby-operator">*</span><span class="ruby-identifier">vals</span> )
+    <span class="ruby-identifier">o</span> = <span class="ruby-constant">Omap</span>.<span class="ruby-identifier">new</span>
+    <span class="ruby-number">0</span>.<span class="ruby-identifier">step</span>( <span class="ruby-identifier">vals</span>.<span class="ruby-identifier">length</span> <span class="ruby-operator">-</span> <span class="ruby-number">1</span>, <span class="ruby-number">2</span> ) <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">i</span><span class="ruby-operator">|</span>
+        <span class="ruby-identifier">o</span>[<span class="ruby-identifier">vals</span>[<span class="ruby-identifier">i</span>]] = <span class="ruby-identifier">vals</span>[<span class="ruby-identifier">i</span><span class="ruby-operator">+</span><span class="ruby-number">1</span>]
+    <span class="ruby-keyword">end</span>
+    <span class="ruby-identifier">o</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                  
+      <div class="sectiontitle">Instance Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-i-5B-5D">
+            
+              <b>[]</b>( k )
+            
+            <a href="../../classes/Syck/Omap.html#method-i-5B-5D" name="method-i-5B-5D" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-5B-5D_source')" id="l_method-i-5B-5D_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/eb71e5cd67f4ce4da5ba331f93a8e36c65457b94/ext/syck/lib/syck/types.rb#L106" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-5B-5D_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/syck/lib/syck/types.rb, line 106</span>
+<span class="ruby-keyword">def</span> <span class="ruby-operator">[]</span>( <span class="ruby-keyword ruby-title">k</span> )
+    <span class="ruby-keyword">self</span>.<span class="ruby-identifier">assoc</span>( <span class="ruby-identifier">k</span> ).<span class="ruby-identifier">to_a</span>[<span class="ruby-number">1</span>]
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-5B-5D-3D">
+            
+              <b>[]=</b>( k, *rest )
+            
+            <a href="../../classes/Syck/Omap.html#method-i-5B-5D-3D" name="method-i-5B-5D-3D" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-5B-5D-3D_source')" id="l_method-i-5B-5D-3D_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/eb71e5cd67f4ce4da5ba331f93a8e36c65457b94/ext/syck/lib/syck/types.rb#L109" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-5B-5D-3D_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/syck/lib/syck/types.rb, line 109</span>
+<span class="ruby-keyword">def</span> <span class="ruby-operator">[]=</span>( <span class="ruby-keyword ruby-title">k</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">rest</span> )
+    <span class="ruby-identifier">val</span>, <span class="ruby-identifier">set</span> = <span class="ruby-identifier">rest</span>.<span class="ruby-identifier">reverse</span>
+    <span class="ruby-keyword">if</span> ( <span class="ruby-identifier">tmp</span> = <span class="ruby-keyword">self</span>.<span class="ruby-identifier">assoc</span>( <span class="ruby-identifier">k</span> ) ) <span class="ruby-keyword">and</span> <span class="ruby-keyword">not</span> <span class="ruby-identifier">set</span>
+        <span class="ruby-identifier">tmp</span>[<span class="ruby-number">1</span>] = <span class="ruby-identifier">val</span>
+    <span class="ruby-keyword">else</span>
+        <span class="ruby-keyword">self</span> <span class="ruby-operator">&lt;&lt;</span> [ <span class="ruby-identifier">k</span>, <span class="ruby-identifier">val</span> ]
+    <span class="ruby-keyword">end</span>
+    <span class="ruby-identifier">val</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-has_key-3F">
+            
+              <b>has_key?</b>( k )
+            
+            <a href="../../classes/Syck/Omap.html#method-i-has_key-3F" name="method-i-has_key-3F" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-has_key-3F_source')" id="l_method-i-has_key-3F_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/eb71e5cd67f4ce4da5ba331f93a8e36c65457b94/ext/syck/lib/syck/types.rb#L118" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-has_key-3F_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/syck/lib/syck/types.rb, line 118</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">has_key?</span>( <span class="ruby-identifier">k</span> )
+    <span class="ruby-keyword">self</span>.<span class="ruby-identifier">assoc</span>( <span class="ruby-identifier">k</span> ) <span class="ruby-operator">?</span> <span class="ruby-keyword">true</span> <span class="ruby-operator">:</span> <span class="ruby-keyword">false</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-is_complex_yaml-3F">
+            
+              <b>is_complex_yaml?</b>()
+            
+            <a href="../../classes/Syck/Omap.html#method-i-is_complex_yaml-3F" name="method-i-is_complex_yaml-3F" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-is_complex_yaml-3F_source')" id="l_method-i-is_complex_yaml-3F_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/eb71e5cd67f4ce4da5ba331f93a8e36c65457b94/ext/syck/lib/syck/types.rb#L121" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-is_complex_yaml-3F_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/syck/lib/syck/types.rb, line 121</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">is_complex_yaml?</span>
+    <span class="ruby-keyword">true</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-to_yaml">
+            
+              <b>to_yaml</b>( opts = {} )
+            
+            <a href="../../classes/Syck/Omap.html#method-i-to_yaml" name="method-i-to_yaml" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-to_yaml_source')" id="l_method-i-to_yaml_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/eb71e5cd67f4ce4da5ba331f93a8e36c65457b94/ext/syck/lib/syck/types.rb#L124" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-to_yaml_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/syck/lib/syck/types.rb, line 124</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">to_yaml</span>( <span class="ruby-identifier">opts</span> = {} )
+    <span class="ruby-constant">Syck</span>.<span class="ruby-identifier">quick_emit</span>( <span class="ruby-keyword">self</span>, <span class="ruby-identifier">opts</span> ) <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">out</span><span class="ruby-operator">|</span>
+        <span class="ruby-identifier">out</span>.<span class="ruby-identifier">seq</span>( <span class="ruby-identifier">taguri</span>, <span class="ruby-identifier">to_yaml_style</span> ) <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">seq</span><span class="ruby-operator">|</span>
+            <span class="ruby-keyword">self</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">v</span><span class="ruby-operator">|</span>
+                <span class="ruby-identifier">seq</span>.<span class="ruby-identifier">add</span>( <span class="ruby-constant">Hash</span>[ <span class="ruby-operator">*</span><span class="ruby-identifier">v</span> ] )
+            <span class="ruby-keyword">end</span>
+        <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-yaml_initialize">
+            
+              <b>yaml_initialize</b>( tag, val )
+            
+            <a href="../../classes/Syck/Omap.html#method-i-yaml_initialize" name="method-i-yaml_initialize" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-yaml_initialize_source')" id="l_method-i-yaml_initialize_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/eb71e5cd67f4ce4da5ba331f93a8e36c65457b94/ext/syck/lib/syck/types.rb#L85" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-yaml_initialize_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/syck/lib/syck/types.rb, line 85</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">yaml_initialize</span>( <span class="ruby-identifier">tag</span>, <span class="ruby-identifier">val</span> )
+    <span class="ruby-keyword">if</span> <span class="ruby-constant">Array</span> <span class="ruby-operator">===</span> <span class="ruby-identifier">val</span>
+        <span class="ruby-identifier">val</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">v</span><span class="ruby-operator">|</span>
+            <span class="ruby-keyword">if</span> <span class="ruby-constant">Hash</span> <span class="ruby-operator">===</span> <span class="ruby-identifier">v</span>
+                <span class="ruby-identifier">concat</span>( <span class="ruby-identifier">v</span>.<span class="ruby-identifier">to_a</span> )                <span class="ruby-comment"># Convert the map to a sequence</span>
+            <span class="ruby-keyword">else</span>
+                <span class="ruby-identifier">raise</span> <span class="ruby-constant">Syck</span><span class="ruby-operator">::</span><span class="ruby-constant">Error</span>, <span class="ruby-string">&quot;Invalid !omap entry: &quot;</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">val</span>.<span class="ruby-identifier">inspect</span>
+            <span class="ruby-keyword">end</span>
+        <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">else</span>
+        <span class="ruby-identifier">raise</span> <span class="ruby-constant">Syck</span><span class="ruby-operator">::</span><span class="ruby-constant">Error</span>, <span class="ruby-string">&quot;Invalid !omap: &quot;</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">val</span>.<span class="ruby-identifier">inspect</span>
+    <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                    </div>
+
+    </div>
+  </body>
+</html>    

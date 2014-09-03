@@ -1,0 +1,868 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>TktMark</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="../css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/main.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/github.css" type="text/css" media="screen" />
+<script src="../js/jquery-1.3.2.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/jquery-effect.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+
+<body>     
+    <div class="banner">
+        
+        <h1>
+            <span class="type">Class</span> 
+            TktMark 
+            
+                <span class="parent">&lt; 
+                    
+                    <a href="TkObject.html">TkObject</a>
+                    
+                </span>
+            
+        </h1>
+        <ul class="files">
+            
+            <li><a href="../files/ext/tk/lib/tk/textmark_rb.html">ext/tk/lib/tk/textmark.rb</a></li>
+            
+        </ul>
+    </div>
+    <div id="bodyContent">
+        <div id="content">
+  
+
+
+  
+
+
+  
+  
+
+
+  
+
+
+  
+    <!-- Method ref -->
+    <div class="sectiontitle">Methods</div>
+    <dl class="methods">
+      
+        <dt>D</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-destroy">destroy</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>E</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-exist-3F">exist?</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>G</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-gravity">gravity</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-gravity-3D">gravity=</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>I</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-id">id</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-c-id2obj">id2obj</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>M</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-mutex">mutex</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>N</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-new">new</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-next">next</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>P</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-pos">pos</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-pos-3D">pos=</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-previous">previous</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>S</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-set">set</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>U</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-unset">unset</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+    </dl>
+  
+
+  
+    <!-- Includes -->
+    <div class="sectiontitle">Included Modules</div>
+    <ul>
+      
+        <li>
+          
+            <a href="Tk/Text/IndexModMethods.html">
+              Tk::Text::IndexModMethods
+            </a>
+          
+        </li>
+      
+    </ul>
+  
+
+
+
+  
+
+    
+
+    
+
+    
+      <!-- Section constants -->
+      <div class="sectiontitle">Constants</div>
+      <table border='0' cellpadding='5'>
+        
+          <tr valign='top'>
+            <td class="attr-name">TMarkID_TBL</td>
+            <td>=</td>
+            <td class="attr-value">TkCore::INTERP.create_table</td>
+          </tr>
+          
+            <tr valign='top'>
+              <td>&nbsp;</td>
+              <td colspan="2" class="attr-desc"></td>
+            </tr>
+          
+        
+          <tr valign='top'>
+            <td class="attr-name">Tk_TextMark_ID</td>
+            <td>=</td>
+            <td class="attr-value">[&#39;mark&#39;.freeze, TkUtil.untrust(&#39;00000&#39;)]).instance_eval{
+@mutex = Mutex.new</td>
+          </tr>
+          
+            <tr valign='top'>
+              <td>&nbsp;</td>
+              <td colspan="2" class="attr-desc"></td>
+            </tr>
+          
+        
+      </table>
+    
+
+
+    
+
+
+    <!-- Methods -->
+    
+      <div class="sectiontitle">Class Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-c-id2obj">
+            
+              <b>id2obj</b>(text, id)
+            
+            <a href="../classes/TktMark.html#method-c-id2obj" name="method-c-id2obj" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-id2obj_source')" id="l_method-c-id2obj_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tk/textmark.rb#L22" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-id2obj_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tk/textmark.rb, line 22</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">TkTextMark</span>.<span class="ruby-identifier">id2obj</span>(<span class="ruby-identifier">text</span>, <span class="ruby-identifier">id</span>)
+  <span class="ruby-identifier">tpath</span> = <span class="ruby-identifier">text</span>.<span class="ruby-identifier">path</span>
+  <span class="ruby-constant">TMarkID_TBL</span>.<span class="ruby-identifier">mutex</span>.<span class="ruby-identifier">synchronize</span>{
+    <span class="ruby-keyword">if</span> <span class="ruby-constant">TMarkID_TBL</span>[<span class="ruby-identifier">tpath</span>]
+      <span class="ruby-constant">TMarkID_TBL</span>[<span class="ruby-identifier">tpath</span>][<span class="ruby-identifier">id</span>]<span class="ruby-operator">?</span> <span class="ruby-constant">TMarkID_TBL</span>[<span class="ruby-identifier">tpath</span>][<span class="ruby-identifier">id</span>]<span class="ruby-operator">:</span> <span class="ruby-identifier">id</span>
+    <span class="ruby-keyword">else</span>
+      <span class="ruby-identifier">id</span>
+    <span class="ruby-keyword">end</span>
+  }
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-new">
+            
+              <b>new</b>(parent, index)
+            
+            <a href="../classes/TktMark.html#method-c-new" name="method-c-new" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-new_source')" id="l_method-c-new_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tk/textmark.rb#L33" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-new_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tk/textmark.rb, line 33</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">initialize</span>(<span class="ruby-identifier">parent</span>, <span class="ruby-identifier">index</span>)
+  <span class="ruby-comment">#unless parent.kind_of?(Tk::Text)</span>
+  <span class="ruby-comment">#  fail ArgumentError, &quot;expect Tk::Text for 1st argument&quot;</span>
+  <span class="ruby-comment">#end</span>
+  <span class="ruby-ivar">@parent</span> = <span class="ruby-ivar">@t</span> = <span class="ruby-identifier">parent</span>
+  <span class="ruby-ivar">@tpath</span> = <span class="ruby-identifier">parent</span>.<span class="ruby-identifier">path</span>
+  <span class="ruby-constant">Tk_TextMark_ID</span>.<span class="ruby-identifier">mutex</span>.<span class="ruby-identifier">synchronize</span>{
+    <span class="ruby-comment"># @path = @id = Tk_TextMark_ID.join(&#39;&#39;)</span>
+    <span class="ruby-ivar">@path</span> = <span class="ruby-ivar">@id</span> = <span class="ruby-constant">Tk_TextMark_ID</span>.<span class="ruby-identifier">join</span>(<span class="ruby-constant">TkCore</span><span class="ruby-operator">::</span><span class="ruby-constant">INTERP</span>.<span class="ruby-identifier">_ip_id_</span>).<span class="ruby-identifier">freeze</span>
+    <span class="ruby-constant">Tk_TextMark_ID</span>[<span class="ruby-number">1</span>].<span class="ruby-identifier">succ!</span>
+  }
+  <span class="ruby-constant">TMarkID_TBL</span>.<span class="ruby-identifier">mutex</span>.<span class="ruby-identifier">synchronize</span>{
+    <span class="ruby-constant">TMarkID_TBL</span>[<span class="ruby-ivar">@id</span>] = <span class="ruby-keyword">self</span>
+    <span class="ruby-constant">TMarkID_TBL</span>[<span class="ruby-ivar">@tpath</span>] = {} <span class="ruby-keyword">unless</span> <span class="ruby-constant">TMarkID_TBL</span>[<span class="ruby-ivar">@tpath</span>]
+    <span class="ruby-constant">TMarkID_TBL</span>[<span class="ruby-ivar">@tpath</span>][<span class="ruby-ivar">@id</span>] = <span class="ruby-keyword">self</span>
+  }
+  <span class="ruby-identifier">tk_call_without_enc</span>(<span class="ruby-ivar">@t</span>.<span class="ruby-identifier">path</span>, <span class="ruby-string">&#39;mark&#39;</span>, <span class="ruby-string">&#39;set&#39;</span>, <span class="ruby-ivar">@id</span>,
+                      <span class="ruby-identifier">_get_eval_enc_str</span>(<span class="ruby-identifier">index</span>))
+  <span class="ruby-ivar">@t</span>.<span class="ruby-identifier">_addtag</span> <span class="ruby-identifier">id</span>, <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                  
+      <div class="sectiontitle">Instance Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-i-destroy">
+            
+              <b>destroy</b>()
+            
+            <a href="../classes/TktMark.html#method-i-destroy" name="method-i-destroy" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+            <div class="aka">
+              Alias for: <a href="TkTextMark.html#method-i-unset">unset</a>
+            </div>
+          
+          
+          
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-exist-3F">
+            
+              <b>exist?</b>()
+            
+            <a href="../classes/TktMark.html#method-i-exist-3F" name="method-i-exist-3F" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-exist-3F_source')" id="l_method-i-exist-3F_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tk/textmark.rb#L58" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-exist-3F_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tk/textmark.rb, line 58</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">exist?</span>
+  <span class="ruby-comment">#if ( tk_split_simplelist(_fromUTF8(tk_call_without_enc(@t.path, &#39;mark&#39;, &#39;names&#39;))).find{|id| id == @id } )</span>
+  <span class="ruby-keyword">if</span> ( <span class="ruby-identifier">tk_split_simplelist</span>(<span class="ruby-identifier">tk_call_without_enc</span>(<span class="ruby-ivar">@t</span>.<span class="ruby-identifier">path</span>, <span class="ruby-string">&#39;mark&#39;</span>, <span class="ruby-string">&#39;names&#39;</span>), <span class="ruby-keyword">false</span>, <span class="ruby-keyword">true</span>).<span class="ruby-identifier">find</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">id</span><span class="ruby-operator">|</span> <span class="ruby-identifier">id</span> <span class="ruby-operator">==</span> <span class="ruby-ivar">@id</span> } )
+    <span class="ruby-keyword">true</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-keyword">false</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-gravity">
+            
+              <b>gravity</b>()
+            
+            <a href="../classes/TktMark.html#method-i-gravity" name="method-i-gravity" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-gravity_source')" id="l_method-i-gravity_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tk/textmark.rb#L114" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-gravity_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tk/textmark.rb, line 114</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">gravity</span>
+  <span class="ruby-identifier">tk_call_without_enc</span>(<span class="ruby-ivar">@t</span>.<span class="ruby-identifier">path</span>, <span class="ruby-string">&#39;mark&#39;</span>, <span class="ruby-string">&#39;gravity&#39;</span>, <span class="ruby-ivar">@id</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-gravity-3D">
+            
+              <b>gravity=</b>(direction)
+            
+            <a href="../classes/TktMark.html#method-i-gravity-3D" name="method-i-gravity-3D" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-gravity-3D_source')" id="l_method-i-gravity-3D_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tk/textmark.rb#L118" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-gravity-3D_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tk/textmark.rb, line 118</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">gravity=</span>(<span class="ruby-identifier">direction</span>)
+  <span class="ruby-identifier">tk_call_without_enc</span>(<span class="ruby-ivar">@t</span>.<span class="ruby-identifier">path</span>, <span class="ruby-string">&#39;mark&#39;</span>, <span class="ruby-string">&#39;gravity&#39;</span>, <span class="ruby-ivar">@id</span>, <span class="ruby-identifier">direction</span>)
+  <span class="ruby-comment">#self</span>
+  <span class="ruby-identifier">direction</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-id">
+            
+              <b>id</b>()
+            
+            <a href="../classes/TktMark.html#method-i-id" name="method-i-id" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-id_source')" id="l_method-i-id_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tk/textmark.rb#L54" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-id_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tk/textmark.rb, line 54</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">id</span>
+  <span class="ruby-constant">Tk</span><span class="ruby-operator">::</span><span class="ruby-constant">Text</span><span class="ruby-operator">::</span><span class="ruby-constant">IndexString</span>.<span class="ruby-identifier">new</span>(<span class="ruby-ivar">@id</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-mutex">
+            
+              <b>mutex</b>()
+            
+            <a href="../classes/TktMark.html#method-i-mutex" name="method-i-mutex" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-mutex_source')" id="l_method-i-mutex_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tk/textmark.rb#L14" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-mutex_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tk/textmark.rb, line 14</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">mutex</span>; <span class="ruby-ivar">@mutex</span>; <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-next">
+            
+              <b>next</b>(index = nil)
+            
+            <a href="../classes/TktMark.html#method-i-next" name="method-i-next" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-next_source')" id="l_method-i-next_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tk/textmark.rb#L124" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-next_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tk/textmark.rb, line 124</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">next</span>(<span class="ruby-identifier">index</span> = <span class="ruby-keyword">nil</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">index</span>
+    <span class="ruby-ivar">@t</span>.<span class="ruby-identifier">tagid2obj</span>(<span class="ruby-identifier">_fromUTF8</span>(<span class="ruby-identifier">tk_call_without_enc</span>(<span class="ruby-ivar">@t</span>.<span class="ruby-identifier">path</span>, <span class="ruby-string">&#39;mark&#39;</span>, <span class="ruby-string">&#39;next&#39;</span>, <span class="ruby-identifier">_get_eval_enc_str</span>(<span class="ruby-identifier">index</span>))))
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-ivar">@t</span>.<span class="ruby-identifier">tagid2obj</span>(<span class="ruby-identifier">_fromUTF8</span>(<span class="ruby-identifier">tk_call_without_enc</span>(<span class="ruby-ivar">@t</span>.<span class="ruby-identifier">path</span>, <span class="ruby-string">&#39;mark&#39;</span>, <span class="ruby-string">&#39;next&#39;</span>, <span class="ruby-ivar">@id</span>)))
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-pos">
+            
+              <b>pos</b>()
+            
+            <a href="../classes/TktMark.html#method-i-pos" name="method-i-pos" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p># move to <a
+href="Tk/Text/IndexModMethods.html">Tk::Text::IndexModMethods</a> module
+def +(mod)</p>
+
+<pre><code>return chars(mod) if mod.kind_of?(Numeric)
+
+mod = mod.to_s
+if mod =~ /^\s*[+-]?\d/
+  Tk::Text::IndexString.new(@id + &#39; + &#39; + mod)
+else
+  Tk::Text::IndexString.new(@id + &#39; &#39; + mod)
+end</code></pre>
+
+<p>end</p>
+
+<p>def -(mod)</p>
+
+<pre><code>return chars(-mod) if mod.kind_of?(Numeric)
+
+mod = mod.to_s
+if mod =~ /^\s*[+-]?\d/
+  Tk::Text::IndexString.new(@id + &#39; - &#39; + mod)
+elsif mod =~ /^\s*[-]\s+(\d.*)$/
+  Tk::Text::IndexString.new(@id + &#39; - -&#39; + $1)
+else
+  Tk::Text::IndexString.new(@id + &#39; &#39; + mod)
+end</code></pre>
+
+<p>end</p>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-pos_source')" id="l_method-i-pos_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tk/textmark.rb#L94" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-pos_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tk/textmark.rb, line 94</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">pos</span>
+  <span class="ruby-ivar">@t</span>.<span class="ruby-identifier">index</span>(<span class="ruby-ivar">@id</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-pos-3D">
+            
+              <b>pos=</b>(where)
+            
+            <a href="../classes/TktMark.html#method-i-pos-3D" name="method-i-pos-3D" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-pos-3D_source')" id="l_method-i-pos-3D_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tk/textmark.rb#L98" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-pos-3D_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tk/textmark.rb, line 98</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">pos=</span>(<span class="ruby-identifier">where</span>)
+  <span class="ruby-identifier">set</span>(<span class="ruby-identifier">where</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-previous">
+            
+              <b>previous</b>(index = nil)
+            
+            <a href="../classes/TktMark.html#method-i-previous" name="method-i-previous" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-previous_source')" id="l_method-i-previous_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tk/textmark.rb#L132" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-previous_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tk/textmark.rb, line 132</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">previous</span>(<span class="ruby-identifier">index</span> = <span class="ruby-keyword">nil</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">index</span>
+    <span class="ruby-ivar">@t</span>.<span class="ruby-identifier">tagid2obj</span>(<span class="ruby-identifier">_fromUTF8</span>(<span class="ruby-identifier">tk_call_without_enc</span>(<span class="ruby-ivar">@t</span>.<span class="ruby-identifier">path</span>, <span class="ruby-string">&#39;mark&#39;</span>, <span class="ruby-string">&#39;previous&#39;</span>, <span class="ruby-identifier">_get_eval_enc_str</span>(<span class="ruby-identifier">index</span>))))
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-ivar">@t</span>.<span class="ruby-identifier">tagid2obj</span>(<span class="ruby-identifier">_fromUTF8</span>(<span class="ruby-identifier">tk_call_without_enc</span>(<span class="ruby-ivar">@t</span>.<span class="ruby-identifier">path</span>, <span class="ruby-string">&#39;mark&#39;</span>, <span class="ruby-string">&#39;previous&#39;</span>, <span class="ruby-ivar">@id</span>)))
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-set">
+            
+              <b>set</b>(where)
+            
+            <a href="../classes/TktMark.html#method-i-set" name="method-i-set" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-set_source')" id="l_method-i-set_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tk/textmark.rb#L102" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-set_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tk/textmark.rb, line 102</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">set</span>(<span class="ruby-identifier">where</span>)
+  <span class="ruby-identifier">tk_call_without_enc</span>(<span class="ruby-ivar">@t</span>.<span class="ruby-identifier">path</span>, <span class="ruby-string">&#39;mark&#39;</span>, <span class="ruby-string">&#39;set&#39;</span>, <span class="ruby-ivar">@id</span>,
+                      <span class="ruby-identifier">_get_eval_enc_str</span>(<span class="ruby-identifier">where</span>))
+  <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-unset">
+            
+              <b>unset</b>()
+            
+            <a href="../classes/TktMark.html#method-i-unset" name="method-i-unset" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+            <div class="aka">
+              Also aliased as: <a href="TkTextMark.html#method-i-destroy">destroy</a>
+            </div>
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-unset_source')" id="l_method-i-unset_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tk/textmark.rb#L108" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-unset_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tk/textmark.rb, line 108</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">unset</span>
+  <span class="ruby-identifier">tk_call_without_enc</span>(<span class="ruby-ivar">@t</span>.<span class="ruby-identifier">path</span>, <span class="ruby-string">&#39;mark&#39;</span>, <span class="ruby-string">&#39;unset&#39;</span>, <span class="ruby-ivar">@id</span>)
+  <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                    </div>
+
+    </div>
+  </body>
+</html>    

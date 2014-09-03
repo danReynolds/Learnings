@@ -1,0 +1,834 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>Tk::Toplevel</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="../../css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../../css/main.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../../css/github.css" type="text/css" media="screen" />
+<script src="../../js/jquery-1.3.2.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../js/jquery-effect.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../js/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+
+<body>     
+    <div class="banner">
+        
+        <h1>
+            <span class="type">Class</span> 
+            Tk::Toplevel 
+            
+                <span class="parent">&lt; 
+                    
+                    <a href="../TkWindow.html">TkWindow</a>
+                    
+                </span>
+            
+        </h1>
+        <ul class="files">
+            
+            <li><a href="../../files/ext/tk/lib/tk/toplevel_rb.html">ext/tk/lib/tk/toplevel.rb</a></li>
+            
+            <li><a href="../../files/ext/tk/lib/tkextlib/tktrans/tktrans_rb.html">ext/tk/lib/tkextlib/tktrans/tktrans.rb</a></li>
+            
+        </ul>
+    </div>
+    <div id="bodyContent">
+        <div id="content">
+  
+
+
+  
+
+
+  
+  
+
+
+  
+
+
+  
+    <!-- Method ref -->
+    <div class="sectiontitle">Methods</div>
+    <dl class="methods">
+      
+        <dt>A</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-add_menu">add_menu</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-add_menubar">add_menubar</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>B</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-bind">bind</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-c-bind_append">bind_append</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-c-bind_remove">bind_remove</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-c-bindinfo">bindinfo</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>D</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-database_class">database_class</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-c-database_classname">database_classname</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>N</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-new">new</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>S</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-specific_class">specific_class</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>T</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-tktrans_get_image">tktrans_get_image</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-tktrans_set_image">tktrans_set_image</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+    </dl>
+  
+
+  
+    <!-- Includes -->
+    <div class="sectiontitle">Included Modules</div>
+    <ul>
+      
+        <li>
+          
+            Wm
+          
+        </li>
+      
+        <li>
+          
+            <a href="../TkMenuSpec.html">
+              TkMenuSpec
+            </a>
+          
+        </li>
+      
+    </ul>
+  
+
+
+
+  
+
+    
+
+    
+
+    
+      <!-- Section constants -->
+      <div class="sectiontitle">Constants</div>
+      <table border='0' cellpadding='5'>
+        
+          <tr valign='top'>
+            <td class="attr-name">TkCommandNames</td>
+            <td>=</td>
+            <td class="attr-value">[&#39;toplevel&#39;.freeze].freeze</td>
+          </tr>
+          
+            <tr valign='top'>
+              <td>&nbsp;</td>
+              <td colspan="2" class="attr-desc"></td>
+            </tr>
+          
+        
+          <tr valign='top'>
+            <td class="attr-name">WidgetClassName</td>
+            <td>=</td>
+            <td class="attr-value">&#39;Toplevel&#39;.freeze</td>
+          </tr>
+          
+            <tr valign='top'>
+              <td>&nbsp;</td>
+              <td colspan="2" class="attr-desc"></td>
+            </tr>
+          
+        
+      </table>
+    
+
+
+    
+
+
+    <!-- Methods -->
+    
+      <div class="sectiontitle">Class Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-c-bind">
+            
+              <b>bind</b>(*args, &amp;b)
+            
+            <a href="../../classes/Tk/Toplevel.html#method-c-bind" name="method-c-bind" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-bind_source')" id="l_method-c-bind_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tk/toplevel.rb#L231" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-bind_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tk/toplevel.rb, line 231</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">bind</span>(<span class="ruby-operator">*</span><span class="ruby-identifier">args</span>, <span class="ruby-operator">&amp;</span><span class="ruby-identifier">b</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-keyword">self</span> <span class="ruby-operator">==</span> <span class="ruby-constant">WidgetClassNames</span>[<span class="ruby-constant">WidgetClassName</span>] <span class="ruby-operator">||</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">name</span> <span class="ruby-operator">==</span> <span class="ruby-string">&#39;&#39;</span>
+    <span class="ruby-keyword">super</span>(<span class="ruby-operator">*</span><span class="ruby-identifier">args</span>, <span class="ruby-operator">&amp;</span><span class="ruby-identifier">b</span>)
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-constant">TkDatabaseClass</span>.<span class="ruby-identifier">new</span>(<span class="ruby-keyword">self</span>.<span class="ruby-identifier">name</span>).<span class="ruby-identifier">bind</span>(<span class="ruby-operator">*</span><span class="ruby-identifier">args</span>, <span class="ruby-operator">&amp;</span><span class="ruby-identifier">b</span>)
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-bind_append">
+            
+              <b>bind_append</b>(*args, &amp;b)
+            
+            <a href="../../classes/Tk/Toplevel.html#method-c-bind_append" name="method-c-bind_append" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-bind_append_source')" id="l_method-c-bind_append_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tk/toplevel.rb#L238" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-bind_append_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tk/toplevel.rb, line 238</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">bind_append</span>(<span class="ruby-operator">*</span><span class="ruby-identifier">args</span>, <span class="ruby-operator">&amp;</span><span class="ruby-identifier">b</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-keyword">self</span> <span class="ruby-operator">==</span> <span class="ruby-constant">WidgetClassNames</span>[<span class="ruby-constant">WidgetClassName</span>] <span class="ruby-operator">||</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">name</span> <span class="ruby-operator">==</span> <span class="ruby-string">&#39;&#39;</span>
+    <span class="ruby-keyword">super</span>(<span class="ruby-operator">*</span><span class="ruby-identifier">args</span>, <span class="ruby-operator">&amp;</span><span class="ruby-identifier">b</span>)
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-constant">TkDatabaseClass</span>.<span class="ruby-identifier">new</span>(<span class="ruby-keyword">self</span>.<span class="ruby-identifier">name</span>).<span class="ruby-identifier">bind_append</span>(<span class="ruby-operator">*</span><span class="ruby-identifier">args</span>, <span class="ruby-operator">&amp;</span><span class="ruby-identifier">b</span>)
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-bind_remove">
+            
+              <b>bind_remove</b>(*args)
+            
+            <a href="../../classes/Tk/Toplevel.html#method-c-bind_remove" name="method-c-bind_remove" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-bind_remove_source')" id="l_method-c-bind_remove_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tk/toplevel.rb#L245" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-bind_remove_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tk/toplevel.rb, line 245</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">bind_remove</span>(<span class="ruby-operator">*</span><span class="ruby-identifier">args</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-keyword">self</span> <span class="ruby-operator">==</span> <span class="ruby-constant">WidgetClassNames</span>[<span class="ruby-constant">WidgetClassName</span>] <span class="ruby-operator">||</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">name</span> <span class="ruby-operator">==</span> <span class="ruby-string">&#39;&#39;</span>
+    <span class="ruby-keyword">super</span>(<span class="ruby-operator">*</span><span class="ruby-identifier">args</span>)
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-constant">TkDatabaseClass</span>.<span class="ruby-identifier">new</span>(<span class="ruby-keyword">self</span>.<span class="ruby-identifier">name</span>).<span class="ruby-identifier">bind_remove</span>(<span class="ruby-operator">*</span><span class="ruby-identifier">args</span>)
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-bindinfo">
+            
+              <b>bindinfo</b>(*args)
+            
+            <a href="../../classes/Tk/Toplevel.html#method-c-bindinfo" name="method-c-bindinfo" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-bindinfo_source')" id="l_method-c-bindinfo_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tk/toplevel.rb#L252" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-bindinfo_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tk/toplevel.rb, line 252</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">bindinfo</span>(<span class="ruby-operator">*</span><span class="ruby-identifier">args</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-keyword">self</span> <span class="ruby-operator">==</span> <span class="ruby-constant">WidgetClassNames</span>[<span class="ruby-constant">WidgetClassName</span>] <span class="ruby-operator">||</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">name</span> <span class="ruby-operator">==</span> <span class="ruby-string">&#39;&#39;</span>
+    <span class="ruby-keyword">super</span>(<span class="ruby-operator">*</span><span class="ruby-identifier">args</span>)
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-constant">TkDatabaseClass</span>.<span class="ruby-identifier">new</span>(<span class="ruby-keyword">self</span>.<span class="ruby-identifier">name</span>).<span class="ruby-identifier">bindinfo</span>(<span class="ruby-operator">*</span><span class="ruby-identifier">args</span>)
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-database_class">
+            
+              <b>database_class</b>()
+            
+            <a href="../../classes/Tk/Toplevel.html#method-c-database_class" name="method-c-database_class" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-database_class_source')" id="l_method-c-database_class_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tk/toplevel.rb#L220" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-database_class_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tk/toplevel.rb, line 220</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">database_class</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-keyword">self</span> <span class="ruby-operator">==</span> <span class="ruby-constant">WidgetClassNames</span>[<span class="ruby-constant">WidgetClassName</span>] <span class="ruby-operator">||</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">name</span> <span class="ruby-operator">==</span> <span class="ruby-string">&#39;&#39;</span>
+    <span class="ruby-keyword">self</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-constant">TkDatabaseClass</span>.<span class="ruby-identifier">new</span>(<span class="ruby-keyword">self</span>.<span class="ruby-identifier">name</span>)
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-database_classname">
+            
+              <b>database_classname</b>()
+            
+            <a href="../../classes/Tk/Toplevel.html#method-c-database_classname" name="method-c-database_classname" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-database_classname_source')" id="l_method-c-database_classname_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tk/toplevel.rb#L227" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-database_classname_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tk/toplevel.rb, line 227</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">database_classname</span>
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">database_class</span>.<span class="ruby-identifier">name</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-new">
+            
+              <b>new</b>(parent=nil, screen=nil, classname=nil, keys=nil)
+            
+            <a href="../../classes/Tk/Toplevel.html#method-c-new" name="method-c-new" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-new_source')" id="l_method-c-new_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tk/toplevel.rb#L98" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-new_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tk/toplevel.rb, line 98</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">initialize</span>(<span class="ruby-identifier">parent</span>=<span class="ruby-keyword">nil</span>, <span class="ruby-identifier">screen</span>=<span class="ruby-keyword">nil</span>, <span class="ruby-identifier">classname</span>=<span class="ruby-keyword">nil</span>, <span class="ruby-identifier">keys</span>=<span class="ruby-keyword">nil</span>)
+  <span class="ruby-identifier">my_class_name</span> = <span class="ruby-keyword">nil</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">class</span> <span class="ruby-operator">&lt;</span> <span class="ruby-constant">WidgetClassNames</span>[<span class="ruby-constant">WidgetClassName</span>]
+    <span class="ruby-identifier">my_class_name</span> = <span class="ruby-keyword">self</span>.<span class="ruby-identifier">class</span>.<span class="ruby-identifier">name</span>
+    <span class="ruby-identifier">my_class_name</span> = <span class="ruby-keyword">nil</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">my_class_name</span> <span class="ruby-operator">==</span> <span class="ruby-string">&#39;&#39;</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">parent</span>.<span class="ruby-identifier">kind_of?</span> <span class="ruby-constant">Hash</span>
+    <span class="ruby-identifier">keys</span> = <span class="ruby-identifier">_symbolkey2str</span>(<span class="ruby-identifier">parent</span>)
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">keys</span>.<span class="ruby-identifier">key?</span>(<span class="ruby-string">&#39;classname&#39;</span>)
+      <span class="ruby-identifier">keys</span>[<span class="ruby-string">&#39;class&#39;</span>] = <span class="ruby-identifier">keys</span>.<span class="ruby-identifier">delete</span>(<span class="ruby-string">&#39;classname&#39;</span>)
+    <span class="ruby-keyword">end</span>
+    <span class="ruby-ivar">@classname</span> = <span class="ruby-identifier">keys</span>[<span class="ruby-string">&#39;class&#39;</span>]
+    <span class="ruby-ivar">@colormap</span>  = <span class="ruby-identifier">keys</span>[<span class="ruby-string">&#39;colormap&#39;</span>]
+    <span class="ruby-ivar">@container</span> = <span class="ruby-identifier">keys</span>[<span class="ruby-string">&#39;container&#39;</span>]
+    <span class="ruby-ivar">@screen</span>    = <span class="ruby-identifier">keys</span>[<span class="ruby-string">&#39;screen&#39;</span>]
+    <span class="ruby-ivar">@use</span>       = <span class="ruby-identifier">keys</span>[<span class="ruby-string">&#39;use&#39;</span>]
+    <span class="ruby-ivar">@visual</span>    = <span class="ruby-identifier">keys</span>[<span class="ruby-string">&#39;visual&#39;</span>]
+    <span class="ruby-keyword">if</span> <span class="ruby-operator">!</span><span class="ruby-ivar">@classname</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">my_class_name</span>
+      <span class="ruby-identifier">keys</span>[<span class="ruby-string">&#39;class&#39;</span>] = <span class="ruby-ivar">@classname</span> = <span class="ruby-identifier">my_class_name</span>
+    <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-ivar">@classname</span>.<span class="ruby-identifier">kind_of?</span> <span class="ruby-constant">TkBindTag</span>
+      <span class="ruby-ivar">@db_class</span> = <span class="ruby-ivar">@classname</span>
+      <span class="ruby-identifier">keys</span>[<span class="ruby-string">&#39;class&#39;</span>] = <span class="ruby-ivar">@classname</span> = <span class="ruby-ivar">@classname</span>.<span class="ruby-identifier">id</span>
+    <span class="ruby-keyword">elsif</span> <span class="ruby-ivar">@classname</span>
+      <span class="ruby-ivar">@db_class</span> = <span class="ruby-constant">TkDatabaseClass</span>.<span class="ruby-identifier">new</span>(<span class="ruby-ivar">@classname</span>)
+      <span class="ruby-identifier">keys</span>[<span class="ruby-string">&#39;class&#39;</span>] = <span class="ruby-ivar">@classname</span>
+    <span class="ruby-keyword">else</span>
+      <span class="ruby-ivar">@db_class</span> = <span class="ruby-keyword">self</span>.<span class="ruby-identifier">class</span>
+      <span class="ruby-ivar">@classname</span> = <span class="ruby-ivar">@db_class</span><span class="ruby-operator">::</span><span class="ruby-constant">WidgetClassName</span>
+    <span class="ruby-keyword">end</span>
+    <span class="ruby-identifier">keys</span>, <span class="ruby-identifier">cmds</span> = <span class="ruby-identifier">_wm_command_option_chk</span>(<span class="ruby-identifier">keys</span>)
+    <span class="ruby-keyword">super</span>(<span class="ruby-identifier">keys</span>)
+    <span class="ruby-identifier">cmds</span>.<span class="ruby-identifier">each</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">k</span>,<span class="ruby-identifier">v</span><span class="ruby-operator">|</span>
+      <span class="ruby-keyword">if</span> <span class="ruby-identifier">v</span>.<span class="ruby-identifier">kind_of?</span> <span class="ruby-constant">Array</span>
+        <span class="ruby-keyword">self</span>.<span class="ruby-identifier">__send__</span>(<span class="ruby-identifier">k</span>,<span class="ruby-operator">*</span><span class="ruby-identifier">v</span>)
+      <span class="ruby-keyword">else</span>
+        <span class="ruby-keyword">self</span>.<span class="ruby-identifier">__send__</span>(<span class="ruby-identifier">k</span>,<span class="ruby-identifier">v</span>)
+      <span class="ruby-keyword">end</span>
+    }
+    <span class="ruby-keyword">return</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">screen</span>.<span class="ruby-identifier">kind_of?</span> <span class="ruby-constant">Hash</span>
+    <span class="ruby-identifier">keys</span> = <span class="ruby-identifier">screen</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-ivar">@screen</span> = <span class="ruby-identifier">screen</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">classname</span>.<span class="ruby-identifier">kind_of?</span> <span class="ruby-constant">Hash</span>
+      <span class="ruby-identifier">keys</span> = <span class="ruby-identifier">classname</span>
+    <span class="ruby-keyword">else</span>
+      <span class="ruby-ivar">@classname</span> = <span class="ruby-identifier">classname</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">keys</span>.<span class="ruby-identifier">kind_of?</span> <span class="ruby-constant">Hash</span>
+    <span class="ruby-identifier">keys</span> = <span class="ruby-identifier">_symbolkey2str</span>(<span class="ruby-identifier">keys</span>)
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">keys</span>.<span class="ruby-identifier">key?</span>(<span class="ruby-string">&#39;classname&#39;</span>)
+      <span class="ruby-identifier">keys</span>[<span class="ruby-string">&#39;class&#39;</span>] = <span class="ruby-identifier">keys</span>.<span class="ruby-identifier">delete</span>(<span class="ruby-string">&#39;classname&#39;</span>)
+    <span class="ruby-keyword">end</span>
+    <span class="ruby-ivar">@classname</span> = <span class="ruby-identifier">keys</span>[<span class="ruby-string">&#39;class&#39;</span>]  <span class="ruby-keyword">unless</span> <span class="ruby-ivar">@classname</span>
+    <span class="ruby-ivar">@colormap</span>  = <span class="ruby-identifier">keys</span>[<span class="ruby-string">&#39;colormap&#39;</span>]
+    <span class="ruby-ivar">@container</span> = <span class="ruby-identifier">keys</span>[<span class="ruby-string">&#39;container&#39;</span>]
+    <span class="ruby-ivar">@screen</span>    = <span class="ruby-identifier">keys</span>[<span class="ruby-string">&#39;screen&#39;</span>] <span class="ruby-keyword">unless</span> <span class="ruby-ivar">@screen</span>
+    <span class="ruby-ivar">@use</span>       = <span class="ruby-identifier">keys</span>[<span class="ruby-string">&#39;use&#39;</span>]
+    <span class="ruby-ivar">@visual</span>    = <span class="ruby-identifier">keys</span>[<span class="ruby-string">&#39;visual&#39;</span>]
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">keys</span> = {}
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-operator">!</span><span class="ruby-ivar">@classname</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">my_class_name</span>
+    <span class="ruby-identifier">keys</span>[<span class="ruby-string">&#39;class&#39;</span>] = <span class="ruby-ivar">@classname</span> = <span class="ruby-identifier">my_class_name</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-ivar">@classname</span>.<span class="ruby-identifier">kind_of?</span> <span class="ruby-constant">TkBindTag</span>
+    <span class="ruby-ivar">@db_class</span> = <span class="ruby-ivar">@classname</span>
+    <span class="ruby-identifier">keys</span>[<span class="ruby-string">&#39;class&#39;</span>] = <span class="ruby-ivar">@classname</span> = <span class="ruby-ivar">@classname</span>.<span class="ruby-identifier">id</span>
+  <span class="ruby-keyword">elsif</span> <span class="ruby-ivar">@classname</span>
+    <span class="ruby-ivar">@db_class</span> = <span class="ruby-constant">TkDatabaseClass</span>.<span class="ruby-identifier">new</span>(<span class="ruby-ivar">@classname</span>)
+    <span class="ruby-identifier">keys</span>[<span class="ruby-string">&#39;class&#39;</span>] = <span class="ruby-ivar">@classname</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-ivar">@db_class</span> = <span class="ruby-keyword">self</span>.<span class="ruby-identifier">class</span>
+    <span class="ruby-ivar">@classname</span> = <span class="ruby-ivar">@db_class</span><span class="ruby-operator">::</span><span class="ruby-constant">WidgetClassName</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">keys</span>, <span class="ruby-identifier">cmds</span> = <span class="ruby-identifier">_wm_command_option_chk</span>(<span class="ruby-identifier">keys</span>)
+  <span class="ruby-keyword">super</span>(<span class="ruby-identifier">parent</span>, <span class="ruby-identifier">keys</span>)
+  <span class="ruby-identifier">cmds</span>.<span class="ruby-identifier">each</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">k</span>,<span class="ruby-identifier">v</span><span class="ruby-operator">|</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">v</span>.<span class="ruby-identifier">kind_of?</span> <span class="ruby-constant">Array</span>
+      <span class="ruby-keyword">self</span>.<span class="ruby-identifier">send</span>(<span class="ruby-identifier">k</span>,<span class="ruby-operator">*</span><span class="ruby-identifier">v</span>)
+    <span class="ruby-keyword">else</span>
+      <span class="ruby-keyword">self</span>.<span class="ruby-identifier">send</span>(<span class="ruby-identifier">k</span>,<span class="ruby-identifier">v</span>)
+    <span class="ruby-keyword">end</span>
+  }
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                  
+      <div class="sectiontitle">Instance Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-i-add_menu">
+            
+              <b>add_menu</b>(menu_info, tearoff=false, opts=nil)
+            
+            <a href="../../classes/Tk/Toplevel.html#method-i-add_menu" name="method-i-add_menu" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-add_menu_source')" id="l_method-i-add_menu_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tk/toplevel.rb#L201" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-add_menu_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tk/toplevel.rb, line 201</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">add_menu</span>(<span class="ruby-identifier">menu_info</span>, <span class="ruby-identifier">tearoff</span>=<span class="ruby-keyword">false</span>, <span class="ruby-identifier">opts</span>=<span class="ruby-keyword">nil</span>)
+  <span class="ruby-comment"># See tk/menuspec.rb for menu_info.</span>
+  <span class="ruby-comment"># opts is a hash of default configs for all of cascade menus.</span>
+  <span class="ruby-comment"># Configs of menu_info can override it.</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">tearoff</span>.<span class="ruby-identifier">kind_of?</span>(<span class="ruby-constant">Hash</span>)
+    <span class="ruby-identifier">opts</span> = <span class="ruby-identifier">tearoff</span>
+    <span class="ruby-identifier">tearoff</span> = <span class="ruby-keyword">false</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">_create_menubutton</span>(<span class="ruby-keyword">self</span>, <span class="ruby-identifier">menu_info</span>, <span class="ruby-identifier">tearoff</span>, <span class="ruby-identifier">opts</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-add_menubar">
+            
+              <b>add_menubar</b>(menu_spec, tearoff=false, opts=nil)
+            
+            <a href="../../classes/Tk/Toplevel.html#method-i-add_menubar" name="method-i-add_menubar" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-add_menubar_source')" id="l_method-i-add_menubar_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tk/toplevel.rb#L212" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-add_menubar_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tk/toplevel.rb, line 212</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">add_menubar</span>(<span class="ruby-identifier">menu_spec</span>, <span class="ruby-identifier">tearoff</span>=<span class="ruby-keyword">false</span>, <span class="ruby-identifier">opts</span>=<span class="ruby-keyword">nil</span>)
+  <span class="ruby-comment"># See tk/menuspec.rb for menu_spec.</span>
+  <span class="ruby-comment"># opts is a hash of default configs for all of cascade menus.</span>
+  <span class="ruby-comment"># Configs of menu_spec can override it.</span>
+  <span class="ruby-identifier">menu_spec</span>.<span class="ruby-identifier">each</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">info</span><span class="ruby-operator">|</span> <span class="ruby-identifier">add_menu</span>(<span class="ruby-identifier">info</span>, <span class="ruby-identifier">tearoff</span>, <span class="ruby-identifier">opts</span>)}
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">menu</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-specific_class">
+            
+              <b>specific_class</b>()
+            
+            <a href="../../classes/Tk/Toplevel.html#method-i-specific_class" name="method-i-specific_class" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>def create_self(keys)</p>
+
+<pre><code>if keys and keys != None
+  tk_call_without_enc(&#39;toplevel&#39;, @path, *hash_kv(keys, true))
+else
+  tk_call_without_enc(&#39;toplevel&#39;, @path)
+end</code></pre>
+
+<p>end private :create_self</p>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-specific_class_source')" id="l_method-i-specific_class_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tk/toplevel.rb#L197" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-specific_class_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tk/toplevel.rb, line 197</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">specific_class</span>
+  <span class="ruby-ivar">@classname</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-tktrans_get_image">
+            
+              <b>tktrans_get_image</b>()
+            
+            <a href="../../classes/Tk/Toplevel.html#method-i-tktrans_get_image" name="method-i-tktrans_get_image" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-tktrans_get_image_source')" id="l_method-i-tktrans_get_image_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ee695fb164796dc203306f1585c4f6dd74f06806/ext/tk/lib/tkextlib/tktrans/tktrans.rb#L61" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-tktrans_get_image_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/tktrans/tktrans.rb, line 61</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">tktrans_get_image</span>()
+  <span class="ruby-identifier">tk_send</span>(<span class="ruby-string">&#39;tktrans::settoplevel&#39;</span>, <span class="ruby-ivar">@path</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-tktrans_set_image">
+            
+              <b>tktrans_set_image</b>(img)
+            
+            <a href="../../classes/Tk/Toplevel.html#method-i-tktrans_set_image" name="method-i-tktrans_set_image" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-tktrans_set_image_source')" id="l_method-i-tktrans_set_image_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ee695fb164796dc203306f1585c4f6dd74f06806/ext/tk/lib/tkextlib/tktrans/tktrans.rb#L57" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-tktrans_set_image_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/tktrans/tktrans.rb, line 57</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">tktrans_set_image</span>(<span class="ruby-identifier">img</span>)
+  <span class="ruby-identifier">tk_send</span>(<span class="ruby-string">&#39;tktrans::settoplevel&#39;</span>, <span class="ruby-ivar">@path</span>, <span class="ruby-identifier">img</span>)
+  <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                    </div>
+
+    </div>
+  </body>
+</html>    

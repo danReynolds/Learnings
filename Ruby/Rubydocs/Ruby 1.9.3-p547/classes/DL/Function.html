@@ -1,0 +1,705 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>DL::Function</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="../../css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../../css/main.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../../css/github.css" type="text/css" media="screen" />
+<script src="../../js/jquery-1.3.2.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../js/jquery-effect.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../js/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+
+<body>     
+    <div class="banner">
+        
+        <h1>
+            <span class="type">Class</span> 
+            DL::Function 
+            
+                <span class="parent">&lt; 
+                    
+                    parent
+                    
+                </span>
+            
+        </h1>
+        <ul class="files">
+            
+            <li><a href="../../files/ext/dl/lib/dl/func_rb.html">ext/dl/lib/dl/func.rb</a></li>
+            
+        </ul>
+    </div>
+    <div id="bodyContent">
+        <div id="content">
+  
+
+
+  
+
+
+  
+  
+
+
+  
+
+
+  
+    <!-- Method ref -->
+    <div class="sectiontitle">Methods</div>
+    <dl class="methods">
+      
+        <dt>B</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-bind">bind</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-bind_at_call">bind_at_call</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-bound-3F">bound?</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>C</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-call">call</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>N</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-name">name</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-c-new">new</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>T</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-to_i">to_i</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>U</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-unbind">unbind</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-unbind_at_call">unbind_at_call</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>W</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-wrap_result">wrap_result</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+    </dl>
+  
+
+  
+    <!-- Includes -->
+    <div class="sectiontitle">Included Modules</div>
+    <ul>
+      
+        <li>
+          
+            <a href="../DL.html">
+              DL
+            </a>
+          
+        </li>
+      
+        <li>
+          
+            <a href="ValueUtil.html">
+              DL::ValueUtil
+            </a>
+          
+        </li>
+      
+    </ul>
+  
+
+
+
+  
+
+    
+
+    
+
+    
+
+
+    
+
+
+    <!-- Methods -->
+    
+      <div class="sectiontitle">Class Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-c-new">
+            
+              <b>new</b>(cfunc, argtypes, abi = nil, &amp;block)
+            
+            <a href="../../classes/DL/Function.html#method-c-new" name="method-c-new" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-new_source')" id="l_method-c-new_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/bede15ac5e701ed08f3fc64c2dba03d3f393c652/ext/dl/lib/dl/func.rb#L51" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-new_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/dl/lib/dl/func.rb, line 51</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">initialize</span> <span class="ruby-identifier">cfunc</span>, <span class="ruby-identifier">argtypes</span>, <span class="ruby-identifier">abi</span> = <span class="ruby-keyword">nil</span>, <span class="ruby-operator">&amp;</span><span class="ruby-identifier">block</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-constant">DL</span>.<span class="ruby-identifier">fiddle?</span>
+    <span class="ruby-identifier">abi</span> <span class="ruby-operator">||=</span> <span class="ruby-constant">CALL_TYPE_TO_ABI</span>[(<span class="ruby-identifier">cfunc</span>.<span class="ruby-identifier">calltype</span> <span class="ruby-keyword">rescue</span> <span class="ruby-keyword">nil</span>)]
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">block_given?</span>
+      <span class="ruby-ivar">@cfunc</span> = <span class="ruby-constant">Class</span>.<span class="ruby-identifier">new</span>(<span class="ruby-constant">FiddleClosureCFunc</span>) {
+        <span class="ruby-identifier">define_method</span>(<span class="ruby-value">:call</span>, <span class="ruby-identifier">block</span>)
+      }.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">cfunc</span>.<span class="ruby-identifier">ctype</span>, <span class="ruby-identifier">argtypes</span>, <span class="ruby-identifier">abi</span>, <span class="ruby-identifier">cfunc</span>.<span class="ruby-identifier">name</span>)
+    <span class="ruby-keyword">else</span>
+      <span class="ruby-ivar">@cfunc</span>  = <span class="ruby-identifier">cfunc</span>
+    <span class="ruby-keyword">end</span>
+
+    <span class="ruby-ivar">@args</span>   = <span class="ruby-identifier">argtypes</span>
+    <span class="ruby-keyword">super</span>(<span class="ruby-ivar">@cfunc</span>, <span class="ruby-ivar">@args</span>.<span class="ruby-identifier">reject</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">x</span><span class="ruby-operator">|</span> <span class="ruby-identifier">x</span> <span class="ruby-operator">==</span> <span class="ruby-constant">TYPE_VOID</span> }, <span class="ruby-identifier">cfunc</span>.<span class="ruby-identifier">ctype</span>, <span class="ruby-identifier">abi</span>)
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-ivar">@cfunc</span> = <span class="ruby-identifier">cfunc</span>
+    <span class="ruby-ivar">@stack</span> = <span class="ruby-constant">Stack</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">argtypes</span>.<span class="ruby-identifier">collect</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">ty</span><span class="ruby-operator">|</span> <span class="ruby-identifier">ty</span>.<span class="ruby-identifier">abs</span>})
+    <span class="ruby-keyword">if</span>( <span class="ruby-ivar">@cfunc</span>.<span class="ruby-identifier">ctype</span> <span class="ruby-operator">&lt;</span> <span class="ruby-number">0</span> )
+      <span class="ruby-ivar">@cfunc</span>.<span class="ruby-identifier">ctype</span> = <span class="ruby-ivar">@cfunc</span>.<span class="ruby-identifier">ctype</span>.<span class="ruby-identifier">abs</span>
+      <span class="ruby-ivar">@unsigned</span> = <span class="ruby-keyword">true</span>
+    <span class="ruby-keyword">else</span>
+      <span class="ruby-ivar">@unsigned</span> = <span class="ruby-keyword">false</span>
+    <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">block_given?</span>
+      <span class="ruby-identifier">bind</span>(<span class="ruby-operator">&amp;</span><span class="ruby-identifier">block</span>)
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                  
+      <div class="sectiontitle">Instance Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-i-bind">
+            
+              <b>bind</b>(&amp;block)
+            
+            <a href="../../classes/DL/Function.html#method-i-bind" name="method-i-bind" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-bind_source')" id="l_method-i-bind_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/bede15ac5e701ed08f3fc64c2dba03d3f393c652/ext/dl/lib/dl/func.rb#L117" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-bind_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/dl/lib/dl/func.rb, line 117</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">bind</span>(<span class="ruby-operator">&amp;</span><span class="ruby-identifier">block</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-constant">DL</span>.<span class="ruby-identifier">fiddle?</span>
+    <span class="ruby-ivar">@cfunc</span> = <span class="ruby-constant">Class</span>.<span class="ruby-identifier">new</span>(<span class="ruby-constant">FiddleClosureCFunc</span>) {
+      <span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">initialize</span> <span class="ruby-identifier">ctype</span>, <span class="ruby-identifier">args</span>, <span class="ruby-identifier">abi</span>, <span class="ruby-identifier">name</span>, <span class="ruby-identifier">block</span>
+        <span class="ruby-keyword">super</span>(<span class="ruby-identifier">ctype</span>, <span class="ruby-identifier">args</span>, <span class="ruby-identifier">abi</span>, <span class="ruby-identifier">name</span>)
+        <span class="ruby-ivar">@block</span> = <span class="ruby-identifier">block</span>
+      <span class="ruby-keyword">end</span>
+
+      <span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">call</span> <span class="ruby-operator">*</span><span class="ruby-identifier">args</span>
+        <span class="ruby-ivar">@block</span>.<span class="ruby-identifier">call</span>(<span class="ruby-operator">*</span><span class="ruby-identifier">args</span>)
+      <span class="ruby-keyword">end</span>
+    }.<span class="ruby-identifier">new</span>(<span class="ruby-ivar">@cfunc</span>.<span class="ruby-identifier">ctype</span>, <span class="ruby-ivar">@args</span>, <span class="ruby-identifier">abi</span>, <span class="ruby-identifier">name</span>, <span class="ruby-identifier">block</span>)
+    <span class="ruby-ivar">@ptr</span> = <span class="ruby-ivar">@cfunc</span>
+    <span class="ruby-keyword">return</span> <span class="ruby-keyword">nil</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-keyword">if</span>( <span class="ruby-operator">!</span><span class="ruby-identifier">block</span> )
+      <span class="ruby-identifier">raise</span>(<span class="ruby-constant">RuntimeError</span>, <span class="ruby-string">&quot;block must be given.&quot;</span>)
+    <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">if</span>( <span class="ruby-ivar">@cfunc</span>.<span class="ruby-identifier">ptr</span> <span class="ruby-operator">==</span> <span class="ruby-number">0</span> )
+      <span class="ruby-identifier">cb</span> = <span class="ruby-constant">Proc</span>.<span class="ruby-identifier">new</span>{<span class="ruby-operator">|</span><span class="ruby-operator">*</span><span class="ruby-identifier">args</span><span class="ruby-operator">|</span>
+        <span class="ruby-identifier">ary</span> = <span class="ruby-ivar">@stack</span>.<span class="ruby-identifier">unpack</span>(<span class="ruby-identifier">args</span>)
+        <span class="ruby-ivar">@stack</span>.<span class="ruby-identifier">types</span>.<span class="ruby-identifier">each_with_index</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">ty</span>, <span class="ruby-identifier">idx</span><span class="ruby-operator">|</span>
+          <span class="ruby-keyword">case</span> <span class="ruby-identifier">ty</span>
+          <span class="ruby-keyword">when</span> <span class="ruby-constant">TYPE_VOIDP</span>
+            <span class="ruby-identifier">ary</span>[<span class="ruby-identifier">idx</span>] = <span class="ruby-constant">CPtr</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">ary</span>[<span class="ruby-identifier">idx</span>])
+          <span class="ruby-keyword">end</span>
+        }
+        <span class="ruby-identifier">r</span> = <span class="ruby-identifier">block</span>.<span class="ruby-identifier">call</span>(<span class="ruby-operator">*</span><span class="ruby-identifier">ary</span>)
+        <span class="ruby-identifier">wrap_arg</span>(<span class="ruby-identifier">r</span>, <span class="ruby-ivar">@cfunc</span>.<span class="ruby-identifier">ctype</span>, [])
+      }
+      <span class="ruby-keyword">case</span> <span class="ruby-ivar">@cfunc</span>.<span class="ruby-identifier">calltype</span>
+      <span class="ruby-keyword">when</span> <span class="ruby-value">:cdecl</span>
+        <span class="ruby-ivar">@cfunc</span>.<span class="ruby-identifier">ptr</span> = <span class="ruby-identifier">set_cdecl_callback</span>(<span class="ruby-ivar">@cfunc</span>.<span class="ruby-identifier">ctype</span>, <span class="ruby-ivar">@stack</span>.<span class="ruby-identifier">size</span>, <span class="ruby-operator">&amp;</span><span class="ruby-identifier">cb</span>)
+      <span class="ruby-keyword">when</span> <span class="ruby-value">:stdcall</span>
+        <span class="ruby-ivar">@cfunc</span>.<span class="ruby-identifier">ptr</span> = <span class="ruby-identifier">set_stdcall_callback</span>(<span class="ruby-ivar">@cfunc</span>.<span class="ruby-identifier">ctype</span>, <span class="ruby-ivar">@stack</span>.<span class="ruby-identifier">size</span>, <span class="ruby-operator">&amp;</span><span class="ruby-identifier">cb</span>)
+      <span class="ruby-keyword">else</span>
+        <span class="ruby-identifier">raise</span>(<span class="ruby-constant">RuntimeError</span>, <span class="ruby-node">&quot;unsupported calltype: #{@cfunc.calltype}&quot;</span>)
+      <span class="ruby-keyword">end</span>
+      <span class="ruby-keyword">if</span>( <span class="ruby-ivar">@cfunc</span>.<span class="ruby-identifier">ptr</span> <span class="ruby-operator">==</span> <span class="ruby-number">0</span> )
+        <span class="ruby-identifier">raise</span>(<span class="ruby-constant">RuntimeException</span>, <span class="ruby-string">&quot;can&#39;t bind C function.&quot;</span>)
+      <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-bind_at_call">
+            
+              <b>bind_at_call</b>(&amp;block)
+            
+            <a href="../../classes/DL/Function.html#method-i-bind_at_call" name="method-i-bind_at_call" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-bind_at_call_source')" id="l_method-i-bind_at_call_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/bede15ac5e701ed08f3fc64c2dba03d3f393c652/ext/dl/lib/dl/func.rb#L199" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-bind_at_call_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/dl/lib/dl/func.rb, line 199</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">bind_at_call</span>(<span class="ruby-operator">&amp;</span><span class="ruby-identifier">block</span>)
+  <span class="ruby-identifier">bind</span>(<span class="ruby-operator">&amp;</span><span class="ruby-identifier">block</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-bound-3F">
+            
+              <b>bound?</b>()
+            
+            <a href="../../classes/DL/Function.html#method-i-bound-3F" name="method-i-bound-3F" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-bound-3F_source')" id="l_method-i-bound-3F_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/bede15ac5e701ed08f3fc64c2dba03d3f393c652/ext/dl/lib/dl/func.rb#L195" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-bound-3F_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/dl/lib/dl/func.rb, line 195</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">bound?</span>()
+  <span class="ruby-ivar">@cfunc</span>.<span class="ruby-identifier">ptr</span> <span class="ruby-operator">!=</span> <span class="ruby-number">0</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-call">
+            
+              <b>call</b>(*args, &amp;block)
+            
+            <a href="../../classes/DL/Function.html#method-i-call" name="method-i-call" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-call_source')" id="l_method-i-call_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/bede15ac5e701ed08f3fc64c2dba03d3f393c652/ext/dl/lib/dl/func.rb#L87" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-call_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/dl/lib/dl/func.rb, line 87</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">call</span>(<span class="ruby-operator">*</span><span class="ruby-identifier">args</span>, <span class="ruby-operator">&amp;</span><span class="ruby-identifier">block</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-constant">DL</span>.<span class="ruby-identifier">fiddle?</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">block_given?</span>
+      <span class="ruby-identifier">args</span>.<span class="ruby-identifier">find</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">a</span><span class="ruby-operator">|</span> <span class="ruby-constant">DL</span><span class="ruby-operator">::</span><span class="ruby-constant">Function</span> <span class="ruby-operator">===</span> <span class="ruby-identifier">a</span> }.<span class="ruby-identifier">bind_at_call</span>(<span class="ruby-operator">&amp;</span><span class="ruby-identifier">block</span>)
+    <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">super</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">funcs</span> = []
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">$SAFE</span> <span class="ruby-operator">&gt;=</span> <span class="ruby-number">1</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">args</span>.<span class="ruby-identifier">any?</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">x</span><span class="ruby-operator">|</span> <span class="ruby-identifier">x</span>.<span class="ruby-identifier">tainted?</span> }
+      <span class="ruby-identifier">raise</span> <span class="ruby-constant">SecurityError</span>, <span class="ruby-string">&quot;tainted parameter not allowed&quot;</span>
+    <span class="ruby-keyword">end</span>
+    <span class="ruby-identifier">_args</span> = <span class="ruby-identifier">wrap_args</span>(<span class="ruby-identifier">args</span>, <span class="ruby-ivar">@stack</span>.<span class="ruby-identifier">types</span>, <span class="ruby-identifier">funcs</span>, <span class="ruby-operator">&amp;</span><span class="ruby-identifier">block</span>)
+    <span class="ruby-identifier">r</span> = <span class="ruby-ivar">@cfunc</span>.<span class="ruby-identifier">call</span>(<span class="ruby-ivar">@stack</span>.<span class="ruby-identifier">pack</span>(<span class="ruby-identifier">_args</span>))
+    <span class="ruby-identifier">funcs</span>.<span class="ruby-identifier">each</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">f</span><span class="ruby-operator">|</span> <span class="ruby-identifier">f</span>.<span class="ruby-identifier">unbind_at_call</span>()}
+    <span class="ruby-keyword">return</span> <span class="ruby-identifier">wrap_result</span>(<span class="ruby-identifier">r</span>)
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-name">
+            
+              <b>name</b>()
+            
+            <a href="../../classes/DL/Function.html#method-i-name" name="method-i-name" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-name_source')" id="l_method-i-name_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/bede15ac5e701ed08f3fc64c2dba03d3f393c652/ext/dl/lib/dl/func.rb#L83" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-name_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/dl/lib/dl/func.rb, line 83</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">name</span>
+  <span class="ruby-ivar">@cfunc</span>.<span class="ruby-identifier">name</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-to_i">
+            
+              <b>to_i</b>()
+            
+            <a href="../../classes/DL/Function.html#method-i-to_i" name="method-i-to_i" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-to_i_source')" id="l_method-i-to_i_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/bede15ac5e701ed08f3fc64c2dba03d3f393c652/ext/dl/lib/dl/func.rb#L79" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-to_i_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/dl/lib/dl/func.rb, line 79</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">to_i</span>()
+  <span class="ruby-ivar">@cfunc</span>.<span class="ruby-identifier">to_i</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-unbind">
+            
+              <b>unbind</b>()
+            
+            <a href="../../classes/DL/Function.html#method-i-unbind" name="method-i-unbind" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-unbind_source')" id="l_method-i-unbind_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/bede15ac5e701ed08f3fc64c2dba03d3f393c652/ext/dl/lib/dl/func.rb#L162" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-unbind_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/dl/lib/dl/func.rb, line 162</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">unbind</span>()
+  <span class="ruby-keyword">if</span> <span class="ruby-constant">DL</span>.<span class="ruby-identifier">fiddle?</span> <span class="ruby-keyword">then</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-ivar">@cfunc</span>.<span class="ruby-identifier">kind_of?</span>(<span class="ruby-constant">Fiddle</span><span class="ruby-operator">::</span><span class="ruby-constant">Closure</span>) <span class="ruby-keyword">and</span> <span class="ruby-ivar">@cfunc</span>.<span class="ruby-identifier">ptr</span> <span class="ruby-operator">!=</span> <span class="ruby-number">0</span> <span class="ruby-keyword">then</span>
+      <span class="ruby-identifier">call_type</span> = <span class="ruby-keyword">case</span> <span class="ruby-identifier">abi</span>
+                  <span class="ruby-keyword">when</span> <span class="ruby-constant">CALL_TYPE_TO_ABI</span>[<span class="ruby-keyword">nil</span>]
+                    <span class="ruby-keyword">nil</span>
+                  <span class="ruby-keyword">when</span> <span class="ruby-constant">CALL_TYPE_TO_ABI</span>[<span class="ruby-value">:stdcall</span>]
+                    <span class="ruby-value">:stdcall</span>
+                  <span class="ruby-keyword">else</span>
+                    <span class="ruby-identifier">raise</span>(<span class="ruby-constant">RuntimeError</span>, <span class="ruby-node">&quot;unsupported abi: #{abi}&quot;</span>)
+                  <span class="ruby-keyword">end</span>
+      <span class="ruby-ivar">@cfunc</span> = <span class="ruby-constant">CFunc</span>.<span class="ruby-identifier">new</span>(<span class="ruby-number">0</span>, <span class="ruby-ivar">@cfunc</span>.<span class="ruby-identifier">ctype</span>, <span class="ruby-identifier">name</span>, <span class="ruby-identifier">call_type</span>)
+      <span class="ruby-keyword">return</span> <span class="ruby-number">0</span>
+    <span class="ruby-keyword">elsif</span> <span class="ruby-ivar">@cfunc</span>.<span class="ruby-identifier">ptr</span> <span class="ruby-operator">!=</span> <span class="ruby-number">0</span> <span class="ruby-keyword">then</span>
+      <span class="ruby-ivar">@cfunc</span>.<span class="ruby-identifier">ptr</span> = <span class="ruby-number">0</span>
+      <span class="ruby-keyword">return</span> <span class="ruby-number">0</span>
+    <span class="ruby-keyword">else</span>
+      <span class="ruby-keyword">return</span> <span class="ruby-keyword">nil</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">if</span>( <span class="ruby-ivar">@cfunc</span>.<span class="ruby-identifier">ptr</span> <span class="ruby-operator">!=</span> <span class="ruby-number">0</span> )
+    <span class="ruby-keyword">case</span> <span class="ruby-ivar">@cfunc</span>.<span class="ruby-identifier">calltype</span>
+    <span class="ruby-keyword">when</span> <span class="ruby-value">:cdecl</span>
+      <span class="ruby-identifier">remove_cdecl_callback</span>(<span class="ruby-ivar">@cfunc</span>.<span class="ruby-identifier">ptr</span>, <span class="ruby-ivar">@cfunc</span>.<span class="ruby-identifier">ctype</span>)
+    <span class="ruby-keyword">when</span> <span class="ruby-value">:stdcall</span>
+      <span class="ruby-identifier">remove_stdcall_callback</span>(<span class="ruby-ivar">@cfunc</span>.<span class="ruby-identifier">ptr</span>, <span class="ruby-ivar">@cfunc</span>.<span class="ruby-identifier">ctype</span>)
+    <span class="ruby-keyword">else</span>
+      <span class="ruby-identifier">raise</span>(<span class="ruby-constant">RuntimeError</span>, <span class="ruby-node">&quot;unsupported calltype: #{@cfunc.calltype}&quot;</span>)
+    <span class="ruby-keyword">end</span>
+    <span class="ruby-ivar">@cfunc</span>.<span class="ruby-identifier">ptr</span> = <span class="ruby-number">0</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-unbind_at_call">
+            
+              <b>unbind_at_call</b>()
+            
+            <a href="../../classes/DL/Function.html#method-i-unbind_at_call" name="method-i-unbind_at_call" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-unbind_at_call_source')" id="l_method-i-unbind_at_call_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/bede15ac5e701ed08f3fc64c2dba03d3f393c652/ext/dl/lib/dl/func.rb#L203" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-unbind_at_call_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/dl/lib/dl/func.rb, line 203</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">unbind_at_call</span>()
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-wrap_result">
+            
+              <b>wrap_result</b>(r)
+            
+            <a href="../../classes/DL/Function.html#method-i-wrap_result" name="method-i-wrap_result" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-wrap_result_source')" id="l_method-i-wrap_result_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/bede15ac5e701ed08f3fc64c2dba03d3f393c652/ext/dl/lib/dl/func.rb#L105" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-wrap_result_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/dl/lib/dl/func.rb, line 105</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">wrap_result</span>(<span class="ruby-identifier">r</span>)
+  <span class="ruby-keyword">case</span> <span class="ruby-ivar">@cfunc</span>.<span class="ruby-identifier">ctype</span>
+  <span class="ruby-keyword">when</span> <span class="ruby-constant">TYPE_VOIDP</span>
+    <span class="ruby-identifier">r</span> = <span class="ruby-constant">CPtr</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">r</span>)
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-keyword">if</span>( <span class="ruby-ivar">@unsigned</span> )
+      <span class="ruby-identifier">r</span> = <span class="ruby-identifier">unsigned_value</span>(<span class="ruby-identifier">r</span>, <span class="ruby-ivar">@cfunc</span>.<span class="ruby-identifier">ctype</span>)
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">r</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                    </div>
+
+    </div>
+  </body>
+</html>    

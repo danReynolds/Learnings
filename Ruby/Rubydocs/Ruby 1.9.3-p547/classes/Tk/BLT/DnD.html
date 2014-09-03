@@ -1,0 +1,1482 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>Tk::BLT::DnD</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="../../../css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../../../css/main.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../../../css/github.css" type="text/css" media="screen" />
+<script src="../../../js/jquery-1.3.2.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../../js/jquery-effect.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../../js/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+
+<body>     
+    <div class="banner">
+        
+        <h1>
+            <span class="type">Module</span> 
+            Tk::BLT::DnD 
+            
+        </h1>
+        <ul class="files">
+            
+            <li><a href="../../../files/ext/tk/lib/tkextlib/blt/unix_dnd_rb.html">ext/tk/lib/tkextlib/blt/unix_dnd.rb</a></li>
+            
+        </ul>
+    </div>
+    <div id="bodyContent">
+        <div id="content">
+  
+
+
+  
+
+
+  
+  
+
+
+  
+
+
+  
+    <!-- Method ref -->
+    <div class="sectiontitle">Methods</div>
+    <dl class="methods">
+      
+        <dt>C</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-cancel">cancel</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-cget">cget</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-cget_strict">cget_strict</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-cget_tkstring">cget_tkstring</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-configinfo">configinfo</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-configure">configure</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-current_configinfo">current_configinfo</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-current_token_configinfo">current_token_configinfo</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-current_token_windowconfiginfo">current_token_windowconfiginfo</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>D</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-delete">delete</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-c-delete_source">delete_source</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-c-delete_target">delete_target</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-c-drag">drag</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-c-drop">drop</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>G</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-get_data">get_data</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>N</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-names">names</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>P</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-pull">pull</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>R</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-register">register</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>S</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-select">select</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-c-set_data">set_data</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-c-source_names">source_names</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>T</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-target_names">target_names</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-c-token">token</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-token_cget">token_cget</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-token_cget_strict">token_cget_strict</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-token_cget_tkstring">token_cget_tkstring</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-token_configinfo">token_configinfo</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-token_configure">token_configure</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-token_windowconfiginfo">token_windowconfiginfo</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-token_windowconfigure">token_windowconfigure</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+    </dl>
+  
+
+  
+
+
+
+  
+
+    
+
+    
+
+    
+      <!-- Section constants -->
+      <div class="sectiontitle">Constants</div>
+      <table border='0' cellpadding='5'>
+        
+          <tr valign='top'>
+            <td class="attr-name">TkCommandNames</td>
+            <td>=</td>
+            <td class="attr-value">[&#39;::blt::dnd&#39;.freeze].freeze</td>
+          </tr>
+          
+            <tr valign='top'>
+              <td>&nbsp;</td>
+              <td colspan="2" class="attr-desc"></td>
+            </tr>
+          
+        
+      </table>
+    
+
+
+    
+
+
+    <!-- Methods -->
+    
+      <div class="sectiontitle">Class Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-c-cancel">
+            
+              <b>cancel</b>(win)
+            
+            <a href="../../../classes/Tk/BLT/DnD.html#method-c-cancel" name="method-c-cancel" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-cancel_source')" id="l_method-c-cancel_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/blt/unix_dnd.rb#L87" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-cancel_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/blt/unix_dnd.rb, line 87</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">cancel</span>(<span class="ruby-identifier">win</span>)
+  <span class="ruby-identifier">tk_call</span>(<span class="ruby-string">&#39;::blt::dnd&#39;</span>, <span class="ruby-string">&#39;cancel&#39;</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">wins</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-delete">
+            
+              <b>delete</b>(*wins)
+            
+            <a href="../../../classes/Tk/BLT/DnD.html#method-c-delete" name="method-c-delete" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-delete_source')" id="l_method-c-delete_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/blt/unix_dnd.rb#L90" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-delete_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/blt/unix_dnd.rb, line 90</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">delete</span>(<span class="ruby-operator">*</span><span class="ruby-identifier">wins</span>)
+  <span class="ruby-identifier">tk_call</span>(<span class="ruby-string">&#39;::blt::dnd&#39;</span>, <span class="ruby-string">&#39;delete&#39;</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">wins</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-delete_source">
+            
+              <b>delete_source</b>(*wins)
+            
+            <a href="../../../classes/Tk/BLT/DnD.html#method-c-delete_source" name="method-c-delete_source" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-delete_source_source')" id="l_method-c-delete_source_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/blt/unix_dnd.rb#L93" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-delete_source_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/blt/unix_dnd.rb, line 93</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">delete_source</span>(<span class="ruby-operator">*</span><span class="ruby-identifier">wins</span>)
+  <span class="ruby-identifier">tk_call</span>(<span class="ruby-string">&#39;::blt::dnd&#39;</span>, <span class="ruby-string">&#39;delete&#39;</span>, <span class="ruby-string">&#39;-source&#39;</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">wins</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-delete_target">
+            
+              <b>delete_target</b>(*wins)
+            
+            <a href="../../../classes/Tk/BLT/DnD.html#method-c-delete_target" name="method-c-delete_target" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-delete_target_source')" id="l_method-c-delete_target_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/blt/unix_dnd.rb#L96" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-delete_target_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/blt/unix_dnd.rb, line 96</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">delete_target</span>(<span class="ruby-operator">*</span><span class="ruby-identifier">wins</span>)
+  <span class="ruby-identifier">tk_call</span>(<span class="ruby-string">&#39;::blt::dnd&#39;</span>, <span class="ruby-string">&#39;delete&#39;</span>, <span class="ruby-string">&#39;-target&#39;</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">wins</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-drag">
+            
+              <b>drag</b>(win, x, y, token=None)
+            
+            <a href="../../../classes/Tk/BLT/DnD.html#method-c-drag" name="method-c-drag" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-drag_source')" id="l_method-c-drag_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/blt/unix_dnd.rb#L99" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-drag_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/blt/unix_dnd.rb, line 99</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">drag</span>(<span class="ruby-identifier">win</span>, <span class="ruby-identifier">x</span>, <span class="ruby-identifier">y</span>, <span class="ruby-identifier">token</span>=<span class="ruby-constant">None</span>)
+  <span class="ruby-identifier">tk_call</span>(<span class="ruby-string">&#39;::blt::dnd&#39;</span>, <span class="ruby-string">&#39;drag&#39;</span>, <span class="ruby-identifier">win</span>, <span class="ruby-identifier">x</span>, <span class="ruby-identifier">y</span>, <span class="ruby-identifier">token</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-drop">
+            
+              <b>drop</b>(win, x, y, token=None)
+            
+            <a href="../../../classes/Tk/BLT/DnD.html#method-c-drop" name="method-c-drop" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-drop_source')" id="l_method-c-drop_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/blt/unix_dnd.rb#L102" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-drop_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/blt/unix_dnd.rb, line 102</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">drop</span>(<span class="ruby-identifier">win</span>, <span class="ruby-identifier">x</span>, <span class="ruby-identifier">y</span>, <span class="ruby-identifier">token</span>=<span class="ruby-constant">None</span>)
+  <span class="ruby-identifier">tk_call</span>(<span class="ruby-string">&#39;::blt::dnd&#39;</span>, <span class="ruby-string">&#39;drop&#39;</span>, <span class="ruby-identifier">win</span>, <span class="ruby-identifier">x</span>, <span class="ruby-identifier">y</span>, <span class="ruby-identifier">token</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-get_data">
+            
+              <b>get_data</b>(win, fmt=nil, cmd=nil)
+            
+            <a href="../../../classes/Tk/BLT/DnD.html#method-c-get_data" name="method-c-get_data" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-get_data_source')" id="l_method-c-get_data_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/blt/unix_dnd.rb#L105" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-get_data_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/blt/unix_dnd.rb, line 105</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">get_data</span>(<span class="ruby-identifier">win</span>, <span class="ruby-identifier">fmt</span>=<span class="ruby-keyword">nil</span>, <span class="ruby-identifier">cmd</span>=<span class="ruby-keyword">nil</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">fmt</span>
+    <span class="ruby-identifier">tk_call</span>(<span class="ruby-string">&#39;::blt::dnd&#39;</span>, <span class="ruby-string">&#39;getdata&#39;</span>, <span class="ruby-identifier">win</span>, <span class="ruby-identifier">fmt</span>, <span class="ruby-identifier">cmd</span>)
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">list</span>(<span class="ruby-identifier">tk_call</span>(<span class="ruby-string">&#39;::blt::dnd&#39;</span>, <span class="ruby-string">&#39;getdata&#39;</span>, <span class="ruby-identifier">win</span>))
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-names">
+            
+              <b>names</b>(pat=None)
+            
+            <a href="../../../classes/Tk/BLT/DnD.html#method-c-names" name="method-c-names" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-names_source')" id="l_method-c-names_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/blt/unix_dnd.rb#L112" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-names_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/blt/unix_dnd.rb, line 112</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">names</span>(<span class="ruby-identifier">pat</span>=<span class="ruby-constant">None</span>)
+  <span class="ruby-identifier">list</span>(<span class="ruby-identifier">tk_call</span>(<span class="ruby-string">&#39;::blt::dnd&#39;</span>, <span class="ruby-string">&#39;names&#39;</span>, <span class="ruby-identifier">pat</span>))
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-pull">
+            
+              <b>pull</b>(win, fmt)
+            
+            <a href="../../../classes/Tk/BLT/DnD.html#method-c-pull" name="method-c-pull" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-pull_source')" id="l_method-c-pull_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/blt/unix_dnd.rb#L121" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-pull_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/blt/unix_dnd.rb, line 121</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">pull</span>(<span class="ruby-identifier">win</span>, <span class="ruby-identifier">fmt</span>)
+  <span class="ruby-identifier">tk_call</span>(<span class="ruby-string">&#39;::blt::dnd&#39;</span>, <span class="ruby-string">&#39;pull&#39;</span>, <span class="ruby-identifier">win</span>, <span class="ruby-identifier">fmt</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-register">
+            
+              <b>register</b>(win, keys={})
+            
+            <a href="../../../classes/Tk/BLT/DnD.html#method-c-register" name="method-c-register" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-register_source')" id="l_method-c-register_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/blt/unix_dnd.rb#L124" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-register_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/blt/unix_dnd.rb, line 124</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">register</span>(<span class="ruby-identifier">win</span>, <span class="ruby-identifier">keys</span>={})
+  <span class="ruby-identifier">tk_call</span>(<span class="ruby-string">&#39;::blt::dnd&#39;</span>, <span class="ruby-string">&#39;register&#39;</span>, <span class="ruby-identifier">win</span>, <span class="ruby-identifier">keys</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-select">
+            
+              <b>select</b>(win, x, y, timestamp)
+            
+            <a href="../../../classes/Tk/BLT/DnD.html#method-c-select" name="method-c-select" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-select_source')" id="l_method-c-select_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/blt/unix_dnd.rb#L127" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-select_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/blt/unix_dnd.rb, line 127</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">select</span>(<span class="ruby-identifier">win</span>, <span class="ruby-identifier">x</span>, <span class="ruby-identifier">y</span>, <span class="ruby-identifier">timestamp</span>)
+  <span class="ruby-identifier">tk_call</span>(<span class="ruby-string">&#39;::blt::dnd&#39;</span>, <span class="ruby-string">&#39;select&#39;</span>, <span class="ruby-identifier">win</span>, <span class="ruby-identifier">x</span>, <span class="ruby-identifier">y</span>, <span class="ruby-identifier">timestamp</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-set_data">
+            
+              <b>set_data</b>(win, fmt=nil, cmd=nil)
+            
+            <a href="../../../classes/Tk/BLT/DnD.html#method-c-set_data" name="method-c-set_data" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-set_data_source')" id="l_method-c-set_data_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/blt/unix_dnd.rb#L130" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-set_data_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/blt/unix_dnd.rb, line 130</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">set_data</span>(<span class="ruby-identifier">win</span>, <span class="ruby-identifier">fmt</span>=<span class="ruby-keyword">nil</span>, <span class="ruby-identifier">cmd</span>=<span class="ruby-keyword">nil</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">fmt</span>
+    <span class="ruby-identifier">tk_call</span>(<span class="ruby-string">&#39;::blt::dnd&#39;</span>, <span class="ruby-string">&#39;setdata&#39;</span>, <span class="ruby-identifier">win</span>, <span class="ruby-identifier">fmt</span>, <span class="ruby-identifier">cmd</span>)
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">list</span>(<span class="ruby-identifier">tk_call</span>(<span class="ruby-string">&#39;::blt::dnd&#39;</span>, <span class="ruby-string">&#39;setdata&#39;</span>, <span class="ruby-identifier">win</span>))
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-source_names">
+            
+              <b>source_names</b>(pat=None)
+            
+            <a href="../../../classes/Tk/BLT/DnD.html#method-c-source_names" name="method-c-source_names" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-source_names_source')" id="l_method-c-source_names_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/blt/unix_dnd.rb#L115" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-source_names_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/blt/unix_dnd.rb, line 115</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">source_names</span>(<span class="ruby-identifier">pat</span>=<span class="ruby-constant">None</span>)
+  <span class="ruby-identifier">list</span>(<span class="ruby-identifier">tk_call</span>(<span class="ruby-string">&#39;::blt::dnd&#39;</span>, <span class="ruby-string">&#39;names&#39;</span>, <span class="ruby-string">&#39;-source&#39;</span>, <span class="ruby-identifier">pat</span>))
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-target_names">
+            
+              <b>target_names</b>(pat=None)
+            
+            <a href="../../../classes/Tk/BLT/DnD.html#method-c-target_names" name="method-c-target_names" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-target_names_source')" id="l_method-c-target_names_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/blt/unix_dnd.rb#L118" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-target_names_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/blt/unix_dnd.rb, line 118</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">target_names</span>(<span class="ruby-identifier">pat</span>=<span class="ruby-constant">None</span>)
+  <span class="ruby-identifier">list</span>(<span class="ruby-identifier">tk_call</span>(<span class="ruby-string">&#39;::blt::dnd&#39;</span>, <span class="ruby-string">&#39;names&#39;</span>, <span class="ruby-string">&#39;-target&#39;</span>, <span class="ruby-identifier">pat</span>))
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-token">
+            
+              <b>token</b>(*args)
+            
+            <a href="../../../classes/Tk/BLT/DnD.html#method-c-token" name="method-c-token" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-token_source')" id="l_method-c-token_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/blt/unix_dnd.rb#L137" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-token_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/blt/unix_dnd.rb, line 137</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">token</span>(<span class="ruby-operator">*</span><span class="ruby-identifier">args</span>)
+  <span class="ruby-identifier">tk_call</span>(<span class="ruby-string">&#39;::blt::dnd&#39;</span>, <span class="ruby-string">&#39;token&#39;</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">args</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                  
+      <div class="sectiontitle">Instance Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-i-cget">
+            
+              <b>cget</b>(win, option)
+            
+            <a href="../../../classes/Tk/BLT/DnD.html#method-i-cget" name="method-i-cget" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-cget_source')" id="l_method-i-cget_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/blt/unix_dnd.rb#L39" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-cget_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/blt/unix_dnd.rb, line 39</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">cget</span>(<span class="ruby-identifier">win</span>, <span class="ruby-identifier">option</span>)
+  <span class="ruby-identifier">itemcget</span>([<span class="ruby-string">&#39;cget&#39;</span>, <span class="ruby-identifier">win</span>], <span class="ruby-identifier">option</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-cget_strict">
+            
+              <b>cget_strict</b>(win, option)
+            
+            <a href="../../../classes/Tk/BLT/DnD.html#method-i-cget_strict" name="method-i-cget_strict" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-cget_strict_source')" id="l_method-i-cget_strict_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/blt/unix_dnd.rb#L42" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-cget_strict_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/blt/unix_dnd.rb, line 42</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">cget_strict</span>(<span class="ruby-identifier">win</span>, <span class="ruby-identifier">option</span>)
+  <span class="ruby-identifier">itemcget_strict</span>([<span class="ruby-string">&#39;cget&#39;</span>, <span class="ruby-identifier">win</span>], <span class="ruby-identifier">option</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-cget_tkstring">
+            
+              <b>cget_tkstring</b>(win, option)
+            
+            <a href="../../../classes/Tk/BLT/DnD.html#method-i-cget_tkstring" name="method-i-cget_tkstring" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-cget_tkstring_source')" id="l_method-i-cget_tkstring_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/blt/unix_dnd.rb#L36" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-cget_tkstring_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/blt/unix_dnd.rb, line 36</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">cget_tkstring</span>(<span class="ruby-identifier">win</span>, <span class="ruby-identifier">option</span>)
+  <span class="ruby-identifier">itemcget_tkstring</span>([<span class="ruby-string">&#39;cget&#39;</span>, <span class="ruby-identifier">win</span>], <span class="ruby-identifier">option</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-configinfo">
+            
+              <b>configinfo</b>(win, slot=nil)
+            
+            <a href="../../../classes/Tk/BLT/DnD.html#method-i-configinfo" name="method-i-configinfo" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-configinfo_source')" id="l_method-i-configinfo_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/blt/unix_dnd.rb#L48" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-configinfo_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/blt/unix_dnd.rb, line 48</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">configinfo</span>(<span class="ruby-identifier">win</span>, <span class="ruby-identifier">slot</span>=<span class="ruby-keyword">nil</span>)
+  <span class="ruby-identifier">itemconfiginfo</span>([<span class="ruby-string">&#39;configure&#39;</span>, <span class="ruby-identifier">win</span>], <span class="ruby-identifier">slot</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-configure">
+            
+              <b>configure</b>(win, slot, value=None)
+            
+            <a href="../../../classes/Tk/BLT/DnD.html#method-i-configure" name="method-i-configure" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-configure_source')" id="l_method-i-configure_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/blt/unix_dnd.rb#L45" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-configure_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/blt/unix_dnd.rb, line 45</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">configure</span>(<span class="ruby-identifier">win</span>, <span class="ruby-identifier">slot</span>, <span class="ruby-identifier">value</span>=<span class="ruby-constant">None</span>)
+  <span class="ruby-identifier">itemconfigure</span>([<span class="ruby-string">&#39;configure&#39;</span>, <span class="ruby-identifier">win</span>], <span class="ruby-identifier">slot</span>, <span class="ruby-identifier">value</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-current_configinfo">
+            
+              <b>current_configinfo</b>(win, slot=nil)
+            
+            <a href="../../../classes/Tk/BLT/DnD.html#method-i-current_configinfo" name="method-i-current_configinfo" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-current_configinfo_source')" id="l_method-i-current_configinfo_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/blt/unix_dnd.rb#L51" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-current_configinfo_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/blt/unix_dnd.rb, line 51</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">current_configinfo</span>(<span class="ruby-identifier">win</span>, <span class="ruby-identifier">slot</span>=<span class="ruby-keyword">nil</span>)
+  <span class="ruby-identifier">current_itemconfiginfo</span>([<span class="ruby-string">&#39;configure&#39;</span>, <span class="ruby-identifier">win</span>], <span class="ruby-identifier">slot</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-current_token_configinfo">
+            
+              <b>current_token_configinfo</b>(win, slot=nil)
+            
+            <a href="../../../classes/Tk/BLT/DnD.html#method-i-current_token_configinfo" name="method-i-current_token_configinfo" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-current_token_configinfo_source')" id="l_method-i-current_token_configinfo_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/blt/unix_dnd.rb#L70" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-current_token_configinfo_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/blt/unix_dnd.rb, line 70</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">current_token_configinfo</span>(<span class="ruby-identifier">win</span>, <span class="ruby-identifier">slot</span>=<span class="ruby-keyword">nil</span>)
+  <span class="ruby-identifier">current_itemconfiginfo</span>([<span class="ruby-string">&#39;token&#39;</span>, <span class="ruby-string">&#39;configure&#39;</span>, <span class="ruby-identifier">win</span>], <span class="ruby-identifier">slot</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-current_token_windowconfiginfo">
+            
+              <b>current_token_windowconfiginfo</b>(win, slot=nil)
+            
+            <a href="../../../classes/Tk/BLT/DnD.html#method-i-current_token_windowconfiginfo" name="method-i-current_token_windowconfiginfo" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-current_token_windowconfiginfo_source')" id="l_method-i-current_token_windowconfiginfo_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/blt/unix_dnd.rb#L80" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-current_token_windowconfiginfo_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/blt/unix_dnd.rb, line 80</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">current_token_windowconfiginfo</span>(<span class="ruby-identifier">win</span>, <span class="ruby-identifier">slot</span>=<span class="ruby-keyword">nil</span>)
+  <span class="ruby-identifier">current_itemconfiginfo</span>([<span class="ruby-string">&#39;token&#39;</span>, <span class="ruby-string">&#39;window&#39;</span>, <span class="ruby-identifier">win</span>], <span class="ruby-identifier">slot</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-token_cget">
+            
+              <b>token_cget</b>(win, option)
+            
+            <a href="../../../classes/Tk/BLT/DnD.html#method-i-token_cget" name="method-i-token_cget" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-token_cget_source')" id="l_method-i-token_cget_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/blt/unix_dnd.rb#L58" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-token_cget_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/blt/unix_dnd.rb, line 58</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">token_cget</span>(<span class="ruby-identifier">win</span>, <span class="ruby-identifier">option</span>)
+  <span class="ruby-identifier">itemcget</span>([<span class="ruby-string">&#39;token&#39;</span>, <span class="ruby-string">&#39;cget&#39;</span>, <span class="ruby-identifier">win</span>], <span class="ruby-identifier">option</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-token_cget_strict">
+            
+              <b>token_cget_strict</b>(win, option)
+            
+            <a href="../../../classes/Tk/BLT/DnD.html#method-i-token_cget_strict" name="method-i-token_cget_strict" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-token_cget_strict_source')" id="l_method-i-token_cget_strict_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/blt/unix_dnd.rb#L61" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-token_cget_strict_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/blt/unix_dnd.rb, line 61</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">token_cget_strict</span>(<span class="ruby-identifier">win</span>, <span class="ruby-identifier">option</span>)
+  <span class="ruby-identifier">itemcget_strict</span>([<span class="ruby-string">&#39;token&#39;</span>, <span class="ruby-string">&#39;cget&#39;</span>, <span class="ruby-identifier">win</span>], <span class="ruby-identifier">option</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-token_cget_tkstring">
+            
+              <b>token_cget_tkstring</b>(win, option)
+            
+            <a href="../../../classes/Tk/BLT/DnD.html#method-i-token_cget_tkstring" name="method-i-token_cget_tkstring" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-token_cget_tkstring_source')" id="l_method-i-token_cget_tkstring_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/blt/unix_dnd.rb#L55" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-token_cget_tkstring_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/blt/unix_dnd.rb, line 55</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">token_cget_tkstring</span>(<span class="ruby-identifier">win</span>, <span class="ruby-identifier">option</span>)
+  <span class="ruby-identifier">itemcget_tkstring</span>([<span class="ruby-string">&#39;token&#39;</span>, <span class="ruby-string">&#39;cget&#39;</span>, <span class="ruby-identifier">win</span>], <span class="ruby-identifier">option</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-token_configinfo">
+            
+              <b>token_configinfo</b>(win, slot=nil)
+            
+            <a href="../../../classes/Tk/BLT/DnD.html#method-i-token_configinfo" name="method-i-token_configinfo" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-token_configinfo_source')" id="l_method-i-token_configinfo_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/blt/unix_dnd.rb#L67" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-token_configinfo_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/blt/unix_dnd.rb, line 67</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">token_configinfo</span>(<span class="ruby-identifier">win</span>, <span class="ruby-identifier">slot</span>=<span class="ruby-keyword">nil</span>)
+  <span class="ruby-identifier">itemconfiginfo</span>([<span class="ruby-string">&#39;token&#39;</span>, <span class="ruby-string">&#39;configure&#39;</span>, <span class="ruby-identifier">win</span>], <span class="ruby-identifier">slot</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-token_configure">
+            
+              <b>token_configure</b>(win, slot, value=None)
+            
+            <a href="../../../classes/Tk/BLT/DnD.html#method-i-token_configure" name="method-i-token_configure" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-token_configure_source')" id="l_method-i-token_configure_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/blt/unix_dnd.rb#L64" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-token_configure_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/blt/unix_dnd.rb, line 64</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">token_configure</span>(<span class="ruby-identifier">win</span>, <span class="ruby-identifier">slot</span>, <span class="ruby-identifier">value</span>=<span class="ruby-constant">None</span>)
+  <span class="ruby-identifier">itemconfigure</span>([<span class="ruby-string">&#39;token&#39;</span>, <span class="ruby-string">&#39;configure&#39;</span>, <span class="ruby-identifier">win</span>], <span class="ruby-identifier">slot</span>, <span class="ruby-identifier">value</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-token_windowconfiginfo">
+            
+              <b>token_windowconfiginfo</b>(win, slot=nil)
+            
+            <a href="../../../classes/Tk/BLT/DnD.html#method-i-token_windowconfiginfo" name="method-i-token_windowconfiginfo" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-token_windowconfiginfo_source')" id="l_method-i-token_windowconfiginfo_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/blt/unix_dnd.rb#L77" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-token_windowconfiginfo_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/blt/unix_dnd.rb, line 77</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">token_windowconfiginfo</span>(<span class="ruby-identifier">win</span>, <span class="ruby-identifier">slot</span>=<span class="ruby-keyword">nil</span>)
+  <span class="ruby-identifier">itemconfiginfo</span>([<span class="ruby-string">&#39;token&#39;</span>, <span class="ruby-string">&#39;window&#39;</span>, <span class="ruby-identifier">win</span>], <span class="ruby-identifier">slot</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-token_windowconfigure">
+            
+              <b>token_windowconfigure</b>(win, slot, value=None)
+            
+            <a href="../../../classes/Tk/BLT/DnD.html#method-i-token_windowconfigure" name="method-i-token_windowconfigure" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-token_windowconfigure_source')" id="l_method-i-token_windowconfigure_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/blt/unix_dnd.rb#L74" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-token_windowconfigure_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/blt/unix_dnd.rb, line 74</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">token_windowconfigure</span>(<span class="ruby-identifier">win</span>, <span class="ruby-identifier">slot</span>, <span class="ruby-identifier">value</span>=<span class="ruby-constant">None</span>)
+  <span class="ruby-identifier">itemconfigure</span>([<span class="ruby-string">&#39;token&#39;</span>, <span class="ruby-string">&#39;window&#39;</span>, <span class="ruby-identifier">win</span>], <span class="ruby-identifier">slot</span>, <span class="ruby-identifier">value</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                    </div>
+
+    </div>
+  </body>
+</html>    

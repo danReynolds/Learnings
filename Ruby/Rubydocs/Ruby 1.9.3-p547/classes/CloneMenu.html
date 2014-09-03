@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>CloneMenu</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="../css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/main.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/github.css" type="text/css" media="screen" />
+<script src="../js/jquery-1.3.2.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/jquery-effect.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+
+<body>     
+    <div class="banner">
+        
+        <h1>
+            <span class="type">Class</span> 
+            CloneMenu 
+            
+                <span class="parent">&lt; 
+                    
+                    <a href="Tk/Menu.html">Tk::Menu</a>
+                    
+                </span>
+            
+        </h1>
+        <ul class="files">
+            
+            <li><a href="../files/ext/tk/lib/tk/menu_rb.html">ext/tk/lib/tk/menu.rb</a></li>
+            
+        </ul>
+    </div>
+    <div id="bodyContent">
+        <div id="content">
+  
+
+
+  
+
+
+  
+  
+
+
+  
+
+
+  
+    <!-- Method ref -->
+    <div class="sectiontitle">Methods</div>
+    <dl class="methods">
+      
+        <dt>N</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-new">new</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>S</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-source_menu">source_menu</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+    </dl>
+  
+
+  
+
+
+
+  
+
+    
+
+    
+
+    
+
+
+    
+
+
+    <!-- Methods -->
+    
+      <div class="sectiontitle">Class Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-c-new">
+            
+              <b>new</b>(src_menu, *args)
+            
+            <a href="../classes/CloneMenu.html#method-c-new" name="method-c-new" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>def initialize(parent, type=None)</p>
+
+<pre><code>widgetname = nil
+if parent.kind_of? Hash
+  keys = _symbolkey2str(parent)
+  parent = keys.delete(&#39;parent&#39;)
+  widgetname = keys.delete(&#39;widgetname&#39;)
+  type = keys.delete(&#39;type&#39;); type = None unless type
+end
+#unless parent.kind_of?(TkMenu)
+#  fail ArgumentError, &quot;parent must be TkMenu&quot;
+#end
+@parent = parent
+install_win(@parent.path, widgetname)
+tk_call_without_enc(@parent.path, &#39;clone&#39;, @path, type)</code></pre>
+
+<p>end</p>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-new_source')" id="l_method-c-new_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tk/menu.rb#L435" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-new_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tk/menu.rb, line 435</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">initialize</span>(<span class="ruby-identifier">src_menu</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">args</span>)
+  <span class="ruby-identifier">widgetname</span> = <span class="ruby-keyword">nil</span>
+
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">args</span>[<span class="ruby-number">0</span>].<span class="ruby-identifier">kind_of?</span>(<span class="ruby-constant">TkWindow</span>)  <span class="ruby-comment"># parent window</span>
+    <span class="ruby-identifier">parent</span> = <span class="ruby-identifier">args</span>.<span class="ruby-identifier">shift</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">parent</span> = <span class="ruby-identifier">src_menu</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">args</span>[<span class="ruby-number">0</span>].<span class="ruby-identifier">kind_of?</span>(<span class="ruby-constant">String</span>) <span class="ruby-operator">||</span> <span class="ruby-identifier">args</span>[<span class="ruby-number">0</span>].<span class="ruby-identifier">kind_of?</span>(<span class="ruby-constant">Symbol</span>)  <span class="ruby-comment"># menu type</span>
+    <span class="ruby-identifier">type</span> = <span class="ruby-identifier">args</span>.<span class="ruby-identifier">shift</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">type</span> = <span class="ruby-constant">None</span>  <span class="ruby-comment"># &#39;normal&#39;</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">args</span>[<span class="ruby-number">0</span>].<span class="ruby-identifier">kind_of?</span>(<span class="ruby-constant">Hash</span>)
+    <span class="ruby-identifier">keys</span> = <span class="ruby-identifier">_symbolkey2str</span>(<span class="ruby-identifier">args</span>.<span class="ruby-identifier">shift</span>)
+    <span class="ruby-identifier">parent</span> = <span class="ruby-identifier">keys</span>.<span class="ruby-identifier">delete</span>(<span class="ruby-string">&#39;parent&#39;</span>) <span class="ruby-keyword">if</span> <span class="ruby-identifier">keys</span>.<span class="ruby-identifier">has_key?</span>(<span class="ruby-string">&#39;parent&#39;</span>)
+    <span class="ruby-identifier">widgetname</span> = <span class="ruby-identifier">keys</span>.<span class="ruby-identifier">delete</span>(<span class="ruby-string">&#39;widgetname&#39;</span>)
+    <span class="ruby-identifier">type</span> = <span class="ruby-identifier">keys</span>.<span class="ruby-identifier">delete</span>(<span class="ruby-string">&#39;type&#39;</span>) <span class="ruby-keyword">if</span> <span class="ruby-identifier">keys</span>.<span class="ruby-identifier">has_key?</span>(<span class="ruby-string">&#39;type&#39;</span>)
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">keys</span> = <span class="ruby-keyword">nil</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-ivar">@src_menu</span> = <span class="ruby-identifier">src_menu</span>
+  <span class="ruby-ivar">@parent</span> = <span class="ruby-identifier">parent</span>
+  <span class="ruby-ivar">@type</span> = <span class="ruby-identifier">type</span>
+  <span class="ruby-identifier">install_win</span>(<span class="ruby-ivar">@parent</span>.<span class="ruby-identifier">path</span>, <span class="ruby-identifier">widgetname</span>)
+  <span class="ruby-identifier">tk_call_without_enc</span>(<span class="ruby-ivar">@src_menu</span>.<span class="ruby-identifier">path</span>, <span class="ruby-string">&#39;clone&#39;</span>, <span class="ruby-ivar">@path</span>, <span class="ruby-ivar">@type</span>)
+  <span class="ruby-identifier">configure</span>(<span class="ruby-identifier">keys</span>) <span class="ruby-keyword">if</span> <span class="ruby-identifier">keys</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-operator">!</span><span class="ruby-identifier">keys</span>.<span class="ruby-identifier">empty?</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                  
+      <div class="sectiontitle">Instance Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-i-source_menu">
+            
+              <b>source_menu</b>()
+            
+            <a href="../classes/CloneMenu.html#method-i-source_menu" name="method-i-source_menu" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-source_menu_source')" id="l_method-i-source_menu_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tk/menu.rb#L467" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-source_menu_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tk/menu.rb, line 467</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">source_menu</span>
+  <span class="ruby-ivar">@src_menu</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                    </div>
+
+    </div>
+  </body>
+</html>    

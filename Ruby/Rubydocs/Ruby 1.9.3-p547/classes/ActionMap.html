@@ -1,0 +1,1672 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>ActionMap</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="../css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/main.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/github.css" type="text/css" media="screen" />
+<script src="../js/jquery-1.3.2.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/jquery-effect.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+
+<body>     
+    <div class="banner">
+        
+        <h1>
+            <span class="type">Class</span> 
+            ActionMap 
+            
+                <span class="parent">&lt; 
+                    
+                    <a href="Object.html">Object</a>
+                    
+                </span>
+            
+        </h1>
+        <ul class="files">
+            
+            <li><a href="../files/tool/transcode-tblgen_rb.html">tool/transcode-tblgen.rb</a></li>
+            
+        </ul>
+    </div>
+    <div id="bodyContent">
+        <div id="content">
+  
+
+
+  
+
+
+  
+  
+
+
+  
+
+
+  
+    <!-- Method ref -->
+    <div class="sectiontitle">Methods</div>
+    <dl class="methods">
+      
+        <dt>B</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-build_tree">build_tree</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>E</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-each_firstbyte_range">each_firstbyte_range</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-empty_action">empty_action</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-c-expand">expand</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-c-expand_rec">expand_rec</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>F</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-format_infos">format_infos</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-format_offsets">format_offsets</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>G</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-gen_str">gen_str</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-generate_info">generate_info</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-generate_lookup_node">generate_lookup_node</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-generate_node">generate_node</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-gennode">gennode</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>I</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-inspect">inspect</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>M</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-max_input_length">max_input_length</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-max_input_length_rec">max_input_length_rec</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-c-merge">merge</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-c-merge2">merge2</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-c-merge_rects">merge_rects</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>N</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-new">new</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>P</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-parse">parse</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-c-parse_to_rects">parse_to_rects</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>S</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-str_name">str_name</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>U</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-unambiguous_action">unambiguous_action</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+    </dl>
+  
+
+  
+
+
+
+  
+
+    
+
+    
+
+    
+      <!-- Section constants -->
+      <div class="sectiontitle">Constants</div>
+      <table border='0' cellpadding='5'>
+        
+          <tr valign='top'>
+            <td class="attr-name">TMPHASH</td>
+            <td>=</td>
+            <td class="attr-value">{}</td>
+          </tr>
+          
+            <tr valign='top'>
+              <td>&nbsp;</td>
+              <td colspan="2" class="attr-desc"></td>
+            </tr>
+          
+        
+          <tr valign='top'>
+            <td class="attr-name">OffsetsMemo</td>
+            <td>=</td>
+            <td class="attr-value">{}</td>
+          </tr>
+          
+            <tr valign='top'>
+              <td>&nbsp;</td>
+              <td colspan="2" class="attr-desc"></td>
+            </tr>
+          
+        
+          <tr valign='top'>
+            <td class="attr-name">InfosMemo</td>
+            <td>=</td>
+            <td class="attr-value">{}</td>
+          </tr>
+          
+            <tr valign='top'>
+              <td>&nbsp;</td>
+              <td colspan="2" class="attr-desc"></td>
+            </tr>
+          
+        
+          <tr valign='top'>
+            <td class="attr-name">UsedName</td>
+            <td>=</td>
+            <td class="attr-value">{}</td>
+          </tr>
+          
+            <tr valign='top'>
+              <td>&nbsp;</td>
+              <td colspan="2" class="attr-desc"></td>
+            </tr>
+          
+        
+          <tr valign='top'>
+            <td class="attr-name">StrMemo</td>
+            <td>=</td>
+            <td class="attr-value">{}</td>
+          </tr>
+          
+            <tr valign='top'>
+              <td>&nbsp;</td>
+              <td colspan="2" class="attr-desc"></td>
+            </tr>
+          
+        
+          <tr valign='top'>
+            <td class="attr-name">PreMemo</td>
+            <td>=</td>
+            <td class="attr-value">{}</td>
+          </tr>
+          
+            <tr valign='top'>
+              <td>&nbsp;</td>
+              <td colspan="2" class="attr-desc"></td>
+            </tr>
+          
+        
+          <tr valign='top'>
+            <td class="attr-name">NextName</td>
+            <td>=</td>
+            <td class="attr-value">&quot;a&quot;</td>
+          </tr>
+          
+            <tr valign='top'>
+              <td>&nbsp;</td>
+              <td colspan="2" class="attr-desc"></td>
+            </tr>
+          
+        
+      </table>
+    
+
+
+    
+
+
+    <!-- Methods -->
+    
+      <div class="sectiontitle">Class Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-c-build_tree">
+            
+              <b>build_tree</b>(rects)
+            
+            <a href="../classes/ActionMap.html#method-c-build_tree" name="method-c-build_tree" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-build_tree_source')" id="l_method-c-build_tree_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/bae9e4a0bc30b7a54dc8872dfcb450c715143e10/tool/transcode-tblgen.rb#L191" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-build_tree_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File tool/transcode-tblgen.rb, line 191</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">build_tree</span>(<span class="ruby-identifier">rects</span>)
+  <span class="ruby-identifier">expand</span>(<span class="ruby-identifier">rects</span>) {<span class="ruby-operator">|</span><span class="ruby-identifier">prefix</span>, <span class="ruby-identifier">actions</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">unambiguous_action</span>(<span class="ruby-identifier">actions</span>)
+  }
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-each_firstbyte_range">
+            
+              <b>each_firstbyte_range</b>(prefix, region_rects)
+            
+            <a href="../classes/ActionMap.html#method-c-each_firstbyte_range" name="method-c-each_firstbyte_range" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-each_firstbyte_range_source')" id="l_method-c-each_firstbyte_range_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/bae9e4a0bc30b7a54dc8872dfcb450c715143e10/tool/transcode-tblgen.rb#L319" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-each_firstbyte_range_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File tool/transcode-tblgen.rb, line 319</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">each_firstbyte_range</span>(<span class="ruby-identifier">prefix</span>, <span class="ruby-identifier">region_rects</span>)
+  <span class="ruby-identifier">index_from</span> = <span class="ruby-constant">TMPHASH</span>
+
+  <span class="ruby-identifier">region_ary</span> = []
+  <span class="ruby-identifier">region_rects</span>.<span class="ruby-identifier">each</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">min</span>, <span class="ruby-identifier">max</span>, <span class="ruby-identifier">action</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">raise</span> <span class="ruby-constant">ArgumentError</span>, <span class="ruby-node">&quot;ambiguous pattern: #{prefix}&quot;</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">min</span>.<span class="ruby-identifier">empty?</span>
+    <span class="ruby-identifier">min_firstbyte</span> = <span class="ruby-identifier">min</span>[<span class="ruby-number">0</span>,<span class="ruby-number">2</span>].<span class="ruby-identifier">to_i</span>(<span class="ruby-number">16</span>)
+    <span class="ruby-identifier">min_rest</span> = <span class="ruby-identifier">min</span>[<span class="ruby-number">2</span><span class="ruby-operator">..</span><span class="ruby-number">-1</span>]
+    <span class="ruby-identifier">max_firstbyte</span> = <span class="ruby-identifier">max</span>[<span class="ruby-number">0</span>,<span class="ruby-number">2</span>].<span class="ruby-identifier">to_i</span>(<span class="ruby-number">16</span>)
+    <span class="ruby-identifier">max_rest</span> = <span class="ruby-identifier">max</span>[<span class="ruby-number">2</span><span class="ruby-operator">..</span><span class="ruby-number">-1</span>]
+    <span class="ruby-identifier">region_ary</span> <span class="ruby-operator">&lt;&lt;</span> [<span class="ruby-identifier">min_firstbyte</span>, <span class="ruby-identifier">max_firstbyte</span>, [<span class="ruby-identifier">min_rest</span>, <span class="ruby-identifier">max_rest</span>, <span class="ruby-identifier">action</span>]]
+    <span class="ruby-identifier">index_from</span>[<span class="ruby-identifier">min_firstbyte</span>] = <span class="ruby-keyword">true</span>
+    <span class="ruby-identifier">index_from</span>[<span class="ruby-identifier">max_firstbyte</span><span class="ruby-operator">+</span><span class="ruby-number">1</span>] = <span class="ruby-keyword">true</span>
+  }
+
+  <span class="ruby-identifier">byte_from</span> = <span class="ruby-constant">Array</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">index_from</span>.<span class="ruby-identifier">size</span>)
+  <span class="ruby-identifier">bytes</span> = <span class="ruby-identifier">index_from</span>.<span class="ruby-identifier">keys</span>
+  <span class="ruby-identifier">bytes</span>.<span class="ruby-identifier">sort!</span>
+  <span class="ruby-identifier">bytes</span>.<span class="ruby-identifier">reverse!</span>
+  <span class="ruby-identifier">bytes</span>.<span class="ruby-identifier">each_with_index</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">byte</span>, <span class="ruby-identifier">i</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">index_from</span>[<span class="ruby-identifier">byte</span>] = <span class="ruby-identifier">i</span>
+    <span class="ruby-identifier">byte_from</span>[<span class="ruby-identifier">i</span>] = <span class="ruby-identifier">byte</span>
+  }
+
+  <span class="ruby-identifier">region_rects_ary</span> = <span class="ruby-constant">Array</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">index_from</span>.<span class="ruby-identifier">size</span>) { [] }
+  <span class="ruby-identifier">region_ary</span>.<span class="ruby-identifier">each</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">min_firstbyte</span>, <span class="ruby-identifier">max_firstbyte</span>, <span class="ruby-identifier">rest_elt</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">index_from</span>[<span class="ruby-identifier">min_firstbyte</span>].<span class="ruby-identifier">downto</span>(<span class="ruby-identifier">index_from</span>[<span class="ruby-identifier">max_firstbyte</span><span class="ruby-operator">+</span><span class="ruby-number">1</span>]<span class="ruby-operator">+</span><span class="ruby-number">1</span>) {<span class="ruby-operator">|</span><span class="ruby-identifier">i</span><span class="ruby-operator">|</span>
+      <span class="ruby-identifier">region_rects_ary</span>[<span class="ruby-identifier">i</span>] <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">rest_elt</span>
+    }
+  }
+
+  <span class="ruby-identifier">index_from</span>.<span class="ruby-identifier">clear</span>
+
+  <span class="ruby-identifier">r_rects</span> = <span class="ruby-identifier">region_rects_ary</span>.<span class="ruby-identifier">pop</span>
+  <span class="ruby-identifier">region_byte</span> = <span class="ruby-identifier">byte_from</span>.<span class="ruby-identifier">pop</span>
+  <span class="ruby-identifier">prev_r_start</span> = <span class="ruby-identifier">region_byte</span>
+  <span class="ruby-identifier">prev_r_rects</span> = []
+  <span class="ruby-keyword">while</span> <span class="ruby-identifier">r_rects</span> <span class="ruby-operator">&amp;&amp;</span> (<span class="ruby-identifier">s_rect</span> = <span class="ruby-ivar">@singleton_rects</span>.<span class="ruby-identifier">last</span>) <span class="ruby-operator">&amp;&amp;</span> (<span class="ruby-identifier">seq</span> = <span class="ruby-identifier">s_rect</span>[<span class="ruby-number">0</span>]).<span class="ruby-identifier">start_with?</span>(<span class="ruby-identifier">prefix</span>)
+    <span class="ruby-identifier">singleton_byte</span> = <span class="ruby-identifier">seq</span>[<span class="ruby-identifier">prefix</span>.<span class="ruby-identifier">length</span>, <span class="ruby-number">2</span>].<span class="ruby-identifier">to_i</span>(<span class="ruby-number">16</span>)
+    <span class="ruby-identifier">min_byte</span> = <span class="ruby-identifier">singleton_byte</span> <span class="ruby-operator">&lt;</span> <span class="ruby-identifier">region_byte</span> <span class="ruby-operator">?</span> <span class="ruby-identifier">singleton_byte</span> <span class="ruby-operator">:</span> <span class="ruby-identifier">region_byte</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">prev_r_start</span> <span class="ruby-operator">&lt;</span> <span class="ruby-identifier">min_byte</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-operator">!</span><span class="ruby-identifier">prev_r_rects</span>.<span class="ruby-identifier">empty?</span>
+      <span class="ruby-keyword">yield</span> <span class="ruby-identifier">prev_r_start</span>, <span class="ruby-identifier">min_byte</span><span class="ruby-operator">-</span><span class="ruby-number">1</span>, <span class="ruby-identifier">prev_r_rects</span>
+    <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">region_byte</span> <span class="ruby-operator">&lt;</span> <span class="ruby-identifier">singleton_byte</span>
+      <span class="ruby-identifier">prev_r_start</span> = <span class="ruby-identifier">region_byte</span>
+      <span class="ruby-identifier">prev_r_rects</span> = <span class="ruby-identifier">r_rects</span>
+      <span class="ruby-identifier">r_rects</span> = <span class="ruby-identifier">region_rects_ary</span>.<span class="ruby-identifier">pop</span>
+      <span class="ruby-identifier">region_byte</span> = <span class="ruby-identifier">byte_from</span>.<span class="ruby-identifier">pop</span>
+    <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">region_byte</span> <span class="ruby-operator">&gt;</span> <span class="ruby-identifier">singleton_byte</span>
+      <span class="ruby-keyword">yield</span> <span class="ruby-identifier">singleton_byte</span>, <span class="ruby-identifier">singleton_byte</span>, <span class="ruby-identifier">prev_r_rects</span>
+      <span class="ruby-identifier">prev_r_start</span> = <span class="ruby-identifier">singleton_byte</span><span class="ruby-operator">+</span><span class="ruby-number">1</span>
+    <span class="ruby-keyword">else</span> <span class="ruby-comment"># region_byte == singleton_byte</span>
+      <span class="ruby-identifier">prev_r_start</span> = <span class="ruby-identifier">region_byte</span><span class="ruby-operator">+</span><span class="ruby-number">1</span>
+      <span class="ruby-identifier">prev_r_rects</span> = <span class="ruby-identifier">r_rects</span>
+      <span class="ruby-identifier">r_rects</span> = <span class="ruby-identifier">region_rects_ary</span>.<span class="ruby-identifier">pop</span>
+      <span class="ruby-identifier">region_byte</span> = <span class="ruby-identifier">byte_from</span>.<span class="ruby-identifier">pop</span>
+      <span class="ruby-keyword">yield</span> <span class="ruby-identifier">singleton_byte</span>, <span class="ruby-identifier">singleton_byte</span>, <span class="ruby-identifier">prev_r_rects</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-keyword">while</span> <span class="ruby-identifier">r_rects</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">prev_r_start</span> <span class="ruby-operator">&lt;</span> <span class="ruby-identifier">region_byte</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-operator">!</span><span class="ruby-identifier">prev_r_rects</span>.<span class="ruby-identifier">empty?</span>
+      <span class="ruby-keyword">yield</span> <span class="ruby-identifier">prev_r_start</span>, <span class="ruby-identifier">region_byte</span><span class="ruby-operator">-</span><span class="ruby-number">1</span>, <span class="ruby-identifier">prev_r_rects</span>
+    <span class="ruby-keyword">end</span>
+    <span class="ruby-identifier">prev_r_start</span> = <span class="ruby-identifier">region_byte</span>
+    <span class="ruby-identifier">prev_r_rects</span> = <span class="ruby-identifier">r_rects</span>
+    <span class="ruby-identifier">r_rects</span> = <span class="ruby-identifier">region_rects_ary</span>.<span class="ruby-identifier">pop</span>
+    <span class="ruby-identifier">region_byte</span> = <span class="ruby-identifier">byte_from</span>.<span class="ruby-identifier">pop</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-keyword">while</span> (<span class="ruby-identifier">s_rect</span> = <span class="ruby-ivar">@singleton_rects</span>.<span class="ruby-identifier">last</span>) <span class="ruby-operator">&amp;&amp;</span> (<span class="ruby-identifier">seq</span> = <span class="ruby-identifier">s_rect</span>[<span class="ruby-number">0</span>]).<span class="ruby-identifier">start_with?</span>(<span class="ruby-identifier">prefix</span>)
+    <span class="ruby-identifier">singleton_byte</span> = <span class="ruby-identifier">seq</span>[<span class="ruby-identifier">prefix</span>.<span class="ruby-identifier">length</span>, <span class="ruby-number">2</span>].<span class="ruby-identifier">to_i</span>(<span class="ruby-number">16</span>)
+    <span class="ruby-keyword">yield</span> <span class="ruby-identifier">singleton_byte</span>, <span class="ruby-identifier">singleton_byte</span>, []
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-expand">
+            
+              <b>expand</b>(rects, &amp;block)
+            
+            <a href="../classes/ActionMap.html#method-c-expand" name="method-c-expand" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-expand_source')" id="l_method-c-expand_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/bae9e4a0bc30b7a54dc8872dfcb450c715143e10/tool/transcode-tblgen.rb#L267" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-expand_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File tool/transcode-tblgen.rb, line 267</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">expand</span>(<span class="ruby-identifier">rects</span>, <span class="ruby-operator">&amp;</span><span class="ruby-identifier">block</span>)
+  <span class="ruby-comment">#numsing = numreg = 0</span>
+  <span class="ruby-comment">#rects.each {|min, max, action| if min == max then numsing += 1 else numreg += 1 end }</span>
+  <span class="ruby-comment">#puts &quot;#{numsing} singleton mappings and #{numreg} region mappings.&quot;</span>
+  <span class="ruby-identifier">singleton_rects</span> = []
+  <span class="ruby-identifier">region_rects</span> = []
+  <span class="ruby-identifier">rects</span>.<span class="ruby-identifier">each</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">rect</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">min</span>, <span class="ruby-identifier">max</span>, <span class="ruby-identifier">action</span> = <span class="ruby-identifier">rect</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">min</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">max</span>
+      <span class="ruby-identifier">singleton_rects</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">rect</span>
+    <span class="ruby-keyword">else</span>
+      <span class="ruby-identifier">region_rects</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">rect</span>
+    <span class="ruby-keyword">end</span>
+  }
+  <span class="ruby-ivar">@singleton_rects</span> = <span class="ruby-identifier">singleton_rects</span>.<span class="ruby-identifier">sort_by</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">min</span>, <span class="ruby-identifier">max</span>, <span class="ruby-identifier">action</span><span class="ruby-operator">|</span> <span class="ruby-identifier">min</span> }
+  <span class="ruby-ivar">@singleton_rects</span>.<span class="ruby-identifier">reverse!</span>
+  <span class="ruby-identifier">ret</span> = <span class="ruby-identifier">expand_rec</span>(<span class="ruby-string">&quot;&quot;</span>, <span class="ruby-identifier">region_rects</span>, <span class="ruby-operator">&amp;</span><span class="ruby-identifier">block</span>)
+  <span class="ruby-ivar">@singleton_rects</span> = <span class="ruby-keyword">nil</span>
+  <span class="ruby-identifier">ret</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-expand_rec">
+            
+              <b>expand_rec</b>(prefix, region_rects, &amp;block)
+            
+            <a href="../classes/ActionMap.html#method-c-expand_rec" name="method-c-expand_rec" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-expand_rec_source')" id="l_method-c-expand_rec_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/bae9e4a0bc30b7a54dc8872dfcb450c715143e10/tool/transcode-tblgen.rb#L289" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-expand_rec_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File tool/transcode-tblgen.rb, line 289</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">expand_rec</span>(<span class="ruby-identifier">prefix</span>, <span class="ruby-identifier">region_rects</span>, <span class="ruby-operator">&amp;</span><span class="ruby-identifier">block</span>)
+  <span class="ruby-keyword">return</span> <span class="ruby-identifier">region_rects</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">region_rects</span>.<span class="ruby-identifier">empty?</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-operator">!</span>((<span class="ruby-identifier">s_rect</span> = <span class="ruby-ivar">@singleton_rects</span>.<span class="ruby-identifier">last</span>) <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">s_rect</span>[<span class="ruby-number">0</span>].<span class="ruby-identifier">start_with?</span>(<span class="ruby-identifier">prefix</span>))
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">region_rects</span>.<span class="ruby-identifier">empty?</span> <span class="ruby-operator">?</span> <span class="ruby-identifier">s_rect</span>[<span class="ruby-number">0</span>].<span class="ruby-identifier">length</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">prefix</span>.<span class="ruby-identifier">length</span> <span class="ruby-operator">:</span> <span class="ruby-identifier">region_rects</span>[<span class="ruby-number">0</span>][<span class="ruby-number">0</span>].<span class="ruby-identifier">empty?</span>
+    <span class="ruby-identifier">h</span> = <span class="ruby-constant">TMPHASH</span>
+    <span class="ruby-keyword">while</span> (<span class="ruby-identifier">s_rect</span> = <span class="ruby-ivar">@singleton_rects</span>.<span class="ruby-identifier">last</span>) <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">s_rect</span>[<span class="ruby-number">0</span>].<span class="ruby-identifier">start_with?</span>(<span class="ruby-identifier">prefix</span>)
+      <span class="ruby-identifier">min</span>, <span class="ruby-identifier">max</span>, <span class="ruby-identifier">action</span> = <span class="ruby-ivar">@singleton_rects</span>.<span class="ruby-identifier">pop</span>
+      <span class="ruby-identifier">raise</span> <span class="ruby-constant">ArgumentError</span>, <span class="ruby-node">&quot;ambiguous pattern: #{prefix}&quot;</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">min</span>.<span class="ruby-identifier">length</span> <span class="ruby-operator">!=</span> <span class="ruby-identifier">prefix</span>.<span class="ruby-identifier">length</span>
+      <span class="ruby-identifier">h</span>[<span class="ruby-identifier">action</span>] = <span class="ruby-keyword">true</span>
+    <span class="ruby-keyword">end</span>
+    <span class="ruby-identifier">region_rects</span>.<span class="ruby-identifier">each</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">min</span>, <span class="ruby-identifier">max</span>, <span class="ruby-identifier">action</span><span class="ruby-operator">|</span>
+      <span class="ruby-identifier">raise</span> <span class="ruby-constant">ArgumentError</span>, <span class="ruby-node">&quot;ambiguous pattern: #{prefix}&quot;</span> <span class="ruby-keyword">if</span> <span class="ruby-operator">!</span><span class="ruby-identifier">min</span>.<span class="ruby-identifier">empty?</span>
+      <span class="ruby-identifier">h</span>[<span class="ruby-identifier">action</span>] = <span class="ruby-keyword">true</span>
+    }
+    <span class="ruby-identifier">tree</span> = <span class="ruby-constant">Action</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">block</span>.<span class="ruby-identifier">call</span>(<span class="ruby-identifier">prefix</span>, <span class="ruby-identifier">h</span>.<span class="ruby-identifier">keys</span>))
+    <span class="ruby-identifier">h</span>.<span class="ruby-identifier">clear</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">tree</span> = []
+    <span class="ruby-identifier">each_firstbyte_range</span>(<span class="ruby-identifier">prefix</span>, <span class="ruby-identifier">region_rects</span>) {<span class="ruby-operator">|</span><span class="ruby-identifier">byte_min</span>, <span class="ruby-identifier">byte_max</span>, <span class="ruby-identifier">r_rects2</span><span class="ruby-operator">|</span>
+      <span class="ruby-keyword">if</span> <span class="ruby-identifier">byte_min</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">byte_max</span>
+        <span class="ruby-identifier">prefix2</span> = <span class="ruby-identifier">prefix</span> <span class="ruby-operator">+</span> <span class="ruby-string">&quot;%02X&quot;</span> <span class="ruby-operator">%</span> <span class="ruby-identifier">byte_min</span>
+      <span class="ruby-keyword">else</span>
+        <span class="ruby-identifier">prefix2</span> = <span class="ruby-identifier">prefix</span> <span class="ruby-operator">+</span> <span class="ruby-string">&quot;{%02X-%02X}&quot;</span> <span class="ruby-operator">%</span> [<span class="ruby-identifier">byte_min</span>, <span class="ruby-identifier">byte_max</span>]
+      <span class="ruby-keyword">end</span>
+      <span class="ruby-identifier">child_tree</span> = <span class="ruby-identifier">expand_rec</span>(<span class="ruby-identifier">prefix2</span>, <span class="ruby-identifier">r_rects2</span>, <span class="ruby-operator">&amp;</span><span class="ruby-identifier">block</span>)
+      <span class="ruby-identifier">tree</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-constant">Branch</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">byte_min</span>, <span class="ruby-identifier">byte_max</span>, <span class="ruby-identifier">child_tree</span>)
+    }
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-identifier">tree</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-merge">
+            
+              <b>merge</b>(*mappings, &amp;block)
+            
+            <a href="../classes/ActionMap.html#method-c-merge" name="method-c-merge" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-merge_source')" id="l_method-c-merge_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/bae9e4a0bc30b7a54dc8872dfcb450c715143e10/tool/transcode-tblgen.rb#L224" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-merge_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File tool/transcode-tblgen.rb, line 224</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">merge</span>(<span class="ruby-operator">*</span><span class="ruby-identifier">mappings</span>, <span class="ruby-operator">&amp;</span><span class="ruby-identifier">block</span>)
+  <span class="ruby-identifier">merge_rects</span>(<span class="ruby-operator">*</span><span class="ruby-identifier">mappings</span>.<span class="ruby-identifier">map</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">m</span><span class="ruby-operator">|</span> <span class="ruby-identifier">parse_to_rects</span>(<span class="ruby-identifier">m</span>) }, <span class="ruby-operator">&amp;</span><span class="ruby-identifier">block</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-merge2">
+            
+              <b>merge2</b>(map1, map2, &amp;block)
+            
+            <a href="../classes/ActionMap.html#method-c-merge2" name="method-c-merge2" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-merge2_source')" id="l_method-c-merge2_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/bae9e4a0bc30b7a54dc8872dfcb450c715143e10/tool/transcode-tblgen.rb#L228" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-merge2_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File tool/transcode-tblgen.rb, line 228</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">merge2</span>(<span class="ruby-identifier">map1</span>, <span class="ruby-identifier">map2</span>, <span class="ruby-operator">&amp;</span><span class="ruby-identifier">block</span>)
+  <span class="ruby-identifier">rects1</span> = <span class="ruby-identifier">parse_to_rects</span>(<span class="ruby-identifier">map1</span>)
+  <span class="ruby-identifier">rects2</span> = <span class="ruby-identifier">parse_to_rects</span>(<span class="ruby-identifier">map2</span>)
+
+  <span class="ruby-identifier">actions</span> = []
+  <span class="ruby-identifier">all_rects</span> = []
+
+  <span class="ruby-identifier">rects1</span>.<span class="ruby-identifier">each</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">rect</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">min</span>, <span class="ruby-identifier">max</span>, <span class="ruby-identifier">action</span> = <span class="ruby-identifier">rect</span>
+    <span class="ruby-identifier">rect</span>[<span class="ruby-number">2</span>] = <span class="ruby-identifier">actions</span>.<span class="ruby-identifier">length</span>
+    <span class="ruby-identifier">actions</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">action</span>
+    <span class="ruby-identifier">all_rects</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">rect</span>
+  }
+
+  <span class="ruby-identifier">boundary</span> = <span class="ruby-identifier">actions</span>.<span class="ruby-identifier">length</span>
+
+  <span class="ruby-identifier">rects2</span>.<span class="ruby-identifier">each</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">rect</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">min</span>, <span class="ruby-identifier">max</span>, <span class="ruby-identifier">action</span> = <span class="ruby-identifier">rect</span>
+    <span class="ruby-identifier">rect</span>[<span class="ruby-number">2</span>] = <span class="ruby-identifier">actions</span>.<span class="ruby-identifier">length</span>
+    <span class="ruby-identifier">actions</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">action</span>
+    <span class="ruby-identifier">all_rects</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">rect</span>
+  }
+
+  <span class="ruby-identifier">tree</span> = <span class="ruby-identifier">expand</span>(<span class="ruby-identifier">all_rects</span>) {<span class="ruby-operator">|</span><span class="ruby-identifier">prefix</span>, <span class="ruby-identifier">as0</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">as1</span> = []
+    <span class="ruby-identifier">as2</span> = []
+    <span class="ruby-identifier">as0</span>.<span class="ruby-identifier">each</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">i</span><span class="ruby-operator">|</span>
+      <span class="ruby-keyword">if</span> <span class="ruby-identifier">i</span> <span class="ruby-operator">&lt;</span> <span class="ruby-identifier">boundary</span>
+        <span class="ruby-identifier">as1</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">actions</span>[<span class="ruby-identifier">i</span>]
+      <span class="ruby-keyword">else</span>
+        <span class="ruby-identifier">as2</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">actions</span>[<span class="ruby-identifier">i</span>]
+      <span class="ruby-keyword">end</span>
+    }
+    <span class="ruby-keyword">yield</span>(<span class="ruby-identifier">prefix</span>, <span class="ruby-identifier">as1</span>, <span class="ruby-identifier">as2</span>)
+  }
+
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">tree</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-merge_rects">
+            
+              <b>merge_rects</b>(*rects_list)
+            
+            <a href="../classes/ActionMap.html#method-c-merge_rects" name="method-c-merge_rects" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-merge_rects_source')" id="l_method-c-merge_rects_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/bae9e4a0bc30b7a54dc8872dfcb450c715143e10/tool/transcode-tblgen.rb#L203" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-merge_rects_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File tool/transcode-tblgen.rb, line 203</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">merge_rects</span>(<span class="ruby-operator">*</span><span class="ruby-identifier">rects_list</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">rects_list</span>.<span class="ruby-identifier">length</span> <span class="ruby-operator">&lt;</span> <span class="ruby-number">2</span>
+    <span class="ruby-identifier">raise</span> <span class="ruby-constant">ArgumentError</span>, <span class="ruby-string">&quot;not enough arguments&quot;</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-identifier">all_rects</span> = []
+  <span class="ruby-identifier">rects_list</span>.<span class="ruby-identifier">each_with_index</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">rects</span>, <span class="ruby-identifier">i</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">all_rects</span>.<span class="ruby-identifier">concat</span> <span class="ruby-identifier">rects</span>.<span class="ruby-identifier">map</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">min</span>, <span class="ruby-identifier">max</span>, <span class="ruby-identifier">action</span><span class="ruby-operator">|</span> [<span class="ruby-identifier">min</span>, <span class="ruby-identifier">max</span>, [<span class="ruby-identifier">i</span>, <span class="ruby-identifier">action</span>]] }
+  }
+
+  <span class="ruby-identifier">tree</span> = <span class="ruby-identifier">expand</span>(<span class="ruby-identifier">all_rects</span>) {<span class="ruby-operator">|</span><span class="ruby-identifier">prefix</span>, <span class="ruby-identifier">actions</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">args</span> = <span class="ruby-constant">Array</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">rects_list</span>.<span class="ruby-identifier">length</span>) { [] }
+    <span class="ruby-identifier">actions</span>.<span class="ruby-identifier">each</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">i</span>, <span class="ruby-identifier">action</span><span class="ruby-operator">|</span>
+      <span class="ruby-identifier">args</span>[<span class="ruby-identifier">i</span>] <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">action</span>
+    }
+    <span class="ruby-keyword">yield</span>(<span class="ruby-identifier">prefix</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">args</span>)
+  }
+
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">tree</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-new">
+            
+              <b>new</b>(tree)
+            
+            <a href="../classes/ActionMap.html#method-c-new" name="method-c-new" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-new_source')" id="l_method-c-new_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/bae9e4a0bc30b7a54dc8872dfcb450c715143e10/tool/transcode-tblgen.rb#L395" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-new_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File tool/transcode-tblgen.rb, line 395</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">initialize</span>(<span class="ruby-identifier">tree</span>)
+  <span class="ruby-ivar">@tree</span> = <span class="ruby-identifier">tree</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-parse">
+            
+              <b>parse</b>(mapping)
+            
+            <a href="../classes/ActionMap.html#method-c-parse" name="method-c-parse" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-parse_source')" id="l_method-c-parse_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/bae9e4a0bc30b7a54dc8872dfcb450c715143e10/tool/transcode-tblgen.rb#L197" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-parse_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File tool/transcode-tblgen.rb, line 197</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">parse</span>(<span class="ruby-identifier">mapping</span>)
+  <span class="ruby-identifier">rects</span> = <span class="ruby-identifier">parse_to_rects</span>(<span class="ruby-identifier">mapping</span>)
+  <span class="ruby-identifier">tree</span> = <span class="ruby-identifier">build_tree</span>(<span class="ruby-identifier">rects</span>)
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">tree</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-parse_to_rects">
+            
+              <b>parse_to_rects</b>(mapping)
+            
+            <a href="../classes/ActionMap.html#method-c-parse_to_rects" name="method-c-parse_to_rects" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-parse_to_rects_source')" id="l_method-c-parse_to_rects_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/bae9e4a0bc30b7a54dc8872dfcb450c715143e10/tool/transcode-tblgen.rb#L115" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-parse_to_rects_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File tool/transcode-tblgen.rb, line 115</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">parse_to_rects</span>(<span class="ruby-identifier">mapping</span>)
+  <span class="ruby-identifier">rects</span> = []
+  <span class="ruby-identifier">n</span> = <span class="ruby-number">0</span>
+  <span class="ruby-identifier">mapping</span>.<span class="ruby-identifier">each</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">pat</span>, <span class="ruby-identifier">action</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">pat</span> = <span class="ruby-identifier">pat</span>.<span class="ruby-identifier">to_s</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-regexp">/\A\s*\(empset\)\s*\z/</span> <span class="ruby-operator">=~</span> <span class="ruby-identifier">pat</span>
+      <span class="ruby-keyword">next</span>
+    <span class="ruby-keyword">elsif</span> <span class="ruby-regexp">/\A\s*\(empstr\)\s*\z/</span> <span class="ruby-operator">=~</span> <span class="ruby-identifier">pat</span>
+      <span class="ruby-identifier">rects</span> <span class="ruby-operator">&lt;&lt;</span> [<span class="ruby-string">&#39;&#39;</span>, <span class="ruby-string">&#39;&#39;</span>, <span class="ruby-identifier">action</span>]
+      <span class="ruby-identifier">n</span> <span class="ruby-operator">+=</span> <span class="ruby-number">1</span>
+    <span class="ruby-keyword">elsif</span> <span class="ruby-node">/\A\s*(#{HEX2}+)\s*\z/o</span> <span class="ruby-operator">=~</span> <span class="ruby-identifier">pat</span>
+      <span class="ruby-identifier">hex</span> = <span class="ruby-node">$1</span>.<span class="ruby-identifier">upcase</span>
+      <span class="ruby-identifier">rects</span> <span class="ruby-operator">&lt;&lt;</span> [<span class="ruby-identifier">hex</span>, <span class="ruby-identifier">hex</span>, <span class="ruby-identifier">action</span>]
+    <span class="ruby-keyword">elsif</span> <span class="ruby-node">/\A\s*((#{HEX2}|\{#{HEX2}(?:-#{HEX2})?(,#{HEX2}(?:-#{HEX2})?)*\})+(\s+|\z))*\z/o</span> <span class="ruby-operator">=~</span> <span class="ruby-identifier">pat</span>
+      <span class="ruby-identifier">pat</span> = <span class="ruby-identifier">pat</span>.<span class="ruby-identifier">upcase</span>
+      <span class="ruby-identifier">pat</span>.<span class="ruby-identifier">scan</span>(<span class="ruby-regexp">/\S+/</span>) {
+        <span class="ruby-identifier">pat1</span> = <span class="ruby-node">$&amp;</span>
+        <span class="ruby-identifier">ranges_list</span> = []
+        <span class="ruby-identifier">pat1</span>.<span class="ruby-identifier">scan</span>(<span class="ruby-node">/#{HEX2}|\{([^\}]*)\}/o</span>) {
+          <span class="ruby-identifier">ranges_list</span> <span class="ruby-operator">&lt;&lt;</span> []
+          <span class="ruby-keyword">if</span> <span class="ruby-operator">!</span><span class="ruby-node">$1</span>
+            <span class="ruby-identifier">ranges_list</span>.<span class="ruby-identifier">last</span> <span class="ruby-operator">&lt;&lt;</span> [<span class="ruby-node">$&amp;</span>,<span class="ruby-node">$&amp;</span>]
+          <span class="ruby-keyword">else</span>
+            <span class="ruby-identifier">set</span> = {}
+            <span class="ruby-node">$1</span>.<span class="ruby-identifier">scan</span>(<span class="ruby-node">/(#{HEX2})(?:-(#{HEX2}))?/o</span>) {
+              <span class="ruby-keyword">if</span> <span class="ruby-operator">!</span><span class="ruby-node">$2</span>
+                <span class="ruby-identifier">c</span> = <span class="ruby-node">$1</span>.<span class="ruby-identifier">to_i</span>(<span class="ruby-number">16</span>)
+                <span class="ruby-identifier">set</span>[<span class="ruby-identifier">c</span>] = <span class="ruby-keyword">true</span>
+              <span class="ruby-keyword">else</span>
+                <span class="ruby-identifier">b</span> = <span class="ruby-node">$1</span>.<span class="ruby-identifier">to_i</span>(<span class="ruby-number">16</span>)
+                <span class="ruby-identifier">e</span> = <span class="ruby-node">$2</span>.<span class="ruby-identifier">to_i</span>(<span class="ruby-number">16</span>)
+                <span class="ruby-identifier">b</span>.<span class="ruby-identifier">upto</span>(<span class="ruby-identifier">e</span>) {<span class="ruby-operator">|</span><span class="ruby-identifier">c</span><span class="ruby-operator">|</span> <span class="ruby-identifier">set</span>[<span class="ruby-identifier">c</span>] = <span class="ruby-keyword">true</span> }
+              <span class="ruby-keyword">end</span>
+            }
+            <span class="ruby-identifier">i</span> = <span class="ruby-keyword">nil</span>
+            <span class="ruby-number">0</span>.<span class="ruby-identifier">upto</span>(<span class="ruby-number">256</span>) {<span class="ruby-operator">|</span><span class="ruby-identifier">j</span><span class="ruby-operator">|</span>
+              <span class="ruby-keyword">if</span> <span class="ruby-identifier">set</span>[<span class="ruby-identifier">j</span>]
+                <span class="ruby-keyword">if</span> <span class="ruby-operator">!</span><span class="ruby-identifier">i</span>
+                  <span class="ruby-identifier">i</span> = <span class="ruby-identifier">j</span>
+                <span class="ruby-keyword">end</span>
+                <span class="ruby-keyword">if</span> <span class="ruby-operator">!</span><span class="ruby-identifier">set</span>[<span class="ruby-identifier">j</span><span class="ruby-operator">+</span><span class="ruby-number">1</span>]
+                  <span class="ruby-identifier">ranges_list</span>.<span class="ruby-identifier">last</span> <span class="ruby-operator">&lt;&lt;</span> [<span class="ruby-string">&quot;%02X&quot;</span> <span class="ruby-operator">%</span> <span class="ruby-identifier">i</span>, <span class="ruby-string">&quot;%02X&quot;</span> <span class="ruby-operator">%</span> <span class="ruby-identifier">j</span>]
+                  <span class="ruby-identifier">i</span> = <span class="ruby-keyword">nil</span>
+                <span class="ruby-keyword">end</span>
+              <span class="ruby-keyword">end</span>
+            }
+          <span class="ruby-keyword">end</span>
+        }
+        <span class="ruby-identifier">first_ranges</span> = <span class="ruby-identifier">ranges_list</span>.<span class="ruby-identifier">shift</span>
+        <span class="ruby-identifier">first_ranges</span>.<span class="ruby-identifier">product</span>(<span class="ruby-operator">*</span><span class="ruby-identifier">ranges_list</span>).<span class="ruby-identifier">each</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">range_list</span><span class="ruby-operator">|</span>
+          <span class="ruby-identifier">min</span> = <span class="ruby-identifier">range_list</span>.<span class="ruby-identifier">map</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">x</span>, <span class="ruby-identifier">y</span><span class="ruby-operator">|</span> <span class="ruby-identifier">x</span> }.<span class="ruby-identifier">join</span>
+          <span class="ruby-identifier">max</span> = <span class="ruby-identifier">range_list</span>.<span class="ruby-identifier">map</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">x</span>, <span class="ruby-identifier">y</span><span class="ruby-operator">|</span> <span class="ruby-identifier">y</span> }.<span class="ruby-identifier">join</span>
+          <span class="ruby-identifier">rects</span> <span class="ruby-operator">&lt;&lt;</span> [<span class="ruby-identifier">min</span>, <span class="ruby-identifier">max</span>, <span class="ruby-identifier">action</span>]
+        }
+      }
+    <span class="ruby-keyword">else</span>
+      <span class="ruby-identifier">raise</span> <span class="ruby-constant">ArgumentError</span>, <span class="ruby-node">&quot;invalid pattern: #{pat.inspect}&quot;</span>
+    <span class="ruby-keyword">end</span>
+  }
+  <span class="ruby-identifier">rects</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-unambiguous_action">
+            
+              <b>unambiguous_action</b>(actions0)
+            
+            <a href="../classes/ActionMap.html#method-c-unambiguous_action" name="method-c-unambiguous_action" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-unambiguous_action_source')" id="l_method-c-unambiguous_action_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/bae9e4a0bc30b7a54dc8872dfcb450c715143e10/tool/transcode-tblgen.rb#L177" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-unambiguous_action_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File tool/transcode-tblgen.rb, line 177</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">unambiguous_action</span>(<span class="ruby-identifier">actions0</span>)
+  <span class="ruby-identifier">actions</span> = <span class="ruby-identifier">actions0</span>.<span class="ruby-identifier">uniq</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">actions</span>.<span class="ruby-identifier">length</span> <span class="ruby-operator">==</span> <span class="ruby-number">1</span>
+    <span class="ruby-identifier">actions</span>[<span class="ruby-number">0</span>]
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">actions</span>.<span class="ruby-identifier">delete</span>(<span class="ruby-value">:nomap0</span>)
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">actions</span>.<span class="ruby-identifier">length</span> <span class="ruby-operator">==</span> <span class="ruby-number">1</span>
+      <span class="ruby-identifier">actions</span>[<span class="ruby-number">0</span>]
+    <span class="ruby-keyword">else</span>
+      <span class="ruby-identifier">raise</span> <span class="ruby-constant">ArgumentError</span>, <span class="ruby-node">&quot;ambiguous actions: #{actions0.inspect}&quot;</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                  
+      <div class="sectiontitle">Instance Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-i-empty_action">
+            
+              <b>empty_action</b>()
+            
+            <a href="../classes/ActionMap.html#method-i-empty_action" name="method-i-empty_action" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-empty_action_source')" id="l_method-i-empty_action_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/bae9e4a0bc30b7a54dc8872dfcb450c715143e10/tool/transcode-tblgen.rb#L420" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-empty_action_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File tool/transcode-tblgen.rb, line 420</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">empty_action</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-ivar">@tree</span>.<span class="ruby-identifier">kind_of?</span> <span class="ruby-constant">Action</span>
+    <span class="ruby-ivar">@tree</span>.<span class="ruby-identifier">value</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-keyword">nil</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-format_infos">
+            
+              <b>format_infos</b>(infos)
+            
+            <a href="../classes/ActionMap.html#method-i-format_infos" name="method-i-format_infos" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-format_infos_source')" id="l_method-i-format_infos_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/bae9e4a0bc30b7a54dc8872dfcb450c715143e10/tool/transcode-tblgen.rb#L516" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-format_infos_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File tool/transcode-tblgen.rb, line 516</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">format_infos</span>(<span class="ruby-identifier">infos</span>)
+  <span class="ruby-identifier">infos</span> = <span class="ruby-identifier">infos</span>.<span class="ruby-identifier">map</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">info</span><span class="ruby-operator">|</span> <span class="ruby-identifier">generate_info</span>(<span class="ruby-identifier">info</span>) }
+  <span class="ruby-identifier">maxlen</span> = <span class="ruby-identifier">infos</span>.<span class="ruby-identifier">map</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">info</span><span class="ruby-operator">|</span> <span class="ruby-identifier">info</span>.<span class="ruby-identifier">length</span> }.<span class="ruby-identifier">max</span>
+  <span class="ruby-identifier">columns</span> = <span class="ruby-identifier">maxlen</span> <span class="ruby-operator">&lt;=</span> <span class="ruby-number">16</span> <span class="ruby-operator">?</span> <span class="ruby-number">4</span> <span class="ruby-operator">:</span> <span class="ruby-number">2</span>
+  <span class="ruby-identifier">code</span> = <span class="ruby-string">&quot;&quot;</span>
+  <span class="ruby-number">0</span>.<span class="ruby-identifier">step</span>(<span class="ruby-identifier">infos</span>.<span class="ruby-identifier">length</span><span class="ruby-operator">-</span><span class="ruby-number">1</span>, <span class="ruby-identifier">columns</span>) {<span class="ruby-operator">|</span><span class="ruby-identifier">i</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">code</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-string">&quot;    &quot;</span>
+    <span class="ruby-identifier">is</span> = <span class="ruby-identifier">infos</span>[<span class="ruby-identifier">i</span>,<span class="ruby-identifier">columns</span>]
+    <span class="ruby-identifier">is</span>.<span class="ruby-identifier">each</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">info</span><span class="ruby-operator">|</span>
+      <span class="ruby-identifier">code</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">sprintf</span>(<span class="ruby-node">&quot; %#{maxlen}s,&quot;</span>, <span class="ruby-identifier">info</span>)
+    }
+    <span class="ruby-identifier">code</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-string">&quot;\n&quot;</span>
+  }
+  <span class="ruby-identifier">code</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-format_offsets">
+            
+              <b>format_offsets</b>(min, max, offsets)
+            
+            <a href="../classes/ActionMap.html#method-i-format_offsets" name="method-i-format_offsets" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-format_offsets_source')" id="l_method-i-format_offsets_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/bae9e4a0bc30b7a54dc8872dfcb450c715143e10/tool/transcode-tblgen.rb#L431" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-format_offsets_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File tool/transcode-tblgen.rb, line 431</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">format_offsets</span>(<span class="ruby-identifier">min</span>, <span class="ruby-identifier">max</span>, <span class="ruby-identifier">offsets</span>)
+  <span class="ruby-identifier">offsets</span> = <span class="ruby-identifier">offsets</span>[<span class="ruby-identifier">min</span><span class="ruby-operator">..</span><span class="ruby-identifier">max</span>]
+  <span class="ruby-identifier">code</span> = <span class="ruby-string">&quot;%d, %d,\n&quot;</span> <span class="ruby-operator">%</span> [<span class="ruby-identifier">min</span>, <span class="ruby-identifier">max</span>]
+  <span class="ruby-number">0</span>.<span class="ruby-identifier">step</span>(<span class="ruby-identifier">offsets</span>.<span class="ruby-identifier">length</span><span class="ruby-operator">-</span><span class="ruby-number">1</span>,<span class="ruby-number">16</span>) {<span class="ruby-operator">|</span><span class="ruby-identifier">i</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">code</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-string">&quot;    &quot;</span>
+    <span class="ruby-identifier">code</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">offsets</span>[<span class="ruby-identifier">i</span>,<span class="ruby-number">8</span>].<span class="ruby-identifier">map</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">off</span><span class="ruby-operator">|</span> <span class="ruby-string">&quot;%3d,&quot;</span> <span class="ruby-operator">%</span> <span class="ruby-identifier">off</span>.<span class="ruby-identifier">to_s</span> }.<span class="ruby-identifier">join</span>(<span class="ruby-string">&#39;&#39;</span>)
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">i</span><span class="ruby-operator">+</span><span class="ruby-number">8</span> <span class="ruby-operator">&lt;</span> <span class="ruby-identifier">offsets</span>.<span class="ruby-identifier">length</span>
+      <span class="ruby-identifier">code</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-string">&quot;  &quot;</span>
+      <span class="ruby-identifier">code</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">offsets</span>[<span class="ruby-identifier">i</span><span class="ruby-operator">+</span><span class="ruby-number">8</span>,<span class="ruby-number">8</span>].<span class="ruby-identifier">map</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">off</span><span class="ruby-operator">|</span> <span class="ruby-string">&quot;%3d,&quot;</span> <span class="ruby-operator">%</span> <span class="ruby-identifier">off</span>.<span class="ruby-identifier">to_s</span> }.<span class="ruby-identifier">join</span>(<span class="ruby-string">&#39;&#39;</span>)
+    <span class="ruby-keyword">end</span>
+    <span class="ruby-identifier">code</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-string">&quot;\n&quot;</span>
+  }
+  <span class="ruby-identifier">code</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-gen_str">
+            
+              <b>gen_str</b>(bytes)
+            
+            <a href="../classes/ActionMap.html#method-i-gen_str" name="method-i-gen_str" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-gen_str_source')" id="l_method-i-gen_str_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/bae9e4a0bc30b7a54dc8872dfcb450c715143e10/tool/transcode-tblgen.rb#L464" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-gen_str_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File tool/transcode-tblgen.rb, line 464</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">gen_str</span>(<span class="ruby-identifier">bytes</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">n</span> = <span class="ruby-constant">StrMemo</span>[<span class="ruby-identifier">bytes</span>]
+    <span class="ruby-identifier">n</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">len</span> = <span class="ruby-identifier">bytes</span>.<span class="ruby-identifier">length</span><span class="ruby-operator">/</span><span class="ruby-number">2</span>
+    <span class="ruby-identifier">size</span> = <span class="ruby-ivar">@bytes_code</span>.<span class="ruby-identifier">length</span>
+    <span class="ruby-identifier">n</span> = <span class="ruby-identifier">str_name</span>(<span class="ruby-identifier">bytes</span>)
+    <span class="ruby-ivar">@bytes_code</span>.<span class="ruby-identifier">insert_at_last</span>(<span class="ruby-number">1</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">len</span>,
+      <span class="ruby-node">&quot;\#define #{n} makeSTR1(#{size})\n&quot;</span> <span class="ruby-operator">+</span>
+      <span class="ruby-node">&quot;    makeSTR1LEN(#{len}),&quot;</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">bytes</span>.<span class="ruby-identifier">gsub</span>(<span class="ruby-regexp">/../</span>, <span class="ruby-string">&#39; 0x\&amp;,&#39;</span>) <span class="ruby-operator">+</span> <span class="ruby-string">&quot;\n\n&quot;</span>)
+    <span class="ruby-identifier">n</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-generate_info">
+            
+              <b>generate_info</b>(info)
+            
+            <a href="../classes/ActionMap.html#method-i-generate_info" name="method-i-generate_info" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-generate_info_source')" id="l_method-i-generate_info_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/bae9e4a0bc30b7a54dc8872dfcb450c715143e10/tool/transcode-tblgen.rb#L478" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-generate_info_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File tool/transcode-tblgen.rb, line 478</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">generate_info</span>(<span class="ruby-identifier">info</span>)
+  <span class="ruby-keyword">case</span> <span class="ruby-identifier">info</span>
+  <span class="ruby-keyword">when</span> <span class="ruby-value">:nomap</span>, <span class="ruby-value">:nomap0</span>
+    <span class="ruby-comment"># :nomap0 is low priority.  it never collides.</span>
+    <span class="ruby-string">&quot;NOMAP&quot;</span>
+  <span class="ruby-keyword">when</span> <span class="ruby-value">:undef</span>
+    <span class="ruby-string">&quot;UNDEF&quot;</span>
+  <span class="ruby-keyword">when</span> <span class="ruby-value">:invalid</span>
+    <span class="ruby-string">&quot;INVALID&quot;</span>
+  <span class="ruby-keyword">when</span> <span class="ruby-value">:func_ii</span>
+    <span class="ruby-string">&quot;FUNii&quot;</span>
+  <span class="ruby-keyword">when</span> <span class="ruby-value">:func_si</span>
+    <span class="ruby-string">&quot;FUNsi&quot;</span>
+  <span class="ruby-keyword">when</span> <span class="ruby-value">:func_io</span>
+    <span class="ruby-string">&quot;FUNio&quot;</span>
+  <span class="ruby-keyword">when</span> <span class="ruby-value">:func_so</span>
+    <span class="ruby-string">&quot;FUNso&quot;</span>
+  <span class="ruby-keyword">when</span> <span class="ruby-node">/\A(#{HEX2})\z/o</span>
+    <span class="ruby-node">&quot;o1(0x#$1)&quot;</span>
+  <span class="ruby-keyword">when</span> <span class="ruby-node">/\A(#{HEX2})(#{HEX2})\z/o</span>
+    <span class="ruby-node">&quot;o2(0x#$1,0x#$2)&quot;</span>
+  <span class="ruby-keyword">when</span> <span class="ruby-node">/\A(#{HEX2})(#{HEX2})(#{HEX2})\z/o</span>
+    <span class="ruby-node">&quot;o3(0x#$1,0x#$2,0x#$3)&quot;</span>
+  <span class="ruby-keyword">when</span> <span class="ruby-regexp">/funsio\((\d+)\)/</span>
+    <span class="ruby-node">&quot;funsio(#{$1})&quot;</span>
+  <span class="ruby-keyword">when</span> <span class="ruby-node">/\A(#{HEX2})(3[0-9])(#{HEX2})(3[0-9])\z/o</span>
+    <span class="ruby-node">&quot;g4(0x#$1,0x#$2,0x#$3,0x#$4)&quot;</span>
+  <span class="ruby-keyword">when</span> <span class="ruby-node">/\A(f[0-7])(#{HEX2})(#{HEX2})(#{HEX2})\z/o</span>
+    <span class="ruby-node">&quot;o4(0x#$1,0x#$2,0x#$3,0x#$4)&quot;</span>
+  <span class="ruby-keyword">when</span> <span class="ruby-node">/\A(#{HEX2}){4,259}\z/o</span>
+    <span class="ruby-identifier">gen_str</span>(<span class="ruby-identifier">info</span>.<span class="ruby-identifier">upcase</span>)
+  <span class="ruby-keyword">when</span> <span class="ruby-regexp">/\A\/\*BYTE_LOOKUP\*\//</span> <span class="ruby-comment"># pointer to BYTE_LOOKUP structure</span>
+    <span class="ruby-node">$&#39;</span>.<span class="ruby-identifier">to_s</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">raise</span> <span class="ruby-node">&quot;unexpected action: #{info.inspect}&quot;</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-generate_lookup_node">
+            
+              <b>generate_lookup_node</b>(name, table)
+            
+            <a href="../classes/ActionMap.html#method-i-generate_lookup_node" name="method-i-generate_lookup_node" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-generate_lookup_node_source')" id="l_method-i-generate_lookup_node_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/bae9e4a0bc30b7a54dc8872dfcb450c715143e10/tool/transcode-tblgen.rb#L532" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-generate_lookup_node_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File tool/transcode-tblgen.rb, line 532</span>
+  <span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">generate_lookup_node</span>(<span class="ruby-identifier">name</span>, <span class="ruby-identifier">table</span>)
+    <span class="ruby-identifier">bytes_code</span> = <span class="ruby-ivar">@bytes_code</span>
+    <span class="ruby-identifier">words_code</span> = <span class="ruby-ivar">@words_code</span>
+    <span class="ruby-identifier">offsets</span> = []
+    <span class="ruby-identifier">infos</span> = []
+    <span class="ruby-identifier">infomap</span> = {}
+    <span class="ruby-identifier">min</span> = <span class="ruby-identifier">max</span> = <span class="ruby-keyword">nil</span>
+    <span class="ruby-identifier">table</span>.<span class="ruby-identifier">each_with_index</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">action</span>, <span class="ruby-identifier">byte</span><span class="ruby-operator">|</span>
+      <span class="ruby-identifier">action</span> <span class="ruby-operator">||=</span> <span class="ruby-value">:invalid</span>
+      <span class="ruby-keyword">if</span> <span class="ruby-identifier">action</span> <span class="ruby-operator">!=</span> <span class="ruby-value">:invalid</span>
+        <span class="ruby-identifier">min</span> = <span class="ruby-identifier">byte</span> <span class="ruby-keyword">if</span> <span class="ruby-operator">!</span><span class="ruby-identifier">min</span>
+        <span class="ruby-identifier">max</span> = <span class="ruby-identifier">byte</span>
+      <span class="ruby-keyword">end</span>
+      <span class="ruby-keyword">unless</span> <span class="ruby-identifier">o</span> = <span class="ruby-identifier">infomap</span>[<span class="ruby-identifier">action</span>]
+        <span class="ruby-identifier">infomap</span>[<span class="ruby-identifier">action</span>] = <span class="ruby-identifier">o</span> = <span class="ruby-identifier">infos</span>.<span class="ruby-identifier">length</span>
+        <span class="ruby-identifier">infos</span>[<span class="ruby-identifier">o</span>] = <span class="ruby-identifier">action</span>
+      <span class="ruby-keyword">end</span>
+      <span class="ruby-identifier">offsets</span>[<span class="ruby-identifier">byte</span>] = <span class="ruby-identifier">o</span>
+    }
+    <span class="ruby-identifier">infomap</span>.<span class="ruby-identifier">clear</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-operator">!</span><span class="ruby-identifier">min</span>
+      <span class="ruby-identifier">min</span> = <span class="ruby-identifier">max</span> = <span class="ruby-number">0</span>
+    <span class="ruby-keyword">end</span>
+
+    <span class="ruby-identifier">offsets_key</span> = [<span class="ruby-identifier">min</span>, <span class="ruby-identifier">max</span>, <span class="ruby-identifier">offsets</span>[<span class="ruby-identifier">min</span><span class="ruby-operator">..</span><span class="ruby-identifier">max</span>]]
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">n</span> = <span class="ruby-constant">OffsetsMemo</span>[<span class="ruby-identifier">offsets_key</span>]
+      <span class="ruby-identifier">offsets_name</span> = <span class="ruby-identifier">n</span>
+    <span class="ruby-keyword">else</span>
+      <span class="ruby-identifier">offsets_name</span> = <span class="ruby-node">&quot;#{name}_offsets&quot;</span>
+      <span class="ruby-constant">OffsetsMemo</span>[<span class="ruby-identifier">offsets_key</span>] = <span class="ruby-identifier">offsets_name</span>
+      <span class="ruby-identifier">size</span> = <span class="ruby-identifier">bytes_code</span>.<span class="ruby-identifier">length</span>
+      <span class="ruby-identifier">bytes_code</span>.<span class="ruby-identifier">insert_at_last</span>(<span class="ruby-number">2</span><span class="ruby-operator">+</span><span class="ruby-identifier">max</span><span class="ruby-operator">-</span><span class="ruby-identifier">min</span><span class="ruby-operator">+</span><span class="ruby-number">1</span>,
+        <span class="ruby-node">&quot;\#define #{offsets_name} #{size}\n&quot;</span> <span class="ruby-operator">+</span>
+        <span class="ruby-identifier">format_offsets</span>(<span class="ruby-identifier">min</span>,<span class="ruby-identifier">max</span>,<span class="ruby-identifier">offsets</span>) <span class="ruby-operator">+</span> <span class="ruby-string">&quot;\n&quot;</span>)
+    <span class="ruby-keyword">end</span>
+
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">n</span> = <span class="ruby-constant">InfosMemo</span>[<span class="ruby-identifier">infos</span>]
+      <span class="ruby-identifier">infos_name</span> = <span class="ruby-identifier">n</span>
+    <span class="ruby-keyword">else</span>
+      <span class="ruby-identifier">infos_name</span> = <span class="ruby-node">&quot;#{name}_infos&quot;</span>
+      <span class="ruby-constant">InfosMemo</span>[<span class="ruby-identifier">infos</span>] = <span class="ruby-identifier">infos_name</span>
+
+      <span class="ruby-identifier">size</span> = <span class="ruby-identifier">words_code</span>.<span class="ruby-identifier">length</span>
+      <span class="ruby-identifier">words_code</span>.<span class="ruby-identifier">insert_at_last</span>(<span class="ruby-identifier">infos</span>.<span class="ruby-identifier">length</span>,
+        <span class="ruby-node">&quot;\#define #{infos_name} WORDINDEX2INFO(#{size})\n&quot;</span> <span class="ruby-operator">+</span>
+        <span class="ruby-identifier">format_infos</span>(<span class="ruby-identifier">infos</span>) <span class="ruby-operator">+</span> <span class="ruby-string">&quot;\n&quot;</span>)
+    <span class="ruby-keyword">end</span>
+
+    <span class="ruby-identifier">size</span> = <span class="ruby-identifier">words_code</span>.<span class="ruby-identifier">length</span>
+    <span class="ruby-identifier">words_code</span>.<span class="ruby-identifier">insert_at_last</span>(<span class="ruby-constant">NUM_ELEM_BYTELOOKUP</span>,
+      <span class="ruby-node">&quot;\#define #{name} WORDINDEX2INFO(#{size})\n&quot;</span> <span class="ruby-operator">+</span>
+      <span class="ruby-string">&quot;    #{offsets_name},
+    #{infos_name},
+&quot;</span> <span class="ruby-operator">+</span> <span class="ruby-string">&quot;\n&quot;</span>)
+  <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-generate_node">
+            
+              <b>generate_node</b>(name_hint=nil)
+            
+            <a href="../classes/ActionMap.html#method-i-generate_node" name="method-i-generate_node" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-generate_node_source')" id="l_method-i-generate_node_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/bae9e4a0bc30b7a54dc8872dfcb450c715143e10/tool/transcode-tblgen.rb#L592" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-generate_node_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File tool/transcode-tblgen.rb, line 592</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">generate_node</span>(<span class="ruby-identifier">name_hint</span>=<span class="ruby-keyword">nil</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">n</span> = <span class="ruby-constant">PreMemo</span>[<span class="ruby-ivar">@tree</span>]
+    <span class="ruby-keyword">return</span> <span class="ruby-identifier">n</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-identifier">table</span> = <span class="ruby-constant">Array</span>.<span class="ruby-identifier">new</span>(<span class="ruby-number">0x100</span>, <span class="ruby-value">:invalid</span>)
+  <span class="ruby-ivar">@tree</span>.<span class="ruby-identifier">each</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">branch</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">byte_min</span>, <span class="ruby-identifier">byte_max</span>, <span class="ruby-identifier">child_tree</span> = <span class="ruby-identifier">branch</span>.<span class="ruby-identifier">byte_min</span>, <span class="ruby-identifier">branch</span>.<span class="ruby-identifier">byte_max</span>, <span class="ruby-identifier">branch</span>.<span class="ruby-identifier">child_tree</span>
+    <span class="ruby-identifier">rest</span> = <span class="ruby-constant">ActionMap</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">child_tree</span>)
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">a</span> = <span class="ruby-identifier">rest</span>.<span class="ruby-identifier">empty_action</span>
+      <span class="ruby-identifier">table</span>.<span class="ruby-identifier">fill</span>(<span class="ruby-identifier">a</span>, <span class="ruby-identifier">byte_min</span><span class="ruby-operator">..</span><span class="ruby-identifier">byte_max</span>)
+    <span class="ruby-keyword">else</span>
+      <span class="ruby-identifier">name_hint2</span> = <span class="ruby-keyword">nil</span>
+      <span class="ruby-keyword">if</span> <span class="ruby-identifier">name_hint</span>
+        <span class="ruby-identifier">name_hint2</span> = <span class="ruby-node">&quot;#{name_hint}_#{byte_min == byte_max ? &#39;%02X&#39; % byte_min : &#39;%02Xto%02X&#39; % [byte_min, byte_max]}&quot;</span>
+      <span class="ruby-keyword">end</span>
+      <span class="ruby-identifier">v</span> = <span class="ruby-string">&quot;/*BYTE_LOOKUP*/&quot;</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">rest</span>.<span class="ruby-identifier">gennode</span>(<span class="ruby-ivar">@bytes_code</span>, <span class="ruby-ivar">@words_code</span>, <span class="ruby-identifier">name_hint2</span>)
+      <span class="ruby-identifier">table</span>.<span class="ruby-identifier">fill</span>(<span class="ruby-identifier">v</span>, <span class="ruby-identifier">byte_min</span><span class="ruby-operator">..</span><span class="ruby-identifier">byte_max</span>)
+    <span class="ruby-keyword">end</span>
+  }
+
+  <span class="ruby-keyword">if</span> <span class="ruby-operator">!</span><span class="ruby-identifier">name_hint</span>
+    <span class="ruby-identifier">name_hint</span> = <span class="ruby-string">&quot;fun_&quot;</span> <span class="ruby-operator">+</span> <span class="ruby-constant">NextName</span>
+    <span class="ruby-constant">NextName</span>.<span class="ruby-identifier">succ!</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-constant">PreMemo</span>[<span class="ruby-ivar">@tree</span>] = <span class="ruby-identifier">name_hint</span>
+
+  <span class="ruby-identifier">generate_lookup_node</span>(<span class="ruby-identifier">name_hint</span>, <span class="ruby-identifier">table</span>)
+  <span class="ruby-identifier">name_hint</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-gennode">
+            
+              <b>gennode</b>(bytes_code, words_code, name_hint=nil)
+            
+            <a href="../classes/ActionMap.html#method-i-gennode" name="method-i-gennode" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-gennode_source')" id="l_method-i-gennode_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/bae9e4a0bc30b7a54dc8872dfcb450c715143e10/tool/transcode-tblgen.rb#L624" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-gennode_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File tool/transcode-tblgen.rb, line 624</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">gennode</span>(<span class="ruby-identifier">bytes_code</span>, <span class="ruby-identifier">words_code</span>, <span class="ruby-identifier">name_hint</span>=<span class="ruby-keyword">nil</span>)
+  <span class="ruby-ivar">@bytes_code</span> = <span class="ruby-identifier">bytes_code</span>
+  <span class="ruby-ivar">@words_code</span> = <span class="ruby-identifier">words_code</span>
+  <span class="ruby-identifier">name</span> = <span class="ruby-identifier">generate_node</span>(<span class="ruby-identifier">name_hint</span>)
+  <span class="ruby-ivar">@bytes_code</span> = <span class="ruby-keyword">nil</span>
+  <span class="ruby-ivar">@words_code</span> = <span class="ruby-keyword">nil</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-identifier">name</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-inspect">
+            
+              <b>inspect</b>()
+            
+            <a href="../classes/ActionMap.html#method-i-inspect" name="method-i-inspect" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-inspect_source')" id="l_method-i-inspect_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/bae9e4a0bc30b7a54dc8872dfcb450c715143e10/tool/transcode-tblgen.rb#L399" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-inspect_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File tool/transcode-tblgen.rb, line 399</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">inspect</span>
+  <span class="ruby-node">&quot;\#&lt;#{self.class}:&quot;</span> <span class="ruby-operator">+</span>
+  <span class="ruby-ivar">@tree</span>.<span class="ruby-identifier">inspect</span> <span class="ruby-operator">+</span>
+  <span class="ruby-string">&quot;&gt;&quot;</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-max_input_length">
+            
+              <b>max_input_length</b>()
+            
+            <a href="../classes/ActionMap.html#method-i-max_input_length" name="method-i-max_input_length" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-max_input_length_source')" id="l_method-i-max_input_length_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/bae9e4a0bc30b7a54dc8872dfcb450c715143e10/tool/transcode-tblgen.rb#L416" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-max_input_length_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File tool/transcode-tblgen.rb, line 416</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">max_input_length</span>
+  <span class="ruby-identifier">max_input_length_rec</span>(<span class="ruby-ivar">@tree</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-max_input_length_rec">
+            
+              <b>max_input_length_rec</b>(tree)
+            
+            <a href="../classes/ActionMap.html#method-i-max_input_length_rec" name="method-i-max_input_length_rec" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-max_input_length_rec_source')" id="l_method-i-max_input_length_rec_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/bae9e4a0bc30b7a54dc8872dfcb450c715143e10/tool/transcode-tblgen.rb#L405" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-max_input_length_rec_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File tool/transcode-tblgen.rb, line 405</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">max_input_length_rec</span>(<span class="ruby-identifier">tree</span>)
+  <span class="ruby-keyword">case</span> <span class="ruby-identifier">tree</span>
+  <span class="ruby-keyword">when</span> <span class="ruby-constant">Action</span>
+    <span class="ruby-number">0</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">tree</span>.<span class="ruby-identifier">map</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">branch</span><span class="ruby-operator">|</span>
+      <span class="ruby-identifier">max_input_length_rec</span>(<span class="ruby-identifier">branch</span>.<span class="ruby-identifier">child_tree</span>)
+    }.<span class="ruby-identifier">max</span> <span class="ruby-operator">+</span> <span class="ruby-number">1</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-str_name">
+            
+              <b>str_name</b>(bytes)
+            
+            <a href="../classes/ActionMap.html#method-i-str_name" name="method-i-str_name" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-str_name_source')" id="l_method-i-str_name_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/bae9e4a0bc30b7a54dc8872dfcb450c715143e10/tool/transcode-tblgen.rb#L450" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-str_name_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File tool/transcode-tblgen.rb, line 450</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">str_name</span>(<span class="ruby-identifier">bytes</span>)
+  <span class="ruby-identifier">size</span> = <span class="ruby-ivar">@bytes_code</span>.<span class="ruby-identifier">length</span>
+  <span class="ruby-identifier">rawbytes</span> = [<span class="ruby-identifier">bytes</span>].<span class="ruby-identifier">pack</span>(<span class="ruby-string">&quot;H*&quot;</span>)
+
+  <span class="ruby-identifier">n</span> = <span class="ruby-keyword">nil</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-operator">!</span><span class="ruby-identifier">n</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-operator">!</span>(<span class="ruby-identifier">suf</span> = <span class="ruby-identifier">rawbytes</span>.<span class="ruby-identifier">gsub</span>(<span class="ruby-regexp">/[^A-Za-z0-9_]/</span>, <span class="ruby-string">&#39;&#39;</span>)).<span class="ruby-identifier">empty?</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-operator">!</span><span class="ruby-constant">UsedName</span>[<span class="ruby-identifier">nn</span> = <span class="ruby-string">&quot;str1_&quot;</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">suf</span>] <span class="ruby-keyword">then</span> <span class="ruby-identifier">n</span> = <span class="ruby-identifier">nn</span> <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-operator">!</span><span class="ruby-identifier">n</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-operator">!</span><span class="ruby-constant">UsedName</span>[<span class="ruby-identifier">nn</span> = <span class="ruby-string">&quot;str1_&quot;</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">bytes</span>] <span class="ruby-keyword">then</span> <span class="ruby-identifier">n</span> = <span class="ruby-identifier">nn</span> <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">n</span> <span class="ruby-operator">||=</span> <span class="ruby-node">&quot;str1s_#{size}&quot;</span>
+
+  <span class="ruby-constant">StrMemo</span>[<span class="ruby-identifier">bytes</span>] = <span class="ruby-identifier">n</span>
+  <span class="ruby-constant">UsedName</span>[<span class="ruby-identifier">n</span>] = <span class="ruby-keyword">true</span>
+  <span class="ruby-identifier">n</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                    </div>
+
+    </div>
+  </body>
+</html>    

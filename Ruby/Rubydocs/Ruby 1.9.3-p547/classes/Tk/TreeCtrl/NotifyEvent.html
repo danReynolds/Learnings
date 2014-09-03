@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>Tk::TreeCtrl::NotifyEvent</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="../../../css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../../../css/main.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../../../css/github.css" type="text/css" media="screen" />
+<script src="../../../js/jquery-1.3.2.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../../js/jquery-effect.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../../js/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+
+<body>     
+    <div class="banner">
+        
+        <h1>
+            <span class="type">Class</span> 
+            Tk::TreeCtrl::NotifyEvent 
+            
+                <span class="parent">&lt; 
+                    
+                    <a href="../../TkUtil/CallbackSubst.html">TkUtil::CallbackSubst</a>
+                    
+                </span>
+            
+        </h1>
+        <ul class="files">
+            
+            <li><a href="../../../files/ext/tk/lib/tkextlib/treectrl/tktreectrl_rb.html">ext/tk/lib/tkextlib/treectrl/tktreectrl.rb</a></li>
+            
+        </ul>
+    </div>
+    <div id="bodyContent">
+        <div id="content">
+  
+
+
+  
+
+
+  
+  
+
+
+  
+
+
+  
+
+  
+
+
+
+  
+
+    
+
+    
+
+    
+      <!-- Section constants -->
+      <div class="sectiontitle">Constants</div>
+      <table border='0' cellpadding='5'>
+        
+          <tr valign='top'>
+            <td class="attr-name">KEY_TBL</td>
+            <td>=</td>
+            <td class="attr-value">[
+[ ?c, ?n, :item_num ],
+[ ?d, ?s, :detail ],
+[ ?D, ?l, :items ],
+[ ?e, ?e, :event ],
+[ ?I, ?n, :id ],
+[ ?l, ?n, :lower_bound ],
+[ ?p, ?n, :active_id ],
+[ ?P, ?e, :pattern ],
+[ ?S, ?l, :sel_items ],
+[ ?T, ?w, :widget ],
+[ ?u, ?n, :upper_bound ],
+[ ?W, ?o, :object ],
+[ ??, ?x, :parm_info ],
+nil
+]</td>
+          </tr>
+          
+            <tr valign='top'>
+              <td>&nbsp;</td>
+              <td colspan="2" class="attr-desc"><dl class="rdoc-list label-list"><dt> &lt;&#39;%&#39; subst-key char&gt;, &lt;proc type char&gt;, &lt;instance var (accessor) name&gt;
+<dd></dd></dl></td>
+            </tr>
+          
+        
+          <tr valign='top'>
+            <td class="attr-name">PROC_TBL</td>
+            <td>=</td>
+            <td class="attr-value">[
+[ ?n, TkComm.method(:num_or_str) ],
+[ ?s, TkComm.method(:string) ],
+[ ?l, TkComm.method(:list) ],
+[ ?w, TkComm.method(:window) ],
+
+[ ?e, proc{|val|
+case val
+when /^&lt;&lt;[^&lt;&gt;]+&gt;&gt;$/
+TkVirtualEvent.getobj(val[1..-2])
+when /^&lt;[^&lt;&gt;]+&gt;$/
+val[1..-2]
+else
+val
+end
+}
+],
+
+[ ?o, proc{|val| TkComm.tk_tcl2ruby(val)} ],
+
+[ ?x, proc{|val|
+begin
+inf = {}
+Hash[*(TkComm.list(val))].each{|k, v|
+if keyinfo = KEY_TBL.assoc(k[0])
+if cmd = PROC_TBL.assoc(keyinfo[1])
+begin
+new_v = cmd.call(v)
+v = new_v
+rescue
+end
+end
+end
+inf[k] = v
+}
+inf
+rescue
+val
+end
+} ],
+
+nil
+]</td>
+          </tr>
+          
+            <tr valign='top'>
+              <td>&nbsp;</td>
+              <td colspan="2" class="attr-desc"><dl class="rdoc-list label-list"><dt> &lt;proc type char&gt;, &lt;proc/method to convert tcl-str to ruby-obj&gt;
+<dd></dd></dl></td>
+            </tr>
+          
+        
+      </table>
+    
+
+
+    
+
+
+    <!-- Methods -->
+              </div>
+
+    </div>
+  </body>
+</html>    

@@ -1,0 +1,436 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>Tk::Tcllib::Plotchart::Isometricplot</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="../../../../css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../../../../css/main.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../../../../css/github.css" type="text/css" media="screen" />
+<script src="../../../../js/jquery-1.3.2.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../../../js/jquery-effect.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../../../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../../../js/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+
+<body>     
+    <div class="banner">
+        
+        <h1>
+            <span class="type">Class</span> 
+            Tk::Tcllib::Plotchart::Isometricplot 
+            
+                <span class="parent">&lt; 
+                    
+                    <a href="../../Canvas.html">Tk::Canvas</a>
+                    
+                </span>
+            
+        </h1>
+        <ul class="files">
+            
+            <li><a href="../../../../files/ext/tk/lib/tkextlib/tcllib/plotchart_rb.html">ext/tk/lib/tkextlib/tcllib/plotchart.rb</a></li>
+            
+        </ul>
+    </div>
+    <div id="bodyContent">
+        <div id="content">
+  
+
+
+  
+
+
+  
+  
+
+
+  
+
+
+  
+    <!-- Method ref -->
+    <div class="sectiontitle">Methods</div>
+    <dl class="methods">
+      
+        <dt>N</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-new">new</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>P</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-plot">plot</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-plot_circle">plot_circle</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-plot_filled_circle">plot_filled_circle</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-plot_filled_rectangle">plot_filled_rectangle</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-plot_rectangle">plot_rectangle</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+    </dl>
+  
+
+  
+    <!-- Includes -->
+    <div class="sectiontitle">Included Modules</div>
+    <ul>
+      
+        <li>
+          
+            <a href="ChartMethod.html">
+              Tk::Tcllib::Plotchart::ChartMethod
+            </a>
+          
+        </li>
+      
+    </ul>
+  
+
+
+
+  
+
+    
+
+    
+
+    
+      <!-- Section constants -->
+      <div class="sectiontitle">Constants</div>
+      <table border='0' cellpadding='5'>
+        
+          <tr valign='top'>
+            <td class="attr-name">TkCommandNames</td>
+            <td>=</td>
+            <td class="attr-value">[
+&#39;canvas&#39;.freeze,
+&#39;::Plotchart::createIsometricPlot&#39;.freeze
+].freeze</td>
+          </tr>
+          
+            <tr valign='top'>
+              <td>&nbsp;</td>
+              <td colspan="2" class="attr-desc"></td>
+            </tr>
+          
+        
+      </table>
+    
+
+
+    
+
+
+    <!-- Methods -->
+    
+      <div class="sectiontitle">Class Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-c-new">
+            
+              <b>new</b>(*args)
+            
+            <a href="../../../../classes/Tk/Tcllib/Plotchart/IsometricPlot.html#method-c-new" name="method-c-new" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-new_source')" id="l_method-c-new_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/3a47cf3395dd4c4fe8bdd5df13aab698f2ca314b/ext/tk/lib/tkextlib/tcllib/plotchart.rb#L595" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-new_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/tcllib/plotchart.rb, line 595</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">initialize</span>(<span class="ruby-operator">*</span><span class="ruby-identifier">args</span>) <span class="ruby-comment"># args := ([parent,] xaxis, yaxis, [, step] [, keys])</span>
+                      <span class="ruby-comment"># xaxis := Array of [minimum, maximum]</span>
+                      <span class="ruby-comment"># yaxis := Array of [minimum, maximum]</span>
+                      <span class="ruby-comment"># step := Float of stepsize | &quot;noaxes&quot; | :noaxes</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">args</span>[<span class="ruby-number">0</span>].<span class="ruby-identifier">kind_of?</span>(<span class="ruby-constant">Array</span>)
+    <span class="ruby-ivar">@xaxis</span> = <span class="ruby-identifier">args</span>.<span class="ruby-identifier">shift</span>
+    <span class="ruby-ivar">@yaxis</span> = <span class="ruby-identifier">args</span>.<span class="ruby-identifier">shift</span>
+
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">args</span>[<span class="ruby-number">0</span>].<span class="ruby-identifier">kind_of?</span>(<span class="ruby-constant">Hash</span>)
+      <span class="ruby-ivar">@stepsize</span> = <span class="ruby-value">:noaxes</span>
+    <span class="ruby-keyword">else</span>
+      <span class="ruby-ivar">@stepsize</span> = <span class="ruby-identifier">args</span>.<span class="ruby-identifier">shift</span>
+    <span class="ruby-keyword">end</span>
+
+    <span class="ruby-keyword">super</span>(<span class="ruby-operator">*</span><span class="ruby-identifier">args</span>) <span class="ruby-comment"># create canvas widget</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">parent</span> = <span class="ruby-identifier">args</span>.<span class="ruby-identifier">shift</span>
+
+    <span class="ruby-ivar">@xaxis</span> = <span class="ruby-identifier">args</span>.<span class="ruby-identifier">shift</span>
+    <span class="ruby-ivar">@yaxis</span> = <span class="ruby-identifier">args</span>.<span class="ruby-identifier">shift</span>
+
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">args</span>[<span class="ruby-number">0</span>].<span class="ruby-identifier">kind_of?</span>(<span class="ruby-constant">Hash</span>)
+      <span class="ruby-ivar">@stepsize</span> = <span class="ruby-value">:noaxes</span>
+    <span class="ruby-keyword">else</span>
+      <span class="ruby-ivar">@stepsize</span> = <span class="ruby-identifier">args</span>.<span class="ruby-identifier">shift</span>
+    <span class="ruby-keyword">end</span>
+
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">parent</span>.<span class="ruby-identifier">kind_of?</span>(<span class="ruby-constant">Tk</span><span class="ruby-operator">::</span><span class="ruby-constant">Canvas</span>)
+      <span class="ruby-ivar">@path</span> = <span class="ruby-identifier">parent</span>.<span class="ruby-identifier">path</span>
+    <span class="ruby-keyword">else</span>
+      <span class="ruby-keyword">super</span>(<span class="ruby-identifier">parent</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">args</span>) <span class="ruby-comment"># create canvas widget</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-ivar">@chart</span> = <span class="ruby-identifier">_create_chart</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                  
+      <div class="sectiontitle">Instance Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-i-plot">
+            
+              <b>plot</b>(type, *args)
+            
+            <a href="../../../../classes/Tk/Tcllib/Plotchart/IsometricPlot.html#method-i-plot" name="method-i-plot" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-plot_source')" id="l_method-i-plot_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/3a47cf3395dd4c4fe8bdd5df13aab698f2ca314b/ext/tk/lib/tkextlib/tcllib/plotchart.rb#L640" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-plot_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/tcllib/plotchart.rb, line 640</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">plot</span>(<span class="ruby-identifier">type</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">args</span>)
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">__send__</span>(<span class="ruby-node">&quot;plot_#{type.to_s.tr(&#39;-&#39;, &#39;_&#39;)}&quot;</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">args</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-plot_circle">
+            
+              <b>plot_circle</b>(*args)
+            
+            <a href="../../../../classes/Tk/Tcllib/Plotchart/IsometricPlot.html#method-i-plot_circle" name="method-i-plot_circle" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-plot_circle_source')" id="l_method-i-plot_circle_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/3a47cf3395dd4c4fe8bdd5df13aab698f2ca314b/ext/tk/lib/tkextlib/tcllib/plotchart.rb#L654" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-plot_circle_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/tcllib/plotchart.rb, line 654</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">plot_circle</span>(<span class="ruby-operator">*</span><span class="ruby-identifier">args</span>) <span class="ruby-comment"># args := xc, yc, radius, color</span>
+  <span class="ruby-identifier">tk_call_without_enc</span>(<span class="ruby-ivar">@chart</span>, <span class="ruby-string">&#39;plot&#39;</span>, <span class="ruby-string">&#39;circle&#39;</span>, <span class="ruby-operator">*</span>(<span class="ruby-identifier">args</span>.<span class="ruby-identifier">flatten</span>))
+  <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-plot_filled_circle">
+            
+              <b>plot_filled_circle</b>(*args)
+            
+            <a href="../../../../classes/Tk/Tcllib/Plotchart/IsometricPlot.html#method-i-plot_filled_circle" name="method-i-plot_filled_circle" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-plot_filled_circle_source')" id="l_method-i-plot_filled_circle_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/3a47cf3395dd4c4fe8bdd5df13aab698f2ca314b/ext/tk/lib/tkextlib/tcllib/plotchart.rb#L659" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-plot_filled_circle_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/tcllib/plotchart.rb, line 659</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">plot_filled_circle</span>(<span class="ruby-operator">*</span><span class="ruby-identifier">args</span>) <span class="ruby-comment"># args := xc, yc, radius, color</span>
+  <span class="ruby-identifier">tk_call_without_enc</span>(<span class="ruby-ivar">@chart</span>, <span class="ruby-string">&#39;plot&#39;</span>, <span class="ruby-string">&#39;filled-circle&#39;</span>, <span class="ruby-operator">*</span>(<span class="ruby-identifier">args</span>.<span class="ruby-identifier">flatten</span>))
+  <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-plot_filled_rectangle">
+            
+              <b>plot_filled_rectangle</b>(*args)
+            
+            <a href="../../../../classes/Tk/Tcllib/Plotchart/IsometricPlot.html#method-i-plot_filled_rectangle" name="method-i-plot_filled_rectangle" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-plot_filled_rectangle_source')" id="l_method-i-plot_filled_rectangle_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/3a47cf3395dd4c4fe8bdd5df13aab698f2ca314b/ext/tk/lib/tkextlib/tcllib/plotchart.rb#L649" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-plot_filled_rectangle_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/tcllib/plotchart.rb, line 649</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">plot_filled_rectangle</span>(<span class="ruby-operator">*</span><span class="ruby-identifier">args</span>) <span class="ruby-comment"># args := x1, y1, x2, y2, color</span>
+  <span class="ruby-identifier">tk_call_without_enc</span>(<span class="ruby-ivar">@chart</span>, <span class="ruby-string">&#39;plot&#39;</span>, <span class="ruby-string">&#39;filled-rectangle&#39;</span>, <span class="ruby-operator">*</span>(<span class="ruby-identifier">args</span>.<span class="ruby-identifier">flatten</span>))
+  <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-plot_rectangle">
+            
+              <b>plot_rectangle</b>(*args)
+            
+            <a href="../../../../classes/Tk/Tcllib/Plotchart/IsometricPlot.html#method-i-plot_rectangle" name="method-i-plot_rectangle" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-plot_rectangle_source')" id="l_method-i-plot_rectangle_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/3a47cf3395dd4c4fe8bdd5df13aab698f2ca314b/ext/tk/lib/tkextlib/tcllib/plotchart.rb#L644" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-plot_rectangle_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/tcllib/plotchart.rb, line 644</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">plot_rectangle</span>(<span class="ruby-operator">*</span><span class="ruby-identifier">args</span>) <span class="ruby-comment"># args := x1, y1, x2, y2, color</span>
+  <span class="ruby-identifier">tk_call_without_enc</span>(<span class="ruby-ivar">@chart</span>, <span class="ruby-string">&#39;plot&#39;</span>, <span class="ruby-string">&#39;rectangle&#39;</span>, <span class="ruby-operator">*</span>(<span class="ruby-identifier">args</span>.<span class="ruby-identifier">flatten</span>))
+  <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                    </div>
+
+    </div>
+  </body>
+</html>    

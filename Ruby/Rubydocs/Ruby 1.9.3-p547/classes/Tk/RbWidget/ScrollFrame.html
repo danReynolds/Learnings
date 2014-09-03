@@ -1,0 +1,628 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>Tk::RbWidget::ScrollFrame</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="../../../css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../../../css/main.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../../../css/github.css" type="text/css" media="screen" />
+<script src="../../../js/jquery-1.3.2.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../../js/jquery-effect.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../../js/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+
+<body>     
+    <div class="banner">
+        
+        <h1>
+            <span class="type">Class</span> 
+            Tk::RbWidget::ScrollFrame 
+            
+                <span class="parent">&lt; 
+                    
+                    TkFrame
+                    
+                </span>
+            
+        </h1>
+        <ul class="files">
+            
+            <li><a href="../../../files/ext/tk/sample/scrollframe_rb.html">ext/tk/sample/scrollframe.rb</a></li>
+            
+        </ul>
+    </div>
+    <div id="bodyContent">
+        <div id="content">
+  
+
+
+  
+
+
+  
+  
+
+
+  
+
+
+  
+    <!-- Method ref -->
+    <div class="sectiontitle">Methods</div>
+    <dl class="methods">
+      
+        <dt>B</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-bind">bind</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-bind_append">bind_append</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-bind_remove">bind_remove</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-bindinfo">bindinfo</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>H</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-hscroll">hscroll</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>I</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-initialize_composite">initialize_composite</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>S</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-scrollbarwidth">scrollbarwidth</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>V</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-vscroll">vscroll</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+    </dl>
+  
+
+  
+    <!-- Includes -->
+    <div class="sectiontitle">Included Modules</div>
+    <ul>
+      
+        <li>
+          
+            <a href="../../TkComposite.html">
+              TkComposite
+            </a>
+          
+        </li>
+      
+    </ul>
+  
+
+
+
+  
+
+    
+
+    
+
+    
+      <!-- Section constants -->
+      <div class="sectiontitle">Constants</div>
+      <table border='0' cellpadding='5'>
+        
+          <tr valign='top'>
+            <td class="attr-name">DEFAULT_WIDTH</td>
+            <td>=</td>
+            <td class="attr-value">200</td>
+          </tr>
+          
+            <tr valign='top'>
+              <td>&nbsp;</td>
+              <td colspan="2" class="attr-desc"></td>
+            </tr>
+          
+        
+          <tr valign='top'>
+            <td class="attr-name">DEFAULT_HEIGHT</td>
+            <td>=</td>
+            <td class="attr-value">200</td>
+          </tr>
+          
+            <tr valign='top'>
+              <td>&nbsp;</td>
+              <td colspan="2" class="attr-desc"></td>
+            </tr>
+          
+        
+      </table>
+    
+
+
+    
+
+
+    <!-- Methods -->
+        
+      <div class="sectiontitle">Instance Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-i-bind">
+            
+              <b>bind</b>(*args)
+            
+            <a href="../../../classes/Tk/RbWidget/ScrollFrame.html#method-i-bind" name="method-i-bind" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>forbid to change binding of @base frame</p>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-bind_source')" id="l_method-i-bind_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/cfbdfc796ac58453ca548c7ba23540a181c42a03/ext/tk/sample/scrollframe.rb#L159" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-bind_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/sample/scrollframe.rb, line 159</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">bind</span>(<span class="ruby-operator">*</span><span class="ruby-identifier">args</span>)
+  <span class="ruby-ivar">@frame</span>.<span class="ruby-identifier">bind</span>(<span class="ruby-operator">*</span><span class="ruby-identifier">args</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-bind_append">
+            
+              <b>bind_append</b>(*args)
+            
+            <a href="../../../classes/Tk/RbWidget/ScrollFrame.html#method-i-bind_append" name="method-i-bind_append" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-bind_append_source')" id="l_method-i-bind_append_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/cfbdfc796ac58453ca548c7ba23540a181c42a03/ext/tk/sample/scrollframe.rb#L162" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-bind_append_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/sample/scrollframe.rb, line 162</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">bind_append</span>(<span class="ruby-operator">*</span><span class="ruby-identifier">args</span>)
+  <span class="ruby-ivar">@frame</span>.<span class="ruby-identifier">bind_append</span>(<span class="ruby-operator">*</span><span class="ruby-identifier">args</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-bind_remove">
+            
+              <b>bind_remove</b>(*args)
+            
+            <a href="../../../classes/Tk/RbWidget/ScrollFrame.html#method-i-bind_remove" name="method-i-bind_remove" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-bind_remove_source')" id="l_method-i-bind_remove_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/cfbdfc796ac58453ca548c7ba23540a181c42a03/ext/tk/sample/scrollframe.rb#L165" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-bind_remove_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/sample/scrollframe.rb, line 165</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">bind_remove</span>(<span class="ruby-operator">*</span><span class="ruby-identifier">args</span>)
+  <span class="ruby-ivar">@frame</span>.<span class="ruby-identifier">bind_remove</span>(<span class="ruby-operator">*</span><span class="ruby-identifier">args</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-bindinfo">
+            
+              <b>bindinfo</b>(*args)
+            
+            <a href="../../../classes/Tk/RbWidget/ScrollFrame.html#method-i-bindinfo" name="method-i-bindinfo" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-bindinfo_source')" id="l_method-i-bindinfo_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/cfbdfc796ac58453ca548c7ba23540a181c42a03/ext/tk/sample/scrollframe.rb#L168" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-bindinfo_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/sample/scrollframe.rb, line 168</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">bindinfo</span>(<span class="ruby-operator">*</span><span class="ruby-identifier">args</span>)
+  <span class="ruby-ivar">@frame</span>.<span class="ruby-identifier">bindinfo</span>(<span class="ruby-operator">*</span><span class="ruby-identifier">args</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-hscroll">
+            
+              <b>hscroll</b>(mode)
+            
+            <a href="../../../classes/Tk/RbWidget/ScrollFrame.html#method-i-hscroll" name="method-i-hscroll" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>horizontal scrollbar : ON/OFF</p>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-hscroll_source')" id="l_method-i-hscroll_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/cfbdfc796ac58453ca548c7ba23540a181c42a03/ext/tk/sample/scrollframe.rb#L198" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-hscroll_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/sample/scrollframe.rb, line 198</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">hscroll</span>(<span class="ruby-identifier">mode</span>)
+  <span class="ruby-constant">Tk</span>.<span class="ruby-identifier">update_idletasks</span>
+  <span class="ruby-identifier">st</span> = <span class="ruby-constant">TkGrid</span>.<span class="ruby-identifier">info</span>(<span class="ruby-ivar">@h_scroll</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">mode</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">st</span>.<span class="ruby-identifier">size</span> <span class="ruby-operator">==</span> <span class="ruby-number">0</span> <span class="ruby-keyword">then</span>
+    <span class="ruby-identifier">_reset_scrollregion</span>(<span class="ruby-keyword">true</span>, <span class="ruby-keyword">nil</span>)
+  <span class="ruby-keyword">elsif</span> <span class="ruby-operator">!</span><span class="ruby-identifier">mode</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">st</span>.<span class="ruby-identifier">size</span> <span class="ruby-operator">!=</span> <span class="ruby-number">0</span> <span class="ruby-keyword">then</span>
+    <span class="ruby-identifier">_reset_scrollregion</span>(<span class="ruby-keyword">false</span>, <span class="ruby-keyword">nil</span>)
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">_reset_scrollregion</span>(<span class="ruby-keyword">nil</span>, <span class="ruby-keyword">nil</span>)
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-initialize_composite">
+            
+              <b>initialize_composite</b>(keys={})
+            
+            <a href="../../../classes/Tk/RbWidget/ScrollFrame.html#method-i-initialize_composite" name="method-i-initialize_composite" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-initialize_composite_source')" id="l_method-i-initialize_composite_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/cfbdfc796ac58453ca548c7ba23540a181c42a03/ext/tk/sample/scrollframe.rb#L24" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-initialize_composite_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/sample/scrollframe.rb, line 24</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">initialize_composite</span>(<span class="ruby-identifier">keys</span>={})
+  <span class="ruby-ivar">@frame</span>.<span class="ruby-identifier">configure</span>(<span class="ruby-value">:width=</span><span class="ruby-operator">&gt;</span><span class="ruby-constant">DEFAULT_WIDTH</span>, <span class="ruby-value">:height=</span><span class="ruby-operator">&gt;</span><span class="ruby-constant">DEFAULT_HEIGHT</span>)
+
+  <span class="ruby-comment"># create scrollbars</span>
+  <span class="ruby-ivar">@h_scroll</span> = <span class="ruby-constant">TkScrollbar</span>.<span class="ruby-identifier">new</span>(<span class="ruby-ivar">@frame</span>, <span class="ruby-string">&#39;orient&#39;</span>=<span class="ruby-operator">&gt;</span><span class="ruby-string">&#39;horizontal&#39;</span>)
+  <span class="ruby-ivar">@v_scroll</span> = <span class="ruby-constant">TkScrollbar</span>.<span class="ruby-identifier">new</span>(<span class="ruby-ivar">@frame</span>, <span class="ruby-string">&#39;orient&#39;</span>=<span class="ruby-operator">&gt;</span><span class="ruby-string">&#39;vertical&#39;</span>)
+
+  <span class="ruby-comment"># create a canvas widget</span>
+  <span class="ruby-ivar">@canvas</span> = <span class="ruby-constant">TkCanvas</span>.<span class="ruby-identifier">new</span>(<span class="ruby-ivar">@frame</span>,
+                         <span class="ruby-value">:borderwidth=</span><span class="ruby-operator">&gt;</span><span class="ruby-number">0</span>, <span class="ruby-value">:selectborderwidth=</span><span class="ruby-operator">&gt;</span><span class="ruby-number">0</span>,
+                         <span class="ruby-value">:highlightthickness=</span><span class="ruby-operator">&gt;</span><span class="ruby-number">0</span>)
+
+  <span class="ruby-comment"># allignment</span>
+  <span class="ruby-constant">TkGrid</span>.<span class="ruby-identifier">rowconfigure</span>(<span class="ruby-ivar">@frame</span>, <span class="ruby-number">0</span>, <span class="ruby-string">&#39;weight&#39;</span>=<span class="ruby-operator">&gt;</span><span class="ruby-number">1</span>, <span class="ruby-string">&#39;minsize&#39;</span>=<span class="ruby-operator">&gt;</span><span class="ruby-number">0</span>)
+  <span class="ruby-constant">TkGrid</span>.<span class="ruby-identifier">columnconfigure</span>(<span class="ruby-ivar">@frame</span>, <span class="ruby-number">0</span>, <span class="ruby-string">&#39;weight&#39;</span>=<span class="ruby-operator">&gt;</span><span class="ruby-number">1</span>, <span class="ruby-string">&#39;minsize&#39;</span>=<span class="ruby-operator">&gt;</span><span class="ruby-number">0</span>)
+  <span class="ruby-ivar">@canvas</span>.<span class="ruby-identifier">grid</span>(<span class="ruby-string">&#39;row&#39;</span>=<span class="ruby-operator">&gt;</span><span class="ruby-number">0</span>, <span class="ruby-string">&#39;column&#39;</span>=<span class="ruby-operator">&gt;</span><span class="ruby-number">0</span>, <span class="ruby-string">&#39;sticky&#39;</span>=<span class="ruby-operator">&gt;</span><span class="ruby-string">&#39;news&#39;</span>)
+  <span class="ruby-ivar">@frame</span>.<span class="ruby-identifier">grid_propagate</span>(<span class="ruby-keyword">false</span>)
+
+  <span class="ruby-comment"># assign scrollbars</span>
+  <span class="ruby-ivar">@canvas</span>.<span class="ruby-identifier">xscrollbar</span>(<span class="ruby-ivar">@h_scroll</span>)
+  <span class="ruby-ivar">@canvas</span>.<span class="ruby-identifier">yscrollbar</span>(<span class="ruby-ivar">@v_scroll</span>)
+
+  <span class="ruby-comment"># convert hash keys</span>
+  <span class="ruby-identifier">keys</span> = <span class="ruby-identifier">_symbolkey2str</span>(<span class="ruby-identifier">keys</span>)
+
+  <span class="ruby-comment"># check options for the frame</span>
+  <span class="ruby-identifier">framekeys</span> = {}
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">keys</span>.<span class="ruby-identifier">key?</span>(<span class="ruby-string">&#39;classname&#39;</span>)
+     <span class="ruby-identifier">keys</span>[<span class="ruby-string">&#39;class&#39;</span>] = <span class="ruby-identifier">keys</span>.<span class="ruby-identifier">delete</span>(<span class="ruby-string">&#39;classname&#39;</span>)
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-ivar">@classname</span> = <span class="ruby-identifier">keys</span>.<span class="ruby-identifier">delete</span>(<span class="ruby-string">&#39;class&#39;</span>)
+    <span class="ruby-identifier">framekeys</span>[<span class="ruby-string">&#39;class&#39;</span>] = <span class="ruby-ivar">@classname</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-ivar">@colormap</span>  = <span class="ruby-identifier">keys</span>.<span class="ruby-identifier">delete</span>(<span class="ruby-string">&#39;colormap&#39;</span>)
+    <span class="ruby-identifier">framekeys</span>[<span class="ruby-string">&#39;colormap&#39;</span>] = <span class="ruby-ivar">@colormap</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-ivar">@container</span> = <span class="ruby-identifier">keys</span>.<span class="ruby-identifier">delete</span>(<span class="ruby-string">&#39;container&#39;</span>)
+    <span class="ruby-identifier">framekeys</span>[<span class="ruby-string">&#39;container&#39;</span>] = <span class="ruby-ivar">@container</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-ivar">@visual</span>    = <span class="ruby-identifier">keys</span>.<span class="ruby-identifier">delete</span>(<span class="ruby-string">&#39;visual&#39;</span>)
+    <span class="ruby-identifier">framekeys</span>[<span class="ruby-string">&#39;visual&#39;</span>] = <span class="ruby-ivar">@visual</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-ivar">@classname</span>.<span class="ruby-identifier">kind_of?</span> <span class="ruby-constant">TkBindTag</span>
+    <span class="ruby-ivar">@db_class</span> = <span class="ruby-ivar">@classname</span>
+    <span class="ruby-ivar">@classname</span> = <span class="ruby-ivar">@classname</span>.<span class="ruby-identifier">id</span>
+  <span class="ruby-keyword">elsif</span> <span class="ruby-ivar">@classname</span>
+    <span class="ruby-ivar">@db_class</span> = <span class="ruby-constant">TkDatabaseClass</span>.<span class="ruby-identifier">new</span>(<span class="ruby-ivar">@classname</span>)
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-ivar">@db_class</span> = <span class="ruby-keyword">self</span>.<span class="ruby-identifier">class</span>
+    <span class="ruby-ivar">@classname</span> = <span class="ruby-ivar">@db_class</span><span class="ruby-operator">::</span><span class="ruby-constant">WidgetClassName</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-comment"># create base frame</span>
+  <span class="ruby-ivar">@base</span> = <span class="ruby-constant">TkFrame</span>.<span class="ruby-identifier">new</span>(<span class="ruby-ivar">@canvas</span>, <span class="ruby-identifier">framekeys</span>)
+
+  <span class="ruby-comment"># embed base frame</span>
+  <span class="ruby-ivar">@cwin</span> = <span class="ruby-constant">TkcWindow</span>.<span class="ruby-identifier">new</span>(<span class="ruby-ivar">@canvas</span>, [<span class="ruby-number">0</span>, <span class="ruby-number">0</span>], <span class="ruby-value">:window=</span><span class="ruby-operator">&gt;</span><span class="ruby-ivar">@base</span>, <span class="ruby-value">:anchor=</span><span class="ruby-operator">&gt;</span><span class="ruby-string">&#39;nw&#39;</span>)
+  <span class="ruby-ivar">@canvas</span>.<span class="ruby-identifier">scrollregion</span>(<span class="ruby-ivar">@cwin</span>.<span class="ruby-identifier">bbox</span>)
+
+  <span class="ruby-comment"># binding to reset scrollregion</span>
+  <span class="ruby-ivar">@base</span>.<span class="ruby-identifier">bind</span>(<span class="ruby-string">&#39;Configure&#39;</span>){ <span class="ruby-identifier">_reset_scrollregion</span>(<span class="ruby-keyword">nil</span>, <span class="ruby-keyword">nil</span>) }
+
+  <span class="ruby-comment"># set default receiver of method calls</span>
+  <span class="ruby-ivar">@path</span> = <span class="ruby-ivar">@base</span>.<span class="ruby-identifier">path</span>
+
+  <span class="ruby-comment"># scrollbars ON</span>
+  <span class="ruby-identifier">vscroll</span>(<span class="ruby-identifier">keys</span>.<span class="ruby-identifier">delete</span>(<span class="ruby-string">&#39;vscroll&#39;</span>){<span class="ruby-keyword">true</span>})
+  <span class="ruby-identifier">hscroll</span>(<span class="ruby-identifier">keys</span>.<span class="ruby-identifier">delete</span>(<span class="ruby-string">&#39;hscroll&#39;</span>){<span class="ruby-keyword">true</span>})
+
+  <span class="ruby-comment"># please check the differences of the following definitions</span>
+  <span class="ruby-identifier">option_methods</span>(
+    <span class="ruby-value">:scrollbarwidth</span>
+  )
+
+  <span class="ruby-comment"># set receiver widgets for configure methods (with alias)</span>
+  <span class="ruby-identifier">delegate_alias</span>(<span class="ruby-string">&#39;scrollbarrelief&#39;</span>, <span class="ruby-string">&#39;relief&#39;</span>, <span class="ruby-ivar">@h_scroll</span>, <span class="ruby-ivar">@v_scroll</span>)
+
+  <span class="ruby-comment"># set receiver widgets for configure methods</span>
+  <span class="ruby-identifier">delegate</span>(<span class="ruby-string">&#39;DEFAULT&#39;</span>, <span class="ruby-ivar">@base</span>)
+  <span class="ruby-identifier">delegate</span>(<span class="ruby-string">&#39;background&#39;</span>, <span class="ruby-ivar">@frame</span>, <span class="ruby-ivar">@base</span>, <span class="ruby-ivar">@canvas</span>, <span class="ruby-ivar">@h_scroll</span>, <span class="ruby-ivar">@v_scroll</span>)
+  <span class="ruby-identifier">delegate</span>(<span class="ruby-string">&#39;width&#39;</span>, <span class="ruby-ivar">@frame</span>)
+  <span class="ruby-identifier">delegate</span>(<span class="ruby-string">&#39;height&#39;</span>, <span class="ruby-ivar">@frame</span>)
+  <span class="ruby-identifier">delegate</span>(<span class="ruby-string">&#39;activebackground&#39;</span>, <span class="ruby-ivar">@h_scroll</span>, <span class="ruby-ivar">@v_scroll</span>)
+  <span class="ruby-identifier">delegate</span>(<span class="ruby-string">&#39;troughcolor&#39;</span>, <span class="ruby-ivar">@h_scroll</span>, <span class="ruby-ivar">@v_scroll</span>)
+  <span class="ruby-identifier">delegate</span>(<span class="ruby-string">&#39;repeatdelay&#39;</span>, <span class="ruby-ivar">@h_scroll</span>, <span class="ruby-ivar">@v_scroll</span>)
+  <span class="ruby-identifier">delegate</span>(<span class="ruby-string">&#39;repeatinterval&#39;</span>, <span class="ruby-ivar">@h_scroll</span>, <span class="ruby-ivar">@v_scroll</span>)
+  <span class="ruby-identifier">delegate</span>(<span class="ruby-string">&#39;borderwidth&#39;</span>, <span class="ruby-ivar">@frame</span>)
+  <span class="ruby-identifier">delegate</span>(<span class="ruby-string">&#39;relief&#39;</span>, <span class="ruby-ivar">@frame</span>)
+
+  <span class="ruby-comment"># do configure</span>
+  <span class="ruby-identifier">configure</span> <span class="ruby-identifier">keys</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">keys</span>.<span class="ruby-identifier">empty?</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-scrollbarwidth">
+            
+              <b>scrollbarwidth</b>(width = nil)
+            
+            <a href="../../../classes/Tk/RbWidget/ScrollFrame.html#method-i-scrollbarwidth" name="method-i-scrollbarwidth" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>set width of scrollbar</p>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-scrollbarwidth_source')" id="l_method-i-scrollbarwidth_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/cfbdfc796ac58453ca548c7ba23540a181c42a03/ext/tk/sample/scrollframe.rb#L173" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-scrollbarwidth_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/sample/scrollframe.rb, line 173</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">scrollbarwidth</span>(<span class="ruby-identifier">width</span> = <span class="ruby-keyword">nil</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">width</span>
+    <span class="ruby-ivar">@h_scroll</span>.<span class="ruby-identifier">width</span>(<span class="ruby-identifier">width</span>)
+    <span class="ruby-ivar">@v_scroll</span>.<span class="ruby-identifier">width</span>(<span class="ruby-identifier">width</span>)
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-ivar">@h_scroll</span>.<span class="ruby-identifier">width</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-vscroll">
+            
+              <b>vscroll</b>(mode)
+            
+            <a href="../../../classes/Tk/RbWidget/ScrollFrame.html#method-i-vscroll" name="method-i-vscroll" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>vertical scrollbar : ON/OFF</p>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-vscroll_source')" id="l_method-i-vscroll_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/cfbdfc796ac58453ca548c7ba23540a181c42a03/ext/tk/sample/scrollframe.rb#L183" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-vscroll_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/sample/scrollframe.rb, line 183</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">vscroll</span>(<span class="ruby-identifier">mode</span>)
+  <span class="ruby-constant">Tk</span>.<span class="ruby-identifier">update_idletasks</span>
+  <span class="ruby-identifier">st</span> = <span class="ruby-constant">TkGrid</span>.<span class="ruby-identifier">info</span>(<span class="ruby-ivar">@v_scroll</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">mode</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">st</span>.<span class="ruby-identifier">size</span> <span class="ruby-operator">==</span> <span class="ruby-number">0</span> <span class="ruby-keyword">then</span>
+    <span class="ruby-ivar">@v_scroll</span>.<span class="ruby-identifier">grid</span>(<span class="ruby-string">&#39;row&#39;</span>=<span class="ruby-operator">&gt;</span><span class="ruby-number">0</span>, <span class="ruby-string">&#39;column&#39;</span>=<span class="ruby-operator">&gt;</span><span class="ruby-number">1</span>, <span class="ruby-string">&#39;sticky&#39;</span>=<span class="ruby-operator">&gt;</span><span class="ruby-string">&#39;ns&#39;</span>)
+    <span class="ruby-identifier">_reset_scrollregion</span>(<span class="ruby-keyword">nil</span>, <span class="ruby-keyword">true</span>)
+  <span class="ruby-keyword">elsif</span> <span class="ruby-operator">!</span><span class="ruby-identifier">mode</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">st</span>.<span class="ruby-identifier">size</span> <span class="ruby-operator">!=</span> <span class="ruby-number">0</span> <span class="ruby-keyword">then</span>
+    <span class="ruby-identifier">_reset_scrollregion</span>(<span class="ruby-keyword">nil</span>, <span class="ruby-keyword">false</span>)
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">_reset_scrollregion</span>(<span class="ruby-keyword">nil</span>, <span class="ruby-keyword">nil</span>)
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                    </div>
+
+    </div>
+  </body>
+</html>    

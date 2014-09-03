@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>Exports::Mswin</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="../../css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../../css/main.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../../css/github.css" type="text/css" media="screen" />
+<script src="../../js/jquery-1.3.2.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../js/jquery-effect.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../js/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+
+<body>     
+    <div class="banner">
+        
+        <h1>
+            <span class="type">Class</span> 
+            Exports::Mswin 
+            
+                <span class="parent">&lt; 
+                    
+                    <a href="../Exports.html">Exports</a>
+                    
+                </span>
+            
+        </h1>
+        <ul class="files">
+            
+            <li><a href="../../files/win32/mkexports_rb.html">win32/mkexports.rb</a></li>
+            
+        </ul>
+    </div>
+    <div id="bodyContent">
+        <div id="content">
+  
+
+
+  
+
+
+  
+  
+
+
+  
+
+
+  
+    <!-- Method ref -->
+    <div class="sectiontitle">Methods</div>
+    <dl class="methods">
+      
+        <dt>E</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-each_export">each_export</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-each_line">each_line</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+    </dl>
+  
+
+  
+
+
+
+  
+
+    
+
+    
+
+    
+
+
+    
+
+
+    <!-- Methods -->
+        
+      <div class="sectiontitle">Instance Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-i-each_export">
+            
+              <b>each_export</b>(objs)
+            
+            <a href="../../classes/Exports/Mswin.html#method-i-each_export" name="method-i-each_export" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-each_export_source')" id="l_method-i-each_export_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/4701a70b31fdb07f560822d79b1d1f0742a82afb/win32/mkexports.rb#L101" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-each_export_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File win32/mkexports.rb, line 101</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">each_export</span>(<span class="ruby-identifier">objs</span>)
+  <span class="ruby-identifier">noprefix</span> = (<span class="ruby-identifier">$arch</span> <span class="ruby-operator">||=</span> <span class="ruby-keyword">nil</span> <span class="ruby-keyword">and</span> <span class="ruby-regexp">/^(sh|i\d86)/</span> <span class="ruby-operator">!~</span> <span class="ruby-identifier">$arch</span>)
+  <span class="ruby-identifier">objs</span> = <span class="ruby-identifier">objs</span>.<span class="ruby-identifier">collect</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">s</span><span class="ruby-operator">|</span> <span class="ruby-identifier">s</span>.<span class="ruby-identifier">tr</span>(<span class="ruby-string">&#39;/&#39;</span>, <span class="ruby-string">&#39;\&#39;</span>)}
+  <span class="ruby-identifier">filetype</span> = <span class="ruby-keyword">nil</span>
+  <span class="ruby-identifier">objdump</span>(<span class="ruby-identifier">objs</span>) <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">l</span><span class="ruby-operator">|</span>
+    <span class="ruby-keyword">if</span> (<span class="ruby-identifier">filetype</span> = <span class="ruby-identifier">l</span>[<span class="ruby-regexp">/^File Type: (.+)/</span>, <span class="ruby-number">1</span>])<span class="ruby-operator">..</span>(<span class="ruby-regexp">/^\f/</span> <span class="ruby-operator">=~</span> <span class="ruby-identifier">l</span>)
+      <span class="ruby-keyword">case</span> <span class="ruby-identifier">filetype</span>
+      <span class="ruby-keyword">when</span> <span class="ruby-regexp">/OBJECT/</span>, <span class="ruby-regexp">/LIBRARY/</span>
+        <span class="ruby-keyword">next</span> <span class="ruby-keyword">if</span> <span class="ruby-regexp">/^[[:xdigit:]]+ 0+ UNDEF /</span> <span class="ruby-operator">=~</span> <span class="ruby-identifier">l</span>
+        <span class="ruby-keyword">next</span> <span class="ruby-keyword">unless</span> <span class="ruby-regexp">/External/</span> <span class="ruby-operator">=~</span> <span class="ruby-identifier">l</span>
+        <span class="ruby-keyword">next</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">l</span>.<span class="ruby-identifier">sub!</span>(<span class="ruby-regexp">/.*?\s(\(\)\s+)?External\s+\|\s+/</span>, <span class="ruby-string">&#39;&#39;</span>)
+        <span class="ruby-identifier">is_data</span> = <span class="ruby-operator">!</span><span class="ruby-node">$1</span>
+        <span class="ruby-keyword">if</span> <span class="ruby-identifier">noprefix</span> <span class="ruby-keyword">or</span> <span class="ruby-regexp">/^[@_]/</span> <span class="ruby-operator">=~</span> <span class="ruby-identifier">l</span>
+          <span class="ruby-keyword">next</span> <span class="ruby-keyword">if</span> <span class="ruby-regexp">/(?!^)@.*@/</span> <span class="ruby-operator">=~</span> <span class="ruby-identifier">l</span> <span class="ruby-operator">||</span> <span class="ruby-regexp">/@[[:xdigit:]]{8,32}$/</span> <span class="ruby-operator">=~</span> <span class="ruby-identifier">l</span> <span class="ruby-operator">||</span>
+            <span class="ruby-regexp">/^_?(?:Init_|.*_threadptr_|DllMain\b)/</span> <span class="ruby-operator">=~</span> <span class="ruby-identifier">l</span>
+          <span class="ruby-identifier">l</span>.<span class="ruby-identifier">sub!</span>(<span class="ruby-regexp">/^[@_]/</span>, <span class="ruby-string">&#39;&#39;</span>) <span class="ruby-keyword">if</span> <span class="ruby-regexp">/@\d+$/</span> <span class="ruby-operator">!~</span> <span class="ruby-identifier">l</span>
+        <span class="ruby-keyword">elsif</span> <span class="ruby-operator">!</span><span class="ruby-identifier">l</span>.<span class="ruby-identifier">sub!</span>(<span class="ruby-regexp">/^(\S+) \([^@?\`\]*\)$/</span>, <span class="ruby-string">&#39;\1&#39;</span>)
+          <span class="ruby-keyword">next</span>
+        <span class="ruby-keyword">end</span>
+      <span class="ruby-keyword">when</span> <span class="ruby-regexp">/DLL/</span>
+        <span class="ruby-keyword">next</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">l</span>.<span class="ruby-identifier">sub!</span>(<span class="ruby-regexp">/^\s*\d+\s+[[:xdigit:]]+\s+[[:xdigit:]]+\s+/</span>, <span class="ruby-string">&#39;&#39;</span>)
+      <span class="ruby-keyword">else</span>
+        <span class="ruby-keyword">next</span>
+      <span class="ruby-keyword">end</span>
+      <span class="ruby-keyword">yield</span> <span class="ruby-identifier">l</span>.<span class="ruby-identifier">strip</span>, <span class="ruby-identifier">is_data</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">yield</span> <span class="ruby-string">&quot;strcasecmp&quot;</span>, <span class="ruby-string">&quot;msvcrt.stricmp&quot;</span>
+  <span class="ruby-keyword">yield</span> <span class="ruby-string">&quot;strncasecmp&quot;</span>, <span class="ruby-string">&quot;msvcrt.strnicmp&quot;</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-each_line">
+            
+              <b>each_line</b>(objs, &amp;block)
+            
+            <a href="../../classes/Exports/Mswin.html#method-i-each_line" name="method-i-each_line" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-each_line_source')" id="l_method-i-each_line_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/4701a70b31fdb07f560822d79b1d1f0742a82afb/win32/mkexports.rb#L95" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-each_line_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File win32/mkexports.rb, line 95</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">each_line</span>(<span class="ruby-identifier">objs</span>, <span class="ruby-operator">&amp;</span><span class="ruby-identifier">block</span>)
+  <span class="ruby-constant">IO</span>.<span class="ruby-identifier">popen</span>(<span class="ruby-node">%wdumpbin -symbols -exports&quot;</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">objs</span>) <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">f</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">f</span>.<span class="ruby-identifier">each</span>(<span class="ruby-operator">&amp;</span><span class="ruby-identifier">block</span>)
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                    </div>
+
+    </div>
+  </body>
+</html>    

@@ -1,0 +1,397 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>Tk::ItemValidateConfigure</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="../../css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../../css/main.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../../css/github.css" type="text/css" media="screen" />
+<script src="../../js/jquery-1.3.2.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../js/jquery-effect.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../js/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+
+<body>     
+    <div class="banner">
+        
+        <h1>
+            <span class="type">Module</span> 
+            Tk::ItemValidateConfigure 
+            
+        </h1>
+        <ul class="files">
+            
+            <li><a href="../../files/ext/tk/lib/tk/validation_rb.html">ext/tk/lib/tk/validation.rb</a></li>
+            
+        </ul>
+    </div>
+    <div id="bodyContent">
+        <div id="content">
+  
+
+
+  
+
+
+  
+  
+
+
+  
+
+
+  
+    <!-- Method ref -->
+    <div class="sectiontitle">Methods</div>
+    <dl class="methods">
+      
+        <dt>#</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-__conv_item_vcmd_on_hash_kv">__conv_item_vcmd_on_hash_kv</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-c-__def_validcmd">__def_validcmd</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-__get_item_validate_key2class">__get_item_validate_key2class</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-__item_validation_class_list">__item_validation_class_list</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-__item_validcmd_call">__item_validcmd_call</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>I</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-itemconfigure">itemconfigure</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+    </dl>
+  
+
+  
+
+
+
+  
+
+    
+
+    
+
+    
+
+
+    
+
+
+    <!-- Methods -->
+    
+      <div class="sectiontitle">Class Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-c-__def_validcmd">
+            
+              <b>__def_validcmd</b>(scope, klass, keys=nil)
+            
+            <a href="../../classes/Tk/ItemValidateConfigure.html#method-c-__def_validcmd" name="method-c-__def_validcmd" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-__def_validcmd_source')" id="l_method-c-__def_validcmd_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/287a34ae0dfc23e4158f67cb7783d239f202c368/ext/tk/lib/tk/validation.rb#L111" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-__def_validcmd_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tk/validation.rb, line 111</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">__def_validcmd</span>(<span class="ruby-identifier">scope</span>, <span class="ruby-identifier">klass</span>, <span class="ruby-identifier">keys</span>=<span class="ruby-keyword">nil</span>)
+  <span class="ruby-identifier">keys</span> = <span class="ruby-identifier">klass</span>.<span class="ruby-identifier">_config_keys</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">keys</span>
+  <span class="ruby-identifier">keys</span>.<span class="ruby-identifier">each</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">key</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">eval</span>(<span class="ruby-node">&quot;def item_#{key}(id, *args, &amp;b)
+             __item_validcmd_call(#{klass.name}, &#39;#{key}&#39;, id, *args, &amp;b)
+          end&quot;</span>, <span class="ruby-identifier">scope</span>)
+  }
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                  
+      <div class="sectiontitle">Instance Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-i-__conv_item_vcmd_on_hash_kv">
+            
+              <b>__conv_item_vcmd_on_hash_kv</b>(keys)
+            
+            <a href="../../classes/Tk/ItemValidateConfigure.html#method-i-__conv_item_vcmd_on_hash_kv" name="method-i-__conv_item_vcmd_on_hash_kv" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-__conv_item_vcmd_on_hash_kv_source')" id="l_method-i-__conv_item_vcmd_on_hash_kv_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/287a34ae0dfc23e4158f67cb7783d239f202c368/ext/tk/lib/tk/validation.rb#L148" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-__conv_item_vcmd_on_hash_kv_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tk/validation.rb, line 148</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">__conv_item_vcmd_on_hash_kv</span>(<span class="ruby-identifier">keys</span>)
+  <span class="ruby-identifier">key2class</span> = <span class="ruby-identifier">__get_item_validate_key2class</span>(<span class="ruby-identifier">tagid</span>(<span class="ruby-identifier">tagOrId</span>))
+
+  <span class="ruby-identifier">keys</span> = <span class="ruby-identifier">_symbolkey2str</span>(<span class="ruby-identifier">keys</span>)
+  <span class="ruby-identifier">key2class</span>.<span class="ruby-identifier">each</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">key</span>, <span class="ruby-identifier">klass</span><span class="ruby-operator">|</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">keys</span>[<span class="ruby-identifier">key</span>].<span class="ruby-identifier">kind_of?</span>(<span class="ruby-constant">Array</span>)
+      <span class="ruby-identifier">cmd</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">args</span> = <span class="ruby-identifier">keys</span>[<span class="ruby-identifier">key</span>]
+      <span class="ruby-comment">#keys[key] = klass.new(cmd, args.join(&#39; &#39;))</span>
+      <span class="ruby-identifier">keys</span>[<span class="ruby-identifier">key</span>] = <span class="ruby-identifier">klass</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">cmd</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">args</span>)
+    <span class="ruby-comment"># elsif keys[key].kind_of?(Proc) || keys[key].kind_of?(Method)</span>
+    <span class="ruby-keyword">elsif</span> <span class="ruby-constant">TkComm</span>.<span class="ruby-identifier">_callback_entry?</span>(<span class="ruby-identifier">keys</span>[<span class="ruby-identifier">key</span>])
+      <span class="ruby-identifier">keys</span>[<span class="ruby-identifier">key</span>] = <span class="ruby-identifier">klass</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">keys</span>[<span class="ruby-identifier">key</span>])
+    <span class="ruby-keyword">end</span>
+  }
+  <span class="ruby-identifier">keys</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-__get_item_validate_key2class">
+            
+              <b>__get_item_validate_key2class</b>(id)
+            
+            <a href="../../classes/Tk/ItemValidateConfigure.html#method-i-__get_item_validate_key2class" name="method-i-__get_item_validate_key2class" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-__get_item_validate_key2class_source')" id="l_method-i-__get_item_validate_key2class_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/287a34ae0dfc23e4158f67cb7783d239f202c368/ext/tk/lib/tk/validation.rb#L139" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-__get_item_validate_key2class_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tk/validation.rb, line 139</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">__get_item_validate_key2class</span>(<span class="ruby-identifier">id</span>)
+  <span class="ruby-identifier">k2c</span> = {}
+  <span class="ruby-identifier">__item_validation_class_list</span>(<span class="ruby-identifier">id</span>).<span class="ruby-identifier">each</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">klass</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">klass</span>.<span class="ruby-identifier">_config_keys</span>.<span class="ruby-identifier">each</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">key</span><span class="ruby-operator">|</span>
+      <span class="ruby-identifier">k2c</span>[<span class="ruby-identifier">key</span>.<span class="ruby-identifier">to_s</span>] = <span class="ruby-identifier">klass</span>
+    }
+  }
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-__item_validation_class_list">
+            
+              <b>__item_validation_class_list</b>(id)
+            
+            <a href="../../classes/Tk/ItemValidateConfigure.html#method-i-__item_validation_class_list" name="method-i-__item_validation_class_list" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-__item_validation_class_list_source')" id="l_method-i-__item_validation_class_list_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/287a34ae0dfc23e4158f67cb7783d239f202c368/ext/tk/lib/tk/validation.rb#L134" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-__item_validation_class_list_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tk/validation.rb, line 134</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">__item_validation_class_list</span>(<span class="ruby-identifier">id</span>)
+  <span class="ruby-comment"># maybe need to override</span>
+  []
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-__item_validcmd_call">
+            
+              <b>__item_validcmd_call</b>(tagOrId, klass, key, *args, &amp;b)
+            
+            <a href="../../classes/Tk/ItemValidateConfigure.html#method-i-__item_validcmd_call" name="method-i-__item_validcmd_call" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-__item_validcmd_call_source')" id="l_method-i-__item_validcmd_call_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/287a34ae0dfc23e4158f67cb7783d239f202c368/ext/tk/lib/tk/validation.rb#L120" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-__item_validcmd_call_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tk/validation.rb, line 120</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">__item_validcmd_call</span>(<span class="ruby-identifier">tagOrId</span>, <span class="ruby-identifier">klass</span>, <span class="ruby-identifier">key</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">args</span>, <span class="ruby-operator">&amp;</span><span class="ruby-identifier">b</span>)
+  <span class="ruby-keyword">return</span> <span class="ruby-identifier">itemcget</span>(<span class="ruby-identifier">tagid</span>(<span class="ruby-identifier">tagOrId</span>), <span class="ruby-identifier">key</span>) <span class="ruby-keyword">if</span> <span class="ruby-identifier">args</span>.<span class="ruby-identifier">empty?</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-operator">!</span><span class="ruby-identifier">b</span>
+
+  <span class="ruby-identifier">cmd</span> = (<span class="ruby-identifier">b</span>)<span class="ruby-operator">?</span> <span class="ruby-identifier">proc</span>(<span class="ruby-operator">&amp;</span><span class="ruby-identifier">b</span>) <span class="ruby-operator">:</span> <span class="ruby-identifier">args</span>.<span class="ruby-identifier">shift</span>
+
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">cmd</span>.<span class="ruby-identifier">kind_of?</span>(<span class="ruby-identifier">klass</span>)
+    <span class="ruby-identifier">itemconfigure</span>(<span class="ruby-identifier">tagid</span>(<span class="ruby-identifier">tagOrId</span>), <span class="ruby-identifier">key</span>, <span class="ruby-identifier">cmd</span>)
+  <span class="ruby-keyword">elsif</span> <span class="ruby-operator">!</span><span class="ruby-identifier">args</span>.<span class="ruby-identifier">empty?</span>
+    <span class="ruby-identifier">itemconfigure</span>(<span class="ruby-identifier">tagid</span>(<span class="ruby-identifier">tagOrId</span>), <span class="ruby-identifier">key</span>, [<span class="ruby-identifier">cmd</span>, <span class="ruby-identifier">args</span>])
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">itemconfigure</span>(<span class="ruby-identifier">tagid</span>(<span class="ruby-identifier">tagOrId</span>), <span class="ruby-identifier">key</span>, <span class="ruby-identifier">cmd</span>)
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-itemconfigure">
+            
+              <b>itemconfigure</b>(tagOrId, slot, value=TkComm::None)
+            
+            <a href="../../classes/Tk/ItemValidateConfigure.html#method-i-itemconfigure" name="method-i-itemconfigure" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-itemconfigure_source')" id="l_method-i-itemconfigure_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/287a34ae0dfc23e4158f67cb7783d239f202c368/ext/tk/lib/tk/validation.rb#L165" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-itemconfigure_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tk/validation.rb, line 165</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">itemconfigure</span>(<span class="ruby-identifier">tagOrId</span>, <span class="ruby-identifier">slot</span>, <span class="ruby-identifier">value</span>=<span class="ruby-constant">TkComm</span><span class="ruby-operator">::</span><span class="ruby-constant">None</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">slot</span>.<span class="ruby-identifier">kind_of?</span>(<span class="ruby-constant">Hash</span>)
+    <span class="ruby-keyword">super</span>(<span class="ruby-identifier">__conv_item_vcmd_on_hash_kv</span>(<span class="ruby-identifier">slot</span>))
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-keyword">super</span>(<span class="ruby-identifier">__conv_item_vcmd_on_hash_kv</span>(<span class="ruby-identifier">slot</span>=<span class="ruby-operator">&gt;</span><span class="ruby-identifier">value</span>))
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                    </div>
+
+    </div>
+  </body>
+</html>    

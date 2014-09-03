@@ -1,0 +1,2313 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>Tk::BLT::Tree::Node</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="../../../../css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../../../../css/main.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../../../../css/github.css" type="text/css" media="screen" />
+<script src="../../../../js/jquery-1.3.2.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../../../js/jquery-effect.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../../../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../../../js/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+
+<body>     
+    <div class="banner">
+        
+        <h1>
+            <span class="type">Class</span> 
+            Tk::BLT::Tree::Node 
+            
+                <span class="parent">&lt; 
+                    
+                    <a href="../../../TkObject.html">TkObject</a>
+                    
+                </span>
+            
+        </h1>
+        <ul class="files">
+            
+            <li><a href="../../../../files/ext/tk/lib/tkextlib/blt/tree_rb.html">ext/tk/lib/tkextlib/blt/tree.rb</a></li>
+            
+        </ul>
+    </div>
+    <div id="bodyContent">
+        <div id="content">
+  
+
+
+  
+
+
+  
+  
+
+
+  
+
+
+  
+    <!-- Method ref -->
+    <div class="sectiontitle">Methods</div>
+    <dl class="methods">
+      
+        <dt>A</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-apply">apply</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>C</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-children">children</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-copy">copy</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-copy_to">copy_to</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>D</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-degree">degree</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-delete">delete</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-depth">depth</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-dump">dump</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-dump_to_file">dump_to_file</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>E</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-exist-3F">exist?</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>F</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-find">find</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-find_child">find_child</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-first_child">first_child</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-fullpath">fullpath</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>G</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-get">get</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-get_value">get_value</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>I</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-id">id</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-c-id2obj">id2obj</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-index">index</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>K</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-keys">keys</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>L</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-label">label</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-label-3D">label=</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-last_child">last_child</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-leaf-3F">leaf?</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-link-3F">link?</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>M</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-move">move</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>N</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-new">new</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-c-new">new</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-next">next</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-next_sibling">next_sibling</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>P</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-parent">parent</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-position">position</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-prev_sibling">prev_sibling</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-previous">previous</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>R</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-restore">restore</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-restore_from_file">restore_from_file</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-restore_overwrite">restore_overwrite</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-restore_overwrite_from_file">restore_overwrite_from_file</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-root">root</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-root-3F">root?</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>S</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-set">set</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-size">size</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-sort">sort</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>T</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-type">type</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>U</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-unset">unset</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>V</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-values">values</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+    </dl>
+  
+
+  
+
+
+
+  
+
+    
+
+    
+
+    
+      <!-- Section constants -->
+      <div class="sectiontitle">Constants</div>
+      <table border='0' cellpadding='5'>
+        
+          <tr valign='top'>
+            <td class="attr-name">TreeNodeID_TBL</td>
+            <td>=</td>
+            <td class="attr-value">TkCore::INTERP.create_table</td>
+          </tr>
+          
+            <tr valign='top'>
+              <td>&nbsp;</td>
+              <td colspan="2" class="attr-desc"></td>
+            </tr>
+          
+        
+      </table>
+    
+
+
+    
+
+
+    <!-- Methods -->
+    
+      <div class="sectiontitle">Class Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-c-id2obj">
+            
+              <b>id2obj</b>(tree, id)
+            
+            <a href="../../../../classes/Tk/BLT/Tree/Node.html#method-c-id2obj" name="method-c-id2obj" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-id2obj_source')" id="l_method-c-id2obj_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/blt/tree.rb#L22" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-id2obj_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/blt/tree.rb, line 22</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">id2obj</span>(<span class="ruby-identifier">tree</span>, <span class="ruby-identifier">id</span>)
+  <span class="ruby-identifier">tpath</span> = <span class="ruby-identifier">tree</span>.<span class="ruby-identifier">path</span>
+  <span class="ruby-constant">TreeNodeID_TBL</span>.<span class="ruby-identifier">mutex</span>.<span class="ruby-identifier">synchronize</span>{
+    <span class="ruby-keyword">if</span> <span class="ruby-constant">TreeNodeID_TBL</span>[<span class="ruby-identifier">tpath</span>]
+      <span class="ruby-keyword">if</span> <span class="ruby-constant">TreeNodeID_TBL</span>[<span class="ruby-identifier">tpath</span>][<span class="ruby-identifier">id</span>]
+        <span class="ruby-constant">TreeNodeID_TBL</span>[<span class="ruby-identifier">tpath</span>][<span class="ruby-identifier">id</span>]
+      <span class="ruby-keyword">else</span>
+        <span class="ruby-keyword">begin</span>
+          <span class="ruby-comment"># self.new(tree, nil, &#39;node&#39;=&gt;Integer(id))</span>
+          <span class="ruby-identifier">id</span> = <span class="ruby-constant">Integer</span>(<span class="ruby-identifier">id</span>)
+          <span class="ruby-keyword">if</span> <span class="ruby-identifier">bool</span>(<span class="ruby-identifier">tk_call</span>(<span class="ruby-ivar">@tpath</span>, <span class="ruby-string">&#39;exists&#39;</span>, <span class="ruby-identifier">id</span>))
+            (<span class="ruby-identifier">obj</span> = <span class="ruby-keyword">self</span>.<span class="ruby-identifier">allocate</span>).<span class="ruby-identifier">instance_eval</span>{
+              <span class="ruby-ivar">@parent</span> = <span class="ruby-ivar">@tree</span> = <span class="ruby-identifier">tree</span>
+              <span class="ruby-ivar">@tpath</span> = <span class="ruby-identifier">tpath</span>
+              <span class="ruby-ivar">@path</span> = <span class="ruby-ivar">@id</span> = <span class="ruby-identifier">id</span>
+              <span class="ruby-constant">TreeNodeID_TBL</span>[<span class="ruby-ivar">@tpath</span>] = {} <span class="ruby-keyword">unless</span> <span class="ruby-constant">TreeNodeID_TBL</span>[<span class="ruby-ivar">@tpath</span>]
+              <span class="ruby-constant">TreeNodeID_TBL</span>[<span class="ruby-ivar">@tpath</span>][<span class="ruby-ivar">@id</span>] = <span class="ruby-keyword">self</span>
+            }
+            <span class="ruby-identifier">obj</span>
+          <span class="ruby-keyword">else</span>
+            <span class="ruby-identifier">id</span>
+          <span class="ruby-keyword">end</span>
+        <span class="ruby-keyword">rescue</span>
+          <span class="ruby-identifier">id</span>
+        <span class="ruby-keyword">end</span>
+      <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">else</span>
+      <span class="ruby-identifier">id</span>
+    <span class="ruby-keyword">end</span>
+  }
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-new">
+            
+              <b>new</b>(tree, parent, keys={})
+            
+            <a href="../../../../classes/Tk/BLT/Tree/Node.html#method-c-new" name="method-c-new" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-new_source')" id="l_method-c-new_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/blt/tree.rb#L54" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-new_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/blt/tree.rb, line 54</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">tree</span>, <span class="ruby-identifier">parent</span>, <span class="ruby-identifier">keys</span>={})
+  <span class="ruby-identifier">keys</span> = <span class="ruby-identifier">_symbolkey2str</span>(<span class="ruby-identifier">keys</span>)
+  <span class="ruby-identifier">tpath</span> = <span class="ruby-identifier">tree</span>.<span class="ruby-identifier">path</span>
+
+  <span class="ruby-constant">TreeNodeID_TBL</span>.<span class="ruby-identifier">mutex</span>.<span class="ruby-identifier">synchronize</span>{
+    <span class="ruby-constant">TreeNodeID_TBL</span>[<span class="ruby-identifier">tpath</span>] <span class="ruby-operator">||=</span> {}
+    <span class="ruby-keyword">if</span> (<span class="ruby-identifier">id</span> = <span class="ruby-identifier">keys</span>[<span class="ruby-string">&#39;node&#39;</span>]) <span class="ruby-operator">&amp;&amp;</span> (<span class="ruby-identifier">obj</span> = <span class="ruby-constant">TreeNodeID_TBL</span>[<span class="ruby-identifier">tpath</span>][<span class="ruby-identifier">id</span>])
+      <span class="ruby-identifier">keys</span>.<span class="ruby-identifier">delete</span>(<span class="ruby-string">&#39;node&#39;</span>)
+      <span class="ruby-identifier">tk_call</span>(<span class="ruby-identifier">tree</span>.<span class="ruby-identifier">path</span>, <span class="ruby-string">&#39;move&#39;</span>, <span class="ruby-identifier">id</span>, <span class="ruby-identifier">parent</span>, <span class="ruby-identifier">keys</span>) <span class="ruby-keyword">if</span> <span class="ruby-identifier">parent</span>
+      <span class="ruby-keyword">return</span> <span class="ruby-identifier">obj</span>
+    <span class="ruby-keyword">end</span>
+
+    (<span class="ruby-identifier">obj</span> = <span class="ruby-keyword">self</span>.<span class="ruby-identifier">allocate</span>).<span class="ruby-identifier">instance_eval</span>{
+      <span class="ruby-identifier">initialize</span>(<span class="ruby-identifier">tree</span>, <span class="ruby-identifier">parent</span>, <span class="ruby-identifier">keys</span>)
+      <span class="ruby-constant">TreeNodeID_TBL</span>[<span class="ruby-identifier">tpath</span>][<span class="ruby-ivar">@id</span>] = <span class="ruby-keyword">self</span>
+    }
+    <span class="ruby-identifier">obj</span>
+  }
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-new">
+            
+              <b>new</b>(tree, parent, keys={})
+            
+            <a href="../../../../classes/Tk/BLT/Tree/Node.html#method-c-new" name="method-c-new" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-new_source')" id="l_method-c-new_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/blt/tree.rb#L74" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-new_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/blt/tree.rb, line 74</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">initialize</span>(<span class="ruby-identifier">tree</span>, <span class="ruby-identifier">parent</span>, <span class="ruby-identifier">keys</span>={})
+  <span class="ruby-ivar">@parent</span> = <span class="ruby-ivar">@tree</span> = <span class="ruby-identifier">tree</span>
+  <span class="ruby-ivar">@tpath</span> = <span class="ruby-ivar">@parent</span>.<span class="ruby-identifier">path</span>
+
+  <span class="ruby-keyword">if</span> (<span class="ruby-identifier">id</span> = <span class="ruby-identifier">keys</span>[<span class="ruby-string">&#39;node&#39;</span>]) <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">bool</span>(<span class="ruby-identifier">tk_call</span>(<span class="ruby-ivar">@tpath</span>, <span class="ruby-string">&#39;exists&#39;</span>, <span class="ruby-identifier">id</span>))
+    <span class="ruby-ivar">@path</span> = <span class="ruby-ivar">@id</span> = <span class="ruby-identifier">id</span>
+    <span class="ruby-identifier">keys</span>.<span class="ruby-identifier">delete</span>(<span class="ruby-string">&#39;node&#39;</span>)
+    <span class="ruby-identifier">tk_call</span>(<span class="ruby-ivar">@tpath</span>, <span class="ruby-string">&#39;move&#39;</span>, <span class="ruby-ivar">@id</span>, <span class="ruby-identifier">parent</span>, <span class="ruby-identifier">keys</span>) <span class="ruby-keyword">if</span> <span class="ruby-identifier">parent</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">parent</span> = <span class="ruby-identifier">tk_call</span>(<span class="ruby-ivar">@tpath</span>, <span class="ruby-string">&#39;root&#39;</span>) <span class="ruby-keyword">unless</span> <span class="ruby-identifier">parent</span>
+    <span class="ruby-ivar">@path</span> = <span class="ruby-ivar">@id</span> = <span class="ruby-identifier">tk_call</span>(<span class="ruby-ivar">@tpath</span>, <span class="ruby-string">&#39;insert&#39;</span>, <span class="ruby-identifier">parent</span>, <span class="ruby-identifier">keys</span>)
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                  
+      <div class="sectiontitle">Instance Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-i-apply">
+            
+              <b>apply</b>(keys={})
+            
+            <a href="../../../../classes/Tk/BLT/Tree/Node.html#method-i-apply" name="method-i-apply" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-apply_source')" id="l_method-i-apply_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/blt/tree.rb#L92" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-apply_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/blt/tree.rb, line 92</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">apply</span>(<span class="ruby-identifier">keys</span>={})
+  <span class="ruby-ivar">@tree</span>.<span class="ruby-identifier">apply</span>(<span class="ruby-ivar">@id</span>, <span class="ruby-identifier">keys</span>)
+  <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-children">
+            
+              <b>children</b>()
+            
+            <a href="../../../../classes/Tk/BLT/Tree/Node.html#method-i-children" name="method-i-children" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-children_source')" id="l_method-i-children_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/blt/tree.rb#L97" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-children_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/blt/tree.rb, line 97</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">children</span>()
+  <span class="ruby-ivar">@tree</span>.<span class="ruby-identifier">children</span>(<span class="ruby-ivar">@id</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-copy">
+            
+              <b>copy</b>(parent, keys={})
+            
+            <a href="../../../../classes/Tk/BLT/Tree/Node.html#method-i-copy" name="method-i-copy" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-copy_source')" id="l_method-i-copy_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/blt/tree.rb#L101" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-copy_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/blt/tree.rb, line 101</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">copy</span>(<span class="ruby-identifier">parent</span>, <span class="ruby-identifier">keys</span>={})
+  <span class="ruby-ivar">@tree</span>.<span class="ruby-identifier">copy</span>(<span class="ruby-ivar">@id</span>, <span class="ruby-identifier">parent</span>, <span class="ruby-identifier">keys</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-copy_to">
+            
+              <b>copy_to</b>(dest_tree, parent, keys={})
+            
+            <a href="../../../../classes/Tk/BLT/Tree/Node.html#method-i-copy_to" name="method-i-copy_to" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-copy_to_source')" id="l_method-i-copy_to_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/blt/tree.rb#L104" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-copy_to_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/blt/tree.rb, line 104</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">copy_to</span>(<span class="ruby-identifier">dest_tree</span>, <span class="ruby-identifier">parent</span>, <span class="ruby-identifier">keys</span>={})
+  <span class="ruby-ivar">@tree</span>.<span class="ruby-identifier">copy_to</span>(<span class="ruby-ivar">@id</span>, <span class="ruby-identifier">dest_tree</span>, <span class="ruby-identifier">parent</span>, <span class="ruby-identifier">keys</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-degree">
+            
+              <b>degree</b>()
+            
+            <a href="../../../../classes/Tk/BLT/Tree/Node.html#method-i-degree" name="method-i-degree" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-degree_source')" id="l_method-i-degree_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/blt/tree.rb#L108" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-degree_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/blt/tree.rb, line 108</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">degree</span>()
+  <span class="ruby-ivar">@tree</span>.<span class="ruby-identifier">degree</span>(<span class="ruby-ivar">@id</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-delete">
+            
+              <b>delete</b>()
+            
+            <a href="../../../../classes/Tk/BLT/Tree/Node.html#method-i-delete" name="method-i-delete" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-delete_source')" id="l_method-i-delete_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/blt/tree.rb#L112" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-delete_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/blt/tree.rb, line 112</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">delete</span>()
+  <span class="ruby-ivar">@tree</span>.<span class="ruby-identifier">delete</span>(<span class="ruby-ivar">@id</span>)
+  <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-depth">
+            
+              <b>depth</b>()
+            
+            <a href="../../../../classes/Tk/BLT/Tree/Node.html#method-i-depth" name="method-i-depth" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-depth_source')" id="l_method-i-depth_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/blt/tree.rb#L117" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-depth_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/blt/tree.rb, line 117</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">depth</span>()
+  <span class="ruby-ivar">@tree</span>.<span class="ruby-identifier">depth</span>(<span class="ruby-ivar">@id</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-dump">
+            
+              <b>dump</b>()
+            
+            <a href="../../../../classes/Tk/BLT/Tree/Node.html#method-i-dump" name="method-i-dump" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-dump_source')" id="l_method-i-dump_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/blt/tree.rb#L121" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-dump_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/blt/tree.rb, line 121</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">dump</span>()
+  <span class="ruby-ivar">@tree</span>.<span class="ruby-identifier">dump</span>(<span class="ruby-ivar">@id</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-dump_to_file">
+            
+              <b>dump_to_file</b>(file)
+            
+            <a href="../../../../classes/Tk/BLT/Tree/Node.html#method-i-dump_to_file" name="method-i-dump_to_file" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-dump_to_file_source')" id="l_method-i-dump_to_file_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/blt/tree.rb#L125" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-dump_to_file_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/blt/tree.rb, line 125</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">dump_to_file</span>(<span class="ruby-identifier">file</span>)
+  <span class="ruby-ivar">@tree</span>.<span class="ruby-identifier">dump_to_file</span>(<span class="ruby-ivar">@id</span>, <span class="ruby-identifier">file</span>)
+  <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-exist-3F">
+            
+              <b>exist?</b>(keys={})
+            
+            <a href="../../../../classes/Tk/BLT/Tree/Node.html#method-i-exist-3F" name="method-i-exist-3F" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-exist-3F_source')" id="l_method-i-exist-3F_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/blt/tree.rb#L130" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-exist-3F_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/blt/tree.rb, line 130</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">exist?</span>(<span class="ruby-identifier">keys</span>={})
+  <span class="ruby-ivar">@tree</span>.<span class="ruby-identifier">exist?</span>(<span class="ruby-ivar">@id</span>, <span class="ruby-identifier">keys</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-find">
+            
+              <b>find</b>(keys={})
+            
+            <a href="../../../../classes/Tk/BLT/Tree/Node.html#method-i-find" name="method-i-find" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-find_source')" id="l_method-i-find_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/blt/tree.rb#L134" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-find_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/blt/tree.rb, line 134</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">find</span>(<span class="ruby-identifier">keys</span>={})
+  <span class="ruby-ivar">@tree</span>.<span class="ruby-identifier">find</span>(<span class="ruby-ivar">@id</span>, <span class="ruby-identifier">keys</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-find_child">
+            
+              <b>find_child</b>(label)
+            
+            <a href="../../../../classes/Tk/BLT/Tree/Node.html#method-i-find_child" name="method-i-find_child" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-find_child_source')" id="l_method-i-find_child_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/blt/tree.rb#L138" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-find_child_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/blt/tree.rb, line 138</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">find_child</span>(<span class="ruby-identifier">label</span>)
+  <span class="ruby-ivar">@tree</span>.<span class="ruby-identifier">find_child</span>(<span class="ruby-ivar">@id</span>, <span class="ruby-identifier">label</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-first_child">
+            
+              <b>first_child</b>()
+            
+            <a href="../../../../classes/Tk/BLT/Tree/Node.html#method-i-first_child" name="method-i-first_child" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-first_child_source')" id="l_method-i-first_child_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/blt/tree.rb#L142" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-first_child_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/blt/tree.rb, line 142</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">first_child</span>()
+  <span class="ruby-ivar">@tree</span>.<span class="ruby-identifier">first_child</span>(<span class="ruby-ivar">@id</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-fullpath">
+            
+              <b>fullpath</b>()
+            
+            <a href="../../../../classes/Tk/BLT/Tree/Node.html#method-i-fullpath" name="method-i-fullpath" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-fullpath_source')" id="l_method-i-fullpath_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/blt/tree.rb#L199" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-fullpath_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/blt/tree.rb, line 199</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">fullpath</span>()
+  <span class="ruby-ivar">@tree</span>.<span class="ruby-identifier">fullpath</span>(<span class="ruby-ivar">@id</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-get">
+            
+              <b>get</b>()
+            
+            <a href="../../../../classes/Tk/BLT/Tree/Node.html#method-i-get" name="method-i-get" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-get_source')" id="l_method-i-get_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/blt/tree.rb#L146" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-get_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/blt/tree.rb, line 146</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">get</span>()
+  <span class="ruby-ivar">@tree</span>.<span class="ruby-identifier">get</span>(<span class="ruby-ivar">@id</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-get_value">
+            
+              <b>get_value</b>(key, default_val=None)
+            
+            <a href="../../../../classes/Tk/BLT/Tree/Node.html#method-i-get_value" name="method-i-get_value" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-get_value_source')" id="l_method-i-get_value_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/blt/tree.rb#L149" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-get_value_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/blt/tree.rb, line 149</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">get_value</span>(<span class="ruby-identifier">key</span>, <span class="ruby-identifier">default_val</span>=<span class="ruby-constant">None</span>)
+  <span class="ruby-ivar">@tree</span>.<span class="ruby-identifier">get_value</span>(<span class="ruby-ivar">@id</span>, <span class="ruby-identifier">key</span>, <span class="ruby-identifier">default_val</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-id">
+            
+              <b>id</b>()
+            
+            <a href="../../../../classes/Tk/BLT/Tree/Node.html#method-i-id" name="method-i-id" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-id_source')" id="l_method-i-id_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/blt/tree.rb#L88" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-id_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/blt/tree.rb, line 88</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">id</span>
+  <span class="ruby-ivar">@id</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-index">
+            
+              <b>index</b>()
+            
+            <a href="../../../../classes/Tk/BLT/Tree/Node.html#method-i-index" name="method-i-index" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-index_source')" id="l_method-i-index_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/blt/tree.rb#L153" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-index_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/blt/tree.rb, line 153</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">index</span>()
+  <span class="ruby-ivar">@tree</span>.<span class="ruby-identifier">index</span>(<span class="ruby-ivar">@id</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-keys">
+            
+              <b>keys</b>()
+            
+            <a href="../../../../classes/Tk/BLT/Tree/Node.html#method-i-keys" name="method-i-keys" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-keys_source')" id="l_method-i-keys_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/blt/tree.rb#L167" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-keys_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/blt/tree.rb, line 167</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">keys</span>()
+  <span class="ruby-ivar">@tree</span>.<span class="ruby-identifier">keys</span>(<span class="ruby-ivar">@id</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-label">
+            
+              <b>label</b>(text = nil)
+            
+            <a href="../../../../classes/Tk/BLT/Tree/Node.html#method-i-label" name="method-i-label" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-label_source')" id="l_method-i-label_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/blt/tree.rb#L171" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-label_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/blt/tree.rb, line 171</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">label</span>(<span class="ruby-identifier">text</span> = <span class="ruby-keyword">nil</span>)
+  <span class="ruby-ivar">@tree</span>.<span class="ruby-identifier">label</span>(<span class="ruby-ivar">@id</span>, <span class="ruby-keyword">nil</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-label-3D">
+            
+              <b>label=</b>(text)
+            
+            <a href="../../../../classes/Tk/BLT/Tree/Node.html#method-i-label-3D" name="method-i-label-3D" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-label-3D_source')" id="l_method-i-label-3D_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/blt/tree.rb#L174" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-label-3D_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/blt/tree.rb, line 174</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">label=</span>(<span class="ruby-identifier">text</span>)
+  <span class="ruby-ivar">@tree</span>.<span class="ruby-identifier">label</span>(<span class="ruby-ivar">@id</span>, <span class="ruby-identifier">text</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-last_child">
+            
+              <b>last_child</b>()
+            
+            <a href="../../../../classes/Tk/BLT/Tree/Node.html#method-i-last_child" name="method-i-last_child" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-last_child_source')" id="l_method-i-last_child_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/blt/tree.rb#L178" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-last_child_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/blt/tree.rb, line 178</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">last_child</span>()
+  <span class="ruby-ivar">@tree</span>.<span class="ruby-identifier">last_child</span>(<span class="ruby-ivar">@id</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-leaf-3F">
+            
+              <b>leaf?</b>()
+            
+            <a href="../../../../classes/Tk/BLT/Tree/Node.html#method-i-leaf-3F" name="method-i-leaf-3F" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-leaf-3F_source')" id="l_method-i-leaf-3F_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/blt/tree.rb#L157" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-leaf-3F_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/blt/tree.rb, line 157</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">leaf?</span>()
+  <span class="ruby-ivar">@tree</span>.<span class="ruby-identifier">leaf?</span>(<span class="ruby-ivar">@id</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-link-3F">
+            
+              <b>link?</b>()
+            
+            <a href="../../../../classes/Tk/BLT/Tree/Node.html#method-i-link-3F" name="method-i-link-3F" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-link-3F_source')" id="l_method-i-link-3F_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/blt/tree.rb#L160" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-link-3F_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/blt/tree.rb, line 160</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">link?</span>()
+  <span class="ruby-ivar">@tree</span>.<span class="ruby-identifier">link?</span>(<span class="ruby-ivar">@id</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-move">
+            
+              <b>move</b>(dest, keys={})
+            
+            <a href="../../../../classes/Tk/BLT/Tree/Node.html#method-i-move" name="method-i-move" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-move_source')" id="l_method-i-move_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/blt/tree.rb#L182" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-move_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/blt/tree.rb, line 182</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">move</span>(<span class="ruby-identifier">dest</span>, <span class="ruby-identifier">keys</span>={})
+  <span class="ruby-ivar">@tree</span>.<span class="ruby-identifier">keys</span>(<span class="ruby-ivar">@id</span>, <span class="ruby-identifier">dest</span>, <span class="ruby-identifier">keys</span>)
+  <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-next">
+            
+              <b>next</b>()
+            
+            <a href="../../../../classes/Tk/BLT/Tree/Node.html#method-i-next" name="method-i-next" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-next_source')" id="l_method-i-next_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/blt/tree.rb#L187" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-next_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/blt/tree.rb, line 187</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">next</span>()
+  <span class="ruby-ivar">@tree</span>.<span class="ruby-identifier">next</span>(<span class="ruby-ivar">@id</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-next_sibling">
+            
+              <b>next_sibling</b>()
+            
+            <a href="../../../../classes/Tk/BLT/Tree/Node.html#method-i-next_sibling" name="method-i-next_sibling" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-next_sibling_source')" id="l_method-i-next_sibling_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/blt/tree.rb#L191" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-next_sibling_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/blt/tree.rb, line 191</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">next_sibling</span>()
+  <span class="ruby-ivar">@tree</span>.<span class="ruby-identifier">next_sibling</span>(<span class="ruby-ivar">@id</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-parent">
+            
+              <b>parent</b>()
+            
+            <a href="../../../../classes/Tk/BLT/Tree/Node.html#method-i-parent" name="method-i-parent" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-parent_source')" id="l_method-i-parent_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/blt/tree.rb#L195" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-parent_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/blt/tree.rb, line 195</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">parent</span>()
+  <span class="ruby-ivar">@tree</span>.<span class="ruby-identifier">parent</span>(<span class="ruby-ivar">@id</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-position">
+            
+              <b>position</b>()
+            
+            <a href="../../../../classes/Tk/BLT/Tree/Node.html#method-i-position" name="method-i-position" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-position_source')" id="l_method-i-position_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/blt/tree.rb#L203" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-position_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/blt/tree.rb, line 203</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">position</span>()
+  <span class="ruby-ivar">@tree</span>.<span class="ruby-identifier">position</span>(<span class="ruby-ivar">@id</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-prev_sibling">
+            
+              <b>prev_sibling</b>()
+            
+            <a href="../../../../classes/Tk/BLT/Tree/Node.html#method-i-prev_sibling" name="method-i-prev_sibling" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-prev_sibling_source')" id="l_method-i-prev_sibling_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/blt/tree.rb#L211" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-prev_sibling_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/blt/tree.rb, line 211</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">prev_sibling</span>()
+  <span class="ruby-ivar">@tree</span>.<span class="ruby-identifier">prev_sibling</span>(<span class="ruby-ivar">@id</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-previous">
+            
+              <b>previous</b>()
+            
+            <a href="../../../../classes/Tk/BLT/Tree/Node.html#method-i-previous" name="method-i-previous" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-previous_source')" id="l_method-i-previous_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/blt/tree.rb#L207" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-previous_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/blt/tree.rb, line 207</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">previous</span>()
+  <span class="ruby-ivar">@tree</span>.<span class="ruby-identifier">previous</span>(<span class="ruby-ivar">@id</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-restore">
+            
+              <b>restore</b>(str, keys={})
+            
+            <a href="../../../../classes/Tk/BLT/Tree/Node.html#method-i-restore" name="method-i-restore" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-restore_source')" id="l_method-i-restore_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/blt/tree.rb#L215" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-restore_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/blt/tree.rb, line 215</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">restore</span>(<span class="ruby-identifier">str</span>, <span class="ruby-identifier">keys</span>={})
+  <span class="ruby-ivar">@tree</span>.<span class="ruby-identifier">restore</span>(<span class="ruby-ivar">@id</span>, <span class="ruby-identifier">str</span>, <span class="ruby-identifier">keys</span>)
+  <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-restore_from_file">
+            
+              <b>restore_from_file</b>(file, keys={})
+            
+            <a href="../../../../classes/Tk/BLT/Tree/Node.html#method-i-restore_from_file" name="method-i-restore_from_file" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-restore_from_file_source')" id="l_method-i-restore_from_file_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/blt/tree.rb#L224" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-restore_from_file_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/blt/tree.rb, line 224</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">restore_from_file</span>(<span class="ruby-identifier">file</span>, <span class="ruby-identifier">keys</span>={})
+  <span class="ruby-ivar">@tree</span>.<span class="ruby-identifier">restore_from_file</span>(<span class="ruby-ivar">@id</span>, <span class="ruby-identifier">file</span>, <span class="ruby-identifier">keys</span>)
+  <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-restore_overwrite">
+            
+              <b>restore_overwrite</b>(str, keys={})
+            
+            <a href="../../../../classes/Tk/BLT/Tree/Node.html#method-i-restore_overwrite" name="method-i-restore_overwrite" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-restore_overwrite_source')" id="l_method-i-restore_overwrite_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/blt/tree.rb#L219" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-restore_overwrite_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/blt/tree.rb, line 219</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">restore_overwrite</span>(<span class="ruby-identifier">str</span>, <span class="ruby-identifier">keys</span>={})
+  <span class="ruby-ivar">@tree</span>.<span class="ruby-identifier">restore_overwrite</span>(<span class="ruby-ivar">@id</span>, <span class="ruby-identifier">str</span>, <span class="ruby-identifier">keys</span>)
+  <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-restore_overwrite_from_file">
+            
+              <b>restore_overwrite_from_file</b>(file, keys={})
+            
+            <a href="../../../../classes/Tk/BLT/Tree/Node.html#method-i-restore_overwrite_from_file" name="method-i-restore_overwrite_from_file" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-restore_overwrite_from_file_source')" id="l_method-i-restore_overwrite_from_file_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/blt/tree.rb#L228" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-restore_overwrite_from_file_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/blt/tree.rb, line 228</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">restore_overwrite_from_file</span>(<span class="ruby-identifier">file</span>, <span class="ruby-identifier">keys</span>={})
+  <span class="ruby-ivar">@tree</span>.<span class="ruby-identifier">restore_overwrite_from_file</span>(<span class="ruby-ivar">@id</span>, <span class="ruby-identifier">file</span>, <span class="ruby-identifier">keys</span>)
+  <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-root">
+            
+              <b>root</b>()
+            
+            <a href="../../../../classes/Tk/BLT/Tree/Node.html#method-i-root" name="method-i-root" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-root_source')" id="l_method-i-root_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/blt/tree.rb#L233" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-root_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/blt/tree.rb, line 233</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">root</span>()
+  <span class="ruby-ivar">@tree</span>.<span class="ruby-identifier">root</span>(<span class="ruby-ivar">@id</span>)
+  <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-root-3F">
+            
+              <b>root?</b>()
+            
+            <a href="../../../../classes/Tk/BLT/Tree/Node.html#method-i-root-3F" name="method-i-root-3F" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-root-3F_source')" id="l_method-i-root-3F_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/blt/tree.rb#L163" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-root-3F_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/blt/tree.rb, line 163</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">root?</span>()
+  <span class="ruby-ivar">@tree</span>.<span class="ruby-identifier">root?</span>(<span class="ruby-ivar">@id</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-set">
+            
+              <b>set</b>(data)
+            
+            <a href="../../../../classes/Tk/BLT/Tree/Node.html#method-i-set" name="method-i-set" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-set_source')" id="l_method-i-set_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/blt/tree.rb#L238" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-set_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/blt/tree.rb, line 238</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">set</span>(<span class="ruby-identifier">data</span>)
+  <span class="ruby-ivar">@tree</span>.<span class="ruby-identifier">set</span>(<span class="ruby-ivar">@id</span>, <span class="ruby-identifier">data</span>)
+  <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-size">
+            
+              <b>size</b>()
+            
+            <a href="../../../../classes/Tk/BLT/Tree/Node.html#method-i-size" name="method-i-size" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-size_source')" id="l_method-i-size_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/blt/tree.rb#L243" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-size_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/blt/tree.rb, line 243</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">size</span>()
+  <span class="ruby-ivar">@tree</span>.<span class="ruby-identifier">size</span>(<span class="ruby-ivar">@id</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-sort">
+            
+              <b>sort</b>(keys={})
+            
+            <a href="../../../../classes/Tk/BLT/Tree/Node.html#method-i-sort" name="method-i-sort" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-sort_source')" id="l_method-i-sort_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/blt/tree.rb#L247" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-sort_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/blt/tree.rb, line 247</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">sort</span>(<span class="ruby-identifier">keys</span>={})
+  <span class="ruby-ivar">@tree</span>.<span class="ruby-identifier">sort</span>(<span class="ruby-ivar">@id</span>, <span class="ruby-identifier">keys</span>)
+  <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-type">
+            
+              <b>type</b>(key)
+            
+            <a href="../../../../classes/Tk/BLT/Tree/Node.html#method-i-type" name="method-i-type" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-type_source')" id="l_method-i-type_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/blt/tree.rb#L252" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-type_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/blt/tree.rb, line 252</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">type</span>(<span class="ruby-identifier">key</span>)
+  <span class="ruby-ivar">@tree</span>.<span class="ruby-identifier">type</span>(<span class="ruby-ivar">@id</span>, <span class="ruby-identifier">key</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-unset">
+            
+              <b>unset</b>(*keys)
+            
+            <a href="../../../../classes/Tk/BLT/Tree/Node.html#method-i-unset" name="method-i-unset" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-unset_source')" id="l_method-i-unset_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/blt/tree.rb#L256" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-unset_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/blt/tree.rb, line 256</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">unset</span>(<span class="ruby-operator">*</span><span class="ruby-identifier">keys</span>)
+  <span class="ruby-ivar">@tree</span>.<span class="ruby-identifier">unset</span>(<span class="ruby-ivar">@id</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">keys</span>)
+  <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-values">
+            
+              <b>values</b>(key=None)
+            
+            <a href="../../../../classes/Tk/BLT/Tree/Node.html#method-i-values" name="method-i-values" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-values_source')" id="l_method-i-values_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tkextlib/blt/tree.rb#L261" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-values_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tkextlib/blt/tree.rb, line 261</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">values</span>(<span class="ruby-identifier">key</span>=<span class="ruby-constant">None</span>)
+  <span class="ruby-ivar">@tree</span>.<span class="ruby-identifier">values</span>(<span class="ruby-ivar">@id</span>, <span class="ruby-identifier">key</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                    </div>
+
+    </div>
+  </body>
+</html>    

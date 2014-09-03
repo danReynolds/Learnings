@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>BLT_Graph_Demo</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="../css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/main.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/github.css" type="text/css" media="screen" />
+<script src="../js/jquery-1.3.2.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/jquery-effect.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+
+<body>     
+    <div class="banner">
+        
+        <h1>
+            <span class="type">Class</span> 
+            BLT_Graph_Demo 
+            
+                <span class="parent">&lt; 
+                    
+                    <a href="Object.html">Object</a>
+                    
+                </span>
+            
+        </h1>
+        <ul class="files">
+            
+            <li><a href="../files/ext/tk/sample/tkextlib/blt/graph6_rb.html">ext/tk/sample/tkextlib/blt/graph6.rb</a></li>
+            
+        </ul>
+    </div>
+    <div id="bodyContent">
+        <div id="content">
+  
+
+
+  
+
+
+  
+  
+
+
+  
+
+
+  
+    <!-- Method ref -->
+    <div class="sectiontitle">Methods</div>
+    <dl class="methods">
+      
+        <dt>N</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-new">new</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+    </dl>
+  
+
+  
+
+
+
+  
+
+    
+
+    
+
+    
+
+
+    
+
+
+    <!-- Methods -->
+    
+      <div class="sectiontitle">Class Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-c-new">
+            
+              <b>new</b>()
+            
+            <a href="../classes/BLT_Graph_Demo.html#method-c-new" name="method-c-new" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-new_source')" id="l_method-c-new_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/287a34ae0dfc23e4158f67cb7783d239f202c368/ext/tk/sample/tkextlib/blt/graph6.rb#L63" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-new_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/sample/tkextlib/blt/graph6.rb, line 63</span>
+  <span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">initialize</span>
+    <span class="ruby-ivar">@graph</span> = <span class="ruby-constant">Tk</span><span class="ruby-operator">::</span><span class="ruby-constant">BLT</span><span class="ruby-operator">::</span><span class="ruby-constant">Graph</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value">:widgetname=</span><span class="ruby-operator">&gt;</span><span class="ruby-string">&#39;graph&#39;</span>)
+
+    <span class="ruby-ivar">@root</span> = <span class="ruby-constant">Tk</span>.<span class="ruby-identifier">root</span>
+    <span class="ruby-ivar">@root</span>.<span class="ruby-identifier">minsize</span>(<span class="ruby-number">0</span>, <span class="ruby-number">0</span>)
+
+    <span class="ruby-identifier">_set_vectors</span>()
+    (<span class="ruby-number">1</span><span class="ruby-operator">..</span><span class="ruby-number">39</span>).<span class="ruby-identifier">each</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">i</span><span class="ruby-operator">|</span> <span class="ruby-ivar">@graph</span>.<span class="ruby-identifier">element_create</span>(<span class="ruby-node">&quot;V#{i}&quot;</span>, <span class="ruby-value">:x=</span><span class="ruby-operator">&gt;</span><span class="ruby-ivar">@x</span>, <span class="ruby-value">:y=</span><span class="ruby-operator">&gt;</span><span class="ruby-ivar">@v</span>[<span class="ruby-identifier">i</span>])}
+
+    <span class="ruby-ivar">@top</span> = <span class="ruby-constant">Tk</span><span class="ruby-operator">::</span><span class="ruby-constant">BLT</span><span class="ruby-operator">::</span><span class="ruby-constant">Tile</span><span class="ruby-operator">::</span><span class="ruby-constant">Toplevel</span>.<span class="ruby-identifier">new</span>
+<span class="ruby-comment">    legend = Tk::BLT::Graph.new(@top, :widgetname=&gt;&#39;legend&#39;,
+                                :without_creating=&gt;true)
+    @graph.legend_configure(:position=&gt;legend)
+</span>    <span class="ruby-comment"># legend = @graph.legend_window_create(@top, :widgetname=&gt;&#39;legend&#39;)</span>
+    <span class="ruby-identifier">legend</span> = <span class="ruby-ivar">@graph</span>.<span class="ruby-identifier">legend_window_create</span>(<span class="ruby-ivar">@top</span>)
+    <span class="ruby-identifier">legend</span>.<span class="ruby-identifier">pack</span>(<span class="ruby-value">:fill=</span><span class="ruby-operator">&gt;</span><span class="ruby-value">:both</span>, <span class="ruby-value">:expand=</span><span class="ruby-operator">&gt;</span><span class="ruby-keyword">true</span>)
+
+    <span class="ruby-constant">Tk</span><span class="ruby-operator">::</span><span class="ruby-constant">BLT</span><span class="ruby-operator">::</span><span class="ruby-constant">Table</span>.<span class="ruby-identifier">add</span>(<span class="ruby-ivar">@root</span>, <span class="ruby-ivar">@graph</span>, [<span class="ruby-number">0</span>,<span class="ruby-number">0</span>], <span class="ruby-value">:fill=</span><span class="ruby-operator">&gt;</span><span class="ruby-value">:both</span>)
+
+    <span class="ruby-ivar">@quit_btn</span> = <span class="ruby-constant">Tk</span><span class="ruby-operator">::</span><span class="ruby-constant">BLT</span><span class="ruby-operator">::</span><span class="ruby-constant">Tile</span><span class="ruby-operator">::</span><span class="ruby-constant">Button</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value">:text=</span><span class="ruby-operator">&gt;</span><span class="ruby-string">&#39; quit &#39;</span>, <span class="ruby-value">:background=</span><span class="ruby-operator">&gt;</span><span class="ruby-string">&#39;red&#39;</span>,
+                                          <span class="ruby-value">:command=</span><span class="ruby-operator">&gt;</span><span class="ruby-identifier">proc</span>{<span class="ruby-identifier">exit</span>})
+    <span class="ruby-constant">Tk</span><span class="ruby-operator">::</span><span class="ruby-constant">BLT</span><span class="ruby-operator">::</span><span class="ruby-constant">Table</span>.<span class="ruby-identifier">add</span>(<span class="ruby-ivar">@root</span>, <span class="ruby-ivar">@quit_btn</span>, [<span class="ruby-number">1</span>,<span class="ruby-number">0</span>], <span class="ruby-value">:anchor=</span><span class="ruby-operator">&gt;</span><span class="ruby-value">:e</span>, <span class="ruby-value">:padx=</span><span class="ruby-operator">&gt;</span><span class="ruby-number">10</span>)
+
+    <span class="ruby-ivar">@graph</span>.<span class="ruby-identifier">zoom_stack</span>
+    <span class="ruby-ivar">@graph</span>.<span class="ruby-identifier">crosshairs</span>
+    <span class="ruby-ivar">@graph</span>.<span class="ruby-identifier">closest_point</span>
+    <span class="ruby-ivar">@graph</span>.<span class="ruby-identifier">print_key</span>
+
+    <span class="ruby-ivar">@graph</span>.<span class="ruby-identifier">legend_bind</span>(<span class="ruby-value">:all</span>, <span class="ruby-string">&#39;ButtonRelease-1&#39;</span>,
+                       <span class="ruby-identifier">proc</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">w</span><span class="ruby-operator">|</span> <span class="ruby-identifier">highlightTrace</span>(<span class="ruby-identifier">w</span>)}, <span class="ruby-string">&#39;%W&#39;</span>)
+    <span class="ruby-ivar">@graph</span>.<span class="ruby-identifier">legend_bind</span>(<span class="ruby-value">:all</span>, <span class="ruby-string">&#39;ButtonRelease-3&#39;</span>,
+                       <span class="ruby-identifier">proc</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">w</span><span class="ruby-operator">|</span>
+                         <span class="ruby-identifier">w</span>.<span class="ruby-identifier">legend_deactivate</span>(<span class="ruby-string">&#39;*&#39;</span>)
+                         <span class="ruby-identifier">active</span> = <span class="ruby-identifier">w</span>.<span class="ruby-identifier">element_activate</span>
+                         <span class="ruby-identifier">w</span>.<span class="ruby-identifier">element_deactivate</span>(<span class="ruby-operator">*</span><span class="ruby-identifier">active</span>)
+                       }, <span class="ruby-string">&#39;%W&#39;</span>)
+  <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                        </div>
+
+    </div>
+  </body>
+</html>    

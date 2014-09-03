@@ -1,0 +1,1499 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>Rake::Task</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="../../css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../../css/main.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../../css/github.css" type="text/css" media="screen" />
+<script src="../../js/jquery-1.3.2.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../js/jquery-effect.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../js/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+
+<body>     
+    <div class="banner">
+        
+        <h1>
+            <span class="type">Class</span> 
+            Rake::Task 
+            
+                <span class="parent">&lt; 
+                    
+                    <a href="../Object.html">Object</a>
+                    
+                </span>
+            
+        </h1>
+        <ul class="files">
+            
+            <li><a href="../../files/lib/rake/task_rb.html">lib/rake/task.rb</a></li>
+            
+        </ul>
+    </div>
+    <div id="bodyContent">
+        <div id="content">
+  
+    <div class="description">
+      
+<p>######################################################################### A
+<a href="Task.html">Task</a> is the basic unit of work in a Rakefile. 
+Tasks have associated actions (possibly more than one) and a list of
+prerequisites.  When invoked, a task will first ensure that all of its
+prerequisites have an opportunity to run and then it will execute its own
+actions.</p>
+
+<p>Tasks are not usually created directly using the new method, but rather use
+the <code>file</code> and <code>task</code> convenience methods.</p>
+
+    </div>
+  
+
+
+  
+
+
+  
+  
+
+
+  
+
+
+  
+    <!-- Method ref -->
+    <div class="sectiontitle">Methods</div>
+    <dl class="methods">
+      
+        <dt>#</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-5B-5D">[]</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>A</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-add_description">add_description</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-arg_names">arg_names</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>C</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-clear">clear</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-clear_actions">clear_actions</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-clear_prerequisites">clear_prerequisites</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-comment-3D">comment=</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-create_rule">create_rule</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>D</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-define_task">define_task</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>E</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-enhance">enhance</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-execute">execute</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>I</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-inspect">inspect</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-investigation">investigation</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-invoke">invoke</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>N</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-name">name</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-needed-3F">needed?</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-c-new">new</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>P</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-prerequisite_tasks">prerequisite_tasks</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>R</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-reenable">reenable</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>S</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-scope_name">scope_name</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-set_arg_names">set_arg_names</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-source">source</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-sources">sources</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>T</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-task_defined-3F">task_defined?</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-tasks">tasks</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-timestamp">timestamp</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-to_s">to_s</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+    </dl>
+  
+
+  
+
+
+
+  
+
+    
+
+    
+
+    
+
+
+    
+      <!-- Section attributes -->
+      <div class="sectiontitle">Attributes</div>
+      <table border='0' cellpadding='5'>
+        
+          <tr valign='top'>
+            <td class='attr-rw'>
+              [R]
+            </td>
+            <td class='attr-name'>actions</td>
+            <td class='attr-desc'><p>List of actions attached to a task.</p></td>
+          </tr>
+        
+          <tr valign='top'>
+            <td class='attr-rw'>
+              [RW]
+            </td>
+            <td class='attr-name'>application</td>
+            <td class='attr-desc'><p><a href="Application.html">Application</a> owning this task.</p></td>
+          </tr>
+        
+          <tr valign='top'>
+            <td class='attr-rw'>
+              [R]
+            </td>
+            <td class='attr-name'>comment</td>
+            <td class='attr-desc'><p>Comment for this task.  Restricted to a single line of no more than 50
+characters.</p></td>
+          </tr>
+        
+          <tr valign='top'>
+            <td class='attr-rw'>
+              [R]
+            </td>
+            <td class='attr-name'>full_comment</td>
+            <td class='attr-desc'><p>Full text of the (possibly multi-line) comment.</p></td>
+          </tr>
+        
+          <tr valign='top'>
+            <td class='attr-rw'>
+              [R]
+            </td>
+            <td class='attr-name'>locations</td>
+            <td class='attr-desc'><p>File/Line locations of each of the task definitions for this task (only
+valid if the task was defined with the detect location option set).</p></td>
+          </tr>
+        
+          <tr valign='top'>
+            <td class='attr-rw'>
+              [R]
+            </td>
+            <td class='attr-name'>prerequisites</td>
+            <td class='attr-desc'><p>List of prerequisites for a task.</p></td>
+          </tr>
+        
+          <tr valign='top'>
+            <td class='attr-rw'>
+              [R]
+            </td>
+            <td class='attr-name'>scope</td>
+            <td class='attr-desc'><p>Array of nested namespaces names used for task lookup by this task.</p></td>
+          </tr>
+        
+          <tr valign='top'>
+            <td class='attr-rw'>
+              [W]
+            </td>
+            <td class='attr-name'>sources</td>
+            <td class='attr-desc'><p>List of sources for task.</p></td>
+          </tr>
+        
+      </table>
+    
+
+
+    <!-- Methods -->
+    
+      <div class="sectiontitle">Class Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-c-new">
+            
+              <b>new</b>(task_name, app)
+            
+            <a href="../../classes/Rake/Task.html#method-c-new" name="method-c-new" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Create a task named <code>task_name</code> with no actions or
+prerequisites. Use <code>enhance</code> to add actions and prerequisites.</p>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-new_source')" id="l_method-c-new_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/d001539a0538cba0e48be2ebdafe29e67b006a4e/lib/rake/task.rb#L71" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-new_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File lib/rake/task.rb, line 71</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">initialize</span>(<span class="ruby-identifier">task_name</span>, <span class="ruby-identifier">app</span>)
+  <span class="ruby-ivar">@name</span> = <span class="ruby-identifier">task_name</span>.<span class="ruby-identifier">to_s</span>
+  <span class="ruby-ivar">@prerequisites</span> = []
+  <span class="ruby-ivar">@actions</span> = []
+  <span class="ruby-ivar">@already_invoked</span> = <span class="ruby-keyword">false</span>
+  <span class="ruby-ivar">@full_comment</span> = <span class="ruby-keyword">nil</span>
+  <span class="ruby-ivar">@comment</span> = <span class="ruby-keyword">nil</span>
+  <span class="ruby-ivar">@lock</span> = <span class="ruby-constant">Monitor</span>.<span class="ruby-identifier">new</span>
+  <span class="ruby-ivar">@application</span> = <span class="ruby-identifier">app</span>
+  <span class="ruby-ivar">@scope</span> = <span class="ruby-identifier">app</span>.<span class="ruby-identifier">current_scope</span>
+  <span class="ruby-ivar">@arg_names</span> = <span class="ruby-keyword">nil</span>
+  <span class="ruby-ivar">@locations</span> = []
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                  
+      <div class="sectiontitle">Instance Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-i-5B-5D">
+            
+              <b>[]</b>(task_name)
+            
+            <a href="../../classes/Rake/Task.html#method-i-5B-5D" name="method-i-5B-5D" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Return a task with the given name.  If the task is not currently known, try
+to synthesize one from the defined rules.  If no rules are found, but an
+existing file matches the task name, assume it is a file task with no
+dependencies or actions.</p>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-5B-5D_source')" id="l_method-i-5B-5D_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/d001539a0538cba0e48be2ebdafe29e67b006a4e/lib/rake/task.rb#L297" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-5B-5D_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File lib/rake/task.rb, line 297</span>
+<span class="ruby-keyword">def</span> <span class="ruby-operator">[]</span>(<span class="ruby-keyword ruby-title">task_name</span>)
+  <span class="ruby-constant">Rake</span>.<span class="ruby-identifier">application</span>[<span class="ruby-identifier">task_name</span>]
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-add_description">
+            
+              <b>add_description</b>(description)
+            
+            <a href="../../classes/Rake/Task.html#method-i-add_description" name="method-i-add_description" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Add a description to the task.  The description can consist of an option
+argument list (enclosed brackets) and an optional comment.</p>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-add_description_source')" id="l_method-i-add_description_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/d001539a0538cba0e48be2ebdafe29e67b006a4e/lib/rake/task.rb#L223" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-add_description_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File lib/rake/task.rb, line 223</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">add_description</span>(<span class="ruby-identifier">description</span>)
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">if</span> <span class="ruby-operator">!</span> <span class="ruby-identifier">description</span>
+  <span class="ruby-identifier">comment</span> = <span class="ruby-identifier">description</span>.<span class="ruby-identifier">strip</span>
+  <span class="ruby-identifier">add_comment</span>(<span class="ruby-identifier">comment</span>) <span class="ruby-keyword">if</span> <span class="ruby-identifier">comment</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-operator">!</span> <span class="ruby-identifier">comment</span>.<span class="ruby-identifier">empty?</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-arg_names">
+            
+              <b>arg_names</b>()
+            
+            <a href="../../classes/Rake/Task.html#method-i-arg_names" name="method-i-arg_names" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Name of arguments for this task.</p>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-arg_names_source')" id="l_method-i-arg_names_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/d001539a0538cba0e48be2ebdafe29e67b006a4e/lib/rake/task.rb#L112" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-arg_names_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File lib/rake/task.rb, line 112</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">arg_names</span>
+  <span class="ruby-ivar">@arg_names</span> <span class="ruby-operator">||</span> []
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-clear">
+            
+              <b>clear</b>()
+            
+            <a href="../../classes/Rake/Task.html#method-i-clear" name="method-i-clear" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Clear the existing prerequisites and actions of a rake task.</p>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-clear_source')" id="l_method-i-clear_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/d001539a0538cba0e48be2ebdafe29e67b006a4e/lib/rake/task.rb#L123" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-clear_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File lib/rake/task.rb, line 123</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">clear</span>
+  <span class="ruby-identifier">clear_prerequisites</span>
+  <span class="ruby-identifier">clear_actions</span>
+  <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-clear_actions">
+            
+              <b>clear_actions</b>()
+            
+            <a href="../../classes/Rake/Task.html#method-i-clear_actions" name="method-i-clear_actions" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Clear the existing actions on a rake task.</p>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-clear_actions_source')" id="l_method-i-clear_actions_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/d001539a0538cba0e48be2ebdafe29e67b006a4e/lib/rake/task.rb#L136" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-clear_actions_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File lib/rake/task.rb, line 136</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">clear_actions</span>
+  <span class="ruby-identifier">actions</span>.<span class="ruby-identifier">clear</span>
+  <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-clear_prerequisites">
+            
+              <b>clear_prerequisites</b>()
+            
+            <a href="../../classes/Rake/Task.html#method-i-clear_prerequisites" name="method-i-clear_prerequisites" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Clear the existing prerequisites of a rake task.</p>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-clear_prerequisites_source')" id="l_method-i-clear_prerequisites_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/d001539a0538cba0e48be2ebdafe29e67b006a4e/lib/rake/task.rb#L130" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-clear_prerequisites_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File lib/rake/task.rb, line 130</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">clear_prerequisites</span>
+  <span class="ruby-identifier">prerequisites</span>.<span class="ruby-identifier">clear</span>
+  <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-comment-3D">
+            
+              <b>comment=</b>(description)
+            
+            <a href="../../classes/Rake/Task.html#method-i-comment-3D" name="method-i-comment-3D" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Writing to the comment attribute is the same as adding a description.</p>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-comment-3D_source')" id="l_method-i-comment-3D_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/d001539a0538cba0e48be2ebdafe29e67b006a4e/lib/rake/task.rb#L230" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-comment-3D_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File lib/rake/task.rb, line 230</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">comment=</span>(<span class="ruby-identifier">description</span>)
+  <span class="ruby-identifier">add_description</span>(<span class="ruby-identifier">description</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-create_rule">
+            
+              <b>create_rule</b>(*args, &amp;block)
+            
+            <a href="../../classes/Rake/Task.html#method-i-create_rule" name="method-i-create_rule" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Define a rule for synthesizing tasks.</p>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-create_rule_source')" id="l_method-i-create_rule_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/d001539a0538cba0e48be2ebdafe29e67b006a4e/lib/rake/task.rb#L314" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-create_rule_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File lib/rake/task.rb, line 314</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">create_rule</span>(<span class="ruby-operator">*</span><span class="ruby-identifier">args</span>, <span class="ruby-operator">&amp;</span><span class="ruby-identifier">block</span>)
+  <span class="ruby-constant">Rake</span>.<span class="ruby-identifier">application</span>.<span class="ruby-identifier">create_rule</span>(<span class="ruby-operator">*</span><span class="ruby-identifier">args</span>, <span class="ruby-operator">&amp;</span><span class="ruby-identifier">block</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-define_task">
+            
+              <b>define_task</b>(*args, &amp;block)
+            
+            <a href="../../classes/Rake/Task.html#method-i-define_task" name="method-i-define_task" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Define a task given <code>args</code> and an option block.  If a rule with
+the given name already exists, the prerequisites and actions are added to
+the existing task.  Returns the defined task.</p>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-define_task_source')" id="l_method-i-define_task_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/d001539a0538cba0e48be2ebdafe29e67b006a4e/lib/rake/task.rb#L309" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-define_task_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File lib/rake/task.rb, line 309</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">define_task</span>(<span class="ruby-operator">*</span><span class="ruby-identifier">args</span>, <span class="ruby-operator">&amp;</span><span class="ruby-identifier">block</span>)
+  <span class="ruby-constant">Rake</span>.<span class="ruby-identifier">application</span>.<span class="ruby-identifier">define_task</span>(<span class="ruby-keyword">self</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">args</span>, <span class="ruby-operator">&amp;</span><span class="ruby-identifier">block</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-enhance">
+            
+              <b>enhance</b>(deps=nil, &amp;block)
+            
+            <a href="../../classes/Rake/Task.html#method-i-enhance" name="method-i-enhance" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Enhance a task with prerequisites or actions.  Returns self.</p>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-enhance_source')" id="l_method-i-enhance_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/d001539a0538cba0e48be2ebdafe29e67b006a4e/lib/rake/task.rb#L86" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-enhance_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File lib/rake/task.rb, line 86</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">enhance</span>(<span class="ruby-identifier">deps</span>=<span class="ruby-keyword">nil</span>, <span class="ruby-operator">&amp;</span><span class="ruby-identifier">block</span>)
+  <span class="ruby-ivar">@prerequisites</span> <span class="ruby-operator">|=</span> <span class="ruby-identifier">deps</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">deps</span>
+  <span class="ruby-ivar">@actions</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">block</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">block_given?</span>
+  <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-execute">
+            
+              <b>execute</b>(args=nil)
+            
+            <a href="../../classes/Rake/Task.html#method-i-execute" name="method-i-execute" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Execute the actions associated with this task.</p>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-execute_source')" id="l_method-i-execute_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/d001539a0538cba0e48be2ebdafe29e67b006a4e/lib/rake/task.rb#L190" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-execute_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File lib/rake/task.rb, line 190</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">execute</span>(<span class="ruby-identifier">args</span>=<span class="ruby-keyword">nil</span>)
+  <span class="ruby-identifier">args</span> <span class="ruby-operator">||=</span> <span class="ruby-constant">EMPTY_TASK_ARGS</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">application</span>.<span class="ruby-identifier">options</span>.<span class="ruby-identifier">dryrun</span>
+    <span class="ruby-identifier">$stderr</span>.<span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;** Execute (dry run) #{name}&quot;</span>
+    <span class="ruby-keyword">return</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">application</span>.<span class="ruby-identifier">options</span>.<span class="ruby-identifier">trace</span>
+    <span class="ruby-identifier">$stderr</span>.<span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;** Execute #{name}&quot;</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">application</span>.<span class="ruby-identifier">enhance_with_matching_rule</span>(<span class="ruby-identifier">name</span>) <span class="ruby-keyword">if</span> <span class="ruby-ivar">@actions</span>.<span class="ruby-identifier">empty?</span>
+  <span class="ruby-ivar">@actions</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">act</span><span class="ruby-operator">|</span>
+    <span class="ruby-keyword">case</span> <span class="ruby-identifier">act</span>.<span class="ruby-identifier">arity</span>
+    <span class="ruby-keyword">when</span> <span class="ruby-number">1</span>
+      <span class="ruby-identifier">act</span>.<span class="ruby-identifier">call</span>(<span class="ruby-keyword">self</span>)
+    <span class="ruby-keyword">else</span>
+      <span class="ruby-identifier">act</span>.<span class="ruby-identifier">call</span>(<span class="ruby-keyword">self</span>, <span class="ruby-identifier">args</span>)
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-inspect">
+            
+              <b>inspect</b>()
+            
+            <a href="../../classes/Rake/Task.html#method-i-inspect" name="method-i-inspect" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-inspect_source')" id="l_method-i-inspect_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/d001539a0538cba0e48be2ebdafe29e67b006a4e/lib/rake/task.rb#L44" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-inspect_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File lib/rake/task.rb, line 44</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">inspect</span>
+  <span class="ruby-node">&quot;&lt;#{self.class} #{name} =&gt; [#{prerequisites.join(&#39;, &#39;)}]&gt;&quot;</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-investigation">
+            
+              <b>investigation</b>()
+            
+            <a href="../../classes/Rake/Task.html#method-i-investigation" name="method-i-investigation" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Return a string describing the internal state of a task.  Useful for
+debugging.</p>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-investigation_source')" id="l_method-i-investigation_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/d001539a0538cba0e48be2ebdafe29e67b006a4e/lib/rake/task.rb#L259" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-investigation_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File lib/rake/task.rb, line 259</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">investigation</span>
+  <span class="ruby-identifier">result</span> = <span class="ruby-string">&quot;------------------------------\n&quot;</span>
+  <span class="ruby-identifier">result</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-node">&quot;Investigating #{name}\n&quot;</span>
+  <span class="ruby-identifier">result</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-node">&quot;class: #{self.class}\n&quot;</span>
+  <span class="ruby-identifier">result</span> <span class="ruby-operator">&lt;&lt;</span>  <span class="ruby-node">&quot;task needed: #{needed?}\n&quot;</span>
+  <span class="ruby-identifier">result</span> <span class="ruby-operator">&lt;&lt;</span>  <span class="ruby-node">&quot;timestamp: #{timestamp}\n&quot;</span>
+  <span class="ruby-identifier">result</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-string">&quot;pre-requisites: \n&quot;</span>
+  <span class="ruby-identifier">prereqs</span> = <span class="ruby-identifier">prerequisite_tasks</span>
+  <span class="ruby-identifier">prereqs</span>.<span class="ruby-identifier">sort!</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">a</span>,<span class="ruby-identifier">b</span><span class="ruby-operator">|</span> <span class="ruby-identifier">a</span>.<span class="ruby-identifier">timestamp</span> <span class="ruby-operator">&lt;=&gt;</span> <span class="ruby-identifier">b</span>.<span class="ruby-identifier">timestamp</span>}
+  <span class="ruby-identifier">prereqs</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">p</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">result</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-node">&quot;--#{p.name} (#{p.timestamp})\n&quot;</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">latest_prereq</span> = <span class="ruby-identifier">prerequisite_tasks</span>.<span class="ruby-identifier">collect</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">pre</span><span class="ruby-operator">|</span> <span class="ruby-identifier">pre</span>.<span class="ruby-identifier">timestamp</span> }.<span class="ruby-identifier">max</span>
+  <span class="ruby-identifier">result</span> <span class="ruby-operator">&lt;&lt;</span>  <span class="ruby-node">&quot;latest-prerequisite time: #{latest_prereq}\n&quot;</span>
+  <span class="ruby-identifier">result</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-string">&quot;................................\n\n&quot;</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-identifier">result</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-invoke">
+            
+              <b>invoke</b>(*args)
+            
+            <a href="../../classes/Rake/Task.html#method-i-invoke" name="method-i-invoke" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Invoke the task if it is needed.  Prerequisites are invoked first.</p>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-invoke_source')" id="l_method-i-invoke_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/d001539a0538cba0e48be2ebdafe29e67b006a4e/lib/rake/task.rb#L142" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-invoke_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File lib/rake/task.rb, line 142</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">invoke</span>(<span class="ruby-operator">*</span><span class="ruby-identifier">args</span>)
+  <span class="ruby-identifier">task_args</span> = <span class="ruby-constant">TaskArguments</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">arg_names</span>, <span class="ruby-identifier">args</span>)
+  <span class="ruby-identifier">invoke_with_call_chain</span>(<span class="ruby-identifier">task_args</span>, <span class="ruby-constant">InvocationChain</span><span class="ruby-operator">::</span><span class="ruby-constant">EMPTY</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-name">
+            
+              <b>name</b>()
+            
+            <a href="../../classes/Rake/Task.html#method-i-name" name="method-i-name" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Name of the task, including any namespace qualifiers.</p>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-name_source')" id="l_method-i-name_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/d001539a0538cba0e48be2ebdafe29e67b006a4e/lib/rake/task.rb#L93" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-name_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File lib/rake/task.rb, line 93</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">name</span>
+  <span class="ruby-ivar">@name</span>.<span class="ruby-identifier">to_s</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-needed-3F">
+            
+              <b>needed?</b>()
+            
+            <a href="../../classes/Rake/Task.html#method-i-needed-3F" name="method-i-needed-3F" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Is this task needed?</p>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-needed-3F_source')" id="l_method-i-needed-3F_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/d001539a0538cba0e48be2ebdafe29e67b006a4e/lib/rake/task.rb#L211" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-needed-3F_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File lib/rake/task.rb, line 211</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">needed?</span>
+  <span class="ruby-keyword">true</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-prerequisite_tasks">
+            
+              <b>prerequisite_tasks</b>()
+            
+            <a href="../../classes/Rake/Task.html#method-i-prerequisite_tasks" name="method-i-prerequisite_tasks" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>List of prerequisite tasks</p>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-prerequisite_tasks_source')" id="l_method-i-prerequisite_tasks_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/d001539a0538cba0e48be2ebdafe29e67b006a4e/lib/rake/task.rb#L55" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-prerequisite_tasks_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File lib/rake/task.rb, line 55</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">prerequisite_tasks</span>
+  <span class="ruby-identifier">prerequisites</span>.<span class="ruby-identifier">collect</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">pre</span><span class="ruby-operator">|</span> <span class="ruby-identifier">lookup_prerequisite</span>(<span class="ruby-identifier">pre</span>) }
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-reenable">
+            
+              <b>reenable</b>()
+            
+            <a href="../../classes/Rake/Task.html#method-i-reenable" name="method-i-reenable" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Reenable the task, allowing its tasks to be executed if the task is invoked
+again.</p>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-reenable_source')" id="l_method-i-reenable_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/d001539a0538cba0e48be2ebdafe29e67b006a4e/lib/rake/task.rb#L118" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-reenable_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File lib/rake/task.rb, line 118</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">reenable</span>
+  <span class="ruby-ivar">@already_invoked</span> = <span class="ruby-keyword">false</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-scope_name">
+            
+              <b>scope_name</b>(scope, task_name)
+            
+            <a href="../../classes/Rake/Task.html#method-i-scope_name" name="method-i-scope_name" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Apply the scope to the task name according to the rules for this kind of
+task.  Generic tasks will accept the scope as part of the name.</p>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-scope_name_source')" id="l_method-i-scope_name_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/d001539a0538cba0e48be2ebdafe29e67b006a4e/lib/rake/task.rb#L321" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-scope_name_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File lib/rake/task.rb, line 321</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">scope_name</span>(<span class="ruby-identifier">scope</span>, <span class="ruby-identifier">task_name</span>)
+  (<span class="ruby-identifier">scope</span> <span class="ruby-operator">+</span> [<span class="ruby-identifier">task_name</span>]).<span class="ruby-identifier">join</span>(<span class="ruby-string">&#39;:&#39;</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-set_arg_names">
+            
+              <b>set_arg_names</b>(args)
+            
+            <a href="../../classes/Rake/Task.html#method-i-set_arg_names" name="method-i-set_arg_names" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p><a href="../Set.html">Set</a> the names of the arguments for this task.
+<code>args</code> should be an array of symbols, one for each argument
+name.</p>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-set_arg_names_source')" id="l_method-i-set_arg_names_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/d001539a0538cba0e48be2ebdafe29e67b006a4e/lib/rake/task.rb#L253" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-set_arg_names_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File lib/rake/task.rb, line 253</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">set_arg_names</span>(<span class="ruby-identifier">args</span>)
+  <span class="ruby-ivar">@arg_names</span> = <span class="ruby-identifier">args</span>.<span class="ruby-identifier">map</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">a</span><span class="ruby-operator">|</span> <span class="ruby-identifier">a</span>.<span class="ruby-identifier">to_sym</span> }
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-source">
+            
+              <b>source</b>()
+            
+            <a href="../../classes/Rake/Task.html#method-i-source" name="method-i-source" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>First source from a rule (nil if no sources)</p>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-source_source')" id="l_method-i-source_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/d001539a0538cba0e48be2ebdafe29e67b006a4e/lib/rake/task.rb#L65" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-source_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File lib/rake/task.rb, line 65</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">source</span>
+  <span class="ruby-ivar">@sources</span>.<span class="ruby-identifier">first</span> <span class="ruby-keyword">if</span> <span class="ruby-keyword">defined?</span>(<span class="ruby-ivar">@sources</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-sources">
+            
+              <b>sources</b>()
+            
+            <a href="../../classes/Rake/Task.html#method-i-sources" name="method-i-sources" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-sources_source')" id="l_method-i-sources_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/d001539a0538cba0e48be2ebdafe29e67b006a4e/lib/rake/task.rb#L50" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-sources_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File lib/rake/task.rb, line 50</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">sources</span>
+  <span class="ruby-ivar">@sources</span> <span class="ruby-operator">||=</span> []
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-task_defined-3F">
+            
+              <b>task_defined?</b>(task_name)
+            
+            <a href="../../classes/Rake/Task.html#method-i-task_defined-3F" name="method-i-task_defined-3F" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>TRUE if the task name is already defined.</p>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-task_defined-3F_source')" id="l_method-i-task_defined-3F_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/d001539a0538cba0e48be2ebdafe29e67b006a4e/lib/rake/task.rb#L302" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-task_defined-3F_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File lib/rake/task.rb, line 302</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">task_defined?</span>(<span class="ruby-identifier">task_name</span>)
+  <span class="ruby-constant">Rake</span>.<span class="ruby-identifier">application</span>.<span class="ruby-identifier">lookup</span>(<span class="ruby-identifier">task_name</span>) <span class="ruby-operator">!=</span> <span class="ruby-keyword">nil</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-tasks">
+            
+              <b>tasks</b>()
+            
+            <a href="../../classes/Rake/Task.html#method-i-tasks" name="method-i-tasks" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>List of all defined tasks.</p>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-tasks_source')" id="l_method-i-tasks_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/d001539a0538cba0e48be2ebdafe29e67b006a4e/lib/rake/task.rb#L289" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-tasks_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File lib/rake/task.rb, line 289</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">tasks</span>
+  <span class="ruby-constant">Rake</span>.<span class="ruby-identifier">application</span>.<span class="ruby-identifier">tasks</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-timestamp">
+            
+              <b>timestamp</b>()
+            
+            <a href="../../classes/Rake/Task.html#method-i-timestamp" name="method-i-timestamp" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Timestamp for this task.  Basic tasks return the current time for their
+time stamp.  Other tasks can be more sophisticated.</p>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-timestamp_source')" id="l_method-i-timestamp_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/d001539a0538cba0e48be2ebdafe29e67b006a4e/lib/rake/task.rb#L217" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-timestamp_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File lib/rake/task.rb, line 217</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">timestamp</span>
+  <span class="ruby-identifier">prerequisite_tasks</span>.<span class="ruby-identifier">collect</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">pre</span><span class="ruby-operator">|</span> <span class="ruby-identifier">pre</span>.<span class="ruby-identifier">timestamp</span> }.<span class="ruby-identifier">max</span> <span class="ruby-operator">||</span> <span class="ruby-constant">Time</span>.<span class="ruby-identifier">now</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-to_s">
+            
+              <b>to_s</b>()
+            
+            <a href="../../classes/Rake/Task.html#method-i-to_s" name="method-i-to_s" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Return task name</p>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-to_s_source')" id="l_method-i-to_s_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/d001539a0538cba0e48be2ebdafe29e67b006a4e/lib/rake/task.rb#L40" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-to_s_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File lib/rake/task.rb, line 40</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">to_s</span>
+  <span class="ruby-identifier">name</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                    </div>
+
+    </div>
+  </body>
+</html>    

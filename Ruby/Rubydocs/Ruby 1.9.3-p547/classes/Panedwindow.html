@@ -1,0 +1,1247 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>Panedwindow</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="../css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/main.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/github.css" type="text/css" media="screen" />
+<script src="../js/jquery-1.3.2.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/jquery-effect.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+
+<body>     
+    <div class="banner">
+        
+        <h1>
+            <span class="type">Class</span> 
+            Panedwindow 
+            
+                <span class="parent">&lt; 
+                    
+                    <a href="TkWindow.html">TkWindow</a>
+                    
+                </span>
+            
+        </h1>
+        <ul class="files">
+            
+            <li><a href="../files/ext/tk/lib/tk/panedwindow_rb.html">ext/tk/lib/tk/panedwindow.rb</a></li>
+            
+        </ul>
+    </div>
+    <div id="bodyContent">
+        <div id="content">
+  
+
+
+  
+
+
+  
+  
+
+
+  
+
+
+  
+    <!-- Method ref -->
+    <div class="sectiontitle">Methods</div>
+    <dl class="methods">
+      
+        <dt>A</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-add">add</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>C</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-current_pane_configinfo">current_pane_configinfo</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-current_paneconfiginfo">current_paneconfiginfo</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>D</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-del">del</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-delete">delete</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>F</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-forget">forget</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>I</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-identify">identify</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>P</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-pane_config">pane_config</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-pane_configinfo">pane_configinfo</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-panecget">panecget</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-panecget_strict">panecget_strict</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-paneconfiginfo">paneconfiginfo</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-paneconfigure">paneconfigure</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-panes">panes</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-proxy_coord">proxy_coord</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-proxy_forget">proxy_forget</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-proxy_place">proxy_place</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>R</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-remove">remove</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>S</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-sash_coord">sash_coord</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-sash_dragto">sash_dragto</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-sash_mark">sash_mark</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-sash_place">sash_place</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+    </dl>
+  
+
+  
+
+
+
+  
+
+    
+
+    
+
+    
+      <!-- Section constants -->
+      <div class="sectiontitle">Constants</div>
+      <table border='0' cellpadding='5'>
+        
+          <tr valign='top'>
+            <td class="attr-name">TkCommandNames</td>
+            <td>=</td>
+            <td class="attr-value">[&#39;panedwindow&#39;.freeze].freeze</td>
+          </tr>
+          
+            <tr valign='top'>
+              <td>&nbsp;</td>
+              <td colspan="2" class="attr-desc"></td>
+            </tr>
+          
+        
+          <tr valign='top'>
+            <td class="attr-name">WidgetClassName</td>
+            <td>=</td>
+            <td class="attr-value">&#39;Panedwindow&#39;.freeze</td>
+          </tr>
+          
+            <tr valign='top'>
+              <td>&nbsp;</td>
+              <td colspan="2" class="attr-desc"></td>
+            </tr>
+          
+        
+      </table>
+    
+
+
+    
+
+
+    <!-- Methods -->
+        
+      <div class="sectiontitle">Instance Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-i-add">
+            
+              <b>add</b>(*args)
+            
+            <a href="../classes/Panedwindow.html#method-i-add" name="method-i-add" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>def create_self(keys)</p>
+
+<pre><code>if keys and keys != None
+  tk_call_without_enc(&#39;panedwindow&#39;, @path, *hash_kv(keys, true))
+else
+  tk_call_without_enc(&#39;panedwindow&#39;, @path)
+end</code></pre>
+
+<p>end private :create_self</p>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-add_source')" id="l_method-i-add_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tk/panedwindow.rb#L19" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-add_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tk/panedwindow.rb, line 19</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">add</span>(<span class="ruby-operator">*</span><span class="ruby-identifier">args</span>)
+  <span class="ruby-identifier">keys</span> = <span class="ruby-identifier">args</span>.<span class="ruby-identifier">pop</span>
+  <span class="ruby-identifier">fail</span> <span class="ruby-constant">ArgumentError</span>, <span class="ruby-string">&quot;no window in arguments&quot;</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">keys</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">keys</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">keys</span>.<span class="ruby-identifier">kind_of?</span>(<span class="ruby-constant">Hash</span>)
+    <span class="ruby-identifier">fail</span> <span class="ruby-constant">ArgumentError</span>, <span class="ruby-string">&quot;no window in arguments&quot;</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">args</span> <span class="ruby-operator">==</span> []
+    <span class="ruby-comment"># args = args.collect{|w| (w.kind_of?(TkObject))? w.epath: w }</span>
+    <span class="ruby-identifier">args</span> = <span class="ruby-identifier">args</span>.<span class="ruby-identifier">collect</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">w</span><span class="ruby-operator">|</span> <span class="ruby-identifier">_epath</span>(<span class="ruby-identifier">w</span>) }
+    <span class="ruby-comment">#args.push(hash_kv(keys))</span>
+    <span class="ruby-identifier">args</span>.<span class="ruby-identifier">concat</span>(<span class="ruby-identifier">hash_kv</span>(<span class="ruby-identifier">keys</span>))
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">args</span>.<span class="ruby-identifier">push</span>(<span class="ruby-identifier">keys</span>) <span class="ruby-keyword">if</span> <span class="ruby-identifier">keys</span>
+    <span class="ruby-comment"># args = args.collect{|w| (w.kind_of?(TkObject))? w.epath: w }</span>
+    <span class="ruby-identifier">args</span> = <span class="ruby-identifier">args</span>.<span class="ruby-identifier">collect</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">w</span><span class="ruby-operator">|</span> <span class="ruby-identifier">_epath</span>(<span class="ruby-identifier">w</span>) }
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">tk_send_without_enc</span>(<span class="ruby-string">&#39;add&#39;</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">args</span>)
+  <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-current_pane_configinfo">
+            
+              <b>current_pane_configinfo</b>(win, key=nil)
+            
+            <a href="../classes/Panedwindow.html#method-i-current_pane_configinfo" name="method-i-current_pane_configinfo" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+            <div class="aka">
+              Alias for: <a href="Tk/PanedWindow.html#method-i-current_paneconfiginfo">current_paneconfiginfo</a>
+            </div>
+          
+          
+          
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-current_paneconfiginfo">
+            
+              <b>current_paneconfiginfo</b>(win, key=nil)
+            
+            <a href="../classes/Panedwindow.html#method-i-current_paneconfiginfo" name="method-i-current_paneconfiginfo" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+            <div class="aka">
+              Also aliased as: <a href="Tk/PanedWindow.html#method-i-current_pane_configinfo">current_pane_configinfo</a>
+            </div>
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-current_paneconfiginfo_source')" id="l_method-i-current_paneconfiginfo_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tk/panedwindow.rb#L226" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-current_paneconfiginfo_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tk/panedwindow.rb, line 226</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">current_paneconfiginfo</span>(<span class="ruby-identifier">win</span>, <span class="ruby-identifier">key</span>=<span class="ruby-keyword">nil</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-constant">TkComm</span><span class="ruby-operator">::</span><span class="ruby-constant">GET_CONFIGINFO_AS_ARRAY</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">key</span>
+      <span class="ruby-identifier">conf</span> = <span class="ruby-identifier">paneconfiginfo</span>(<span class="ruby-identifier">win</span>, <span class="ruby-identifier">key</span>)
+      {<span class="ruby-identifier">conf</span>[<span class="ruby-number">0</span>] =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">conf</span>[<span class="ruby-number">4</span>]}
+    <span class="ruby-keyword">else</span>
+      <span class="ruby-identifier">ret</span> = {}
+      <span class="ruby-identifier">paneconfiginfo</span>(<span class="ruby-identifier">win</span>).<span class="ruby-identifier">each</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">conf</span><span class="ruby-operator">|</span>
+        <span class="ruby-identifier">ret</span>[<span class="ruby-identifier">conf</span>[<span class="ruby-number">0</span>]] = <span class="ruby-identifier">conf</span>[<span class="ruby-number">4</span>] <span class="ruby-keyword">if</span> <span class="ruby-identifier">conf</span>.<span class="ruby-identifier">size</span> <span class="ruby-operator">&gt;</span> <span class="ruby-number">2</span>
+      }
+      <span class="ruby-identifier">ret</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">else</span> <span class="ruby-comment"># ! TkComm::GET_CONFIGINFO_AS_ARRAY</span>
+    <span class="ruby-identifier">ret</span> = {}
+    <span class="ruby-identifier">paneconfiginfo</span>(<span class="ruby-identifier">win</span>, <span class="ruby-identifier">key</span>).<span class="ruby-identifier">each</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">k</span>, <span class="ruby-identifier">conf</span><span class="ruby-operator">|</span>
+      <span class="ruby-identifier">ret</span>[<span class="ruby-identifier">k</span>] = <span class="ruby-identifier">conf</span>[<span class="ruby-number">-1</span>] <span class="ruby-keyword">if</span> <span class="ruby-identifier">conf</span>.<span class="ruby-identifier">kind_of?</span>(<span class="ruby-constant">Array</span>)
+    }
+    <span class="ruby-identifier">ret</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-del">
+            
+              <b>del</b>(win, *wins)
+            
+            <a href="../classes/Panedwindow.html#method-i-del" name="method-i-del" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+            <div class="aka">
+              Alias for: <a href="Tk/PanedWindow.html#method-i-forget">forget</a>
+            </div>
+          
+          
+          
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-delete">
+            
+              <b>delete</b>(win, *wins)
+            
+            <a href="../classes/Panedwindow.html#method-i-delete" name="method-i-delete" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+            <div class="aka">
+              Alias for: <a href="Tk/PanedWindow.html#method-i-forget">forget</a>
+            </div>
+          
+          
+          
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-forget">
+            
+              <b>forget</b>(win, *wins)
+            
+            <a href="../classes/Panedwindow.html#method-i-forget" name="method-i-forget" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+            <div class="aka">
+              Also aliased as: <a href="Tk/PanedWindow.html#method-i-del">del</a>, <a href="Tk/PanedWindow.html#method-i-delete">delete</a>, <a href="Tk/PanedWindow.html#method-i-remove">remove</a>
+            </div>
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-forget_source')" id="l_method-i-forget_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tk/panedwindow.rb#L37" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-forget_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tk/panedwindow.rb, line 37</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">forget</span>(<span class="ruby-identifier">win</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">wins</span>)
+  <span class="ruby-identifier">wins</span>.<span class="ruby-identifier">unshift</span>(<span class="ruby-identifier">win</span>)
+  <span class="ruby-comment"># tk_send_without_enc(&#39;forget&#39;, *((w.kind_of?(TkObject))? w.epath: w))</span>
+  <span class="ruby-identifier">tk_send_without_enc</span>(<span class="ruby-string">&#39;forget&#39;</span>, <span class="ruby-operator">*</span>(<span class="ruby-identifier">wins</span>.<span class="ruby-identifier">collect</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">w</span><span class="ruby-operator">|</span> <span class="ruby-identifier">_epath</span>(<span class="ruby-identifier">w</span>)}))
+  <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-identify">
+            
+              <b>identify</b>(x, y)
+            
+            <a href="../classes/Panedwindow.html#method-i-identify" name="method-i-identify" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-identify_source')" id="l_method-i-identify_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tk/panedwindow.rb#L47" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-identify_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tk/panedwindow.rb, line 47</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">identify</span>(<span class="ruby-identifier">x</span>, <span class="ruby-identifier">y</span>)
+  <span class="ruby-identifier">list</span>(<span class="ruby-identifier">tk_send_without_enc</span>(<span class="ruby-string">&#39;identify&#39;</span>, <span class="ruby-identifier">x</span>, <span class="ruby-identifier">y</span>))
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-pane_config">
+            
+              <b>pane_config</b>(win, key, value=nil)
+            
+            <a href="../classes/Panedwindow.html#method-i-pane_config" name="method-i-pane_config" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+            <div class="aka">
+              Alias for: <a href="Tk/PanedWindow.html#method-i-paneconfigure">paneconfigure</a>
+            </div>
+          
+          
+          
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-pane_configinfo">
+            
+              <b>pane_configinfo</b>(win, key=nil)
+            
+            <a href="../classes/Panedwindow.html#method-i-pane_configinfo" name="method-i-pane_configinfo" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+            <div class="aka">
+              Alias for: <a href="Tk/PanedWindow.html#method-i-paneconfiginfo">paneconfiginfo</a>
+            </div>
+          
+          
+          
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-panecget">
+            
+              <b>panecget</b>(win, key)
+            
+            <a href="../classes/Panedwindow.html#method-i-panecget" name="method-i-panecget" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-panecget_source')" id="l_method-i-panecget_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tk/panedwindow.rb#L84" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-panecget_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tk/panedwindow.rb, line 84</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">panecget</span>(<span class="ruby-identifier">win</span>, <span class="ruby-identifier">key</span>)
+  <span class="ruby-keyword">unless</span> <span class="ruby-constant">TkItemConfigMethod</span>.<span class="ruby-identifier">__IGNORE_UNKNOWN_CONFIGURE_OPTION__</span>
+    <span class="ruby-identifier">panecget_strict</span>(<span class="ruby-identifier">win</span>, <span class="ruby-identifier">key</span>)
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-keyword">begin</span>
+      <span class="ruby-identifier">panecget_strict</span>(<span class="ruby-identifier">win</span>, <span class="ruby-identifier">key</span>)
+    <span class="ruby-keyword">rescue</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">e</span>
+      <span class="ruby-keyword">begin</span>
+        <span class="ruby-keyword">if</span> <span class="ruby-identifier">current_paneconfiginfo</span>(<span class="ruby-identifier">win</span>).<span class="ruby-identifier">has_key?</span>(<span class="ruby-identifier">option</span>.<span class="ruby-identifier">to_s</span>)
+          <span class="ruby-comment"># not tag error &amp; option is known -&gt; error on known option</span>
+          <span class="ruby-identifier">fail</span> <span class="ruby-identifier">e</span>
+        <span class="ruby-keyword">else</span>
+          <span class="ruby-comment"># not tag error &amp; option is unknown</span>
+          <span class="ruby-keyword">nil</span>
+        <span class="ruby-keyword">end</span>
+      <span class="ruby-keyword">rescue</span>
+        <span class="ruby-identifier">fail</span> <span class="ruby-identifier">e</span>  <span class="ruby-comment"># tag error</span>
+      <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-panecget_strict">
+            
+              <b>panecget_strict</b>(win, key)
+            
+            <a href="../classes/Panedwindow.html#method-i-panecget_strict" name="method-i-panecget_strict" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-panecget_strict_source')" id="l_method-i-panecget_strict_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tk/panedwindow.rb#L79" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-panecget_strict_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tk/panedwindow.rb, line 79</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">panecget_strict</span>(<span class="ruby-identifier">win</span>, <span class="ruby-identifier">key</span>)
+  <span class="ruby-comment"># win = win.epath if win.kind_of?(TkObject)</span>
+  <span class="ruby-identifier">win</span> = <span class="ruby-identifier">_epath</span>(<span class="ruby-identifier">win</span>)
+  <span class="ruby-identifier">tk_tcl2ruby</span>(<span class="ruby-identifier">tk_send_without_enc</span>(<span class="ruby-string">&#39;panecget&#39;</span>, <span class="ruby-identifier">win</span>, <span class="ruby-node">&quot;-#{key}&quot;</span>))
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-paneconfiginfo">
+            
+              <b>paneconfiginfo</b>(win, key=nil)
+            
+            <a href="../classes/Panedwindow.html#method-i-paneconfiginfo" name="method-i-paneconfiginfo" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+            <div class="aka">
+              Also aliased as: <a href="Tk/PanedWindow.html#method-i-pane_configinfo">pane_configinfo</a>
+            </div>
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-paneconfiginfo_source')" id="l_method-i-paneconfiginfo_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tk/panedwindow.rb#L126" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-paneconfiginfo_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tk/panedwindow.rb, line 126</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">paneconfiginfo</span>(<span class="ruby-identifier">win</span>, <span class="ruby-identifier">key</span>=<span class="ruby-keyword">nil</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-constant">TkComm</span><span class="ruby-operator">::</span><span class="ruby-constant">GET_CONFIGINFO_AS_ARRAY</span>
+    <span class="ruby-comment"># win = win.epath if win.kind_of?(TkObject)</span>
+    <span class="ruby-identifier">win</span> = <span class="ruby-identifier">_epath</span>(<span class="ruby-identifier">win</span>)
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">key</span>
+      <span class="ruby-comment">#conf = tk_split_list(tk_send_without_enc(&#39;paneconfigure&#39;,</span>
+      <span class="ruby-comment">#                                         win, &quot;-#{key}&quot;))</span>
+      <span class="ruby-identifier">conf</span> = <span class="ruby-identifier">tk_split_list</span>(<span class="ruby-identifier">tk_send_without_enc</span>(<span class="ruby-string">&#39;paneconfigure&#39;</span>,
+                                               <span class="ruby-identifier">win</span>, <span class="ruby-node">&quot;-#{key}&quot;</span>),
+                           <span class="ruby-keyword">false</span>, <span class="ruby-keyword">true</span>)
+      <span class="ruby-identifier">conf</span>[<span class="ruby-number">0</span>] = <span class="ruby-identifier">conf</span>[<span class="ruby-number">0</span>][<span class="ruby-number">1</span><span class="ruby-operator">..</span><span class="ruby-number">-1</span>]
+      <span class="ruby-keyword">if</span> <span class="ruby-identifier">conf</span>[<span class="ruby-number">0</span>] <span class="ruby-operator">==</span> <span class="ruby-string">&#39;hide&#39;</span>
+        <span class="ruby-identifier">conf</span>[<span class="ruby-number">3</span>] = <span class="ruby-identifier">bool</span>(<span class="ruby-identifier">conf</span>[<span class="ruby-number">3</span>]) <span class="ruby-keyword">unless</span> <span class="ruby-identifier">conf</span>[<span class="ruby-number">3</span>].<span class="ruby-identifier">empty?</span>
+        <span class="ruby-identifier">conf</span>[<span class="ruby-number">4</span>] = <span class="ruby-identifier">bool</span>(<span class="ruby-identifier">conf</span>[<span class="ruby-number">4</span>]) <span class="ruby-keyword">unless</span> <span class="ruby-identifier">conf</span>[<span class="ruby-number">4</span>].<span class="ruby-identifier">empty?</span>
+      <span class="ruby-keyword">end</span>
+      <span class="ruby-identifier">conf</span>
+    <span class="ruby-keyword">else</span>
+      <span class="ruby-comment">#tk_split_simplelist(tk_send_without_enc(&#39;paneconfigure&#39;,</span>
+      <span class="ruby-comment">#                                        win)).collect{|conflist|</span>
+      <span class="ruby-comment">#  conf = tk_split_simplelist(conflist)</span>
+      <span class="ruby-identifier">tk_split_simplelist</span>(<span class="ruby-identifier">tk_send_without_enc</span>(<span class="ruby-string">&#39;paneconfigure&#39;</span>, <span class="ruby-identifier">win</span>),
+                          <span class="ruby-keyword">false</span>, <span class="ruby-keyword">false</span>).<span class="ruby-identifier">collect</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">conflist</span><span class="ruby-operator">|</span>
+        <span class="ruby-identifier">conf</span> = <span class="ruby-identifier">tk_split_simplelist</span>(<span class="ruby-identifier">conflist</span>, <span class="ruby-keyword">false</span>, <span class="ruby-keyword">true</span>)
+        <span class="ruby-identifier">conf</span>[<span class="ruby-number">0</span>] = <span class="ruby-identifier">conf</span>[<span class="ruby-number">0</span>][<span class="ruby-number">1</span><span class="ruby-operator">..</span><span class="ruby-number">-1</span>]
+        <span class="ruby-keyword">if</span> <span class="ruby-identifier">conf</span>[<span class="ruby-number">3</span>]
+          <span class="ruby-keyword">if</span> <span class="ruby-identifier">conf</span>[<span class="ruby-number">0</span>] <span class="ruby-operator">==</span> <span class="ruby-string">&#39;hide&#39;</span>
+            <span class="ruby-identifier">conf</span>[<span class="ruby-number">3</span>] = <span class="ruby-identifier">bool</span>(<span class="ruby-identifier">conf</span>[<span class="ruby-number">3</span>]) <span class="ruby-keyword">unless</span> <span class="ruby-identifier">conf</span>[<span class="ruby-number">3</span>].<span class="ruby-identifier">empty?</span>
+          <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">conf</span>[<span class="ruby-number">3</span>].<span class="ruby-identifier">index</span>(<span class="ruby-string">&#39;{&#39;</span>)
+            <span class="ruby-identifier">conf</span>[<span class="ruby-number">3</span>] = <span class="ruby-identifier">tk_split_list</span>(<span class="ruby-identifier">conf</span>[<span class="ruby-number">3</span>])
+          <span class="ruby-keyword">else</span>
+            <span class="ruby-identifier">conf</span>[<span class="ruby-number">3</span>] = <span class="ruby-identifier">tk_tcl2ruby</span>(<span class="ruby-identifier">conf</span>[<span class="ruby-number">3</span>])
+          <span class="ruby-keyword">end</span>
+        <span class="ruby-keyword">end</span>
+        <span class="ruby-keyword">if</span> <span class="ruby-identifier">conf</span>[<span class="ruby-number">4</span>]
+          <span class="ruby-keyword">if</span> <span class="ruby-identifier">conf</span>[<span class="ruby-number">0</span>] <span class="ruby-operator">==</span> <span class="ruby-string">&#39;hide&#39;</span>
+            <span class="ruby-identifier">conf</span>[<span class="ruby-number">4</span>] = <span class="ruby-identifier">bool</span>(<span class="ruby-identifier">conf</span>[<span class="ruby-number">4</span>]) <span class="ruby-keyword">unless</span> <span class="ruby-identifier">conf</span>[<span class="ruby-number">4</span>].<span class="ruby-identifier">empty?</span>
+          <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">conf</span>[<span class="ruby-number">4</span>].<span class="ruby-identifier">index</span>(<span class="ruby-string">&#39;{&#39;</span>)
+            <span class="ruby-identifier">conf</span>[<span class="ruby-number">4</span>] = <span class="ruby-identifier">tk_split_list</span>(<span class="ruby-identifier">conf</span>[<span class="ruby-number">4</span>])
+          <span class="ruby-keyword">else</span>
+            <span class="ruby-identifier">conf</span>[<span class="ruby-number">4</span>] = <span class="ruby-identifier">tk_tcl2ruby</span>(<span class="ruby-identifier">conf</span>[<span class="ruby-number">4</span>])
+          <span class="ruby-keyword">end</span>
+        <span class="ruby-keyword">end</span>
+        <span class="ruby-identifier">conf</span>[<span class="ruby-number">1</span>] = <span class="ruby-identifier">conf</span>[<span class="ruby-number">1</span>][<span class="ruby-number">1</span><span class="ruby-operator">..</span><span class="ruby-number">-1</span>] <span class="ruby-keyword">if</span> <span class="ruby-identifier">conf</span>.<span class="ruby-identifier">size</span> <span class="ruby-operator">==</span> <span class="ruby-number">2</span> <span class="ruby-comment"># alias info</span>
+        <span class="ruby-identifier">conf</span>
+      }
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">else</span> <span class="ruby-comment"># ! TkComm::GET_CONFIGINFO_AS_ARRAY</span>
+    <span class="ruby-comment"># win = win.epath if win.kind_of?(TkObject)</span>
+    <span class="ruby-identifier">win</span> = <span class="ruby-identifier">_epath</span>(<span class="ruby-identifier">win</span>)
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">key</span>
+      <span class="ruby-comment">#conf = tk_split_list(tk_send_without_enc(&#39;paneconfigure&#39;,</span>
+      <span class="ruby-comment">#                                         win, &quot;-#{key}&quot;))</span>
+      <span class="ruby-identifier">conf</span> = <span class="ruby-identifier">tk_split_list</span>(<span class="ruby-identifier">tk_send_without_enc</span>(<span class="ruby-string">&#39;paneconfigure&#39;</span>,
+                                               <span class="ruby-identifier">win</span>, <span class="ruby-node">&quot;-#{key}&quot;</span>),
+                           <span class="ruby-keyword">false</span>, <span class="ruby-keyword">true</span>)
+      <span class="ruby-identifier">key</span> = <span class="ruby-identifier">conf</span>.<span class="ruby-identifier">shift</span>[<span class="ruby-number">1</span><span class="ruby-operator">..</span><span class="ruby-number">-1</span>]
+      <span class="ruby-keyword">if</span> <span class="ruby-identifier">key</span> <span class="ruby-operator">==</span> <span class="ruby-string">&#39;hide&#39;</span>
+        <span class="ruby-identifier">conf</span>[<span class="ruby-number">2</span>] = <span class="ruby-identifier">bool</span>(<span class="ruby-identifier">conf</span>[<span class="ruby-number">2</span>]) <span class="ruby-keyword">unless</span> <span class="ruby-identifier">conf</span>[<span class="ruby-number">2</span>].<span class="ruby-identifier">empty?</span>
+        <span class="ruby-identifier">conf</span>[<span class="ruby-number">3</span>] = <span class="ruby-identifier">bool</span>(<span class="ruby-identifier">conf</span>[<span class="ruby-number">3</span>]) <span class="ruby-keyword">unless</span> <span class="ruby-identifier">conf</span>[<span class="ruby-number">3</span>].<span class="ruby-identifier">empty?</span>
+      <span class="ruby-keyword">end</span>
+      { <span class="ruby-identifier">key</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">conf</span> }
+    <span class="ruby-keyword">else</span>
+      <span class="ruby-identifier">ret</span> = {}
+      <span class="ruby-comment">#tk_split_simplelist(tk_send_without_enc(&#39;paneconfigure&#39;,</span>
+      <span class="ruby-comment">#                                        win)).each{|conflist|</span>
+      <span class="ruby-comment">#  conf = tk_split_simplelist(conflist)</span>
+      <span class="ruby-identifier">tk_split_simplelist</span>(<span class="ruby-identifier">tk_send_without_enc</span>(<span class="ruby-string">&#39;paneconfigure&#39;</span>, <span class="ruby-identifier">win</span>),
+                          <span class="ruby-keyword">false</span>, <span class="ruby-keyword">false</span>).<span class="ruby-identifier">each</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">conflist</span><span class="ruby-operator">|</span>
+        <span class="ruby-identifier">conf</span> = <span class="ruby-identifier">tk_split_simplelist</span>(<span class="ruby-identifier">conflist</span>, <span class="ruby-keyword">false</span>, <span class="ruby-keyword">true</span>)
+        <span class="ruby-identifier">key</span> = <span class="ruby-identifier">conf</span>.<span class="ruby-identifier">shift</span>[<span class="ruby-number">1</span><span class="ruby-operator">..</span><span class="ruby-number">-1</span>]
+        <span class="ruby-keyword">if</span> <span class="ruby-identifier">key</span>
+          <span class="ruby-keyword">if</span> <span class="ruby-identifier">key</span> <span class="ruby-operator">==</span> <span class="ruby-string">&#39;hide&#39;</span>
+            <span class="ruby-identifier">conf</span>[<span class="ruby-number">2</span>] = <span class="ruby-identifier">bool</span>(<span class="ruby-identifier">conf</span>[<span class="ruby-number">2</span>]) <span class="ruby-keyword">unless</span> <span class="ruby-identifier">conf</span>[<span class="ruby-number">2</span>].<span class="ruby-identifier">empty?</span>
+          <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">conf</span>[<span class="ruby-number">2</span>].<span class="ruby-identifier">index</span>(<span class="ruby-string">&#39;{&#39;</span>)
+            <span class="ruby-identifier">conf</span>[<span class="ruby-number">2</span>] = <span class="ruby-identifier">tk_split_list</span>(<span class="ruby-identifier">conf</span>[<span class="ruby-number">2</span>])
+          <span class="ruby-keyword">else</span>
+            <span class="ruby-identifier">conf</span>[<span class="ruby-number">2</span>] = <span class="ruby-identifier">tk_tcl2ruby</span>(<span class="ruby-identifier">conf</span>[<span class="ruby-number">2</span>])
+          <span class="ruby-keyword">end</span>
+        <span class="ruby-keyword">end</span>
+        <span class="ruby-keyword">if</span> <span class="ruby-identifier">conf</span>[<span class="ruby-number">3</span>]
+          <span class="ruby-keyword">if</span> <span class="ruby-identifier">key</span> <span class="ruby-operator">==</span> <span class="ruby-string">&#39;hide&#39;</span>
+            <span class="ruby-identifier">conf</span>[<span class="ruby-number">3</span>] = <span class="ruby-identifier">bool</span>(<span class="ruby-identifier">conf</span>[<span class="ruby-number">3</span>]) <span class="ruby-keyword">unless</span> <span class="ruby-identifier">conf</span>[<span class="ruby-number">3</span>].<span class="ruby-identifier">empty?</span>
+          <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">conf</span>[<span class="ruby-number">3</span>].<span class="ruby-identifier">index</span>(<span class="ruby-string">&#39;{&#39;</span>)
+            <span class="ruby-identifier">conf</span>[<span class="ruby-number">3</span>] = <span class="ruby-identifier">tk_split_list</span>(<span class="ruby-identifier">conf</span>[<span class="ruby-number">3</span>])
+          <span class="ruby-keyword">else</span>
+            <span class="ruby-identifier">conf</span>[<span class="ruby-number">3</span>] = <span class="ruby-identifier">tk_tcl2ruby</span>(<span class="ruby-identifier">conf</span>[<span class="ruby-number">3</span>])
+          <span class="ruby-keyword">end</span>
+        <span class="ruby-keyword">end</span>
+        <span class="ruby-keyword">if</span> <span class="ruby-identifier">conf</span>.<span class="ruby-identifier">size</span> <span class="ruby-operator">==</span> <span class="ruby-number">1</span>
+          <span class="ruby-identifier">ret</span>[<span class="ruby-identifier">key</span>] = <span class="ruby-identifier">conf</span>[<span class="ruby-number">0</span>][<span class="ruby-number">1</span><span class="ruby-operator">..</span><span class="ruby-number">-1</span>]  <span class="ruby-comment"># alias info</span>
+        <span class="ruby-keyword">else</span>
+          <span class="ruby-identifier">ret</span>[<span class="ruby-identifier">key</span>] = <span class="ruby-identifier">conf</span>
+        <span class="ruby-keyword">end</span>
+      }
+      <span class="ruby-identifier">ret</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-paneconfigure">
+            
+              <b>paneconfigure</b>(win, key, value=nil)
+            
+            <a href="../classes/Panedwindow.html#method-i-paneconfigure" name="method-i-paneconfigure" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+            <div class="aka">
+              Also aliased as: <a href="Tk/PanedWindow.html#method-i-pane_config">pane_config</a>
+            </div>
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-paneconfigure_source')" id="l_method-i-paneconfigure_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tk/panedwindow.rb#L106" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-paneconfigure_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tk/panedwindow.rb, line 106</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">paneconfigure</span>(<span class="ruby-identifier">win</span>, <span class="ruby-identifier">key</span>, <span class="ruby-identifier">value</span>=<span class="ruby-keyword">nil</span>)
+  <span class="ruby-comment"># win = win.epath if win.kind_of?(TkObject)</span>
+  <span class="ruby-identifier">win</span> = <span class="ruby-identifier">_epath</span>(<span class="ruby-identifier">win</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">key</span>.<span class="ruby-identifier">kind_of?</span> <span class="ruby-constant">Hash</span>
+    <span class="ruby-identifier">params</span> = []
+    <span class="ruby-identifier">key</span>.<span class="ruby-identifier">each</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">k</span>, <span class="ruby-identifier">v</span><span class="ruby-operator">|</span>
+      <span class="ruby-identifier">params</span>.<span class="ruby-identifier">push</span>(<span class="ruby-node">&quot;-#{k}&quot;</span>)
+      <span class="ruby-comment"># params.push((v.kind_of?(TkObject))? v.epath: v)</span>
+      <span class="ruby-identifier">params</span>.<span class="ruby-identifier">push</span>(<span class="ruby-identifier">_epath</span>(<span class="ruby-identifier">v</span>))
+    }
+    <span class="ruby-identifier">tk_send_without_enc</span>(<span class="ruby-string">&#39;paneconfigure&#39;</span>, <span class="ruby-identifier">win</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">params</span>)
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-comment"># value = value.epath if value.kind_of?(TkObject)</span>
+    <span class="ruby-identifier">value</span> = <span class="ruby-identifier">_epath</span>(<span class="ruby-identifier">value</span>)
+    <span class="ruby-identifier">tk_send_without_enc</span>(<span class="ruby-string">&#39;paneconfigure&#39;</span>, <span class="ruby-identifier">win</span>, <span class="ruby-node">&quot;-#{key}&quot;</span>, <span class="ruby-identifier">value</span>)
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-panes">
+            
+              <b>panes</b>()
+            
+            <a href="../classes/Panedwindow.html#method-i-panes" name="method-i-panes" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-panes_source')" id="l_method-i-panes_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tk/panedwindow.rb#L249" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-panes_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tk/panedwindow.rb, line 249</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">panes</span>
+  <span class="ruby-identifier">list</span>(<span class="ruby-identifier">tk_send_without_enc</span>(<span class="ruby-string">&#39;panes&#39;</span>))
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-proxy_coord">
+            
+              <b>proxy_coord</b>()
+            
+            <a href="../classes/Panedwindow.html#method-i-proxy_coord" name="method-i-proxy_coord" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-proxy_coord_source')" id="l_method-i-proxy_coord_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tk/panedwindow.rb#L51" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-proxy_coord_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tk/panedwindow.rb, line 51</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">proxy_coord</span>
+  <span class="ruby-identifier">list</span>(<span class="ruby-identifier">tk_send_without_enc</span>(<span class="ruby-string">&#39;proxy&#39;</span>, <span class="ruby-string">&#39;coord&#39;</span>))
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-proxy_forget">
+            
+              <b>proxy_forget</b>()
+            
+            <a href="../classes/Panedwindow.html#method-i-proxy_forget" name="method-i-proxy_forget" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-proxy_forget_source')" id="l_method-i-proxy_forget_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tk/panedwindow.rb#L54" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-proxy_forget_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tk/panedwindow.rb, line 54</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">proxy_forget</span>
+  <span class="ruby-identifier">tk_send_without_enc</span>(<span class="ruby-string">&#39;proxy&#39;</span>, <span class="ruby-string">&#39;forget&#39;</span>)
+  <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-proxy_place">
+            
+              <b>proxy_place</b>(x, y)
+            
+            <a href="../classes/Panedwindow.html#method-i-proxy_place" name="method-i-proxy_place" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-proxy_place_source')" id="l_method-i-proxy_place_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tk/panedwindow.rb#L58" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-proxy_place_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tk/panedwindow.rb, line 58</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">proxy_place</span>(<span class="ruby-identifier">x</span>, <span class="ruby-identifier">y</span>)
+  <span class="ruby-identifier">tk_send_without_enc</span>(<span class="ruby-string">&#39;proxy&#39;</span>, <span class="ruby-string">&#39;place&#39;</span>, <span class="ruby-identifier">x</span>, <span class="ruby-identifier">y</span>)
+  <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-remove">
+            
+              <b>remove</b>(win, *wins)
+            
+            <a href="../classes/Panedwindow.html#method-i-remove" name="method-i-remove" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+            <div class="aka">
+              Alias for: <a href="Tk/PanedWindow.html#method-i-forget">forget</a>
+            </div>
+          
+          
+          
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-sash_coord">
+            
+              <b>sash_coord</b>(index)
+            
+            <a href="../classes/Panedwindow.html#method-i-sash_coord" name="method-i-sash_coord" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-sash_coord_source')" id="l_method-i-sash_coord_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tk/panedwindow.rb#L63" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-sash_coord_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tk/panedwindow.rb, line 63</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">sash_coord</span>(<span class="ruby-identifier">index</span>)
+  <span class="ruby-identifier">list</span>(<span class="ruby-identifier">tk_send</span>(<span class="ruby-string">&#39;sash&#39;</span>, <span class="ruby-string">&#39;coord&#39;</span>, <span class="ruby-identifier">index</span>))
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-sash_dragto">
+            
+              <b>sash_dragto</b>(index, x, y)
+            
+            <a href="../classes/Panedwindow.html#method-i-sash_dragto" name="method-i-sash_dragto" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-sash_dragto_source')" id="l_method-i-sash_dragto_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tk/panedwindow.rb#L66" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-sash_dragto_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tk/panedwindow.rb, line 66</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">sash_dragto</span>(<span class="ruby-identifier">index</span>, <span class="ruby-identifier">x</span>, <span class="ruby-identifier">y</span>)
+  <span class="ruby-identifier">tk_send</span>(<span class="ruby-string">&#39;sash&#39;</span>, <span class="ruby-string">&#39;dragto&#39;</span>, <span class="ruby-identifier">index</span>, <span class="ruby-identifier">x</span>, <span class="ruby-identifier">y</span>)
+  <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-sash_mark">
+            
+              <b>sash_mark</b>(index, x, y)
+            
+            <a href="../classes/Panedwindow.html#method-i-sash_mark" name="method-i-sash_mark" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-sash_mark_source')" id="l_method-i-sash_mark_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tk/panedwindow.rb#L70" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-sash_mark_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tk/panedwindow.rb, line 70</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">sash_mark</span>(<span class="ruby-identifier">index</span>, <span class="ruby-identifier">x</span>, <span class="ruby-identifier">y</span>)
+  <span class="ruby-identifier">tk_send</span>(<span class="ruby-string">&#39;sash&#39;</span>, <span class="ruby-string">&#39;mark&#39;</span>, <span class="ruby-identifier">index</span>, <span class="ruby-identifier">x</span>, <span class="ruby-identifier">y</span>)
+  <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-sash_place">
+            
+              <b>sash_place</b>(index, x, y)
+            
+            <a href="../classes/Panedwindow.html#method-i-sash_place" name="method-i-sash_place" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-sash_place_source')" id="l_method-i-sash_place_source">show</a>
+                
+                  | <a href="https://github.com/ruby/ruby/blob/ed6ce8b43b6f25df1d4809ac799de4dd1c85c1f3/ext/tk/lib/tk/panedwindow.rb#L74" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-sash_place_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File ext/tk/lib/tk/panedwindow.rb, line 74</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">sash_place</span>(<span class="ruby-identifier">index</span>, <span class="ruby-identifier">x</span>, <span class="ruby-identifier">y</span>)
+  <span class="ruby-identifier">tk_send</span>(<span class="ruby-string">&#39;sash&#39;</span>, <span class="ruby-string">&#39;place&#39;</span>, <span class="ruby-identifier">index</span>, <span class="ruby-identifier">x</span>, <span class="ruby-identifier">y</span>)
+  <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                    </div>
+
+    </div>
+  </body>
+</html>    
