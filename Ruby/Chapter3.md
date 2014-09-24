@@ -73,11 +73,13 @@ Since instance members are only accessible via accessors, all we need to be conc
 
 3. **Private Methods**: cannot be called from an instance such as `a.private_method`, instead the receiver (the object on which the method is called) is always `self`. An example would be `self.private_method`.
 
-Ruby's protected and private are different from several other OO languages. If a method is protected, it can be called by *any* instance of the defining class or its subclasses.
+Ruby's protected vs private is different from several other OO languages. If a method is protected, it can be called by *any* instance of the defining class or its subclasses.
 
 If a method is private, it can **only** be called in the context of the current object, it is never possible to access another object's private methods directly, even if the object is of the same class as the caller.
 
 So if we made objects a and b both of class Word, a.print(b) cannot call b.word, even though print is method from another instance of the Word class. Only the current object b can call its methods using `self`. This is different from C++ for example where the described situation would be allowed.
+
+
 
 
 
