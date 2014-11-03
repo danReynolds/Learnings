@@ -79,6 +79,24 @@ If a method is private, it can **only** be called in the context of the current 
 
 So if we made objects a and b both of class Word, a.print(b) cannot call b.word, even though print is method from another instance of the Word class. Only the current object b can call its methods using `self`. This is different from C++ for example where the described situation would be allowed.
 
+Protected is used in Ruby when objects need to access the internal state of other objects of the same or derived classes.
+
+In Ruby, variables are references to objects. Creating a new variable does not create a new object, so situations like the following can occur:
+
+		person1 = "Tim"
+		person2 = person1
+		person1[0] = 'J'
+		
+		puts "#{person1} #{person2}"
+
+This outputs "*Jim Jim*" because person2 is pointing at person1, the object of which changes when mutated on the third line.
+
+Assigning person1 to person2 does not create a new object, but copies reference to person2 so that both 1 and 2 refer to the same object.
+
+To explicitly create a new object, use the `dup` method with duplicates the referenced object.
+
+
+
 
 
 
