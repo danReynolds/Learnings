@@ -217,26 +217,3 @@ While the normal Enumerator can do `Integer.all.select` and return an enumerator
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
