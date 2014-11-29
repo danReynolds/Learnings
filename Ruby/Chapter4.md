@@ -171,17 +171,19 @@ In `infinite_select`, it worked because the infinite set only generates its next
 
 `[1,2,3].each` is of class `Enumerator` and has the methods of that class. `[1,2,3].lazy.each` is of class `Enumerator::Lazy` and has the lazy methods of that class.
 
-*A lazy enumerator only checks its values if requested, it then goes through each of its values to see if it should be returned, if not it goes on to the next value, otherwise it returns the value and then checks if another value is requested, repeating the process*.
+*An enumerator only checks its values if requested, it then goes through each of its values to see if it should be returned, if not it goes on to the next value, otherwise it returns the value and then checks if another value is requested, repeating the process*.
 
 This is what was designed with `infinite_select`.
 
-Instead of having to build *custom enumerators* that do not preload the collection, Ruby 2.0 comes with a `lazy` method which converts **any** enumerator into a **Lazy Enumerator**. This is really cool, now not only infinite collections would work, but if you request the first `n` of a a set, it won't preload the **entire** collection, but just return the first three before even looking at the fourth.
+Instead of having to build *custom enumerators* that do not preload the collection, Ruby 2.0 comes with a `lazy` method which converts **any** enumerator into a **Lazy Enumerator**. This is really cool, now it won't preload the entire collection, but will just return the next value as long as they are requested.
+
+The `lazy` benefit is that it will infer based on the chain of enumerable methods the number of times to execute, like in the following:
 
 `(1..Float::INFINITY).select{|a| a > 10}.first(5) # never returns, because first it preloads the entire collection, which is infinite.
 
 But, `(1..Float::INFINITY).lazy.select{|a| a > 10}.first(5) # 11, 12, 13, 14, 15
 
-The lazy version knows that it will be working with an infinity collection, but instead of preloading it, it keeps going through values until it satisfies the condition of the `select`, and does that while it keeps having values requested, which is limited by the `first`.
+The lazy version knows that it will be working with an infinity collection, but instead of preloading it, it keeps going through values that satisfy the condition of the `select` and does that while it keeps having values requested, which is limited by the `first`.
 
 ## Defining Lazy Methods
 For custom methods, just append `lazy` at the end of an `enumerator` to make it a lazy enumerator.
@@ -207,6 +209,29 @@ Since these are all objects, the code can be split up:
 		divisible_by_5_and_10.first(5) # 10, 20, 30, 40, 50
 
 While the normal Enumerator can do `Integer.all.select` and return an enumerator, it could not filter.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
