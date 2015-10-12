@@ -57,4 +57,36 @@ Apply is nearly identical to call, except that apply takes an array as a second 
 
 If you iterate over an array using `forEach` within a function, for example, `this` cannot be set to the outer function's this. It is instead bound to the global window object within an anonymous function, or undefined when strict mode is used.
 
-This is because `this` is accessible only by a function itself, not by inner functions.
+This is because `this` is accessible only by a function itself, not by inner functions. If a function calls a function, and the nested function uses `this`, it will be `window`.
+
+For example:
+
+```
+var e = {
+  f: function(c) {
+    c();
+  },
+  g: function() {
+    console.log(this);
+  }
+}
+e.f(e.g);
+```
+
+In this case, `this` is window, since `f` calls `g` and while g's `this` would be `e` if it was directly invoked, nested functions assign `this` as the window, or `undefined` if in strict mode.
+
+The same occurs here:
+
+```
+var e = {
+  f: function() {
+    function g() {
+      console.log(this);
+    }
+    g();
+  },
+}
+e.f();
+```
+
+Here again, `this` is referenced in nested functions, and therefore it is assigned to the global window object. `this` is only accessible by the function itself, **not inner functions**.
