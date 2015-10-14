@@ -328,8 +328,214 @@ baz(); // 2 -- Whoa, closure was just observed, man.
 
 In the above code, `bar` has a closure over the scope of `foo`. Why? Because `bar` appears nested inside of `foo`. **An inner function closes over an outer function**.
 
-A closure remembers its lexical scope when executd outside of its lexical scope. Here, `bar` is executed, but it is executed outside of its declared lexical scope. It still prints out 2, and is able to remember the environment it was constructed in.
+A closure remembers its lexical scope when executed outside of its lexical scope. Here, `bar` is executed, but it is executed outside of its declared lexical scope. It still prints out 2, and is able to remember the environment it was constructed in.
 
 You might think that after `foo` is executed, the scope of `foo` would get garbage collected, since the contents of the `foo` scope is no longer in use. But that scope is *still* in use by `bar` itself.
 
 `bar` has a lexical scope closure over the scope of `foo`, which keeps that scope alive for `bar` to reference later at any time. **`bar` still has a reference to that scope, and that reference is called a closure.**
+
+Another example:
+
+```
+function wait(message) {
+
+    setTimeout( function timer(){
+        console.log( message );
+    }, 1000 );
+
+}
+
+wait( "Hello, closure!" );
+```
+
+The `timer` function has a scoped closure over the scope of `wait`, allowing it to reference the variable `message.
+
+## Loops and Closures
+
+A common example of a closure is with a loop:
+
+```
+for (var i=1; i<=5; i++) {
+    setTimeout( function timer(){
+        console.log( i );
+    }, i*1000 );
+}
+```
+
+Here the `timer` has a closure over the loop, giving it access to the environment including `i`.
+
+By the time each timeout is triggered, the loop has finished and `i = 6`. So 6 is printed out 6 times.
+
+```
+for (var i=1; i<=5; i++) {
+    (function(){
+        var j = i;
+        setTimeout( function timer(){
+            console.log( j );
+        }, j*1000 );
+    })();
+}
+```
+
+This gives us 1..6 like you would want with a counter, because now the timer has a closure over the function expression, instead of over the global scope, which sets j to i. So whenever the timeout fires, it returns to the scope it was invoked in, which is the function expression, in which `j` has been set to 1..6. The `j` is not 6 because it was set to the current iteration of `i` when it was called.
+
+The same thing can be accomplished with the new `let` syntax:
+
+```
+for (let i=1; i<=5; i++) {
+    setTimeout( function timer(){
+        console.log( i );
+    }, i*1000 );
+}
+```
+
+Before, the `for` loop was nothing special, the timer cannot have a closure over a simple `for` loop. But `let` **turns a block into a per-iteration block scope that can be closed over**. So now, the `let i` is captured in each iteration, and the `timer` function always returns from the timeout with a closure over a block where the environment includes its specific `i` value.
+
+## Module pattern
+
+```
+function CoolModule() {
+    var something = "cool";
+    var another = [1, 2, 3];
+
+    function doSomething() {
+        console.log( something );
+    }
+
+    function doAnother() {
+        console.log( another.join( " ! " ) );
+    }
+
+    return {
+        doSomething: doSomething,
+        doAnother: doAnother
+    };
+}
+
+var foo = CoolModule();
+
+foo.doSomething(); // cool
+foo.doAnother(); // 1 ! 2 ! 3
+```
+
+The inner functions have a closure over the inner scope of a CoolModule instance. So when `doSomething` is called, it has a closure over the module and access to the `something` variable, which it prints out, same with the `doAnother`.
+
+Here our public API for the module is `doSomething`, `doAnother`.
+
+We can make a singleton instance of our module using a function expression:
+
+```
+var foo = (function CoolModule() {
+    var something = "cool";
+    var another = [1, 2, 3];
+
+    function doSomething() {
+        console.log( something );
+    }
+
+    function doAnother() {
+        console.log( another.join( " ! " ) );
+    }
+
+    return {
+        doSomething: doSomething,
+        doAnother: doAnother
+    };
+})();
+```
+
+Making a Module manager:
+
+```
+var manager = (function Manager() {
+  var modules = {};
+
+  function define(name, deps, impl) {
+    for ( var i = 0; i < deps.length; i++ ) {
+      deps[i] = modules[deps[i]]; // set the dependency to the
+    }
+    // module we have for that dependency already
+  }
+  modules[name] = impl.apply(impl, deps); // Then set up our new module by //invoking it
+
+  function get(name) {
+    return modules[name];
+  }
+
+  return {
+    define: define,
+    get: get
+  }
+})();
+
+// Now to set a module:
+manager.define("helloworld", [], function() {
+  function run() {
+    console.log("hello world");
+  }
+  return {
+    run: run
+  }
+});
+var helloworldmod = manager.get("helloworld");
+helloworldmod.run();
+```
+
+That's cool, but how would a module use another one?
+
+```
+manager.define("helloworldagain", ["helloworld"], function(helloworld) {
+  function run() {
+    helloworld.run();
+    console.log("again");
+  }
+
+  return {
+    run: run
+  }
+});
+
+var helloworldagainmod = manager.get("helloworldagain");
+helloworldagainmod.run();
+```
+
+This is cool, so when it is defined, it is run with `apply`, passing the dependencies as args, and then the `helloworldagain` module takes that arg, and adds it to its `run` method. Since `run` has a closure over the anonymous function it is in, when the module is instantiated, the passed helloworld is persisted for use by `run`. Then we return our public API and when we `run` the returned `helloworldagain` object, it prints "hello world again".
+
+## Future modules
+
+ES6 adds first-class syntax for the concept of modules. ES6 treats a file as a separate module. Each module can import other modules or specific API members, as well as export their own public API members.
+
+Function-based modules aren't statically recognized patterns, so the compiler can't figure out whether you're accessing a valid API until runtime.
+
+With the ES6 Module API, it can throw errors at compile time, rather than waiting, because these modules are static and are checked during file loading.
+
+For example:
+
+bar.js
+```
+function hello() {
+  return "hello";
+}
+export hello;
+```
+
+foo.js
+```
+import hello from "bar";
+function helloworld() {
+  return hello() + " world";
+}
+export world;
+```
+
+Now:
+
+```
+module foo from "foo";
+module bar from "bar";
+console.log(foo.helloworld());
+```
+
+`import` imports one or more members from a module's API.
+`module` imports an entire module API.
+`export` exports an identifier like a variable or function.
